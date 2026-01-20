@@ -3,6 +3,7 @@ import toast from 'react-hot-toast';
 import { ShareIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 import { trackPuzzleFeedback } from '../analytics';
 import { motion, AnimatePresence } from 'framer-motion';
+import type { GameState } from '../utils';
 
 interface Game {
   name: string;
@@ -17,6 +18,7 @@ interface GameCompleteModalProps {
   puzzleDate: string;
   games: Game[];
   correctGuesses: string[];
+  gameStates: { [gameName: string]: GameState };
   onClose: () => void;
   onCopyToShare: () => void;
   onResetPuzzle: () => void;
@@ -29,6 +31,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   puzzleDate,
   games,
   correctGuesses,
+  gameStates,
   onClose,
   onCopyToShare,
   onResetPuzzle,
@@ -92,11 +95,21 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 <span className="font-semibold">Score:</span> {score}
               </div>
               <div className="text-sm leading-none">
-                {games.map((game, idx) => (
-                  <span key={idx}>
-                    {correctGuesses.includes(game.name) ? '✅' : '❌'}
-                  </span>
-                ))}
+                {games.map((game, idx) => {
+                  const pointsDeducted =
+                    gameStates[game.name]?.pointsDeducted ?? 0;
+                  const earnedPoints = 200 - pointsDeducted;
+                  const isGuessed = correctGuesses.includes(game.name);
+
+                  let emoji = '🟥'; // Red square for missed/gave up
+                  if (isGuessed && earnedPoints === 200) {
+                    emoji = '🟩'; // Green square for perfect
+                  } else if (isGuessed && earnedPoints < 200) {
+                    emoji = '🟨'; // Yellow square for guessed with hints
+                  }
+
+                  return <span key={idx}>{emoji}</span>;
+                })}
               </div>
               <div>
                 <span className="font-semibold text-sm">Guesses:</span>{' '}

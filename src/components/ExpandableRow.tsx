@@ -258,7 +258,32 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
             : game.developers}
         </td>
         <td className="p-2 sm:pr-4 text-sm sm:text-base">
-          {200 - pointsDeducted}/200
+          {(() => {
+            const earnedPoints = 200 - pointsDeducted;
+            const isGuessed = correctGuesses.includes(game.name);
+            let badgeClass = '';
+
+            if (earnedPoints === 0) {
+              // Gave up or revealed everything
+              badgeClass = 'bg-red-800 text-white';
+            } else if (isGuessed && earnedPoints === 200) {
+              // Perfect guess
+              badgeClass = 'bg-green-700 text-white';
+            } else if (isGuessed && earnedPoints < 200) {
+              // Guessed with hints used
+              badgeClass = 'bg-yellow-500 text-black';
+            } else {
+              // Not yet guessed or revealed
+              badgeClass = 'bg-zinc-700 text-white';
+            }
+            return (
+              <span
+                className={`px-2 py-1 rounded font-semibold min-w-[76px] inline-block text-center ${badgeClass}`}
+              >
+                {earnedPoints}/200
+              </span>
+            );
+          })()}
         </td>
       </tr>
       <AnimatePresence initial={false}>
