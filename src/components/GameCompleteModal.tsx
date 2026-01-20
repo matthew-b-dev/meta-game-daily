@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ShareIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 
 interface GameCompleteModalProps {
@@ -18,6 +18,8 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   onCopyToShare,
   onResetPuzzle,
 }) => {
+  const [showConfirmReset, setShowConfirmReset] = useState(false);
+
   if (!isOpen) return null;
 
   return (
@@ -49,21 +51,48 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
           </button>
           <button
             className="w-full px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold"
-            onClick={onClose}
+            onClick={() => {
+              setShowConfirmReset(false);
+              onClose();
+            }}
           >
             Close
           </button>
           <div className="flex justify-center mt-4">
-            <button
-              className="mt-4 text-red-500 hover:text-red-400 text-sm underline cursor-pointer focus:outline-none !border-transparent flex items-center gap-1"
-              onClick={() => {
-                onResetPuzzle();
-                onClose();
-              }}
-            >
-              <ArrowPathIcon className="w-4 h-4 -scale-x-100" />
-              Reset today's puzzle
-            </button>
+            {!showConfirmReset ? (
+              <button
+                className="mt-4 text-red-500 hover:text-red-400 text-sm underline cursor-pointer focus:outline-none !border-transparent flex items-center gap-1"
+                onClick={() => setShowConfirmReset(true)}
+              >
+                <ArrowPathIcon className="w-4 h-4 -scale-x-100" />
+                Reset today's puzzle
+              </button>
+            ) : (
+              <div className="flex flex-col items-center gap-2 mt-4">
+                <span className="text-sm text-gray-300">
+                  Are you sure you want to reset today's puzzle?
+                </span>
+                <div className="flex gap-2">
+                  <button
+                    className="px-4 py-1.5 rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold flex items-center gap-1"
+                    onClick={() => {
+                      setShowConfirmReset(false);
+                      onResetPuzzle();
+                      onClose();
+                    }}
+                  >
+                    <ArrowPathIcon className="w-4 h-4 -scale-x-100" />
+                    Confirm Reset
+                  </button>
+                  <button
+                    className="px-4 py-1.5 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold"
+                    onClick={() => setShowConfirmReset(false)}
+                  >
+                    Cancel
+                  </button>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -281,10 +281,10 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
               exit={{ height: 0, paddingTop: 0, paddingBottom: 0 }}
               transition={{ duration: 0.2, ease: 'easeInOut' }}
             >
-              {/* Reveal All button - top right */}
+              {/* Reveal All button - top right on desktop, below screenshot on mobile */}
               {!correctGuesses.includes(game.name) && !allRevealed && (
                 <button
-                  className="absolute top-4 right-4 px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-semibold transition-colors"
+                  className="hidden md:block absolute top-4 right-4 px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-semibold transition-colors"
                   onClick={handleRevealAllFields}
                 >
                   Reveal All (-{calculateRevealAllCost()}pts.)
@@ -393,6 +393,15 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                     )}
                   </div>
                 ))}
+                {/* Reveal All button - mobile version below screenshot */}
+                {!correctGuesses.includes(game.name) && !allRevealed && (
+                  <button
+                    className="md:hidden px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-semibold transition-colors mt-2"
+                    onClick={handleRevealAllFields}
+                  >
+                    Reveal All (-{calculateRevealAllCost()}pts.)
+                  </button>
+                )}
                 {/* Reveal game button - shown when all fields are revealed */}
                 {!correctGuesses.includes(game.name) &&
                 allRevealed &&
