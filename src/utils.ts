@@ -21,7 +21,7 @@ export interface SessionState {
   gameCompleteDismissed: boolean;
 }
 
-const STORAGE_KEY = 'meta-games-daily-state';
+const STORAGE_KEY = 'meta-game-daily-state';
 
 /**
  * Load game state from localStorage
