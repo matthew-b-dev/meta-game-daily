@@ -337,10 +337,16 @@ const App = () => {
     // Generate emoji string for each game
     const emojis = dailyGames
       .map((game) => {
-        if (correctGuesses.includes(game.name)) {
-          return '✅';
+        const pointsDeducted = gameStates[game.name]?.pointsDeducted ?? 0;
+        const earnedPoints = 200 - pointsDeducted;
+        const isGuessed = correctGuesses.includes(game.name);
+
+        if (isGuessed && earnedPoints === 200) {
+          return '🟩'; // Green square for perfect
+        } else if (isGuessed && earnedPoints < 200) {
+          return '🟨'; // Yellow square for guessed with hints
         } else {
-          return '❌';
+          return '🟥'; // Red square for missed/gave up
         }
       })
       .join('');
@@ -459,6 +465,7 @@ const App = () => {
         puzzleDate={puzzleDate}
         games={dailyGames}
         correctGuesses={correctGuesses}
+        gameStates={gameStates}
         onClose={() => {
           setShowGameComplete(false);
           setGameCompleteDismissed(true);
