@@ -1,6 +1,7 @@
 # MetaGameDaily
 
-A daily Video Games Industry puzzle where players identify games based on limited information. Inspired by the terrific [boxofficega.me](https://boxofficega.me).
+A daily Video Games Industry puzzle where players identify games based on limited information.
+Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via GitHub pages!
 
 ## How to Play
 
