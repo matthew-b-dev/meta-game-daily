@@ -22,13 +22,13 @@ Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via 
 
 - Start with 1000 points
 - Each piece of revealed information deducts points:
-  - Publisher: -10 points
-  - OpenCritic™ Score: -15 points
-  - Genres: -20 points
-  - Release Date: -25 points
-  - Platforms: -30 points
+  - OpenCritic Score: -5 points
+  - Genre(s): -5 points
+  - Release Date: -5 points
+  - Platform(s): -5 points
+  - Publisher(s): -30 points
   - Screenshot: -50 points
-- Giving up (revealing game name): lose all points for that particular game
+- Giving up (revealing game name): lose all (200) points for that particular game
 
 ### Close Guesses
 
@@ -39,13 +39,10 @@ If you make a guess that's very similar to a correct answer, you'll see a specia
 
 ## Tech Stack
 
-- **React** - UI framework
-- **TypeScript** - Type safety
-- **Vite** - Build tool and dev server
-- **Tailwind CSS** - Styling
-- **Framer Motion** - Animations
-- **React Hot Toast** - Notifications
-- **Heroicons** - Icons
+- **React**
+- **Vite**
+- [framer-motion](https://motion.dev/) - animations
+- [react-hot-toast](https://react-hot-toast.com/) - notifications
 
 ## Credits
 
