@@ -3,11 +3,19 @@ import toast from 'react-hot-toast';
 import { ShareIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
 import { trackPuzzleFeedback } from '../analytics';
 
+interface Game {
+  name: string;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+}
+
 interface GameCompleteModalProps {
   isOpen: boolean;
   score: number;
   guessesLeft: number;
   puzzleDate: string;
+  games: Game[];
+  correctGuesses: string[];
   onClose: () => void;
   onCopyToShare: () => void;
   onResetPuzzle: () => void;
@@ -18,6 +26,8 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   score,
   guessesLeft,
   puzzleDate,
+  games,
+  correctGuesses,
   onClose,
   onCopyToShare,
   onResetPuzzle,
@@ -56,11 +66,19 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
         <h2 className="text-2xl font-bold text-center mb-6">Game Complete!</h2>
         <div className="flex justify-between mb-6 text-sm">
           <div>
-            <span className="font-semibold">Final Score:</span> {score}
+            <span className="font-semibold">Score:</span> {score}
+          </div>
+          <div className="text-sm leading-none">
+            {games.map((game, idx) => (
+              <span key={idx}>
+                {correctGuesses.includes(game.name) ? '✅' : '❌'}
+              </span>
+            ))}
           </div>
           <div>
-            <span className="font-semibold">Guesses Used:</span>{' '}
-            {10 - guessesLeft}/10
+            <span className="font-semibold text-sm">Guesses:</span>{' '}
+            {10 - guessesLeft}
+            /10
           </div>
         </div>
         <div className="space-y-3">
@@ -72,8 +90,11 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             <ShareIcon className="w-5 h-5" />
           </button>
           <div className="border-t border-gray-700 pt-4">
+            <p className="text-center text-sm text-gray-400">
+              Provide <b>*anonymous*</b> feedback for today's puzzle.
+            </p>
             <p className="text-center text-sm text-gray-400 mb-3">
-              Provide <b>*anonymous*</b> feedback for today's puzzle
+              AdBlock will block this. There's no ads on the site, though!
             </p>
             {feedback === null ? (
               <div className="flex gap-2 justify-center">

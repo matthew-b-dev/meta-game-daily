@@ -457,6 +457,8 @@ const App = () => {
         score={score}
         guessesLeft={guessesLeft}
         puzzleDate={puzzleDate}
+        games={dailyGames}
+        correctGuesses={correctGuesses}
         onClose={() => {
           setShowGameComplete(false);
           setGameCompleteDismissed(true);
