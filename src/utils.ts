@@ -1,6 +1,6 @@
 import type { Game } from './App';
 
-export const DATE_OVERRIDE: string | null = '2026-01-20'; // '2026-01-21'
+export const DATE_OVERRIDE: string | null = null; // '2026-01-21'
 
 // Demo days configuration - hardcode specific games for specific dates
 // Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
