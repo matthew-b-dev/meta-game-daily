@@ -1,6 +1,6 @@
 import type { Game } from './App';
 
-export const DATE_OVERRIDE: string | null = null; // '2026-01-18'
+export const DATE_OVERRIDE: string | null = '2026-01-20'; // '2026-01-21'
 
 // Demo days configuration - hardcode specific games for specific dates
 // Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
@@ -95,6 +95,43 @@ export const isCloseGuess = (guess: string, correctGames: Game[]): boolean => {
     // 'Last Day of June' is NOT close to 'The Last of Us Part I'
     if (similarity >= 0.7) {
       return true;
+    }
+  }
+
+  // Additional check for game series with colons (e.g., "Ace Combat 6: Fires of Liberation")
+  // Split by colon and check if the parts are similar
+  if (guess.includes(':')) {
+    const guessParts = guess.split(':').map((p) => p.trim().toLowerCase());
+
+    for (const game of correctGames) {
+      if (game.name.includes(':')) {
+        const gameParts = game.name
+          .split(':')
+          .map((p) => p.trim().toLowerCase());
+
+        // Check if both parts before and after the colon are reasonably similar
+        if (guessParts.length >= 1 && gameParts.length >= 1) {
+          const beforeColonGuess = guessParts[0];
+          const beforeColonGame = gameParts[0];
+
+          // Check if the main title (before colon) is very similar
+          const beforeDistance = levenshteinDistance(
+            beforeColonGuess,
+            beforeColonGame,
+          );
+          const beforeMaxLength = Math.max(
+            beforeColonGuess.length,
+            beforeColonGame.length,
+          );
+          const beforeSimilarity = 1 - beforeDistance / beforeMaxLength;
+
+          // If the main title is >= 70% similar, consider it close
+          // (e.g., "Ace Combat 6" vs "Ace Combat 7")
+          if (beforeSimilarity >= 0.7) {
+            return true;
+          }
+        }
+      }
     }
   }
 

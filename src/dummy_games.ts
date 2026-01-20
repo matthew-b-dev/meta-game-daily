@@ -1,8 +1,10 @@
-// These are games meant to misdirect the player. They will populate the dropdown but won't ever be the games used in the puzzle.
+// These are games meant to misdirect the player. They will populate the dropdown but won't ever be the games used in the puzzle
 export const dummyGames: string[] = [
   'SEGA AGES G-LOC: Air Battle',
   'Foul Play',
   'The Last of Us Part I',
+  'Ace Combat 5: The Unsung War',
+  'Ace Combat 6: Fires of Liberation',
   'Alphadia Genesis',
   'Warhammer Quest',
   'flower',
