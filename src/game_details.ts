@@ -4704,13 +4704,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jul 13',
     releaseYear: 2018,
     reviewRank: 32,
-    developers: [
-      'Square Enix Business Division 11',
-      'Square Enix Business Division 6',
-      'ACQUIRE Corp.',
-      'Team Asano',
-      'Square Enix Business Division 9',
-    ],
+    developers: ['Square Enix', 'ACQUIRE Corp.', 'Team Asano'],
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pmkptjq50ptaoxgj86r6.jpg',
@@ -4758,7 +4752,7 @@ export const gameDetails: Game[] = [
     score: '82',
     name: 'Moonlighter',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Action, RPG',
+    genres: 'Roguelite, Action, RPG',
     releaseDate: 'May 29',
     releaseYear: 2018,
     reviewRank: 36,
@@ -9084,7 +9078,7 @@ export const gameDetails: Game[] = [
     developers: ['ACQUIRE Corp.'],
     publishers: ['Square Enix'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0f.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpk7u.jpg',
   },
   {
     score: '79',
@@ -9675,7 +9669,7 @@ export const gameDetails: Game[] = [
     score: '87',
     name: 'Prince of Persia: The Lost Crown',
     platforms: 'Switch, PS5, XB1, PS4, PC, XBXS',
-    genres: 'Action, Platformer',
+    genres: 'Metroidvania, Action, Platformer',
     releaseDate: 'Jan 18',
     releaseYear: 2024,
     reviewRank: 3,
