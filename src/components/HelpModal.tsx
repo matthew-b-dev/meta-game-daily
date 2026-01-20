@@ -18,7 +18,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <h2 className="text-2xl font-bold text-center mb-6">How to play</h2>
-        <ul className="space-y-3 mb-6 text-left list-disc pl-6">
+        <ul className="space-y-3 mb-6 text-left list-disc pl-6 text-sm">
           <li>
             The goal of this daily puzzle is to{' '}
             <b>guess the name of all 5 games</b>. You are provided with some
@@ -31,12 +31,23 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose }) => {
           <li>
             If you need more information about a game, expand it with the '+'
             button. <b>Revealing information will deduct points</b> from your
-            total score. Certain information is more valuable and therefore
-            deducts more points.
+            total score.
           </li>
           <li>
             The game is complete when either all games have been revealed or all
             guesses have been exhausted.
+          </li>
+          <li>
+            You can read more detailed information on the{' '}
+            <a
+              href="https://github.com/matthew-b-dev/meta-game-daily"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-yellow-500 underline hover:text-yellow-400"
+            >
+              GitHub page
+            </a>
+            .
           </li>
         </ul>
         <button
