@@ -109,7 +109,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 .length > 0 && (
                 <div className="mb-1">
                   <div className="text-red-400 font-semibold text-sm mb-2">
-                    Missed
+                    Missed:
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {games
