@@ -91,7 +91,7 @@ const App = () => {
     ...gameDetails.map((g) => g.name),
     ...dummyGames,
   ].sort();
-  
+
   const gameOptions = allGameNames.map((name) => ({
     value: name,
     label: name,
