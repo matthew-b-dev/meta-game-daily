@@ -12,6 +12,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Mighty No. 9',
     'Ace Combat 7: Skies Unknown',
   ],
+  '2026-01-21': [
+    'Rayman Legends',
+    'Prince of Persia: The Lost Crown',
+    'Yakuza: Like a Dragon',
+    'Octopath Traveler II',
+    'Moonlighter',
+  ],
 };
 
 // Per-game state interface
