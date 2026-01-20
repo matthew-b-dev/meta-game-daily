@@ -351,7 +351,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                                 <img
                                   src={game.screenshotUrl}
                                   alt={game.name + ' screenshot'}
-                                  className="object-contain max-h-[80vh] max-w-[90vw] rounded"
+                                  className="object-contain max-h-[80vh] max-w-[90vw] rounded brightness-[1.5] md:brightness-125"
                                 />
                                 <button
                                   className="mt-4 px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm"
