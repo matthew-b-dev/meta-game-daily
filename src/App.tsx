@@ -21,7 +21,9 @@ import {
   loadGameState,
   saveGameState,
   clearGameState,
+  isCloseGuess,
   type GameState,
+  type MissedGuess,
 } from './utils';
 
 export type Game = {
@@ -52,7 +54,7 @@ const App = () => {
   const [guessesLeft, setGuessesLeft] = useState(10);
   const [correctGuesses, setCorrectGuesses] = useState<string[]>([]);
   const [revealedGames, setRevealedGames] = useState<string[]>([]);
-  const [missedGuesses, setMissedGuesses] = useState<string[]>([]);
+  const [missedGuesses, setMissedGuesses] = useState<MissedGuess[]>([]);
   const [gameStates, setGameStates] = useState<{
     [gameName: string]: GameState;
   }>({});
@@ -201,7 +203,7 @@ const App = () => {
   // Don't count ":" and "-" towards the character minimum to prevent exploiting masked titles
   const guessedNames = new Set([
     ...correctGuesses,
-    ...missedGuesses,
+    ...missedGuesses.map((g) => g.name),
     ...revealedGames,
   ]);
   const nonSpecialCharCount = inputValue.replace(/[:-]/g, '').length;
@@ -225,10 +227,20 @@ const App = () => {
         );
         toast.success('Correct!');
       } else {
+        const isClose = isCloseGuess(selected.value, dailyGames);
         setMissedGuesses((prev) =>
-          prev.includes(selected.value) ? prev : [...prev, selected.value],
+          prev.some((g) => g.name === selected.value)
+            ? prev
+            : [...prev, { name: selected.value, isClose }],
         );
-        toast.error(`Miss! ${newGuessesLeft} guesses remaining`);
+        if (isClose) {
+          toast.error('Close guess! Try something similar.', {
+            duration: 5000,
+            icon: '🤏',
+          });
+        } else {
+          toast.error(`Miss! ${newGuessesLeft} guesses remaining`);
+        }
       }
     }
     setGuess(null);

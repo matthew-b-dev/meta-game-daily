@@ -2,6 +2,7 @@
 export const dummyGames: string[] = [
   'SEGA AGES G-LOC: Air Battle',
   'Foul Play',
+  'The Last of Us Part I',
   'Alphadia Genesis',
   'Warhammer Quest',
   'flower',

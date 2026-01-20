@@ -1,7 +1,8 @@
 import React from 'react';
+import type { MissedGuess } from '../utils';
 
 interface MissedGuessesProps {
-  missedGuesses: string[];
+  missedGuesses: MissedGuess[];
 }
 
 const MissedGuesses: React.FC<MissedGuessesProps> = ({ missedGuesses }) => {
@@ -14,10 +15,15 @@ const MissedGuesses: React.FC<MissedGuessesProps> = ({ missedGuesses }) => {
       <div className="flex flex-wrap gap-2">
         {missedGuesses.map((miss, i) => (
           <span
-            key={miss + i}
-            className="flex items-center text-red-500 bg-red-900/30 rounded px-2 py-1 text-sm"
+            key={miss.name + i}
+            className={`flex items-center rounded px-2 py-1 text-sm ${
+              miss.isClose
+                ? 'text-yellow-500 bg-yellow-900/30'
+                : 'text-red-500 bg-red-900/30'
+            }`}
           >
-            <span className="mr-1 font-bold">❌</span> {miss}
+            <span className="mr-1 font-bold">{miss.isClose ? '🤏' : '❌'}</span>{' '}
+            {miss.name}
           </span>
         ))}
       </div>
