@@ -84,6 +84,16 @@ const App = () => {
       setGameStates(savedState.gameStates);
       setGameCompleteDismissed(savedState.gameCompleteDismissed);
       setDisplayScore(savedState.score);
+    } else {
+      // Clear state when puzzle date changes (no saved state found)
+      setScore(1000);
+      setGuessesLeft(10);
+      setCorrectGuesses([]);
+      setRevealedGames([]);
+      setMissedGuesses([]);
+      setGameStates({});
+      setGameCompleteDismissed(false);
+      setDisplayScore(1000);
     }
     setStateLoaded(true);
   }, [puzzleDate]);
@@ -287,9 +297,10 @@ const App = () => {
       gameStates,
       gameCompleteDismissed,
     });
+    // puzzleDate is purposefully left out as a dependency so we don't force a save when the date ticks over to the next.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [
     stateLoaded,
-    puzzleDate,
     score,
     guessesLeft,
     correctGuesses,
@@ -355,7 +366,7 @@ const App = () => {
           <div className="relative mb-6">
             <div className="text-center">
               <h1
-                className="text-4xl font-black"
+                className="text-2xl sm:text-4xl font-black"
                 style={{
                   fontFamily: 'Playfair Display, serif',
                   letterSpacing: '0.02em',
@@ -364,7 +375,7 @@ const App = () => {
                 MetaGameDaily
               </h1>
               <p className="text-gray-400 text-sm mt-1">
-                A daily Video Games Industry puzzle.
+                A daily Video Games Industry puzzle
               </p>
             </div>
             <button

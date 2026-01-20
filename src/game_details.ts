@@ -528,17 +528,6 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iubwp75uf1ghwlla3kda.jpg',
   },
   {
-    score: '81',
-    name: 'Final Fantasy VII',
-    platforms: 'PS4, PS5, Switch, PC, XBXS, XB1',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Jul 4',
-    releaseYear: 2013,
-    reviewRank: 50,
-    developers: ['Square'],
-    publishers: ['Square'],
-  },
-  {
     score: '76',
     name: 'Shadow Warrior',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -6088,7 +6077,7 @@ export const gameDetails: Game[] = [
     developers: ['Naughty Dog'],
     publishers: ['Sony'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mobc8z5fnxljhadccvy6.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dbqn4wax78tgvplrpf1m.jpg',
   },
   {
     score: '84',
