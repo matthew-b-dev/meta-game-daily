@@ -323,7 +323,7 @@ const App = () => {
       .join('');
 
     // Build the share text
-    const shareText = `metagamedaily.com\n${dateStr}\n${emojis}\n🏆 ${score} points`;
+    const shareText = `https://matthew-b-dev.github.io/meta-game-daily/\n${dateStr}\n${emojis}\n🏆 ${score} points`;
 
     // Copy to clipboard
     try {
