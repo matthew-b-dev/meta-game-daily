@@ -34,10 +34,10 @@ Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via 
 
 If you make a guess that's very similar to a correct answer, you'll see a special indicator:
 
-- 🤏 Yellow background = Your guess was close! Try something similar.
-- ❌ Red background = Not close to any answer
+- 🤏 The guess was close and likely within the same franchise
+- ❌ Totally incorrect
 
-## Tech Stack
+## Technologies
 
 - **React**
 - **Vite**
