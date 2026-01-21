@@ -13,6 +13,7 @@ import GameTable from './components/GameTable';
 import GuessInput from './components/GuessInput';
 import GameCompleteModal from './components/GameCompleteModal';
 import HelpModal from './components/HelpModal';
+import GiveUpModal from './components/GiveUpModal';
 import Footer from './components/Footer';
 import {
   getDailyGames,
@@ -454,40 +455,39 @@ const App = () => {
             />
           </div>
           <div className="w-full max-w-[750px] mx-auto">
-            <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
-              {/* Give up button - shows above date on mobile, on right on desktop */}
-              {!gameOver && (
-                <div className="flex justify-center md:hidden mb-3">
-                  <button
-                    className="px-3 py-1.5 rounded border-2 border-red-600 bg-transparent text-red-500 hover:bg-red-600/10 text-sm font-semibold transition-colors"
-                    onClick={() => setShowGiveUpConfirm(true)}
-                  >
-                    Give up?
-                  </button>
-                </div>
-              )}
+            {(() => {
+              const giveUpButton = !gameOver && (
+                <button
+                  className="px-3 py-1.5 rounded border-1 border-red-600 bg-transparent text-red-500 hover:bg-red-600/10 text-sm font-semibold transition-colors"
+                  onClick={() => setShowGiveUpConfirm(true)}
+                >
+                  Give up?
+                </button>
+              );
 
-              <div className="hidden md:block md:flex-1" />
-              <div className="flex-1 flex flex-col items-center">
-                <div className="text-gray-200 text-sm flex items-center gap-2">
-                  <CalendarIcon className="w-4 h-4" />
-                  {puzzleDate}
+              return (
+                <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+                  {/* Give up button - shows above date on mobile, on to the right on desktop */}
+                  <div className="flex justify-center md:hidden mb-3">
+                    {giveUpButton}
+                  </div>
+
+                  <div className="hidden md:block md:flex-1" />
+                  <div className="flex-1 flex flex-col items-center">
+                    <div className="text-gray-200 text-sm flex items-center gap-2">
+                      <CalendarIcon className="w-4 h-4" />
+                      {puzzleDate}
+                    </div>
+                    <div className="text-gray-400 text-sm">
+                      Next game in {timeLeft.h}h, {timeLeft.m}m
+                    </div>
+                  </div>
+                  <div className="hidden md:flex md:flex-1 md:justify-end">
+                    {giveUpButton}
+                  </div>
                 </div>
-                <div className="text-gray-400 text-sm">
-                  Next game in {timeLeft.h}h, {timeLeft.m}m
-                </div>
-              </div>
-              <div className="hidden md:flex md:flex-1 md:justify-end">
-                {!gameOver && (
-                  <button
-                    className="px-3 py-1.5 rounded border-2 border-red-600 bg-transparent text-red-500 hover:bg-red-600/10 text-sm font-semibold transition-colors"
-                    onClick={() => setShowGiveUpConfirm(true)}
-                  >
-                    Give up?
-                  </button>
-                )}
-              </div>
-            </div>
+              );
+            })()}
           </div>
           <Footer />
         </div>
@@ -508,40 +508,11 @@ const App = () => {
         onResetPuzzle={handleResetPuzzle}
       />
       <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
-
-      {/* Give Up Confirmation Modal */}
-      {showGiveUpConfirm && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
-          onClick={() => setShowGiveUpConfirm(false)}
-        >
-          <div
-            className="bg-zinc-900 rounded-lg p-6 max-w-md w-full mx-4"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <h2 className="text-xl font-bold text-center mb-4">
-              Are you sure?
-            </h2>
-            <p className="text-center text-gray-300 mb-6">
-              Unanswered games will receive 0 points.
-            </p>
-            <div className="flex gap-3">
-              <button
-                className="flex-1 px-4 py-2 rounded bg-red-700 hover:bg-red-600 text-white text-sm font-semibold"
-                onClick={handleGiveUp}
-              >
-                Give Up
-              </button>
-              <button
-                className="flex-1 px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold"
-                onClick={() => setShowGiveUpConfirm(false)}
-              >
-                Cancel
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
+      <GiveUpModal
+        isOpen={showGiveUpConfirm}
+        onConfirm={handleGiveUp}
+        onClose={() => setShowGiveUpConfirm(false)}
+      />
     </div>
   );
 };

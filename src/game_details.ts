@@ -2571,7 +2571,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 23',
     releaseYear: 2015,
     reviewRank: 83,
-    developers: ['Grezzo', 'Nintendo EPD'],
+    developers: ['Grezzo', 'Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ied0m4xwwceyruuha1qa.jpg',
@@ -2601,6 +2601,19 @@ export const gameDetails: Game[] = [
     publishers: ['Playdead'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/guhljbryvlqg2kn25z7r.jpg',
+  },
+  {
+    score: '91',
+    name: 'Forza Horizon 3',
+    platforms: 'XB1, PC, XBXS',
+    genres: 'Racing, Simulation',
+    releaseDate: 'Sep 27',
+    releaseYear: 2016,
+    reviewRank: 19,
+    developers: ['Playground Games'],
+    publishers: ['Microsoft Studios'],
+    screenshotUrl:
+      'https://cdn.mobygames.com/9ceabcf4-abef-11ed-bc39-02420a000131.webp',
   },
   {
     score: '90',
@@ -3053,7 +3066,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Apr 21',
     releaseYear: 2016,
     reviewRank: 42,
-    developers: ['PlatinumGames', 'Nintendo EPD', 'Nintendo'],
+    developers: ['PlatinumGames', 'Nintendo'],
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nqabk01yiy3o1occltgg.jpg',
@@ -3506,6 +3519,19 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sqho6e7tv9verg6j1tvv.jpg',
   },
   {
+    score: '89',
+    name: 'Hollow Knight',
+    platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
+    genres: 'Platformer, Action, Adventure',
+    releaseDate: 'Feb 24',
+    releaseYear: 2017,
+    reviewRank: 1,
+    developers: ['Team Cherry'],
+    publishers: ['Team Cherry'],
+    screenshotUrl:
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q634ullxbvipm6q6mcq9.jpg',
+  },
+  {
     score: '84',
     name: 'Destiny 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -3552,7 +3578,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Mar 3',
     releaseYear: 2017,
     reviewRank: 10,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckj69.jpg',
@@ -3578,7 +3604,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 27',
     releaseYear: 2017,
     reviewRank: 12,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qgcn3akcfv4rvojqdbvb.jpg',
@@ -3838,7 +3864,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jun 16',
     releaseYear: 2017,
     reviewRank: 40,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ufk2yvgojwy8httag9pf.jpg',
@@ -3851,7 +3877,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jul 21',
     releaseYear: 2017,
     reviewRank: 41,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yilzspbtoximnbllsaty.jpg',
@@ -5496,10 +5522,10 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 31',
     releaseYear: 2019,
     reviewRank: 27,
-    developers: ['Next Level Games', 'Nintendo EPD'],
+    developers: ['Next Level Games', 'Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vip.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vin.jpg',
   },
   {
     score: '81',
@@ -6241,7 +6267,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Mar 20',
     releaseYear: 2020,
     reviewRank: 21,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc836w.jpg',
@@ -6267,7 +6293,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jul 17',
     releaseYear: 2020,
     reviewRank: 23,
-    developers: ['Intelligent Systems', 'Nintendo EPD'],
+    developers: ['Intelligent Systems', 'Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88ir.jpg',
@@ -6462,7 +6488,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Sep 18',
     releaseYear: 2020,
     reviewRank: 45,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jan.jpg',
@@ -7142,7 +7168,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 8',
     releaseYear: 2021,
     reviewRank: 18,
-    developers: ['Nintendo EPD', 'MercurySteam'],
+    developers: ['Nintendo', 'MercurySteam'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaif8.jpg',
@@ -7558,7 +7584,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Sep 10',
     releaseYear: 2021,
     reviewRank: 59,
-    developers: ['Nintendo EPD', 'Intelligent Systems'],
+    developers: ['Nintendo', 'Intelligent Systems'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahwo.jpg',
@@ -8225,7 +8251,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Sep 9',
     releaseYear: 2022,
     reviewRank: 35,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9283.jpg',
@@ -8329,7 +8355,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Apr 29',
     releaseYear: 2022,
     reviewRank: 45,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftny.jpg',
@@ -8575,11 +8601,11 @@ export const gameDetails: Game[] = [
     genres: 'Action',
     releaseDate: 'Jun 15',
     releaseYear: 2022,
-    reviewRank: 70,
+    reviewRank: 38,
     developers: ['Ben Esposito'],
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9276.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9277.jpg',
   },
   {
     score: '77',
@@ -8867,7 +8893,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'May 12',
     releaseYear: 2023,
     reviewRank: 11,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj9.jpg',
@@ -8971,7 +8997,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 20',
     releaseYear: 2023,
     reviewRank: 20,
-    developers: ['Nintendo EPD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3er.jpg',
@@ -9153,7 +9179,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jul 21',
     releaseYear: 2023,
     reviewRank: 44,
-    developers: ['Nintendo EPD', 'Eighting'],
+    developers: ['Nintendo', 'Eighting'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix20.jpg',
@@ -9653,6 +9679,19 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scq5sr.jpg',
   },
   {
+    score: '59',
+    name: 'Suicide Squad: Kill The Justice League',
+    platforms: 'PC, PS5, XBXS',
+    genres: 'Action, Adventure',
+    releaseDate: 'Feb 2',
+    releaseYear: 2024,
+    reviewRank: 20,
+    developers: ['Rocksteady Studios'],
+    publishers: ['Warner Bros. Interactive Entertainment'],
+    screenshotUrl:
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i5b.jpg',
+  },
+  {
     score: '75',
     name: 'Star Wars Outlaws',
     platforms: 'PS5, XBXS, PC',
@@ -9803,7 +9842,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Sep 26',
     releaseYear: 2024,
     reviewRank: 18,
-    developers: ['Grezzo', 'Nintendo EPD'],
+    developers: ['Grezzo', 'Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso6.jpg',
