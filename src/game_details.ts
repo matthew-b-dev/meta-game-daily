@@ -17,13 +17,13 @@ export const gameDetails: Game[] = [
   {
     score: '90',
     name: 'Rayman Legends',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
+    platforms: 'PC, PS3, PS4, X360, XB1',
     genres: 'Platformer',
     releaseDate: 'Aug 30',
     releaseYear: 2013,
     reviewRank: 3,
     developers: ['Ubisoft Montpellier'],
-    publishers: ['Nintendo'],
+    publishers: ['Ubisoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipec.jpg',
   },
