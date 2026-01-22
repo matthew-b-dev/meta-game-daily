@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShareIcon } from '@heroicons/react/24/outline';
+import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
+import { motion } from 'framer-motion';
 
 interface ShareButtonProps {
   userPercentile: number | null;
@@ -34,32 +35,37 @@ const ShareButton: React.FC<ShareButtonProps> = ({
         className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2'
         onClick={handleShareClick}
       >
-        Copy to Share
-        <ShareIcon className='w-5 h-5' />
+        <DocumentDuplicateIcon className='w-5 h-5' />
+        Copy to Clipboard
       </button>
     );
   }
 
   return (
-    <div className='space-y-2'>
+    <motion.div
+      className='space-y-2'
+      initial={{ opacity: 0, y: -10 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.2 }}
+    >
       <p className='text-center text-xs text-yellow-400 font-semibold'>
         Please confirm you want to share the worst score today.
       </p>
       <div className='flex gap-2'>
         <button
-          className='flex-1 px-2 py-1 rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold'
+          className='flex-1 px-2 py-2 rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold'
           onClick={handleShareClick}
         >
-          I understand this will look bad for me
+          People need to know
         </button>
         <button
-          className='flex-1 px-2 py-1 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold'
+          className='flex-1 px-2 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold'
           onClick={handleCancelShare}
         >
           Cancel
         </button>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
