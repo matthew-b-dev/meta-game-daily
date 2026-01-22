@@ -25,6 +25,7 @@ import {
   saveGameState,
   clearGameState,
   isCloseGuess,
+  generateShareText,
   type GameState,
   type MissedGuess,
 } from './utils';
@@ -82,22 +83,28 @@ const App = () => {
   // Fetch today's scores on mount
   useEffect(() => {
     const fetchScores = async () => {
-      const scores = await fetchTodayScores();
+      try {
+        const scores = await fetchTodayScores();
 
-      // If we have 0 scores, seed the database with mock scores
-      if (!scores || scores.length === 0) {
-        const mockScores = [540, 520, 480, 200];
+        // If we have 0 scores, seed the database with mock scores
+        if (!scores || scores.length === 0) {
+          const mockScores = [540, 520, 480, 200];
 
-        // Send each mock score to Supabase
-        for (const mockScore of mockScores) {
-          await sendScore(mockScore);
+          // Send each mock score to Supabase
+          for (const mockScore of mockScores) {
+            await sendScore(mockScore);
+          }
+
+          // Set todayScores with the newly sent mock scores plus any existing scores
+          setTodayScores([...mockScores, ...(scores || [])]);
+        } else {
+          // We have enough scores, just use what we fetched
+          setTodayScores(scores);
         }
-
-        // Set todayScores with the newly sent mock scores plus any existing scores
-        setTodayScores([...mockScores, ...(scores || [])]);
-      } else {
-        // We have enough scores, just use what we fetched
-        setTodayScores(scores);
+      } catch (error) {
+        console.error('Failed to fetch scores from Supabase:', error);
+        // App continues to work without scores - histogram just won't show
+        setTodayScores([]);
       }
     };
 
@@ -416,9 +423,6 @@ const App = () => {
   };
 
   const handleCopyToShare = async () => {
-    // Use the puzzle date instead of current date
-    const dateStr = puzzleDate;
-
     // Generate emoji string for each game
     const emojis = dailyGames
       .map((game) => {
@@ -436,8 +440,8 @@ const App = () => {
       })
       .join('');
 
-    // Build the share text
-    const shareText = `https://matthew-b-dev.github.io/meta-game-daily/\n${dateStr}\n${emojis}\n🏆 ${score} points`;
+    // Generate share text with rank
+    const shareText = generateShareText(score, todayScores, puzzleDate, emojis);
 
     // Copy to clipboard
     try {

@@ -335,3 +335,43 @@ export const getTimeUntilNextGame = (): { h: number; m: number } => {
   const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
   return { h, m };
 };
+
+/**
+ * Generate share text with score, rank, and emoji representation
+ */
+export const generateShareText = (
+  score: number,
+  todayScores: number[],
+  puzzleDate: string,
+  emojis: string,
+): string => {
+  // Calculate rank
+  // Include user's score if not already in todayScores
+  const allScores = todayScores.includes(score)
+    ? todayScores
+    : [...todayScores, score];
+
+  // Sort scores in descending order (highest first)
+  const sortedScores = [...allScores].sort((a, b) => b - a);
+
+  // Find user's rank (1-based index)
+  const rank = sortedScores.findIndex((s) => s === score) + 1;
+  const totalPlayers = allScores.length;
+
+  // Build the share text
+  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points | 🏅 Rank #${rank} of ${totalPlayers}`;
+};
+
+/**
+ * Get percentile message based on user's performance
+ */
+export const getPercentileMessage = (percentile: number): string => {
+  if (percentile === 100) {
+    return "Dang. So far, you're rank 1 today.";
+  } else if (percentile === 0) {
+    return "No joke, that's the worst score today. 🤷";
+  } else {
+    return `That's better than ${percentile}% of players.`;
+  }
+};
+

@@ -4,6 +4,7 @@ import { ShareIcon } from '@heroicons/react/24/outline';
 import { trackPuzzleFeedback } from '../analytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { GameState } from '../utils';
+import { getPercentileMessage } from '../utils';
 
 interface Game {
   name: string;
@@ -86,18 +87,16 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             }}
           >
             {/* Score Distribution Graph */}
-            {todayScores.length > 0 && (
+            {todayScores.length > 1 && (
               <div className='mb-6 p-4 bg-zinc-800 rounded-lg'>
-                <div className='text-center mb-2'>
+                <div className='text-center mb-1'>
                   <span className='text-sm font-semibold'>
-                    Today's Score: {score}
+                    Your Score: {score}
                   </span>
                 </div>
                 {userPercentile !== null && (
                   <p className='text-center text-sm text-green-400 mb-3'>
-                    {userPercentile === 100
-                      ? "That's the highest score today! Well done!"
-                      : `That's better than ${userPercentile}% of players. ${userPercentile === 0 ? '😬' : ''}`}
+                    {getPercentileMessage(userPercentile)}
                   </p>
                 )}
                 <div className='flex items-end justify-between h-32 gap-1'>
