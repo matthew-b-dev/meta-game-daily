@@ -74,7 +74,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <motion.div
-            className='bg-zinc-900 rounded-lg p-6 max-w-md w-full my-auto max-h-[90vh] overflow-y-auto'
+            className='bg-zinc-900 rounded-lg p-6 max-w-md w-full my-auto max-h-[100vh] overflow-y-auto'
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}

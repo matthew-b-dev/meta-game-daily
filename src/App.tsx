@@ -84,9 +84,21 @@ const App = () => {
     const fetchScores = async () => {
       const scores = await fetchTodayScores();
 
-      // Seed the scores with some mocked ones so the graph makes sense alongside fetched scores
-      const mockScores = [540, 520, 480, 270];
-      setTodayScores([...mockScores, ...scores]);
+      // If we have 0 scores, seed the database with mock scores
+      if (!scores || scores.length === 0) {
+        const mockScores = [540, 520, 480, 200];
+
+        // Send each mock score to Supabase
+        for (const mockScore of mockScores) {
+          await sendScore(mockScore);
+        }
+
+        // Set todayScores with the newly sent mock scores plus any existing scores
+        setTodayScores([...mockScores, ...(scores || [])]);
+      } else {
+        // We have enough scores, just use what we fetched
+        setTodayScores(scores);
+      }
     };
 
     fetchScores();
@@ -182,32 +194,31 @@ const App = () => {
     }
   }, [stateLoaded, gameOver, scoreSent, score, allGamesComplete]);
 
-  console.log('current score:', score);
-
   // Calculate percentile when game is over and scores are available
   React.useEffect(() => {
     if (gameOver && todayScores.length > 0 && allGamesComplete) {
-      // Add user's score to the list if not already included
-      const scoresWithUser = todayScores.includes(score)
-        ? todayScores
-        : [...todayScores, score];
+      // Count how many OTHER players' scores are below the user's score
+      const scoresBelowUser = todayScores.filter((s) => s < score).length;
 
-      // Sort scores in ascending order
-      const sortedScores = [...scoresWithUser].sort((a, b) => a - b);
+      // Check if user's score is already in todayScores
+      const userScoreIncluded = todayScores.includes(score);
 
-      // Count how many scores are below the user's score
-      const scoresBelowUser = sortedScores.filter((s) => s < score).length;
+      // Total OTHER players (exclude user if their score is already in the array)
+      const otherPlayersCount = userScoreIncluded
+        ? todayScores.length - 1
+        : todayScores.length;
 
-      // Calculate percentile (what percentage of players the user beat)
-      const percentile = Math.round(
-        (scoresBelowUser / sortedScores.length) * 100,
-      );
+      // Calculate percentile (what percentage of OTHER players the user beat)
+      const percentile =
+        otherPlayersCount > 0
+          ? Math.round((scoresBelowUser / otherPlayersCount) * 100)
+          : 0;
 
       setUserPercentile(percentile);
 
       // Update todayScores to include user's score for the graph
-      if (!todayScores.includes(score)) {
-        setTodayScores(scoresWithUser);
+      if (!userScoreIncluded) {
+        setTodayScores([...todayScores, score]);
       }
     }
   }, [gameOver, todayScores, score, allGamesComplete]);
