@@ -8,12 +8,14 @@ import {
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
+import { sendScore, fetchTodayScores } from './lib/supabaseClient';
 import MissedGuesses from './components/MissedGuesses';
 import GameTable from './components/GameTable';
 import GuessInput from './components/GuessInput';
 import GameCompleteModal from './components/GameCompleteModal';
 import HelpModal from './components/HelpModal';
 import GiveUpModal from './components/GiveUpModal';
+import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import {
   getDailyGames,
@@ -60,6 +62,9 @@ const App = () => {
     [gameName: string]: GameState;
   }>({});
   const [gameCompleteDismissed, setGameCompleteDismissed] = useState(false);
+  const [scoreSent, setScoreSent] = useState(false);
+  const [todayScores, setTodayScores] = useState<number[]>([]);
+  const [userPercentile, setUserPercentile] = useState<number | null>(null);
 
   // Timer for next game (set once on mount)
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
@@ -74,6 +79,19 @@ const App = () => {
   const [showHelp, setShowHelp] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
 
+  // Fetch today's scores on mount
+  useEffect(() => {
+    const fetchScores = async () => {
+      const scores = await fetchTodayScores();
+
+      // Seed the scores with some mocked ones so the graph makes sense alongside fetched scores
+      const mockScores = [540, 520, 480, 270];
+      setTodayScores([...mockScores, ...scores]);
+    };
+
+    fetchScores();
+  }, []);
+
   // Load state from localStorage on mount
   useEffect(() => {
     const savedState = loadGameState(puzzleDate);
@@ -85,6 +103,7 @@ const App = () => {
       setMissedGuesses(savedState.missedGuesses);
       setGameStates(savedState.gameStates);
       setGameCompleteDismissed(savedState.gameCompleteDismissed);
+      setScoreSent(savedState.scoreSent ?? false);
       setDisplayScore(savedState.score);
     } else {
       // Clear state when puzzle date changes (no saved state found)
@@ -95,6 +114,7 @@ const App = () => {
       setMissedGuesses([]);
       setGameStates({});
       setGameCompleteDismissed(false);
+      setScoreSent(false);
       setDisplayScore(1000);
     }
     setStateLoaded(true);
@@ -148,6 +168,49 @@ const App = () => {
 
     prevGameOver.current = gameOver;
   }, [stateLoaded, gameOver, showGameComplete]);
+
+  // Send score to Supabase when game becomes over (exactly once)
+  React.useEffect(() => {
+    // Only send if:
+    // 1. State is loaded
+    // 2. Game is over
+    // 3. Score hasn't been sent yet
+    // 4. All games are complete (ensures all deductions have been applied)
+    if (stateLoaded && gameOver && !scoreSent && allGamesComplete) {
+      sendScore(score);
+      setScoreSent(true);
+    }
+  }, [stateLoaded, gameOver, scoreSent, score, allGamesComplete]);
+
+  console.log('current score:', score);
+
+  // Calculate percentile when game is over and scores are available
+  React.useEffect(() => {
+    if (gameOver && todayScores.length > 0 && allGamesComplete) {
+      // Add user's score to the list if not already included
+      const scoresWithUser = todayScores.includes(score)
+        ? todayScores
+        : [...todayScores, score];
+
+      // Sort scores in ascending order
+      const sortedScores = [...scoresWithUser].sort((a, b) => a - b);
+
+      // Count how many scores are below the user's score
+      const scoresBelowUser = sortedScores.filter((s) => s < score).length;
+
+      // Calculate percentile (what percentage of players the user beat)
+      const percentile = Math.round(
+        (scoresBelowUser / sortedScores.length) * 100,
+      );
+
+      setUserPercentile(percentile);
+
+      // Update todayScores to include user's score for the graph
+      if (!todayScores.includes(score)) {
+        setTodayScores(scoresWithUser);
+      }
+    }
+  }, [gameOver, todayScores, score, allGamesComplete]);
 
   // Auto-reveal all non-guessed games when guesses are exhausted
   React.useEffect(() => {
@@ -298,6 +361,7 @@ const App = () => {
       missedGuesses,
       gameStates,
       gameCompleteDismissed,
+      scoreSent,
     });
     // puzzleDate is purposefully left out as a dependency so we don't force a save when the date ticks over to the next.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -310,6 +374,7 @@ const App = () => {
     missedGuesses,
     gameStates,
     gameCompleteDismissed,
+    scoreSent,
   ]);
 
   const handleResetPuzzle = () => {
@@ -325,6 +390,7 @@ const App = () => {
     setMissedGuesses([]);
     setGameStates({});
     setGameCompleteDismissed(false);
+    setScoreSent(false);
     setShowGameComplete(false);
     setGuess(null);
     setInputValue('');
@@ -373,14 +439,14 @@ const App = () => {
   };
 
   return (
-    <div className="min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg">
-      <Toaster position="top-center" />
-      <div className="flex flex-col items-center w-full px-1 sm:px-4 flex-1">
-        <div className="w-full max-w-[750px] p-2 sm:p-6">
-          <div className="relative mb-6">
-            <div className="text-center">
+    <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg'>
+      <Toaster position='top-center' />
+      <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
+        <div className='w-full max-w-[750px] p-2 sm:p-6'>
+          <div className='relative mb-6'>
+            <div className='text-center'>
               <h1
-                className="text-2xl sm:text-4xl font-black"
+                className='text-2xl sm:text-4xl font-black'
                 style={{
                   fontFamily: 'Playfair Display, serif',
                   letterSpacing: '0.02em',
@@ -388,22 +454,22 @@ const App = () => {
               >
                 MetaGameDaily
               </h1>
-              <p className="text-gray-400 text-sm mt-1">
+              <p className='text-gray-400 text-sm mt-1'>
                 A daily <i>Video Games Industry</i> puzzle
               </p>
             </div>
             <button
-              className="absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2"
+              className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
               onClick={() => setShowHelp(true)}
             >
-              <QuestionMarkCircleIcon className="w-8 h-8" />
-              <span className="text-sm font-semibold hidden sm:inline">
+              <QuestionMarkCircleIcon className='w-8 h-8' />
+              <span className='text-sm font-semibold hidden sm:inline'>
                 How to play
               </span>
             </button>
           </div>
 
-          <div className="mb-8">
+          <div className='mb-8'>
             <GuessInput
               filteredOptions={filteredOptions}
               guess={guess}
@@ -415,16 +481,16 @@ const App = () => {
             />
             {!gameOver && (
               <>
-                <div className="mt-4 flex justify-between items-center">
-                  <div className="font-semibold">
-                    <span className="bg-zinc-800 px-2 py-1 mr-1 rounded">
+                <div className='mt-4 flex justify-between items-center'>
+                  <div className='font-semibold'>
+                    <span className='bg-zinc-800 px-2 py-1 mr-1 rounded'>
                       {guessesLeft}
                     </span>
                     guesses remaining
                   </div>
-                  <div className="font-semibold">
+                  <div className='font-semibold'>
                     Current Score:{' '}
-                    <span className="bg-zinc-800 px-2 py-1 rounded">
+                    <span className='bg-zinc-800 px-2 py-1 rounded'>
                       {displayScore}
                     </span>
                   </div>
@@ -433,17 +499,18 @@ const App = () => {
               </>
             )}
             {gameOver && (
-              <div className="mt-4 mb-4 flex justify-center">
+              <div className='mt-4 mb-4 flex flex-col items-center gap-2'>
                 <button
-                  className="px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold"
+                  className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
                   onClick={() => setShowGameComplete(true)}
                 >
                   Show Results 🏆
                 </button>
+                <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
               </div>
             )}
           </div>
-          <div className="-mx-2 sm:mx-0">
+          <div className='-mx-2 sm:mx-0'>
             <GameTable
               dailyGames={dailyGames}
               correctGuesses={correctGuesses}
@@ -454,11 +521,11 @@ const App = () => {
               updateGameState={updateGameState}
             />
           </div>
-          <div className="w-full max-w-[750px] mx-auto">
+          <div className='w-full max-w-[750px] mx-auto'>
             {(() => {
               const giveUpButton = !gameOver && (
                 <button
-                  className="px-3 py-1.5 rounded border-1 border-red-600 bg-transparent text-red-500 hover:bg-red-600/10 text-sm font-semibold transition-colors"
+                  className='px-3 py-1.5 rounded border-1 border-red-600 bg-transparent text-red-500 hover:bg-red-600/10 text-sm font-semibold transition-colors'
                   onClick={() => setShowGiveUpConfirm(true)}
                 >
                   Give up?
@@ -466,23 +533,23 @@ const App = () => {
               );
 
               return (
-                <div className="pt-6 flex flex-col md:flex-row md:items-center md:justify-between">
+                <div className='pt-6 flex flex-col md:flex-row md:items-center md:justify-between'>
                   {/* Give up button - shows above date on mobile, on to the right on desktop */}
-                  <div className="flex justify-center md:hidden mb-3">
+                  <div className='flex justify-center md:hidden mb-3'>
                     {giveUpButton}
                   </div>
 
-                  <div className="hidden md:block md:flex-1" />
-                  <div className="flex-1 flex flex-col items-center">
-                    <div className="text-gray-200 text-sm flex items-center gap-2">
-                      <CalendarIcon className="w-4 h-4" />
+                  <div className='hidden md:block md:flex-1' />
+                  <div className='flex-1 flex flex-col items-center'>
+                    <div className='text-gray-200 text-sm flex items-center gap-2'>
+                      <CalendarIcon className='w-4 h-4' />
                       {puzzleDate}
                     </div>
-                    <div className="text-gray-400 text-sm">
+                    <div className='text-gray-400 text-sm'>
                       Next game in {timeLeft.h}h, {timeLeft.m}m
                     </div>
                   </div>
-                  <div className="hidden md:flex md:flex-1 md:justify-end">
+                  <div className='hidden md:flex md:flex-1 md:justify-end'>
                     {giveUpButton}
                   </div>
                 </div>
@@ -500,12 +567,13 @@ const App = () => {
         games={dailyGames}
         correctGuesses={correctGuesses}
         gameStates={gameStates}
+        todayScores={todayScores}
+        userPercentile={userPercentile}
         onClose={() => {
           setShowGameComplete(false);
           setGameCompleteDismissed(true);
         }}
         onCopyToShare={handleCopyToShare}
-        onResetPuzzle={handleResetPuzzle}
       />
       <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
       <GiveUpModal
