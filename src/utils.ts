@@ -51,6 +51,7 @@ export interface SessionState {
   missedGuesses: MissedGuess[];
   gameStates: { [gameName: string]: GameState };
   gameCompleteDismissed: boolean;
+  scoreSent: boolean;
 }
 
 const STORAGE_KEY = 'meta-game-daily-state';
