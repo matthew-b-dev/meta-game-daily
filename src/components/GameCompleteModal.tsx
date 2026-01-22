@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import toast from 'react-hot-toast';
-import { ShareIcon, ArrowPathIcon } from '@heroicons/react/24/outline';
+import { ShareIcon } from '@heroicons/react/24/outline';
 import { trackPuzzleFeedback } from '../analytics';
 import { motion, AnimatePresence } from 'framer-motion';
 import type { GameState } from '../utils';
@@ -19,24 +19,23 @@ interface GameCompleteModalProps {
   games: Game[];
   correctGuesses: string[];
   gameStates: { [gameName: string]: GameState };
+  todayScores: number[];
+  userPercentile: number | null;
   onClose: () => void;
   onCopyToShare: () => void;
-  onResetPuzzle: () => void;
 }
 
 const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   isOpen,
   score,
-  guessesLeft,
   puzzleDate,
   games,
   correctGuesses,
-  gameStates,
+  todayScores,
+  userPercentile,
   onClose,
   onCopyToShare,
-  onResetPuzzle,
 }) => {
-  const [showConfirmReset, setShowConfirmReset] = useState(false);
   const [feedback, setFeedback] = useState<'up' | 'down' | null>(null);
 
   // Reset feedback when modal closes
@@ -44,7 +43,6 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
     if (!isOpen) {
       // Prevent a cascading render loop
       setTimeout(() => {
-        setShowConfirmReset(false);
         setFeedback(null);
       }, 0);
     }
@@ -59,7 +57,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center"
+          className='fixed inset-0 z-50 flex items-center justify-center'
           onClick={onClose}
           initial={{
             backdropFilter: 'blur(0px)',
@@ -76,7 +74,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
           transition={{ delay: 0.5, duration: 0.5 }}
         >
           <motion.div
-            className="bg-zinc-900 rounded-lg p-6 max-w-md w-full mx-4"
+            className='bg-zinc-900 rounded-lg p-6 max-w-md w-full mx-4'
             onClick={(e) => e.stopPropagation()}
             initial={{ opacity: 0, scale: 0.8, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
@@ -87,135 +85,138 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
               ease: 'easeOut',
             }}
           >
-            <h2 className="text-xl font-bold text-center mb-4">
-              Game Complete!
-            </h2>
-            <div className="flex justify-between mb-6 text-sm">
-              <div>
-                <span className="font-semibold">Score:</span> {score}
-              </div>
-              <div className="text-sm leading-none">
-                {games.map((game, idx) => {
-                  const pointsDeducted =
-                    gameStates[game.name]?.pointsDeducted ?? 0;
-                  const earnedPoints = 200 - pointsDeducted;
-                  const isGuessed = correctGuesses.includes(game.name);
+            {/* Score Distribution Graph */}
+            {todayScores.length > 0 && (
+              <div className='mb-6 p-4 bg-zinc-800 rounded-lg'>
+                <div className='text-center mb-2'>
+                  <span className='text-sm font-semibold'>
+                    Today's Score: {score}
+                  </span>
+                </div>
+                {userPercentile !== null && (
+                  <p className='text-center text-sm text-green-400 mb-3'>
+                    {userPercentile === 100
+                      ? "That's the highest score today! Well done!"
+                      : `That's better than ${userPercentile}% of players. ${userPercentile === 0 ? '😬' : ''}`}
+                  </p>
+                )}
+                <div className='flex items-end justify-between h-32 gap-1'>
+                  {(() => {
+                    // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000)
+                    const bins = [
+                      { min: 0, max: 200, count: 0, label: '0-200' },
+                      { min: 201, max: 400, count: 0, label: '201-400' },
+                      { min: 401, max: 600, count: 0, label: '401-600' },
+                      { min: 601, max: 800, count: 0, label: '601-800' },
+                      { min: 801, max: 1000, count: 0, label: '801-1000' },
+                    ];
 
-                  let emoji = '🟥'; // Red square for missed/gave up
-                  if (isGuessed && earnedPoints === 200) {
-                    emoji = '🟩'; // Green square for perfect
-                  } else if (isGuessed && earnedPoints < 200) {
-                    emoji = '🟨'; // Yellow square for guessed with hints
-                  }
+                    // Count scores in each bin
+                    todayScores.forEach((s) => {
+                      const bin = bins.find((b) => s >= b.min && s <= b.max);
+                      if (bin) bin.count++;
+                    });
 
-                  return <span key={idx}>{emoji}</span>;
-                })}
+                    // Find max count for scaling
+                    const maxCount = Math.max(...bins.map((b) => b.count), 1);
+
+                    // Determine which bin the user's score falls into
+                    const userBin = bins.findIndex(
+                      (b) => score >= b.min && score <= b.max,
+                    );
+
+                    return bins.map((bin, idx) => {
+                      const heightPercent = (bin.count / maxCount) * 100;
+                      const isUserBin = idx === userBin;
+
+                      return (
+                        <div
+                          key={idx}
+                          className='flex-1 flex flex-col items-center'
+                        >
+                          <div
+                            className='w-full flex items-end justify-center'
+                            style={{ height: '96px' }}
+                          >
+                            <div
+                              className={`w-full rounded-t transition-all ${
+                                isUserBin ? 'bg-green-500' : 'bg-blue-500'
+                              }`}
+                              style={{ height: `${heightPercent}%` }}
+                              title={`${bin.count} players`}
+                            />
+                          </div>
+                          <div className='text-[10px] text-gray-400 mt-1 text-center'>
+                            {bin.label}
+                          </div>
+                          <div className='text-xs text-gray-300 font-semibold'>
+                            {bin.count}
+                          </div>
+                        </div>
+                      );
+                    });
+                  })()}
+                </div>
               </div>
-              <div>
-                <span className="font-semibold text-sm">Guesses:</span>{' '}
-                {10 - guessesLeft}
-                /10
-              </div>
-            </div>
-            <div className="space-y-3">
+            )}
+
+            <div className='space-y-3'>
               {games.filter((game) => !correctGuesses.includes(game.name))
                 .length > 0 && (
-                <div className="mb-1">
-                  <div className="text-red-400 font-semibold text-sm mb-2">
+                <div className='mb-1 flex flex-wrap gap-2 items-center'>
+                  <span className='text-red-400 font-semibold text-sm'>
                     Missed:
-                  </div>
-                  <div className="flex flex-wrap gap-2">
-                    {games
-                      .filter((game) => !correctGuesses.includes(game.name))
-                      .map((game, i) => (
-                        <span
-                          key={game.name + i}
-                          className="flex items-center rounded px-2 py-1 text-sm text-red-500 bg-red-900/30"
-                        >
-                          <span className="mr-1 font-bold">❌</span> {game.name}
-                        </span>
-                      ))}
-                  </div>
+                  </span>
+                  {games
+                    .filter((game) => !correctGuesses.includes(game.name))
+                    .map((game, i) => (
+                      <span
+                        key={game.name + i}
+                        className='flex items-center rounded px-2 py-1 text-xs text-red-500 bg-red-900/30'
+                      >
+                        <span className='mr-1 font-bold'>❌</span> {game.name}
+                      </span>
+                    ))}
                 </div>
               )}
               <button
-                className="w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2"
+                className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2'
                 onClick={onCopyToShare}
               >
                 Copy to Share
-                <ShareIcon className="w-5 h-5" />
+                <ShareIcon className='w-5 h-5' />
               </button>
-              <div className="border-t border-gray-700 pt-4">
-                <p className="text-center text-sm text-gray-400">
+              <div className='border-t border-gray-700 pt-4'>
+                <p className='text-center text-xs text-gray-400'>
                   Provide <b>*anonymous*</b> feedback for today's puzzle.
                 </p>
-                <p className="text-center text-sm text-gray-400 mb-3">
-                  AdBlock will block this. There's no ads on the site, though!
+                <p className='text-center text-xs text-gray-400 mb-3'>
+                  AdBlock will block this. There are no ads though!
                 </p>
                 {feedback === null ? (
-                  <div className="flex gap-2 justify-center">
+                  <div className='flex gap-2 justify-center'>
                     <button
-                      className="px-4 py-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white"
+                      className='px-4 py-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
                       onClick={() => handleFeedback('up')}
                     >
                       Great 👍
                     </button>
                     <button
-                      className="px-4 py-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white"
+                      className='px-4 py-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
                       onClick={() => handleFeedback('down')}
                     >
                       Could be better 🤷
                     </button>
                   </div>
                 ) : (
-                  <p className="text-center text-sm text-green-400 font-semibold">
+                  <p className='text-center text-sm text-green-400 font-semibold'>
                     I really appreciate your feedback!
                   </p>
                 )}
               </div>
-              <div className="border-t border-gray-700 pt-3 mt-3" />
-              <div className="flex justify-center mb-4">
-                {!showConfirmReset ? (
-                  <button
-                    className="mb-4 text-red-500 hover:text-red-400 text-sm underline cursor-pointer focus:outline-none !border-transparent flex items-center gap-1"
-                    onClick={() => setShowConfirmReset(true)}
-                  >
-                    <ArrowPathIcon className="w-4 h-4 -scale-x-100" />
-                    Reset today's puzzle
-                  </button>
-                ) : (
-                  <div className="flex flex-col items-center gap-2 mb-4">
-                    <span className="text-sm text-gray-300">
-                      Are you sure you want to reset today's puzzle?
-                    </span>
-                    <div className="flex gap-2">
-                      <button
-                        className="px-4 py-1.5 rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold flex items-center gap-1"
-                        onClick={() => {
-                          setShowConfirmReset(false);
-                          onResetPuzzle();
-                          onClose();
-                        }}
-                      >
-                        <ArrowPathIcon className="w-4 h-4 -scale-x-100" />
-                        Confirm Reset
-                      </button>
-                      <button
-                        className="px-4 py-1.5 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold"
-                        onClick={() => setShowConfirmReset(false)}
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  </div>
-                )}
-              </div>
               <button
-                className="w-full px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold"
-                onClick={() => {
-                  setShowConfirmReset(false);
-                  onClose();
-                }}
+                className='w-full px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold'
+                onClick={onClose}
               >
                 Close
               </button>
