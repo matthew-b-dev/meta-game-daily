@@ -8,6 +8,7 @@ import {
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
+import { sendScore } from './lib/supabaseClient';
 import MissedGuesses from './components/MissedGuesses';
 import GameTable from './components/GameTable';
 import GuessInput from './components/GuessInput';
@@ -60,6 +61,7 @@ const App = () => {
     [gameName: string]: GameState;
   }>({});
   const [gameCompleteDismissed, setGameCompleteDismissed] = useState(false);
+  const [scoreSent, setScoreSent] = useState(false);
 
   // Timer for next game (set once on mount)
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
@@ -85,6 +87,7 @@ const App = () => {
       setMissedGuesses(savedState.missedGuesses);
       setGameStates(savedState.gameStates);
       setGameCompleteDismissed(savedState.gameCompleteDismissed);
+      setScoreSent(savedState.scoreSent ?? false);
       setDisplayScore(savedState.score);
     } else {
       // Clear state when puzzle date changes (no saved state found)
@@ -95,6 +98,7 @@ const App = () => {
       setMissedGuesses([]);
       setGameStates({});
       setGameCompleteDismissed(false);
+      setScoreSent(false);
       setDisplayScore(1000);
     }
     setStateLoaded(true);
@@ -148,6 +152,18 @@ const App = () => {
 
     prevGameOver.current = gameOver;
   }, [stateLoaded, gameOver, showGameComplete]);
+
+  // Send score to Supabase when game becomes over (exactly once)
+  React.useEffect(() => {
+    // Only send if:
+    // 1. State is loaded
+    // 2. Game is over
+    // 3. Score hasn't been sent yet
+    if (stateLoaded && gameOver && !scoreSent) {
+      sendScore(score);
+      setScoreSent(true);
+    }
+  }, [stateLoaded, gameOver, scoreSent, score]);
 
   // Auto-reveal all non-guessed games when guesses are exhausted
   React.useEffect(() => {
@@ -298,6 +314,7 @@ const App = () => {
       missedGuesses,
       gameStates,
       gameCompleteDismissed,
+      scoreSent,
     });
     // puzzleDate is purposefully left out as a dependency so we don't force a save when the date ticks over to the next.
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -310,6 +327,7 @@ const App = () => {
     missedGuesses,
     gameStates,
     gameCompleteDismissed,
+    scoreSent,
   ]);
 
   const handleResetPuzzle = () => {
@@ -325,6 +343,7 @@ const App = () => {
     setMissedGuesses([]);
     setGameStates({});
     setGameCompleteDismissed(false);
+    setScoreSent(false);
     setShowGameComplete(false);
     setGuess(null);
     setInputValue('');
