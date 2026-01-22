@@ -1,17 +1,6 @@
 import type { Game } from './App';
 
-/* Sample fetch from Supabase to get today's scores
-
-const today = new Date().toISOString().slice(0, 10);
-
-const { data } = await supabase
-  .from('scores')
-  .select('score')
-  .eq('created_at', today);
-
-*/
-
-export const DATE_OVERRIDE: string | null = null; // '2026-01-22'
+export const DATE_OVERRIDE: string | null = null; // '2026-01-23'
 
 // Demo days configuration - hardcode specific games for specific dates
 // Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
@@ -36,6 +25,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Suicide Squad: Kill The Justice League',
     "Luigi's Mansion 3",
     'Forza Horizon 3',
+  ],
+  '2026-01-23': [
+    'Dota 2',
+    'Owlboy',
+    'A Hat in Time',
+    'Visions of Mana',
+    'Redfall',
   ],
 };
 
@@ -374,4 +370,3 @@ export const getPercentileMessage = (percentile: number): string => {
     return `That's better than ${percentile}% of players.`;
   }
 };
-
