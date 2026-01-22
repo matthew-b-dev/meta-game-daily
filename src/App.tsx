@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
 import * as React from 'react';
 import toast, { Toaster } from 'react-hot-toast';
+import { motion } from 'framer-motion';
 import {
   QuestionMarkCircleIcon,
   CalendarIcon,
@@ -481,6 +482,26 @@ const App = () => {
               <p className='text-gray-400 text-sm mt-1'>
                 A daily <i>Video Games Industry</i> puzzle
               </p>
+              <motion.p
+                className='text-gray-400 text-sm mt-1'
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{
+                  opacity: 1,
+                  scale: 1,
+                  x: [0, -8, 8, -8, 8, -5, 5, 0],
+                }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeOut',
+                  x: {
+                    duration: 0.5,
+                    ease: 'easeInOut',
+                    times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+                  },
+                }}
+              >
+                🎉 Now with daily Leaderboard! 🎉
+              </motion.p>
             </div>
             <button
               className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'

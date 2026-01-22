@@ -33,3 +33,16 @@ export const fetchTodayScores = async (): Promise<number[]> => {
 
   return data?.map((row) => row.score) ?? [];
 };
+
+export const sendFeedback = async (
+  feedbackType: 'up' | 'down',
+): Promise<void> => {
+  const { error } = await supabase.from('feedback').insert({
+    created_at: getUtcDateString(),
+    feedback: feedbackType,
+  });
+
+  if (error) {
+    console.error('Error sending feedback:', error);
+  }
+};
