@@ -395,7 +395,7 @@ const App = () => {
     scoreSent,
   ]);
 
-  const handleResetPuzzle = () => {
+  const handleResetPuzzle = async () => {
     // Clear localStorage
     clearGameState();
 
@@ -412,6 +412,15 @@ const App = () => {
     setShowGameComplete(false);
     setGuess(null);
     setInputValue('');
+
+    // Re-fetch scores
+    try {
+      const scores = await fetchTodayScores();
+      setTodayScores(scores || []);
+    } catch (error) {
+      console.error('Failed to fetch scores after reset:', error);
+      setTodayScores([]);
+    }
 
     toast.success('Puzzle reset!');
   };
