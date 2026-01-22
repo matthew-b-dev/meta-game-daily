@@ -1,5 +1,16 @@
 import type { Game } from './App';
 
+/*
+
+const today = new Date().toISOString().slice(0, 10);
+
+const { data } = await supabase
+  .from('scores')
+  .select('score')
+  .eq('created_at', today);
+
+*/
+
 export const DATE_OVERRIDE: string | null = null; // '2026-01-22'
 
 // Demo days configuration - hardcode specific games for specific dates
