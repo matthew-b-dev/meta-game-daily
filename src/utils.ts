@@ -1,6 +1,6 @@
 import type { Game } from './App';
 
-/*
+/* Sample fetch from Supabase to get today's scores
 
 const today = new Date().toISOString().slice(0, 10);
 
