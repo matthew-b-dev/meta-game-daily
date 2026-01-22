@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { getUtcDateString } from '../utils';
 
 export const supabase = createClient(
   import.meta.env.VITE_SUPABASE_URL!,
@@ -8,7 +9,7 @@ export const supabase = createClient(
 export const sendScore = async (playerScore: number): Promise<void> => {
   console.log('sending score: ', playerScore);
   const { error } = await supabase.from('scores').insert({
-    created_at: new Date().toISOString().slice(0, 10),
+    created_at: getUtcDateString(),
     score: playerScore,
   });
 
@@ -18,7 +19,7 @@ export const sendScore = async (playerScore: number): Promise<void> => {
 };
 
 export const fetchTodayScores = async (): Promise<number[]> => {
-  const today = new Date().toISOString().slice(0, 10);
+  const today = getUtcDateString();
 
   const { data, error } = await supabase
     .from('scores')
