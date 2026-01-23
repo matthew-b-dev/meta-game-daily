@@ -5,6 +5,7 @@ import {
   MinusIcon,
   MagnifyingGlassIcon,
 } from '@heroicons/react/24/outline';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import type { Game } from '../App';
 import type { GameState } from '../utils';
 
@@ -234,30 +235,30 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
               : 'bg-zinc-800')
         }
       >
-        <td className="p-2">
+        <td className='p-2'>
           <button
             onClick={() => setExpanded((e) => !e)}
-            className="p-1 rounded bg-gray-700 hover:bg-gray-600 transition-colors"
+            className='p-1 rounded bg-gray-700 hover:bg-gray-600 transition-colors'
           >
             {expanded ? (
-              <MinusIcon className="w-5 h-5" />
+              <MinusIcon className='w-5 h-5' />
             ) : (
-              <PlusIcon className="w-5 h-5" />
+              <PlusIcon className='w-5 h-5' />
             )}
           </button>
         </td>
-        <td className="p-2 text-sm sm:text-base">
+        <td className='p-2 text-sm sm:text-base'>
           {correctGuesses.includes(game.name) || revealedTitle
             ? game.name
             : maskName(game.name)}
         </td>
-        <td className="p-2 text-sm sm:text-base">{game.releaseYear}</td>
-        <td className="p-2 text-sm sm:text-base">
+        <td className='p-2 text-sm sm:text-base'>{game.releaseYear}</td>
+        <td className='p-2 text-sm sm:text-base'>
           {Array.isArray(game.developers)
             ? game.developers.join(', ')
             : game.developers}
         </td>
-        <td className="p-2 sm:pr-4 text-sm sm:text-base">
+        <td className='p-2 sm:pr-4 text-sm sm:text-base'>
           {(() => {
             const earnedPoints = 200 - pointsDeducted;
             const isGuessed = correctGuesses.includes(game.name);
@@ -296,7 +297,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
           >
             <motion.td
               colSpan={5}
-              className="bg-zinc-950 p-4 text-left relative overflow-visible"
+              className='bg-zinc-950 p-4 text-left relative overflow-visible'
               initial={{ height: 0, paddingTop: 0, paddingBottom: 0 }}
               animate={{
                 height: 'auto',
@@ -309,14 +310,14 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
               {/* Reveal All button - top right on desktop, below screenshot on mobile */}
               {!correctGuesses.includes(game.name) && !allRevealed && (
                 <button
-                  className="hidden md:block absolute top-4 right-4 px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-semibold transition-colors"
+                  className='hidden md:block absolute top-4 right-4 px-3 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
                   onClick={handleRevealAllFields}
                 >
                   Reveal All (-{calculateRevealAllCost()}pts.)
                 </button>
               )}
               {/* Global animation container - only one animation at a time */}
-              <AnimatePresence mode="wait">
+              <AnimatePresence mode='wait'>
                 {chipAnim && (
                   <motion.div
                     key={chipAnim.key}
@@ -328,7 +329,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                       ease: 'easeOut',
                       times: [0, 0.75, 1],
                     }}
-                    className="absolute left-52 z-[9999] bg-red-600 text-white font-extrabold pointer-events-none select-none text-sm px-2 py-1 rounded drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-nowrap"
+                    className='absolute left-52 z-[9999] bg-yellow-500 text-black font-extrabold pointer-events-none select-none text-sm px-2 py-1 rounded drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] whitespace-nowrap'
                     style={{
                       top: `${chipAnim.field === 'gameName' ? revealFields.length * 2 + 2 : chipAnim.field === 'revealAll' ? 0 : revealFields.indexOf(chipAnim.field) * 2}rem`,
                     }}
@@ -337,13 +338,13 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                   </motion.div>
                 )}
               </AnimatePresence>
-              <div className="flex flex-col gap-2 items-start">
+              <div className='flex flex-col gap-2 items-start'>
                 {revealFields.map((field) => (
                   <div
                     key={field}
-                    className="flex items-center gap-2 relative overflow-visible"
+                    className='flex items-center gap-2 relative overflow-visible'
                   >
-                    <span className="font-semibold">
+                    <span className='font-semibold'>
                       {getFieldDisplayName(field)}:
                     </span>
                     {field === 'screenshot' ? (
@@ -351,13 +352,13 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                       revealed['screenshot'] ? (
                         <>
                           <button
-                            className="text-yellow-500 hover:text-yellow-300 focus:outline-none disabled:text-gray-400 bg-transparent border-none p-0 cursor-pointer text-sm flex items-center gap-1"
+                            className='text-yellow-500 hover:text-yellow-300 focus:outline-none disabled:text-gray-400 bg-transparent border-none p-0 cursor-pointer text-sm flex items-center gap-1'
                             onClick={() => setShowScreenshot(true)}
-                            type="button"
+                            type='button'
                           >
-                            <MagnifyingGlassIcon className="w-4 h-4" />
+                            <MagnifyingGlassIcon className='w-4 h-4' />
                             <span
-                              className="underline"
+                              className='underline'
                               style={{ textDecorationStyle: 'dashed' }}
                             >
                               [Click to view screenshot]
@@ -365,24 +366,25 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                           </button>
                           {showScreenshot && (
                             <div
-                              className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80"
+                              className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80'
                               onClick={() => setShowScreenshot(false)}
                             >
                               <div
-                                className="bg-zinc-900 rounded-lg p-2 max-w-full max-h-full flex flex-col items-center"
+                                className='bg-zinc-900 rounded-lg p-2 max-w-full max-h-full flex flex-col items-center'
                                 style={{ maxWidth: '95vw', maxHeight: '95vh' }}
                                 onClick={(e) => e.stopPropagation()}
                               >
                                 <img
                                   src={game.screenshotUrl}
                                   alt={game.name + ' screenshot'}
-                                  className="object-contain max-h-[80vh] max-w-[90vw] rounded brightness-[1.5] md:brightness-125"
+                                  className='object-contain max-h-[80vh] max-w-[90vw] rounded brightness-[1.5] md:brightness-125'
                                 />
                                 <button
-                                  className="mt-4 px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm"
+                                  className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-sm'
                                   onClick={() => setShowScreenshot(false)}
                                 >
-                                  Close
+                                  <span>Dismiss</span>
+                                  <XMarkIcon className='w-4 h-4' />
                                 </button>
                               </div>
                             </div>
@@ -391,13 +393,13 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                       ) : !revealed['screenshot'] ? (
                         <button
                           onClick={() => handleReveal('screenshot')}
-                          className="px-2 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs transition-colors"
+                          className='px-2 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
                         >
                           Reveal (-50pts.)
                         </button>
                       ) : null
                     ) : correctGuesses.includes(game.name) ? (
-                      <span className="text-yellow-500">
+                      <span className='text-yellow-500'>
                         {Array.isArray(game[field as keyof Game])
                           ? (game[field as keyof Game] as string[]).join(', ')
                           : String(game[field as keyof Game])}
@@ -405,12 +407,12 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                     ) : !revealed[field] ? (
                       <button
                         onClick={() => handleReveal(field)}
-                        className="px-2 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs transition-colors"
+                        className='px-2 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
                       >
                         Reveal (-{fieldDeductions[field] || 0}pts.)
                       </button>
                     ) : (
-                      <span className="text-yellow-500">
+                      <span className='text-yellow-500'>
                         {Array.isArray(game[field as keyof Game])
                           ? (game[field as keyof Game] as string[]).join(', ')
                           : String(game[field as keyof Game])}
@@ -421,7 +423,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                 {/* Reveal All button - mobile version below screenshot */}
                 {!correctGuesses.includes(game.name) && !allRevealed && (
                   <button
-                    className="md:hidden px-3 py-1 rounded bg-blue-700 hover:bg-blue-600 text-white text-xs font-semibold transition-colors mt-2"
+                    className='md:hidden px-3 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors mt-2'
                     onClick={handleRevealAllFields}
                   >
                     Reveal All (-{calculateRevealAllCost()}pts.)
@@ -431,9 +433,9 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                 {!correctGuesses.includes(game.name) &&
                 allRevealed &&
                 !revealedTitle ? (
-                  <div className="flex items-center gap-2 mt-2">
+                  <div className='flex items-center gap-2 mt-2'>
                     <button
-                      className="px-2 py-1 rounded bg-red-700 hover:bg-red-800 text-white text-xs transition-colors"
+                      className='px-2 py-1 rounded bg-red-700 hover:bg-red-800 text-white text-xs transition-colors'
                       onClick={handleRevealAll}
                     >
                       Give Up (-100 pts.)
