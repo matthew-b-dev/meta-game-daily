@@ -14,9 +14,24 @@ Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via 
   - Strategic reveals can help you make educated guesses
 - **Completion**: The game ends when all games are guessed or all 10 guesses are used
 
-### Screenshot
+### Screenshots
 
-<img width="851" height="879" alt="image" src="https://github.com/user-attachments/assets/a8fcc334-e0bf-4ae1-b0b0-2fd6b107afce" />
+
+<img width="782" height="835" alt="image" src="https://github.com/user-attachments/assets/6751f760-7d72-4707-9941-62acaacfe8ce" />
+
+---------
+
+<img width="835" height="629" alt="image" src="https://github.com/user-attachments/assets/e3fccbe0-8798-4abd-bffc-221e8597e58b" />
+
+---------
+
+Share text:
+```
+https://matthew-b-dev.github.io/meta-game-daily/
+Jan 23, 2026
+🟥🟥🟥🟨🟨
+🏆 250 points | 🏅 Rank #10 of 17
+```
 
 ### Scoring
 
