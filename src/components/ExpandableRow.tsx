@@ -310,7 +310,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
               {/* Reveal All button - top right on desktop, below screenshot on mobile */}
               {!correctGuesses.includes(game.name) && !allRevealed && (
                 <button
-                  className='hidden md:block absolute top-4 right-4 px-3 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
+                  className='hidden md:block absolute top-4 right-4 px-3 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
                   onClick={handleRevealAllFields}
                 >
                   Reveal All (-{calculateRevealAllCost()}pts.)
@@ -380,7 +380,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                                   className='object-contain max-h-[80vh] max-w-[90vw] rounded brightness-[1.5] md:brightness-125'
                                 />
                                 <button
-                                  className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-sm'
+                                  className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-sm'
                                   onClick={() => setShowScreenshot(false)}
                                 >
                                   <span>Dismiss</span>
@@ -393,7 +393,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                       ) : !revealed['screenshot'] ? (
                         <button
                           onClick={() => handleReveal('screenshot')}
-                          className='px-2 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
+                          className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
                         >
                           Reveal (-50pts.)
                         </button>
@@ -407,7 +407,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                     ) : !revealed[field] ? (
                       <button
                         onClick={() => handleReveal(field)}
-                        className='px-2 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors'
+                        className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
                       >
                         Reveal (-{fieldDeductions[field] || 0}pts.)
                       </button>
@@ -423,7 +423,7 @@ const ExpandableRow: React.FC<ExpandableRowProps> = ({
                 {/* Reveal All button - mobile version below screenshot */}
                 {!correctGuesses.includes(game.name) && !allRevealed && (
                   <button
-                    className='md:hidden px-3 py-1 rounded font-bold bg-yellow-500 hover:bg-yellow-300 text-black text-xs transition-colors mt-2'
+                    className='md:hidden px-3 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors mt-2'
                     onClick={handleRevealAllFields}
                   >
                     Reveal All (-{calculateRevealAllCost()}pts.)
