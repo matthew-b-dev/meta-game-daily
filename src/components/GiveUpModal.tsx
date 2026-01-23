@@ -24,8 +24,7 @@ const GiveUpModal: React.FC<GiveUpModalProps> = ({
       >
         <h2 className='text-xl font-bold text-center mb-4'>Are you sure?</h2>
         <p className='text-center text-gray-300 mb-6'>
-          Don't worry. You'll still receive points for the games you correctly
-          guessed.
+          You'll still receive points for any games you correctly guessed.
         </p>
         <div className='flex gap-3'>
           <button

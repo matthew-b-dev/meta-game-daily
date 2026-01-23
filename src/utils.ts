@@ -33,6 +33,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Visions of Mana',
     'Redfall',
   ],
+  '2026-01-24': [
+    'Star Wars Jedi: Survivor',
+    "Teenage Mutant Ninja Turtles: Shredder's Revenge",
+    'Donkey Kong Country: Tropical Freeze',
+    'LEGO Jurassic World',
+    'Silent Hill 2',
+  ],
+  // 25 The Legend of Zelda: Echoes of Wisdom
 };
 
 // Per-game state interface

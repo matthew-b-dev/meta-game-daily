@@ -2135,7 +2135,7 @@ export const gameDetails: Game[] = [
       'Feral Interactive',
     ],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iyf7sb1gv3ekb2fuva9v.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qq4cmhsmhvdag2nevyjh.jpg',
   },
   {
     score: '93',
@@ -5460,7 +5460,7 @@ export const gameDetails: Game[] = [
     developers: ['The Coalition'],
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gd2.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gd5.jpg',
   },
   {
     score: '78',
@@ -8870,7 +8870,7 @@ export const gameDetails: Game[] = [
     developers: ['Respawn Entertainment'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sclchk.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyqnc.jpg',
   },
   {
     score: '88',
@@ -9790,10 +9790,10 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 8',
     releaseYear: 2024,
     reviewRank: 14,
-    developers: ['Team Silent'],
+    developers: ['Bloober Team'],
     publishers: ['Konami'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8915.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scjfmh.jpg',
   },
   {
     score: '83',
