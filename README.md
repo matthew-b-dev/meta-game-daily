@@ -16,8 +16,7 @@ Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via 
 
 ### Screenshots
 
-
-<img width="782" height="835" alt="image" src="https://github.com/user-attachments/assets/6751f760-7d72-4707-9941-62acaacfe8ce" />
+<img width="865" height="837" alt="image" src="https://github.com/user-attachments/assets/3a8cdd83-f255-412d-9d81-91a293b78c07" />
 
 ---------
 
