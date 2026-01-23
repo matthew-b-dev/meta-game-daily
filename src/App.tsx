@@ -86,22 +86,7 @@ const App = () => {
     const fetchScores = async () => {
       try {
         const scores = await fetchTodayScores();
-
-        // If we have 0 scores, seed the database with mock scores
-        if (!scores || scores.length === 0) {
-          const mockScores = [540, 520, 480, 200];
-
-          // Send each mock score to Supabase
-          for (const mockScore of mockScores) {
-            await sendScore(mockScore);
-          }
-
-          // Set todayScores with the newly sent mock scores plus any existing scores
-          setTodayScores([...mockScores, ...(scores || [])]);
-        } else {
-          // We have enough scores, just use what we fetched
-          setTodayScores(scores);
-        }
+        setTodayScores(scores);
       } catch (error) {
         console.error('Failed to fetch scores from Supabase:', error);
         // App continues to work without scores - histogram just won't show
