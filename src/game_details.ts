@@ -4075,7 +4075,7 @@ export const gameDetails: Game[] = [
     developers: ['Gears for Breakfast'],
     publishers: ['Gears for Breakfast', 'Humble Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cnrce04bdvebgmhzneln.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qkx.jpg',
   },
   {
     score: '77',
