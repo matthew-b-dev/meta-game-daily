@@ -341,7 +341,7 @@ export const getTimeUntilNextGame = (): { h: number; m: number } => {
 };
 
 /**
- * Generate share text with score, percentile, and emoji representation
+ * Generate share text with score, rank, and emoji representation
  */
 export const generateShareText = (
   score: number,
@@ -349,27 +349,24 @@ export const generateShareText = (
   puzzleDate: string,
   emojis: string,
 ): string => {
-  // Calculate percentile
-  // Include user's score if not already in todayScores
-  const allScores = todayScores.includes(score)
-    ? todayScores
-    : [...todayScores, score];
-
   // Sort scores in descending order (highest first)
-  const sortedScores = [...allScores].sort((a, b) => b - a);
+  const sortedScores = [...todayScores].sort((a, b) => b - a);
 
   // Find user's rank (1-based index)
   const rank = sortedScores.findIndex((s) => s === score) + 1;
-  const totalPlayers = allScores.length;
+  const totalPlayers = todayScores.length;
 
-  // Calculate percentile
-  const percentile = Math.round(((totalPlayers - rank) / totalPlayers) * 100);
-  const percentileText =
-    percentile > 0
-      ? `📊 Top ${100 - percentile}% today`
-      : `💀 This is the worst score today (so far).`;
+  let rankEmoji = '🏅';
+  if (rank === 1) {
+    rankEmoji = '🥇';
+  } else if (rank === totalPlayers) {
+    rankEmoji = '💀';
+  }
+  // Build rank text
+  const rankText = `${rankEmoji} Rank #${rank} of ${totalPlayers}`;
+
   // Build the share text
-  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points\n${percentileText}`;
+  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points | ${rankText}`;
 };
 
 /**

@@ -21,6 +21,7 @@ interface GameCompleteModalProps {
   gameStates: { [gameName: string]: GameState };
   todayScores: number[];
   userPercentile: number | null;
+  scoresLoading: boolean;
   onClose: () => void;
   onCopyToShare: () => void;
 }
@@ -33,6 +34,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   correctGuesses,
   todayScores,
   userPercentile,
+  scoresLoading,
   onClose,
   onCopyToShare,
 }) => {
@@ -80,76 +82,87 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             }}
           >
             {/* Score Distribution Graph */}
-            {todayScores.length > 1 && (
-              <div className='mb-6 p-4 bg-zinc-800 rounded-lg'>
-                <div className='text-center mb-1'>
-                  <span className='text-sm font-semibold'>
-                    Your Score: {score}
-                  </span>
-                </div>
-                {userPercentile !== null && (
-                  <p className='text-center text-sm text-green-400 mb-3'>
-                    {getPercentileMessage(userPercentile)}
+            {scoresLoading ? (
+              <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[220px]'>
+                <div className='flex flex-col items-center justify-center h-32'>
+                  <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-green-500'></div>
+                  <p className='text-sm text-gray-400 mt-2'>
+                    Loading scores...
                   </p>
-                )}
-                <div className='flex items-end justify-between h-32 gap-1'>
-                  {(() => {
-                    // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000)
-                    const bins = [
-                      { min: 0, max: 200, count: 0, label: '0-200' },
-                      { min: 201, max: 400, count: 0, label: '201-400' },
-                      { min: 401, max: 600, count: 0, label: '401-600' },
-                      { min: 601, max: 800, count: 0, label: '601-800' },
-                      { min: 801, max: 1000, count: 0, label: '801-1000' },
-                    ];
-
-                    // Count scores in each bin
-                    todayScores.forEach((s) => {
-                      const bin = bins.find((b) => s >= b.min && s <= b.max);
-                      if (bin) bin.count++;
-                    });
-
-                    // Find max count for scaling
-                    const maxCount = Math.max(...bins.map((b) => b.count), 1);
-
-                    // Determine which bin the user's score falls into
-                    const userBin = bins.findIndex(
-                      (b) => score >= b.min && score <= b.max,
-                    );
-
-                    return bins.map((bin, idx) => {
-                      const heightPercent = (bin.count / maxCount) * 100;
-                      const isUserBin = idx === userBin;
-
-                      return (
-                        <div
-                          key={idx}
-                          className='flex-1 flex flex-col items-center'
-                        >
-                          <div
-                            className='w-full flex items-end justify-center'
-                            style={{ height: '96px' }}
-                          >
-                            <div
-                              className={`w-full rounded-t transition-all ${
-                                isUserBin ? 'bg-green-500' : 'bg-blue-500'
-                              }`}
-                              style={{ height: `${heightPercent}%` }}
-                              title={`${bin.count} players`}
-                            />
-                          </div>
-                          <div className='text-[10px] text-gray-400 mt-1 text-center'>
-                            {bin.label}
-                          </div>
-                          <div className='text-xs text-gray-300 font-semibold'>
-                            {bin.count}
-                          </div>
-                        </div>
-                      );
-                    });
-                  })()}
                 </div>
               </div>
+            ) : (
+              todayScores.length > 1 && (
+                <div className='mb-6 p-4 bg-zinc-800 rounded-lg min-h-[220px]'>
+                  <div className='text-center mb-1'>
+                    <span className='text-sm font-semibold'>
+                      Your Score: {score}
+                    </span>
+                  </div>
+                  {userPercentile !== null && (
+                    <p className='text-center text-sm text-green-400 mb-3'>
+                      {getPercentileMessage(userPercentile)}
+                    </p>
+                  )}
+                  <div className='flex items-end justify-between h-32 gap-1'>
+                    {(() => {
+                      // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000)
+                      const bins = [
+                        { min: 0, max: 200, count: 0, label: '0-200' },
+                        { min: 201, max: 400, count: 0, label: '201-400' },
+                        { min: 401, max: 600, count: 0, label: '401-600' },
+                        { min: 601, max: 800, count: 0, label: '601-800' },
+                        { min: 801, max: 1000, count: 0, label: '801-1000' },
+                      ];
+
+                      // Count scores in each bin
+                      todayScores.forEach((s) => {
+                        const bin = bins.find((b) => s >= b.min && s <= b.max);
+                        if (bin) bin.count++;
+                      });
+
+                      // Find max count for scaling
+                      const maxCount = Math.max(...bins.map((b) => b.count), 1);
+
+                      // Determine which bin the user's score falls into
+                      const userBin = bins.findIndex(
+                        (b) => score >= b.min && score <= b.max,
+                      );
+
+                      return bins.map((bin, idx) => {
+                        const heightPercent = (bin.count / maxCount) * 100;
+                        const isUserBin = idx === userBin;
+
+                        return (
+                          <div
+                            key={idx}
+                            className='flex-1 flex flex-col items-center'
+                          >
+                            <div
+                              className='w-full flex items-end justify-center'
+                              style={{ height: '96px' }}
+                            >
+                              <div
+                                className={`w-full rounded-t transition-all ${
+                                  isUserBin ? 'bg-green-500' : 'bg-blue-500'
+                                }`}
+                                style={{ height: `${heightPercent}%` }}
+                                title={`${bin.count} players`}
+                              />
+                            </div>
+                            <div className='text-[10px] text-gray-400 mt-1 text-center'>
+                              {bin.label}
+                            </div>
+                            <div className='text-xs text-gray-300 font-semibold'>
+                              {bin.count}
+                            </div>
+                          </div>
+                        );
+                      });
+                    })()}
+                  </div>
+                </div>
+              )
             )}
 
             <div className='space-y-3'>
