@@ -410,7 +410,7 @@ const App = () => {
     try {
       await navigator.clipboard.writeText(shareText);
       toast.success(
-        shareText.includes('worst')
+        shareText.includes('💀')
           ? 'Honestly I respect that'
           : 'Copied to clipboard!',
       );
