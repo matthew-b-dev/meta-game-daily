@@ -4,6 +4,7 @@ import Select from 'react-select';
 interface GameOption {
   value: string;
   label: string;
+  searchTerms?: string[];
 }
 
 interface GuessInputProps {
@@ -30,12 +31,13 @@ const GuessInput: React.FC<GuessInputProps> = ({
       options={filteredOptions}
       value={guess}
       onChange={onGuess}
-      placeholder="Guess a game..."
+      placeholder='Guess a game...'
       isClearable
       inputValue={inputValue}
       onInputChange={setInputValue}
       menuIsOpen={!gameOver && nonSpecialCharCount >= 3}
       isDisabled={gameOver}
+      filterOption={() => true} // Don't filter - we handle filtering in parent component
       components={{
         IndicatorSeparator: () => null,
         DropdownIndicator: () => null,

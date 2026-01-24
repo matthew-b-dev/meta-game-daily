@@ -53,7 +53,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'LEGO Jurassic World',
     'Silent Hill 2',
   ],
-  // 25 The Legend of Zelda: Echoes of Wisdom
+  '2026-01-25': [
+    'The Legend of Zelda: Echoes of Wisdom',
+    'SteamWorld Dig',
+    'Skull and Bones',
+    'Hot Wheels Unleashed',
+    'Bayonetta 3',
+  ],
+  // 26: Splatoon 3
 };
 
 // Per-game state interface

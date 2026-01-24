@@ -196,15 +196,16 @@ export const gameDetails: Game[] = [
   {
     score: '82',
     name: 'SteamWorld Dig',
+    searchTerms: ['Steam World Dig'],
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS, Switch',
     genres: 'Platformer',
     releaseDate: 'Aug 7',
     releaseYear: 2013,
-    reviewRank: 21,
+    reviewRank: 39,
     developers: ['Image & Form'],
     publishers: ['Image & Form'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vvnlnvzlci4mqykmqmwk.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tpursno6hv5bl8lsbwit.jpg',
   },
   {
     score: '79',
@@ -7340,7 +7341,7 @@ export const gameDetails: Game[] = [
     developers: ['Milestone'],
     publishers: ['Milestone'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93c8.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdry5.jpg',
   },
   {
     score: '85',
@@ -9845,7 +9846,7 @@ export const gameDetails: Game[] = [
     developers: ['Grezzo', 'Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso6.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso8.jpg',
   },
   {
     score: '82',
