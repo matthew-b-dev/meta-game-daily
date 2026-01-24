@@ -54,7 +54,6 @@ export const useSendAndFetchScores = (
 
       const fetchScores = async () => {
         try {
-          await new Promise((resolve) => setTimeout(resolve, 5000));
           // Fetch all scores (which will include the user's score after it's been sent)
           const freshScores = await fetchTodayScores();
 

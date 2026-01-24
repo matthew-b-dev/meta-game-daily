@@ -7,6 +7,7 @@ interface ShareButtonProps {
   showConfirm: boolean;
   setShowConfirm: (show: boolean) => void;
   onCopyToShare: () => void;
+  isLoading?: boolean;
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({
@@ -14,6 +15,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   showConfirm,
   setShowConfirm,
   onCopyToShare,
+  isLoading = false,
 }) => {
   const handleShareClick = () => {
     // Show confirmation if user has worst score (0th percentile)
@@ -32,11 +34,12 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   if (!showConfirm) {
     return (
       <button
-        className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2'
+        className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
         onClick={handleShareClick}
+        disabled={isLoading}
       >
         <DocumentDuplicateIcon className='w-5 h-5' />
-        Copy to Clipboard
+        {isLoading ? 'Loading scores...' : 'Copy to Clipboard'}
       </button>
     );
   }

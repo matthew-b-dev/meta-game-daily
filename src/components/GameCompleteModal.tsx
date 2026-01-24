@@ -189,6 +189,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 showConfirm={showShareConfirm}
                 setShowConfirm={setShowShareConfirm}
                 onCopyToShare={onCopyToShare}
+                isLoading={scoresLoading}
               />
               <FeedbackButtons
                 puzzleDate={puzzleDate}
