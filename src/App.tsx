@@ -46,6 +46,7 @@ export type Game = {
   franchise?: string;
   screenshotUrl?: string;
   isDummyGame?: boolean;
+  searchTerms?: string[]; // Additional search terms/aliases for the dropdown
 };
 
 const App = () => {
@@ -128,15 +129,18 @@ const App = () => {
   }, [puzzleDate]);
 
   // Merge real games and dummy games for dropdown options
-  const allGameNames = [
-    ...gameDetails.map((g) => g.name),
-    ...dummyGames,
-  ].sort();
-
-  const gameOptions = allGameNames.map((name) => ({
-    value: name,
-    label: name,
-  }));
+  const gameOptions = [
+    ...gameDetails.map((g) => ({
+      value: g.name,
+      label: g.name,
+      searchTerms: g.searchTerms || [],
+    })),
+    ...dummyGames.map((name) => ({
+      value: name,
+      label: name,
+      searchTerms: [],
+    })),
+  ].sort((a, b) => a.label.localeCompare(b.label));
 
   const allGuessesExhausted = guessesLeft <= 0;
 
@@ -257,11 +261,16 @@ const App = () => {
   const nonSpecialCharCount = inputValue.replace(/[:-]/g, '').length;
   const filteredOptions =
     nonSpecialCharCount >= 3
-      ? gameOptions.filter(
-          (opt) =>
-            opt.label.toLowerCase().includes(inputValue.toLowerCase()) &&
-            !guessedNames.has(opt.value),
-        )
+      ? gameOptions.filter((opt) => {
+          const lowerInput = inputValue.toLowerCase();
+          const matchesLabel = opt.label.toLowerCase().includes(lowerInput);
+          const matchesSearchTerms = opt.searchTerms?.some((term) =>
+            term.toLowerCase().includes(lowerInput),
+          );
+          return (
+            (matchesLabel || matchesSearchTerms) && !guessedNames.has(opt.value)
+          );
+        })
       : [];
 
   const handleGuess = (selected: { value: string; label: string } | null) => {
