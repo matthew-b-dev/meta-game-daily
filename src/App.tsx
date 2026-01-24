@@ -9,7 +9,8 @@ import {
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
-import { sendScore, fetchTodayScores } from './lib/supabaseClient';
+import { fetchTodayScores } from './lib/supabaseClient';
+import { useSendAndFetchScores } from './hooks/useGameEndScores';
 import MissedGuesses from './components/MissedGuesses';
 import GameTable from './components/GameTable';
 import GuessInput from './components/GuessInput';
@@ -65,8 +66,7 @@ const App = () => {
   }>({});
   const [gameCompleteDismissed, setGameCompleteDismissed] = useState(false);
   const [scoreSent, setScoreSent] = useState(false);
-  const [todayScores, setTodayScores] = useState<number[]>([]);
-  const [userPercentile, setUserPercentile] = useState<number | null>(null);
+  const [initialScores, setInitialScores] = useState<number[]>([]);
 
   // Timer for next game (set once on mount)
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
@@ -81,16 +81,16 @@ const App = () => {
   const [showHelp, setShowHelp] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
 
-  // Fetch today's scores on mount
+  // Fetch today's scores on mount (for initial display, but we'll refetch on game end)
   useEffect(() => {
     const fetchScores = async () => {
       try {
         const scores = await fetchTodayScores();
-        setTodayScores(scores);
+        setInitialScores(scores);
       } catch (error) {
         console.error('Failed to fetch scores from Supabase:', error);
         // App continues to work without scores - histogram just won't show
-        setTodayScores([]);
+        setInitialScores([]);
       }
     };
 
@@ -145,6 +145,15 @@ const App = () => {
   );
   const gameOver = allGuessesExhausted || allGamesComplete;
 
+  // Send score and fetch fresh scores when game ends
+  const {
+    allScores,
+    userPercentile,
+    isLoading: scoresLoading,
+  } = useSendAndFetchScores(gameOver, allGamesComplete, score, scoreSent, () =>
+    setScoreSent(true),
+  );
+
   // Track previous game over state to detect transitions (only after state is loaded)
   const prevGameOver = useRef(false);
   const hasInitialized = useRef(false);
@@ -173,48 +182,6 @@ const App = () => {
 
     prevGameOver.current = gameOver;
   }, [stateLoaded, gameOver, showGameComplete]);
-
-  // Send score to Supabase when game becomes over (exactly once)
-  React.useEffect(() => {
-    // Only send if:
-    // 1. State is loaded
-    // 2. Game is over
-    // 3. Score hasn't been sent yet
-    // 4. All games are complete (ensures all deductions have been applied)
-    if (stateLoaded && gameOver && !scoreSent && allGamesComplete) {
-      sendScore(score);
-      setScoreSent(true);
-    }
-  }, [stateLoaded, gameOver, scoreSent, score, allGamesComplete]);
-
-  // Calculate percentile when game is over and scores are available
-  React.useEffect(() => {
-    if (gameOver && todayScores.length > 0 && allGamesComplete) {
-      // Count how many OTHER players' scores are below the user's score
-      const scoresBelowUser = todayScores.filter((s) => s < score).length;
-
-      // Check if user's score is already in todayScores
-      const userScoreIncluded = todayScores.includes(score);
-
-      // Total OTHER players (exclude user if their score is already in the array)
-      const otherPlayersCount = userScoreIncluded
-        ? todayScores.length - 1
-        : todayScores.length;
-
-      // Calculate percentile (what percentage of OTHER players the user beat)
-      const percentile =
-        otherPlayersCount > 0
-          ? Math.round((scoresBelowUser / otherPlayersCount) * 100)
-          : 0;
-
-      setUserPercentile(percentile);
-
-      // Update todayScores to include user's score for the graph
-      if (!userScoreIncluded) {
-        setTodayScores([...todayScores, score]);
-      }
-    }
-  }, [gameOver, todayScores, score, allGamesComplete]);
 
   // Auto-reveal all non-guessed games when guesses are exhausted
   React.useEffect(() => {
@@ -402,10 +369,10 @@ const App = () => {
     // Re-fetch scores
     try {
       const scores = await fetchTodayScores();
-      setTodayScores(scores || []);
+      setInitialScores(scores || []);
     } catch (error) {
       console.error('Failed to fetch scores after reset:', error);
-      setTodayScores([]);
+      setInitialScores([]);
     }
 
     toast.success('Puzzle reset!');
@@ -435,8 +402,9 @@ const App = () => {
       })
       .join('');
 
-    // Generate share text with rank
-    const shareText = generateShareText(score, todayScores, puzzleDate, emojis);
+    // Generate share text with rank (use fresh scores if available, otherwise initial scores)
+    const scoresToUse = allScores.length > 0 ? allScores : initialScores;
+    const shareText = generateShareText(score, scoresToUse, puzzleDate, emojis);
 
     // Copy to clipboard
     try {
@@ -601,8 +569,9 @@ const App = () => {
         games={dailyGames}
         correctGuesses={correctGuesses}
         gameStates={gameStates}
-        todayScores={todayScores}
+        todayScores={allScores}
         userPercentile={userPercentile}
+        scoresLoading={scoresLoading}
         onClose={() => {
           setShowGameComplete(false);
           setGameCompleteDismissed(true);
