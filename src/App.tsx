@@ -1,5 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
-import * as React from 'react';
+import { useState, useCallback } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import {
@@ -9,8 +8,12 @@ import {
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
-import { fetchTodayScores } from './lib/supabaseClient';
 import { useSendAndFetchScores } from './hooks/useGameEndScores';
+import { useGameState } from './hooks/useGameState';
+import { useScoreAnimation } from './hooks/useScoreAnimation';
+import { useGameCompletion } from './hooks/useGameCompletion';
+import { useAutoReveal } from './hooks/useAutoReveal';
+import { useFilteredOptions } from './hooks/useFilteredOptions';
 import MissedGuesses from './components/MissedGuesses';
 import GameTable from './components/GameTable';
 import GuessInput from './components/GuessInput';
@@ -23,14 +26,11 @@ import {
   getDailyGames,
   getPuzzleDate,
   getTimeUntilNextGame,
-  loadGameState,
-  saveGameState,
-  clearGameState,
   isCloseGuess,
-  generateShareText,
   getSubtitle,
-  type GameState,
-  type MissedGuess,
+  createGameStateUpdater,
+  copyShareToClipboard,
+  getShareSuccessMessage,
 } from './utils';
 
 export type Game = {
@@ -57,19 +57,27 @@ const App = () => {
     5,
   ).sort((a, b) => a.reviewRank - b.reviewRank);
 
-  // Load saved state or initialize with defaults
-  const [stateLoaded, setStateLoaded] = useState(false);
-  const [score, setScore] = useState(1000);
-  const [guessesLeft, setGuessesLeft] = useState(10);
-  const [correctGuesses, setCorrectGuesses] = useState<string[]>([]);
-  const [revealedGames, setRevealedGames] = useState<string[]>([]);
-  const [missedGuesses, setMissedGuesses] = useState<MissedGuess[]>([]);
-  const [gameStates, setGameStates] = useState<{
-    [gameName: string]: GameState;
-  }>({});
-  const [gameCompleteDismissed, setGameCompleteDismissed] = useState(false);
-  const [scoreSent, setScoreSent] = useState(false);
-  const [initialScores, setInitialScores] = useState<number[]>([]);
+  // Use custom hooks for state management
+  const {
+    stateLoaded,
+    score,
+    setScore,
+    guessesLeft,
+    setGuessesLeft,
+    correctGuesses,
+    setCorrectGuesses,
+    revealedGames,
+    setRevealedGames,
+    missedGuesses,
+    setMissedGuesses,
+    gameStates,
+    setGameStates,
+    setGameCompleteDismissed,
+    scoreSent,
+    setScoreSent,
+    initialScores,
+    resetPuzzle,
+  } = useGameState({ puzzleDate });
 
   // Timer for next game (set once on mount)
   const [timeLeft] = useState<{ h: number; m: number }>(() =>
@@ -80,67 +88,21 @@ const App = () => {
   );
   const [inputValue, setInputValue] = useState('');
   const [showGameComplete, setShowGameComplete] = useState(false);
-  const [displayScore, setDisplayScore] = useState(1000);
   const [showHelp, setShowHelp] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
 
-  // Fetch today's scores on mount (for initial display, but we'll refetch on game end)
-  useEffect(() => {
-    const fetchScores = async () => {
-      try {
-        const scores = await fetchTodayScores();
-        setInitialScores(scores);
-      } catch (error) {
-        console.error('Failed to fetch scores from Supabase:', error);
-        // App continues to work without scores - histogram just won't show
-        setInitialScores([]);
-      }
-    };
+  // Animated score display
+  const displayScore = useScoreAnimation({ targetScore: score });
 
-    fetchScores();
-  }, []);
-
-  // Load state from localStorage on mount
-  useEffect(() => {
-    const savedState = loadGameState(puzzleDate);
-    if (savedState) {
-      setScore(savedState.score);
-      setGuessesLeft(savedState.guessesLeft);
-      setCorrectGuesses(savedState.correctGuesses);
-      setRevealedGames(savedState.revealedGames);
-      setMissedGuesses(savedState.missedGuesses);
-      setGameStates(savedState.gameStates);
-      setGameCompleteDismissed(savedState.gameCompleteDismissed);
-      setScoreSent(savedState.scoreSent ?? false);
-      setDisplayScore(savedState.score);
-    } else {
-      // Clear state when puzzle date changes (no saved state found)
-      setScore(1000);
-      setGuessesLeft(10);
-      setCorrectGuesses([]);
-      setRevealedGames([]);
-      setMissedGuesses([]);
-      setGameStates({});
-      setGameCompleteDismissed(false);
-      setScoreSent(false);
-      setDisplayScore(1000);
-    }
-    setStateLoaded(true);
-  }, [puzzleDate]);
-
-  // Merge real games and dummy games for dropdown options
-  const gameOptions = [
-    ...gameDetails.map((g) => ({
-      value: g.name,
-      label: g.name,
-      searchTerms: g.searchTerms || [],
-    })),
-    ...dummyGames.map((name) => ({
-      value: name,
-      label: name,
-      searchTerms: [],
-    })),
-  ].sort((a, b) => a.label.localeCompare(b.label));
+  // Filtered options for dropdown
+  const { filteredOptions, nonSpecialCharCount } = useFilteredOptions({
+    gameDetails,
+    dummyGames,
+    inputValue,
+    correctGuesses,
+    missedGuesses,
+    revealedGames,
+  });
 
   const allGuessesExhausted = guessesLeft <= 0;
 
@@ -160,118 +122,43 @@ const App = () => {
     setScoreSent(true),
   );
 
-  // Track previous game over state to detect transitions (only after state is loaded)
-  const prevGameOver = useRef(false);
-  const hasInitialized = useRef(false);
+  // Handle game completion (open modal on transition to complete)
+  const handleGameComplete = useCallback(() => {
+    setShowGameComplete(true);
+    setGameCompleteDismissed(false);
+  }, [setShowGameComplete, setGameCompleteDismissed]);
 
-  // Check if game is complete
-  React.useEffect(() => {
-    // Skip until state has been loaded
-    if (!stateLoaded) return;
-
-    // On first run after state loads, just record current state without opening modal
-    if (!hasInitialized.current) {
-      prevGameOver.current = gameOver;
-      hasInitialized.current = true;
-      return;
-    }
-
-    const wasNotOver = !prevGameOver.current;
-    const isNowOver = gameOver;
-
-    // Only auto-open modal if game JUST became complete (transition from not-over to over)
-    if (wasNotOver && isNowOver && !showGameComplete) {
-      setShowGameComplete(true);
-      // Reset dismissed flag since this is a fresh completion
-      setGameCompleteDismissed(false);
-    }
-
-    prevGameOver.current = gameOver;
-  }, [stateLoaded, gameOver, showGameComplete]);
+  useGameCompletion({
+    stateLoaded,
+    gameOver,
+    showGameComplete,
+    onGameComplete: handleGameComplete,
+  });
 
   // Auto-reveal all non-guessed games when guesses are exhausted
-  React.useEffect(() => {
-    if (guessesLeft <= 0 && !allGamesComplete) {
-      // Find games that haven't been guessed or revealed yet
-      const gamesToReveal = dailyGames.filter(
-        (game) =>
-          !correctGuesses.includes(game.name) &&
-          !revealedGames.includes(game.name),
-      );
+  const handleDeduct = useCallback(
+    (amount: number) => {
+      setScore((s) => Math.max(0, s - amount));
+    },
+    [setScore],
+  );
 
-      if (gamesToReveal.length > 0) {
-        // Calculate total points to deduct (200 per unrevealed game)
-        const totalDeduction = gamesToReveal.length * 200;
+  const handleRevealGames = useCallback(
+    (gameNames: string[]) => {
+      setRevealedGames((prev) => [...prev, ...gameNames]);
+    },
+    [setRevealedGames],
+  );
 
-        // Deduct all remaining points
-        handleDeduct(totalDeduction);
-
-        // Mark all games as revealed
-        setRevealedGames((prev) => [
-          ...prev,
-          ...gamesToReveal.map((g) => g.name),
-        ]);
-      }
-    }
-  }, [
+  useAutoReveal({
     guessesLeft,
+    allGamesComplete,
     dailyGames,
     correctGuesses,
     revealedGames,
-    allGamesComplete,
-  ]);
-
-  // Animate score counting down
-  React.useEffect(() => {
-    if (displayScore === score) return;
-
-    const duration = 500; // milliseconds
-    const startTime = Date.now();
-    const startScore = displayScore;
-    const change = score - displayScore;
-
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
-
-      // Ease out function for smooth deceleration
-      const easeOut = 1 - Math.pow(1 - progress, 3);
-      const current = Math.round(startScore + change * easeOut);
-
-      setDisplayScore(current);
-
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        setDisplayScore(score);
-      }
-    };
-
-    requestAnimationFrame(animate);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [score]);
-
-  // Only show options that match inputValue, and only if inputValue has 3+ chars
-  // Don't count ":" and "-" towards the character minimum to prevent exploiting masked titles
-  const guessedNames = new Set([
-    ...correctGuesses,
-    ...missedGuesses.map((g) => g.name),
-    ...revealedGames,
-  ]);
-  const nonSpecialCharCount = inputValue.replace(/[:-]/g, '').length;
-  const filteredOptions =
-    nonSpecialCharCount >= 3
-      ? gameOptions.filter((opt) => {
-          const lowerInput = inputValue.toLowerCase();
-          const matchesLabel = opt.label.toLowerCase().includes(lowerInput);
-          const matchesSearchTerms = opt.searchTerms?.some((term) =>
-            term.toLowerCase().includes(lowerInput),
-          );
-          return (
-            (matchesLabel || matchesSearchTerms) && !guessedNames.has(opt.value)
-          );
-        })
-      : [];
+    onDeduct: handleDeduct,
+    onRevealGames: handleRevealGames,
+  });
 
   const handleGuess = (selected: { value: string; label: string } | null) => {
     if (allGuessesExhausted) return;
@@ -304,89 +191,25 @@ const App = () => {
     setInputValue('');
   };
 
-  // Deduct points for revealing info
-  const handleDeduct = (amount: number) => {
-    setScore((s) => Math.max(0, s - amount));
-  };
-
   // Track when a game is fully revealed
-  const handleGameRevealed = (gameName: string) => {
-    setRevealedGames((prev) =>
-      prev.includes(gameName) ? prev : [...prev, gameName],
-    );
-  };
+  const handleGameRevealed = useCallback(
+    (gameName: string) => {
+      setRevealedGames((prev) =>
+        prev.includes(gameName) ? prev : [...prev, gameName],
+      );
+    },
+    [setRevealedGames],
+  );
 
   // Update game state (for per-game revealed fields and points)
-  const updateGameState = (gameName: string, state: Partial<GameState>) => {
-    setGameStates((prev) => ({
-      ...prev,
-      [gameName]: {
-        revealed: state.revealed ?? prev[gameName]?.revealed ?? {},
-        pointsDeducted:
-          state.pointsDeducted ?? prev[gameName]?.pointsDeducted ?? 0,
-        revealedTitle:
-          state.revealedTitle ?? prev[gameName]?.revealedTitle ?? false,
-      },
-    }));
-  };
-
-  // Save to localStorage whenever relevant state changes
-  useEffect(() => {
-    if (!stateLoaded) return; // Don't save until initial load is complete
-
-    saveGameState({
-      puzzleDate,
-      score,
-      guessesLeft,
-      correctGuesses,
-      revealedGames,
-      missedGuesses,
-      gameStates,
-      gameCompleteDismissed,
-      scoreSent,
-    });
-    // puzzleDate is purposefully left out as a dependency so we don't force a save when the date ticks over to the next.
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    stateLoaded,
-    score,
-    guessesLeft,
-    correctGuesses,
-    revealedGames,
-    missedGuesses,
-    gameStates,
-    gameCompleteDismissed,
-    scoreSent,
-  ]);
+  const updateGameState = createGameStateUpdater(setGameStates);
 
   const handleResetPuzzle = async () => {
-    // Clear localStorage
-    clearGameState();
-
-    // Reset all state to initial values
-    setScore(1000);
-    setDisplayScore(1000);
-    setGuessesLeft(10);
-    setCorrectGuesses([]);
-    setRevealedGames([]);
-    setMissedGuesses([]);
-    setGameStates({});
-    setGameCompleteDismissed(false);
-    setScoreSent(false);
+    await resetPuzzle();
     setShowGameComplete(false);
     setGuess(null);
     setInputValue('');
-
-    // Re-fetch scores
-    try {
-      const scores = await fetchTodayScores();
-      setInitialScores(scores || []);
-    } catch (error) {
-      console.error('Failed to fetch scores after reset:', error);
-      setInitialScores([]);
-    }
-
-    toast.success('Puzzle reset!');
+    window?.location?.reload?.();
   };
 
   const handleGiveUp = () => {
@@ -396,37 +219,19 @@ const App = () => {
   };
 
   const handleCopyToShare = async () => {
-    // Generate emoji string for each game
-    const emojis = dailyGames
-      .map((game) => {
-        const pointsDeducted = gameStates[game.name]?.pointsDeducted ?? 0;
-        const earnedPoints = 200 - pointsDeducted;
-        const isGuessed = correctGuesses.includes(game.name);
+    const result = await copyShareToClipboard(
+      score,
+      allScores,
+      initialScores,
+      puzzleDate,
+      dailyGames,
+      gameStates,
+      correctGuesses,
+    );
 
-        if (isGuessed && earnedPoints === 200) {
-          return '🟩'; // Green square for perfect
-        } else if (isGuessed && earnedPoints < 200) {
-          return '🟨'; // Yellow square for guessed with hints
-        } else {
-          return '🟥'; // Red square for missed/gave up
-        }
-      })
-      .join('');
-
-    // Generate share text with rank (use fresh scores if available, otherwise initial scores)
-    const scoresToUse = allScores.length > 0 ? allScores : initialScores;
-    const shareText = generateShareText(score, scoresToUse, puzzleDate, emojis);
-
-    // Copy to clipboard
-    try {
-      await navigator.clipboard.writeText(shareText);
-      toast.success(
-        shareText.includes('💀')
-          ? 'Honestly I respect that'
-          : 'Copied to clipboard!',
-      );
-      // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    } catch (err) {
+    if (result.success) {
+      toast.success(getShareSuccessMessage(result));
+    } else {
       toast.error('Failed to copy');
     }
   };

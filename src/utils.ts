@@ -424,3 +424,85 @@ export const getPercentileMessage = (
     return `That's better than ${percentile}% of players.`;
   }
 };
+
+/**
+ * Generate emoji string for share based on game performance
+ */
+export const generateGameEmojis = (
+  dailyGames: Game[],
+  gameStates: { [gameName: string]: GameState },
+  correctGuesses: string[],
+): string => {
+  return dailyGames
+    .map((game) => {
+      const pointsDeducted = gameStates[game.name]?.pointsDeducted ?? 0;
+      const earnedPoints = 200 - pointsDeducted;
+      const isGuessed = correctGuesses.includes(game.name);
+
+      if (isGuessed && earnedPoints === 200) {
+        return '🟩'; // Green square for perfect
+      } else if (isGuessed && earnedPoints < 200) {
+        return '🟨'; // Yellow square for guessed with hints
+      } else {
+        return '🟥'; // Red square for missed/gave up
+      }
+    })
+    .join('');
+};
+
+/**
+ * Copy share text to clipboard
+ * Returns true if successful, false otherwise
+ */
+export const copyShareToClipboard = async (
+  score: number,
+  allScores: number[],
+  initialScores: number[],
+  puzzleDate: string,
+  dailyGames: Game[],
+  gameStates: { [gameName: string]: GameState },
+  correctGuesses: string[],
+): Promise<{ success: boolean; isWorst: boolean }> => {
+  const emojis = generateGameEmojis(dailyGames, gameStates, correctGuesses);
+  const scoresToUse = allScores.length > 0 ? allScores : initialScores;
+  const shareText = generateShareText(score, scoresToUse, puzzleDate, emojis);
+
+  try {
+    await navigator.clipboard.writeText(shareText);
+    return { success: true, isWorst: shareText.includes('💀') };
+  } catch {
+    return { success: false, isWorst: false };
+  }
+};
+
+/**
+ * Get success message for share action
+ */
+export const getShareSuccessMessage = (result: {
+  success: boolean;
+  isWorst: boolean;
+}): string => {
+  return result.isWorst ? 'Honestly I respect that' : 'Copied to clipboard!';
+};
+
+/**
+ * Update game state with new values
+ */
+export const createGameStateUpdater = (
+  setGameStates: React.Dispatch<
+    React.SetStateAction<{ [gameName: string]: GameState }>
+  >,
+) => {
+  return (gameName: string, state: Partial<GameState>) => {
+    setGameStates((prev) => ({
+      ...prev,
+      [gameName]: {
+        revealed: state.revealed ?? prev[gameName]?.revealed ?? {},
+        pointsDeducted:
+          state.pointsDeducted ?? prev[gameName]?.pointsDeducted ?? 0,
+        revealedTitle:
+          state.revealedTitle ?? prev[gameName]?.revealedTitle ?? false,
+      },
+    }));
+  };
+};
