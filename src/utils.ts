@@ -2,6 +2,19 @@ import type { Game } from './App';
 
 export const DATE_OVERRIDE: string | null = null; // '2026-01-23'
 
+// Subtitle configuration
+export interface SubtitleConfig {
+  text: string;
+  animated: boolean;
+}
+
+export const getSubtitle = (): SubtitleConfig => {
+  return {
+    text: '❤️ Ad-free and Open Source! 🛠️',
+    animated: false,
+  };
+};
+
 // Demo days configuration - hardcode specific games for specific dates
 // Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
 export const DEMO_DAYS: { [date: string]: string[] } = {

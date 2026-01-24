@@ -28,6 +28,7 @@ import {
   clearGameState,
   isCloseGuess,
   generateShareText,
+  getSubtitle,
   type GameState,
   type MissedGuess,
 } from './utils';
@@ -49,6 +50,7 @@ export type Game = {
 
 const App = () => {
   const puzzleDate = getPuzzleDate();
+  const subtitle = getSubtitle();
   const dailyGames = getDailyGames(
     gameDetails.filter((g) => g.reviewRank < 40),
     5,
@@ -439,26 +441,30 @@ const App = () => {
               <p className='text-gray-400 text-sm mt-1'>
                 A daily <i>Video Games Industry</i> puzzle
               </p>
-              <motion.p
-                className='text-gray-400 text-sm mt-1'
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                  x: [0, -8, 8, -8, 8, -5, 5, 0],
-                }}
-                transition={{
-                  duration: 1,
-                  ease: 'easeOut',
-                  x: {
-                    duration: 0.5,
-                    ease: 'easeInOut',
-                    times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
-                  },
-                }}
-              >
-                ❤️ Ad-free and Open Source! 🛠️
-              </motion.p>
+              {subtitle.animated ? (
+                <motion.p
+                  className='text-gray-400 text-sm mt-1'
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{
+                    opacity: 1,
+                    scale: 1,
+                    x: [0, -8, 8, -8, 8, -5, 5, 0],
+                  }}
+                  transition={{
+                    duration: 1,
+                    ease: 'easeOut',
+                    x: {
+                      duration: 0.5,
+                      ease: 'easeInOut',
+                      times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
+                    },
+                  }}
+                >
+                  {subtitle.text}
+                </motion.p>
+              ) : (
+                <p className='text-gray-400 text-sm mt-1'>{subtitle.text}</p>
+              )}
             </div>
             <button
               className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
