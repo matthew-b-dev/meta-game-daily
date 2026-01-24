@@ -369,26 +369,49 @@ export const generateShareText = (
   const rank = sortedScores.findIndex((s) => s === score) + 1;
   const totalPlayers = todayScores.length;
 
-  let rankEmoji = '🏅';
-  if (rank === 1) {
-    rankEmoji = '🥇';
-  } else if (rank === totalPlayers) {
-    rankEmoji = '💀';
-  }
+  // Rank emoji lookup
+  const rankEmojiMap: { [key: number]: string } = {
+    1: '🥇',
+    2: '🥈',
+    3: '🥉',
+  };
+
+  const rankEmoji = rankEmojiMap[rank] || (rank === totalPlayers ? '💀' : '🏅');
+
   // Build rank text
-  const rankText = `${rankEmoji} Rank #${rank} of ${totalPlayers}`;
+  let rankText = '';
+
+  // Rank 0 indicates the user's score did not make it to the DB due to some kind of failure
+  // In that case we'll just not include any rank information in the share text
+  if (totalPlayers > 3 && rank !== 0) {
+    rankText = ` | ${rankEmoji} Rank #${rank} of ${totalPlayers}`;
+  }
 
   // Build the share text
-  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points | ${rankText}`;
+  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points${rankText}`;
 };
 
 /**
  * Get percentile message based on user's performance
  */
-export const getPercentileMessage = (percentile: number): string => {
-  if (percentile === 100) {
+export const getPercentileMessage = (
+  percentile: number,
+  score: number,
+  todayScores: number[],
+): string => {
+  // Check if tied for first place
+  const highestScore = Math.max(...todayScores);
+
+  if (score === highestScore) {
+    const countAtTop = todayScores.filter((s) => s === highestScore).length;
+
+    if (countAtTop > 1) {
+      return "🥇 You're tied for rank #1 today. 🥇";
+    }
     return "🥇 So far, you're rank #1 today. 🥇";
-  } else if (percentile === 0) {
+  }
+
+  if (percentile === 0) {
     return "That's the worst score today. 🤷";
   } else {
     return `That's better than ${percentile}% of players.`;
