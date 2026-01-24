@@ -31,7 +31,7 @@ export const fetchTodayScores = async (): Promise<number[]> => {
   // Couldn't retrieve scores so use mocked ones
   if (error) {
     console.error('Error fetching scores:', error);
-    return mockScores;
+    throw error;
   }
 
   const scores = data?.map((row) => row.score) ?? [];
