@@ -457,7 +457,7 @@ const App = () => {
                   },
                 }}
               >
-                🎉 Now with daily Leaderboard! 🎉
+                ❤️ Ad-free and Open Source! 🛠️
               </motion.p>
             </div>
             <button
