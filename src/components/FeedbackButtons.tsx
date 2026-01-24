@@ -32,13 +32,13 @@ const FeedbackButtons: React.FC<FeedbackButtonsProps> = ({
   return (
     <div className='border-t border-gray-700 pt-4'>
       <p className='text-center text-xs text-gray-400'>
-        Provide <b>*anonymous*</b> feedback for today's puzzle.
+        Provide <b>anonymous</b> feedback for today's puzzle.
       </p>
       {feedback === null ? (
         userPercentile === 0 ? (
           <div className='flex justify-center'>
             <button
-              className='px-4 py-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
+              className='px-4 py-2 mt-2 rounded text-sm font-semibold transition-colors bg-gray-700 hover:bg-gray-600 text-white'
               onClick={() => handleFeedback('up')}
             >
               I got the worst score today 🤷

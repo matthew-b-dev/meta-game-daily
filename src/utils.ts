@@ -341,7 +341,7 @@ export const getTimeUntilNextGame = (): { h: number; m: number } => {
 };
 
 /**
- * Generate share text with score, rank, and emoji representation
+ * Generate share text with score, percentile, and emoji representation
  */
 export const generateShareText = (
   score: number,
@@ -349,7 +349,7 @@ export const generateShareText = (
   puzzleDate: string,
   emojis: string,
 ): string => {
-  // Calculate rank
+  // Calculate percentile
   // Include user's score if not already in todayScores
   const allScores = todayScores.includes(score)
     ? todayScores
@@ -362,8 +362,14 @@ export const generateShareText = (
   const rank = sortedScores.findIndex((s) => s === score) + 1;
   const totalPlayers = allScores.length;
 
+  // Calculate percentile
+  const percentile = Math.round(((totalPlayers - rank) / totalPlayers) * 100);
+  const percentileText =
+    percentile > 0
+      ? `📊 Top ${100 - percentile}% today`
+      : `💀 This is the worst score today (so far).`;
   // Build the share text
-  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points | 🏅 Rank #${rank} of ${totalPlayers}`;
+  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points\n${percentileText}`;
 };
 
 /**
@@ -371,9 +377,9 @@ export const generateShareText = (
  */
 export const getPercentileMessage = (percentile: number): string => {
   if (percentile === 100) {
-    return "Dang. So far, you're rank 1 today.";
+    return "🥇 So far, you're rank #1 today. 🥇";
   } else if (percentile === 0) {
-    return "No joke, that's the worst score today. 🤷";
+    return "That's the worst score today. 🤷";
   } else {
     return `That's better than ${percentile}% of players.`;
   }

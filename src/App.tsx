@@ -441,7 +441,11 @@ const App = () => {
     // Copy to clipboard
     try {
       await navigator.clipboard.writeText(shareText);
-      toast.success('Copied to clipboard!');
+      toast.success(
+        shareText.includes('worst')
+          ? 'Honestly I respect that'
+          : 'Copied to clipboard!',
+      );
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
     } catch (err) {
       toast.error('Failed to copy');
