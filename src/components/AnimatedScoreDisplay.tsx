@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getPercentileMessage } from '../utils';
 
@@ -15,11 +15,21 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   userPercentile,
   scoresLoading,
 }) => {
+  const hasAnimated = useRef(false);
   const [animatedScore, setAnimatedScore] = useState(0);
-  const [showBigScore, setShowBigScore] = useState(true);
+  const [showBigScore, setShowBigScore] = useState(false);
   const [showSmallScore, setShowSmallScore] = useState(false);
   const [showRank, setShowRank] = useState(false);
   const [showHistogram, setShowHistogram] = useState(false);
+
+  // Calculate user's rank
+  // Sort scores in descending order (highest first)
+  const sortedScores = [...todayScores].sort((a, b) => b - a);
+
+  // findIndex returns the FIRST matching index, ensuring ties get the best rank
+  // Example: scores [500, 500, 200, 100] → user with 500 gets rank #1 (not #2)
+  const userRank = sortedScores.findIndex((s) => s === score) + 1;
+  const totalPlayers = todayScores.length;
 
   // Animate score counting and sequence
   useEffect(() => {
@@ -27,50 +37,57 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
       return;
     }
 
-    // Reset animation state (deferred to avoid cascading renders)
-    setTimeout(() => {
+    // Only run animation once per score change
+    if (hasAnimated.current) {
+      hasAnimated.current = false;
+    }
+
+    // Use microtask to batch state updates before render
+    queueMicrotask(() => {
       setAnimatedScore(0);
       setShowBigScore(true);
       setShowSmallScore(false);
       setShowRank(false);
       setShowHistogram(false);
-    }, 0);
 
-    // Start counting animation
-    const duration = 1500; // 1.5 seconds
-    const startTime = Date.now();
+      hasAnimated.current = true;
 
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
+      // Start counting animation
+      const duration = 1500; // 1.5 seconds
+      const startTime = Date.now();
 
-      // Ease out cubic for smooth deceleration
-      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      const currentScore = Math.floor(easeOutCubic * score);
+      const animate = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
 
-      setAnimatedScore(currentScore);
+        // Ease out cubic for smooth deceleration
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentScore = Math.floor(easeOutCubic * score);
 
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        // Score counting complete, start sequence
-        setTimeout(() => {
-          setShowBigScore(false);
+        setAnimatedScore(currentScore);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          // Score counting complete, hold for 0.5s then show final layout
           setTimeout(() => {
-            setShowSmallScore(true);
+            setShowBigScore(false);
             setTimeout(() => {
-              setShowRank(true);
+              setShowSmallScore(true);
               setTimeout(() => {
-                setShowHistogram(true);
-              }, 300);
-            }, 200);
-          }, 300);
-        }, 500);
-      }
-    };
+                setShowRank(true);
+                setTimeout(() => {
+                  setShowHistogram(true);
+                }, 300);
+              }, 200);
+            }, 300);
+          }, 750);
+        }
+      };
 
-    requestAnimationFrame(animate);
-  }, [scoresLoading, score]);
+      requestAnimationFrame(animate);
+    });
+  }, [scoresLoading, score, totalPlayers, userRank]);
 
   if (scoresLoading) {
     return (

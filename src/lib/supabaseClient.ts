@@ -50,7 +50,7 @@ export const fetchTodayScores = async (): Promise<number[]> => {
 };
 
 export const sendFeedback = async (
-  feedbackType: 'up' | 'down',
+  feedbackType: 'perfect' | 'too_easy' | 'too_hard',
 ): Promise<void> => {
   const { error } = await supabase.from('feedback').insert({
     created_at: getUtcDateString(),

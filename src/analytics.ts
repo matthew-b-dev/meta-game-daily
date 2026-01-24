@@ -10,7 +10,7 @@ declare global {
 }
 
 export interface PuzzleFeedbackParams {
-  feedback: 'up' | 'down';
+  feedback: 'perfect' | 'too_easy' | 'too_hard';
   puzzleDate: string;
 }
 

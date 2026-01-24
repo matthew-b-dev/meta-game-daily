@@ -53,7 +53,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className='fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto'
+          className='fixed inset-0 z-50 flex items-center justify-center p-0 md:p-4 overflow-y-auto'
           onClick={onClose}
           initial={{
             backdropFilter: 'blur(0px)',
@@ -92,7 +92,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             <div className='space-y-3'>
               {games.filter((game) => !correctGuesses.includes(game.name))
                 .length > 0 && (
-                <div className='mb-1 flex flex-wrap gap-2 items-center'>
+                <div className='mb-1 flex flex-wrap gap-2 items-center overflow-auto'>
                   <span className='text-red-400 font-semibold text-sm'>
                     Missed:
                   </span>
