@@ -361,6 +361,19 @@ export const getTimeUntilNextGame = (): { h: number; m: number } => {
 };
 
 /**
+ * Get rank emoji based on rank and total players
+ */
+export const getRankEmoji = (rank: number, totalPlayers: number): string => {
+  const rankEmojiMap: { [key: number]: string } = {
+    1: '🥇',
+    2: '🥈',
+    3: '🥉',
+  };
+
+  return rankEmojiMap[rank] || (rank === totalPlayers ? '💀' : '🏅');
+};
+
+/**
  * Generate share text with score, rank, and emoji representation
  */
 export const generateShareText = (
@@ -376,14 +389,7 @@ export const generateShareText = (
   const rank = sortedScores.findIndex((s) => s === score) + 1;
   const totalPlayers = todayScores.length;
 
-  // Rank emoji lookup
-  const rankEmojiMap: { [key: number]: string } = {
-    1: '🥇',
-    2: '🥈',
-    3: '🥉',
-  };
-
-  const rankEmoji = rankEmojiMap[rank] || (rank === totalPlayers ? '💀' : '🏅');
+  const rankEmoji = getRankEmoji(rank, totalPlayers);
 
   // Build rank text
   let rankText = '';

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { getPercentileMessage } from '../utils';
+import { getPercentileMessage, getRankEmoji } from '../utils';
 
 interface AnimatedScoreDisplayProps {
   score: number;
@@ -18,6 +18,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   const hasAnimated = useRef(false);
   const [animatedScore, setAnimatedScore] = useState(0);
   const [showBigScore, setShowBigScore] = useState(false);
+  const [showBigRank, setShowBigRank] = useState(false);
   const [showSmallScore, setShowSmallScore] = useState(false);
   const [showRank, setShowRank] = useState(false);
   const [showHistogram, setShowHistogram] = useState(false);
@@ -30,6 +31,8 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   // Example: scores [500, 500, 200, 100] → user with 500 gets rank #1 (not #2)
   const userRank = sortedScores.findIndex((s) => s === score) + 1;
   const totalPlayers = todayScores.length;
+
+  const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
   // Animate score counting and sequence
   useEffect(() => {
@@ -46,6 +49,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
     queueMicrotask(() => {
       setAnimatedScore(0);
       setShowBigScore(true);
+      setShowBigRank(false);
       setShowSmallScore(false);
       setShowRank(false);
       setShowHistogram(false);
@@ -69,19 +73,24 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
         if (progress < 1) {
           requestAnimationFrame(animate);
         } else {
-          // Score counting complete, hold for 0.5s then show final layout
+          // Score counting complete, hold for 0.5s then show rank
           setTimeout(() => {
-            setShowBigScore(false);
+            setShowBigRank(true);
+            // Hold both score and rank for 1.5s, then transition to final layout
             setTimeout(() => {
-              setShowSmallScore(true);
+              setShowBigScore(false);
+              setShowBigRank(false);
               setTimeout(() => {
-                setShowRank(true);
+                setShowSmallScore(true);
                 setTimeout(() => {
-                  setShowHistogram(true);
-                }, 300);
-              }, 200);
-            }, 300);
-          }, 750);
+                  setShowRank(true);
+                  setTimeout(() => {
+                    setShowHistogram(true);
+                  }, 300);
+                }, 200);
+              }, 300);
+            }, 2000);
+          }, 500);
         }
       };
 
@@ -102,21 +111,39 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   return (
     <div
-      className={`mb-6 p-4 bg-zinc-800 rounded-lg ${todayScores.length > 1 ? 'min-h-[220px]' : ''}`}
+      className={`mb-6 p-4 bg-zinc-800 rounded-lg ${todayScores.length > 1 ? 'h-[220px]' : ''}`}
     >
       {/* Large animated score */}
       <AnimatePresence>
         {showBigScore && (
           <motion.div
-            className='flex flex-col items-center justify-center py-8'
+            className='flex justify-center pt-2 h-[220px]'
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             exit={{ opacity: 0, scale: 0.8 }}
             transition={{ duration: 0.3 }}
           >
-            <div className='text-gray-400 text-lg mb-2'>Your Score</div>
-            <div className='text-green-400 text-6xl font-bold'>
-              {animatedScore}
+            <div className=''>
+              <div className='flex-col items-center flex'>
+                <div className='text-gray-400 text-lg mb-2'>Your Score</div>
+                <div className='text-green-400 text-6xl font-bold'>
+                  {animatedScore}
+                </div>
+              </div>
+              {/* Rank display that appears below the score */}
+              <AnimatePresence>
+                {showBigRank && todayScores.length > 1 && (
+                  <motion.div
+                    className='text-white text-2xl font-semibold mt-3'
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                  </motion.div>
+                )}
+              </AnimatePresence>
             </div>
           </motion.div>
         )}

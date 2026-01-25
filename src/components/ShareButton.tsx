@@ -56,10 +56,13 @@ const ShareButton: React.FC<ShareButtonProps> = ({
       </p>
       <div className='flex gap-2'>
         <button
-          className='flex-1 px-2 py-2 rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold'
+          className='flex flex-1 px-2 py-2 justify-center align-middle rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold'
           onClick={handleShareClick}
         >
-          People need to know
+          <div className='text-md leading-none position-relative left-4 pt-[3px]'>
+            People need to know
+          </div>
+          <div className='text-lg leading-none'>🤷</div>
         </button>
         <button
           className='flex-1 px-2 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold'
