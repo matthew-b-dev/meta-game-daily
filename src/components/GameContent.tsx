@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/24/solid';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import type { Game } from '../App';
 import type { GameState } from '../utils';
 
@@ -147,107 +147,152 @@ export const GameContent: React.FC<GameContentProps> = ({
       {revealFields.map((field) => (
         <div
           key={field}
-          className='flex items-center gap-2 relative overflow-visible min-h-[26px]'
+          className='w-full flex items-center gap-2 relative overflow-visible min-h-[26px]'
         >
           <span className='font-semibold'>{getFieldDisplayName(field)}:</span>
           {field === 'screenshot' ? (
-            correctGuesses.includes(game.name) || revealed['screenshot'] ? (
-              <>
-                <button
-                  className='text-yellow-500 hover:text-yellow-300 focus:outline-none disabled:text-gray-400 bg-transparent border-none p-0 cursor-pointer text-sm flex items-center gap-1'
-                  onClick={() => setShowScreenshot(true)}
-                  type='button'
-                >
-                  <MagnifyingGlassIcon className='w-4 h-4' />
-                  <span
-                    className='underline'
-                    style={{ textDecorationStyle: 'dashed' }}
-                  >
-                    [Click to view screenshot]
-                  </span>
-                </button>
-                {showScreenshot && (
-                  <motion.div
-                    className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80'
-                    onClick={() => setShowScreenshot(false)}
-                    initial={{ opacity: 0 }}
+            <>
+              <AnimatePresence mode='wait' initial={false}>
+                {!revealed['screenshot'] &&
+                !correctGuesses.includes(game.name) ? (
+                  <motion.button
+                    key='reveal-btn'
+                    onClick={() => handleReveal('screenshot')}
+                    className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+                    initial={{ opacity: 1 }}
                     animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
                     transition={{ duration: 0.2 }}
                   >
-                    <motion.div
-                      className='bg-zinc-900 rounded-lg p-2 max-w-full max-h-full flex flex-col items-center'
-                      style={{ maxWidth: '95vw', maxHeight: '95vh' }}
-                      onClick={(e) => e.stopPropagation()}
-                      initial={{ opacity: 0, scale: 0.95 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ duration: 0.2 }}
+                    Reveal (-50pts.)
+                  </motion.button>
+                ) : (
+                  <motion.button
+                    key='show-btn'
+                    className='text-yellow-500 hover:text-yellow-300 focus:outline-none disabled:text-gray-400 bg-transparent border-none p-0 cursor-pointer text-sm flex items-center gap-1'
+                    onClick={() => setShowScreenshot(true)}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.2 }}
+                    type='button'
+                  >
+                    <MagnifyingGlassIcon className='w-4 h-4' />
+                    <span
+                      className='underline'
+                      style={{ textDecorationStyle: 'dashed' }}
                     >
-                      <img
-                        src={game.screenshotUrl}
-                        alt={game.name + ' screenshot'}
-                        className={`object-contain max-h-[80vh] max-w-[90vw] rounded ${
-                          game.brightenImage
-                            ? 'brightness-[1.5] md:brightness-125'
-                            : ''
-                        }`}
-                      />
-                      <button
-                        className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-sm'
-                        onClick={() => setShowScreenshot(false)}
-                      >
-                        <span>Dismiss</span>
-                        <XMarkIcon className='w-4 h-4' />
-                      </button>
-                    </motion.div>
-                  </motion.div>
+                      [Click to view screenshot]
+                    </span>
+                  </motion.button>
                 )}
-              </>
-            ) : !revealed['screenshot'] ? (
-              <button
-                onClick={() => handleReveal('screenshot')}
-                className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
-              >
-                Reveal (-50pts.)
-              </button>
-            ) : null
-          ) : correctGuesses.includes(game.name) ? (
-            <span className='text-yellow-500'>
-              {Array.isArray(game[field as keyof Game])
-                ? (game[field as keyof Game] as string[]).join(', ')
-                : String(game[field as keyof Game])}
-            </span>
-          ) : !revealed[field] ? (
-            <button
-              onClick={() => handleReveal(field)}
-              className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
-            >
-              Reveal (-{fieldDeductions[field] || 0}pts.)
-            </button>
+              </AnimatePresence>
+              {showScreenshot && (
+                <motion.div
+                  className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80'
+                  onClick={() => setShowScreenshot(false)}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <motion.div
+                    className='bg-zinc-900 rounded-lg p-2 max-w-full max-h-full flex flex-col items-center'
+                    style={{ maxWidth: '95vw', maxHeight: '95vh' }}
+                    onClick={(e) => e.stopPropagation()}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.2 }}
+                  >
+                    <img
+                      src={game.screenshotUrl}
+                      alt={game.name + ' screenshot'}
+                      className={`object-contain max-h-[80vh] max-w-[90vw] rounded ${
+                        game.brightenImage
+                          ? 'brightness-[1.5] md:brightness-125'
+                          : ''
+                      }`}
+                    />
+                    <button
+                      className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-sm'
+                      onClick={() => setShowScreenshot(false)}
+                    >
+                      <span>Dismiss</span>
+                      <XMarkIcon className='w-4 h-4' />
+                    </button>
+                  </motion.div>
+                </motion.div>
+              )}
+            </>
           ) : (
-            <span className='text-yellow-500'>
-              {Array.isArray(game[field as keyof Game])
-                ? (game[field as keyof Game] as string[]).join(', ')
-                : String(game[field as keyof Game])}
-            </span>
+            <AnimatePresence mode='wait' initial={false}>
+              {!correctGuesses.includes(game.name) && !revealed[field] ? (
+                <motion.button
+                  key='reveal-btn'
+                  onClick={() => handleReveal(field)}
+                  className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Reveal (-{fieldDeductions[field] || 0}pts.)
+                </motion.button>
+              ) : (
+                <motion.span
+                  key='reveal-text'
+                  className='text-yellow-500'
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  {Array.isArray(game[field as keyof Game])
+                    ? (game[field as keyof Game] as string[]).join(', ')
+                    : String(game[field as keyof Game])}
+                </motion.span>
+              )}
+            </AnimatePresence>
           )}
+          {field === 'score' &&
+            !correctGuesses.includes(game.name) &&
+            !allRevealed && (
+              <motion.button
+                className='hidden md:block ml-auto px-3 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+                onClick={handleRevealAllFields}
+                initial={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                Reveal All (-{calculateRevealAllCost()}pts.)
+              </motion.button>
+            )}
         </div>
       ))}
       {!correctGuesses.includes(game.name) && !allRevealed && (
-        <button
-          className='md:hidden px-3 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors mt-2'
-          onClick={handleRevealAllFields}
-        >
-          Reveal All (-{calculateRevealAllCost()}pts.)
-        </button>
+        <div className='flex justify-end mt-2 md:hidden'>
+          <motion.button
+            className='px-3 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+            onClick={handleRevealAllFields}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+          >
+            Reveal All (-{calculateRevealAllCost()}pts.)
+          </motion.button>
+        </div>
       )}
       {!correctGuesses.includes(game.name) && allRevealed && !revealedTitle ? (
         <div className='flex items-center gap-2 mt-2'>
-          <button
+          <motion.button
             className='px-2 py-1 rounded bg-red-700 hover:bg-red-800 text-white text-xs transition-colors'
             onClick={handleRevealAll}
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
           >
             Give Up (-100 pts.)
-          </button>
+          </motion.button>
         </div>
       ) : null}
     </div>

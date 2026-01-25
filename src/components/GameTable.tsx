@@ -58,15 +58,17 @@ const GameTable: React.FC<GameTableProps> = ({
 
     // Determine header background color class based on game state
     let headerClassName = '';
+    let hoverHeaderClassName = '';
     if (correctGuesses.includes(game.name)) {
       headerClassName =
-        'bg-green-600 hover:bg-green-600 text-white transition-colors duration-200';
+        'bg-green-600 text-white transition-colors duration-200';
+      hoverHeaderClassName = 'bg-green-500';
     } else if (revealedTitle) {
-      headerClassName =
-        'bg-red-700 hover:bg-red-600 text-white transition-colors duration-200';
+      headerClassName = 'bg-red-700 text-white transition-colors duration-200';
+      hoverHeaderClassName = 'bg-red-600';
     } else {
-      headerClassName =
-        'bg-zinc-800 hover:bg-zinc-700 transition-colors duration-200';
+      headerClassName = 'bg-zinc-800 transition-colors duration-200';
+      hoverHeaderClassName = 'bg-zinc-700';
     }
 
     // Calculate earned points and badge class
@@ -87,6 +89,7 @@ const GameTable: React.FC<GameTableProps> = ({
     return {
       id: game.name,
       headerClassName,
+      hoverHeaderClassName,
       isLast: idx === dailyGames.length - 1,
       header: (
         <div className='flex items-center gap-2 sm:gap-4 flex-1'>
