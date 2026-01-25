@@ -31,6 +31,7 @@ import {
   createGameStateUpdater,
   copyShareToClipboard,
   getShareSuccessMessage,
+  MAX_REVIEW_RANK,
 } from './utils';
 
 export type Game = {
@@ -45,6 +46,7 @@ export type Game = {
   publishers?: string[];
   franchise?: string;
   screenshotUrl?: string;
+  brightenImage?: boolean;
   isDummyGame?: boolean;
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
 };
@@ -53,7 +55,7 @@ const App = () => {
   const puzzleDate = getPuzzleDate();
   const subtitle = getSubtitle();
   const dailyGames = getDailyGames(
-    gameDetails.filter((g) => g.reviewRank < 40),
+    gameDetails.filter((g) => g.reviewRank < MAX_REVIEW_RANK),
     5,
   ).sort((a, b) => a.reviewRank - b.reviewRank);
 
@@ -143,11 +145,29 @@ const App = () => {
     [setScore],
   );
 
+  // Update game state (for per-game revealed fields and points)
+  const updateGameState = createGameStateUpdater(setGameStates);
+
   const handleRevealGames = useCallback(
     (gameNames: string[]) => {
       setRevealedGames((prev) => [...prev, ...gameNames]);
+      // Update game states for all revealed games
+      gameNames.forEach((gameName) => {
+        updateGameState(gameName, {
+          revealedTitle: true,
+          pointsDeducted: 200,
+          revealed: {
+            score: true,
+            genres: true,
+            releaseDate: true,
+            platforms: true,
+            publishers: true,
+            screenshot: true,
+          },
+        });
+      });
     },
-    [setRevealedGames],
+    [setRevealedGames, updateGameState],
   );
 
   useAutoReveal({
@@ -200,9 +220,6 @@ const App = () => {
     },
     [setRevealedGames],
   );
-
-  // Update game state (for per-game revealed fields and points)
-  const updateGameState = createGameStateUpdater(setGameStates);
 
   const handleResetPuzzle = async () => {
     await resetPuzzle();
@@ -304,13 +321,13 @@ const App = () => {
             {!gameOver && (
               <>
                 <div className='mt-4 flex justify-between items-center'>
-                  <div className='font-semibold'>
+                  <div className='font-semibold text-sm sm:text-base'>
                     <span className='bg-zinc-800 px-2 py-1 mr-1 rounded'>
                       {guessesLeft}
                     </span>
                     guesses remaining
                   </div>
-                  <div className='font-semibold'>
+                  <div className='font-semibold text-sm sm:text-base'>
                     Current Score:{' '}
                     <span className='bg-zinc-800 px-2 py-1 rounded'>
                       {displayScore}
@@ -333,6 +350,12 @@ const App = () => {
             )}
           </div>
           <div className='-mx-2 sm:mx-0'>
+            <div className='font-semibold pl-[46px] pr-[9px] py-2 flex-1 grid grid-cols-[3fr_40px_2fr] sm:grid-cols-[4fr_40px_2fr_78px] gap-2 text-sm sm:text-base'>
+              <div>Game title</div>
+              <div>Year</div>
+              <div>Developer(s)</div>
+              <div className='hidden sm:block'>Points</div>
+            </div>
             <GameTable
               dailyGames={dailyGames}
               correctGuesses={correctGuesses}

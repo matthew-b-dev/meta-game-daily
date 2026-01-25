@@ -1,7 +1,7 @@
 import type { Game } from './App';
 
 export const DATE_OVERRIDE: string | null = null; // '2026-01-23'
-
+export const MAX_REVIEW_RANK = 50;
 // Subtitle configuration
 export interface SubtitleConfig {
   text: string;
@@ -60,7 +60,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Hot Wheels Unleashed',
     'Bayonetta 3',
   ],
-  // 26: Splatoon 3
+  '2026-01-26': [
+    'Ori and the Will of the Wisps',
+    'Hyrule Warriors',
+    'Splatoon 3',
+    'Puyo Puyo Tetris',
+    'Neverwinter',
+  ],
 };
 
 // Per-game state interface
@@ -290,11 +296,11 @@ export const getDailyGames = (
   }
   // The Review Rank was determined by how many critic reviews the title receieved. A lower rank means more reviews.
   // Separate games by review rank - we're going to make sure at least one of these is pretty freaking recognizable.
-  // Note that we also just completely ignore games with a review rank > 40. I have arbitrarily chosen that threshold
+  // Note that we also just completely ignore games with a review rank > MAX_REVIEW_RANK. I have arbitrarily chosen that threshold
   //   to prevent unknown games from being selected.
   const topGames = allGames.filter((g) => g.reviewRank < 10);
   const otherGames = allGames.filter(
-    (g) => g.reviewRank >= 10 && g.reviewRank < 40,
+    (g) => g.reviewRank >= 10 && g.reviewRank < MAX_REVIEW_RANK,
   );
 
   // Shuffle top games
