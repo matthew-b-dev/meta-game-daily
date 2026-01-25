@@ -7,6 +7,7 @@ export interface AccordionItem {
   header: React.ReactNode;
   content: React.ReactNode;
   headerClassName?: string;
+  hoverHeaderClassName?: string;
   isLast?: boolean;
 }
 
@@ -27,11 +28,12 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
             key={item.id}
             className={`${!item.isLast && !isOpen ? 'border-b border-zinc-700' : ''} ${item.headerClassName || 'bg-zinc-800'}`}
           >
+            {/* The accordion header button to expand/collapse - includes the basic game info */}
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className='w-full p-2 flex items-center gap-2 text-left hover:brightness-110 transition-all'
+              className={`w-full border border-transparent hover:border-transparent sm:hover:border-gray-500 p-2 flex items-center gap-2 hover:${item.hoverHeaderClassName} text-left transition-all`}
             >
-              <div className='p-1 rounded bg-gray-700 hover:bg-gray-600 transition-colors'>
+              <div className='p-1 rounded bg-gray-700'>
                 {isOpen ? (
                   <MinusIcon className='w-5 h-5' />
                 ) : (
@@ -41,6 +43,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
               <div className='flex-1'>{item.header}</div>
             </button>
 
+            {/* The accordion body that displays more details */}
             <AnimatePresence initial={false}>
               {isOpen && (
                 <motion.div
