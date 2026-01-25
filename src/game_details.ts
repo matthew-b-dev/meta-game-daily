@@ -355,6 +355,7 @@ export const gameDetails: Game[] = [
     developers: ['Cryptic Studios'],
     publishers: ['Perfect World Entertainment'],
     franchise: 'Dungeons & Dragons',
+    brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hgaezysyxmzihrrrvqmp.jpg',
   },
@@ -8255,7 +8256,7 @@ export const gameDetails: Game[] = [
     developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9283.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9285.jpg',
   },
   {
     score: '73',
