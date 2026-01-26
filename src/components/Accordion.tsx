@@ -31,7 +31,7 @@ export const Accordion: React.FC<AccordionProps> = ({ items }) => {
             {/* The accordion header button to expand/collapse - includes the basic game info */}
             <button
               onClick={() => setOpenIndex(isOpen ? null : index)}
-              className={`w-full border border-transparent hover:border-transparent sm:hover:border-gray-500 p-2 flex items-center gap-2 hover:${item.hoverHeaderClassName} text-left transition-all`}
+              className={`w-full border border-transparent hover:border-transparent sm:hover:border-gray-500 p-2 flex items-center gap-2 ${item.hoverHeaderClassName} text-left transition-all`}
             >
               <div className='p-1 rounded bg-gray-700'>
                 {isOpen ? (

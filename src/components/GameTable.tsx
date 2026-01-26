@@ -62,13 +62,13 @@ const GameTable: React.FC<GameTableProps> = ({
     if (correctGuesses.includes(game.name)) {
       headerClassName =
         'bg-green-600 text-white transition-colors duration-200';
-      hoverHeaderClassName = 'bg-green-500';
+      hoverHeaderClassName = 'hover:bg-green-500';
     } else if (revealedTitle) {
       headerClassName = 'bg-red-700 text-white transition-colors duration-200';
-      hoverHeaderClassName = 'bg-red-600';
+      hoverHeaderClassName = 'hover:bg-red-600';
     } else {
       headerClassName = 'bg-zinc-800 transition-colors duration-200';
-      hoverHeaderClassName = 'bg-zinc-700';
+      hoverHeaderClassName = 'hover:bg-zinc-700';
     }
 
     // Calculate earned points and badge class
