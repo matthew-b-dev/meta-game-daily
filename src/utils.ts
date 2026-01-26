@@ -1,6 +1,6 @@
 import type { Game } from './App';
 
-export const DATE_OVERRIDE: string | null = null; // '2026-01-23'
+export const DATE_OVERRIDE: string | null = null; // '2026-01-27'
 export const MAX_REVIEW_RANK = 50;
 // Subtitle configuration
 export interface SubtitleConfig {
@@ -67,6 +67,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Puyo Puyo Tetris',
     'Neverwinter',
   ],
+  '2026-01-27': [
+    "Assassin's Creed Valhalla",
+    'Forza Horizon 4',
+    'Mario Golf: Super Rush',
+    'Tekken 8',
+    'Sea of Stars',
+  ],
+  // Dave the diver
 };
 
 // Per-game state interface

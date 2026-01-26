@@ -4566,7 +4566,7 @@ export const gameDetails: Game[] = [
     developers: ['Playground Games'],
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fvc.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fvh.jpg',
   },
   {
     score: '83',
@@ -6073,7 +6073,7 @@ export const gameDetails: Game[] = [
     developers: ['Ubisoft Montreal'],
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gf9.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gfc.jpg',
   },
   {
     score: '89',
@@ -9054,7 +9054,7 @@ export const gameDetails: Game[] = [
     developers: ['Sabotage'],
     publishers: ['Sabotage', 'Playdigious'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf2rc.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf2ra.jpg',
   },
   {
     score: '81',
@@ -9756,7 +9756,7 @@ export const gameDetails: Game[] = [
     developers: ['Bandai Namco Studios'],
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scrysz.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scryt3.jpg',
   },
   {
     score: '81',
