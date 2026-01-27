@@ -1,7 +1,7 @@
 # MetaGameDaily
 
 A daily Video Games Industry puzzle where players identify games based on limited information.
-Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via GitHub pages!
+Play the live game [here](https://metagamedaily.com/).
 
 ## How to Play
 
@@ -18,15 +18,16 @@ Play the live game [here](https://matthew-b-dev.github.io/meta-game-daily/) via 
 
 <img width="865" height="837" alt="image" src="https://github.com/user-attachments/assets/3a8cdd83-f255-412d-9d81-91a293b78c07" />
 
----------
+---
 
 <img width="835" height="629" alt="image" src="https://github.com/user-attachments/assets/e3fccbe0-8798-4abd-bffc-221e8597e58b" />
 
----------
+---
 
 Share text:
+
 ```
-https://matthew-b-dev.github.io/meta-game-daily/
+https://metagamedaily.com
 Jan 23, 2026
 🟥🟥🟥🟨🟨
 🏆 250 points | 🏅 Rank #10 of 17

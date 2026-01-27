@@ -415,7 +415,7 @@ export const generateShareText = (
   }
 
   // Build the share text
-  return `https://matthew-b-dev.github.io/meta-game-daily/\n${puzzleDate}\n${emojis}\n🏆 ${score} points${rankText}`;
+  return `https://metagamedaily.com/\n${puzzleDate}\n${emojis}\n🏆 ${score} points${rankText}`;
 };
 
 /**
