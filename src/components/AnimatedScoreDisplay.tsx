@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getPercentileMessage, getRankEmoji } from '../utils';
 
@@ -15,6 +15,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   userPercentile,
   scoresLoading,
 }) => {
+  const animationInProgress = useRef(false);
   const [animatedScore, setAnimatedScore] = useState(0);
   const [showBigScore, setShowBigScore] = useState(false);
   const [showBigRank, setShowBigRank] = useState(false);
@@ -35,57 +36,63 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   // Animate score counting and sequence
   useEffect(() => {
-    if (scoresLoading) return;
+    if (scoresLoading || animationInProgress.current) {
+      return;
+    }
 
-    // Only run animation on mount (modal open)
-    // Reset all animation states
-    setAnimatedScore(0);
-    setShowBigScore(true);
-    setShowBigRank(false);
-    setShowSmallScore(false);
-    setShowRank(false);
-    setShowHistogram(false);
+    // Use microtask to batch state updates before render
+    queueMicrotask(() => {
+      setAnimatedScore(0);
+      setShowBigScore(true);
+      setShowBigRank(false);
+      setShowSmallScore(false);
+      setShowRank(false);
+      setShowHistogram(false);
 
-    // Start counting animation
-    const duration = 1500; // 1.5 seconds
-    const startTime = Date.now();
+      animationInProgress.current = true;
 
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
-      const progress = Math.min(elapsed / duration, 1);
+      // Start counting animation
+      const duration = 1500; // 1.5 seconds
+      const startTime = Date.now();
 
-      // Ease out cubic for smooth deceleration
-      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-      const currentScore = Math.floor(easeOutCubic * score);
-      setAnimatedScore(currentScore);
+      const animate = () => {
+        const elapsed = Date.now() - startTime;
+        const progress = Math.min(elapsed / duration, 1);
 
-      if (progress < 1) {
-        requestAnimationFrame(animate);
-      } else {
-        // Score counting complete, hold for 0.5s then show rank
-        setTimeout(() => {
-          setShowBigRank(true);
-          // Hold both score and rank for 1.5s, then transition to final layout
+        // Ease out cubic for smooth deceleration
+        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+        const currentScore = Math.floor(easeOutCubic * score);
+
+        setAnimatedScore(currentScore);
+
+        if (progress < 1) {
+          requestAnimationFrame(animate);
+        } else {
+          // Score counting complete, hold for 0.5s then show rank
           setTimeout(() => {
-            setShowBigScore(false);
-            setShowBigRank(false);
+            setShowBigRank(true);
+            // Hold both score and rank for 1.5s, then transition to final layout
             setTimeout(() => {
-              setShowSmallScore(true);
+              setShowBigScore(false);
+              setShowBigRank(false);
               setTimeout(() => {
-                setShowRank(true);
+                setShowSmallScore(true);
                 setTimeout(() => {
-                  setShowHistogram(true);
-                }, 300);
-              }, 200);
-            }, 300);
-          }, 2000);
-        }, 500);
-      }
-    };
+                  setShowRank(true);
+                  setTimeout(() => {
+                    setShowHistogram(true);
+                    animationInProgress.current = false;
+                  }, 300);
+                }, 200);
+              }, 300);
+            }, 2000);
+          }, 500);
+        }
+      };
 
-    requestAnimationFrame(animate);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [scoresLoading]); // Only rerun when loading state changes
+      requestAnimationFrame(animate);
+    });
+  }, [scoresLoading, score, totalPlayers, userRank]);
 
   if (scoresLoading) {
     return (
