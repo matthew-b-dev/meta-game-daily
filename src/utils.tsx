@@ -1,17 +1,22 @@
 import type { Game } from './App';
+import type { ReactNode } from 'react';
 
 export const DATE_OVERRIDE: string | null = null; // '2026-01-27'
 export const MAX_REVIEW_RANK = 50;
 // Subtitle configuration
 export interface SubtitleConfig {
-  text: string;
+  content: ReactNode;
   animated: boolean;
 }
 
 export const getSubtitle = (): SubtitleConfig => {
   return {
-    text: '❤️ Ad-free and Open Source! 🛠️',
-    animated: false,
+    content: (
+      <>
+        🎉 Now officially a <i>.com</i>! 🙌
+      </>
+    ),
+    animated: true,
   };
 };
 

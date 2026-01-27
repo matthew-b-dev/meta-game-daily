@@ -291,10 +291,10 @@ const App = () => {
                     },
                   }}
                 >
-                  {subtitle.text}
+                  {subtitle.content}
                 </motion.p>
               ) : (
-                <p className='text-gray-400 text-sm mt-1'>{subtitle.text}</p>
+                <p className='text-gray-400 text-sm mt-1'>{subtitle.content}</p>
               )}
             </div>
             <button
