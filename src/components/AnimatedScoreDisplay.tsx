@@ -15,7 +15,6 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   userPercentile,
   scoresLoading,
 }) => {
-  const hasAnimated = useRef(false);
   const [animatedScore, setAnimatedScore] = useState(0);
   const [showBigScore, setShowBigScore] = useState(false);
   const [showBigRank, setShowBigRank] = useState(false);
@@ -36,67 +35,57 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   // Animate score counting and sequence
   useEffect(() => {
-    if (scoresLoading) {
-      return;
-    }
+    if (scoresLoading) return;
 
-    // Only run animation once per score change
-    if (hasAnimated.current) {
-      hasAnimated.current = false;
-    }
+    // Only run animation on mount (modal open)
+    // Reset all animation states
+    setAnimatedScore(0);
+    setShowBigScore(true);
+    setShowBigRank(false);
+    setShowSmallScore(false);
+    setShowRank(false);
+    setShowHistogram(false);
 
-    // Use microtask to batch state updates before render
-    queueMicrotask(() => {
-      setAnimatedScore(0);
-      setShowBigScore(true);
-      setShowBigRank(false);
-      setShowSmallScore(false);
-      setShowRank(false);
-      setShowHistogram(false);
+    // Start counting animation
+    const duration = 1500; // 1.5 seconds
+    const startTime = Date.now();
 
-      hasAnimated.current = true;
+    const animate = () => {
+      const elapsed = Date.now() - startTime;
+      const progress = Math.min(elapsed / duration, 1);
 
-      // Start counting animation
-      const duration = 1500; // 1.5 seconds
-      const startTime = Date.now();
+      // Ease out cubic for smooth deceleration
+      const easeOutCubic = 1 - Math.pow(1 - progress, 3);
+      const currentScore = Math.floor(easeOutCubic * score);
+      setAnimatedScore(currentScore);
 
-      const animate = () => {
-        const elapsed = Date.now() - startTime;
-        const progress = Math.min(elapsed / duration, 1);
-
-        // Ease out cubic for smooth deceleration
-        const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentScore = Math.floor(easeOutCubic * score);
-
-        setAnimatedScore(currentScore);
-
-        if (progress < 1) {
-          requestAnimationFrame(animate);
-        } else {
-          // Score counting complete, hold for 0.5s then show rank
+      if (progress < 1) {
+        requestAnimationFrame(animate);
+      } else {
+        // Score counting complete, hold for 0.5s then show rank
+        setTimeout(() => {
+          setShowBigRank(true);
+          // Hold both score and rank for 1.5s, then transition to final layout
           setTimeout(() => {
-            setShowBigRank(true);
-            // Hold both score and rank for 1.5s, then transition to final layout
+            setShowBigScore(false);
+            setShowBigRank(false);
             setTimeout(() => {
-              setShowBigScore(false);
-              setShowBigRank(false);
+              setShowSmallScore(true);
               setTimeout(() => {
-                setShowSmallScore(true);
+                setShowRank(true);
                 setTimeout(() => {
-                  setShowRank(true);
-                  setTimeout(() => {
-                    setShowHistogram(true);
-                  }, 300);
-                }, 200);
-              }, 300);
-            }, 2000);
-          }, 500);
-        }
-      };
+                  setShowHistogram(true);
+                }, 300);
+              }, 200);
+            }, 300);
+          }, 2000);
+        }, 500);
+      }
+    };
 
-      requestAnimationFrame(animate);
-    });
-  }, [scoresLoading, score, totalPlayers, userRank]);
+    requestAnimationFrame(animate);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [scoresLoading]); // Only rerun when loading state changes
 
   if (scoresLoading) {
     return (

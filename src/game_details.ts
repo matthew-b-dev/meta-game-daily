@@ -7417,7 +7417,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jun 25',
     releaseYear: 2021,
     reviewRank: 45,
-    developers: ['Camelot Software Planning', 'Camelot'],
+    developers: ['Camelot'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9288.jpg',
