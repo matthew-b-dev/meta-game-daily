@@ -79,7 +79,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Tekken 8',
     'Sea of Stars',
   ],
-  // Dave the diver
+  '2026-01-28': [
+    'Monster Hunter Rise',
+    'XCOM 2',
+    'Dave the Diver',
+    'Mortal Kombat X',
+    'Dark Souls II',
+  ],
 };
 
 // Per-game state interface

@@ -898,6 +898,8 @@ export const dummyGames: string[] = [
   'AI: THE SOMNIUM FILES - nirvanA Initiative',
   'Valkyrie Elysium',
   'Card Shark',
+  'XCOM 3',
+  'XCOM 4',
   'Salt and Sacrifice',
   "Babylon's Fall",
   'The Legend of Heroes: Trails from Zero',
