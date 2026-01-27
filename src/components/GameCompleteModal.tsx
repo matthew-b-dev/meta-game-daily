@@ -82,7 +82,9 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             }}
           >
             {/* Score Distribution Graph */}
+            {/* Use a unique key to force remount only when modal opens */}
             <AnimatedScoreDisplay
+              key={isOpen ? `score-anim-${puzzleDate}` : 'closed'}
               score={score}
               todayScores={todayScores}
               userPercentile={userPercentile}
