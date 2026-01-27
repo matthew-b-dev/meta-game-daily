@@ -1543,7 +1543,7 @@ export const gameDetails: Game[] = [
     genres: 'Action, RPG',
     releaseDate: 'Mar 11',
     releaseYear: 2014,
-    reviewRank: 67,
+    reviewRank: 35,
     developers: ['FromSoftware'],
     publishers: ['FromSoftware', 'Bandai Namco Entertainment'],
     screenshotUrl:
@@ -9206,7 +9206,7 @@ export const gameDetails: Game[] = [
     genres: 'Action, Platformer, Adventure',
     releaseDate: 'Jan 31',
     releaseYear: 2023,
-    reviewRank: 47,
+    reviewRank: 38,
     developers: ['Purple Lamp Studios'],
     publishers: ['THQ Nordic'],
     screenshotUrl:
