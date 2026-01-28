@@ -86,6 +86,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Mortal Kombat X',
     'Dark Souls II',
   ],
+  '2026-01-29': [
+    'Super Mario 3D World',
+    'Metaphor: ReFantazio',
+    'A Plague Tale: Requiem',
+    'Batman: Arkham Knight',
+    'Dead or Alive 6',
+  ],
 };
 
 // Per-game state interface
@@ -93,6 +100,7 @@ export interface GameState {
   revealed: { [key: string]: boolean };
   pointsDeducted: number;
   revealedTitle: boolean;
+  revealedMaskedTitle?: boolean;
 }
 
 // Missed guess with close detection
@@ -105,6 +113,7 @@ export interface MissedGuess {
 export interface SessionState {
   puzzleDate: string;
   score: number;
+  bonusPoints: number;
   guessesLeft: number;
   correctGuesses: string[];
   revealedGames: string[];
@@ -154,6 +163,14 @@ export const isCloseGuess = (guess: string, correctGames: Game[]): boolean => {
 
   for (const game of correctGames) {
     const gameLower = game.name.toLowerCase();
+
+    // Special case: if both contain "Super Mario", consider them close
+    if (
+      guessLower.includes('super mario') &&
+      gameLower.includes('super mario')
+    ) {
+      return true;
+    }
 
     // Check if one contains the other (for partial matches)
     if (gameLower.includes(guessLower) || guessLower.includes(gameLower)) {
@@ -313,37 +330,50 @@ export const getDailyGames = (
   for (let i = 0; i < utcDate.length; i++) {
     hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
   }
-  // The Review Rank was determined by how many critic reviews the title receieved. A lower rank means more reviews.
-  // Separate games by review rank - we're going to make sure at least one of these is pretty freaking recognizable.
-  // Note that we also just completely ignore games with a review rank > MAX_REVIEW_RANK. I have arbitrarily chosen that threshold
-  //   to prevent unknown games from being selected.
-  const topGames = allGames.filter((g) => g.reviewRank < 10);
-  const otherGames = allGames.filter(
-    (g) => g.reviewRank >= 10 && g.reviewRank < MAX_REVIEW_RANK,
-  );
-
-  // Shuffle top games
-  const shuffledTop = topGames.slice();
-  let topHash = hash;
-  for (let i = shuffledTop.length - 1; i > 0; i--) {
-    topHash = (topHash * 31 + i) % 100000;
-    const j = topHash % (i + 1);
-    [shuffledTop[i], shuffledTop[j]] = [shuffledTop[j], shuffledTop[i]];
+  // Bucket games by difficulty based on review rank
+  // Lower rank means more reviews, so more recognizable
+  const buckets = {
+    trivial: [] as Game[],
+    easy: [] as Game[],
+    medium: [] as Game[],
+    hard: [] as Game[],
+  };
+  for (const game of allGames) {
+    if (game.reviewRank < 5) {
+      buckets.trivial.push(game);
+    } else if (game.reviewRank < 10) {
+      buckets.easy.push(game);
+    } else if (game.reviewRank < 25) {
+      buckets.medium.push(game);
+    } else if (game.reviewRank < MAX_REVIEW_RANK) {
+      buckets.hard.push(game);
+    }
   }
 
-  // Shuffle other games
-  const shuffledOther = otherGames.slice();
-  let otherHash = hash;
-  for (let i = shuffledOther.length - 1; i > 0; i--) {
-    otherHash = (otherHash * 31 + i) % 100000;
-    const j = otherHash % (i + 1);
-    [shuffledOther[i], shuffledOther[j]] = [shuffledOther[j], shuffledOther[i]];
-  }
+  // Shuffle function
+  const shuffle = (arr: Game[], seed: number): Game[] => {
+    const shuffled = arr.slice();
+    let h = seed;
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      h = (h * 31 + i) % 100000;
+      const j = h % (i + 1);
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
 
-  // Take at least 1 from top games, rest from other games
+  // Shuffle each bucket with different seeds
+  const shuffledTrivial = shuffle(buckets.trivial, hash + 5);
+  const shuffledEasy = shuffle(buckets.easy, hash + 6);
+  const shuffledMedium = shuffle(buckets.medium, hash + 7);
+  const shuffledHard = shuffle(buckets.hard, hash + 8);
+
+  // Select games: 1 trivial, 2 easy, 1 medium, 1 hard
   const result = [
-    ...shuffledTop.slice(0, Math.min(1, shuffledTop.length)),
-    ...shuffledOther.slice(0, count - 1),
+    ...shuffledTrivial.slice(0, 1),
+    ...shuffledEasy.slice(0, 1),
+    ...shuffledMedium.slice(0, 2),
+    ...shuffledHard.slice(0, 1),
   ];
 
   return result.slice(0, count);
@@ -403,6 +433,7 @@ export const getRankEmoji = (rank: number, totalPlayers: number): string => {
  */
 export const generateShareText = (
   score: number,
+  bonusPoints: number,
   todayScores: number[],
   puzzleDate: string,
   emojis: string,
@@ -426,7 +457,12 @@ export const generateShareText = (
   }
 
   // Build the share text
-  return `https://metagamedaily.com/\n${puzzleDate}\n${emojis}\n🏆 ${score} points${rankText}`;
+  const baseScore = score - bonusPoints;
+  const scoreText =
+    bonusPoints > 0
+      ? `${baseScore} + ${bonusPoints} bonus = ${score}`
+      : `${score}`;
+  return `https://metagamedaily.com/\n${puzzleDate}\n${emojis}\n🏆 ${scoreText} points${rankText}`;
 };
 
 /**
@@ -487,6 +523,7 @@ export const generateGameEmojis = (
  */
 export const copyShareToClipboard = async (
   score: number,
+  bonusPoints: number,
   allScores: number[],
   initialScores: number[],
   puzzleDate: string,
@@ -496,7 +533,13 @@ export const copyShareToClipboard = async (
 ): Promise<{ success: boolean; isWorst: boolean }> => {
   const emojis = generateGameEmojis(dailyGames, gameStates, correctGuesses);
   const scoresToUse = allScores.length > 0 ? allScores : initialScores;
-  const shareText = generateShareText(score, scoresToUse, puzzleDate, emojis);
+  const shareText = generateShareText(
+    score,
+    bonusPoints,
+    scoresToUse,
+    puzzleDate,
+    emojis,
+  );
 
   try {
     await navigator.clipboard.writeText(shareText);
@@ -533,6 +576,10 @@ export const createGameStateUpdater = (
           state.pointsDeducted ?? prev[gameName]?.pointsDeducted ?? 0,
         revealedTitle:
           state.revealedTitle ?? prev[gameName]?.revealedTitle ?? false,
+        revealedMaskedTitle:
+          state.revealedMaskedTitle ??
+          prev[gameName]?.revealedMaskedTitle ??
+          false,
       },
     }));
   };

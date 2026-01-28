@@ -14,11 +14,34 @@ interface GameTableProps {
   updateGameState: (gameName: string, state: Partial<GameState>) => void;
 }
 
-const maskName = (name: string) =>
-  name
+const maskName = (game: Game) =>
+  game.overrideMask ||
+  game.name
     .replace(/[^ :-]/g, '*')
     .replace(/:/g, '\u00A0:\u00A0')
     .replace(/-/g, '\u00A0-\u00A0');
+
+const renderMaskedName = (maskedName: string) => {
+  const parts = maskedName.split('[ ??? ]');
+  if (parts.length === 1) {
+    return maskedName;
+  }
+
+  const result = [];
+  for (let i = 0; i < parts.length; i++) {
+    if (i > 0) {
+      result.push(
+        <span key={`ellipsis-${i}`} className='text-gray-400 px-1'>
+          [ <i>???</i> ]
+        </span>,
+      );
+    }
+    if (parts[i]) {
+      result.push(parts[i]);
+    }
+  }
+  return result;
+};
 
 const GameTable: React.FC<GameTableProps> = ({
   dailyGames,
@@ -31,6 +54,7 @@ const GameTable: React.FC<GameTableProps> = ({
 }) => {
   // Deduction values for each field
   const fieldDeductions: { [key: string]: number } = {
+    maskedTitle: 50,
     score: 5,
     genres: 5,
     releaseDate: 5,
@@ -39,18 +63,28 @@ const GameTable: React.FC<GameTableProps> = ({
     screenshot: 50,
   };
 
-  // List of revealable fields
-  const revealFields = [
-    'score',
-    'genres',
-    'releaseDate',
-    'platforms',
-    'publishers',
-    'screenshot',
-  ];
-
   // Create accordion items - recreated on every render to reflect state changes
   const accordionItems: AccordionItem[] = dailyGames.map((game, idx) => {
+    // List of revealable fields (conditional based on game properties)
+    const revealFields = game.redactName
+      ? [
+          'maskedTitle',
+          'score',
+          'genres',
+          'releaseDate',
+          'platforms',
+          'publishers',
+          'screenshot',
+        ]
+      : [
+          'score',
+          'genres',
+          'releaseDate',
+          'platforms',
+          'publishers',
+          'screenshot',
+        ];
+
     const gameState = gameStates[game.name];
     const revealed = gameState?.revealed ?? {};
     const revealedTitle = gameState?.revealedTitle ?? false;
@@ -95,9 +129,21 @@ const GameTable: React.FC<GameTableProps> = ({
         <div className='flex items-center gap-2 sm:gap-4 flex-1'>
           <div className='flex-1 grid grid-cols-[3fr_40px_2fr] sm:grid-cols-[4fr_40px_2fr_78px] gap-2 text-sm md:text-base items-center'>
             <div className='flex items-center'>
-              {correctGuesses.includes(game.name) || revealedTitle
-                ? game.name
-                : maskName(game.name)}
+              {correctGuesses.includes(game.name) || revealedTitle ? (
+                game.name
+              ) : game.redactName ? (
+                gameState?.revealedMaskedTitle ? (
+                  renderMaskedName(maskName(game))
+                ) : (
+                  <span className='text-gray-300'>
+                    <span className='text-zinc-500'>[</span>{' '}
+                    <i>Title redacted!</i>{' '}
+                    <span className='text-zinc-500'>]</span>
+                  </span>
+                )
+              ) : (
+                renderMaskedName(maskName(game))
+              )}
             </div>
             <div className='flex items-center'>{game.releaseYear}</div>
             <div className='flex items-center'>

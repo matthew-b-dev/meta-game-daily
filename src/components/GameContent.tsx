@@ -9,6 +9,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const getFieldDisplayName = (field: string): string => {
   const displayNames: { [key: string]: string } = {
+    maskedTitle: 'Reveal MASKED Title',
     publishers: 'Publisher(s)',
     score: 'OpenCritic™ Score',
     genres: 'Genre(s)',
@@ -36,6 +37,7 @@ export interface GameContentProps {
 
 export const GameContent: React.FC<GameContentProps> = ({
   game,
+  gameState,
   correctGuesses,
   revealedGames,
   onDeduct,
@@ -54,10 +56,15 @@ export const GameContent: React.FC<GameContentProps> = ({
     if (revealedGames.includes(game.name) && !revealedTitle) {
       const newRevealed: { [key: string]: boolean } = {};
       revealFields.forEach((field) => {
-        newRevealed[field] = true;
+        if (field !== 'maskedTitle') {
+          newRevealed[field] = true;
+        }
       });
       updateGameState(game.name, {
         revealed: newRevealed,
+        revealedMaskedTitle: game.redactName
+          ? true
+          : gameState?.revealedMaskedTitle,
         revealedTitle: true,
         pointsDeducted: 200,
       });
@@ -66,7 +73,17 @@ export const GameContent: React.FC<GameContentProps> = ({
   }, [revealedGames, game.name, revealedTitle]);
 
   const handleReveal = (field: string) => {
-    if (!revealed[field]) {
+    if (field === 'maskedTitle') {
+      const deduction = fieldDeductions[field] || 0;
+      const newPointsDeducted = pointsDeducted + deduction;
+
+      updateGameState(game.name, {
+        revealedMaskedTitle: true,
+        pointsDeducted: newPointsDeducted,
+      });
+
+      onDeduct(deduction);
+    } else if (!revealed[field]) {
       const newRevealed = { ...revealed, [field]: true };
       const deduction = fieldDeductions[field] || 0;
       const newPointsDeducted = pointsDeducted + deduction;
@@ -80,15 +97,20 @@ export const GameContent: React.FC<GameContentProps> = ({
     }
   };
 
-  const allRevealed = revealFields.every((field) => revealed[field]);
+  const allRevealed =
+    revealFields.every((field) => field === 'maskedTitle' || revealed[field]) &&
+    (!game.redactName || gameState?.revealedMaskedTitle);
 
   const calculateRevealAllCost = () => {
     let total = 0;
     revealFields.forEach((field) => {
-      if (!revealed[field]) {
+      if (field !== 'maskedTitle' && !revealed[field]) {
         total += fieldDeductions[field] || 0;
       }
     });
+    if (game.redactName && !gameState?.revealedMaskedTitle) {
+      total += fieldDeductions.maskedTitle || 0;
+    }
     return total;
   };
 
@@ -97,17 +119,26 @@ export const GameContent: React.FC<GameContentProps> = ({
     let totalDeduction = 0;
 
     revealFields.forEach((field) => {
-      if (!revealed[field]) {
+      if (field !== 'maskedTitle' && !revealed[field]) {
         newRevealed[field] = true;
         totalDeduction += fieldDeductions[field] || 0;
       }
     });
+
+    const shouldRevealMaskedTitle =
+      game.redactName && !gameState?.revealedMaskedTitle;
+    if (shouldRevealMaskedTitle) {
+      totalDeduction += fieldDeductions.maskedTitle || 0;
+    }
 
     if (totalDeduction > 0) {
       const newPointsDeducted = pointsDeducted + totalDeduction;
 
       updateGameState(game.name, {
         revealed: newRevealed,
+        revealedMaskedTitle: shouldRevealMaskedTitle
+          ? true
+          : gameState?.revealedMaskedTitle,
         pointsDeducted: newPointsDeducted,
       });
 
@@ -120,17 +151,26 @@ export const GameContent: React.FC<GameContentProps> = ({
     let totalDeduction = 0;
 
     revealFields.forEach((field) => {
-      if (!revealed[field]) {
+      if (field !== 'maskedTitle' && !revealed[field]) {
         newRevealed[field] = true;
         totalDeduction += fieldDeductions[field] || 0;
       }
     });
+
+    const shouldRevealMaskedTitle =
+      game.redactName && !gameState?.revealedMaskedTitle;
+    if (shouldRevealMaskedTitle) {
+      totalDeduction += fieldDeductions.maskedTitle || 0;
+    }
 
     const titleDeduction = 100;
     const totalWithTitle = totalDeduction + titleDeduction;
 
     updateGameState(game.name, {
       revealed: newRevealed,
+      revealedMaskedTitle: shouldRevealMaskedTitle
+        ? true
+        : gameState?.revealedMaskedTitle,
       revealedTitle: true,
       pointsDeducted: pointsDeducted + totalWithTitle,
     });
@@ -224,6 +264,34 @@ export const GameContent: React.FC<GameContentProps> = ({
                 </motion.div>
               )}
             </>
+          ) : field === 'maskedTitle' ? (
+            <AnimatePresence mode='wait' initial={false}>
+              {!correctGuesses.includes(game.name) &&
+              !gameState?.revealedMaskedTitle ? (
+                <motion.button
+                  key='reveal-btn'
+                  onClick={() => handleReveal('maskedTitle')}
+                  className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+                  initial={{ opacity: 1 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  Reveal (-{fieldDeductions[field] || 0}pts.)
+                </motion.button>
+              ) : (
+                <motion.span
+                  key='reveal-text'
+                  className='text-yellow-500'
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <i>(Revealed above)</i>
+                </motion.span>
+              )}
+            </AnimatePresence>
           ) : (
             <AnimatePresence mode='wait' initial={false}>
               {!correctGuesses.includes(game.name) && !revealed[field] ? (

@@ -15,7 +15,9 @@ interface UseGameStateProps {
 interface UseGameStateReturn {
   stateLoaded: boolean;
   score: number;
+  bonusPoints: number;
   setScore: React.Dispatch<React.SetStateAction<number>>;
+  setBonusPoints: React.Dispatch<React.SetStateAction<number>>;
   guessesLeft: number;
   setGuessesLeft: React.Dispatch<React.SetStateAction<number>>;
   correctGuesses: string[];
@@ -45,6 +47,7 @@ export const useGameState = ({
 
   const [stateLoaded] = useState(true); // Always true since we load on initialization
   const [score, setScore] = useState(savedState?.score ?? 1000);
+  const [bonusPoints, setBonusPoints] = useState(savedState?.bonusPoints ?? 0);
   const [guessesLeft, setGuessesLeft] = useState(savedState?.guessesLeft ?? 10);
   const [correctGuesses, setCorrectGuesses] = useState<string[]>(
     savedState?.correctGuesses ?? [],
@@ -91,6 +94,7 @@ export const useGameState = ({
       gameStates,
       gameCompleteDismissed,
       scoreSent,
+      bonusPoints,
     });
   }, [
     puzzleDate,
@@ -102,6 +106,7 @@ export const useGameState = ({
     gameStates,
     gameCompleteDismissed,
     scoreSent,
+    bonusPoints,
   ]);
 
   const resetPuzzle = async () => {
@@ -111,7 +116,9 @@ export const useGameState = ({
   return {
     stateLoaded,
     score,
+    bonusPoints,
     setScore,
+    setBonusPoints,
     guessesLeft,
     setGuessesLeft,
     correctGuesses,

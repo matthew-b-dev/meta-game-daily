@@ -4,6 +4,7 @@ import { getPercentileMessage, getRankEmoji } from '../utils';
 
 interface AnimatedScoreDisplayProps {
   score: number;
+  bonusPoints: number;
   todayScores: number[];
   userPercentile: number | null;
   scoresLoading: boolean;
@@ -11,6 +12,7 @@ interface AnimatedScoreDisplayProps {
 
 const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   score,
+  bonusPoints,
   todayScores,
   userPercentile,
   scoresLoading,
@@ -19,6 +21,8 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   const [animatedScore, setAnimatedScore] = useState(0);
   const [showBigScore, setShowBigScore] = useState(false);
   const [showBigRank, setShowBigRank] = useState(false);
+  const [showBonusPoints, setShowBonusPoints] = useState(false);
+  const [showTotal, setShowTotal] = useState(false);
   const [showSmallScore, setShowSmallScore] = useState(false);
   const [showRank, setShowRank] = useState(false);
   const [showHistogram, setShowHistogram] = useState(false);
@@ -29,7 +33,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   // findIndex returns the FIRST matching index, ensuring ties get the best rank
   // Example: scores [500, 500, 200, 100] → user with 500 gets rank #1 (not #2)
-  const userRank = sortedScores.findIndex((s) => s === score) + 1;
+  const userRank = sortedScores.findIndex((s) => s === score + bonusPoints) + 1;
   const totalPlayers = todayScores.length;
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
@@ -45,54 +49,119 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
       setAnimatedScore(0);
       setShowBigScore(true);
       setShowBigRank(false);
+      setShowBonusPoints(false);
+      setShowTotal(false);
       setShowSmallScore(false);
       setShowRank(false);
       setShowHistogram(false);
 
       animationInProgress.current = true;
 
-      // Start counting animation
+      const baseScore = score;
+      const totalScore = score + bonusPoints;
+      const hasBonusPoints = bonusPoints > 0;
+
+      // Start counting animation to base score
       const duration = 1500; // 1.5 seconds
       const startTime = Date.now();
 
-      const animate = () => {
+      const animateToBase = () => {
         const elapsed = Date.now() - startTime;
         const progress = Math.min(elapsed / duration, 1);
 
         // Ease out cubic for smooth deceleration
         const easeOutCubic = 1 - Math.pow(1 - progress, 3);
-        const currentScore = Math.floor(easeOutCubic * score);
+        const currentScore = Math.floor(easeOutCubic * baseScore);
 
         setAnimatedScore(currentScore);
 
         if (progress < 1) {
-          requestAnimationFrame(animate);
+          requestAnimationFrame(animateToBase);
         } else {
-          // Score counting complete, hold for 0.5s then show rank
+          // Base score counting complete
           setTimeout(() => {
-            setShowBigRank(true);
-            // Hold both score and rank for 1.5s, then transition to final layout
-            setTimeout(() => {
-              setShowBigScore(false);
-              setShowBigRank(false);
+            if (hasBonusPoints) {
+              setShowBigScore(false); // Hide the big score
+
+              // Show bonus points animation
               setTimeout(() => {
-                setShowSmallScore(true);
+                setShowBonusPoints(true);
+                setAnimatedScore(0); // Reset to 0 for bonus animation
+
+                const bonusStartTime = Date.now();
+                const animateBonus = () => {
+                  const bonusElapsed = Date.now() - bonusStartTime;
+                  const bonusProgress = Math.min(bonusElapsed / duration, 1);
+
+                  const easeOutCubicBonus = 1 - Math.pow(1 - bonusProgress, 3);
+                  const bonusScore = Math.floor(
+                    easeOutCubicBonus * bonusPoints,
+                  );
+
+                  setAnimatedScore(bonusScore);
+
+                  if (bonusProgress < 1) {
+                    requestAnimationFrame(animateBonus);
+                  } else {
+                    // Bonus animation complete, hide bonus and show total
+                    setTimeout(() => {
+                      setShowBonusPoints(false);
+                      // Wait for bonus exit animation to complete before showing total
+                      setTimeout(() => {
+                        setShowTotal(true);
+                        setAnimatedScore(totalScore); // Set to final score immediately
+
+                        // Hold total for 1s, then show rank
+                        setTimeout(() => {
+                          setShowBigRank(true);
+                          // Hold total and rank for 1.5s, then transition to final layout
+                          setTimeout(() => {
+                            setShowTotal(false);
+                            setShowBigRank(false);
+                            setTimeout(() => {
+                              setShowSmallScore(true);
+                              setTimeout(() => {
+                                setShowRank(true);
+                                setTimeout(() => {
+                                  setShowHistogram(true);
+                                  animationInProgress.current = false;
+                                }, 300);
+                              }, 200);
+                            }, 300);
+                          }, 2000);
+                        }, 1000);
+                      }, 300); // Wait for bonus exit animation (0.3s)
+                    }, 500);
+                  }
+                };
+                requestAnimationFrame(animateBonus);
+              }, 300); // Brief pause before showing bonus
+            } else {
+              // No bonus points, show rank below the score
+              setShowBigRank(true);
+              // Hold score and rank for 1.5s, then transition to final layout
+              setTimeout(() => {
+                setShowBigScore(false);
+                setShowBigRank(false);
                 setTimeout(() => {
-                  setShowRank(true);
+                  setShowSmallScore(true);
                   setTimeout(() => {
-                    setShowHistogram(true);
-                    animationInProgress.current = false;
-                  }, 300);
-                }, 200);
-              }, 300);
-            }, 2000);
+                    setShowRank(true);
+                    setTimeout(() => {
+                      setShowHistogram(true);
+                      animationInProgress.current = false;
+                    }, 300);
+                  }, 200);
+                }, 300);
+              }, 2000);
+            }
           }, 500);
         }
       };
 
-      requestAnimationFrame(animate);
+      requestAnimationFrame(animateToBase);
     });
-  }, [scoresLoading, score, totalPlayers, userRank]);
+  }, [scoresLoading, score, bonusPoints, totalPlayers, userRank]);
 
   if (scoresLoading) {
     return (
@@ -121,12 +190,92 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
           >
             <div className=''>
               <div className='flex-col items-center flex'>
-                <div className='text-gray-400 text-lg mb-2'>Your Score</div>
+                <div className='text-gray-400 text-lg mb-2'>Score</div>
                 <div className='text-green-400 text-6xl font-bold'>
                   {animatedScore}
                 </div>
               </div>
               {/* Rank display that appears below the score */}
+              <AnimatePresence>
+                {showBigRank && todayScores.length > 1 && (
+                  <motion.div
+                    className='text-white text-2xl font-semibold mt-3'
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Bonus Points animation */}
+      <AnimatePresence>
+        {showBonusPoints && (
+          <motion.div
+            className='flex justify-center pt-2 h-[220px]'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className=''>
+              <div className='flex-col items-center flex'>
+                <div className='text-yellow-400 text-lg mb-2'>
+                  ✨ Bonus Points ✨
+                </div>
+                <div
+                  id='bonus-score'
+                  className='text-yellow-400 text-6xl font-bold'
+                >
+                  {animatedScore}
+                </div>
+                <div className='text-yellow-300 text-sm mt-1'>
+                  ({bonusPoints / 20} unused guesses)
+                </div>
+              </div>
+              {/* Rank display that appears below the bonus */}
+              <AnimatePresence>
+                {showBigRank && todayScores.length > 1 && (
+                  <motion.div
+                    className='text-white text-2xl font-semibold mt-3'
+                    initial={{ opacity: 0, y: -10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.3 }}
+                  >
+                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Total score display */}
+      <AnimatePresence>
+        {showTotal && (
+          <motion.div
+            className='flex justify-center pt-2 h-[220px]'
+            initial={{ opacity: 0, scale: 0.8 }}
+            animate={{ opacity: 1, scale: 1 }}
+            exit={{ opacity: 0, scale: 0.8 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className=''>
+              <div className='flex-col items-center flex'>
+                <div className='text-green-400 text-lg mb-2'>Total Score</div>
+                <div className='text-green-400 text-6xl font-bold'>
+                  {score + bonusPoints}
+                </div>
+              </div>
+              {/* Rank display that appears below the total */}
               <AnimatePresence>
                 {showBigRank && todayScores.length > 1 && (
                   <motion.div
@@ -154,7 +303,9 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.3 }}
           >
-            <span className='text-sm font-semibold'>Your Score: {score}</span>
+            <span className='text-sm font-semibold'>
+              Your Score: {score + bonusPoints}
+            </span>
           </motion.div>
         )}
       </AnimatePresence>
@@ -176,7 +327,11 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                   ease: 'easeOut',
                 }}
               >
-                {getPercentileMessage(userPercentile, score, todayScores)}
+                {getPercentileMessage(
+                  userPercentile,
+                  score + bonusPoints,
+                  todayScores,
+                )}
               </motion.p>
             )}
           </AnimatePresence>

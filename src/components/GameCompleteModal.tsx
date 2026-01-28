@@ -14,6 +14,7 @@ interface Game {
 interface GameCompleteModalProps {
   isOpen: boolean;
   score: number;
+  bonusPoints: number;
   guessesLeft: number;
   puzzleDate: string;
   games: Game[];
@@ -29,6 +30,7 @@ interface GameCompleteModalProps {
 const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   isOpen,
   score,
+  bonusPoints,
   puzzleDate,
   games,
   correctGuesses,
@@ -86,6 +88,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
             <AnimatedScoreDisplay
               key={isOpen ? `score-anim-${puzzleDate}` : 'closed'}
               score={score}
+              bonusPoints={bonusPoints}
               todayScores={todayScores}
               userPercentile={userPercentile}
               scoresLoading={scoresLoading}

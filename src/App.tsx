@@ -1,10 +1,11 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import {
   QuestionMarkCircleIcon,
   CalendarIcon,
 } from '@heroicons/react/24/solid';
+import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
@@ -49,6 +50,8 @@ export type Game = {
   brightenImage?: boolean;
   isDummyGame?: boolean;
   searchTerms?: string[]; // Additional search terms/aliases for the dropdown
+  redactName?: boolean; // If true, show "(redacted!)" instead of asterisk-filled name
+  overrideMask?: string; // Custom mask to display instead of automatic asterisk masking
 };
 
 const App = () => {
@@ -63,7 +66,9 @@ const App = () => {
   const {
     stateLoaded,
     score,
+    bonusPoints,
     setScore,
+    setBonusPoints,
     guessesLeft,
     setGuessesLeft,
     correctGuesses,
@@ -92,6 +97,7 @@ const App = () => {
   const [showGameComplete, setShowGameComplete] = useState(false);
   const [showHelp, setShowHelp] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
+  const [bonusCalculated, setBonusCalculated] = useState(false);
 
   // Animated score display
   const displayScore = useScoreAnimation({ targetScore: score });
@@ -120,8 +126,13 @@ const App = () => {
     allScores,
     userPercentile,
     isLoading: scoresLoading,
-  } = useSendAndFetchScores(gameOver, allGamesComplete, score, scoreSent, () =>
-    setScoreSent(true),
+  } = useSendAndFetchScores(
+    gameOver,
+    allGamesComplete,
+    bonusCalculated,
+    score + bonusPoints,
+    scoreSent,
+    () => setScoreSent(true),
   );
 
   // Handle game completion (open modal on transition to complete)
@@ -136,6 +147,47 @@ const App = () => {
     showGameComplete,
     onGameComplete: handleGameComplete,
   });
+
+  // Calculate bonus points when game becomes complete
+  useEffect(() => {
+    if (gameOver && allGamesComplete && bonusPoints === 0) {
+      // Check if all games were guessed correctly (not just revealed)
+      const allGamesGuessed = dailyGames.every((game) =>
+        correctGuesses.includes(game.name),
+      );
+
+      if (allGamesGuessed) {
+        // 20 points for each unused guess
+        const calculatedBonus = guessesLeft * 20;
+        setBonusPoints(calculatedBonus);
+      } else {
+        // Any missed games = 0 bonus points
+        setBonusPoints(0);
+      }
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setBonusCalculated(true);
+    }
+  }, [
+    gameOver,
+    allGamesComplete,
+    bonusPoints,
+    dailyGames,
+    correctGuesses,
+    guessesLeft,
+    setBonusPoints,
+  ]);
+
+  useEffect(() => {
+    // Set bonusCalculated to true after bonusPoints is updated
+    if (gameOver && allGamesComplete && bonusPoints !== 0 && !bonusCalculated) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect
+      setBonusCalculated(true);
+    }
+    // Also set to true if bonusPoints is 0 and game is over
+    if (gameOver && allGamesComplete && bonusPoints === 0 && !bonusCalculated) {
+      setBonusCalculated(true);
+    }
+  }, [gameOver, allGamesComplete, bonusPoints, bonusCalculated]);
 
   // Auto-reveal all non-guessed games when guesses are exhausted
   const handleDeduct = useCallback(
@@ -226,6 +278,7 @@ const App = () => {
     setShowGameComplete(false);
     setGuess(null);
     setInputValue('');
+    setBonusCalculated(false);
     window?.location?.reload?.();
   };
 
@@ -238,6 +291,7 @@ const App = () => {
   const handleCopyToShare = async () => {
     const result = await copyShareToClipboard(
       score,
+      bonusPoints,
       allScores,
       initialScores,
       puzzleDate,
@@ -334,11 +388,15 @@ const App = () => {
                     </span>
                   </div>
                 </div>
+                <div className='text-gray-400 text-sm flex items-center gap-1 mt-3'>
+                  <InformationCircleIcon className='w-7 h-7' />
+                  Notice: Bonus points are awarded for unused guesses!
+                </div>
                 <MissedGuesses missedGuesses={missedGuesses} />
               </>
             )}
             {gameOver && (
-              <div className='mt-4 mb-4 flex flex-col items-center gap-2'>
+              <div className='mb-4 flex flex-col items-center gap-2'>
                 <button
                   className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
                   onClick={() => setShowGameComplete(true)}
@@ -407,6 +465,7 @@ const App = () => {
       <GameCompleteModal
         isOpen={showGameComplete}
         score={score}
+        bonusPoints={bonusPoints}
         guessesLeft={guessesLeft}
         puzzleDate={puzzleDate}
         games={dailyGames}
