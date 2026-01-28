@@ -11,6 +11,7 @@ interface UseSendAndFetchScoresReturn {
  * Hook to send user score and fetch all scores when the game ends, then calculate user's percentile
  * @param gameOver - Whether the game is over
  * @param allGamesComplete - Whether all games are complete
+ * @param bonusCalculated - Whether bonus points have been calculated
  * @param userScore - The user's final score
  * @param scoreSent - Whether the score has already been sent (to avoid duplicate sends)
  * @param onScoreSent - Callback to mark score as sent
@@ -19,6 +20,7 @@ interface UseSendAndFetchScoresReturn {
 export const useSendAndFetchScores = (
   gameOver: boolean,
   allGamesComplete: boolean,
+  bonusCalculated: boolean,
   userScore: number,
   scoreSent: boolean,
   onScoreSent: () => void,
@@ -29,8 +31,14 @@ export const useSendAndFetchScores = (
   const hasScoreSent = useRef(false);
 
   useEffect(() => {
-    // Send score only once when game becomes over, all games complete, and score hasn't been sent
-    if (gameOver && allGamesComplete && !scoreSent && !hasScoreSent.current) {
+    // Send score only once when game becomes over, all games complete, bonus calculated, and score hasn't been sent
+    if (
+      gameOver &&
+      allGamesComplete &&
+      bonusCalculated &&
+      !scoreSent &&
+      !hasScoreSent.current
+    ) {
       hasScoreSent.current = true;
 
       const send = async () => {
@@ -44,7 +52,14 @@ export const useSendAndFetchScores = (
 
       send();
     }
-  }, [gameOver, allGamesComplete, userScore, scoreSent, onScoreSent]);
+  }, [
+    gameOver,
+    allGamesComplete,
+    bonusCalculated,
+    userScore,
+    scoreSent,
+    onScoreSent,
+  ]);
 
   useEffect(() => {
     // Fetch scores only after score has been sent (waits for scoreSent to become true)

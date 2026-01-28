@@ -30,12 +30,13 @@ export const gameDetails: Game[] = [
   {
     score: '93',
     name: 'Super Mario 3D World',
+    overrideMask: '***** ***** ** [ ??? ]',
     platforms: 'Wii-U',
     genres: 'Platformer',
     releaseDate: 'Nov 22',
     releaseYear: 2013,
     reviewRank: 4,
-    developers: ['Nintendo EAD'],
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88g1.jpg',
@@ -1796,6 +1797,7 @@ export const gameDetails: Game[] = [
   {
     score: '86',
     name: 'Batman: Arkham Knight',
+    overrideMask: 'Batman: [ ??? ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
     releaseDate: 'Jun 23',
@@ -1805,7 +1807,7 @@ export const gameDetails: Game[] = [
     publishers: ['Warner Bros. Interactive Entertainment'],
     franchise: 'Batman',
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wmryo6uxdy1opndpqzsg.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3z1odurhninhnorve6g.jpg',
   },
   {
     score: '74',
@@ -3628,6 +3630,7 @@ export const gameDetails: Game[] = [
     score: '80',
     name: 'The Evil Within 2',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
+    overrideMask: '*** **** ****** [ ??? ]',
     genres: 'Horror, First-Person Shooter',
     releaseDate: 'Oct 13',
     releaseYear: 2017,
@@ -4739,13 +4742,13 @@ export const gameDetails: Game[] = [
   },
   {
     score: '88',
-    name: 'Dragon Quest XI: Echoes of an Elusive Age',
+    name: 'Dragon Quest XI',
     platforms: 'PS4, PC, PS5',
     genres: 'JRPG, Fantasy',
     releaseDate: 'Sep 4',
     releaseYear: 2018,
     reviewRank: 33,
-    developers: ['Square Enix Business Division 6'],
+    developers: ['Square Enix'],
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nayznw6sfymbpnozvbbc.jpg',
@@ -7280,19 +7283,6 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v6d.jpg',
   },
   {
-    score: '89',
-    name: "Super Mario 3D World + Bowser's Fury",
-    platforms: 'Switch',
-    genres: 'Platformer',
-    releaseDate: 'Feb 12',
-    releaseYear: 2021,
-    reviewRank: 27,
-    developers: ['Nintendo EAD'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ja6.jpg',
-  },
-  {
     score: '83',
     name: 'Lost Judgment',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
@@ -7320,7 +7310,7 @@ export const gameDetails: Game[] = [
   },
   {
     score: '79',
-    name: 'New Pokémon Snap',
+    name: 'New Pokemon Snap',
     platforms: 'Switch',
     genres: 'Adventure, Simulation',
     releaseDate: 'Apr 30',
@@ -8057,7 +8047,7 @@ export const gameDetails: Game[] = [
     developers: ['Asobo Studio'],
     publishers: ['Focus Entertainment'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg9m1.jpg',
+      'https://cdn.mobygames.com/screenshots/18044361-a-plague-tale-requiem-playstation-5-in-darkness-the-light-is-you.jpg',
   },
   {
     score: '67',
@@ -8113,14 +8103,15 @@ export const gameDetails: Game[] = [
   },
   {
     score: '83',
-    name: 'Pokémon Legends: Arceus',
+    name: 'Pokemon Legends: Arceus',
+    overrideMask: '******* [ ??? ]',
     platforms: 'Switch',
     genres: 'RPG, Adventure',
     releaseDate: 'Jan 28',
     releaseYear: 2022,
-    reviewRank: 20,
+    reviewRank: 88,
     developers: ['Game Freak'],
-    publishers: ['Nintendo', 'The Pokémon Company'],
+    publishers: ['Nintendo', 'The Pokemon Company'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93am.jpg',
   },
@@ -9507,7 +9498,7 @@ export const gameDetails: Game[] = [
     releaseYear: 2023,
     reviewRank: 5,
     developers: ['Creatures Inc.'],
-    publishers: ['The Pokémon Company', 'Nintendo'],
+    publishers: ['The Pokemon Company', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3ds.jpg',
   },
@@ -9740,10 +9731,10 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 11',
     releaseYear: 2024,
     reviewRank: 6,
-    developers: ['Studio Zero'],
+    developers: ['Atlus, Studio Zero'],
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwms.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwmt.jpg',
   },
   {
     score: '90',
