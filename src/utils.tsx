@@ -11,11 +11,7 @@ export interface SubtitleConfig {
 
 export const getSubtitle = (): SubtitleConfig => {
   return {
-    content: (
-      <>
-        🎉 Now officially a <i>.com</i>! 🙌
-      </>
-    ),
+    content: <>✨ Introducing bonus points! ✨</>,
     animated: true,
   };
 };
