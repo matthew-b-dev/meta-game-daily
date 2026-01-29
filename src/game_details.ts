@@ -5621,7 +5621,7 @@ export const gameDetails: Game[] = [
     developers: ['Team NINJA'],
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dam.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uapfuxkta3fxmaara71i.jpg',
   },
   {
     score: '87',
