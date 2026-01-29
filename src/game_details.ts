@@ -39,7 +39,7 @@ export const gameDetails: Game[] = [
     developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88g1.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88g3.jpg',
   },
   {
     score: '90',
