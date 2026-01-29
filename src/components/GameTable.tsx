@@ -22,7 +22,7 @@ const maskName = (game: Game) =>
     .replace(/-/g, '\u00A0-\u00A0');
 
 const renderMaskedName = (maskedName: string) => {
-  const parts = maskedName.split('[ ??? ]');
+  const parts = maskedName.split('[ ... ]');
   if (parts.length === 1) {
     return maskedName;
   }
@@ -32,7 +32,7 @@ const renderMaskedName = (maskedName: string) => {
     if (i > 0) {
       result.push(
         <span key={`ellipsis-${i}`} className='text-gray-400 px-1'>
-          [ <i>???</i> ]
+          [ <i>...</i> ]
         </span>,
       );
     }
@@ -54,7 +54,7 @@ const GameTable: React.FC<GameTableProps> = ({
 }) => {
   // Deduction values for each field
   const fieldDeductions: { [key: string]: number } = {
-    maskedTitle: 50,
+    maskedTitle: 20,
     score: 5,
     genres: 5,
     releaseDate: 5,
@@ -135,10 +135,8 @@ const GameTable: React.FC<GameTableProps> = ({
                 gameState?.revealedMaskedTitle ? (
                   renderMaskedName(maskName(game))
                 ) : (
-                  <span className='text-gray-300'>
-                    <span className='text-zinc-500'>[</span>{' '}
-                    <i>Title redacted!</i>{' '}
-                    <span className='text-zinc-500'>]</span>
+                  <span className='text-gray-400'>
+                    [ <i>Title redacted!</i> ]
                   </span>
                 )
               ) : (

@@ -9,7 +9,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 
 const getFieldDisplayName = (field: string): string => {
   const displayNames: { [key: string]: string } = {
-    maskedTitle: 'Reveal MASKED Title',
+    maskedTitle: 'MASKED (***) Title',
     publishers: 'Publisher(s)',
     score: 'OpenCritic™ Score',
     genres: 'Genre(s)',
