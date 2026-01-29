@@ -45,6 +45,12 @@ Jan 23, 2026
   - Screenshot: -50 points
 - Giving up (revealing game name): lose all (200) points for that particular game
 
+### Bonus Points 
+- If every game is eventually guessed, +20 points will be awarded for **every** unused guess
+- Achieving the maximum total score of 1100 is called a **Perfection**.
+  - 1000 base score for not revealing any information
+  - +100 bonus points: 5 guesses remaining * 20 points
+
 ### Close Guesses
 
 If you make a guess that's very similar to a correct answer, you'll see a special indicator:
