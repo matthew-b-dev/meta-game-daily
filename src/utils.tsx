@@ -438,8 +438,18 @@ export const generateShareText = (
   // Sort scores in descending order (highest first)
   const sortedScores = [...todayScores].sort((a, b) => b - a);
 
+  const minScore = Math.min(...todayScores);
+  const isWorstScore = totalScore === minScore;
+  const countAtBottom = todayScores.filter((s) => s === minScore).length;
+  const isTiedForWorst = isWorstScore && countAtBottom > 1;
+
   // Find user's rank (1-based index)
-  const rank = sortedScores.findIndex((s) => s === totalScore) + 1;
+  let rank;
+  if (isTiedForWorst) {
+    rank = todayScores.length;
+  } else {
+    rank = sortedScores.findIndex((s) => s === totalScore) + 1;
+  }
   const totalPlayers = todayScores.length;
 
   const rankEmoji = getRankEmoji(rank, totalPlayers);
@@ -449,8 +459,12 @@ export const generateShareText = (
 
   // Rank 0 indicates the user's score did not make it to the DB due to some kind of failure
   // In that case we'll just not include any rank information in the share text
-  if (totalPlayers > 3 && rank !== 0) {
-    rankText = ` | ${rankEmoji} Rank #${rank} of ${totalPlayers}`;
+  if (totalPlayers > 2 && rank !== 0) {
+    if (isTiedForWorst) {
+      rankText = ` | ${rankEmoji} Rank ${totalPlayers}/${totalPlayers}`;
+    } else {
+      rankText = ` | ${rankEmoji} Rank #${rank} of ${totalPlayers}`;
+    }
   }
 
   // Build the share text
@@ -563,7 +577,7 @@ export const getShareSuccessMessage = (result: {
   success: boolean;
   isWorst: boolean;
 }): string => {
-  return result.isWorst ? 'Honestly I respect that' : 'Copied to clipboard!';
+  return result.isWorst ? 'Respect.' : 'Copied to clipboard!';
 };
 
 /**
