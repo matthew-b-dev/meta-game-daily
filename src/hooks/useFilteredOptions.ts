@@ -2,6 +2,14 @@ import { useMemo } from 'react';
 import type { Game } from '../App';
 import type { MissedGuess } from '../utils';
 
+// Helper function to normalize strings by removing accents
+const normalizeString = (str: string): string => {
+  return str
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase();
+};
+
 interface GameOption {
   value: string;
   label: string;
@@ -60,11 +68,13 @@ export const useFilteredOptions = ({
   const filteredOptions = useMemo(() => {
     if (nonSpecialCharCount < 3) return [];
 
+    const normalizedInput = normalizeString(inputValue);
+
     return gameOptions.filter((opt) => {
-      const lowerInput = inputValue.toLowerCase();
-      const matchesLabel = opt.label.toLowerCase().includes(lowerInput);
+      const normalizedLabel = normalizeString(opt.label);
+      const matchesLabel = normalizedLabel.includes(normalizedInput);
       const matchesSearchTerms = opt.searchTerms?.some((term) =>
-        term.toLowerCase().includes(lowerInput),
+        normalizeString(term).includes(normalizedInput),
       );
       return (
         (matchesLabel || matchesSearchTerms) && !guessedNames.has(opt.value)

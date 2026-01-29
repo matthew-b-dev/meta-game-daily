@@ -1,11 +1,10 @@
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useMemo } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
 import { motion } from 'framer-motion';
 import {
   QuestionMarkCircleIcon,
   CalendarIcon,
 } from '@heroicons/react/24/solid';
-import { InformationCircleIcon } from '@heroicons/react/24/outline';
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
@@ -34,6 +33,7 @@ import {
   getShareSuccessMessage,
   MAX_REVIEW_RANK,
 } from './utils';
+import DailyNotification from './components/DailyNotification';
 
 export type Game = {
   score?: string;
@@ -57,10 +57,14 @@ export type Game = {
 const App = () => {
   const puzzleDate = getPuzzleDate();
   const subtitle = getSubtitle();
-  const dailyGames = getDailyGames(
-    gameDetails.filter((g) => g.reviewRank < MAX_REVIEW_RANK),
-    5,
-  ).sort((a, b) => a.reviewRank - b.reviewRank);
+  const dailyGames = useMemo(
+    () =>
+      getDailyGames(
+        gameDetails.filter((g) => g.reviewRank < MAX_REVIEW_RANK),
+        5,
+      ).sort((a, b) => a.reviewRank - b.reviewRank),
+    [],
+  );
 
   // Use custom hooks for state management
   const {
@@ -363,19 +367,7 @@ const App = () => {
           </div>
 
           <div className='mb-8'>
-            <div className='text-gray-400 text-sm flex justify-center gap-1 mb-7'>
-              <div className=' px-2 py-1 rounded border border-zinc-600 border-1 flex items-center'>
-                <div className='flex text-center shrink-0 items-center mr-2 pr-2 border-r border-zinc-600 h-full'>
-                  <InformationCircleIcon className='w-7 h-7 mr-1' />
-                  Jan. 29:
-                </div>
-                <div className='pl-2'>
-                  <b>Bonus points</b> are awarded for unused guesses. Guess all
-                  5 games in 5 guesses without hints to earn a perfect score of
-                  1100.
-                </div>
-              </div>
-            </div>
+            <DailyNotification />
             <GuessInput
               filteredOptions={filteredOptions}
               guess={guess}
