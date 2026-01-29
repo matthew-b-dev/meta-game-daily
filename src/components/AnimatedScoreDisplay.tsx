@@ -31,10 +31,23 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   // Sort scores in descending order (highest first)
   const sortedScores = [...todayScores].sort((a, b) => b - a);
 
+  const minScore = Math.min(...todayScores);
+  const totalScore = score + bonusPoints;
+  const isWorstScore = totalScore === minScore;
+  const countAtBottom = todayScores.filter((s) => s === minScore).length;
+  const isTiedForWorst = isWorstScore && countAtBottom > 1;
+
+  const totalPlayers = todayScores.length;
+
   // findIndex returns the FIRST matching index, ensuring ties get the best rank
   // Example: scores [500, 500, 200, 100] → user with 500 gets rank #1 (not #2)
-  const userRank = sortedScores.findIndex((s) => s === score + bonusPoints) + 1;
-  const totalPlayers = todayScores.length;
+  // Exception: for worst score with ties, give the worst rank
+  let userRank;
+  if (isTiedForWorst) {
+    userRank = totalPlayers;
+  } else {
+    userRank = sortedScores.findIndex((s) => s === totalScore) + 1;
+  }
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
@@ -205,7 +218,10 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                    {rankEmoji}{' '}
+                    {isTiedForWorst
+                      ? `Rank ${totalPlayers}/${totalPlayers}`
+                      : `Rank #${userRank} out of ${totalPlayers}`}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -249,7 +265,10 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                    {rankEmoji}{' '}
+                    {isTiedForWorst
+                      ? `Rank ${totalPlayers}/${totalPlayers}`
+                      : `Rank #${userRank} out of ${totalPlayers}`}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -285,7 +304,10 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.3 }}
                   >
-                    {rankEmoji} Rank #{userRank} out of {totalPlayers}
+                    {rankEmoji}{' '}
+                    {isTiedForWorst
+                      ? `Rank ${totalPlayers}/${totalPlayers}`
+                      : `Rank #${userRank} out of ${totalPlayers}`}
                   </motion.div>
                 )}
               </AnimatePresence>
@@ -377,7 +399,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                       min: 1001,
                       max: 1100,
                       count: 0,
-                      label: '1001-1100',
+                      label: '1001+',
                     },
                   ];
 
