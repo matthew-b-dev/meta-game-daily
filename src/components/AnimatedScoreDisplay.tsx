@@ -346,7 +346,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                 transition={{ duration: 0.4 }}
               >
                 {(() => {
-                  // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000)
+                  // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000, 1001-1100)
                   const bins = [
                     { min: 0, max: 200, count: 0, label: '0-200' },
                     {
@@ -373,6 +373,12 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                       count: 0,
                       label: '801-1000',
                     },
+                    {
+                      min: 1001,
+                      max: 1100,
+                      count: 0,
+                      label: '1001-1100',
+                    },
                   ];
 
                   // Count scores in each bin
@@ -386,7 +392,9 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
                   // Determine which bin the user's score falls into
                   const userBin = bins.findIndex(
-                    (b) => score >= b.min && score <= b.max,
+                    (b) =>
+                      score + bonusPoints >= b.min &&
+                      score + bonusPoints <= b.max,
                   );
 
                   return bins.map((bin, idx) => {
