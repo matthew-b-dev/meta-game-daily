@@ -493,13 +493,8 @@ export const generateGameEmojis = (
   correctGuesses: string[],
   bonusPoints: number,
 ): string => {
-  // If the score was utterly perfect, no need to do any calculation
-  if (bonusPoints === 100) {
-    return '🟦🟦🟦🟦🟦 (Perfection)';
-  }
-
   // The score wasn't perfect, represent each Game with it's corresponding emoji
-  let emojiText = dailyGames
+  const emojiText = dailyGames
     .map((game) => {
       const pointsDeducted = gameStates[game.name]?.pointsDeducted ?? 0;
       const earnedPoints = 200 - pointsDeducted;
@@ -517,7 +512,8 @@ export const generateGameEmojis = (
 
   // If every game was guessed without reveals, add some text to the final string
   if (emojiText === '🟩🟩🟩🟩🟩') {
-    emojiText += ' (No Reveals)';
+    if (bonusPoints === 100) return '🟦🟦🟦🟦🟦 (Perfection)';
+    else return '🟩🟩🟩🟩🟩 (No Reveals)';
   }
 
   return emojiText;
