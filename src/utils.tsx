@@ -10,13 +10,13 @@ export interface SubtitleConfig {
 }
 
 export const getSubtitle = (): SubtitleConfig => {
+  // <>❤️ Ad-free and Open-Source! 🛠️</>,
   return {
-    content: <>✨ Introducing bonus points! ✨</>,
-    animated: true,
+    content: <>❤️ Ad-free and Open-Source! 🛠️</>,
+    animated: false,
   };
 };
 
-// Per-game state interface
 // Per-game state interface
 export interface GameState {
   revealed: { [key: string]: boolean };
