@@ -363,6 +363,16 @@ const App = () => {
           </div>
 
           <div className='mb-8'>
+            <div className='text-gray-400 text-sm flex justify-center items-center gap-1 mb-7'>
+              <div className='flex shrink-0 items-center mr-2'>
+                <InformationCircleIcon className='w-7 h-7 mr-1' />
+                [Jan. 29]:
+              </div>
+              <div>
+                <b>Bonus points</b> are now awarded for unused guesses (if all
+                games are guessed).
+              </div>
+            </div>
             <GuessInput
               filteredOptions={filteredOptions}
               guess={guess}
@@ -387,10 +397,6 @@ const App = () => {
                       {displayScore}
                     </span>
                   </div>
-                </div>
-                <div className='text-gray-400 text-sm flex items-center gap-1 mt-3'>
-                  <InformationCircleIcon className='w-7 h-7' />
-                  Notice: Bonus points are awarded for unused guesses!
                 </div>
                 <MissedGuesses missedGuesses={missedGuesses} />
               </>
