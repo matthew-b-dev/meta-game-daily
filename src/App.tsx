@@ -401,8 +401,9 @@ const App = () => {
                 <MissedGuesses missedGuesses={missedGuesses} />
               </>
             )}
+
             {gameOver && (
-              <div className='mb-4 flex flex-col items-center gap-2'>
+              <div className='mt-4 flex flex-col items-center gap-2'>
                 <button
                   className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
                   onClick={() => setShowGameComplete(true)}

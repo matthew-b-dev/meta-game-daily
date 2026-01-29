@@ -434,11 +434,12 @@ export const generateShareText = (
   puzzleDate: string,
   emojis: string,
 ): string => {
+  const totalScore = score + bonusPoints;
   // Sort scores in descending order (highest first)
   const sortedScores = [...todayScores].sort((a, b) => b - a);
 
   // Find user's rank (1-based index)
-  const rank = sortedScores.findIndex((s) => s === score) + 1;
+  const rank = sortedScores.findIndex((s) => s === totalScore) + 1;
   const totalPlayers = todayScores.length;
 
   const rankEmoji = getRankEmoji(rank, totalPlayers);
@@ -453,12 +454,7 @@ export const generateShareText = (
   }
 
   // Build the share text
-  const baseScore = score - bonusPoints;
-  const scoreText =
-    bonusPoints > 0
-      ? `${baseScore} + ${bonusPoints} bonus = ${score}`
-      : `${score}`;
-  return `https://metagamedaily.com/\n${puzzleDate}\n${emojis}\n🏆 ${scoreText} points${rankText}`;
+  return `https://metagamedaily.com/\n${puzzleDate}\n${emojis}\n🏆 ${totalScore} points${rankText}`;
 };
 
 /**
@@ -495,8 +491,15 @@ export const generateGameEmojis = (
   dailyGames: Game[],
   gameStates: { [gameName: string]: GameState },
   correctGuesses: string[],
+  bonusPoints: number,
 ): string => {
-  return dailyGames
+  // If the score was utterly perfect, no need to do any calculation
+  if (bonusPoints === 100) {
+    return '🟦🟦🟦🟦🟦 (Perfection)';
+  }
+
+  // The score wasn't perfect, represent each Game with it's corresponding emoji
+  let emojiText = dailyGames
     .map((game) => {
       const pointsDeducted = gameStates[game.name]?.pointsDeducted ?? 0;
       const earnedPoints = 200 - pointsDeducted;
@@ -511,6 +514,13 @@ export const generateGameEmojis = (
       }
     })
     .join('');
+
+  // If every game was guessed without reveals, add some text to the final string
+  if (emojiText === '🟩🟩🟩🟩🟩') {
+    emojiText += ' (No Reveals)';
+  }
+
+  return emojiText;
 };
 
 /**
@@ -527,7 +537,12 @@ export const copyShareToClipboard = async (
   gameStates: { [gameName: string]: GameState },
   correctGuesses: string[],
 ): Promise<{ success: boolean; isWorst: boolean }> => {
-  const emojis = generateGameEmojis(dailyGames, gameStates, correctGuesses);
+  const emojis = generateGameEmojis(
+    dailyGames,
+    gameStates,
+    correctGuesses,
+    bonusPoints,
+  );
   const scoresToUse = allScores.length > 0 ? allScores : initialScores;
   const shareText = generateShareText(
     score,
