@@ -8041,6 +8041,7 @@ export const gameDetails: Game[] = [
     name: 'A Plague Tale: Requiem',
     platforms: 'Switch, PC, XBXS, PS5',
     genres: 'Action, Adventure',
+    brightenImage: true,
     releaseDate: 'Oct 18',
     releaseYear: 2022,
     reviewRank: 14,
