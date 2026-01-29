@@ -363,14 +363,17 @@ const App = () => {
           </div>
 
           <div className='mb-8'>
-            <div className='text-gray-400 text-sm flex justify-center items-center gap-1 mb-7'>
-              <div className='flex shrink-0 items-center mr-2'>
-                <InformationCircleIcon className='w-7 h-7 mr-1' />
-                [Jan. 29]:
-              </div>
-              <div>
-                <b>Bonus points</b> are now awarded for unused guesses (if all
-                games are guessed).
+            <div className='text-gray-400 text-sm flex justify-center gap-1 mb-7'>
+              <div className=' px-2 py-1 rounded border border-zinc-600 border-1 flex items-center'>
+                <div className='flex text-center shrink-0 items-center mr-2 pr-2 border-r border-zinc-600 h-full'>
+                  <InformationCircleIcon className='w-7 h-7 mr-1' />
+                  Jan. 29:
+                </div>
+                <div className='pl-2'>
+                  <b>Bonus points</b> are awarded for unused guesses. Guess all
+                  5 games in 5 guesses without hints to earn a perfect score of
+                  1100.
+                </div>
               </div>
             </div>
             <GuessInput
@@ -382,6 +385,7 @@ const App = () => {
               gameOver={gameOver}
               nonSpecialCharCount={nonSpecialCharCount}
             />
+
             {!gameOver && (
               <>
                 <div className='mt-4 flex justify-between items-center'>
