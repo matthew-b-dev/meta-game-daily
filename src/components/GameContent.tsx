@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/outline';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import { motion, AnimatePresence } from 'framer-motion';
-import type { Game } from '../App';
+import type { Game } from '../types';
 import type { GameState } from '../utils';
 
 const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);

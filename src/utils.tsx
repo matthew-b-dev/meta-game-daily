@@ -1,6 +1,6 @@
-import type { Game } from './App';
+import type { Game } from './types';
 import type { ReactNode } from 'react';
-import { DATE_OVERRIDE, DEMO_DAYS } from './demos';
+import { DATE_OVERRIDE, DEMO_DAYS, SUNDAY_SHUFFLE_DEMO_DAYS } from './demos';
 
 export const MAX_REVIEW_RANK = 50;
 // Subtitle configuration
@@ -299,6 +299,146 @@ export const getDailyGames = (
   ];
 
   return result.slice(0, count);
+};
+
+// Shuffle array deterministically
+function shuffleArray<T>(arr: T[], seed: number): T[] {
+  const shuffled = arr.slice();
+  let h = seed;
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    h = (h * 31 + i) % 100000;
+    const j = h % (i + 1);
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+}
+
+// Helper for releaseYear variant
+const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
+  // Filter games with reviewRank < 15
+  const eligible = allGames.filter((g) => g.reviewRank < 15);
+  // Group by releaseYear
+  const byYear: { [year: number]: Game[] } = {};
+  for (const game of eligible) {
+    if (!byYear[game.releaseYear]) byYear[game.releaseYear] = [];
+    byYear[game.releaseYear].push(game);
+  }
+  // Get unique years, sort them
+  const years = Object.keys(byYear)
+    .map(Number)
+    .sort((a, b) => a - b);
+  // Shuffle years deterministically
+  const shuffledYears = shuffleArray(years, hash);
+  // Pick up to 4 years, and from each, pick one game deterministically
+  const result: Game[] = [];
+  let seed = hash;
+  for (const year of shuffledYears.slice(0, 4)) {
+    const games = byYear[year];
+    if (games.length > 0) {
+      const shuffledGames = shuffleArray(games, seed);
+      result.push(shuffledGames[0]);
+      seed += 1;
+    }
+  }
+  return result;
+};
+
+// Helper for critic variant
+const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
+  // Filter games with score
+  const eligible = allGames.filter((g) => g.score != null);
+  // Sort by score
+  const sorted = eligible.sort(
+    (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
+  );
+  // Try to find 4 games with scores at least 7 apart
+  let attempt = 0;
+  while (attempt < 10) {
+    const shuffled = shuffleArray(sorted, hash + attempt);
+    const selected: Game[] = [];
+    for (const game of shuffled) {
+      const gameScore = parseInt(game.score || '0', 10);
+      if (
+        selected.every(
+          (s) => Math.abs(parseInt(s.score || '0', 10) - gameScore) >= 7,
+        )
+      ) {
+        selected.push(game);
+        if (selected.length === 4) return selected;
+      }
+    }
+    attempt++;
+  }
+  // Fallback: return first 4 shuffled
+  return shuffleArray(sorted, hash).slice(0, 4);
+};
+
+// Helper for hltb variant
+const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
+  // Filter games with hltb.main > 0 and reviewRank <= 40
+  const eligible = allGames.filter(
+    (g) => g.hltb?.main != null && g.hltb.main > 0 && g.reviewRank <= 40,
+  );
+  // Sort by hltb.main
+  const sorted = eligible.sort(
+    (a, b) => (a.hltb?.main || 0) - (b.hltb?.main || 0),
+  );
+  // Try to find 4 games with hltb.main differences > 10
+  let attempt = 0;
+  while (attempt < 10) {
+    const shuffled = shuffleArray(sorted, hash + attempt);
+    const selected: Game[] = [];
+    for (const game of shuffled) {
+      const gameHltb = game.hltb?.main || 0;
+      if (
+        selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 10)
+      ) {
+        selected.push(game);
+        if (selected.length === 4) return selected;
+      }
+    }
+    attempt++;
+  }
+  // Fallback: return first 4 shuffled
+  return shuffleArray(sorted, hash).slice(0, 4);
+};
+
+/**
+ * Deterministically select 4 games for Sunday Shuffle
+ */
+export const getSundayShuffleGames = (
+  allGames: Game[],
+  variant: 'critic' | 'releaseYear' | 'hltb',
+  dateOverride?: string,
+): Game[] => {
+  const utcDate = dateOverride || getUtcDateString();
+
+  // Check if this is a demo day with hardcoded games
+  if (SUNDAY_SHUFFLE_DEMO_DAYS[utcDate]) {
+    const demoGameTitles = SUNDAY_SHUFFLE_DEMO_DAYS[utcDate];
+    const demoGames = demoGameTitles
+      .map((title) => allGames.find((g) => g.name === title))
+      .filter((g): g is Game => g !== undefined);
+
+    if (demoGames.length >= 4) {
+      return demoGames.slice(0, 4);
+    }
+    // If demo games not found in allGames, fall through to normal logic
+  }
+
+  // Simple hash function
+  let hash = 0;
+  for (let i = 0; i < utcDate.length; i++) {
+    hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
+  }
+
+  if (variant === 'releaseYear') {
+    return getReleaseYearVariant(allGames, hash);
+  } else if (variant === 'critic') {
+    return getCriticVariant(allGames, hash);
+  } else {
+    return getHltbVariant(allGames, hash);
+  }
 };
 
 /**

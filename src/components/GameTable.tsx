@@ -1,6 +1,6 @@
 import React from 'react';
 import { Accordion, type AccordionItem } from './Accordion';
-import type { Game } from '../App';
+import type { Game } from '../types';
 import type { GameState } from '../utils';
 import { GameContent } from './GameContent';
 
