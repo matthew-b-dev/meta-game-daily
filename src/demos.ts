@@ -82,6 +82,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
 };
 
+/**
+ * Sunday Shuffle demo days - hardcoded specific games for specific dates
+ * Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
+ */
+export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
+  // Start empty
+};
+
 /* 
 
 Ideas:
