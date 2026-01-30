@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import type { Game } from '../App';
+import type { Game } from '../types';
 
 interface UseAutoRevealProps {
   guessesLeft: number;

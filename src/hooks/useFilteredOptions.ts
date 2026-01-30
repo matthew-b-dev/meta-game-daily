@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import type { Game } from '../App';
+import type { Game } from '../types';
 import type { MissedGuess } from '../utils';
 
 // Helper function to normalize strings by removing accents
