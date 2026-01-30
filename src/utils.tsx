@@ -47,6 +47,85 @@ export interface SessionState {
 
 const STORAGE_KEY = 'meta-game-daily-state';
 
+// Shuffle game state interface (without puzzleDate - stored at root level)
+export interface ShuffleGameState {
+  currentRound: number;
+  isRoundComplete: boolean;
+  currentOrder: Array<{ id: string; name: string }>;
+  frozenIds: string[];
+}
+
+// Unified storage structure for both game types
+export interface UnifiedGameState {
+  puzzleDate: string;
+  guessingGame?: Omit<SessionState, 'puzzleDate'>;
+  shuffleGame?: ShuffleGameState;
+}
+
+/**
+ * Load shuffle game state from localStorage
+ */
+export const loadShuffleGameState = (
+  currentPuzzleDate: string,
+): ShuffleGameState | null => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return null;
+
+    const unifiedState: UnifiedGameState = JSON.parse(saved);
+
+    // Only restore if it's the same puzzle date
+    if (unifiedState.puzzleDate !== currentPuzzleDate) {
+      return null;
+    }
+
+    return unifiedState.shuffleGame || null;
+  } catch (error) {
+    console.error('Failed to load shuffle game state:', error);
+    return null;
+  }
+};
+
+/**
+ * Save shuffle game state to localStorage
+ */
+export const saveShuffleGameState = (
+  puzzleDate: string,
+  state: ShuffleGameState,
+): void => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const unifiedState: UnifiedGameState = saved
+      ? JSON.parse(saved)
+      : { puzzleDate };
+
+    // Update puzzle date and shuffle game state
+    unifiedState.puzzleDate = puzzleDate;
+    unifiedState.shuffleGame = state;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save shuffle game state:', error);
+  }
+};
+
+/**
+ * Clear shuffle game state from localStorage (keeps guessing game state)
+ */
+export const clearShuffleGameState = (): void => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+
+    const unifiedState: UnifiedGameState = JSON.parse(saved);
+    delete unifiedState.shuffleGame;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to clear shuffle game state:', error);
+  }
+};
+
 /**
  * Calculate Levenshtein distance between two strings
  */
@@ -163,13 +242,37 @@ export const loadGameState = (
     if (!saved) return null;
 
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    const state: any = JSON.parse(saved);
+    const unifiedState: any = JSON.parse(saved);
 
     // Only restore if it's the same puzzle date
-    if (state.puzzleDate !== currentPuzzleDate) {
+    if (unifiedState.puzzleDate !== currentPuzzleDate) {
       localStorage.removeItem(STORAGE_KEY);
       return null;
     }
+
+    // If old format (SessionState directly), migrate it
+    if (unifiedState.score !== undefined && !unifiedState.guessingGame) {
+      // Migrate old missedGuesses format (string[]) to new format (MissedGuess[])
+      if (unifiedState.missedGuesses && unifiedState.missedGuesses.length > 0) {
+        if (typeof unifiedState.missedGuesses[0] === 'string') {
+          unifiedState.missedGuesses = unifiedState.missedGuesses.map(
+            (name: string) => ({
+              name,
+              isClose: false,
+            }),
+          );
+        }
+      }
+      return unifiedState as SessionState;
+    }
+
+    // New unified format
+    if (!unifiedState.guessingGame) return null;
+
+    const state = {
+      puzzleDate: unifiedState.puzzleDate,
+      ...unifiedState.guessingGame,
+    };
 
     // Migrate old missedGuesses format (string[]) to new format (MissedGuess[])
     if (state.missedGuesses && state.missedGuesses.length > 0) {
@@ -193,18 +296,35 @@ export const loadGameState = (
  */
 export const saveGameState = (state: SessionState): void => {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const unifiedState: UnifiedGameState = saved
+      ? JSON.parse(saved)
+      : { puzzleDate: state.puzzleDate };
+
+    // Update puzzle date and guessing game state
+    unifiedState.puzzleDate = state.puzzleDate;
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    const { puzzleDate, ...guessingGameState } = state;
+    unifiedState.guessingGame = guessingGameState;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
   } catch (error) {
     console.error('Failed to save game state:', error);
   }
 };
 
 /**
- * Clear game state from localStorage
+ * Clear game state from localStorage (keeps shuffle game state)
  */
 export const clearGameState = (): void => {
   try {
-    localStorage.removeItem(STORAGE_KEY);
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return;
+
+    const unifiedState: UnifiedGameState = JSON.parse(saved);
+    delete unifiedState.guessingGame;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
   } catch (error) {
     console.error('Failed to clear game state:', error);
   }
