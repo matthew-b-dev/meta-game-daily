@@ -25,6 +25,8 @@ import { SortableGameItem } from './components/SortableGameItem';
 import { frozenVerticalListStrategy } from './lib/frozenSortingStrategy';
 import type { Game } from './types';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
+import ShuffleFooter from './components/ShuffleFooter';
+import ShuffleCompleteModal from './components/ShuffleCompleteModal';
 
 interface GameWithId extends Game {
   id: string;
@@ -88,6 +90,14 @@ const ShuffleGame = () => {
   const [isButtonFading, setIsButtonFading] = useState(false);
   const [stateLoaded, setStateLoaded] = useState(false);
   const [hasOrderChanged, setHasOrderChanged] = useState(true); // Start as true for first submission
+
+  // Track missed guesses per round
+  const [missedGuessesByRound, setMissedGuessesByRound] = useState<number[]>(
+    savedState?.missedGuessesByRound ?? [0, 0, 0], // Initialize with 0 for each of the 3 rounds
+  );
+
+  // Track if game is complete and modal should be shown
+  const [showCompleteModal, setShowCompleteModal] = useState(false);
 
   // Get the games and sort them by the current round's variant
   const correctlySortedGames = useMemo(() => {
@@ -231,6 +241,7 @@ const ShuffleGame = () => {
           name: game.name,
         })),
         frozenIds: Array.from(frozenIds),
+        missedGuessesByRound,
       });
     }
   }, [
@@ -240,6 +251,7 @@ const ShuffleGame = () => {
     currentOrder,
     frozenIds,
     stateLoaded,
+    missedGuessesByRound,
   ]);
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -338,9 +350,19 @@ const ShuffleGame = () => {
         setIsButtonFading(false);
       }, 300);
       if (currentRound === ROUND_DETAILS.length - 1) {
-        alert('🎉 Congratulations! You completed all rounds!');
+        // Show completion modal after a brief delay
+        setTimeout(() => {
+          setShowCompleteModal(true);
+        }, 500);
       }
     } else if (incorrectIds.size > 0) {
+      // Increment missed guesses for current round
+      setMissedGuessesByRound((prev) => {
+        const updated = [...prev];
+        updated[currentRound] = (updated[currentRound] || 0) + 1;
+        return updated;
+      });
+
       // Shake incorrect items
       setShakingIds(incorrectIds);
       // Clear shake animation after it completes
@@ -370,19 +392,26 @@ const ShuffleGame = () => {
 
   return (
     <div className='mb-8 max-w-2xl mx-auto px-4'>
-      <hr className='h-[1px] bg-gray-700 border-none mb-8' />
-      <div className='mb-6'>
-        <h2 className='text-xl sm:text-2xl mb-2'>Shuffle Gauntlet</h2>
-        <p className='text-sm text-zinc-400 mb-2'>
-          Round {currentRound + 1}/{ROUND_DETAILS.length}
-        </p>
-        <div className='text-sm text-gray-200'>
-          {ROUND_DETAILS[currentRound].desc}
+      <hr className='h-[1px] bg-gray-700 border-none mb-4' />
+      <div className='mb-3'>
+        <h2 className='text-xl text-center sm:text-2xl'>Shuffle Gauntlet</h2>
+        <div className='text-gray-500 italic text-center mb-3'>
+          (Sundays & Wednesdays)
+        </div>
+        <div className='flex items-center justify-center sm:justify-start gap-2 mb-2'>
+          <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700'>
+            Round {currentRound + 1}/{ROUND_DETAILS.length}
+          </span>
+        </div>
+        <div className='flex justify-center sm:block sm:justify-start'>
+          <div className='text-md text-gray-200 min-h-[40px]'>
+            {ROUND_DETAILS[currentRound].desc}
+          </div>
         </div>
       </div>
 
       <div className='text-right mb-2'>
-        <p className='text-sm text-zinc-400 italic'>
+        <p className='text-sm text-gray-400 italic'>
           {ROUND_DETAILS[currentRound].topDesc}
         </p>
       </div>
@@ -436,35 +465,59 @@ const ShuffleGame = () => {
       </div>
 
       <div
-        className={`flex justify-center transition-opacity duration-300 ${
+        className={`flex flex-col items-center transition-opacity duration-300 ${
           isFadingOut || isButtonFading ? 'opacity-0' : 'opacity-100'
         }`}
       >
         {isRoundComplete && currentRound === ROUND_DETAILS.length - 1 ? (
-          <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
+          <div className='flex flex-col items-center gap-3'>
+            <button
+              className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
+              onClick={() => setShowCompleteModal(true)}
+            >
+              Show Results 🏆
+            </button>
+            <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
+          </div>
         ) : (
-          <button
-            onClick={isRoundComplete ? handleNextRound : handleSubmitGuess}
-            className='px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg enabled:hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-default'
-            disabled={!isRoundComplete && !hasOrderChanged}
-          >
-            {isRoundComplete ? (
-              <>
-                Next Round
-                <svg
-                  className='w-5 h-5'
-                  fill='currentColor'
-                  viewBox='0 0 20 20'
-                >
-                  <path d='M4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4A1 1 0 0010 6v2.798l-5.445-3.63z' />
-                </svg>
-              </>
-            ) : (
-              'Submit Guess'
-            )}
-          </button>
+          <>
+            <button
+              onClick={isRoundComplete ? handleNextRound : handleSubmitGuess}
+              className='px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg enabled:hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-default'
+              disabled={!isRoundComplete && !hasOrderChanged}
+            >
+              {isRoundComplete ? (
+                <>
+                  Next Round
+                  <svg
+                    className='w-5 h-5'
+                    fill='currentColor'
+                    viewBox='0 0 20 20'
+                  >
+                    <path d='M4.555 5.168A1 1 0 003 6v8a1 1 0 001.555.832L10 11.202V14a1 1 0 001.555.832l6-4a1 1 0 000-1.664l-6-4A1 1 0 0010 6v2.798l-5.445-3.63z' />
+                  </svg>
+                </>
+              ) : (
+                'Submit Guess'
+              )}
+            </button>
+            <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700 mt-2'>
+              Incorrect Guesses:{' '}
+              {missedGuessesByRound.reduce((sum, count) => sum + count, 0)}
+            </span>
+          </>
         )}
       </div>
+      <div className='pt-6'>
+        <ShuffleFooter />
+      </div>
+
+      {showCompleteModal && (
+        <ShuffleCompleteModal
+          missedGuessesByRound={missedGuessesByRound}
+          onClose={() => setShowCompleteModal(false)}
+        />
+      )}
     </div>
   );
 };

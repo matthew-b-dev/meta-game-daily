@@ -53,6 +53,7 @@ export interface ShuffleGameState {
   isRoundComplete: boolean;
   currentOrder: Array<{ id: string; name: string }>;
   frozenIds: string[];
+  missedGuessesByRound: number[]; // Track missed guesses for each round (index = round number)
 }
 
 // Unified storage structure for both game types
