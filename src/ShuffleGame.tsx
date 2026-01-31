@@ -406,9 +406,23 @@ const ShuffleGame = () => {
     <div className='mb-8 max-w-2xl mx-auto px-0 sm:px-4'>
       <hr className='h-[1px] bg-gray-700 border-none mb-4' />
       <div className='mb-3'>
-        <h2 className='text-xl text-center sm:text-2xl'>Weekend Shuffle</h2>
-        <div className='text-gray-500 italic text-center mb-3'>
-          (Saturday/Sunday Game Mode)
+        <div className='relative flex justify-center items-center'>
+          <h2
+            className='text-lg sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 pl-1 sm:pl-0 font-bold'
+            style={{
+              fontFamily: 'Playfair Display, serif',
+            }}
+          >
+            Weekend Shuffle
+          </h2>
+          <div className='ml-2'>
+            <span className='relative top-[-3px] inline-flex items-center rounded-md bg-yellow-400/10 px-[3px] py-0 text-xs font-medium text-yellow-500 border border-1 border-yellow-700'>
+              New
+            </span>
+          </div>
+        </div>
+        <div className='text-gray-500 text-xs sm:text-sm italic text-center mb-3 mt-[-1px] sm:mt-[-4px]'>
+          (Saturday/Sunday)
         </div>
         <div className='flex items-center justify-center sm:justify-start gap-2 mb-2'>
           <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700'>
@@ -495,14 +509,14 @@ const ShuffleGame = () => {
           <>
             <button
               onClick={isRoundComplete ? handleNextRound : handleSubmitGuess}
-              className='px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg enabled:hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-default disabled:outline-none disabled:border-none focus:outline-none'
+              className='w-full sm:w-auto mt-[-6px] sm:mt-0 px-6 py-3 bg-yellow-400 text-gray-800 font-semibold rounded-lg enabled:hover:bg-yellow-500 transition-colors shadow-md flex items-center justify-center disabled:opacity-50 disabled:cursor-default disabled:outline-none focus:outline-none'
               disabled={!isRoundComplete && !hasOrderChanged}
             >
               {isRoundComplete ? (
                 <>
                   Next Round
                   <svg
-                    className='w-5 h-5'
+                    className='w-5 h-5 ml-2 relative top-[1px]'
                     fill='currentColor'
                     viewBox='0 0 20 20'
                   >

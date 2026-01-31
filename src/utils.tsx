@@ -305,7 +305,7 @@ export const saveGameState = (state: SessionState): void => {
 
     // Update puzzle date and guessing game state
     unifiedState.puzzleDate = state.puzzleDate;
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
     const { puzzleDate, ...guessingGameState } = state;
     unifiedState.guessingGame = guessingGameState;
 
@@ -448,7 +448,7 @@ function shuffleArray<T>(arr: T[], seed: number): T[] {
 // Helper for releaseYear variant
 const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
   // Filter games with reviewRank < 30
-  const eligible = allGames.filter((g) => g.reviewRank < 30);
+  const eligible = allGames.filter((g) => g.reviewRank < 33);
   // Group by releaseYear
   const byYear: { [year: number]: Game[] } = {};
   for (const game of eligible) {
@@ -483,7 +483,7 @@ const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
   const sorted = eligible.sort(
     (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
   );
-  // Try to find 5 games with scores at least 7 apart
+  // Try to find 5 games with scores at least 2 apart
   let attempt = 0;
   while (attempt < 10) {
     const shuffled = shuffleArray(sorted, hash + attempt);
@@ -492,7 +492,7 @@ const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
       const gameScore = parseInt(game.score || '0', 10);
       if (
         selected.every(
-          (s) => Math.abs(parseInt(s.score || '0', 10) - gameScore) >= 7,
+          (s) => Math.abs(parseInt(s.score || '0', 10) - gameScore) >= 2,
         )
       ) {
         selected.push(game);
@@ -515,18 +515,19 @@ const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
   const sorted = eligible.sort(
     (a, b) => (a.hltb?.main || 0) - (b.hltb?.main || 0),
   );
-  // Try to find 5 games with hltb.main differences > 10
+  // Try to find 5 games with hltb.main differences > 3
   let attempt = 0;
   while (attempt < 10) {
     const shuffled = shuffleArray(sorted, hash + attempt);
     const selected: Game[] = [];
     for (const game of shuffled) {
       const gameHltb = game.hltb?.main || 0;
-      if (
-        selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 10)
-      ) {
+      if (selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 3)) {
         selected.push(game);
-        if (selected.length === 5) return selected;
+        if (selected.length === 5) {
+          console.log(selected);
+          return selected;
+        }
       }
     }
     attempt++;
@@ -682,13 +683,13 @@ export const generateShuffleShareText = (
     .map((totalGuesses, index) => {
       const incorrectGuesses = totalGuesses - 1; // All guesses except the final correct one
       const yellowSquares = '🟨'.repeat(incorrectGuesses);
-      const greenSquare = '🟩';
+      const greenSquare = '✅';
 
       let line = `${roundEmojis[index]} ${yellowSquares}${greenSquare}`;
 
       // Add "✨ Perfect" for any round with only 1 guess
       if (totalGuesses === 1) {
-        line += ' ✨ Perfect';
+        line += ' ✨';
       }
 
       return line;
