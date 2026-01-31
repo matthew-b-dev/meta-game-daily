@@ -230,7 +230,7 @@ const ShuffleGame = () => {
   const sensors = useSensors(
     useSensor(TouchSensor, {
       activationConstraint: {
-        delay: 50,
+        delay: 150,
         tolerance: 32,
       },
     }),
