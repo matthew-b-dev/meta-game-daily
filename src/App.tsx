@@ -12,7 +12,17 @@ const App = () => {
   const [showHelp, setShowHelp] = useState(false);
 
   const dateString = getUtcDateString();
-  const isShuffleGame = new Date(dateString + 'T00:00:00Z').getUTCDay() === 0;
+  const date = new Date(dateString + 'T00:00:00Z');
+  const isShuffleGame = date.getUTCDay() === 0;
+
+  console.log(
+    'Date string:',
+    dateString,
+    'isShuffleGame:',
+    isShuffleGame,
+    'UTC Day:',
+    date.getUTCDay(),
+  );
 
   return (
     <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg'>
