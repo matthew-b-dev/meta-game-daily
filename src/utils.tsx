@@ -461,10 +461,10 @@ const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
     .sort((a, b) => a - b);
   // Shuffle years deterministically
   const shuffledYears = shuffleArray(years, hash);
-  // Pick up to 4 years, and from each, pick one game deterministically
+  // Pick up to 5 years, and from each, pick one game deterministically
   const result: Game[] = [];
   let seed = hash;
-  for (const year of shuffledYears.slice(0, 4)) {
+  for (const year of shuffledYears.slice(0, 5)) {
     const games = byYear[year];
     if (games.length > 0) {
       const shuffledGames = shuffleArray(games, seed);
@@ -483,7 +483,7 @@ const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
   const sorted = eligible.sort(
     (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
   );
-  // Try to find 4 games with scores at least 7 apart
+  // Try to find 5 games with scores at least 7 apart
   let attempt = 0;
   while (attempt < 10) {
     const shuffled = shuffleArray(sorted, hash + attempt);
@@ -496,13 +496,13 @@ const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
         )
       ) {
         selected.push(game);
-        if (selected.length === 4) return selected;
+        if (selected.length === 5) return selected;
       }
     }
     attempt++;
   }
-  // Fallback: return first 4 shuffled
-  return shuffleArray(sorted, hash).slice(0, 4);
+  // Fallback: return first 5 shuffled
+  return shuffleArray(sorted, hash).slice(0, 5);
 };
 
 // Helper for hltb variant
@@ -515,7 +515,7 @@ const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
   const sorted = eligible.sort(
     (a, b) => (a.hltb?.main || 0) - (b.hltb?.main || 0),
   );
-  // Try to find 4 games with hltb.main differences > 10
+  // Try to find 5 games with hltb.main differences > 10
   let attempt = 0;
   while (attempt < 10) {
     const shuffled = shuffleArray(sorted, hash + attempt);
@@ -526,17 +526,17 @@ const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
         selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 10)
       ) {
         selected.push(game);
-        if (selected.length === 4) return selected;
+        if (selected.length === 5) return selected;
       }
     }
     attempt++;
   }
-  // Fallback: return first 4 shuffled
-  return shuffleArray(sorted, hash).slice(0, 4);
+  // Fallback: return first 5 shuffled
+  return shuffleArray(sorted, hash).slice(0, 5);
 };
 
 /**
- * Deterministically select 4 games for Sunday Shuffle
+ * Deterministically select 5 games for Sunday Shuffle
  */
 export const getSundayShuffleGames = (
   allGames: Game[],
@@ -552,8 +552,8 @@ export const getSundayShuffleGames = (
       .map((title) => allGames.find((g) => g.name === title))
       .filter((g): g is Game => g !== undefined);
 
-    if (demoGames.length >= 4) {
-      return demoGames.slice(0, 4);
+    if (demoGames.length >= 5) {
+      return demoGames.slice(0, 5);
     }
     // If demo games not found in allGames, fall through to normal logic
   }
