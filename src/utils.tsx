@@ -339,6 +339,16 @@ export const getUtcDateString = (): string => {
   if (DATE_OVERRIDE) {
     return DATE_OVERRIDE;
   }
+
+  // Check if user is on a /test/YYYY-MM-DD route
+  const testRouteMatch = window.location.pathname.match(
+    /\/test\/(\d{4}-\d{2}-\d{2})/,
+  );
+
+  if (testRouteMatch) {
+    return testRouteMatch[1];
+  }
+
   const now = new Date();
   const year = now.getUTCFullYear();
   const month = String(now.getUTCMonth() + 1).padStart(2, '0');
@@ -437,8 +447,8 @@ function shuffleArray<T>(arr: T[], seed: number): T[] {
 
 // Helper for releaseYear variant
 const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with reviewRank < 15
-  const eligible = allGames.filter((g) => g.reviewRank < 15);
+  // Filter games with reviewRank < 30
+  const eligible = allGames.filter((g) => g.reviewRank < 30);
   // Group by releaseYear
   const byYear: { [year: number]: Game[] } = {};
   for (const game of eligible) {
@@ -467,8 +477,8 @@ const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
 
 // Helper for critic variant
 const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with score
-  const eligible = allGames.filter((g) => g.score != null);
+  // Filter games with score and reviewRank < 30
+  const eligible = allGames.filter((g) => g.score != null && g.reviewRank < 30);
   // Sort by score
   const sorted = eligible.sort(
     (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
@@ -497,9 +507,9 @@ const getCriticVariant = (allGames: Game[], hash: number): Game[] => {
 
 // Helper for hltb variant
 const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with hltb.main > 0 and reviewRank <= 40
+  // Filter games with hltb.main > 0 and reviewRank < 30
   const eligible = allGames.filter(
-    (g) => g.hltb?.main != null && g.hltb.main > 0 && g.reviewRank <= 40,
+    (g) => g.hltb?.main != null && g.hltb.main > 0 && g.reviewRank < 30,
   );
   // Sort by hltb.main
   const sorted = eligible.sort(

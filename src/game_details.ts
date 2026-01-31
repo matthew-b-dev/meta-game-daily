@@ -222,11 +222,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yq7owbqrj09mgfqg3ac3.jpg',
-    hltb: {
-      main: 6,
-      extra: 9,
-      completionist: 17.5,
-    },
   },
   {
     score: '60',
@@ -359,24 +354,6 @@ export const gameDetails: Game[] = [
       main: 6.5,
       extra: 7.5,
       completionist: 12,
-    },
-  },
-  {
-    score: '80',
-    name: 'Stick it to the Man!',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
-    genres: 'Platformer',
-    releaseDate: 'Dec 13',
-    releaseYear: 2013,
-    reviewRank: 28,
-    developers: ['Zoink'],
-    publishers: ['Ripstone', 'Zoink'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s8u3gg0rxyaswnpxmxmm.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 5,
-      completionist: 5.5,
     },
   },
   {
@@ -560,42 +537,6 @@ export const gameDetails: Game[] = [
       main: 3,
       extra: 3.5,
       completionist: 4,
-    },
-  },
-  {
-    score: '51',
-    name: 'LocoCycle',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Adventure, Racing',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 42,
-    developers: ['Twisted Pixel'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xfpvjgqrddbynrejm0vl.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 5.5,
-      completionist: 6,
-    },
-  },
-  {
-    score: '57',
-    name: 'Slender: The Arrival',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Horror',
-    releaseDate: 'Mar 26',
-    releaseYear: 2013,
-    reviewRank: 43,
-    developers: ['Blue Isle Studios', 'Parsec Productions'],
-    publishers: ['Midnight City', 'Blue Isle Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lmqgkjp6pzalfh6nofre.jpg',
-    hltb: {
-      main: 2,
-      extra: 3,
-      completionist: 7.5,
     },
   },
   {
@@ -1363,11 +1304,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/juj7w8dsnbwdpyq0ntm4.jpg',
-    hltb: {
-      main: 12,
-      extra: 73,
-      completionist: 554,
-    },
   },
   {
     score: '81',
@@ -1562,11 +1498,6 @@ export const gameDetails: Game[] = [
     franchise: 'Tetris',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oirfctekwgmimkje2hn8.jpg',
-    hltb: {
-      main: 8,
-      extra: 15.5,
-      completionist: 37.5,
-    },
   },
   {
     score: '69',
@@ -1599,11 +1530,6 @@ export const gameDetails: Game[] = [
     franchise: 'Mario Bros.',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zbxjppkunzzuvrikzmdj.jpg',
-    hltb: {
-      main: 6,
-      extra: 19.5,
-      completionist: 45.5,
-    },
   },
   {
     score: '70',
@@ -1635,11 +1561,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qjnwbw7duxqvdm765cic.jpg',
-    hltb: {
-      main: 5,
-      extra: 54,
-      completionist: 152,
-    },
   },
   {
     score: '80',
@@ -6449,11 +6370,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctl7k.jpg',
-    hltb: {
-      main: 14,
-      extra: 28.5,
-      completionist: 59,
-    },
   },
   {
     score: '71',
@@ -7478,11 +7394,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vzt.jpg',
-    hltb: {
-      main: 0.5,
-      extra: null,
-      completionist: null,
-    },
   },
   {
     score: '78',

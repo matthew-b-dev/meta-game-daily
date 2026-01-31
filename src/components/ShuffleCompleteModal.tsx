@@ -32,6 +32,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
 
   useEffect(() => {
     const sendAndFetchScores = async () => {
+      setScoresLoading(true);
       try {
         // Only send the score if it hasn't been sent yet
         if (!scoreSent) {
@@ -44,7 +45,11 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
         }
 
         // Fetch the averages (always do this to get latest data)
-        const avgs = await fetchShuffleAverages();
+        const avgs = await fetchShuffleAverages({
+          round1: missedGuessesByRound[0],
+          round2: missedGuessesByRound[1],
+          round3: missedGuessesByRound[2],
+        });
         setAverages(avgs);
       } catch (error) {
         console.error('Error sending/fetching shuffle scores:', error);
@@ -231,7 +236,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
         transition={{ duration: 0.2 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className='bg-zinc-800 rounded-lg px-4 pb-4 pt-1 mb-6'>
+        <div className='bg-zinc-800 rounded-lg px-4 pb-4 pt-1 mb-6 min-h-[265px]'>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -244,6 +249,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
               height={220}
             />
           </motion.div>
+
           <div className='text-center mt-[-15px]'>
             <span className='text-sm text-gray-400'>
               Your Guess Total:{' '}
@@ -264,6 +270,15 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
               </span>
             </span>
           </div>
+          {/* If only one score, show a message below the chart */}
+          {averages &&
+            averages.round1Avg === missedGuessesByRound[0] &&
+            averages.round2Avg === missedGuessesByRound[1] &&
+            averages.round3Avg === missedGuessesByRound[2] && (
+              <div className='text-center text-gray-400 text-sm my-2'>
+                Oh, it's just you (so far). 😊
+              </div>
+            )}
         </div>
 
         <div className='space-y-3'>
