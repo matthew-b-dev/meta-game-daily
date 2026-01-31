@@ -73,7 +73,7 @@ export const SortableGameItem = ({
       ref={setNodeRef}
       style={style}
       className={`
-        relative mb-2 rounded-lg border-2 min-h-[52px]
+        relative mb-2 rounded-lg border-2 min-h-[52px] select-none
         ${getHiddenInfo() ? 'py-[6px] px-4' : 'p-3'}
         ${
           isFrozen

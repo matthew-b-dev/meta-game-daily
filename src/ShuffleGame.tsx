@@ -230,8 +230,8 @@ const ShuffleGame = () => {
   const sensors = useSensors(
     useSensor(TouchSensor, {
       activationConstraint: {
-        delay: 100,
-        tolerance: 8,
+        delay: 50,
+        tolerance: 4,
       },
     }),
     useSensor(PointerSensor),
@@ -420,6 +420,13 @@ const ShuffleGame = () => {
             {ROUND_DETAILS[currentRound].desc}
           </div>
         </div>
+      </div>
+
+      {/* Mobile instructions alert */}
+      <div className='md:hidden mb-3 p-2 bg-amber-900/30 border border-amber-700 rounded-lg text-center'>
+        <p className='text-sm text-amber-200'>
+          📱 <b>Mobile Users</b>: Tap and Hold first, then drag.
+        </p>
       </div>
 
       <div className='text-right mb-2'>
