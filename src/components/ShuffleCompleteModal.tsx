@@ -4,6 +4,7 @@ import { sendShuffleScore, fetchShuffleAverages } from '../lib/supabaseClient';
 import Chart from 'react-apexcharts';
 import type { ApexOptions } from 'apexcharts';
 import ShareButton from './ShareButton';
+import FeedbackButtons from './FeedbackButtons';
 import toast from 'react-hot-toast';
 import { generateShuffleShareText } from '../utils';
 
@@ -13,6 +14,7 @@ interface ShuffleCompleteModalProps {
   onScoreSent: () => void;
   onClose: () => void;
   puzzleDate: string;
+  isOpen: boolean;
 }
 
 const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
@@ -21,6 +23,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
   onScoreSent,
   onClose,
   puzzleDate,
+  isOpen,
 }) => {
   const [scoresLoading, setScoresLoading] = useState(!scoreSent); // Only load if score hasn't been sent
   const [averages, setAverages] = useState<{
@@ -295,6 +298,11 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
               toast.success('Copied to clipboard!');
             }}
             isLoading={scoresLoading}
+          />
+          <FeedbackButtons
+            puzzleDate={puzzleDate}
+            userPercentile={null}
+            isOpen={isOpen}
           />
           <button
             onClick={onClose}
