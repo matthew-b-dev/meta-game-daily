@@ -231,7 +231,7 @@ const ShuffleGame = () => {
     useSensor(TouchSensor, {
       activationConstraint: {
         delay: 50,
-        tolerance: 4,
+        tolerance: 32,
       },
     }),
     useSensor(PointerSensor),
