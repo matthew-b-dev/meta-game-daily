@@ -85,7 +85,11 @@ export const sendShuffleScore = async (
   }
 };
 
-export const fetchShuffleAverages = async (): Promise<{
+export const fetchShuffleAverages = async (playerScores?: {
+  round1: number;
+  round2: number;
+  round3: number;
+}): Promise<{
   round1Avg: number;
   round2Avg: number;
   round3Avg: number;
@@ -107,15 +111,31 @@ export const fetchShuffleAverages = async (): Promise<{
     return { round1Avg: 0, round2Avg: 0, round3Avg: 0 };
   }
 
+  // If there's more than 1 score and player scores are provided, exclude the player's score
+  let dataToAverage = data;
+  if (data.length > 1 && playerScores) {
+    dataToAverage = data.filter(
+      (row) =>
+        row.round_1_guesses !== playerScores.round1 ||
+        row.round_2_guesses !== playerScores.round2 ||
+        row.round_3_guesses !== playerScores.round3,
+    );
+  }
+
+  // If after filtering we have no data, fall back to all data
+  if (dataToAverage.length === 0) {
+    dataToAverage = data;
+  }
+
   const round1Avg =
-    data.reduce((sum, row) => sum + (row.round_1_guesses || 0), 0) /
-    data.length;
+    dataToAverage.reduce((sum, row) => sum + (row.round_1_guesses || 0), 0) /
+    dataToAverage.length;
   const round2Avg =
-    data.reduce((sum, row) => sum + (row.round_2_guesses || 0), 0) /
-    data.length;
+    dataToAverage.reduce((sum, row) => sum + (row.round_2_guesses || 0), 0) /
+    dataToAverage.length;
   const round3Avg =
-    data.reduce((sum, row) => sum + (row.round_3_guesses || 0), 0) /
-    data.length;
+    dataToAverage.reduce((sum, row) => sum + (row.round_3_guesses || 0), 0) /
+    dataToAverage.length;
 
   return {
     round1Avg: Math.round(round1Avg * 10) / 10, // Round to 1 decimal place

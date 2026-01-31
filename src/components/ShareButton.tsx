@@ -39,7 +39,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
         disabled={isLoading}
       >
         <DocumentDuplicateIcon className='w-5 h-5' />
-        {isLoading ? 'Loading scores...' : 'Copy to Clipboard'}
+        {isLoading ? 'Loading scores...' : 'Copy for Sharing'}
       </button>
     );
   }

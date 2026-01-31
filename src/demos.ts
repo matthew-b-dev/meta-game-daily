@@ -80,6 +80,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Rocket League',
     "Tom Clancy's Ghost Recon: Wildlands",
   ],
+  '2026-01-31': [
+    'Deathloop',
+    'Final Fantasy XV',
+    'The Legend of Zelda: Tears of the Kingdom',
+    'Call of Duty: Black Ops 6',
+    'Tekken 7',
+  ],
 };
 
 /**
