@@ -6,7 +6,6 @@ import {
   PointerSensor,
   useSensor,
   useSensors,
-  TouchSensor,
 } from '@dnd-kit/core';
 import type { DragEndEvent } from '@dnd-kit/core';
 import {
