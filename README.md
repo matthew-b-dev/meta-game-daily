@@ -45,11 +45,12 @@ Jan 23, 2026
   - Screenshot: -50 points
 - Giving up (revealing game name): lose all (200) points for that particular game
 
-### Bonus Points 
+### Bonus Points
+
 - If every game is eventually guessed, +20 points will be awarded for **every** unused guess
 - Achieving the maximum total score of 1100 is called a **Perfection**.
   - 1000 base score for not revealing any information
-  - +100 bonus points: 5 guesses remaining * 20 points
+  - +100 bonus points: 5 guesses remaining \* 20 points
 
 ### Close Guesses
 
@@ -58,16 +59,62 @@ If you make a guess that's very similar to a correct answer, you'll see a specia
 - 🤏 The guess was close and likely within the same franchise
 - ❌ Totally incorrect
 
+## Weekend Shuffle
+
+The **Weekend Shuffle** is a special game mode available on **Saturdays and Sundays**.
+
+### How to Play
+
+- It's a sorting challenge with **3 rounds**
+- Each round gives you **5 games** to sort by a different criterion
+- **Drag and drop** the games to reorder them, then submit your guess
+- Games in the correct position will **lock in place** (shown in green)
+- Your goal is to **sort all three lists in as few guesses as possible**
+- Your **total guess count** is tracked across all 3 rounds
+- Try to score better than the global average!
+
+### Round Details
+
+- **Round 1**: Sort by HowLongToBeat "Main Story" time (shortest to longest)
+- **Round 2**: Sort by OpenCritic score (lowest to highest)
+- **Round 3**: Sort by release year (oldest to newest)
+
+### Screenshots
+
+img
+
+---
+
+img
+
+---
+
+Share text:
+
+```
+https://metagamedaily.com/
+2026-01-04
+#WeekendShuffle
+1️⃣ 🟨🟨🟩
+2️⃣ 🟨🟩
+3️⃣ 🟨🟨🟨🟩
+```
+
+---
+
 ## Technologies
 
 - **React**
 - **Vite**
 - [framer-motion](https://motion.dev/) - animations
 - [react-hot-toast](https://react-hot-toast.com/) - notifications
+- [dnd-kit](https://dndkit.com/) - sortable items in WeekendShuffle game mode
+- [react-apexcharts](https://apexcharts.com/docs/react-charts/) - line chart in global stats view
 
 ## Credits
 
-- Gameplay inspired by [boxofficega.me](https://boxofficega.me)
+- GuessingGame gameplay inspired by [boxofficega.me](https://boxofficega.me)
+- WeekendShuffle gameplay inspired by [playdisorderly.com](https://playdisorderly.com/)
 - Details and screenshots sourced from [IGDB](https://www.igdb.com/)
 - Critic scores sourced from [OpenCritic](https://opencritic.com/)
 

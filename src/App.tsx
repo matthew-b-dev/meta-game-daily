@@ -68,22 +68,24 @@ const App = () => {
                 <p className='text-gray-400 text-sm mt-1'>{subtitle.content}</p>
               )}
             </div>
-            {!isShuffleGame && (
-              <button
-                className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
-                onClick={() => setShowHelp(true)}
-              >
-                <QuestionMarkCircleIcon className='w-8 h-8' />
-                <span className='text-sm font-semibold hidden sm:inline'>
-                  How to play
-                </span>
-              </button>
-            )}
+            <button
+              className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
+              onClick={() => setShowHelp(true)}
+            >
+              <QuestionMarkCircleIcon className='w-8 h-8' />
+              <span className='text-sm font-semibold hidden sm:inline'>
+                How to play
+              </span>
+            </button>
           </div>
           {isShuffleGame ? <ShuffleGame /> : <GuessingGame />}
         </div>
       </div>
-      <HelpModal isOpen={showHelp} onClose={() => setShowHelp(false)} />
+      <HelpModal
+        isOpen={showHelp}
+        onClose={() => setShowHelp(false)}
+        gameMode={isShuffleGame ? 'shuffle' : 'guessing'}
+      />
     </div>
   );
 };

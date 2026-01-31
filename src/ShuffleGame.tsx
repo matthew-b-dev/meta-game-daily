@@ -422,13 +422,6 @@ const ShuffleGame = () => {
         </div>
       </div>
 
-      {/* Mobile instructions alert */}
-      <div className='md:hidden mb-3 p-2 bg-amber-900/30 border border-amber-700 rounded-lg text-center'>
-        <p className='text-sm text-amber-200'>
-          📱 <b>Mobile Users</b>: Tap and Hold first, then drag.
-        </p>
-      </div>
-
       <div className='text-right mb-2'>
         <p className='text-sm text-gray-400 italic'>
           {ROUND_DETAILS[currentRound].topDesc}
@@ -502,7 +495,7 @@ const ShuffleGame = () => {
           <>
             <button
               onClick={isRoundComplete ? handleNextRound : handleSubmitGuess}
-              className='px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg enabled:hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-default'
+              className='px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg enabled:hover:bg-blue-700 transition-colors shadow-md flex items-center gap-2 disabled:opacity-50 disabled:cursor-default disabled:outline-none disabled:border-none focus:outline-none'
               disabled={!isRoundComplete && !hasOrderChanged}
             >
               {isRoundComplete ? (
