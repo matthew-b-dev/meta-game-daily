@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { sendShuffleScore, fetchShuffleAverages } from '../lib/supabaseClient';
+import Chart from 'react-apexcharts';
+import type { ApexOptions } from 'apexcharts';
+import ShareButton from './ShareButton';
+import toast from 'react-hot-toast';
+import { generateShuffleShareText } from '../utils';
 
 interface ShuffleCompleteModalProps {
   missedGuessesByRound: number[];
   scoreSent: boolean;
   onScoreSent: () => void;
   onClose: () => void;
+  puzzleDate: string;
 }
 
 const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
@@ -14,6 +20,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
   scoreSent,
   onScoreSent,
   onClose,
+  puzzleDate,
 }) => {
   const [scoresLoading, setScoresLoading] = useState(!scoreSent); // Only load if score hasn't been sent
   const [averages, setAverages] = useState<{
@@ -21,6 +28,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     round2Avg: number;
     round3Avg: number;
   } | null>(null);
+  const [showShareConfirm, setShowShareConfirm] = useState(false);
 
   useEffect(() => {
     const sendAndFetchScores = async () => {
@@ -69,54 +77,147 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
       </div>
     );
   }
-  // SVG dimensions and padding
-  const width = 500;
-  const height = 250;
-  const padding = { top: 40, right: 40, bottom: 60, left: 60 };
-  const graphWidth = width - padding.left - padding.right;
-  const graphHeight = height - padding.top - padding.bottom;
 
-  // Calculate max value for y-axis scaling (consider both user and average)
+  // Prepare chart data
+  const chartSeries = [
+    {
+      name: 'You',
+      data: missedGuessesByRound,
+    },
+    ...(averages
+      ? [
+          {
+            name: 'Global Average',
+            data: [averages.round1Avg, averages.round2Avg, averages.round3Avg],
+          },
+        ]
+      : []),
+  ];
+
+  // Calculate max value for Y-axis
   const avgGuesses = averages
     ? [averages.round1Avg, averages.round2Avg, averages.round3Avg]
     : [];
   const allGuesses = [...missedGuessesByRound, ...avgGuesses];
-  const maxGuesses = Math.max(...allGuesses, 1);
-  const yMax = Math.ceil(maxGuesses * 1.2); // Add 20% headroom
+  const maxValue = Math.max(...allGuesses, 0.5);
+  const yAxisMax = Number.isInteger(maxValue) ? maxValue : maxValue + 0.5; // Add 0.5 only if not a whole number
+  const minValue = Math.min(...allGuesses, 1);
+  const yAxisMin = Math.max(minValue - 0.5, 1); // Lowest value - 0.5, but absolute min is 1
 
-  // Generate points for the user's line
-  const userPoints = missedGuessesByRound.map((guesses, index) => {
-    const x =
-      padding.left + (index / (missedGuessesByRound.length - 1)) * graphWidth;
-    const y = padding.top + graphHeight - (guesses / yMax) * graphHeight;
-    return { x, y, guesses, round: index + 1 };
-  });
+  const chartOptions: ApexOptions = {
+    chart: {
+      type: 'line',
+      toolbar: {
+        show: false,
+      },
+      background: 'transparent',
+      animations: {
+        enabled: false,
+      },
+    },
+    title: {
+      text: 'Guesses per Round',
+      align: 'center',
+      margin: -20,
+      offsetY: 15,
+      style: {
+        fontSize: '16px',
+        fontWeight: 'normal',
+        fontFamily: 'inherit',
+        color: '#fff',
+      },
+    },
 
-  // Generate points for the average line
-  const avgPoints = averages
-    ? [averages.round1Avg, averages.round2Avg, averages.round3Avg].map(
-        (guesses, index) => {
-          const x = padding.left + (index / 2) * graphWidth;
-          const y = padding.top + graphHeight - (guesses / yMax) * graphHeight;
-          return { x, y, guesses, round: index + 1 };
+    theme: {
+      mode: 'dark',
+    },
+    stroke: {
+      curve: 'straight',
+      width: 3,
+      dashArray: [0, 5], // Solid for first series, dashed for second
+    },
+    colors: ['#22c55e', '#f59e0b'], // Green for user, amber for average
+    markers: {
+      size: 6,
+      strokeWidth: 2,
+      strokeColors: ['#16a34a', '#d97706'],
+      colors: ['#22c55e', '#f59e0b'],
+    },
+    grid: {
+      borderColor: '#374151',
+      strokeDashArray: 3,
+      xaxis: {
+        lines: {
+          show: false,
         },
-      )
-    : [];
-
-  // Create path string for the user's line
-  const userLinePath = userPoints
-    .map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x},${point.y}`)
-    .join(' ');
-
-  // Create path string for the average line
-  const avgLinePath = avgPoints
-    .map((point, index) => `${index === 0 ? 'M' : 'L'} ${point.x},${point.y}`)
-    .join(' ');
-
-  // Generate y-axis ticks
-  const yTicks = Array.from({ length: Math.min(yMax + 1, 6) }, (_, i) =>
-    Math.round((i / Math.min(yMax, 5)) * yMax),
-  );
+      },
+      yaxis: {
+        lines: {
+          show: true,
+        },
+      },
+    },
+    xaxis: {
+      categories: ['Round 1', 'Round 2', 'Round 3'],
+      labels: {
+        style: {
+          colors: '#9ca3af',
+          fontSize: '12px',
+          fontWeight: 600,
+        },
+      },
+      axisBorder: {
+        show: true,
+        color: '#6b7280',
+      },
+      axisTicks: {
+        show: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+    },
+    yaxis: {
+      min: yAxisMin,
+      max: yAxisMax,
+      labels: {
+        style: {
+          colors: '#9ca3af',
+          fontSize: '12px',
+        },
+      },
+      axisBorder: {
+        show: true,
+        color: '#6b7280',
+      },
+    },
+    legend: {
+      show: true,
+      position: 'bottom',
+      labels: {
+        colors: '#d1d5db',
+      },
+      itemMargin: {
+        horizontal: 16,
+      },
+      markers: {
+        offsetX: -4,
+      },
+    },
+    tooltip: {
+      enabled: true,
+      theme: 'dark',
+      x: {
+        show: true,
+      },
+      y: {
+        formatter: (value: number) => value.toFixed(1),
+      },
+    },
+    dataLabels: {
+      enabled: false,
+    },
+  };
 
   return (
     <div
@@ -130,210 +231,63 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
         transition={{ duration: 0.2 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className='bg-gray-800 rounded-lg p-4 mb-6'>
-          <div className='text-center'>
-            <p className='text-sm text-gray-400'>
+        <div className='bg-zinc-800 rounded-lg px-4 pb-4 pt-1 mb-6'>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
+            <Chart
+              options={chartOptions}
+              series={chartSeries}
+              type='line'
+              height={220}
+            />
+          </motion.div>
+          <div className='text-center mt-[-15px]'>
+            <span className='text-sm text-gray-400'>
               Your Guess Total:{' '}
               <span className='text-white font-semibold'>
                 {missedGuessesByRound.reduce((sum, count) => sum + count, 0)}
               </span>
-            </p>
-            <p className='text-sm text-gray-400'>
+            </span>
+            <span className='text-sm text-gray-400 pl-4'>
               Today's Global Average:{' '}
               <span className='text-white font-semibold'>
-                {/* show average here */}
-                ##
+                {averages
+                  ? (
+                      averages.round1Avg +
+                      averages.round2Avg +
+                      averages.round3Avg
+                    ).toFixed(1)
+                  : '--'}
               </span>
-            </p>
-          </div>
-          <h3 className='text-sm font-semibold text-gray-300 text-center'>
-            Guesses Per Round
-          </h3>
-          <svg
-            width='100%'
-            viewBox={`0 0 ${width} ${height}`}
-            className='mx-auto'
-            style={{ maxWidth: '500px' }}
-          >
-            {/* Y-axis */}
-            <line
-              x1={padding.left}
-              y1={padding.top}
-              x2={padding.left}
-              y2={height - padding.bottom}
-              stroke='#6b7280'
-              strokeWidth='2'
-            />
-            {/* X-axis */}
-            <line
-              x1={padding.left}
-              y1={height - padding.bottom}
-              x2={width - padding.right}
-              y2={height - padding.bottom}
-              stroke='#6b7280'
-              strokeWidth='2'
-            />
-
-            {/* Y-axis labels */}
-            {yTicks.map((tick) => {
-              const y = padding.top + graphHeight - (tick / yMax) * graphHeight;
-              return (
-                <g key={tick}>
-                  <line
-                    x1={padding.left - 5}
-                    y1={y}
-                    x2={padding.left}
-                    y2={y}
-                    stroke='#6b7280'
-                    strokeWidth='1'
-                  />
-                  <text
-                    x={padding.left - 10}
-                    y={y}
-                    textAnchor='end'
-                    dominantBaseline='middle'
-                    fill='#9ca3af'
-                    fontSize='12'
-                  >
-                    {tick}
-                  </text>
-                </g>
-              );
-            })}
-
-            {/* X-axis labels */}
-            {userPoints.map((point) => (
-              <text
-                key={point.round}
-                x={point.x}
-                y={height - padding.bottom + 20}
-                textAnchor='middle'
-                fill='#9ca3af'
-                fontSize='12'
-                fontWeight='600'
-              >
-                Round {point.round}
-              </text>
-            ))}
-
-            {/* Grid lines */}
-            {yTicks.map((tick) => {
-              const y = padding.top + graphHeight - (tick / yMax) * graphHeight;
-              return (
-                <line
-                  key={`grid-${tick}`}
-                  x1={padding.left}
-                  y1={y}
-                  x2={width - padding.right}
-                  y2={y}
-                  stroke='#374151'
-                  strokeWidth='1'
-                  strokeDasharray='3,3'
-                  opacity='0.3'
-                />
-              );
-            })}
-
-            {/* Average line (orange/amber) */}
-            {averages && (
-              <path
-                d={avgLinePath}
-                fill='none'
-                stroke='#f59e0b'
-                strokeWidth='3'
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeDasharray='5,5'
-              />
-            )}
-
-            {/* User's line (blue) */}
-            <path
-              d={userLinePath}
-              fill='none'
-              stroke='#3b82f6'
-              strokeWidth='3'
-              strokeLinecap='round'
-              strokeLinejoin='round'
-            />
-
-            {/* Average data points */}
-            {averages &&
-              avgPoints.map((point) => (
-                <g key={`avg-${point.round}`}>
-                  <circle
-                    cx={point.x}
-                    cy={point.y}
-                    r='5'
-                    fill='#f59e0b'
-                    stroke='#d97706'
-                    strokeWidth='2'
-                  />
-                  <text
-                    x={point.x}
-                    y={point.y + 20}
-                    textAnchor='middle'
-                    fill='#fbbf24'
-                    fontSize='12'
-                    fontWeight='bold'
-                  >
-                    {point.guesses.toFixed(1)}
-                  </text>
-                </g>
-              ))}
-
-            {/* User's data points */}
-            {userPoints.map((point) => (
-              <g key={point.round}>
-                <circle
-                  cx={point.x}
-                  cy={point.y}
-                  r='6'
-                  fill='#3b82f6'
-                  stroke='#1e40af'
-                  strokeWidth='2'
-                />
-                <text
-                  x={point.x}
-                  y={point.y - 15}
-                  textAnchor='middle'
-                  fill='#60a5fa'
-                  fontSize='14'
-                  fontWeight='bold'
-                >
-                  {point.guesses}
-                </text>
-              </g>
-            ))}
-          </svg>
-
-          {/* Legend */}
-          <div className='mt-4 flex justify-center gap-6 text-xs'>
-            <div className='flex items-center gap-2'>
-              <div className='w-4 h-0.5 bg-blue-500'></div>
-              <span className='text-gray-300'>Your Score</span>
-            </div>
-            {averages && (
-              <div className='flex items-center gap-2'>
-                <div
-                  className='w-4 h-0.5 bg-amber-500'
-                  style={{
-                    backgroundImage:
-                      'repeating-linear-gradient(to right, #f59e0b 0, #f59e0b 5px, transparent 5px, transparent 10px)',
-                  }}
-                ></div>
-                <span className='text-gray-300'>Global Average</span>
-              </div>
-            )}
+            </span>
           </div>
         </div>
 
-        <button
-          onClick={onClose}
-          className='w-full px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors'
-        >
-          Close
-        </button>
+        <div className='space-y-3'>
+          <ShareButton
+            userPercentile={null}
+            showConfirm={showShareConfirm}
+            setShowConfirm={setShowShareConfirm}
+            onCopyToShare={() => {
+              const shareText = generateShuffleShareText(
+                missedGuessesByRound,
+                puzzleDate,
+              );
+              navigator.clipboard.writeText(shareText);
+              toast.success('Copied to clipboard!');
+            }}
+            isLoading={scoresLoading}
+          />
+          <button
+            onClick={onClose}
+            className='w-full px-4 py-2 rounded bg-blue-700 hover:bg-blue-600 text-white text-sm font-semibold'
+          >
+            Close
+          </button>
+        </div>
       </motion.div>
     </div>
   );
