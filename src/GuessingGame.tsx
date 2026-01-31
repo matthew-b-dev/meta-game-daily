@@ -1,6 +1,5 @@
 import { useState, useCallback, useEffect, useMemo } from 'react';
 import toast, { Toaster } from 'react-hot-toast';
-import { CalendarIcon } from '@heroicons/react/24/solid';
 import './App.css';
 import { gameDetails } from './game_details';
 import { dummyGames } from './dummy_games';
@@ -17,6 +16,7 @@ import GameCompleteModal from './components/GameCompleteModal';
 import GiveUpModal from './components/GiveUpModal';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
+import PuzzleDateTime from './components/PuzzleDateTime';
 import {
   getDailyGames,
   getPuzzleDate,
@@ -369,14 +369,11 @@ const GuessingGame = () => {
                   </div>
 
                   <div className='hidden md:block md:flex-1' />
-                  <div className='flex-1 flex flex-col items-center'>
-                    <div className='text-gray-200 text-sm flex items-center gap-2'>
-                      <CalendarIcon className='w-4 h-4' />
-                      {puzzleDate}
-                    </div>
-                    <div className='text-gray-400 text-sm'>
-                      Next game in {timeLeft.h}h, {timeLeft.m}m
-                    </div>
+                  <div className='flex-1'>
+                    <PuzzleDateTime
+                      puzzleDate={puzzleDate}
+                      timeLeft={timeLeft}
+                    />
                   </div>
                   <div className='hidden md:flex md:flex-1 md:justify-end'>
                     {giveUpButton}

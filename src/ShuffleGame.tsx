@@ -16,6 +16,8 @@ import {
 import {
   getSundayShuffleGames,
   getUtcDateString,
+  getPuzzleDate,
+  getTimeUntilNextGame,
   loadShuffleGameState,
   saveShuffleGameState,
   clearShuffleGameState,
@@ -27,6 +29,7 @@ import type { Game } from './types';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import ShuffleFooter from './components/ShuffleFooter';
 import ShuffleCompleteModal from './components/ShuffleCompleteModal';
+import PuzzleDateTime from './components/PuzzleDateTime';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 
 interface GameWithId extends Game {
@@ -78,6 +81,10 @@ const ROUND_DETAILS = [
 
 const ShuffleGame = () => {
   const puzzleDate = getUtcDateString();
+  const formattedPuzzleDate = getPuzzleDate();
+  const [timeLeft] = useState<{ h: number; m: number }>(() =>
+    getTimeUntilNextGame(),
+  );
   const savedState = loadShuffleGameState(puzzleDate);
 
   // Track current round and completion status
@@ -469,7 +476,7 @@ const ShuffleGame = () => {
           </span>
         </div>
         <div className='flex justify-center sm:block sm:justify-start'>
-          <div className='text-md text-gray-200 min-h-[40px]'>
+          <div className='text-md text-gray-200 min-h-[48px]'>
             {
               ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
                 .desc
@@ -606,7 +613,12 @@ const ShuffleGame = () => {
           </>
         )}
       </div>
-      <div className='pt-6'>
+
+      <div className='pt-6 pb-2'>
+        <PuzzleDateTime puzzleDate={formattedPuzzleDate} timeLeft={timeLeft} />
+      </div>
+
+      <div className='pt-4'>
         <ShuffleFooter />
       </div>
 
