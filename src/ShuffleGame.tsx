@@ -396,7 +396,7 @@ const ShuffleGame = () => {
   };
 
   return (
-    <div className='mb-8 max-w-2xl mx-auto px-4'>
+    <div className='mb-8 max-w-2xl mx-auto px-0 sm:px-4'>
       <hr className='h-[1px] bg-gray-700 border-none mb-4' />
       <div className='mb-3'>
         <h2 className='text-xl text-center sm:text-2xl'>Weekend Shuffle</h2>
@@ -524,6 +524,7 @@ const ShuffleGame = () => {
           onScoreSent={() => setScoreSent(true)}
           onClose={() => setShowCompleteModal(false)}
           puzzleDate={puzzleDate}
+          isOpen={showCompleteModal}
         />
       )}
     </div>
