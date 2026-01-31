@@ -66,6 +66,7 @@ export const SortableGameItem = ({
       : `${transition}, background-color 0.5s, border-color 0.5s, opacity 0.5s`,
     opacity: isDragging ? 0.5 : isCorrect && !showHiddenInfo ? 0.6 : 1,
     zIndex: isFrozen ? 2 : 3,
+    touchAction: 'none', // Prevent browser scroll on touch
   };
 
   return (

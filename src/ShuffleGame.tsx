@@ -228,12 +228,13 @@ const ShuffleGame = () => {
   ]);
 
   const sensors = useSensors(
+    /*
     useSensor(TouchSensor, {
       activationConstraint: {
         delay: 150,
         tolerance: 32,
       },
-    }),
+    }),*/
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
