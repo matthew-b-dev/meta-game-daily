@@ -38,7 +38,9 @@ const App = () => {
                   letterSpacing: '-0.04em',
                 }}
               >
-                A daily <i>Video Games Industry</i> puzzle
+                <span className='underline decoration-2 decoration-zinc-700'>
+                  A daily <i>Video Games Industry</i> puzzle
+                </span>
               </p>
               <Subtitle />
             </div>
