@@ -108,7 +108,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     : [];
   const allGuesses = [...missedGuessesByRound, ...avgGuesses];
   const maxValue = Math.max(...allGuesses, 0.5);
-  const yAxisMax = Number.isInteger(maxValue) ? maxValue : maxValue + 0.5; // Add 0.5 only if not a whole number
+  const yAxisMax = Math.round(maxValue); // Round to nearest whole number for highest tick
   const minValue = Math.min(...allGuesses, 1);
   const yAxisMin = Math.max(minValue - 0.5, 1); // Lowest value - 0.5, but absolute min is 1
 
@@ -188,11 +188,13 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     yaxis: {
       min: yAxisMin,
       max: yAxisMax,
+      tickAmount: Math.max(1, Math.floor(yAxisMax - yAxisMin)), // Ensure whole number ticks
       labels: {
         style: {
           colors: '#9ca3af',
           fontSize: '12px',
         },
+        formatter: (value: number) => Math.round(value).toString(), // Force whole numbers in labels
       },
       axisBorder: {
         show: true,
@@ -278,7 +280,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
             averages.round1Avg === missedGuessesByRound[0] &&
             averages.round2Avg === missedGuessesByRound[1] &&
             averages.round3Avg === missedGuessesByRound[2] && (
-              <div className='text-center text-gray-400 text-sm my-2'>
+              <div className='text-center text-white text-sm my-2 font-semibold'>
                 Oh, it's just you (so far). 😊
               </div>
             )}

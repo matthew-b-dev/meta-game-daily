@@ -1,79 +1,53 @@
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
-import { motion } from 'framer-motion';
-import { QuestionMarkCircleIcon } from '@heroicons/react/24/solid';
-import { getSubtitle, getUtcDateString } from './utils';
+import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
+import { getUtcDateString } from './utils';
 import GuessingGame from './GuessingGame';
 import ShuffleGame from './ShuffleGame';
 import HelpModal from './components/HelpModal';
+import Subtitle from './components/Subtitle';
 
 const App = () => {
-  const subtitle = getSubtitle();
   const [showHelp, setShowHelp] = useState(false);
 
   const dateString = getUtcDateString();
   const date = new Date(dateString + 'T00:00:00Z');
   const isShuffleGame = date.getUTCDay() === 0;
 
-  console.log(
-    'Date string:',
-    dateString,
-    'isShuffleGame:',
-    isShuffleGame,
-    'UTC Day:',
-    date.getUTCDay(),
-  );
-
   return (
-    <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg'>
+    <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg overflow-x-hidden'>
       <Toaster position='top-center' />
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
-          <div className='relative mb-6'>
-            <div className='text-center'>
+          <div
+            className={`relative ${isShuffleGame ? 'mb-2 sm:mb-6' : 'mb-4 sm:mb-6'}`}
+          >
+            <div className='text-center sm:text-center flex flex-col items-start sm:items-center'>
               <h1
-                className='text-2xl sm:text-4xl font-black'
+                className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 pl-1 sm:pl-0 font-black'
                 style={{
                   fontFamily: 'Playfair Display, serif',
-                  letterSpacing: '0.02em',
+                  letterSpacing: '-0.05em',
                 }}
               >
-                MetaGameDaily
+                MetaGame<span className='text-gray-300'>Daily</span>
               </h1>
-              <p className='text-gray-400 text-sm mt-1'>
+              <p
+                className='text-gray-400 text-sm hidden sm:block relative top-[-10px] left-[-4px]'
+                style={{
+                  letterSpacing: '-0.04em',
+                }}
+              >
                 A daily <i>Video Games Industry</i> puzzle
               </p>
-              {subtitle.animated ? (
-                <motion.p
-                  className='text-gray-400 text-sm mt-1'
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{
-                    opacity: 1,
-                    scale: 1,
-                    x: [0, -8, 8, -8, 8, -5, 5, 0],
-                  }}
-                  transition={{
-                    duration: 1,
-                    ease: 'easeOut',
-                    x: {
-                      duration: 0.5,
-                      ease: 'easeInOut',
-                      times: [0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7],
-                    },
-                  }}
-                >
-                  {subtitle.content}
-                </motion.p>
-              ) : (
-                <p className='text-gray-400 text-sm mt-1'>{subtitle.content}</p>
-              )}
+              <Subtitle />
             </div>
             <button
-              className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2'
+              className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'
               onClick={() => setShowHelp(true)}
             >
-              <QuestionMarkCircleIcon className='w-8 h-8' />
-              <span className='text-sm font-semibold hidden sm:inline'>
+              <QuestionMarkCircleIcon className='h-6 w-6 sm:h-4 sm:w-4' />
+              <span className='text-sm font-semibold hidden sm:inline relative top-[-1px]'>
                 How to play
               </span>
             </button>

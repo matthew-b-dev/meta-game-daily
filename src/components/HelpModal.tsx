@@ -20,7 +20,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose, gameMode }) => {
       transition={{ duration: 0.2 }}
     >
       <motion.div
-        className='bg-zinc-900 rounded-lg p-8 max-w-md w-full mx-4'
+        className='bg-zinc-900 rounded-lg pl-2 pr-3 py-6 sm:px-8 sm:py-8 max-w-md w-full ml-1 mr-2 sm:ml-4 sm:mr-4'
         onClick={(e) => e.stopPropagation()}
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{ opacity: 1, scale: 1 }}
