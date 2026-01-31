@@ -27,6 +27,7 @@ import type { Game } from './types';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import ShuffleFooter from './components/ShuffleFooter';
 import ShuffleCompleteModal from './components/ShuffleCompleteModal';
+import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
 
 interface GameWithId extends Game {
   id: string;
@@ -102,9 +103,17 @@ const ShuffleGame = () => {
   // Track if game is complete and modal should be shown
   const [showCompleteModal, setShowCompleteModal] = useState(false);
 
+  // Track which round user is viewing (for navigation after completion)
+  const [viewingRound, setViewingRound] = useState(currentRound);
+
+  // Check if all rounds are complete
+  const allRoundsComplete =
+    currentRound === ROUND_DETAILS.length - 1 && isRoundComplete;
+
   // Get the games and sort them by the current round's variant
   const correctlySortedGames = useMemo(() => {
-    const variant = ROUND_DETAILS[currentRound].variant as
+    const roundToUse = allRoundsComplete ? viewingRound : currentRound;
+    const variant = ROUND_DETAILS[roundToUse].variant as
       | 'hltb'
       | 'critic'
       | 'releaseYear';
@@ -140,7 +149,7 @@ const ShuffleGame = () => {
       ...game,
       id: `game-${index}`,
     }));
-  }, [currentRound]);
+  }, [currentRound, viewingRound, allRoundsComplete]);
 
   // Initialize games - shuffle unless in testing mode
   const [currentOrder, setCurrentOrder] = useState<GameWithId[]>([]);
@@ -225,6 +234,14 @@ const ShuffleGame = () => {
     stateLoaded,
     savedState?.currentRound,
   ]);
+
+  // Update games when viewing different rounds after completion
+  useEffect(() => {
+    if (allRoundsComplete && stateLoaded) {
+      // Show correctly sorted games for the viewing round
+      setCurrentOrder([...correctlySortedGames]);
+    }
+  }, [viewingRound, allRoundsComplete, correctlySortedGames, stateLoaded]);
 
   const sensors = useSensors(
     /*
@@ -389,10 +406,31 @@ const ShuffleGame = () => {
       setIsFadingOut(true);
       setTimeout(() => {
         setCurrentRound(currentRound + 1);
+        setViewingRound(currentRound + 1); // Update viewing round too
         setIsRoundComplete(false); // Reset completion status for new round
         setFrozenIds(new Set()); // Clear frozen items for new round
         setIsFadingOut(false);
         setHasOrderChanged(true); // Allow submission in new round
+      }, 300);
+    }
+  };
+
+  const handlePrevRound = () => {
+    if (viewingRound > 0) {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setViewingRound(viewingRound - 1);
+        setIsFadingOut(false);
+      }, 300);
+    }
+  };
+
+  const handleNextViewRound = () => {
+    if (viewingRound < ROUND_DETAILS.length - 1) {
+      setIsFadingOut(true);
+      setTimeout(() => {
+        setViewingRound(viewingRound + 1);
+        setIsFadingOut(false);
       }, 300);
     }
   };
@@ -416,7 +454,7 @@ const ShuffleGame = () => {
             Weekend Shuffle
           </h2>
           <div className='ml-2'>
-            <span className='relative top-[-3px] inline-flex items-center rounded-md bg-yellow-400/10 px-[3px] py-0 text-xs font-medium text-yellow-500 border border-1 border-yellow-700'>
+            <span className='relative sm:top-[-3px] inline-flex items-center rounded-md bg-yellow-400/10 px-[3px] py-0 text-xs font-medium text-yellow-500 border border-1 border-yellow-700'>
               New
             </span>
           </div>
@@ -426,19 +464,26 @@ const ShuffleGame = () => {
         </div>
         <div className='flex items-center justify-center sm:justify-start gap-2 mb-2'>
           <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700'>
-            Round {currentRound + 1}/{ROUND_DETAILS.length}
+            Round {(allRoundsComplete ? viewingRound : currentRound) + 1}/
+            {ROUND_DETAILS.length}
           </span>
         </div>
         <div className='flex justify-center sm:block sm:justify-start'>
           <div className='text-md text-gray-200 min-h-[40px]'>
-            {ROUND_DETAILS[currentRound].desc}
+            {
+              ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
+                .desc
+            }
           </div>
         </div>
       </div>
 
       <div className='text-right mb-2'>
         <p className='text-sm text-gray-400 italic'>
-          {ROUND_DETAILS[currentRound].topDesc}
+          {
+            ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
+              .topDesc
+          }
         </p>
       </div>
 
@@ -463,20 +508,19 @@ const ShuffleGame = () => {
                 game={game}
                 id={game.id}
                 index={index}
-                isFrozen={frozenIds.has(game.id)}
+                isFrozen={allRoundsComplete || frozenIds.has(game.id)}
                 isCorrect={
-                  frozenIds.has(game.id) &&
-                  correctlySortedGames.findIndex(
-                    (g) => g.name === game.name,
-                  ) === index
+                  allRoundsComplete ||
+                  (frozenIds.has(game.id) &&
+                    correctlySortedGames.findIndex(
+                      (g) => g.name === game.name,
+                    ) === index)
                 }
                 isShaking={shakingIds.has(game.id)}
-                showHiddenInfo={isRoundComplete}
+                showHiddenInfo={allRoundsComplete || isRoundComplete}
                 variant={
-                  ROUND_DETAILS[currentRound].variant as
-                    | 'hltb'
-                    | 'critic'
-                    | 'releaseYear'
+                  ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
+                    .variant as 'hltb' | 'critic' | 'releaseYear'
                 }
               />
             ))}
@@ -486,7 +530,10 @@ const ShuffleGame = () => {
 
       <div className='text-right mb-4'>
         <p className='text-sm text-zinc-400 italic'>
-          {ROUND_DETAILS[currentRound].bottomDesc}
+          {
+            ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
+              .bottomDesc
+          }
         </p>
       </div>
 
@@ -495,14 +542,39 @@ const ShuffleGame = () => {
           isFadingOut || isButtonFading ? 'opacity-0' : 'opacity-100'
         }`}
       >
-        {isRoundComplete && currentRound === ROUND_DETAILS.length - 1 ? (
+        {allRoundsComplete ? (
           <div className='flex flex-col items-center gap-3'>
-            <button
-              className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
-              onClick={() => setShowCompleteModal(true)}
-            >
-              Show Results 🏆
-            </button>
+            <div className='flex items-center gap-2'>
+              <button
+                className='px-3 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center gap-1 transition-opacity'
+                onClick={handlePrevRound}
+                style={{
+                  opacity: viewingRound === 0 ? 0 : 1,
+                  pointerEvents: viewingRound === 0 ? 'none' : 'auto',
+                }}
+              >
+                <ChevronLeftIcon className='w-4 h-4' />
+                Prev.<span className='hidden sm:inline'> Round</span>
+              </button>
+              <button
+                className='px-6 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold'
+                onClick={() => setShowCompleteModal(true)}
+              >
+                <span className='hidden sm:inline'>Show</span> Results 🏆
+              </button>
+              <button
+                className='px-3 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center gap-1 transition-opacity'
+                onClick={handleNextViewRound}
+                style={{
+                  opacity: viewingRound === ROUND_DETAILS.length - 1 ? 0 : 1,
+                  pointerEvents:
+                    viewingRound === ROUND_DETAILS.length - 1 ? 'none' : 'auto',
+                }}
+              >
+                Next<span className='hidden sm:inline'> Round</span>
+                <ChevronRightIcon className='w-4 h-4' />
+              </button>
+            </div>
             <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
           </div>
         ) : (

@@ -263,7 +263,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
               </span>
             </span>
             <span className='text-sm text-gray-400 pl-4'>
-              Today's Global Average:{' '}
+              Global Average:{' '}
               <span className='text-white font-semibold'>
                 {averages
                   ? (
