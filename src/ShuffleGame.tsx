@@ -55,8 +55,8 @@ const ROUND_DETAILS = [
   },
   {
     variant: 'critic',
-    topDesc: 'Highest OpenCritic score',
-    bottomDesc: 'Lowest OpenCritic score',
+    topDesc: 'Lowest OpenCritic score',
+    bottomDesc: 'Highest OpenCritic score',
     desc: (
       <>
         Sort these games from <b>lowest to highest</b> <i>OpenCritic</i> score.
@@ -523,6 +523,7 @@ const ShuffleGame = () => {
           scoreSent={scoreSent}
           onScoreSent={() => setScoreSent(true)}
           onClose={() => setShowCompleteModal(false)}
+          puzzleDate={puzzleDate}
         />
       )}
     </div>

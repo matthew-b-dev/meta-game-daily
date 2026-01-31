@@ -660,6 +660,35 @@ export const generateShareText = (
 };
 
 /**
+ * Generate share text for shuffle game
+ */
+export const generateShuffleShareText = (
+  missedGuessesByRound: number[],
+  puzzleDate: string,
+): string => {
+  const roundEmojis = ['1️⃣', '2️⃣', '3️⃣'];
+
+  const roundLines = missedGuessesByRound
+    .map((totalGuesses, index) => {
+      const incorrectGuesses = totalGuesses - 1; // All guesses except the final correct one
+      const yellowSquares = '🟨'.repeat(incorrectGuesses);
+      const greenSquare = '🟩';
+
+      let line = `${roundEmojis[index]} ${yellowSquares}${greenSquare}`;
+
+      // Add "✨ Perfect" for any round with only 1 guess
+      if (totalGuesses === 1) {
+        line += ' ✨ Perfect';
+      }
+
+      return line;
+    })
+    .join('\n');
+
+  return `https://metagamedaily.com/\n${puzzleDate}\n#WeekendShuffle\n${roundLines}`;
+};
+
+/**
  * Get percentile message based on user's performance
  */
 export const getPercentileMessage = (

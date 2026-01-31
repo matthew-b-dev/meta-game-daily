@@ -1,4 +1,4 @@
-export const DATE_OVERRIDE: string | null = null; // '2026-01-27'
+export const DATE_OVERRIDE: string | null = null; // '2026-02-01'
 
 // Demo days configuration - hardcode specific games for specific dates
 // Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
