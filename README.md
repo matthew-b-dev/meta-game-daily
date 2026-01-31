@@ -81,11 +81,12 @@ The **Weekend Shuffle** is a special game mode available on **Saturdays and Sund
 
 ### Screenshots
 
-img
+<img width="267" height="491" alt="image" src="https://github.com/user-attachments/assets/9e5d9421-f60e-4f7d-b2c2-4b881c5d1a2f" />
 
 ---
 
-img
+<img width="265" height="477" alt="image" src="https://github.com/user-attachments/assets/e4cd3275-54f8-4d1a-b90a-ce1e4c093c02" />
+
 
 ---
 
@@ -95,9 +96,9 @@ Share text:
 https://metagamedaily.com/
 2026-01-04
 #WeekendShuffle
-1️⃣ 🟨🟨🟩
-2️⃣ 🟨🟩
-3️⃣ 🟨🟨🟨🟩
+1️⃣ 🟨🟩
+2️⃣ 🟨🟨🟩
+3️⃣ 🟨🟩
 ```
 
 ---
