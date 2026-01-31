@@ -3551,11 +3551,11 @@ export const gameDetails: Game[] = [
     releaseDate: 'Nov 29',
     releaseYear: 2016,
     reviewRank: 5,
-    developers: ['Luminous, Square Enix'],
+    developers: ['Square Enix', 'Luminous'],
     publishers: ['Square Enix'],
     franchise: 'Final Fantasy',
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oxj8f3hdmwehkcruvwnv.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fovl9fyq79camin87ljy.jpg',
   },
   {
     score: '93',
@@ -4483,7 +4483,7 @@ export const gameDetails: Game[] = [
     developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckj69.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj6.jpg',
   },
   {
     score: '81',
@@ -4663,7 +4663,8 @@ export const gameDetails: Game[] = [
     releaseDate: 'Feb 17',
     releaseYear: 2015,
     reviewRank: 30,
-    developers: ['Bandai Namco Studios'],
+    developers: ['Bandai Namco'],
+    overrideMask: '****** 7',
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dd00nee1w7wkus7t2lvq.jpg',
@@ -8280,7 +8281,7 @@ export const gameDetails: Game[] = [
     developers: ['Arkane Studios'],
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdod2.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdod5.jpg',
     hltb: {
       main: 16.5,
       extra: 24.5,
@@ -11630,7 +11631,7 @@ export const gameDetails: Game[] = [
     developers: ['Treyarch', 'Raven Software'],
     publishers: ['Activision'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsocs.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctoeb.jpg',
     hltb: {
       main: 8.5,
       extra: 11,
