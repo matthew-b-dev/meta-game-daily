@@ -96,6 +96,9 @@ const ShuffleGame = () => {
     savedState?.missedGuessesByRound ?? [0, 0, 0], // Initialize with 0 for each of the 3 rounds
   );
 
+  // Track if score has been sent to database
+  const [scoreSent, setScoreSent] = useState(savedState?.scoreSent ?? false);
+
   // Track if game is complete and modal should be shown
   const [showCompleteModal, setShowCompleteModal] = useState(false);
 
@@ -242,6 +245,7 @@ const ShuffleGame = () => {
         })),
         frozenIds: Array.from(frozenIds),
         missedGuessesByRound,
+        scoreSent,
       });
     }
   }, [
@@ -252,6 +256,7 @@ const ShuffleGame = () => {
     frozenIds,
     stateLoaded,
     missedGuessesByRound,
+    scoreSent,
   ]);
 
   const handleDragEnd = (event: DragEndEvent) => {
@@ -339,6 +344,13 @@ const ShuffleGame = () => {
 
     setFrozenIds(newFrozenIds);
 
+    // Increment total guesses for current round (every submission counts)
+    setMissedGuessesByRound((prev) => {
+      const updated = [...prev];
+      updated[currentRound] = (updated[currentRound] || 0) + 1;
+      return updated;
+    });
+
     // Reset order changed flag after submission
     setHasOrderChanged(false);
 
@@ -356,13 +368,6 @@ const ShuffleGame = () => {
         }, 500);
       }
     } else if (incorrectIds.size > 0) {
-      // Increment missed guesses for current round
-      setMissedGuessesByRound((prev) => {
-        const updated = [...prev];
-        updated[currentRound] = (updated[currentRound] || 0) + 1;
-        return updated;
-      });
-
       // Shake incorrect items
       setShakingIds(incorrectIds);
       // Clear shake animation after it completes
@@ -394,9 +399,9 @@ const ShuffleGame = () => {
     <div className='mb-8 max-w-2xl mx-auto px-4'>
       <hr className='h-[1px] bg-gray-700 border-none mb-4' />
       <div className='mb-3'>
-        <h2 className='text-xl text-center sm:text-2xl'>Shuffle Gauntlet</h2>
+        <h2 className='text-xl text-center sm:text-2xl'>Weekend Shuffle</h2>
         <div className='text-gray-500 italic text-center mb-3'>
-          (Sundays & Wednesdays)
+          (Saturday/Sunday Game Mode)
         </div>
         <div className='flex items-center justify-center sm:justify-start gap-2 mb-2'>
           <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700'>
@@ -502,7 +507,7 @@ const ShuffleGame = () => {
               )}
             </button>
             <span className='inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-800 text-gray-300 border border-gray-700 mt-2'>
-              Incorrect Guesses:{' '}
+              Total Guesses:{' '}
               {missedGuessesByRound.reduce((sum, count) => sum + count, 0)}
             </span>
           </>
@@ -515,6 +520,8 @@ const ShuffleGame = () => {
       {showCompleteModal && (
         <ShuffleCompleteModal
           missedGuessesByRound={missedGuessesByRound}
+          scoreSent={scoreSent}
+          onScoreSent={() => setScoreSent(true)}
           onClose={() => setShowCompleteModal(false)}
         />
       )}

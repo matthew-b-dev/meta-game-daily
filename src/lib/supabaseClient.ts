@@ -61,3 +61,65 @@ export const sendFeedback = async (
     console.error('Error sending feedback:', error);
   }
 };
+
+export const sendShuffleScore = async (
+  round1Guesses: number,
+  round2Guesses: number,
+  round3Guesses: number,
+): Promise<void> => {
+  console.log(
+    'sending shuffle score: ',
+    round1Guesses,
+    round2Guesses,
+    round3Guesses,
+  );
+  const { error } = await supabase.from('shuffle_scores').insert({
+    created_at: getUtcDateString(),
+    round_1_guesses: round1Guesses,
+    round_2_guesses: round2Guesses,
+    round_3_guesses: round3Guesses,
+  });
+
+  if (error) {
+    console.error('Error sending shuffle score:', error);
+  }
+};
+
+export const fetchShuffleAverages = async (): Promise<{
+  round1Avg: number;
+  round2Avg: number;
+  round3Avg: number;
+}> => {
+  const today = getUtcDateString();
+
+  const { data, error } = await supabase
+    .from('shuffle_scores')
+    .select('round_1_guesses, round_2_guesses, round_3_guesses')
+    .eq('created_at', today);
+
+  if (error) {
+    console.error('Error fetching shuffle averages:', error);
+    throw error;
+  }
+
+  // Calculate averages
+  if (!data || data.length === 0) {
+    return { round1Avg: 0, round2Avg: 0, round3Avg: 0 };
+  }
+
+  const round1Avg =
+    data.reduce((sum, row) => sum + (row.round_1_guesses || 0), 0) /
+    data.length;
+  const round2Avg =
+    data.reduce((sum, row) => sum + (row.round_2_guesses || 0), 0) /
+    data.length;
+  const round3Avg =
+    data.reduce((sum, row) => sum + (row.round_3_guesses || 0), 0) /
+    data.length;
+
+  return {
+    round1Avg: Math.round(round1Avg * 10) / 10, // Round to 1 decimal place
+    round2Avg: Math.round(round2Avg * 10) / 10,
+    round3Avg: Math.round(round3Avg * 10) / 10,
+  };
+};
