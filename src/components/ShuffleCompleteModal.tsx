@@ -86,7 +86,7 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     : [];
   const allGuesses = [...missedGuessesByRound, ...avgGuesses];
   const maxValue = Math.max(...allGuesses, 0.5);
-  const yAxisMax = Math.round(maxValue); // Round to nearest whole number for highest tick
+  const yAxisMax = Math.ceil(maxValue); // Always round UP to nearest whole number for highest tick
   const minValue = Math.min(...allGuesses, 1);
   const yAxisMin = Math.max(minValue - 0.5, 1); // Lowest value - 0.5, but absolute min is 1
 
