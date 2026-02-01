@@ -31,6 +31,7 @@ import ShuffleFooter from './components/ShuffleFooter';
 import ShuffleCompleteModal from './components/ShuffleCompleteModal';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import { ChevronLeftIcon, ChevronRightIcon } from '@heroicons/react/20/solid';
+import { fetchShuffleScores } from './lib/supabaseClient';
 
 interface GameWithId extends Game {
   id: string;
@@ -170,6 +171,19 @@ const ShuffleGame = () => {
 
   // Track which games are currently shaking (incorrect items)
   const [shakingIds, setShakingIds] = useState<Set<string>>(new Set());
+
+  // Fetch shuffle scores on mount
+  useEffect(() => {
+    const loadScores = async () => {
+      try {
+        await fetchShuffleScores();
+      } catch (error) {
+        console.error('Failed to fetch shuffle scores:', error);
+      }
+    };
+
+    loadScores();
+  }, []);
 
   // Initialize game state on first load from savedState or fresh
   useEffect(() => {
