@@ -48,7 +48,7 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose, gameMode }) => {
             <li>
               You can read more detailed information on the{' '}
               <a
-                href='https://github.com/matthew-b-dev/meta-game-daily'
+                href='https://github.com/matthew-b-dev/meta-game-daily?tab=readme-ov-file#weekend-shuffle'
                 target='_blank'
                 rel='noopener noreferrer'
                 className='text-yellow-500 underline hover:text-yellow-400'
