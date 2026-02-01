@@ -55,6 +55,7 @@ export interface ShuffleGameState {
   frozenIds: string[];
   missedGuessesByRound: number[]; // Track missed guesses for each round (index = round number)
   scoreSent: boolean; // Track if the score has been sent to the database
+  viewingRound?: number; // Track which round user is viewing after completion
 }
 
 // Unified storage structure for both game types

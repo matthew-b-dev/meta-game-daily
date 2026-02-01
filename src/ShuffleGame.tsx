@@ -111,7 +111,9 @@ const ShuffleGame = () => {
   const [showCompleteModal, setShowCompleteModal] = useState(false);
 
   // Track which round user is viewing (for navigation after completion)
-  const [viewingRound, setViewingRound] = useState(currentRound);
+  const [viewingRound, setViewingRound] = useState(
+    savedState?.viewingRound ?? currentRound,
+  );
 
   // Check if all rounds are complete
   const allRoundsComplete =
@@ -277,6 +279,7 @@ const ShuffleGame = () => {
         frozenIds: Array.from(frozenIds),
         missedGuessesByRound,
         scoreSent,
+        viewingRound,
       });
     }
   }, [
@@ -288,6 +291,7 @@ const ShuffleGame = () => {
     stateLoaded,
     missedGuessesByRound,
     scoreSent,
+    viewingRound,
   ]);
 
   const handleDragEnd = (event: DragEndEvent) => {
