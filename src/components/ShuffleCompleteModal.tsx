@@ -64,28 +64,6 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     sendAndFetchScores();
   }, [missedGuessesByRound, scoreSent, onScoreSent]);
 
-  if (scoresLoading) {
-    return (
-      <div
-        className='fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center z-50 p-4'
-        onClick={onClose}
-      >
-        <motion.div
-          className='bg-gray-900 rounded-lg p-6 max-w-lg w-full border border-gray-700'
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.2 }}
-          onClick={(e) => e.stopPropagation()}
-        >
-          <div className='flex flex-col items-center justify-center h-32'>
-            <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-green-500'></div>
-            <p className='text-sm text-gray-400 mt-2'>Loading scores...</p>
-          </div>
-        </motion.div>
-      </div>
-    );
-  }
-
   // Prepare chart data
   const chartSeries = [
     {
@@ -241,49 +219,63 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
         transition={{ duration: 0.2 }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className='bg-zinc-800 rounded-lg px-4 pb-4 pt-1 mb-6 min-h-[265px]'>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-          >
-            <Chart
-              options={chartOptions}
-              series={chartSeries}
-              type='line'
-              height={220}
-            />
-          </motion.div>
+        <div
+          className={`bg-zinc-800 rounded-lg px-4 pb-4 pt-1 mb-6 min-h-[265px] ${scoresLoading ? 'flex flex-col' : ''}`}
+        >
+          {scoresLoading ? (
+            <div className='flex flex-col items-center justify-center flex-1'>
+              <div className='animate-spin rounded-full h-8 w-8 border-b-2 border-green-500'></div>
+              <p className='text-sm text-gray-400 mt-2'>Loading scores...</p>
+            </div>
+          ) : (
+            <>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+              >
+                <Chart
+                  options={chartOptions}
+                  series={chartSeries}
+                  type='line'
+                  height={220}
+                />
+              </motion.div>
 
-          <div className='text-center mt-[-15px]'>
-            <span className='text-sm text-gray-400'>
-              Your Guess Total:{' '}
-              <span className='text-white font-semibold'>
-                {missedGuessesByRound.reduce((sum, count) => sum + count, 0)}
-              </span>
-            </span>
-            <span className='text-sm text-gray-400 pl-4'>
-              Global Average:{' '}
-              <span className='text-white font-semibold'>
-                {averages
-                  ? (
-                      averages.round1Avg +
-                      averages.round2Avg +
-                      averages.round3Avg
-                    ).toFixed(1)
-                  : '--'}
-              </span>
-            </span>
-          </div>
-          {/* If only one score, show a message below the chart */}
-          {averages &&
-            averages.round1Avg === missedGuessesByRound[0] &&
-            averages.round2Avg === missedGuessesByRound[1] &&
-            averages.round3Avg === missedGuessesByRound[2] && (
-              <div className='text-center text-white text-sm my-2 font-semibold'>
-                Oh, it's just you (so far). 😊
+              <div className='text-center mt-[-15px]'>
+                <span className='text-sm text-gray-400'>
+                  Your Guess Total:{' '}
+                  <span className='text-white font-semibold'>
+                    {missedGuessesByRound.reduce(
+                      (sum, count) => sum + count,
+                      0,
+                    )}
+                  </span>
+                </span>
+                <span className='text-sm text-gray-400 pl-4'>
+                  Global Average:{' '}
+                  <span className='text-white font-semibold'>
+                    {averages
+                      ? (
+                          averages.round1Avg +
+                          averages.round2Avg +
+                          averages.round3Avg
+                        ).toFixed(1)
+                      : '--'}
+                  </span>
+                </span>
               </div>
-            )}
+              {/* If only one score, show a message below the chart */}
+              {averages &&
+                averages.round1Avg === missedGuessesByRound[0] &&
+                averages.round2Avg === missedGuessesByRound[1] &&
+                averages.round3Avg === missedGuessesByRound[2] && (
+                  <div className='text-center text-white text-sm my-2 font-semibold'>
+                    Oh, it's just you (so far). 😊
+                  </div>
+                )}
+            </>
+          )}
         </div>
 
         <div className='space-y-3'>

@@ -697,7 +697,7 @@ export const generateShuffleShareText = (
     })
     .join('\n');
 
-  return `https://metagamedaily.com/\n${puzzleDate}\n#WeekendShuffle\n${roundLines}`;
+  return `https://metagamedaily.com/\n${puzzleDate} #WeekendShuffle\n${roundLines}`;
 };
 
 /**
