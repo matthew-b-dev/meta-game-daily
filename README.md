@@ -1,6 +1,7 @@
 # MetaGameDaily
 
 A daily Video Games Industry puzzle where players identify games based on limited information.
+
 Play the live game [here](https://metagamedaily.com/).
 
 ## How to Play
