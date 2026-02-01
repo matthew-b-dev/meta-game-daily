@@ -526,7 +526,6 @@ const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
       if (selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 3)) {
         selected.push(game);
         if (selected.length === 5) {
-          console.log(selected);
           return selected;
         }
       }
