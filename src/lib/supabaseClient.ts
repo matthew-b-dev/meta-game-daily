@@ -85,6 +85,28 @@ export const sendShuffleScore = async (
   }
 };
 
+export const fetchShuffleScores = async (): Promise<
+  Array<{
+    round_1_guesses: number;
+    round_2_guesses: number;
+    round_3_guesses: number;
+  }>
+> => {
+  const today = getUtcDateString();
+
+  const { data, error } = await supabase
+    .from('shuffle_scores')
+    .select('round_1_guesses, round_2_guesses, round_3_guesses')
+    .eq('created_at', today);
+
+  if (error) {
+    console.error('Error fetching shuffle scores:', error);
+    throw error;
+  }
+
+  return data ?? [];
+};
+
 export const fetchShuffleAverages = async (playerScores?: {
   round1: number;
   round2: number;
