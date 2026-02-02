@@ -1,5 +1,5 @@
 import React from 'react';
-import type { SteamGame, SteamGamePageProps } from '../types';
+import type { SteamGamePageProps } from '../types';
 
 // Helper function to get review color class based on rating
 const getReviewColorClass = (rating: string): string => {
