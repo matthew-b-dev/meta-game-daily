@@ -1,0 +1,36 @@
+import { motion } from 'framer-motion';
+import { clueVariants } from './utils';
+
+interface ClueTagsProps {
+  tags: string[];
+  show: boolean;
+}
+
+export const ClueTags: React.FC<ClueTagsProps> = ({ tags, show }) => {
+  return (
+    <motion.div
+      layout
+      initial={false}
+      animate={show ? 'visible' : 'hidden'}
+      variants={clueVariants}
+      transition={{ duration: 0.5, ease: 'easeInOut' }}
+      className='overflow-hidden'
+    >
+      <div className='px-4 py-3'>
+        <div className='text-gray-400 text-sm mb-2'>
+          Popular user-defined tags for this product:
+        </div>
+        <div className='flex flex-wrap gap-[2px]'>
+          {tags.slice(0, 10).map((tag, index) => (
+            <span
+              key={index}
+              className='bg-[rgba(103,193,245,0.2)] text-[#67c1f5] px-2 py-[2px] text-xs rounded-sm'
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+};

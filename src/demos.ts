@@ -97,6 +97,17 @@ export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
   // Start empty
 };
 
+/**
+ * Steam Detective demo days - hardcode specific game for specific dates
+ * Format: 'YYYY-MM-DD': 'Game Title'
+ * Use the exact game name as it appears in steam_game_detail.ts
+ */
+export const STEAM_DETECTIVE_DEMO_DAYS: { [date: string]: string } = {
+  // Example:
+  // '2026-02-01': 'Dota 2',
+  '2026-02-02': 'Outer Wilds',
+};
+
 /* 
 
 Ideas:

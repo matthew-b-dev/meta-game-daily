@@ -4,6 +4,7 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import { getUtcDateString } from './utils';
 import GuessingGame from './GuessingGame';
 import ShuffleGame from './ShuffleGame';
+import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import Subtitle from './components/Subtitle';
 
@@ -12,7 +13,17 @@ const App = () => {
 
   const dateString = getUtcDateString();
   const date = new Date(dateString + 'T00:00:00Z');
-  const isShuffleGame = date.getUTCDay() === 0;
+  const dayOfWeek = date.getUTCDay();
+
+  const isShuffleGame = dayOfWeek === 0; // Sunday
+  const isSteamDetective = dayOfWeek === 1; // Monday
+
+  // Determine game mode for help modal
+  const gameMode: 'guessing' | 'shuffle' | 'detective' = isShuffleGame
+    ? 'shuffle'
+    : isSteamDetective
+      ? 'detective'
+      : 'guessing';
 
   return (
     <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg overflow-x-hidden'>
@@ -20,20 +31,20 @@ const App = () => {
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div
-            className={`relative ${isShuffleGame ? 'mb-2 sm:mb-6' : 'mb-4 sm:mb-6'}`}
+            className={`relative ${isShuffleGame || isSteamDetective ? 'mb-2 sm:mb-6' : 'mb-4 sm:mb-6'}`}
           >
             <div className='text-center sm:text-center flex flex-col items-start sm:items-center'>
               <h1
                 className='text-lg sm:text-4xl mb-[-5px] sm:py-0 sm:mb-0 pl-1 sm:pl-0 font-black'
                 style={{
                   fontFamily: 'Playfair Display, serif',
-                  letterSpacing: '-0.05em',
+                  letterSpacing: '-0.04em',
                 }}
               >
                 MetaGame<span className='text-gray-300'>Daily</span>
               </h1>
               <p
-                className='text-gray-400 text-sm hidden sm:block relative top-[-10px] left-[-4px]'
+                className='text-gray-400 text-sm hidden sm:block relative top-[-8px] left-[-4px]'
                 style={{
                   letterSpacing: '-0.04em',
                 }}
@@ -54,13 +65,19 @@ const App = () => {
               </span>
             </button>
           </div>
-          {isShuffleGame ? <ShuffleGame /> : <GuessingGame />}
+          {isShuffleGame ? (
+            <ShuffleGame />
+          ) : isSteamDetective ? (
+            <SteamDetective />
+          ) : (
+            <GuessingGame />
+          )}
         </div>
       </div>
       <HelpModal
         isOpen={showHelp}
         onClose={() => setShowHelp(false)}
-        gameMode={isShuffleGame ? 'shuffle' : 'guessing'}
+        gameMode={gameMode}
       />
     </div>
   );
