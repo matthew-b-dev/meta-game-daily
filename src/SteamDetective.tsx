@@ -98,7 +98,7 @@ const SteamDetective = () => {
   return (
     <div className='min-h-screen text-[#c7d5e0]'>
       <Toaster position='top-center' />
-
+      <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
       <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
         <div className='relative flex justify-center items-center mb-4'>
           <h2
@@ -116,19 +116,24 @@ const SteamDetective = () => {
           </div>
         </div>
         {!state.isComplete && (
+          <div className='mb-4 pt-4 font-semibold text-sm sm:text-base'>
+            <span
+              className={`px-2 py-1 mr-1 rounded transition-colors duration-200 ${
+                flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
+              }`}
+            >
+              {state.guessesRemaining}
+            </span>
+            guesses remaining
+          </div>
+        )}
+        {!state.isComplete && (
           <GameInput onGuess={handleGuess} previousGuesses={state.guesses} />
         )}
         {!state.isComplete && (
-          <div className='relative flex justify-center items-center mb-6'>
-            <div className='absolute left-0 font-semibold text-sm sm:text-base'>
-              <span
-                className={`px-2 py-1 mr-1 rounded transition-colors duration-200 ${
-                  flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
-                }`}
-              >
-                {state.guessesRemaining}
-              </span>
-              guesses remaining
+          <div className='mb-6 relative flex justify-center items-end'>
+            <div className='absolute pl-9 left-0 font-semibold text-md sm:text-base'>
+              Clue: #{state.currentClue}
             </div>
             <SkipButton onClick={handleSkip} currentClue={state.currentClue} />
           </div>
