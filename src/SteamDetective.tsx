@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
-import { getPuzzleDate, getTimeUntilNextGame } from './utils';
+import { getPuzzleDate, getTimeUntilNextGame, getUtcDateString } from './utils';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
@@ -35,6 +35,15 @@ const SteamDetective = () => {
     setState,
     gameName: dailyGame.name,
   });
+
+  // One-off check for specific date and game
+  useEffect(() => {
+    const utcDate = getUtcDateString();
+    if (utcDate === '2026-02-02' && dailyGame.name === 'Outer Wilds') {
+      localStorage.removeItem('meta-game-daily-state');
+      window?.location?.reload?.();
+    }
+  }, [dailyGame.name]);
 
   // Flash animation when guesses remaining changes
 
