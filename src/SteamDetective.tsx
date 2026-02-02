@@ -153,13 +153,8 @@ const SteamDetective = () => {
           </div>
         )}
         {!state.isComplete && state.guesses.length > 0 && (
-          <div className='max-w-[600px] mx-auto pb-3'>
-            <MissedGuesses
-              missedGuesses={state.guesses.map((guess) => ({
-                name: guess,
-                isClose: false,
-              }))}
-            />
+          <div className='max-w-[600px] pb-3'>
+            <MissedGuesses missedGuesses={state.guesses} />
           </div>
         )}
 

@@ -2,6 +2,7 @@ import { useCallback } from 'react';
 import toast from 'react-hot-toast';
 import type { SteamDetectiveState } from './useSteamDetectiveState';
 import { MAX_CLUES } from '../components/SteamDetective/utils';
+import { isCloseGuess } from '../utils';
 
 export interface GameOption {
   value: string;
@@ -50,9 +51,14 @@ export const useGameActions = ({
       if (!selected || state.isComplete) return;
 
       const isCorrect = selected.value === gameName;
+      const isClose =
+        !isCorrect &&
+        isCloseGuess(selected.value, [
+          { name: gameName, releaseYear: 0, reviewRank: 0 },
+        ]);
 
       setState((prev) => {
-        const newGuesses = [...prev.guesses, selected.value];
+        const newGuesses = [...prev.guesses, { name: selected.value, isClose }];
         const newGuessesRemaining = prev.guessesRemaining - 1;
         const newTotalGuesses = prev.totalGuesses + 1;
 
@@ -70,6 +76,15 @@ export const useGameActions = ({
           };
         } else {
           const newClue = prev.currentClue + 1;
+
+          if (isClose) {
+            toast.error('Close guess! Try something similar.', {
+              duration: 5000,
+              icon: '🤏',
+            });
+          } else {
+            toast.error('Incorrect guess!');
+          }
 
           if (newClue > MAX_CLUES) {
             return {

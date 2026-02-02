@@ -25,8 +25,6 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   // Determine which screenshot is currently the large one
   const largeScreenshot = bothShown ? secondaryScreenshot : screenshot;
   const isMobileViewport = window.innerWidth < 640;
-  console.log(isMobileViewport);
-  console.log(window.innerWidth);
   // Handle click on large screenshot - only on mobile
   const handleLargeScreenshotClick = () => {
     // Check if viewport is mobile (width < 642)
