@@ -87,6 +87,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Call of Duty: Black Ops 6',
     'Tekken 7',
   ],
+  '2026-02-02': [
+    'Resident Evil 2',
+    "Uncharted 4: A Thief's End",
+    'Cyberpunk 2077',
+    'Ghost of Tsushima',
+    'Dishonored 2',
+  ],
 };
 
 /**
