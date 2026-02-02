@@ -93,7 +93,7 @@ const SteamDetective = () => {
 
       const shareText = compact
         ? `<https://metagamedaily.com/> #SteamDetective ${emojiText}`
-        : `https://metagamedaily.com/\n${puzzleDate} #SteamDetective\n${emojiText}`;
+        : `https://metagamedaily.com/\n${puzzleDate} #SteamDetective 🔍🕵️\n${emojiText}`;
       navigator.clipboard.writeText(shareText);
       toast.success('Copied to clipboard!');
     },
