@@ -29,7 +29,7 @@ const SteamDetective = () => {
   const censoredDescription = useCensoredDescription(
     dailyGame.shortDescription,
   );
-  const { state, setState } = useSteamDetectiveState();
+  const { state, setState } = useSteamDetectiveState(dailyGame.name);
   const { handleSkip, handleGuess } = useGameActions({
     state,
     setState,
@@ -39,11 +39,16 @@ const SteamDetective = () => {
   // One-off check for specific date and game
   useEffect(() => {
     const utcDate = getUtcDateString();
-    if (utcDate === '2026-02-02' && dailyGame.name === 'Outer Wilds') {
-      localStorage.removeItem('meta-game-daily-state');
-      window?.location?.reload?.();
+    if (utcDate === '2026-02-02') {
+      if (
+        !state.revealedTitle ||
+        state.revealedTitle !== 'Little Nightmares II'
+      ) {
+        localStorage.removeItem('meta-game-daily-state');
+        window?.location?.reload?.();
+      }
     }
-  }, [dailyGame.name]);
+  }, [state.revealedTitle]);
 
   // Flash animation when guesses remaining changes
 
