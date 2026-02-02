@@ -1,5 +1,7 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
+import FsLightbox from 'fslightbox-react';
 import { screenshotVariants } from './utils';
 
 interface ClueScreenshotProps {
@@ -18,6 +20,20 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   onSwapScreenshots,
 }) => {
   const bothShown = showSecondary && secondaryScreenshot;
+  const [lightboxToggler, setLightboxToggler] = useState(false);
+
+  // Determine which screenshot is currently the large one
+  const largeScreenshot = bothShown ? secondaryScreenshot : screenshot;
+  const isMobileViewport = window.innerWidth < 640;
+  console.log(isMobileViewport);
+  console.log(window.innerWidth);
+  // Handle click on large screenshot - only on mobile
+  const handleLargeScreenshotClick = () => {
+    // Check if viewport is mobile (width < 642)
+    if (isMobileViewport) {
+      setLightboxToggler(!lightboxToggler);
+    }
+  };
 
   return (
     <motion.div
@@ -38,8 +54,9 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
               transition={{ duration: 0.5, ease: 'easeInOut' }}
             >
               <div
-                className='overflow-hidden rounded-lg'
+                className={`overflow-hidden rounded-lg relative ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
                 style={{ aspectRatio: '16/9' }}
+                onClick={handleLargeScreenshotClick}
               >
                 <motion.img
                   key={secondaryScreenshot}
@@ -51,6 +68,11 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   exit={{ filter: 'blur(10px)', opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 />
+                {isMobileViewport && (
+                  <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
+                    <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
+                  </div>
+                )}
               </div>
             </motion.div>
           )}
@@ -65,9 +87,11 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
             className='flex-shrink-0'
           >
             <div
-              className={`overflow-hidden rounded-lg relative ${bothShown ? 'cursor-pointer group' : ''}`}
+              className={`overflow-hidden rounded-lg relative ${bothShown ? 'cursor-pointer group' : isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
               style={{ aspectRatio: '16/9' }}
-              onClick={bothShown ? onSwapScreenshots : undefined}
+              onClick={
+                bothShown ? onSwapScreenshots : handleLargeScreenshotClick
+              }
             >
               <motion.img
                 key={screenshot}
@@ -84,10 +108,18 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
                 </div>
               )}
+              {!bothShown && isMobileViewport && (
+                <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
+                  <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
+                </div>
+              )}
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Lightbox for mobile only */}
+      <FsLightbox toggler={lightboxToggler} sources={[largeScreenshot]} />
     </motion.div>
   );
 };

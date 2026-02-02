@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import { getPuzzleDate, getTimeUntilNextGame } from './utils';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
-import Footer from './components/Footer';
+import SteamDetectiveFooter from './components/SteamDetectiveFooter';
 import { useDailyGame } from './hooks/useDailyGame';
 import { useCensoredDescription } from './hooks/useCensoredDescription';
 import { useSteamDetectiveState } from './hooks/useSteamDetectiveState';
@@ -132,7 +132,7 @@ const SteamDetective = () => {
         )}
         {!state.isComplete && (
           <div className='mb-6 relative flex justify-center items-end'>
-            <div className='absolute pl-9 left-0 font-semibold text-md sm:text-base'>
+            <div className='absolute left-0 font-semibold text-md sm:text-base'>
               Clue: #{state.currentClue}
             </div>
             <SkipButton onClick={handleSkip} currentClue={state.currentClue} />
@@ -187,7 +187,7 @@ const SteamDetective = () => {
 
       <PuzzleDateTime puzzleDate={puzzleDate} timeLeft={timeLeft} />
 
-      <Footer />
+      <SteamDetectiveFooter />
     </div>
   );
 };

@@ -88,7 +88,6 @@ export const loadSteamDetectiveState = (
     if (!saved) return null;
 
     const unifiedState: UnifiedGameState = JSON.parse(saved);
-
     // Only restore if it's the same puzzle date
     if (unifiedState.puzzleDate !== currentPuzzleDate) {
       return null;
