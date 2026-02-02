@@ -16,7 +16,7 @@ export const ClueTags: React.FC<ClueTagsProps> = ({ tags, show }) => {
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className='overflow-hidden'
     >
-      <div className='px-4 py-3'>
+      <div className='px-4 py-3 max-w-[450px]'>
         <div className='text-gray-400 text-sm mb-2'>
           Popular user-defined tags for this product:
         </div>

@@ -26,7 +26,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
       transition={{ duration: 0.5, ease: 'easeInOut' }}
       className='overflow-hidden'
     >
-      <div className='px-4 py-3'>
+      <div className='px-4 py-3 max-w-[450px]'>
         {/* All Reviews */}
         <div className='flex items-start gap-2'>
           <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-1'>
