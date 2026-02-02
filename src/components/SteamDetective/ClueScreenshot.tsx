@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 import FsLightbox from 'fslightbox-react';
 import { screenshotVariants } from './utils';
 
@@ -105,7 +106,21 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
               />
               {bothShown && (
                 <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
-                  <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
+                  <svg
+                    xmlns='http://www.w3.org/2000/svg'
+                    fill='none'
+                    viewBox='0 0 24 24'
+                    strokeWidth={2}
+                    stroke='currentColor'
+                    className='w-6 h-6'
+                    style={{ transform: 'rotate(90deg)' }}
+                  >
+                    <path
+                      strokeLinecap='round'
+                      strokeLinejoin='round'
+                      d='M4 7h16M4 7l4-4m-4 4l4 4M20 17H4m16 0l-4 4m4-4l-4-4'
+                    />
+                  </svg>
                 </div>
               )}
               {!bothShown && isMobileViewport && (
