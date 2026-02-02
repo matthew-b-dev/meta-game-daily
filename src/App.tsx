@@ -7,6 +7,7 @@ import ShuffleGame from './ShuffleGame';
 import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import Subtitle from './components/Subtitle';
+import ResetPuzzleButton from './components/ResetPuzzleButton';
 
 const App = () => {
   const [showHelp, setShowHelp] = useState(false);
@@ -17,6 +18,15 @@ const App = () => {
 
   const isShuffleGame = dayOfWeek === 0; // Sunday
   const isSteamDetective = dayOfWeek === 1; // Monday
+
+  const isTestRoute = !!window.location.pathname.match(
+    /\/test\/(\d{4}-\d{2}-\d{2})/,
+  );
+
+  const handleGlobalReset = () => {
+    localStorage.removeItem('meta-game-daily-state');
+    window.location.reload();
+  };
 
   // Determine game mode for help modal
   const gameMode: 'guessing' | 'shuffle' | 'detective' = isShuffleGame
@@ -54,6 +64,12 @@ const App = () => {
                 </span>
               </p>
               <Subtitle />
+              {isTestRoute && (
+                <div className='flex gap-2'>
+                  <div>DEBUG:</div>
+                  <ResetPuzzleButton onResetPuzzle={handleGlobalReset} />
+                </div>
+              )}
             </div>
             <button
               className='absolute right-0 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-300 transition-colors flex items-center gap-1 px-2 bg-none sm:border-1 sm:border-gray-700 sm:px-3 sm:py-1'

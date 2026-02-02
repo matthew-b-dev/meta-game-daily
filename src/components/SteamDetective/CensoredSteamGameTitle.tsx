@@ -1,4 +1,5 @@
 import type { ReactElement } from 'react';
+import { useMemo } from 'react';
 
 // Characters that should not be encrypted
 const UNENCRYPTED_CHARS = [':', ',', '-'];
@@ -16,7 +17,10 @@ const randomUppercase = (): string => {
 };
 
 // Helper to process a single word
-const processTitleWord = (word: string): ReactElement => {
+const processTitleWord = (
+  word: string,
+  getRandomLetter: () => string,
+): ReactElement => {
   // If word is just special characters, return as-is
   if (UNENCRYPTED_CHARS.includes(word)) {
     return (
@@ -32,7 +36,7 @@ const processTitleWord = (word: string): ReactElement => {
     return (
       <span key={`word-${word}`} className={isNumber ? 'mx-3' : 'mx-1'}>
         <span style={{ filter: 'blur(7px)' }} className='select-none font-mono'>
-          {randomUppercase()}
+          {getRandomLetter()}
         </span>
       </span>
     );
@@ -78,7 +82,7 @@ const processTitleWord = (word: string): ReactElement => {
           style={{ filter: 'blur(7px)' }}
           className='select-none font-mono'
         >
-          {randomUppercase()}
+          {getRandomLetter()}
         </span>,
       );
     }
@@ -98,13 +102,59 @@ interface CensoredSteamGameTitleProps {
 export const CensoredSteamGameTitle: React.FC<CensoredSteamGameTitleProps> = ({
   title,
 }) => {
+  // Generate random letters for blurred characters once per title
+  const randomLetters = useMemo(() => {
+    const letters: string[] = [];
+    const words = title.split(' ');
+
+    for (const word of words) {
+      if (UNENCRYPTED_CHARS.includes(word) || word.length === 1) {
+        if (word.length === 1) {
+          letters.push(randomUppercase());
+        }
+        continue;
+      }
+
+      for (let i = 0; i < word.length; i++) {
+        const char = word[i];
+        if (i === 0 && !/^\d+$/.test(word) && !isRomanNumeral(word)) {
+          // First character stays as-is
+          continue;
+        } else if (
+          UNENCRYPTED_CHARS.includes(char) ||
+          char === ' ' ||
+          !/[a-zA-Z0-9]/.test(char)
+        ) {
+          // These characters don't get randomized
+          continue;
+        } else {
+          // Generate random letter for this position
+          letters.push(randomUppercase());
+        }
+      }
+    }
+
+    return letters;
+  }, [title]);
+
   // Split title by spaces to get words
   const words = title.split(' ');
+
+  // Helper to get random letter for a position
+  let currentLetterIndex = 0;
+  const getRandomLetter = () => {
+    const letter = randomLetters[currentLetterIndex];
+    currentLetterIndex++;
+    return letter;
+  };
 
   return (
     <div className='text-lg sm:text-xl flex flex-wrap items-center '>
       {words.map((word, index) =>
-        processTitleWord(word + (index < words.length - 1 ? '' : '')),
+        processTitleWord(
+          word + (index < words.length - 1 ? '' : ''),
+          getRandomLetter,
+        ),
       )}
     </div>
   );
