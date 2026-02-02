@@ -40,17 +40,6 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
   onClose,
   onCopyToShare,
 }) => {
-  const [showShareConfirm, setShowShareConfirm] = useState(false);
-
-  // Reset confirmation when modal closes
-  useEffect(() => {
-    if (!isOpen) {
-      // Prevent a cascading render loop
-      setTimeout(() => {
-        setShowShareConfirm(false);
-      }, 0);
-    }
-  }, [isOpen]);
   return (
     <AnimatePresence>
       {isOpen && (
@@ -115,8 +104,6 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
               )}
               <ShareButton
                 userPercentile={userPercentile}
-                showConfirm={showShareConfirm}
-                setShowConfirm={setShowShareConfirm}
                 onCopyToShare={onCopyToShare}
                 isLoading={scoresLoading}
               />

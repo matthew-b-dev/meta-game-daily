@@ -31,7 +31,6 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
     round2Avg: number;
     round3Avg: number;
   } | null>(null);
-  const [showShareConfirm, setShowShareConfirm] = useState(false);
 
   useEffect(() => {
     const sendAndFetchScores = async () => {
@@ -281,8 +280,6 @@ const ShuffleCompleteModal: React.FC<ShuffleCompleteModalProps> = ({
         <div className='space-y-3'>
           <ShareButton
             userPercentile={null}
-            showConfirm={showShareConfirm}
-            setShowConfirm={setShowShareConfirm}
             onCopyToShare={() => {
               const shareText = generateShuffleShareText(
                 missedGuessesByRound,
