@@ -13,7 +13,7 @@ interface GameCompleteProps {
   show: boolean;
   gameName: string;
   totalGuesses: number;
-  onCopyToShare: (compact?: boolean) => void;
+  onCopyToShare: () => void;
   scoreSent: boolean;
   onScoreSent: () => void;
 }
@@ -28,7 +28,6 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   scoreSent,
   onScoreSent,
 }) => {
-  const [showShareConfirm, setShowShareConfirm] = useState(false);
   const [scoresLoading, setScoresLoading] = useState(true);
   const [todayScores, setTodayScores] = useState<number[]>([]);
   const [userPercentile, setUserPercentile] = useState<number | null>(null);
@@ -233,8 +232,6 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             <div className='space-y-3 mx-auto max-w-[450px]'>
               <ShareButton
                 userPercentile={userPercentile}
-                showConfirm={showShareConfirm}
-                setShowConfirm={setShowShareConfirm}
                 onCopyToShare={onCopyToShare}
                 isLoading={scoresLoading}
               />

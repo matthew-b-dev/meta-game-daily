@@ -1,19 +1,13 @@
 import React from 'react';
 import { DocumentDuplicateIcon } from '@heroicons/react/24/solid';
-import { motion } from 'framer-motion';
 
 interface ShareButtonProps {
   userPercentile: number | null;
-  showConfirm: boolean;
-  setShowConfirm: (show: boolean) => void;
   onCopyToShare: () => void;
   isLoading?: boolean;
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({
-  userPercentile,
-  showConfirm,
-  setShowConfirm,
   onCopyToShare,
   isLoading = false,
 }) => {

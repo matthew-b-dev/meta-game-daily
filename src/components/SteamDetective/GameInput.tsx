@@ -9,6 +9,7 @@ export interface GameOption {
 }
 
 interface GameInputProps {
+  // eslint-disable-next-line no-unused-vars
   onGuess: (selected: GameOption | null) => void;
   disabled?: boolean;
   previousGuesses?: string[];
