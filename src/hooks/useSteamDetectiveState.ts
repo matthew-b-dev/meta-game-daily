@@ -36,7 +36,7 @@ export const useSteamDetectiveState = (gameName?: string) => {
       return {
         puzzleDate,
         ...savedState,
-        revealedTitle: gameName, // Always update with current game name
+        revealedTitle: gameName, // Always update with current game's name
       };
     }
 
