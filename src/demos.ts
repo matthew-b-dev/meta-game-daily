@@ -94,6 +94,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Ghost of Tsushima',
     'Dishonored 2',
   ],
+  '2026-02-03': [
+    'Metal Gear Solid V: The Phantom Pain',
+    'Remnant II',
+    'Super Mario Bros. Wonder',
+    'Bayonetta 2',
+    'Peggle 2',
+  ],
 };
 
 /**
