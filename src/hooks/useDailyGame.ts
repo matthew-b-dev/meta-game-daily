@@ -21,7 +21,11 @@ export const useDailyGame = () => {
       console.warn(`Demo game "${demoGameName}" not found in steamGameDetails`);
     }
 
-    const gameIds = Object.keys(steamGameDetails);
+    // Filter games with less than 50k reviews
+    const eligibleGames = Object.entries(steamGameDetails).filter(
+      ([, game]) => game.allReviewSummary.count < 30000,
+    );
+    const gameIds = eligibleGames.map(([id]) => id);
 
     // Simple hash function (same as getDailyGames)
     let hash = 0;

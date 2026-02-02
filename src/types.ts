@@ -47,6 +47,7 @@ export interface SteamGame {
   publisher: string;
   tags: string[];
   userTags: string[];
+  blurredUserTags?: string[]; // User tags that should be blurred/redacted
   features: string[];
   recentReviewSummary: ReviewSummary;
   allReviewSummary: ReviewSummary;

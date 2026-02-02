@@ -280,7 +280,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/9200/ss_f531a899e9781f423efab9ec108ae2822c6117dc.600x338.jpg?t=1706806214',
     shortDescription:
-      'Powered by id’s revolutionary id Tech® 5 technology, RAGE is an intense first-person shooter with breakneck vehicle combat, an expansive world to explore, and jaw-dropping graphics!',
+      'Powered by id’s revolutionary id Tech 5 technology, RAGE is an intense first-person shooter with breakneck vehicle combat, an expansive world to explore, and jaw-dropping graphics!',
     releaseDate: 'Oct 3, 2011',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -730,7 +730,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_402b32434e4bb1a8445397aa24b1b893fe3d257f.600x338.jpg?t=1761819450',
   },
   '48190': {
-    name: 'Assassin’s Creed® Brotherhood',
+    name: 'Assassin’s Creed Brotherhood',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg?t=1681861086',
     shortDescription: 'It’s time to join the Brotherhood.',
@@ -1502,7 +1502,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_5a2e74c1d7290052d36a340fd22b350690e20069.600x338.jpg?t=1750784496',
     shortDescription:
-      'Wolfenstein®: The New Order reignites the series that created the first-person shooter genre. Wolfenstein offers a deep game narrative packed with action, adventure and first-person combat.',
+      'Wolfenstein: The New Order reignites the series that created the first-person shooter genre. Wolfenstein offers a deep game narrative packed with action, adventure and first-person combat.',
     releaseDate: 'May 19, 2014',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
@@ -1543,7 +1543,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_0c5739cdf9028d1feade84f370b7f75d7e090f59.600x338.jpg?t=1750784496',
   },
   '201870': {
-    name: "Assassin's Creed® Revelations",
+    name: "Assassin's Creed Revelations",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201870/ss_28cb1321a03e8cf2af89b2f9ab441380b093db1e.600x338.jpg?t=1739176298',
     shortDescription:
@@ -1588,11 +1588,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201870/ss_08575a6a8651d8e9b159153cc0a8175b7b181345.600x338.jpg?t=1739176298',
   },
   '202970': {
-    name: 'Call of Duty®: Black Ops II',
+    name: 'Call of Duty: Black Ops II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/202970/ss_ac2194dfb623d65003f54450fb1824e5f181b27e.600x338.jpg?t=1748037715',
     shortDescription:
-      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, Call of Duty®: Black Ops II propels players into a near future Cold War',
+      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, Call of Duty: Black Ops II propels players into a near future Cold War',
     releaseDate: 'Nov 12, 2012',
     developer: 'Treyarch',
     publisher: 'Activision',
@@ -1859,7 +1859,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204300/ss_a47f24e6e25320d9c59834d83f89f03b79c75587.600x338.jpg?t=1763057499',
   },
   '204360': {
-    name: 'Castle Crashers®',
+    name: 'Castle Crashers',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_a800d5bc5b31d84fb940c7d0449f1aea05ac3e0e.600x338.jpg?t=1764096331',
     shortDescription:
@@ -1904,7 +1904,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_aa619ba113280fd78ddb6a6c36a435a1bd673773.600x338.jpg?t=1764096331',
   },
   '204880': {
-    name: 'Sins of a Solar Empire®: Rebellion',
+    name: 'Sins of a Solar Empire: Rebellion',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204880/ss_d018361380a56bcc8b6fd4a6395df5c114c3e188.600x338.jpg?t=1759332956',
     shortDescription:
@@ -3901,7 +3901,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238320/ss_1b4cc24b78f404c69fa18d42e5d5b00873c8852f.600x338.jpg?t=1666817106',
   },
   '238460': {
-    name: 'BattleBlock Theater®',
+    name: 'BattleBlock Theater',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238460/ss_b5a52d1a1db2642255f95263c0f41860e2985556.600x338.jpg?t=1733782954',
     shortDescription:
@@ -4628,7 +4628,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/ss_e825b087b95e51c3534383cfd75ad6e8038147c3.600x338.jpg?t=1761667247',
   },
   '252950': {
-    name: 'Rocket League®',
+    name: 'Rocket League',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/002820f64f665e2cb81861bb43d32a726d0bc411/ss_002820f64f665e2cb81861bb43d32a726d0bc411.600x338.jpg?t=1765385510',
     shortDescription:
@@ -4898,7 +4898,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261640/ss_745fe6fcb9074caeeddbfabcef1264c36c375860.600x338.jpg?t=1750081341',
   },
   '262060': {
-    name: 'Darkest Dungeon®',
+    name: 'Darkest Dungeon',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_04572edc979601b038756f87861c6f8c6c337806.600x338.jpg?t=1769780578',
     shortDescription:
@@ -5040,7 +5040,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/264710/ss_970a13f246e33e0df26d93baf9f8e975732adb4b.600x338.jpg?t=1751944840',
   },
   '268500': {
-    name: 'XCOM® 2',
+    name: 'XCOM 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/ss_a95cdbe487dbabf6621962fc92f438e26c5fdfd3.600x338.jpg?t=1769542173',
     shortDescription:
@@ -5626,7 +5626,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/287700/ss_d4c1b17dad6eeeef8e1ade44a66d8e644afcc4e6.600x338.jpg?t=1727849445',
   },
   '289070': {
-    name: 'Sid Meier’s Civilization® VI',
+    name: 'Sid Meier’s Civilization VI',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/ss_12cc6e1f4084de5bc0f66bfdbe3aaf3e59388b53.600x338.jpg?t=1740607040',
     shortDescription:
@@ -5716,7 +5716,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289130/ss_e8225a106e257d3996049fe0009c88ae9bda652b.600x338.jpg?t=1762445229',
   },
   '289650': {
-    name: "Assassin's Creed® Unity",
+    name: "Assassin's Creed Unity",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289650/ss_19c1c8d52d714fe8d0a0277c36832b4e0ad5def3.600x338.jpg?t=1754525874',
     shortDescription:
@@ -5941,7 +5941,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/294100/1e3a2734b23daaa4eb60ea33dd87806aa65e0c8f/ss_1e3a2734b23daaa4eb60ea33dd87806aa65e0c8f.600x338.jpg?t=1762524275',
   },
   '298110': {
-    name: 'Far Cry® 4',
+    name: 'Far Cry 4',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/298110/ss_ba2f250b4986a7b6aa5133bba13b2004c410d68b.600x338.jpg?t=1764168324',
     shortDescription:
@@ -6076,7 +6076,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/305620/ss_6b411930012a9f6794fe32e36504517aa54c3e4c.600x338.jpg?t=1768865059',
   },
   '306130': {
-    name: 'The Elder Scrolls® Online',
+    name: 'The Elder Scrolls Online',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/306130/ss_2b797e150cbb9ad7eec9d9089e79df4adc21e797.600x338.jpg?t=1767723807',
     shortDescription:
@@ -6121,11 +6121,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/306130/ss_ae00343059f2751a9bd1385383bc065d6d72a8df.600x338.jpg?t=1767723807',
   },
   '311210': {
-    name: 'Call of Duty®: Black Ops III',
+    name: 'Call of Duty: Black Ops III',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/ss_ca7376d838d5714f916936f0070824c27c4c5641.600x338.jpg?t=1748022663',
     shortDescription:
-      'Call of Duty®: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.',
+      'Call of Duty: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.',
     releaseDate: 'Nov 5, 2015',
     developer: 'Treyarch, Aspyr (Mac)',
     publisher: 'Activision, Aspyr (Mac)',
@@ -6671,7 +6671,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359320/ss_c4293fb1338f0094bf7cc03b83ed4dc74bbd91e4.600x338.jpg?t=1759842966',
   },
   '359550': {
-    name: "Tom Clancy's Rainbow Six® Siege X",
+    name: "Tom Clancy's Rainbow Six Siege X",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359550/8363519296edec1c056176f25e20767da3e6e853/ss_8363519296edec1c056176f25e20767da3e6e853.600x338.jpg?t=1766176190',
     shortDescription:
@@ -7082,7 +7082,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/379720/ss_ac05e086b8f0580bc95970fbb6f18a7e4fe65404.600x338.jpg?t=1750784856',
   },
   '386360': {
-    name: 'SMITE®',
+    name: 'SMITE',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/ss_9104a5770367ff37d3cd0e488b0866e8284874e5.600x338.jpg?t=1764627618',
     shortDescription:
@@ -7956,7 +7956,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/ss_34a428cdd26113e8645b77331d9fc82fcc50a4a2.600x338.jpg?t=1765811123',
   },
   '444090': {
-    name: 'Paladins®',
+    name: 'Paladins',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444090/ss_f4c9db1a47e18a398d5b6a068dcd2a0cc87413ff.600x338.jpg?t=1713560419',
     shortDescription:
@@ -8007,7 +8007,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444090/ss_846b1464dc9242bc44c9b43547c7b5567cbbdf0c.600x338.jpg?t=1713560419',
   },
   '447040': {
-    name: 'Watch_Dogs® 2',
+    name: 'Watch_Dogs 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/447040/ss_8071f719fea2d45baa805449ec550395db700118.600x338.jpg?t=1751986887',
     shortDescription:
@@ -8371,7 +8371,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_e3661fafe7f2e701ef91528e7b803857a418f6dd.600x338.jpg?t=1725377481',
     shortDescription:
-      'Planet Coaster® - the future of coaster park simulation games has arrived! Surprise, delight and thrill incredible crowds as you build your coaster park empire - let your imagination run wild, and share your success with the world.',
+      'Planet Coaster - the future of coaster park simulation games has arrived! Surprise, delight and thrill incredible crowds as you build your coaster park empire - let your imagination run wild, and share your success with the world.',
     releaseDate: 'Nov 17, 2016',
     developer: 'Frontier Developments, Aspyr (Mac)',
     publisher: 'Frontier Developments, Aspyr (Mac)',
@@ -8997,7 +8997,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_6b4986a37c7b5c185a796085c002febcdd5357b5.600x338.jpg?t=1768871319',
   },
   '582160': {
-    name: "Assassin's Creed® Origins",
+    name: "Assassin's Creed Origins",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg?t=1758656690',
     shortDescription:
@@ -10307,6 +10307,7 @@ export const steamGameDetails: SteamGameMap = {
       'Simulation',
       'Action',
     ],
+    blurredUserTags: ['Mystery', 'Puzzle', 'Great Soundtrack', 'Exploration'],
     appId: 753640,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_09f0fa8d9b8d7da1408cf4e03303d896cbd9be18.600x338.jpg?t=1729097431',
@@ -10447,7 +10448,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/784150/ss_a2be07ea8cef2dcabeb412295451d7e16aba67dc.600x338.jpg?t=1769169770',
   },
   '812140': {
-    name: "Assassin's Creed® Odyssey",
+    name: "Assassin's Creed Odyssey",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/ss_0ef33c0f230da6ebac94f5959f0e0a8bbc48cf8a.600x338.jpg?t=1758656673',
     shortDescription:
@@ -10769,7 +10770,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_b7bdc32338c0261ee0773ad0b13024c853a2141c.600x338.jpg?t=1730127763',
     shortDescription:
-      'Little Nightmares II is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it’s your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.',
+      '||Little Nightmares II|| is the ||second|| game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it’s your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.',
     releaseDate: 'Feb 10, 2021',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -11035,7 +11036,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/ss_cd0262c5abf8a90ee5e1059acafc5a92b6be0e73.600x338.jpg?t=1765967243',
   },
   '920210': {
-    name: 'LEGO® Star Wars: The Skywalker Saga',
+    name: 'LEGO Star Wars: The Skywalker Saga',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/920210/ss_7b54bb64490ba1ad69881ae6779bf45cba01d31b.600x338.jpg?t=1747346983',
     shortDescription:
@@ -11215,11 +11216,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962130/ss_432b22f117321d942d5bbb4ee49d2acc37b4baf2.600x338.jpg?t=1768264530',
   },
   '972660': {
-    name: 'Spiritfarer®: Farewell Edition',
+    name: 'Spiritfarer: Farewell Edition',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/972660/ss_a751970e68bc928538fbc4f52d6090c6ff1d8974.600x338.jpg?t=1752503178',
     shortDescription:
-      'Spiritfarer® is a cozy management game about dying. As ferrymaster to the deceased, build a boat to explore the world, care for your spirit friends, and release them into the afterlife. The Spiritfarer Farewell Edition includes the heartwarming base game and three major content updates.',
+      'Spiritfarer is a cozy management game about dying. As ferrymaster to the deceased, build a boat to explore the world, care for your spirit friends, and release them into the afterlife. The Spiritfarer Farewell Edition includes the heartwarming base game and three major content updates.',
     releaseDate: 'Aug 18, 2020',
     developer: 'Thunder Lotus',
     publisher: 'Thunder Lotus',
@@ -12995,7 +12996,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/ss_7460a480b1deb03f64cbfff0173445fb50d0c514.600x338.jpg?t=1764923042',
   },
   '1237970': {
-    name: 'Titanfall® 2',
+    name: 'Titanfall 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/ss_d5c13576c0ab4e6ca93b51aa39aa74271672e75f.600x338.jpg?t=1726160226',
     shortDescription:
@@ -13355,14 +13356,14 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284190/ss_f212f88a36949b32fe343348f78fef1b78c93b2e.600x338.jpg?t=1763396816',
   },
   '1284210': {
-    name: 'Guild Wars 2®',
+    name: 'Guild Wars 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_7f65b15609337bc9572dca6e8d8581b68eda5cc9.600x338.jpg?t=1769556226',
     shortDescription:
       'Guild Wars 2 is an award-winning online roleplaying game with fast-paced action combat, deep character customization, and no subscription fee required. Choose from an arsenal of professions and weapons, explore a vast open world, compete in PVP modes and more. Join over 16 million players now!',
     releaseDate: 'Aug 23, 2022',
-    developer: 'ArenaNet®',
-    publisher: 'ArenaNet®, NCSOFT',
+    developer: 'ArenaNet',
+    publisher: 'ArenaNet, NCSOFT',
     tags: ['Adventure', 'Massively Multiplayer', 'RPG', 'Free To Play'],
     features: [],
     recentReviewSummary: {
