@@ -94,6 +94,21 @@ export const loadSteamDetectiveState = (
       return null;
     }
 
+    // Check for corruption: if this is a SteamDetective day but no steamDetective data exists
+    // Determine if the puzzleDate corresponds to a Monday (SteamDetective day)
+    const date = new Date(currentPuzzleDate + 'T00:00:00Z');
+    const dayOfWeek = date.getUTCDay();
+    const isSteamDetectiveDay = dayOfWeek === 1; // Monday
+
+    if (isSteamDetectiveDay && !unifiedState.steamDetective) {
+      console.warn(
+        'Corrupted SteamDetective state detected - clearing localStorage and refreshing',
+      );
+      localStorage.removeItem(STORAGE_KEY);
+      window.location.reload();
+      return null; // This won't be reached due to reload, but TypeScript needs it
+    }
+
     return unifiedState.steamDetective || null;
   } catch (error) {
     console.error('Failed to load Steam Detective state:', error);
