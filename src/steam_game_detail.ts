@@ -10770,7 +10770,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_b7bdc32338c0261ee0773ad0b13024c853a2141c.600x338.jpg?t=1730127763',
     shortDescription:
-      '||Little Nightmares II|| is the ||second|| game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it’s your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.',
+      '||Little Nightmares II|| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it’s your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.',
     releaseDate: 'Feb 10, 2021',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
