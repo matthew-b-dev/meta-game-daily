@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect } from 'react';
 import { MAX_CLUES } from '../components/SteamDetective/utils';
 import {
-  getPuzzleDate,
+  getUtcDateString,
   loadSteamDetectiveState,
   saveSteamDetectiveState,
   type SteamDetectiveState as SteamDetectiveStateType,
@@ -12,7 +12,7 @@ export interface SteamDetectiveState extends SteamDetectiveStateType {
 }
 
 export const useSteamDetectiveState = () => {
-  const puzzleDate = getPuzzleDate();
+  const puzzleDate = getUtcDateString();
 
   // Load or initialize state
   const loadState = useCallback((): SteamDetectiveState => {
