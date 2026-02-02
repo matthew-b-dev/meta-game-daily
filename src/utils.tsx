@@ -64,7 +64,7 @@ export interface SteamDetectiveState {
   guessesRemaining: number;
   isComplete: boolean;
   isCorrect: boolean;
-  guesses: string[];
+  guesses: MissedGuess[];
   totalGuesses: number; // Total number of guesses made (including skips)
   scoreSent: boolean; // Track if the score has been sent to the database
   revealedTitle?: string; // The game title for this puzzle
@@ -107,6 +107,21 @@ export const loadSteamDetectiveState = (
       localStorage.removeItem(STORAGE_KEY);
       window.location.reload();
       return null; // This won't be reached due to reload, but TypeScript needs it
+    }
+
+    // Migrate old guesses format (string[]) to new format (MissedGuess[])
+    if (unifiedState.steamDetective && unifiedState.steamDetective.guesses) {
+      if (
+        unifiedState.steamDetective.guesses.length > 0 &&
+        typeof unifiedState.steamDetective.guesses[0] === 'string'
+      ) {
+        unifiedState.steamDetective.guesses = (
+          unifiedState.steamDetective.guesses as unknown as string[]
+        ).map((name: string) => ({
+          name,
+          isClose: false,
+        }));
+      }
     }
 
     return unifiedState.steamDetective || null;

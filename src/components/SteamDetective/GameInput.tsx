@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react';
 import Select from 'react-select';
 import { steamGameDetails } from '../../steam_game_detail';
 import { dummyGames } from '../../dummy_games';
+import type { MissedGuess } from '../../utils';
 
 export interface GameOption {
   value: string;
@@ -12,7 +13,7 @@ interface GameInputProps {
   // eslint-disable-next-line no-unused-vars
   onGuess: (selected: GameOption | null) => void;
   disabled?: boolean;
-  previousGuesses?: string[];
+  previousGuesses?: MissedGuess[];
 }
 
 export const GameInput: React.FC<GameInputProps> = ({
@@ -40,7 +41,8 @@ export const GameInput: React.FC<GameInputProps> = ({
     const allGames = [...steamGames, ...filteredDummyGames];
 
     // Filter out previously guessed games
-    const previousGuessesSet = new Set(previousGuesses);
+    const previousGuessNames = previousGuesses.map((g) => g.name);
+    const previousGuessesSet = new Set(previousGuessNames);
     const availableGames = allGames.filter(
       (game) => !previousGuessesSet.has(game),
     );
