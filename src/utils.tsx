@@ -58,12 +58,71 @@ export interface ShuffleGameState {
   viewingRound?: number; // Track which round user is viewing after completion
 }
 
-// Unified storage structure for both game types
+// Steam Detective state interface (without puzzleDate - stored at root level)
+export interface SteamDetectiveState {
+  currentClue: number;
+  guessesRemaining: number;
+  isComplete: boolean;
+  isCorrect: boolean;
+  guesses: string[];
+  totalGuesses: number; // Total number of guesses made (including skips)
+  scoreSent: boolean; // Track if the score has been sent to the database
+}
+
+// Unified storage structure for all game types
 export interface UnifiedGameState {
   puzzleDate: string;
   guessingGame?: Omit<SessionState, 'puzzleDate'>;
   shuffleGame?: ShuffleGameState;
+  steamDetective?: SteamDetectiveState;
 }
+
+/**
+ * Load Steam Detective state from localStorage
+ */
+export const loadSteamDetectiveState = (
+  currentPuzzleDate: string,
+): SteamDetectiveState | null => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    if (!saved) return null;
+
+    const unifiedState: UnifiedGameState = JSON.parse(saved);
+
+    // Only restore if it's the same puzzle date
+    if (unifiedState.puzzleDate !== currentPuzzleDate) {
+      return null;
+    }
+
+    return unifiedState.steamDetective || null;
+  } catch (error) {
+    console.error('Failed to load Steam Detective state:', error);
+    return null;
+  }
+};
+
+/**
+ * Save Steam Detective state to localStorage
+ */
+export const saveSteamDetectiveState = (
+  puzzleDate: string,
+  state: SteamDetectiveState,
+): void => {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY);
+    const unifiedState: UnifiedGameState = saved
+      ? JSON.parse(saved)
+      : { puzzleDate };
+
+    // Update puzzle date and Steam Detective state
+    unifiedState.puzzleDate = puzzleDate;
+    unifiedState.steamDetective = state;
+
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
+  } catch (error) {
+    console.error('Failed to save Steam Detective state:', error);
+  }
+};
 
 /**
  * Load shuffle game state from localStorage

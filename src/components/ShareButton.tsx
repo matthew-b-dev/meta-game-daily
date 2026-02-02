@@ -18,60 +18,18 @@ const ShareButton: React.FC<ShareButtonProps> = ({
   isLoading = false,
 }) => {
   const handleShareClick = () => {
-    // Show confirmation if user has worst score (0th percentile)
-    if (userPercentile === 0 && !showConfirm) {
-      setShowConfirm(true);
-    } else {
-      onCopyToShare();
-      setShowConfirm(false);
-    }
+    onCopyToShare();
   };
-
-  const handleCancelShare = () => {
-    setShowConfirm(false);
-  };
-
-  if (!showConfirm) {
-    return (
-      <button
-        className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
-        onClick={handleShareClick}
-        disabled={isLoading}
-      >
-        <DocumentDuplicateIcon className='w-5 h-5' />
-        {isLoading ? 'Loading scores...' : 'Copy for Sharing'}
-      </button>
-    );
-  }
 
   return (
-    <motion.div
-      className='space-y-2'
-      initial={{ opacity: 0, y: -10 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.2 }}
+    <button
+      className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+      onClick={handleShareClick}
+      disabled={isLoading}
     >
-      <p className='text-center text-xs text-yellow-400 font-semibold'>
-        Please confirm you want to share the worst score today.
-      </p>
-      <div className='flex gap-2'>
-        <button
-          className='flex flex-1 px-2 py-2 justify-center align-middle rounded bg-red-700 hover:bg-red-600 text-white text-xs font-semibold'
-          onClick={handleShareClick}
-        >
-          <div className='text-md leading-none position-relative left-4 pt-[3px]'>
-            People need to know
-          </div>
-          <div className='text-lg leading-none'>🤷</div>
-        </button>
-        <button
-          className='flex-1 px-2 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-xs font-semibold'
-          onClick={handleCancelShare}
-        >
-          Cancel
-        </button>
-      </div>
-    </motion.div>
+      <DocumentDuplicateIcon className='w-5 h-5' />
+      {isLoading ? 'Loading scores...' : 'Copy for Sharing'}
+    </button>
   );
 };
 

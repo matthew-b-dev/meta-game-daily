@@ -21,3 +21,37 @@ export type Game = {
     completionist?: number | null;
   };
 };
+
+export interface Review {
+  review: string;
+  votedUp: boolean;
+  votesUp: number;
+  weightedScore: number | string;
+  authorPlaytimeHours: number;
+  timestamp: number;
+}
+
+export interface ReviewSummary {
+  count: number;
+  rating: string;
+}
+
+export interface SteamGame {
+  name: string;
+  appId: number;
+  primaryScreenshot: string;
+  secondaryScreenshot?: string;
+  shortDescription: string;
+  releaseDate: string;
+  developer: string;
+  publisher: string;
+  tags: string[];
+  userTags: string[];
+  features: string[];
+  recentReviewSummary: ReviewSummary;
+  allReviewSummary: ReviewSummary;
+}
+
+export interface SteamGamePageProps {
+  game: SteamGame;
+}

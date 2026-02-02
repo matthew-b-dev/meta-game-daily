@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 interface HelpModalProps {
   isOpen: boolean;
   onClose: () => void;
-  gameMode: 'guessing' | 'shuffle';
+  gameMode: 'guessing' | 'shuffle' | 'detective';
 }
 
 const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose, gameMode }) => {
@@ -56,6 +56,28 @@ const HelpModal: React.FC<HelpModalProps> = ({ isOpen, onClose, gameMode }) => {
                 GitHub page
               </a>
               .
+            </li>
+          </ul>
+        ) : gameMode === 'detective' ? (
+          <ul className='space-y-3 mb-6 text-left list-disc pl-6 text-sm'>
+            <li>
+              <b>Steam Detective</b> is a game mode where you{' '}
+              <b>guess a Steam game</b> based on clues revealed one at a time.
+            </li>
+            <li>
+              You'll receive <b>up to 6 clues</b> about the game, starting with
+              "user-defined tags". Each wrong guess or skip reveals the next
+              clue.
+            </li>
+            <li>
+              The clues include: <b>User-defined tags</b>, <b>Game Details</b>{' '}
+              (reviews, release date, developer, publisher), <b>Description</b>,{' '}
+              <b>Screenshot #1</b>, <b>Screenshot #2</b>, and{' '}
+              <b>Partially-censored game title</b>.
+            </li>
+            <li>
+              Try to guess the game with <b>as few clues as possible</b> for the
+              best score!
             </li>
           </ul>
         ) : (
