@@ -64,7 +64,12 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                   alt='Game screenshot'
                   className='w-full h-full object-cover block'
                   initial={{ filter: 'blur(10px)', opacity: 0 }}
-                  animate={{ filter: 'blur(0px)', opacity: 1 }}
+                  animate={{
+                    filter: isMobileViewport
+                      ? 'blur(0px) brightness(1.25)'
+                      : 'blur(0px) brightness(1)',
+                    opacity: 1,
+                  }}
                   exit={{ filter: 'blur(10px)', opacity: 0 }}
                   transition={{ duration: 0.3 }}
                 />

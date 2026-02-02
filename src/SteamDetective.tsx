@@ -169,6 +169,7 @@ const SteamDetective = () => {
           developer={dailyGame.developer}
           publisher={dailyGame.publisher}
           tags={dailyGame.userTags}
+          blurredTags={dailyGame.blurredUserTags}
           isComplete={state.isComplete}
           showClue1={showClue1}
           showClue2={showClue2}

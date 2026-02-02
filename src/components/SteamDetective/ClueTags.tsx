@@ -3,10 +3,15 @@ import { clueVariants } from './utils';
 
 interface ClueTagsProps {
   tags: string[];
+  blurredTags?: string[];
   show: boolean;
 }
 
-export const ClueTags: React.FC<ClueTagsProps> = ({ tags, show }) => {
+export const ClueTags: React.FC<ClueTagsProps> = ({
+  tags,
+  blurredTags = [],
+  show,
+}) => {
   return (
     <motion.div
       layout
@@ -21,14 +26,19 @@ export const ClueTags: React.FC<ClueTagsProps> = ({ tags, show }) => {
           Popular user-defined tags for this product:
         </div>
         <div className='flex flex-wrap gap-[2px]'>
-          {tags.slice(0, 10).map((tag, index) => (
-            <span
-              key={index}
-              className='bg-[rgba(103,193,245,0.2)] text-[#67c1f5] px-2 py-[2px] text-xs rounded-sm'
-            >
-              {tag}
-            </span>
-          ))}
+          {tags.slice(0, 10).map((tag, index) => {
+            const isBlurred = blurredTags.includes(tag);
+            return (
+              <span
+                key={index}
+                className='bg-[rgba(103,193,245,0.2)] text-[#67c1f5] px-2 py-[2px] text-xs rounded-sm'
+              >
+                <span style={isBlurred ? { filter: 'blur(5px)' } : undefined}>
+                  {tag}
+                </span>
+              </span>
+            );
+          })}
         </div>
       </div>
     </motion.div>

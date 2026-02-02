@@ -3,6 +3,13 @@ import type { ReactElement } from 'react';
 // Characters that should not be encrypted
 const UNENCRYPTED_CHARS = [':', ',', '-'];
 
+// Helper to check if a word is a Roman numeral
+const isRomanNumeral = (word: string): boolean => {
+  return /^(M{0,4})(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$/i.test(
+    word,
+  );
+};
+
 // Helper to generate random uppercase letter
 const randomUppercase = (): string => {
   return String.fromCharCode(65 + Math.floor(Math.random() * 26));
@@ -34,14 +41,17 @@ const processTitleWord = (word: string): ReactElement => {
   // If word is purely numeric, add extra margins
   const isNumericWord = /^\d+$/.test(word);
 
+  // Check if word is a Roman numeral
+  const isRoman = isRomanNumeral(word);
+
   // Process multi-character word
   const chars: ReactElement[] = [];
 
   for (let i = 0; i < word.length; i++) {
     const char = word[i];
 
-    // First character stays as-is (unless it's a numeric word)
-    if (i === 0 && !isNumericWord) {
+    // First character stays as-is (unless it's a numeric word or Roman numeral)
+    if (i === 0 && !isNumericWord && !isRoman) {
       chars.push(<span key={`char-${i}`}>{char}</span>);
     } else if (UNENCRYPTED_CHARS.includes(char)) {
       // Special characters stay as-is with extra margins

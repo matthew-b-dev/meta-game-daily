@@ -23,6 +23,7 @@ interface ClueContainerProps {
   developer: string;
   publisher: string;
   tags: string[];
+  blurredTags?: string[];
   isComplete: boolean;
   showClue1: boolean;
   showClue2: boolean;
@@ -43,6 +44,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
   developer,
   publisher,
   tags,
+  blurredTags,
   isComplete,
   showClue1,
   showClue2,
@@ -89,7 +91,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
           publisher={publisher}
           show={showClue2}
         />
-        <ClueTags tags={tags} show={showClue1} />
+        <ClueTags tags={tags} blurredTags={blurredTags} show={showClue1} />
       </motion.div>
     </div>
   );
