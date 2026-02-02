@@ -81,7 +81,7 @@ const SteamDetective = () => {
         const emojis = [];
         for (let i = 1; i <= 6; i++) {
           if (i < state.totalGuesses) {
-            emojis.push('🟥');
+            emojis.push('⬛');
           } else if (i === state.totalGuesses) {
             emojis.push('✅');
           } else {
