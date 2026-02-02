@@ -67,6 +67,7 @@ export interface SteamDetectiveState {
   guesses: string[];
   totalGuesses: number; // Total number of guesses made (including skips)
   scoreSent: boolean; // Track if the score has been sent to the database
+  revealedTitle?: string; // The game title for this puzzle
 }
 
 // Unified storage structure for all game types
