@@ -26,7 +26,7 @@ export const fetchTodayScores = async (): Promise<number[]> => {
     .select('score')
     .eq('created_at', today);
 
-  const mockScores = [760, 690, 700, 510];
+  const mockScores = [400, 650, 610, 550];
 
   // Couldn't retrieve scores so use mocked ones
   if (error) {
