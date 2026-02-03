@@ -1,7 +1,7 @@
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
-import { getPuzzleDate, getTimeUntilNextGame, getUtcDateString } from './utils';
+import { getPuzzleDate, getTimeUntilNextGame } from './utils';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
@@ -23,6 +23,14 @@ const SteamDetective = () => {
     getTimeUntilNextGame(),
   );
   const [flashGuesses, setFlashGuesses] = useState(false);
+  const prevShowCluesRef = useRef<boolean[]>([
+    false,
+    false,
+    false,
+    false,
+    false,
+    false,
+  ]);
 
   // Custom hooks for state and data
   const dailyGame = useDailyGame();
@@ -36,22 +44,7 @@ const SteamDetective = () => {
     gameName: dailyGame.name,
   });
 
-  // One-off check for specific date and game
-  useEffect(() => {
-    const utcDate = getUtcDateString();
-    if (utcDate === '2026-02-02') {
-      if (
-        !state.revealedTitle ||
-        state.revealedTitle !== 'Little Nightmares II'
-      ) {
-        localStorage.removeItem('meta-game-daily-state');
-        window?.location?.reload?.();
-      }
-    }
-  }, [state.revealedTitle]);
-
   // Flash animation when guesses remaining changes
-
   useEffect(() => {
     if (state.guessesRemaining < 6 && !state.isComplete) {
       // eslint-disable-next-line react-hooks/set-state-in-effect
@@ -61,11 +54,126 @@ const SteamDetective = () => {
     }
   }, [state.guessesRemaining, state.isComplete]);
 
-  // Determine which clues to show
-  const showClues = Array.from(
-    { length: 6 },
-    (_, i) => state.currentClue >= i + 1 || state.isComplete,
-  );
+  // Scroll to top when game is completed
+  useEffect(() => {
+    if (state.isComplete) {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+  }, [state.isComplete]);
+
+  // Determine which clues to show based on custom clue order
+  // Default order: tags, details, desc (clues 1-3), then screenshot1, screenshot2, title (clues 4-6)
+  const clueOrder = dailyGame.clueOrder || ['tags', 'details', 'desc'];
+
+  // Map custom order to showClues array [showClue1=tags, showClue2=details, showClue3=desc, showClue4=screenshot1, showClue5=screenshot2, showClue6=title]
+  const clueMapping: Record<string, number> = {
+    tags: 1,
+    details: 2,
+    desc: 3,
+  };
+
+  // Create mapping from currentClue to which canonical clues should be shown
+  const getShowClues = (): boolean[] => {
+    const result = [false, false, false, false, false, false]; // [tags, details, desc, screenshot1, screenshot2, title]
+
+    if (state.isComplete) {
+      return [true, true, true, true, true, true];
+    }
+
+    // Show clues based on current clue and custom order
+    for (let i = 0; i < state.currentClue && i < 6; i++) {
+      if (i < 3) {
+        // First 3 clues use custom order
+        const clueType = clueOrder[i];
+        const clueIndex = clueMapping[clueType] - 1; // Convert to 0-indexed
+        result[clueIndex] = true;
+      } else if (i === 3) {
+        // Clue 4: first screenshot
+        result[3] = true;
+      } else if (i === 4) {
+        // Clue 5: second screenshot
+        result[4] = true;
+      } else if (i === 5) {
+        // Clue 6: title
+        result[5] = true;
+      }
+    }
+
+    return result;
+  };
+
+  const showClues = getShowClues();
+
+  // Auto-scroll down when a new clue becomes the lowest displayed clue
+  useEffect(() => {
+    // Canonical positions (lower number = higher on page, higher number = lower on page)
+    const canonicalPositions = {
+      title: 0,
+      screenshot1: 1,
+      screenshot2: 2,
+      desc: 3,
+      details: 4,
+      tags: 5,
+    };
+
+    // Map showClues indices to canonical clue names
+    const clueNames = [
+      'tags',
+      'details',
+      'desc',
+      'screenshot1',
+      'screenshot2',
+      'title',
+    ];
+
+    // Get the canonical position of the lowest currently shown clue
+    const getLowestPosition = (clues: boolean[]): number => {
+      let lowestPosition = -1;
+      let lowestClueName = '';
+      clues.forEach((shown, index) => {
+        if (shown) {
+          const clueName = clueNames[index] as keyof typeof canonicalPositions;
+          const position = canonicalPositions[clueName];
+          if (position > lowestPosition) {
+            lowestPosition = position;
+            lowestClueName = clueName;
+          }
+        }
+      });
+      return lowestPosition;
+    };
+
+    const prevLowestPosition = getLowestPosition(prevShowCluesRef.current);
+    const currentLowestPosition = getLowestPosition(showClues);
+
+    // Check if this is the first clue (all previous clues were false)
+    const isFirstClue = prevShowCluesRef.current.every((clue) => !clue);
+
+    // If a new clue has become the lowest (higher canonical position number), scroll down
+    // Exception: don't scroll on the first clue
+    if (
+      !isFirstClue &&
+      currentLowestPosition > prevLowestPosition &&
+      currentLowestPosition >= 0
+    ) {
+      const scrollAmount = window.innerHeight * 0.25; // 25% of viewport height
+
+      // Delay scroll to ensure DOM has updated with new content
+      setTimeout(() => {
+        window.scrollBy({
+          top: scrollAmount,
+          behavior: 'smooth',
+        });
+      }, 100);
+    } else {
+    }
+
+    // Update ref for next comparison
+    prevShowCluesRef.current = showClues;
+  }, [showClues]);
 
   const handleCopyToShare = useCallback(
     (compact: boolean = false) => {
@@ -163,6 +271,7 @@ const SteamDetective = () => {
           onCopyToShare={handleCopyToShare}
           scoreSent={state.scoreSent}
           onScoreSent={handleScoreSent}
+          blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
         />
 
         <ClueContainer
@@ -177,6 +286,9 @@ const SteamDetective = () => {
           publisher={dailyGame.publisher}
           tags={dailyGame.userTags}
           blurredTags={dailyGame.blurredUserTags}
+          blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
+          blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
+          overrideCensoredTitle={dailyGame.overrideCensoredTitle}
           isComplete={state.isComplete}
           showClues={showClues}
         />

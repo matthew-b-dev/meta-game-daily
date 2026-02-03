@@ -7,6 +7,7 @@ import type { MissedGuess } from '../../utils';
 export interface GameOption {
   value: string;
   label: string;
+  searchTerms?: string[];
 }
 
 interface GameInputProps {
@@ -26,43 +27,60 @@ export const GameInput: React.FC<GameInputProps> = ({
 
   // Create game options for react-select
   const gameOptions: GameOption[] = useMemo(() => {
-    // Get all steam game names
-    const steamGames = Object.values(steamGameDetails).map((game) => game.name);
+    // Get all steam game names with searchTerms
+    const steamGames = Object.values(steamGameDetails).map((game) => ({
+      name: game.name,
+      searchTerms: game.searchTerms || [],
+    }));
 
     // Create a Set of steam game names for quick lookup
-    const steamGameSet = new Set(steamGames);
+    const steamGameSet = new Set(steamGames.map((g) => g.name));
 
     // Filter dummy games to exclude duplicates with steam games
-    const filteredDummyGames = dummyGames.filter(
-      (game) => !steamGameSet.has(game),
-    );
+    const filteredDummyGames = dummyGames
+      .filter((game) => !steamGameSet.has(game))
+      .map((name) => ({ name, searchTerms: [] }));
 
-    // Combine steam games with filtered dummy games
-    const allGames = [...steamGames, ...filteredDummyGames];
+    // Combine with dummy games first, then steam games
+    const allGames = [...filteredDummyGames, ...steamGames];
 
     // Filter out previously guessed games
     const previousGuessNames = previousGuesses.map((g) => g.name);
     const previousGuessesSet = new Set(previousGuessNames);
     const availableGames = allGames.filter(
-      (game) => !previousGuessesSet.has(game),
+      (game) => !previousGuessesSet.has(game.name),
     );
 
     // Convert to options format
-    return availableGames.map((name) => ({
-      value: name,
-      label: name,
+    return availableGames.map((game) => ({
+      value: game.name,
+      label: game.name,
+      searchTerms: game.searchTerms,
     }));
   }, [previousGuesses]);
 
+  // Calculate effective length by excluding ": " if the query starts with ":"
+  const effectiveLength = useMemo(() => {
+    let length = inputValue.length;
+    if (inputValue.startsWith(':') && inputValue.startsWith(': ')) {
+      length = inputValue.length - 2; // Exclude the ": " prefix
+    }
+    return length;
+  }, [inputValue]);
+
   // Filter options based on input
   const filteredOptions = useMemo(() => {
-    if (!inputValue || inputValue.length < 3) return [];
+    if (!inputValue || effectiveLength < 3) return [];
 
     const searchLower = inputValue.toLowerCase();
-    return gameOptions.filter((option) =>
-      option.label.toLowerCase().includes(searchLower),
-    );
-  }, [inputValue, gameOptions]);
+    return gameOptions.filter((option) => {
+      const matchesLabel = option.label.toLowerCase().includes(searchLower);
+      const matchesSearchTerms = option.searchTerms?.some((term) =>
+        term.toLowerCase().includes(searchLower),
+      );
+      return matchesLabel || matchesSearchTerms;
+    });
+  }, [inputValue, effectiveLength, gameOptions]);
 
   const handleChange = (selected: GameOption | null) => {
     onGuess(selected);
@@ -80,7 +98,7 @@ export const GameInput: React.FC<GameInputProps> = ({
         isClearable
         inputValue={inputValue}
         onInputChange={setInputValue}
-        menuIsOpen={inputValue.length >= 3}
+        menuIsOpen={effectiveLength >= 3}
         filterOption={() => true}
         isDisabled={disabled}
         components={{

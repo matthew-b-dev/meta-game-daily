@@ -116,10 +116,65 @@ export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
  * Format: 'YYYY-MM-DD': 'Game Title'
  * Use the exact game name as it appears in steam_game_detail.ts
  */
+/*
+[Ideas]
+
+Easy
+XCOM 2
+BioShock Infinite
+Bastion
+Hitman: Absolution
+
+Great Easy:
+Rust
+
+Medium
+Castle Crashers
+Papers, Please
+The Forest
+Space Engineers
+
+Great Medium:
+Plague Inc: Evolved
+
+Hard
+Crusader Kings II
+Slime Rancher 2
+Magicka
+
+Great Hard:
+
+
+"blurredUserTags": ["Warhammer"],
+"clueOrder": ["desc", "tags", "details"],
+
+READY:
+
+
+    Desc > tags > Details
+    Desc > details > tags
+
+TRULY DONE
+Mount and Blade II: Bannerlord
+Gang Beasts
+The Witcher 3: Wild Hunt
+Elite Dangerous
+DARK SOULS II
+Frostpunk
+The Long Dark
+Life is Strange - Episode 1
+Far Cry 4
+No Man's Sky
+
+Up to bat:
+ASTRONEER
+
+*/
+
 export const STEAM_DETECTIVE_DEMO_DAYS: { [date: string]: string } = {
   // Example:
   // '2026-02-01': 'Dota 2',
-  '2026-02-02': 'Little Nightmares II',
+  '2026-02-02': 'Far Cry 4',
 };
 
 /* 

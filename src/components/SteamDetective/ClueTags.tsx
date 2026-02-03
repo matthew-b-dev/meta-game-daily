@@ -33,7 +33,10 @@ export const ClueTags: React.FC<ClueTagsProps> = ({
                 key={index}
                 className='bg-[rgba(103,193,245,0.2)] text-[#67c1f5] px-2 py-[2px] text-xs rounded-sm'
               >
-                <span style={isBlurred ? { filter: 'blur(5px)' } : undefined}>
+                <span
+                  style={isBlurred ? { filter: 'blur(4px)' } : undefined}
+                  className={isBlurred ? 'select-none' : undefined}
+                >
                   {tag}
                 </span>
               </span>
