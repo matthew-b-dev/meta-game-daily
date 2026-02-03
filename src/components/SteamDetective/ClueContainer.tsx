@@ -25,12 +25,7 @@ interface ClueContainerProps {
   tags: string[];
   blurredTags?: string[];
   isComplete: boolean;
-  showClue1: boolean;
-  showClue2: boolean;
-  showClue3: boolean;
-  showClue4: boolean;
-  showClue5: boolean;
-  showClue6: boolean;
+  showClues: boolean[];
 }
 
 export const ClueContainer: React.FC<ClueContainerProps> = ({
@@ -46,13 +41,10 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
   tags,
   blurredTags,
   isComplete,
-  showClue1,
-  showClue2,
-  showClue3,
-  showClue4,
-  showClue5,
-  showClue6,
+  showClues,
 }) => {
+  const [showClue1, showClue2, showClue3, showClue4, showClue5, showClue6] =
+    showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
   const mainScreenshot = primaryIsMain

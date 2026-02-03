@@ -62,12 +62,10 @@ const SteamDetective = () => {
   }, [state.guessesRemaining, state.isComplete]);
 
   // Determine which clues to show
-  const showClue1 = state.currentClue >= 1 || state.isComplete;
-  const showClue2 = state.currentClue >= 2 || state.isComplete;
-  const showClue3 = state.currentClue >= 3 || state.isComplete;
-  const showClue4 = state.currentClue >= 4 || state.isComplete;
-  const showClue5 = state.currentClue >= 5 || state.isComplete;
-  const showClue6 = state.currentClue >= 6 || state.isComplete;
+  const showClues = Array.from(
+    { length: 6 },
+    (_, i) => state.currentClue >= i + 1 || state.isComplete,
+  );
 
   const handleCopyToShare = useCallback(
     (compact: boolean = false) => {
@@ -180,12 +178,7 @@ const SteamDetective = () => {
           tags={dailyGame.userTags}
           blurredTags={dailyGame.blurredUserTags}
           isComplete={state.isComplete}
-          showClue1={showClue1}
-          showClue2={showClue2}
-          showClue3={showClue3}
-          showClue4={showClue4}
-          showClue5={showClue5}
-          showClue6={showClue6}
+          showClues={showClues}
         />
       </div>
 
