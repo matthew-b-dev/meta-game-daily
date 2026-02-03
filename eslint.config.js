@@ -21,7 +21,7 @@ export default defineConfig([
     },
     /* These should light up the IDE, but not fail a deploy. */
     rules: {
-      '@typescript-eslint/no-unused-vars': 'ignore',
+      '@typescript-eslint/no-unused-vars': 'warn',
       'no-unused-vars': 'warn',
     },
   },

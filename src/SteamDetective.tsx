@@ -132,14 +132,12 @@ const SteamDetective = () => {
     // Get the canonical position of the lowest currently shown clue
     const getLowestPosition = (clues: boolean[]): number => {
       let lowestPosition = -1;
-      let lowestClueName = '';
       clues.forEach((shown, index) => {
         if (shown) {
           const clueName = clueNames[index] as keyof typeof canonicalPositions;
           const position = canonicalPositions[clueName];
           if (position > lowestPosition) {
             lowestPosition = position;
-            lowestClueName = clueName;
           }
         }
       });
