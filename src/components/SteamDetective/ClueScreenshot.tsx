@@ -178,7 +178,13 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
       </div>
 
       {/* Lightbox for mobile only */}
-      <FsLightbox toggler={lightboxToggler} sources={lightboxSrcList} />
+      {showSecondary && (
+        <FsLightbox toggler={lightboxToggler} sources={lightboxSrcList} />
+      )}
+
+      {!showSecondary && (
+        <FsLightbox toggler={lightboxToggler} sources={[screenshot]} />
+      )}
     </motion.div>
   );
 };
