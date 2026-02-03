@@ -53,7 +53,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
         <div className='flex flex-col gap-3'>
           {/* Main Screenshot - shows primary initially, then secondary when clue 5 appears */}
           <div
-            className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
+            className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport && !blurScreenshotQuarter ? 'cursor-pointer' : 'cursor-default'}`}
             style={{ aspectRatio: '16/9' }}
             onClick={handleLargeScreenshotClick}
             onContextMenu={(e) => e.preventDefault()}
@@ -85,7 +85,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                 {/* Blur overlay for top or bottom quarter */}
                 {blurScreenshotQuarter && !isComplete && (
                   <div
-                    className='absolute inset-x-0 pointer-events-none flex items-center justify-center'
+                    className='border-[6px] border-dashed border-white p-4 absolute inset-x-0 pointer-events-none flex items-center justify-center'
                     style={{
                       [blurScreenshotQuarter === 'top' ? 'top' : 'bottom']: 0,
                       height: '25%',
@@ -99,9 +99,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                         textShadow:
                           '0 0 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3)',
                       }}
-                    >
-                      REDACTED
-                    </div>
+                    ></div>
                   </div>
                 )}
               </motion.div>
@@ -116,11 +114,11 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
           {/* Thumbnail Screenshot - appears below main screenshot when clue 5 is shown */}
           {bothShown && (
             <motion.div
-              initial={{ height: 0, opacity: 0, y: -20 }}
+              initial={{ height: 0, opacity: 0, y: 0 }}
               animate={{ height: 'auto', opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
               className='flex-shrink-0'
-              style={{ width: '20%' }}
+              style={{ width: isMobileViewport ? '30%' : '20%' }}
             >
               <div
                 className='overflow-hidden rounded-lg relative cursor-pointer group select-none'

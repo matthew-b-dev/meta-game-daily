@@ -68,7 +68,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
     <div className=' mx-auto pb-12'>
       <motion.div
         layout
-        className='bg-[#1b2838] rounded shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden'
+        className='bg-[#17222f] rounded shadow-[0_20px_50px_rgba(0,0,0,1)] overflow-hidden'
       >
         <ClueTitle
           title={gameName}

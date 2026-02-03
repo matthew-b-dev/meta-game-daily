@@ -166,11 +166,10 @@ const SteamDetective = () => {
           behavior: 'smooth',
         });
       }, 100);
-    } else {
-    }
 
-    // Update ref for next comparison
-    prevShowCluesRef.current = showClues;
+      // Update ref for next comparison
+      prevShowCluesRef.current = showClues;
+    }
   }, [showClues]);
 
   const handleCopyToShare = useCallback(
@@ -242,7 +241,7 @@ const SteamDetective = () => {
             >
               {state.guessesRemaining}
             </span>
-            guesses remaining
+            {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
           </div>
         )}
         {!state.isComplete && (
@@ -265,6 +264,7 @@ const SteamDetective = () => {
         <GameComplete
           show={state.isComplete}
           gameName={dailyGame.name}
+          appId={dailyGame.appId}
           totalGuesses={state.totalGuesses}
           onCopyToShare={handleCopyToShare}
           scoreSent={state.scoreSent}

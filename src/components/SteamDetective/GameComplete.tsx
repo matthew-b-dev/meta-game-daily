@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Chart from 'react-apexcharts';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline';
 import {
   sendSteamDetectiveScore,
   fetchSteamDetectiveScores,
@@ -8,10 +9,12 @@ import {
 import { getPuzzleDate } from '../../utils';
 import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
+import { MAX_CLUES } from './utils';
 
 interface GameCompleteProps {
   show: boolean;
   gameName: string;
+  appId: number;
   totalGuesses: number;
   onCopyToShare: () => void;
   scoreSent: boolean;
@@ -24,6 +27,7 @@ const DEBUG_LOADING = false;
 export const GameComplete: React.FC<GameCompleteProps> = ({
   show,
   gameName,
+  appId,
   totalGuesses,
   onCopyToShare,
   scoreSent,
@@ -88,6 +92,13 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
     return dist;
   };
 
+  const correct = totalGuesses < MAX_CLUES;
+  const preDisplayNameContent = correct ? (
+    <span className='block md:inline text-green-500'>Correct!</span>
+  ) : (
+    <span className='block md:inline text-red-500'>The answer was:</span>
+  );
+
   const distribution = getDistribution();
   const maxCount = Math.max(...Object.values(distribution), 1);
 
@@ -103,10 +114,17 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
         className='bg-zinc-800 rounded overflow-hidden p-4 min-h-[475px]'
       >
         {/* Game Name */}
-        <h2
-          className={`text-md md:text-lg font-semibold text-center mb-4 text-white`}
-        >
-          {displayName}
+        <h2 className={`text-md font-semibold text-center text-white`}>
+          {preDisplayNameContent}
+          <a
+            href={`https://store.steampowered.com/app/${appId}`}
+            target='_blank'
+            rel='noopener noreferrer'
+            className='pl-2 text-white underline hover:text-gray-300 inline-flex items-center gap-1'
+          >
+            <span>{displayName}</span>
+            <ArrowTopRightOnSquareIcon className='w-4 h-4 no-underline' />
+          </a>
         </h2>
 
         {/* Loading State */}
@@ -129,7 +147,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             transition={{ duration: 0.4 }}
           >
             {/* Bar Chart */}
-            <div className='mb-6 bg-zinc-800 rounded-lg px-2 max-w-[500px] mx-auto'>
+            <div className='mb-0 bg-zinc-800 rounded-lg px-2 max-w-[500px] mx-auto'>
               <Chart
                 options={{
                   responsive: [
@@ -188,7 +206,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                   yaxis: {
                     max: Math.max(maxCount + 1, 4),
                     tickAmount: Math.max(maxCount + 1, 4),
-                    forceNiceScale: false,
+                    forceNiceScale: maxCount > 10,
                     title: {
                       text: 'Players',
                       rotate: -90,
@@ -202,7 +220,8 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
                       style: {
                         colors: '#9ca3af',
                       },
-                      formatter: (val: number) => Math.floor(val).toString(),
+                      formatter: (val: number) =>
+                        val === 0 ? '' : Math.floor(val).toString(),
                     },
                   },
                   grid: {

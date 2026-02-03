@@ -120,7 +120,6 @@ export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
 [Ideas]
 
 Easy
-XCOM 2
 BioShock Infinite
 Bastion
 Hitman: Absolution
@@ -150,13 +149,17 @@ Great Hard:
 
 READY:
 
-
-    Desc > tags > Details
-    Desc > details > tags
-
 TRULY DONE
+  Very Easy
+    No Man's Sky
+  
+  Medium:
+    a
+  Harder:
+    Magicka
+
+XCOM 2
 Mount and Blade II: Bannerlord
-Gang Beasts
 The Witcher 3: Wild Hunt
 Elite Dangerous
 DARK SOULS II
@@ -164,17 +167,18 @@ Frostpunk
 The Long Dark
 Life is Strange - Episode 1
 Far Cry 4
-No Man's Sky
+
 
 Up to bat:
-ASTRONEER
+  Harder: 
+    ASTRONEER
 
 */
 
 export const STEAM_DETECTIVE_DEMO_DAYS: { [date: string]: string } = {
   // Example:
   // '2026-02-01': 'Dota 2',
-  '2026-02-02': 'Far Cry 4',
+  '2026-02-02': 'Magicka',
 };
 
 /* 
