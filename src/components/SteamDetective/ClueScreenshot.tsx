@@ -10,6 +10,8 @@ interface ClueScreenshotProps {
   show: boolean;
   showSecondary?: boolean;
   onSwapScreenshots?: () => void;
+  blurScreenshotQuarter?: 'top' | 'bottom';
+  isComplete?: boolean;
 }
 
 export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
@@ -18,17 +20,22 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
   show,
   showSecondary = false,
   onSwapScreenshots,
+  blurScreenshotQuarter,
+  isComplete = false,
 }) => {
   const bothShown = showSecondary && secondaryScreenshot;
   const [lightboxToggler, setLightboxToggler] = useState(false);
 
-  // Determine which screenshot is currently the large one
-  const largeScreenshot = bothShown ? secondaryScreenshot : screenshot;
+  // Always include both screenshots if secondary exists to prevent hook order changes
+  const lightboxSrcList = secondaryScreenshot
+    ? [screenshot, secondaryScreenshot]
+    : [screenshot];
   const isMobileViewport = window.innerWidth < 640;
   // Handle click on large screenshot - only on mobile
   const handleLargeScreenshotClick = () => {
     // Check if viewport is mobile (width < 642)
-    if (isMobileViewport) {
+    // Don't open lightbox if screenshot is redacted
+    if (isMobileViewport && !blurScreenshotQuarter) {
       setLightboxToggler(!lightboxToggler);
     }
   };
@@ -46,28 +53,60 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
         <div className='flex flex-col gap-3'>
           {/* Main Screenshot - shows primary initially, then secondary when clue 5 appears */}
           <div
-            className={`overflow-hidden rounded-lg relative ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
+            className={`overflow-hidden rounded-lg relative select-none ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
             style={{ aspectRatio: '16/9' }}
             onClick={handleLargeScreenshotClick}
+            onContextMenu={(e) => e.preventDefault()}
           >
             <AnimatePresence mode='wait'>
-              <motion.img
+              <motion.div
                 key={bothShown ? secondaryScreenshot : screenshot}
-                src={bothShown ? secondaryScreenshot : screenshot}
-                alt='Game screenshot'
-                className='w-full h-full object-cover block'
-                initial={{ filter: 'blur(10px)', opacity: 0 }}
-                animate={{
-                  filter: isMobileViewport
-                    ? 'blur(0px) brightness(1.25)'
-                    : 'blur(0px) brightness(1)',
-                  opacity: 1,
-                }}
-                exit={{ filter: 'blur(10px)', opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              />
+                className='w-full h-full relative'
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.2 }}
+              >
+                <motion.img
+                  src={bothShown ? secondaryScreenshot : screenshot}
+                  alt='Game screenshot'
+                  className='w-full h-full object-cover block'
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
+                  initial={{ filter: 'blur(10px)' }}
+                  animate={{
+                    filter: isMobileViewport
+                      ? 'blur(0px) brightness(1.25)'
+                      : 'blur(0px) brightness(1)',
+                  }}
+                  exit={{ filter: 'blur(10px)' }}
+                  transition={{ duration: 0.2 }}
+                />
+                {/* Blur overlay for top or bottom quarter */}
+                {blurScreenshotQuarter && !isComplete && (
+                  <div
+                    className='absolute inset-x-0 pointer-events-none flex items-center justify-center'
+                    style={{
+                      [blurScreenshotQuarter === 'top' ? 'top' : 'bottom']: 0,
+                      height: '25%',
+                      backdropFilter: 'blur(20px)',
+                      WebkitBackdropFilter: 'blur(20px)',
+                    }}
+                  >
+                    <div
+                      className='text-white font-bold text-4xl tracking-widest'
+                      style={{
+                        textShadow:
+                          '0 0 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3)',
+                      }}
+                    >
+                      REDACTED
+                    </div>
+                  </div>
+                )}
+              </motion.div>
             </AnimatePresence>
-            {isMobileViewport && (
+            {isMobileViewport && !blurScreenshotQuarter && (
               <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
                 <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
               </div>
@@ -84,36 +123,53 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
               style={{ width: '20%' }}
             >
               <div
-                className='overflow-hidden rounded-lg relative cursor-pointer group'
+                className='overflow-hidden rounded-lg relative cursor-pointer group select-none'
                 style={{ aspectRatio: '16/9' }}
                 onClick={onSwapScreenshots}
+                onContextMenu={(e) => e.preventDefault()}
               >
                 <motion.img
                   key={screenshot}
                   src={screenshot}
                   alt='Game screenshot'
                   className='w-full h-full object-cover block brightness-75 group-hover:brightness-90'
+                  draggable={false}
+                  onContextMenu={(e) => e.preventDefault()}
                   initial={{ filter: 'blur(10px)', opacity: 0 }}
                   animate={{ filter: 'blur(0px)', opacity: 1 }}
                   exit={{ filter: 'blur(10px)', opacity: 0 }}
-                  transition={{ duration: 0.3 }}
+                  transition={{ duration: 0.2 }}
                 />
+                {/* Blur overlay for thumbnail */}
+                {blurScreenshotQuarter && !isComplete && (
+                  <div
+                    className='absolute inset-x-0 pointer-events-none'
+                    style={{
+                      [blurScreenshotQuarter === 'top' ? 'top' : 'bottom']: 0,
+                      height: '25%',
+                      backdropFilter: 'blur(20px)',
+                      WebkitBackdropFilter: 'blur(20px)',
+                    }}
+                  />
+                )}
                 <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
-                  <svg
-                    xmlns='http://www.w3.org/2000/svg'
-                    fill='none'
-                    viewBox='0 0 24 24'
-                    strokeWidth={2}
-                    stroke='currentColor'
-                    className='w-6 h-6'
-                    style={{ transform: 'rotate(90deg)' }}
-                  >
-                    <path
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      d='M4 7h16M4 7l4-4m-4 4l4 4M20 17H4m16 0l-4 4m4-4l-4-4'
-                    />
-                  </svg>
+                  <div className='bg-black/80 rounded-full p-2'>
+                    <svg
+                      xmlns='http://www.w3.org/2000/svg'
+                      fill='none'
+                      viewBox='0 0 24 24'
+                      strokeWidth={2}
+                      stroke='currentColor'
+                      className='w-6 h-6 text-white'
+                      style={{ transform: 'rotate(90deg)' }}
+                    >
+                      <path
+                        strokeLinecap='round'
+                        strokeLinejoin='round'
+                        d='M4 7h16M4 7l4-4m-4 4l4 4M20 17H4m16 0l-4 4m4-4l-4-4'
+                      />
+                    </svg>
+                  </div>
                 </div>
               </div>
             </motion.div>
@@ -122,7 +178,7 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
       </div>
 
       {/* Lightbox for mobile only */}
-      <FsLightbox toggler={lightboxToggler} sources={[largeScreenshot]} />
+      <FsLightbox toggler={lightboxToggler} sources={lightboxSrcList} />
     </motion.div>
   );
 };

@@ -24,6 +24,9 @@ interface ClueContainerProps {
   publisher: string;
   tags: string[];
   blurredTags?: string[];
+  blurScreenshotQuarter?: 'top' | 'bottom';
+  blurTitleAndAsAmpersand?: boolean;
+  overrideCensoredTitle?: string;
   isComplete: boolean;
   showClues: boolean[];
 }
@@ -40,6 +43,9 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
   publisher,
   tags,
   blurredTags,
+  blurScreenshotQuarter,
+  blurTitleAndAsAmpersand,
+  overrideCensoredTitle,
   isComplete,
   showClues,
 }) => {
@@ -64,14 +70,22 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
         layout
         className='bg-[#1b2838] rounded shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden'
       >
-        <ClueTitle title={gameName} show={showClue6} isComplete={isComplete} />
+        <ClueTitle
+          title={gameName}
+          show={showClue6}
+          isComplete={isComplete}
+          blurTitleAndAsAmpersand={blurTitleAndAsAmpersand}
+          overrideCensoredTitle={overrideCensoredTitle}
+        />
         {/* Screenshots - Clue 4 (primary) and Clue 5 (secondary) */}
         <ClueScreenshot
           screenshot={mainScreenshot}
           secondaryScreenshot={thumbnailScreenshot}
           show={showClue4}
           showSecondary={showClue5 && secondaryScreenshot !== undefined}
+          blurScreenshotQuarter={blurScreenshotQuarter}
           onSwapScreenshots={handleSwapScreenshots}
+          isComplete={isComplete}
         />
         <ClueDescription
           shortDescription={shortDescription}
@@ -85,6 +99,7 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
           developer={developer}
           publisher={publisher}
           show={showClue2}
+          isComplete={isComplete}
         />
         <ClueTags tags={tags} blurredTags={blurredTags} show={showClue1} />
       </motion.div>

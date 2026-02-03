@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import { getReviewColorClass, clueVariants } from './utils';
 import type { ReviewSummary } from '../../types';
+import type { ReactElement } from 'react';
 
 interface ClueDetailsProps {
   allReviewSummary: ReviewSummary;
@@ -8,6 +9,7 @@ interface ClueDetailsProps {
   developer: string;
   publisher: string;
   show: boolean;
+  isComplete?: boolean;
 }
 
 export const ClueDetails: React.FC<ClueDetailsProps> = ({
@@ -16,7 +18,71 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
   developer,
   publisher,
   show,
+  isComplete = false,
 }) => {
+  // Helper to censor text by displaying 'B' characters that will be blurred
+  const censorText = (text: string): string => {
+    return text
+      .split('')
+      .map(() => 'B')
+      .join('');
+  };
+
+  // Helper to render text with censored parts (||text||)
+  const renderCensoredText = (text: string): ReactElement[] => {
+    const parts: ReactElement[] = [];
+    const pattern = /\|\|(.+?)\|\|/g;
+    let lastIndex = 0;
+    let match;
+
+    while ((match = pattern.exec(text)) !== null) {
+      // Add text before the censored part
+      if (match.index > lastIndex) {
+        parts.push(
+          <span key={`text-${lastIndex}`}>
+            {text.slice(lastIndex, match.index)}
+          </span>,
+        );
+      }
+
+      // Add censored text with blur
+      const censoredText = censorText(match[1]);
+      parts.push(
+        <span
+          key={`censored-${match.index}`}
+          style={{ filter: 'blur(4px)' }}
+          className='select-none'
+        >
+          {censoredText}
+        </span>,
+      );
+
+      lastIndex = pattern.lastIndex;
+    }
+
+    // Add remaining text after last censored part
+    if (lastIndex < text.length) {
+      parts.push(
+        <span key={`text-${lastIndex}`}>{text.slice(lastIndex)}</span>,
+      );
+    }
+
+    return parts;
+  };
+
+  // Remove censorship markers (||text||) when showing uncensored version
+  const getUncensoredText = (text: string) => {
+    return text.replace(/\|\|(.+?)\|\|/g, '$1');
+  };
+
+  // Determine what to display for developer and publisher
+  const displayDeveloper = isComplete
+    ? getUncensoredText(developer)
+    : renderCensoredText(developer);
+  const displayPublisher = isComplete
+    ? getUncensoredText(publisher)
+    : renderCensoredText(publisher);
+
   return (
     <motion.div
       layout
@@ -58,7 +124,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
             Developer:
           </div>
           <div className='text-sm'>
-            <span className='text-[#66c0f4]'>{developer}</span>
+            <span className='text-[#66c0f4]'>{displayDeveloper}</span>
           </div>
         </div>
 
@@ -68,7 +134,7 @@ export const ClueDetails: React.FC<ClueDetailsProps> = ({
             Publisher:
           </div>
           <div className='text-sm'>
-            <span className='text-[#66c0f4]'>{publisher}</span>
+            <span className='text-[#66c0f4]'>{displayPublisher}</span>
           </div>
         </div>
       </div>

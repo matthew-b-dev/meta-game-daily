@@ -16,6 +16,7 @@ interface GameCompleteProps {
   onCopyToShare: () => void;
   scoreSent: boolean;
   onScoreSent: () => void;
+  blurTitleAndAsAmpersand?: boolean;
 }
 
 const DEBUG_LOADING = false;
@@ -27,12 +28,18 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   onCopyToShare,
   scoreSent,
   onScoreSent,
+  blurTitleAndAsAmpersand,
 }) => {
   const [scoresLoading, setScoresLoading] = useState(true);
   const [todayScores, setTodayScores] = useState<number[]>([]);
   const [userPercentile, setUserPercentile] = useState<number | null>(null);
 
   const puzzleDate = getPuzzleDate();
+
+  // Replace 'and' with '&' if requested
+  const displayName = blurTitleAndAsAmpersand
+    ? gameName.replace(/\band\b/gi, '&')
+    : gameName;
 
   // Submit and fetch scores when component shows
   useEffect(() => {
@@ -99,7 +106,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
         <h2
           className={`text-md md:text-lg font-semibold text-center mb-4 text-white`}
         >
-          {gameName}
+          {displayName}
         </h2>
 
         {/* Loading State */}

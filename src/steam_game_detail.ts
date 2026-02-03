@@ -10,7 +10,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/570/ss_ad8eee787704745ccdecdfde3a5cd2733704898d.600x338.jpg?t=1769535998',
     shortDescription:
-      "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, Dota 2 has taken on a life of its own.",
+      "Every day, millions of players worldwide enter battle as one of over a hundred ||Dota|| heroes. And no matter if it's their 10th hour of play or 1,000th, there's always something new to discover. With regular updates that ensure a constant evolution of gameplay, features, and heroes, ||Dota 2|| has taken on a life of its own.",
     releaseDate: 'Jul 9, 2013',
     developer: 'Valve',
     publisher: 'Valve',
@@ -55,7 +55,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620/ss_f3f6787d74739d3b2ec8a484b5c994b3d31ef325.600x338.jpg?t=1745363004',
     shortDescription:
-      'The &quot;Perpetual Testing Initiative&quot; has been expanded to allow you to design co-op puzzles for you and your friends!',
+      'The "Perpetual Testing Initiative" has been expanded to allow you to design co-op puzzles for you and your friends!',
     releaseDate: 'Apr 18, 2011',
     developer: 'Valve',
     publisher: 'Valve',
@@ -100,7 +100,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/ss_796601d9d67faf53486eeb26d0724347cea67ddc.600x338.jpg?t=1749053861',
     shortDescription:
-      'For over two decades, Counter-Strike has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is Counter-Strike 2.',
+      'For over two decades, ||Counter-Strike|| has offered an elite competitive experience, one shaped by millions of players from across the globe. And now the next chapter in the CS story is about to begin. This is ||Counter-Strike 2||.',
     releaseDate: 'Aug 21, 2012',
     developer: 'Valve',
     publisher: 'Valve',
@@ -139,51 +139,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 730,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/730/ss_d830cfd0550fbb64d80e803e93c929c3abb02056.600x338.jpg?t=1749053861',
-  },
-  '1840': {
-    name: 'Source Filmmaker',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840/ss_5b263eac6bea16c5bab759babd1fa400533c185a.600x338.jpg?t=1677267197',
-    shortDescription:
-      'The Source Filmmaker (SFM) is the movie-making tool built and used by us here at Valve to make movies inside the Source game engine. Because the SFM uses the same assets as the game, anything that exists in the game can be used in the movie, and vice versa.',
-    releaseDate: 'Jul 10, 2012',
-    developer: 'Valve',
-    publisher: 'Valve',
-    tags: ['Animation & Modeling', 'Video Production'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 158,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Animation & Modeling',
-      'Free to Play',
-      'Video Production',
-      'Software',
-      'Movie',
-      'Difficult',
-      'Sandbox',
-      'Funny',
-      'Comedy',
-      'Singleplayer',
-      'Moddable',
-      'Character Customization',
-      'Memes',
-      'Survival Horror',
-      'Games Workshop',
-      '3D',
-      'Anime',
-      'Great Soundtrack',
-      'Souls-like',
-      'Family Friendly',
-    ],
-    appId: 1840,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1840/ss_0ccc92a724b78c4637c04ee971f734f32e31d2a5.600x338.jpg?t=1677267197',
   },
   '4920': {
     name: 'Natural Selection 2',
@@ -280,7 +235,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/9200/ss_f531a899e9781f423efab9ec108ae2822c6117dc.600x338.jpg?t=1706806214',
     shortDescription:
-      'Powered by id’s revolutionary id Tech 5 technology, RAGE is an intense first-person shooter with breakneck vehicle combat, an expansive world to explore, and jaw-dropping graphics!',
+      "Powered by id's revolutionary id Tech 5 technology, ||RAGE|| is an intense first-person shooter with breakneck vehicle combat, an expansive world to explore, and jaw-dropping graphics!",
     releaseDate: 'Oct 3, 2011',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -325,7 +280,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19680/ss_948c256c34f6ef5773599991ba196749db6e35ab.600x338.jpg?t=1655743771',
     shortDescription:
-      "Alice: Madness Returns is a third-person, single-player, action adventure platformer. Visit the grim reality of Victorian London and travel to the beautiful yet ghastly Wonderland to uncover the root of Alice's madness.",
+      "||Alice: Madness Returns|| is a third-person, single-player, action adventure platformer. Visit the grim reality of Victorian London and travel to the beautiful yet ghastly Wonderland to uncover the root of ||Alice's madness||.",
     releaseDate: 'Jun 17, 2011',
     developer: 'Spicy Horse Games',
     publisher: 'Electronic Arts',
@@ -366,7 +321,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/19680/ss_d4f04aecb7121fbbfa0117a39eda525ed8f619ac.600x338.jpg?t=1655743771',
   },
   '20920': {
-    name: 'The Witcher 2: Assassins of Kings Enhanced Edition',
+    name: 'The Witcher 2: Assassins of Kings',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/20920/ss_50472c40c90b4771382458f8e1c691793c63e1b0.600x338.jpg?t=1761657279',
     shortDescription:
@@ -415,7 +370,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/24200/ss_99116ecfec2858f6f24fcc33ae12ee731bccef60.600x338.jpg?t=1769546832',
     shortDescription:
-      'DC Universe Online is a Free-to-Play, massive multiplayer online action game set in the popular DC Universe. Become one of a new breed of Heroes or Villains and wield incredible powers as you go to war with legendary characters such as Batman, Superman, Lex Luthor and The Joker.',
+      '||DC Universe Online|| is a Free-to-Play, massive multiplayer online action game set in the popular DC Universe. Become one of a new breed of Heroes or Villains and wield incredible powers as you go to war with legendary characters such as Batman, Superman, Lex Luthor and The Joker.',
     releaseDate: 'Nov 2, 2011',
     developer: 'Dimensional Ink Games',
     publisher: 'Daybreak Game Company',
@@ -600,7 +555,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/41070/ss_7b281512d67a5220d4eef494234943771ddca71b.600x338.jpg?t=1728688460',
     shortDescription:
-      'Serious Sam 3: BFE is a prequel to the original indie fast action FPS and Game of the Year sensation - Serious Sam: The First Encounter!',
+      '||Serious Sam 3: BFE|| is a prequel to the original indie fast action FPS and Game of the Year sensation - ||Serious Sam: The First Encounter||!',
     releaseDate: 'Nov 22, 2011',
     developer: 'Croteam',
     publisher: 'Devolver Digital',
@@ -645,7 +600,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/42910/ss_514e6d7484e979f1879b59b4a1443d52bfde7cb1.600x338.jpg?t=1726497076',
     shortDescription:
-      'Magicka is a satirical action-adventure game set in a rich fantasy world based on Norse mythology. The player assumes the role of a wizard from a sacred order tasked with stopping an evil sorcerer who has thrown the world into turmoil, his foul creations besieging the forces of good.',
+      '||Magicka|| is a satirical action-adventure game set in a rich fantasy world based on Norse mythology. The player assumes the role of a wizard from a sacred order tasked with stopping an evil sorcerer who has thrown the world into turmoil, his foul creations besieging the forces of good.',
     releaseDate: 'Jan 25, 2011',
     developer: 'Arrowhead Game Studios',
     publisher: 'Paradox Interactive',
@@ -689,7 +644,7 @@ export const steamGameDetails: SteamGameMap = {
     name: 'LIMBO',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_d33513ed37acf1073ea92f182b76e165101bfdac.600x338.jpg?t=1761819450',
-    shortDescription: "Uncertain of his sister's fate, a boy enters LIMBO",
+    shortDescription: "Uncertain of his sister's fate, a boy enters ||LIMBO||",
     releaseDate: 'Aug 2, 2011',
     developer: 'Playdead',
     publisher: 'Playdead',
@@ -729,56 +684,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48000/ss_402b32434e4bb1a8445397aa24b1b893fe3d257f.600x338.jpg?t=1761819450',
   },
-  '48190': {
-    name: 'Assassin’s Creed Brotherhood',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48190/ss_412a6e71dcafa32ba9165d329cbd97e8669e0df4.600x338.jpg?t=1681861086',
-    shortDescription: 'It’s time to join the Brotherhood.',
-    releaseDate: 'Mar 22, 2011',
-    developer: 'Ubisoft Montreal',
-    publisher: 'Ubisoft',
-    tags: ['Action', 'Adventure'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 8601,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Action',
-      'Open World',
-      'Adventure',
-      'Parkour',
-      'Stealth',
-      'Assassin',
-      'Third Person',
-      'Historical',
-      'Multiplayer',
-      'Singleplayer',
-      'Rome',
-      'Story Rich',
-      'Great Soundtrack',
-      'Action-Adventure',
-      'Atmospheric',
-      'Conspiracy',
-      'Medieval',
-      'Sandbox',
-      'Controller',
-      'Casual',
-    ],
-    appId: 48190,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/48190/ss_b5fd8f198c7fdaa80e064039abc5b38238a5cef0.600x338.jpg?t=1681861086',
-  },
   '49520': {
     name: 'Borderlands 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_6734eaa79dcd0fe53971fbd50d20b5d0d45f4809.600x338.jpg?t=1751931279',
     shortDescription:
-      'The Ultimate Vault Hunter’s Upgrade lets you get the most out of the Borderlands 2 experience.',
+      "The Ultimate Vault Hunter's Upgrade lets you get the most out of the ||Borderlands 2|| experience.",
     releaseDate: 'Sep 17, 2012',
     developer: 'Gearbox Software, Aspyr (Mac), Aspyr (Linux)',
     publisher: '2K, Aspyr (Mac), Aspyr (Linux)',
@@ -819,11 +730,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/49520/ss_2f27a18562fbf4a91943c3968b35db5ac1caf5ad.600x338.jpg?t=1751931279',
   },
   '50130': {
-    name: 'Mafia II (Classic)',
+    name: 'Mafia II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/50130/ss_2cc0eb89007eee950b5f7d87ca15957868fdebfb.600x338.jpg?t=1746717708',
     shortDescription:
-      'Vito Scaletta has started to make a name for himself on the streets of Empire Bay as someone who can be trusted to get a job done. Together with his buddy Joe, he is working to prove himself to the Mafia, quickly escalating up the family ladder with crimes of larger reward, status and consequence… the life as a wise guy isn’t quite as...',
+      "Vito Scaletta has started to make a name for himself on the streets of Empire Bay as someone who can be trusted to get a job done. Together with his buddy Joe, he is working to prove himself to the Mafia, quickly escalating up the family ladder with crimes of larger reward, status and consequence… the life as a wise guy isn't quite as...",
     releaseDate: 'Mar 22, 2011',
     developer: '2K Czech',
     publisher: '2K',
@@ -864,11 +775,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/50130/ss_dc895125ba77f0fe72646204097ac2d830a3f7b9.600x338.jpg?t=1746717708',
   },
   '55150': {
-    name: 'Warhammer 40,000: Space Marine - Anniversary Edition',
+    name: 'Warhammer 40,000: Space Marine',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_202b5dc08cb1df78b019faa2ee714907013e9b92.600x338.jpg?t=1750947979',
     shortDescription:
-      'In Warhammer 40,000 Space Marine you are Captain Titus, a Space Marine of the Ultramarines chapter and a seasoned veteran of countless battles.',
+      'In ||Warhammer 40,000 Space Marine|| you are Captain Titus, a ||Space Marine|| of the Ultramarines chapter and a seasoned veteran of countless battles.',
     releaseDate: 'Sep 5, 2011',
     developer: 'Relic Entertainment',
     publisher: 'Relic Entertainment',
@@ -904,6 +815,7 @@ export const steamGameDetails: SteamGameMap = {
       'Controller',
       'Violent',
     ],
+    blurredUserTags: ['Warhammer 40K', 'Games Workshop'],
     appId: 55150,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/55150/ss_9d33a17ab1d49067fceee6ee9bdee75744e0b702.600x338.jpg?t=1750947979',
@@ -958,7 +870,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/72850/ss_4e95fbcf72ce2a9f86075738fa9930ef2bed1ac7.600x338.jpg?t=1721923139',
     shortDescription:
-      'EPIC FANTASY REBORN The next chapter in the highly anticipated Elder Scrolls saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. Skyrim reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.',
+      'EPIC FANTASY REBORN The next chapter in the highly anticipated ||Elder Scrolls|| saga arrives from the makers of the 2006 and 2008 Games of the Year, Bethesda Game Studios. ||Skyrim|| reimagines and revolutionizes the open-world fantasy epic, bringing to life a complete virtual world open for you to explore any way you choose.',
     releaseDate: 'Nov 10, 2011',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
@@ -1093,7 +1005,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/107410/ss_e9220742c6b786efc9145c58ce7b276af891e9d5.600x338.jpg?t=1764155321',
     shortDescription:
-      'Experience true combat gameplay in a massive military sandbox. Deploying a wide variety of single- and multiplayer content, over 20 vehicles and 40 weapons, and limitless opportunities for content creation, this is the PC’s premier military game. Authentic, diverse, open - Arma 3 sends you to war.',
+      "Experience true combat gameplay in a massive military sandbox. Deploying a wide variety of single- and multiplayer content, over 20 vehicles and 40 weapons, and limitless opportunities for content creation, this is the PC's premier military game. Authentic, diverse, open - ||Arma 3|| sends you to war.",
     releaseDate: 'Sep 12, 2013',
     developer: 'Bohemia Interactive',
     publisher: 'Bohemia Interactive',
@@ -1138,7 +1050,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/108600/ss_d4a0f78dc94273c7f0eedc186569efc091387066.600x338.jpg?t=1762369969',
     shortDescription:
-      'Project Zomboid is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwary. So how will you die? All it takes is a bite..',
+      '||Project Zomboid|| is the ultimate in zombie survival. Alone or in MP: you loot, build, craft, fight, farm and fish in a struggle to survive. A hardcore RPG skillset, a vast map, massively customisable sandbox and a cute tutorial raccoon await the unwary. So how will you die? All it takes is a bite..',
     releaseDate: 'Nov 8, 2013',
     developer: 'The Indie Stone',
     publisher: 'The Indie Stone',
@@ -1183,7 +1095,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/109600/ss_4cebfb468c713e5126c95479c30866fff975bfaf.600x338.jpg?t=1764090086',
     shortDescription:
-      'Neverwinter is a free, action MMORPG based on the acclaimed Dungeons &amp; Dragons fantasy roleplaying game. Epic stories, action combat and classic roleplaying await those heroes courageous enough to enter the fantastic world of Neverwinter!',
+      '||Neverwinter|| is a free, action MMORPG based on the acclaimed Dungeons & Dragons fantasy roleplaying game. Epic stories, action combat and classic roleplaying await those heroes courageous enough to enter the fantastic world of ||Neverwinter||!',
     releaseDate: 'Dec 5, 2013',
     developer: 'Cryptic Studios',
     publisher: 'Arc Games',
@@ -1229,101 +1141,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/109600/ss_fb7861288b09baeb079dcaf531de196488e0e05a.600x338.jpg?t=1764090086',
   },
-  '110800': {
-    name: 'L.A. Noire',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/110800/ss_f76d95ebe8940377460838a6e09d42120c9214b3.600x338.jpg?t=1741117102',
-    shortDescription:
-      "In his fight to climb the ranks and do what's right, LAPD detective Cole Phelps must unravel the truth behind a string of arson attacks, conspiracies, and brutal murders, battling the L.A. underworld and even members of his own department.",
-    releaseDate: 'Nov 8, 2011',
-    developer: 'Team Bondi, Rockstar Leeds',
-    publisher: 'Rockstar Games',
-    tags: ['Adventure', 'Strategy'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 15368,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Detective',
-      'Crime',
-      'Open World',
-      'Noir',
-      'Adventure',
-      'Story Rich',
-      'Mystery',
-      'Investigation',
-      'Third Person',
-      'Singleplayer',
-      'Cinematic',
-      'Action',
-      'Atmospheric',
-      'Mature',
-      'Nudity',
-      'Puzzle',
-      'Third-Person Shooter',
-      'Strategy',
-      'Thriller',
-      '3D Vision',
-    ],
-    appId: 110800,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/110800/ss_4f4fb0ecc8d8e94215f604a3b9ed229034d40bbd.600x338.jpg?t=1741117102',
-  },
-  '113200': {
-    name: 'The Binding of Isaac',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113200/ss_57c7fb142d6b8f7d38ab62d9f39a055a5b2d4c4c.600x338.jpg?t=1643480517',
-    shortDescription: 'Now 20% More Evil with the Free Halloween update!',
-    releaseDate: 'Sep 28, 2011',
-    developer: 'Edmund McMillen, Florian Himsl',
-    publisher: 'Edmund McMillen',
-    tags: ['Action', 'Adventure', 'Indie', 'RPG'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 23162,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Action Roguelike',
-      'Rogue-like',
-      'Indie',
-      'Replay Value',
-      'Difficult',
-      'Procedural Generation',
-      'Dark',
-      'Action',
-      'Top-Down',
-      'Great Soundtrack',
-      'Addictive',
-      'Singleplayer',
-      'Adventure',
-      'Rogue-lite',
-      '2D',
-      'Dungeon Crawler',
-      'Survival',
-      'RPG',
-      'Perma Death',
-      'Bullet Hell',
-    ],
-    appId: 113200,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113200/ss_d2dd031f581bcad380ed5a6065c8908329cf1115.600x338.jpg?t=1643480517',
-  },
   '113400': {
     name: 'APB Reloaded',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113400/ss_2b1bb24716bdd2a4c4c5d7ca7f2e35e72e401125.600x338.jpg?t=1768694391',
     shortDescription:
-      'The world’s first and premier Action MMO Third Person Shooter allows you to choose between two sides of the law. Play as Enforcer or Criminal, customize your gear for the task at hand and hit the streets and play how you want in a city filled with more action this side of a Hollywood blockbuster.',
+      "The world's first and premier Action MMO Third Person Shooter allows you to choose between two sides of the law. Play as Enforcer or Criminal, customize your gear for the task at hand and hit the streets and play how you want in a city filled with more action this side of a Hollywood blockbuster.",
     releaseDate: 'Dec 6, 2011',
     developer: 'Little Orbit',
     publisher: 'Little Orbit',
@@ -1368,7 +1191,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/113420/ss_d001f5b22b28b2cc1fa6a58e0d6dac90da2e876e.600x338.jpg?t=1645468079',
     shortDescription:
-      'Fallen Earth Classic is a free-to-play massively multiplayer online role-playing game developed by Reloaded Productions and operated by Little Orbit. The game takes place in a post-apocalyptic wasteland located around the American Grand Canyon.',
+      '||Fallen Earth Classic|| is a free-to-play massively multiplayer online role-playing game developed by Reloaded Productions and operated by Little Orbit. The game takes place in a post-apocalyptic wasteland located around the American Grand Canyon.',
     releaseDate: 'Feb 22, 2012',
     developer: 'Little Orbit',
     publisher: 'Little Orbit',
@@ -1457,7 +1280,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/200710/ss_06b3b8b537e3766cbb6026c6273d78344327ad24.600x338.jpg?t=1767670785',
     shortDescription:
-      'The adventure continues in Torchlight II! An Action RPG filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and LAN multiplayer.',
+      'The adventure continues in ||Torchlight II||! An Action RPG filled with epic battles, bountiful treasure, and a fully randomized world. Bring your friends along for the journey with online and LAN multiplayer.',
     releaseDate: 'Sep 20, 2012',
     developer: 'Runic Games',
     publisher: 'XD',
@@ -1502,7 +1325,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_5a2e74c1d7290052d36a340fd22b350690e20069.600x338.jpg?t=1750784496',
     shortDescription:
-      'Wolfenstein: The New Order reignites the series that created the first-person shooter genre. Wolfenstein offers a deep game narrative packed with action, adventure and first-person combat.',
+      '||Wolfenstein: The New Order|| reignites the series that created the first-person shooter genre. ||Wolfenstein|| offers a deep game narrative packed with action, adventure and first-person combat.',
     releaseDate: 'May 19, 2014',
     developer: 'MachineGames',
     publisher: 'Bethesda Softworks',
@@ -1519,6 +1342,8 @@ export const steamGameDetails: SteamGameMap = {
     userTags: [
       'FPS',
       'Action',
+      'Old School',
+      'Historical',
       'Alternate History',
       'Shooter',
       'Singleplayer',
@@ -1530,14 +1355,14 @@ export const steamGameDetails: SteamGameMap = {
       'Sci-fi',
       'Stealth',
       'War',
-      'Old School',
       'Adventure',
       'Dystopian ',
       'Great Soundtrack',
       'Robots',
       'Epic',
-      'Historical',
     ],
+    blurredUserTags: ['Alternate History'],
+
     appId: 201810,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/201810/ss_0c5739cdf9028d1feade84f370b7f75d7e090f59.600x338.jpg?t=1750784496',
@@ -1592,7 +1417,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/202970/ss_ac2194dfb623d65003f54450fb1824e5f181b27e.600x338.jpg?t=1748037715',
     shortDescription:
-      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, Call of Duty: Black Ops II propels players into a near future Cold War',
+      'Pushing the boundaries of what fans have come to expect from the record-setting entertainment franchise, ||Call of Duty: Black Ops II|| propels players into a near future Cold War',
     releaseDate: 'Nov 12, 2012',
     developer: 'Treyarch',
     publisher: 'Activision',
@@ -1637,7 +1462,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/203140/ss_02033e4c2383bee25e72d2591fac1b436f5483f4.600x338.jpg?t=1734461136',
     shortDescription:
-      'The original assassin is back! Betrayed by the Agency and hunted by the police, Agent 47 finds himself pursuing redemption in a corrupt and twisted world.',
+      'The original assassin is back! Betrayed by the Agency and hunted by the police, ||Agent 47|| finds himself pursuing redemption in a corrupt and twisted world.',
     releaseDate: 'Nov 19, 2012',
     developer: 'Io-Interactive A/S',
     publisher: 'Io-Interactive A/S',
@@ -1773,7 +1598,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204100/ss_84fc2ba217ce04ec4b782f9f5ccc09d20980f220.600x338.jpg?t=1718391374',
     shortDescription:
-      'No longer a New York City cop, Max Payne moves to São Paulo to protect a wealthy family in an effort to finally escape his troubled past. This complete edition of Max Payne 3 includes the complete original game and all previously released downloadable content.',
+      'No longer a New York City cop, ||Max Payne|| moves to São Paulo to protect a wealthy family in an effort to finally escape his troubled past. This complete edition of ||Max Payne 3|| includes the complete original game and all previously released downloadable content.',
     releaseDate: 'May 31, 2012',
     developer: 'Rockstar Studios',
     publisher: 'Rockstar Games',
@@ -1787,6 +1612,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 23275,
       rating: 'Very Positive',
     },
+    blurredUserTags: ['Bullet Time'],
     userTags: [
       'Action',
       'Third-Person Shooter',
@@ -1818,7 +1644,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204300/ss_cd4736005c05de60c2c8dd9cf500bd9d18a7c1a1.600x338.jpg?t=1763057499',
     shortDescription:
-      'Use your power, show your might! Play this Multiplayer Online Battle Arena (MOBA) game! AWESOMENAUTS combines 2D platforming with team-based strategy and hero based action. Whether you are a new recruit or an intergalactic legend, play AWESOMENAUTS!',
+      'Use your power, show your might! Play this Multiplayer Online Battle Arena (MOBA) game! ||AWESOMENAUTS|| combines 2D platforming with team-based strategy and hero based action. Whether you are a new recruit or an intergalactic legend, play ||AWESOMENAUTS||!',
     releaseDate: 'Aug 1, 2012',
     developer: 'Ronimo Games',
     publisher: 'Atari',
@@ -1908,7 +1734,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204880/ss_d018361380a56bcc8b6fd4a6395df5c114c3e188.600x338.jpg?t=1759332956',
     shortDescription:
-      'Command a space-faring empire in Sins of a Solar Empire: Rebellion, the new stand-alone expansion that combines 4X depth with real-time strategy gameplay.',
+      'Command a space-faring empire in ||Sins of a Solar Empire: Rebellion||, the new stand-alone expansion that combines 4X depth with real-time strategy gameplay.',
     releaseDate: 'Jun 12, 2012',
     developer: 'Ironclad Games Corporation, Stardock Entertainment',
     publisher: 'Stardock Entertainment',
@@ -1953,7 +1779,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/205100/ss_409bb8591d4c8278815510d9be737b57dfc57e06.600x338.jpg?t=1750785977',
     shortDescription:
-      'Dishonored is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With Dishonored’s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.',
+      "||Dishonored|| is an immersive first-person action game that casts you as a supernatural assassin driven by revenge. With ||Dishonored||'s flexible combat system, creatively eliminate your targets as you combine the supernatural abilities, weapons and unusual gadgets at your disposal.",
     releaseDate: 'Oct 8, 2012',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
@@ -1998,7 +1824,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_10f32f4ca88b479648cc08a4b7af269f3cb905ca.600x338.jpg?t=1764670979',
     shortDescription:
-      'Experience the insane antics of Saints Row IV. The Saints have gone from the Penthouse to the White House - but Earth has been invaded and it’s up to you to save it with an arsenal of superpowers and strange weapons, in the wildest open world game ever.',
+      "Experience the insane antics of ||Saints Row IV||. The ||Saints|| have gone from the Penthouse to the White House - but Earth has been invaded and it's up to you to save it with an arsenal of superpowers and strange weapons, in the wildest open world game ever.",
     releaseDate: 'Aug 19, 2013',
     developer: 'Deep Silver Volition',
     publisher: 'Deep Silver',
@@ -2038,57 +1864,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206420/ss_92e54253c19f9536c3932caa7b8b581cea74e665.600x338.jpg?t=1764670979',
   },
-  '206440': {
-    name: 'To the Moon',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206440/ss_9885a7091273a238f86165b85350d35fec639c3f.600x338.jpg?t=1760622861',
-    shortDescription:
-      "A story-driven experience about two doctors traversing backwards through a dying man's memories to artificially fulfill his last wish.",
-    releaseDate: 'Sep 7, 2012',
-    developer: 'Freebird Games',
-    publisher: 'Freebird Games, Serenity Forge',
-    tags: ['Adventure', 'Indie', 'RPG'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
-    allReviewSummary: {
-      count: 19023,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      'Story Rich',
-      'Great Soundtrack',
-      'Indie',
-      'Emotional',
-      'RPGMaker',
-      'Pixel Graphics',
-      'Adventure',
-      'Singleplayer',
-      'Interactive Fiction',
-      'Romance',
-      'RPG',
-      'Short',
-      '2D',
-      'Funny',
-      'Psychological',
-      'Retro',
-      'Cute',
-      'Linear',
-      'Casual',
-      'Female Protagonist',
-    ],
-    appId: 206440,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/206440/ss_5e021433f5a32ec7ad031ce61c52c1ba4b2ecf9f.600x338.jpg?t=1760622861',
-  },
   '207610': {
     name: 'The Walking Dead',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207610/ss_7a2c18f45ed5c6464ae803ae49c32bf3717ae375.600x338.jpg?t=1729702559',
     shortDescription:
-      'A five-part adventure horror series set in the same universe as Robert Kirkman’s award-winning comic book series.',
+      "A five-part adventure horror series set in the same universe as Robert Kirkman's award-winning comic book series.",
     releaseDate: 'Apr 24, 2012',
     developer: 'Telltale Games',
     publisher: 'Skybound Games',
@@ -2128,57 +1909,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/207610/ss_b8880868558943bf6b8e1aa94fe9ab51ea04472a.600x338.jpg?t=1729702559',
   },
-  '209000': {
-    name: 'Batman: Arkham Origins',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/209000/ss_41f68844251c4acbf5d8b68899b212705c6afc0e.600x338.jpg?t=1746562474',
-    shortDescription:
-      'As of December 4, 2016, the online services portion of Batman: Arkham Origins has been retired. We thank those that have joined us to battle. The Single player campaign may still be played and enjoyed offline. For any questions relating to Batman: Arkham Origins, please contact WB Games customer service.',
-    releaseDate: 'Oct 24, 2013',
-    developer: 'WB Games Montreal, Splash Damage',
-    publisher: 'Warner Bros. Interactive Entertainment',
-    tags: ['Action', 'Adventure'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 20369,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Action',
-      'Open World',
-      'Superhero',
-      'Adventure',
-      'Stealth',
-      'Third Person',
-      'Singleplayer',
-      'Multiplayer',
-      'Fighting',
-      "Beat 'em up",
-      'Comic Book',
-      'Detective',
-      'Story Rich',
-      'Atmospheric',
-      'Action-Adventure',
-      'Controller',
-      '3D Vision',
-      'Sandbox',
-      'Third-Person Shooter',
-      'RPG',
-    ],
-    appId: 209000,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/209000/ss_1f444402878ebdef6d54386d2a0cdfacbc7b4ee4.600x338.jpg?t=1746562474',
-  },
   '211420': {
-    name: 'DARK SOULS: Prepare To Die Edition',
+    name: 'DARK SOULS',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211420/ss_5efe46f2e2c65040f529a0d0e7069d6b8bb8e175.600x338.jpg?t=1721682669',
     shortDescription:
-      'Dark Souls will be the most deeply challenging game you play this year. Can you live through a million deaths and earn your legacy?',
+      '||Dark Souls|| will be the most deeply challenging game you play this year. Can you live through a million deaths and earn your legacy?',
     releaseDate: 'Aug 24, 2012',
     developer: 'FromSoftware, Inc.',
     publisher: 'Bandai Namco Entertainment',
@@ -2268,7 +2004,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/211820/ss_2dcc1e0c07f7597edc6556b31b8df9902fddac1a.600x338.jpg?t=1767622909',
     shortDescription:
-      'You’ve fled your home, only to find yourself lost in space with a damaged ship. Your only option is to beam down to the planet below, repair your ship and set off to explore the universe...',
+      "You've fled your home, only to find yourself lost in space with a damaged ship. Your only option is to beam down to the planet below, repair your ship and set off to explore the universe...",
     releaseDate: 'Jul 22, 2016',
     developer: 'Chucklefish',
     publisher: 'Chucklefish',
@@ -2313,7 +2049,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212070/ss_682c5d5a402e587f240951b1e74182ac2bac2bf9.600x338.jpg?t=1768288657',
     shortDescription:
-      'Star Conflict is an action-packed, massively multiplayer space simulation game that puts players in the role of elite pilots engaging in a widespread interplanetary skirmish. The whole world for PVP and PVE!',
+      '||Star Conflict|| is an action-packed, massively multiplayer space simulation game that puts players in the role of elite pilots engaging in a widespread interplanetary skirmish. The whole world for PVP and PVE!',
     releaseDate: 'Feb 27, 2013',
     developer: 'Star Gem Inc.',
     publisher: 'Gaijin Network Ltd',
@@ -2365,7 +2101,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212500/14cb88d7e83bb005fff04e066932bc1e38d90d7d/ss_14cb88d7e83bb005fff04e066932bc1e38d90d7d.600x338.jpg?t=1764807180',
     shortDescription:
-      'Join the world’s greatest fellowship of players in the award-winning online re-creation of J. R. R. Tolkien’s legendary Middle-earth.',
+      "Join the world's greatest fellowship of players in the award-winning online re-creation of J. R. R. Tolkien's legendary Middle-earth.",
     releaseDate: 'Jun 6, 2012',
     developer: 'Standing Stone Games',
     publisher: 'Daybreak Game Company LLC',
@@ -2416,7 +2152,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/212680/ss_052d698926073e8d407a864f0e63a486af24ec0d.600x338.jpg?t=1748969356',
     shortDescription:
-      'This &quot;spaceship simulation roguelike-like&quot; allows you to take your ship and crew on an adventure through a randomly generated galaxy filled with glory and bitter defeat.',
+      'This "spaceship simulation roguelike-like" allows you to take your ship and crew on an adventure through a randomly generated galaxy filled with glory and bitter defeat.',
     releaseDate: 'Sep 14, 2012',
     developer: 'Subset Games',
     publisher: 'Subset Games',
@@ -2461,7 +2197,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/213670/ss_0c331dee16e7b6b9fa6af4dd06c413d72c4b4764.600x338.jpg?t=1765228309',
     shortDescription:
-      'From the perilous battlefields of the fourth-grade playground, a young hero will rise, destined to be South Park’s savior. From the creators of South Park, Trey Parker and Matt Stone, comes an epic quest to become… cool. Introducing South Park: The Stick of Truth.For a thousand years, the battle has been waged.',
+      "From the perilous battlefields of the fourth-grade playground, a young hero will rise, destined to be ||South Park||'s savior. From the creators of ||South Park||, Trey Parker and Matt Stone, comes an epic quest to become… cool. Introducing ||South Park: The Stick of Truth||.For a thousand years, the battle has been waged.",
     releaseDate: 'Mar 3, 2014',
     developer: 'Obsidian Entertainment',
     publisher: 'Ubisoft',
@@ -2506,7 +2242,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/ss_5ff8ca35914eca8f51f3303cf5d94a9f85279e2a.600x338.jpg?t=1763647113',
     shortDescription:
-      'Discover the true meaning of fear in Alien: Isolation, a survival horror set in an atmosphere of constant dread and mortal danger.',
+      'Discover the true meaning of fear in ||Alien: Isolation||, a survival horror set in an atmosphere of constant dread and mortal danger.',
     releaseDate: 'Oct 6, 2014',
     developer:
       'Creative Assembly, Feral Interactive (Mac), Feral Interactive (Linux)',
@@ -2547,57 +2283,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214490/ss_e514869415e3bd913be3f6c0e419cea9f0be17a3.600x338.jpg?t=1763647113',
   },
-  '214950': {
-    name: 'Total War: ROME II - Emperor Edition',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214950/ss_b4ea26bb6fbe4625119fdb1fa48fda313b700b2d.600x338.jpg?t=1768912466',
-    shortDescription:
-      'Emperor Edition is the definitive edition of ROME II, featuring an improved politics system, overhauled building chains, rebalanced battles and improved visuals in both campaign and battleEmperor Edition contains all free feature updates since its release in 2013, which includes bug fixes, balancing, Twitch.',
-    releaseDate: 'Sep 2, 2013',
-    developer: 'CREATIVE ASSEMBLY, Feral Interactive',
-    publisher: 'SEGA, Feral Interactive',
-    tags: ['Strategy'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 31180,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Strategy',
-      'Historical',
-      'Turn-Based Strategy',
-      'Grand Strategy',
-      'Rome',
-      'Tactical',
-      'War',
-      'Multiplayer',
-      'Real Time Tactics',
-      'RTS',
-      'Turn-Based',
-      'Singleplayer',
-      'Online Co-Op',
-      'Simulation',
-      'Co-op',
-      'Turn-Based Tactics',
-      'Moddable',
-      'Action',
-      'Atmospheric',
-      'Education',
-    ],
-    appId: 214950,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/214950/ss_ee35fcc92bddeacb5c0468f1a71c6054639a6fdc.600x338.jpg?t=1768912466',
-  },
   '218230': {
     name: 'PlanetSide 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/218230/ss_b271ef75a7f1d5f95285174a94fe7608dfebf55b.600x338.jpg?t=1765498236',
     shortDescription:
-      'PlanetSide 2 is an all-out planetary war, where thousands of players battle as one across enormous continents. Utilize infantry, ground and air vehicles, and teamwork to destroy your enemies in this revolutionary first-person shooter on a massive scale.',
+      '||PlanetSide 2|| is an all-out planetary war, where thousands of players battle as one across enormous continents. Utilize infantry, ground and air vehicles, and teamwork to destroy your enemies in this revolutionary first-person shooter on a massive scale.',
     releaseDate: 'Nov 20, 2012',
     developer: 'Rogue Planet Games',
     publisher: 'Daybreak Game Company',
@@ -2642,7 +2333,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/218620/ss_67979091e0441e3df7aa885eaa107e2032973869.600x338.jpg?t=1766139387',
     shortDescription:
-      'PAYDAY 2 is an action-packed, four-player co-op shooter that once again lets gamers don the masks of the original PAYDAY crew - Dallas, Hoxton, Wolf and Chains - as they descend on Washington DC for an epic crime spree.',
+      '||PAYDAY 2|| is an action-packed, four-player co-op shooter that once again lets gamers don the masks of the original ||PAYDAY|| crew - Dallas, Hoxton, Wolf and Chains - as they descend on Washington DC for an epic crime spree.',
     releaseDate: 'Aug 13, 2013',
     developer: 'OVERKILL - a Starbreeze Studio.',
     publisher: 'Starbreeze Entertainment',
@@ -2687,7 +2378,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219150/ss_263387d83df0626c58a484baa8f78f9394074b76.600x338.jpg?t=1686261983',
     shortDescription:
-      'Hotline Miami is a high-octane action game overflowing with raw brutality, hard-boiled gunplay and skull crushing close combat.',
+      '||Hotline Miami|| is a high-octane action game overflowing with raw brutality, hard-boiled gunplay and skull crushing close combat.',
     releaseDate: 'Oct 23, 2012',
     developer: 'Dennaton Games',
     publisher: 'Devolver Digital',
@@ -2732,7 +2423,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219640/ss_170b491759e866cf5c3d8f707283e9095383dc5f.600x338.jpg?t=1710276094',
     shortDescription:
-      'Besiege castles and raid villages in Chivalry: Medieval Warfare, a fast-paced medieval first person slasher with a focus on multiplayer battles',
+      'Besiege castles and raid villages in ||Chivalry: Medieval Warfare||, a fast-paced medieval first person slasher with a focus on multiplayer battles',
     releaseDate: 'Oct 16, 2012',
     developer: 'Torn Banner Studios',
     publisher: 'Torn Banner Studios',
@@ -2777,7 +2468,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219740/ss_09bb6bdce4fa085c2c4a9a8f48ea52d3051b44bc.600x338.jpg?t=1763685379',
     shortDescription:
-      'Don’t Starve is an uncompromising wilderness survival game full of science and magic. Enter a strange and unexplored world full of strange creatures, dangers, and surprises. Gather resources to craft items and structures that match your survival style.',
+      "Don't Starve is an uncompromising wilderness survival game full of science and magic. Enter a strange and unexplored world full of strange creatures, dangers, and surprises. Gather resources to craft items and structures that match your survival style.",
     releaseDate: 'Apr 23, 2013',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
@@ -2822,7 +2513,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/219990/ss_163bf567dd0b246da53cf4d7d0724ac8d8a7e075.600x338.jpg?t=1726250949',
     shortDescription:
-      'Enter an apocalyptic fantasy world where humanity is on the brink of extinction, iron is valued above gold and trust is hard earned. This ARPG features complex character development, hundreds of unique items, crafting and quests with choice &amp; consequence.',
+      'Enter an apocalyptic fantasy world where humanity is on the brink of extinction, iron is valued above gold and trust is hard earned. This ARPG features complex character development, hundreds of unique items, crafting and quests with choice & consequence.',
     releaseDate: 'Feb 25, 2016',
     developer: 'Crate Entertainment',
     publisher: 'Crate Entertainment',
@@ -2867,7 +2558,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220200/ss_44f586b0c58ed455c309efd87ce15f46e072242b.600x338.jpg?t=1738037585',
     shortDescription:
-      'In Kerbal Space Program, take charge of the space program for the alien race known as the Kerbals. You have access to an array of parts to assemble fully-functional spacecraft that flies (or doesn’t) based on realistic aerodynamic and orbital physics.',
+      "In ||Kerbal Space Program||, take charge of the space program for the alien race known as the Kerbals. You have access to an array of parts to assemble fully-functional spacecraft that flies (or doesn't) based on realistic aerodynamic and orbital physics.",
     releaseDate: 'Apr 27, 2015',
     developer: 'Squad',
     publisher: 'Private Division',
@@ -2912,7 +2603,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/220240/ss_eed79518c510b7b8ce6fce9d1c350bfcea530993.600x338.jpg?t=1752169206',
     shortDescription:
-      'Discover the dark secrets of a lawless island ruled by violence and take the fight to the enemy as you try to escape. You’ll need more than luck to escape alive!',
+      "Discover the dark secrets of a lawless island ruled by violence and take the fight to the enemy as you try to escape. You'll need more than luck to escape alive!",
     releaseDate: 'Dec 4, 2012',
     developer: 'Ubisoft Montreal, Massive Entertainment, and Ubisoft Shanghai',
     publisher: 'Ubisoft',
@@ -2957,7 +2648,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221040/ss_42cfd0ed6ef0bf03a28e48f1faf25c21777d6fa6.600x338.jpg?t=1768960676',
     shortDescription:
-      'Blending action and survival horror, Resident Evil 6 promises to be the dramatic horror experience of 2013.',
+      'Blending action and survival horror, ||Resident Evil 6|| promises to be the dramatic horror experience of 2013.',
     releaseDate: 'Mar 21, 2013',
     developer: 'Capcom',
     publisher: 'Capcom',
@@ -2996,52 +2687,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 221040,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221040/ss_23c74c345e615e8296d03dc78f328e7a75f8d5d5.600x338.jpg?t=1768960676',
-  },
-  '221380': {
-    name: 'Age of Empires II (Retired)',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221380/ss_f196e3b1c70038e09140f12aebcfdf0ef57915b0.600x338.jpg?t=1705596928',
-    shortDescription:
-      'Age of Empires II has been re-imagined in high definition. With the release of Age of Empires II: Definitive Edition, this product will not be updated further.',
-    releaseDate: 'Apr 9, 2013',
-    developer:
-      'Skybox Labs, Hidden Path Entertainment, Ensemble Studios, Forgotten Empires',
-    publisher: 'Xbox Game Studios',
-    tags: ['Strategy'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Overwhelmingly Positive',
-    },
-    allReviewSummary: {
-      count: 36513,
-      rating: 'Overwhelmingly Positive',
-    },
-    userTags: [
-      'Strategy',
-      'RTS',
-      'Medieval',
-      'Multiplayer',
-      'Classic',
-      'Historical',
-      'Base-Building',
-      'City Builder',
-      'Resource Management',
-      'Singleplayer',
-      'Tactical',
-      'Real-Time',
-      'Co-op',
-      'Competitive',
-      'Replay Value',
-      'Remake',
-      '2D',
-      'Isometric',
-      'Action',
-      'Adventure',
-    ],
-    appId: 221380,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/221380/ss_78cc1f90aaa7f368a05ceb5f2ea29109696736c4.600x338.jpg?t=1705596928',
   },
   '222880': {
     name: 'Insurgency',
@@ -3093,7 +2738,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/223710/ss_06811c73bdf1e754ab15d5a0cc13fb431007cd4d.600x338.jpg?t=1643567513',
     shortDescription:
-      'Cry of Fear is a psychological single-player and co-op horror game set in a deserted town filled with horrific creatures and nightmarish delusions. You play as a young man desperately searching for answers in the cold Scandinavian night, finding his way through the city as he slowly descends into madness.',
+      '||Cry of Fear|| is a psychological single-player and co-op horror game set in a deserted town filled with horrific creatures and nightmarish delusions. You play as a young man desperately searching for answers in the cold Scandinavian night, finding his way through the city as he slowly descends into madness.',
     releaseDate: 'Apr 25, 2013',
     developer: 'Team Psykskallar',
     publisher: 'Team Psykskallar',
@@ -3132,51 +2777,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 223710,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/223710/ss_2c6067afbda80f61deb5b3c1da7041e57adbecf0.600x338.jpg?t=1643567513',
-  },
-  '223750': {
-    name: 'DCS World Steam Edition',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/223750/ss_ca737b2d32aa9dd7eeffc5cffb32a2701cbf9778.600x338.jpg?t=1766080589',
-    shortDescription:
-      'Feel the excitement of flying the Su-25T &quot;Frogfoot&quot; attack jet and the TF-51D &quot;Mustang&quot; in the free-to-play Digital Combat Simulator World!',
-    releaseDate: 'Aug 2, 2013',
-    developer: 'Eagle Dynamics SA',
-    publisher: 'Eagle Dynamics SA',
-    tags: ['Simulation', 'Free To Play'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 377,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Simulation',
-      'Flight',
-      'Free to Play',
-      'Military',
-      'Multiplayer',
-      'Realistic',
-      'VR',
-      'War',
-      'Open World',
-      'Singleplayer',
-      'Shooter',
-      'Action',
-      'Co-op',
-      'Sandbox',
-      'TrackIR',
-      'First-Person',
-      'Tanks',
-      'Strategy',
-      'Massively Multiplayer',
-      'FPS',
-    ],
-    appId: 223750,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/223750/ss_d78c0a3eb87a6d894b47b5028d668b76aac4a9a0.600x338.jpg?t=1766080589',
   },
   '224260': {
     name: 'No More Room in Hell',
@@ -3363,7 +2963,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/231430/ss_253565696b43f08520ea65dc805cda964ee0976e.600x338.jpg?t=1750947634',
     shortDescription:
-      'Experience the ultimate WWII RTS platform with COH2 and its standalone expansions. This package includes the base game, which you can then upgrade by purchasing The Western Front Armies, Ardennes Assault and/or The British Forces. More info in the &quot;About This Game&quot; section below.',
+      'Experience the ultimate WWII RTS platform with COH2 and its standalone expansions. This package includes the base game, which you can then upgrade by purchasing The Western Front Armies, Ardennes Assault and/or The British Forces.',
     releaseDate: 'Jun 25, 2013',
     developer:
       'Relic Entertainment, Feral Interactive (Mac), Feral Interactive (Linux)',
@@ -3410,7 +3010,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/232090/ss_12163b780191f084acf7cdf54e2e98e4129e297a.600x338.jpg?t=1729011001',
     shortDescription:
-      'In KILLING FLOOR 2, players descend into continental Europe after it has been overrun by horrific, murderous clones called Zeds that were created by rogue elements of the Horzine Corporation. 6-player Co-Op &amp; 12-player VS Zed-slaughtering mayhem.',
+      'In ||KILLING FLOOR 2||, players descend into continental Europe after it has been overrun by horrific, murderous clones called Zeds that were created by rogue elements of the Horzine Corporation. 6-player Co-Op & 12-player VS Zed-slaughtering mayhem.',
     releaseDate: 'Nov 18, 2016',
     developer: 'Tripwire Interactive',
     publisher: 'Tripwire Interactive',
@@ -3455,7 +3055,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/233450/ss_0c13ec061d922fbe8ad518eb58487cff09d3fd40.600x338.jpg?t=1759221867',
     shortDescription:
-      'Only the world’s most ruthless Warden can contain the world’s most ruthless inmates. Design and develop your personalized penitentiary in Prison Architect.',
+      "Only the world's most ruthless Warden can contain the world's most ruthless inmates. Design and develop your personalized penitentiary in ||Prison Architect||.",
     releaseDate: 'Oct 6, 2015',
     developer: 'Introversion Software, Double Eleven',
     publisher: 'Paradox Interactive',
@@ -3545,7 +3145,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/234140/ss_b8abff49c2bb74a12ca6659d991df6d8bd8ce9e1.600x338.jpg?t=1763747885',
     shortDescription:
-      'Play as Mad Max, a reluctant hero and survivor who wants nothing more than to leave the madness behind and find solace.',
+      'Play as ||Mad Max||, a reluctant hero and survivor who wants nothing more than to leave the madness behind and find solace.',
     releaseDate: 'Sep 1, 2015',
     developer: 'Avalanche Studios',
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
@@ -3590,7 +3190,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235540/ss_4625ab030356a0a9d5f05af4a109578813d592da.600x338.jpg?t=1761316136',
     shortDescription:
-      'Vermintide is an epic co-operative action combat adventure set in the End Times of the iconic Warhammer Fantasy world.',
+      'Vermintide is an epic co-operative action combat adventure set in the End Times of the iconic ||Warhammer|| Fantasy world.',
     releaseDate: 'Oct 23, 2015',
     developer: 'Fatshark',
     publisher: 'Fatshark',
@@ -3631,7 +3231,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235540/ss_f4f54547edde965138aceaff539c836a1f31f6f0.600x338.jpg?t=1761316136',
   },
   '235600': {
-    name: 'Tom Clancy’s Splinter Cell Blacklist',
+    name: "Tom Clancy's Splinter Cell Blacklist",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/235600/ss_b85d9cae27471119f88a58ce6de1ae56ce8f4fba.600x338.jpg?t=1764775433',
     shortDescription:
@@ -3680,7 +3280,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236390/fe3f2ae7e236f70c8280dd1836ea58f23d57a9e6/ss_fe3f2ae7e236f70c8280dd1836ea58f23d57a9e6.600x338.jpg?t=1769516831',
     shortDescription:
-      'War Thunder is the most comprehensive free-to-play, cross-platform, MMO military game dedicated to aviation, armoured vehicles, and naval craft, from the early 20th century to the most advanced modern combat units. Join now and take part in major battles on land, in the air, and at sea.',
+      '||War Thunder|| is the most comprehensive free-to-play, cross-platform, MMO military game dedicated to aviation, armoured vehicles, and naval craft, from the early 20th century to the most advanced modern combat units. Join now and take part in major battles on land, in the air, and at sea.',
     releaseDate: 'Aug 15, 2013',
     developer: 'Gaijin Entertainment',
     publisher: 'Gaijin Network Ltd',
@@ -3725,8 +3325,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/236430/ss_811a32f3abdf906cce50e204e849880e71583740.600x338.jpg?t=1726158600',
     shortDescription:
-      'Developed by FROM SOFTWARE, DARK SOULS II is the highly anticipated sequel to the gruelling 2011 breakout hit Dark Souls. The unique old-school action RPG experience captivated imaginations of gamers worldwide with incredible challenge and intense emotional reward.',
+      'Developed by ||FROM SOFTWARE||, ||DARK SOULS II|| is the highly anticipated sequel to the gruelling 2011 breakout hit ||Dark Souls||. The unique old-school ||action RPG|| experience captivated imaginations of gamers worldwide with incredible challenge and intense emotional reward.',
     releaseDate: 'Apr 25, 2014',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'FromSoftware, Inc.',
     publisher: 'BANDAI NAMCO Entertainment, FromSoftware, Inc.',
     tags: ['Action', 'RPG'],
@@ -3815,7 +3416,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238090/ss_214f6e7eb0b5d34597126a7df95f1394aa728a9e.600x338.jpg?t=1601483606',
     shortDescription:
-      'Sniper Elite 3 is a tactical third-person shooter that combines stealth, gameplay choice and genre-defining ballistics with huge, open levels and the exotic terrain of World War 2 North Africa.',
+      '||Sniper Elite 3|| is a tactical third-person shooter that combines stealth, gameplay choice and genre-defining ballistics with huge, open levels and the exotic terrain of World War 2 North Africa.',
     releaseDate: 'Jun 27, 2014',
     developer: 'Rebellion',
     publisher: 'Rebellion',
@@ -3860,7 +3461,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238320/ss_de19e8b1f41d9594bf64d02424a0ec5046c733f5.600x338.jpg?t=1666817106',
     shortDescription:
-      "Hell is an experiment you can't survive in Outlast, a first-person survival horror game developed by veterans of some of the biggest game franchises in history. As investigative journalist Miles Upshur, explore Mount Massive Asylum and try to survive long enough to discover its terrible secret... if you dare.",
+      "Hell is an experiment you can't survive in ||Outlast||, a first-person survival horror game developed by veterans of some of the biggest game franchises in history. As investigative journalist Miles Upshur, explore Mount Massive Asylum and try to survive long enough to discover its terrible secret... if you dare.",
     releaseDate: 'Sep 4, 2013',
     developer: 'Red Barrels',
     publisher: 'Red Barrels',
@@ -3905,7 +3506,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238460/ss_b5a52d1a1db2642255f95263c0f41860e2985556.600x338.jpg?t=1733782954',
     shortDescription:
-      'Welcome to BattleBlock Theater! You’ve got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious theater inhabited by highly technological felines.',
+      "Welcome to ||BattleBlock Theater||! You've got no where to go but up...on stage. Play single player or co-op to free your friends and save Hatty Hattington! Jump, solve and battle your way through a mysterious theater inhabited by highly technological felines.",
     releaseDate: 'May 15, 2014',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -3950,7 +3551,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/238960/726a64f7bc97d93ff0c0d4c416babfc5b297b236/ss_726a64f7bc97d93ff0c0d4c416babfc5b297b236.600x338.jpg?t=1761681686',
     shortDescription:
-      'You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. Path of Exile is an online Action RPG set in a dark fantasy world. The game is completely free and will never be pay-to-win.',
+      'You are an Exile, struggling to survive on the dark continent of Wraeclast, as you fight to earn power that will allow you to exact your revenge against those who wronged you. ||Path of Exile|| is an online Action RPG set in a dark fantasy world. The game is completely free and will never be pay-to-win.',
     releaseDate: 'Oct 23, 2013',
     developer: 'Grinding Gear Games',
     publisher: 'Grinding Gear Games',
@@ -4137,7 +3738,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/241930/ss_a7a02628b413b410a91402cc24fe54a54b50a9d3.600x338.jpg?t=1757538323',
     shortDescription:
-      'Fight through Mordor and uncover the truth of the spirit that compels you, discover the origins of the Rings of Power, build your legend and ultimately confront the evil of Sauron in this new chronicle of Middle-earth.',
+      'Fight through ||Mordor|| and uncover the truth of the spirit that compels you, discover the origins of the Rings of Power, build your legend and ultimately confront the evil of Sauron in this new chronicle of ||Middle-earth||.',
     releaseDate: 'Sep 30, 2014',
     developer: 'Monolith Productions',
     publisher: 'Warner Bros. Interactive Entertainment, Warner Bros. Games',
@@ -4227,7 +3828,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/242920/ss_888a226267a065f2afa2a0d3a75200c2ec928ca7.600x338.jpg?t=1667584747',
     shortDescription:
-      'In this city-building strategy game, you control a group of exiled travelers who decide to restart their lives in a new land. They have only the clothes on their backs and a cart filled with supplies from their homeland. The townspeople of Banished are your primary resource.',
+      'In this city-building strategy game, you control a group of exiled travelers who decide to restart their lives in a new land. They have only the clothes on their backs and a cart filled with supplies from their homeland. The townspeople of ||Banished|| are your primary resource.',
     releaseDate: 'Feb 18, 2014',
     developer: 'Shining Rock Software LLC',
     publisher: 'Shining Rock Software LLC',
@@ -4272,7 +3873,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244210/ss_cc532907a14b12117825c609b9c941768ce87e51.600x338.jpg?t=1754985171',
     shortDescription:
-      'Assetto Corsa v1.16 introduces the new &quot;Laguna Seca&quot; laser-scanned track, 7 new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for further info!',
+      '||Assetto Corsa|| v1.16 introduces the new "Laguna Seca" laser-scanned track, 7 new cars among which the eagerly awaited Alfa Romeo Giulia Quadrifoglio! Check the changelog for further info!',
     releaseDate: 'Dec 19, 2014',
     developer: 'Kunos Simulazioni',
     publisher: 'Kunos Simulazioni',
@@ -4317,7 +3918,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244450/ss_a9061546cf7aa8e3fe8317da4a330d23aea99c9e.600x338.jpg?t=1768394055',
     shortDescription:
-      'Men of War: Assault Squad 2 expands the real-time tactics series with new skirmish missions, massive multiplayer battles, enhanced visuals, improved AI, and full Direct Control. Command five factions across 65 maps, 250 vehicles, and 200 soldiers in one of the most detailed WWII RTS experiences.',
+      '||Men of War: Assault Squad 2|| expands the real-time tactics series with new skirmish missions, massive multiplayer battles, enhanced visuals, improved AI, and full Direct Control. Command five factions across 65 maps, 250 vehicles, and 200 soldiers in one of the most detailed WWII RTS experiences.',
     releaseDate: 'May 15, 2014',
     developer: 'Digitalmindsoft',
     publisher: 'Fulqrum Publishing',
@@ -4362,7 +3963,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/244850/ss_11909f13f34798e70b16bdb312104c3d8b90f083.600x338.jpg?t=1768927358',
     shortDescription:
-      'Space Engineers is a sandbox engineering game where you design and build ships, stations, and planetary bases in a fully destructible environment. Explore planets and space, mine resources, survive hazards, and engage in combat alone or with friends in Creative or Survival modes.',
+      '||Space Engineers|| is a sandbox engineering game where you design and build ships, stations, and planetary bases in a fully destructible environment. Explore planets and space, mine resources, survive hazards, and engage in combat alone or with friends in Creative or Survival modes.',
     releaseDate: 'Feb 28, 2019',
     developer: 'Keen Software House',
     publisher: 'Keen Software House',
@@ -4452,7 +4053,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/ss_9a5c4d45543113ad9de9d9b928f6fadf1fa17d25.600x338.jpg?t=1765804786',
     shortDescription:
-      "Plague Inc: Evolved is a unique mix of high strategy and terrifyingly realistic simulation. Your pathogen has just infected 'Patient Zero' - now you must bring about the end of human history by evolving a deadly, global Plague whilst adapting against everything humanity can do to defend itself.",
+      "||Plague Inc: Evolved|| is a unique mix of high strategy and terrifyingly realistic simulation. Your pathogen has just infected 'Patient Zero' - now you must bring about the end of human history by evolving a deadly, global Plague whilst adapting against everything humanity can do to defend itself.",
     releaseDate: 'Feb 18, 2016',
     developer: 'Ndemic Creations',
     publisher: 'Ndemic Creations',
@@ -4488,6 +4089,7 @@ export const steamGameDetails: SteamGameMap = {
       'Early Access',
       'Survival',
     ],
+    blurredUserTags: ['Outbreak Sim'],
     appId: 246620,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/246620/ss_7feb2722dd1e712cb5af17356fcec7fa393a2339.600x338.jpg?t=1765804786',
@@ -4497,7 +4099,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/250900/ss_25a4a446a433218d41a7e87e35b60c297e68e7a4.600x338.jpg?t=1731977365',
     shortDescription:
-      'The Binding of Isaac: Rebirth is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac’s form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.',
+      "||The Binding of Isaac: Rebirth|| is a randomly generated action RPG shooter with heavy Rogue-like elements. Following Isaac on his journey players will find bizarre treasures that change Isaac's form giving him super human abilities and enabling him to fight off droves of mysterious creatures, discover secrets and fight his way to safety.",
     releaseDate: 'Nov 4, 2014',
     developer: 'Nicalis, Inc., Edmund McMillen',
     publisher: 'Nicalis, Inc.',
@@ -4542,7 +4144,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/251570/766ed3debfe7b894fbb5650aa89fa213fa254d5d/ss_766ed3debfe7b894fbb5650aa89fa213fa254d5d.600x338.jpg?t=1766024790',
     shortDescription:
-      '7 Days to Die is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!',
+      '||7 Days to Die|| is an open-world game that is a unique combination of first-person shooter, survival horror, tower defense, and role-playing games. Play the definitive zombie survival sandbox RPG that came first. Navezgane awaits!',
     releaseDate: 'Jul 25, 2024',
     developer: 'The Fun Pimps',
     publisher: 'The Fun Pimps Entertainment LLC',
@@ -4587,7 +4189,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252490/ss_271feae67943bdc141c1249aba116349397e9ba9.600x338.jpg?t=1761667247',
     shortDescription:
-      'The only aim in Rust is to survive. Everything wants you to die - the island’s wildlife, other inhabitants, the environment, and other survivors. Do whatever it takes to last another night.',
+      "The only aim in ||Rust|| is to survive. Everything wants you to die - the island's wildlife, other inhabitants, the environment, and other survivors. Do whatever it takes to last another night.",
     releaseDate: 'Feb 8, 2018',
     developer: 'Facepunch Studios',
     publisher: 'Facepunch Studios',
@@ -4632,7 +4234,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/002820f64f665e2cb81861bb43d32a726d0bc411/ss_002820f64f665e2cb81861bb43d32a726d0bc411.600x338.jpg?t=1765385510',
     shortDescription:
-      'Rocket League is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. Rocket League includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and...',
+      '||Rocket League|| is a high-powered hybrid of arcade-style soccer and vehicular mayhem with easy-to-understand controls and fluid, physics-driven competition. ||Rocket League|| includes casual and competitive Online Matches, a fully-featured offline Season Mode, special “Mutators” that let you change the rules entirely, hockey and...',
     releaseDate: 'Jul 6, 2015',
     developer: 'Psyonix LLC',
     publisher: 'Psyonix LLC',
@@ -4677,7 +4279,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/255710/ss_0754001c88ad4dbfff92faf9a97e8d87cf3f8840.600x338.jpg?t=1767883758',
     shortDescription:
-      'Cities: Skylines is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.',
+      '||Cities: Skylines|| is a modern take on the classic city simulation. The game introduces new game play elements to realize the thrill and hardships of creating and maintaining a real city whilst expanding on some well-established tropes of the city building experience.',
     releaseDate: 'Mar 10, 2015',
     developer: 'Colossal Order',
     publisher: 'Paradox Interactive',
@@ -4722,7 +4324,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257510/ss_8061dc63743404a7829eabdd47590421652c318d.600x338.jpg?t=1744327639',
     shortDescription:
-      'The Talos Principle is a first-person puzzle game in the tradition of philosophical science fiction. Made by Croteam and written by Tom Jubert (FTL, The Swapper) and Jonas Kyratzes (The Sea Will Claim Everything).',
+      '||The Talos Principle|| is a first-person puzzle game in the tradition of philosophical science fiction. Made by Croteam and written by Tom Jubert (FTL, The Swapper) and Jonas Kyratzes (The Sea Will Claim Everything).',
     releaseDate: 'Dec 11, 2014',
     developer: 'Croteam',
     publisher: 'Devolver Digital, Croteam',
@@ -4763,7 +4365,14 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/257510/ss_56f8a07f7c2ac684cfec3b17bc0668c24b905b4b.600x338.jpg?t=1744327639',
   },
   '261550': {
-    name: 'Mount & Blade II: Bannerlord',
+    name: 'Mount and Blade II: Bannerlord',
+    searchTerms: [
+      'Mount and Blade 2: Bannerlord',
+      'Mount & Blade 2: Bannerlord',
+      'Mount & Blade II: Bannerlord',
+    ],
+    blurTitleAndAsAmpersand: true,
+    blurScreenshotQuarter: 'bottom',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261550/ss_569257e92fd31d58a6fe08053de637071b4518d3.600x338.jpg?t=1764252300',
     shortDescription:
@@ -4773,6 +4382,7 @@ export const steamGameDetails: SteamGameMap = {
     publisher: 'TaleWorlds Entertainment',
     tags: ['Action', 'Indie', 'RPG', 'Simulation', 'Strategy'],
     features: [],
+    clueOrder: ['tags', 'desc', 'details'],
     recentReviewSummary: {
       count: 0,
       rating: 'Very Positive',
@@ -4812,7 +4422,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261570/ss_c617379b9d195eed0342f3ecf86898513e702b96.600x338.jpg?t=1667504148',
     shortDescription:
-      '“Ori and the Blind Forest” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC.',
+      '“||Ori and the Blind Forest||” tells the tale of a young orphan destined for heroics, through a visually stunning action-platformer crafted by Moon Studios for PC.',
     releaseDate: 'Mar 10, 2015',
     developer: 'Moon Studios GmbH',
     publisher: 'Xbox Game Studios',
@@ -4857,7 +4467,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/261640/ss_d7c5a2288d1f74f0f93c27d1cd3353651625f664.600x338.jpg?t=1750081341',
     shortDescription:
-      'Launch into the Borderlands universe and shoot ‘n’ loot your way through a brand new adventure that rockets you onto Pandora’s moon in Borderlands: The Pre-Sequel!',
+      "Launch into the ||Borderlands|| universe and shoot ‘n' loot your way through a brand new adventure that rockets you onto Pandora's moon in ||Borderlands: The Pre-Sequel||!",
     releaseDate: 'Oct 13, 2014',
     developer: '2K Australia, Gearbox Software, Aspyr (Linux)',
     publisher: '2K, Aspyr (Linux)',
@@ -4902,7 +4512,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262060/ss_04572edc979601b038756f87861c6f8c6c337806.600x338.jpg?t=1769780578',
     shortDescription:
-      'Darkest Dungeon is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and lead a team of flawed heroes against unimaginable horrors, stress, disease, and the ever-encroaching dark. Can you keep your heroes together when all hope is lost?',
+      '||Darkest Dungeon|| is a challenging gothic roguelike turn-based RPG about the psychological stresses of adventuring. Recruit, train, and lead a team of flawed heroes against unimaginable horrors, stress, disease, and the ever-encroaching dark. Can you keep your heroes together when all hope is lost?',
     releaseDate: 'Jan 19, 2016',
     developer: 'Red Hook Studios',
     publisher: 'Red Hook Studios',
@@ -4947,7 +4557,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/262410/ss_32df72fbb8d646419bb22b569264143342727161.600x338.jpg?t=1761957215',
     shortDescription:
-      'World of Guns: Gun Disassembly lets you delve into the inner workings of guns from the largest gears to the smallest screws',
+      '||World of Guns: Gun Disassembly|| lets you delve into the inner workings of guns from the largest gears to the smallest screws',
     releaseDate: 'May 21, 2014',
     developer: 'Noble Empire Corp.',
     publisher: 'Noble Empire Corp.',
@@ -5044,7 +4654,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/ss_a95cdbe487dbabf6621962fc92f438e26c5fdfd3.600x338.jpg?t=1769542173',
     shortDescription:
-      'XCOM 2 is the sequel to XCOM: Enemy Unknown, the 2012 award-winning strategy game of the year. Earth has changed and is now under alien rule. Facing impossible odds you must rebuild XCOM, and ignite a global resistance to reclaim our world and save humanity.',
+      '||XCOM 2|| is the sequel to ||XCOM: Enemy Unknown||, the 2012 award-winning strategy game of the year. Earth has changed and is now under alien rule. Facing impossible odds you must rebuild ||XCOM||, and ignite a global resistance to reclaim our world and save humanity.',
     releaseDate: 'Feb 4, 2016',
     developer:
       'Firaxis Games, Feral Interactive (Mac), Feral Interactive (Linux)',
@@ -5090,7 +4700,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_e3096a5555cb77d88db165c83d5ef3a24af1354a.600x338.jpg?t=1709068852',
     shortDescription:
-      'Cuphead is a classic run and gun action game heavily focused on boss battles. Inspired by cartoons of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional hand drawn cel animation, watercolor backgrounds, and original jazz recordings.',
+      '||Cuphead|| is a classic run and gun action game heavily focused on boss battles. Inspired by cartoons of the 1930s, the visuals and audio are painstakingly created with the same techniques of the era, i.e. traditional hand drawn cel animation, watercolor backgrounds, and original jazz recordings.',
     releaseDate: 'Sep 29, 2017',
     developer: 'Studio MDHR Entertainment Inc.',
     publisher: 'Studio MDHR Entertainment Inc.',
@@ -5126,6 +4736,7 @@ export const steamGameDetails: SteamGameMap = {
       'Souls-like',
       'Funny',
     ],
+    blurredUserTags: ['Cartoon', 'Hand-drawn'],
     appId: 268910,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268910/ss_615455299355eaf552c638c7ea5b24a8b46e02dd.600x338.jpg?t=1709068852',
@@ -5135,7 +4746,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_758470ddbd783e7ff0caac1a59b7fde4a74bbb67.600x338.jpg?t=1764952453',
     shortDescription:
-      'Experience legendary American trucks and deliver various cargoes across sunny California, sandy Nevada, and the Grand Canyon State of Arizona. American Truck Simulator takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the States.',
+      'Experience legendary ||American trucks|| and deliver various cargoes across sunny ||California||, sandy ||Nevada||, and the ||Grand Canyon State of Arizona||. ||American Truck Simulator|| takes you on a journey through the breathtaking landscapes and widely recognized landmarks around the ||States||.',
     releaseDate: 'Feb 2, 2016',
     developer: 'SCS Software',
     publisher: 'SCS Software',
@@ -5175,57 +4786,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/270880/ss_ba330377eb0a5bffcdbe10f89d3670b83ad55b3f.600x338.jpg?t=1764952453',
   },
-  '271590': {
-    name: 'Grand Theft Auto V Legacy',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/ss_32aa18ab3175e3002217862dd5917646d298ab6b.600x338.jpg?t=1765387725',
-    shortDescription:
-      'Grand Theft Auto V for PC offers players the option to explore the award-winning world of Los Santos and Blaine County in resolutions of up to 4k and beyond, as well as the chance to experience the game running at 60 frames per second.',
-    releaseDate: 'Apr 13, 2015',
-    developer: 'Rockstar North',
-    publisher: 'Rockstar Games',
-    tags: ['Action', 'Adventure'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 575751,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Open World',
-      'Action',
-      'Multiplayer',
-      'Crime',
-      'Automobile Sim',
-      'Third Person',
-      'First-Person',
-      'Mature',
-      'Shooter',
-      'Adventure',
-      'Singleplayer',
-      'Third-Person Shooter',
-      'Racing',
-      'Co-op',
-      'Sandbox',
-      'Atmospheric',
-      'Funny',
-      'Great Soundtrack',
-      'Comedy',
-      'Moddable',
-    ],
-    appId: 271590,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/271590/ss_2744f112fa060320d191a50e8b3a92441a648a56.600x338.jpg?t=1765387725',
-  },
   '274940': {
     name: 'Depth',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/274940/ss_4c4113da58c2c855d9988761ac0b9befd1e78352.600x338.jpg?t=1763685233',
     shortDescription:
-      'Play as a shark or a diver in a dark aquatic world and overcome your enemies by employing cunning, teamwork, and stealth. Depth blends tension and visceral action as you team up against AI or be matched with other players in heart pounding combat.',
+      'Play as a shark or a diver in a dark aquatic world and overcome your enemies by employing cunning, teamwork, and stealth. ||Depth|| blends tension and visceral action as you team up against AI or be matched with other players in heart pounding combat.',
     releaseDate: 'Nov 3, 2014',
     developer: 'Ammobox Studios',
     publisher: 'Ammobox Studios',
@@ -5268,13 +4834,14 @@ export const steamGameDetails: SteamGameMap = {
   '275850': {
     name: "No Man's Sky",
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/d8de91e4a87f0e2c0fb70c84bd0f798bd4617eaf/ss_d8de91e4a87f0e2c0fb70c84bd0f798bd4617eaf.600x338.jpg?t=1765800348',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/ss_5630493e04c96bb373c37aa3373986da43997d32.600x338.jpg?t=1765800348',
     shortDescription:
-      "No Man's Sky is a game about exploration and survival in an infinite procedurally generated universe.",
+      "||No Man's Sky|| is a game about exploration and survival in an infinite procedurally generated ||universe||.",
     releaseDate: 'Aug 12, 2016',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'Hello Games',
     publisher: 'Hello Games',
-    tags: ['Action', 'Adventure'],
+    tags: ["Action', 'Adventure"],
     features: [],
     recentReviewSummary: {
       count: 0,
@@ -5308,7 +4875,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 275850,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/275850/71f533720e58e1fb5dd61f23388abfe4f9caa6b5/ss_71f533720e58e1fb5dd61f23388abfe4f9caa6b5.600x338.jpg?t=1765800348',
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/275850/ss_db8d86001769178df5c07f0f29af3b070ecf47c8.600x338.jpg?t=1765800348',
   },
   '281990': {
     name: 'Stellaris',
@@ -5360,7 +4927,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/282070/ss_9a8e8724d4bc5a1ffc25b5aa52ed0400a856db6b.600x338.jpg?t=1765218571',
     shortDescription:
-      'In This War Of Mine you do not play as an elite soldier, rather a group of civilians trying to survive in a besieged city; struggling with lack of food, medicine and constant danger from snipers and hostile scavengers. The game provides an experience of war seen from an entirely new angle.',
+      'In ||This War Of Mine|| you do not play as an elite soldier, rather a group of civilians trying to survive in a besieged city; struggling with lack of food, medicine and constant danger from snipers and hostile scavengers. The game provides an experience of war seen from an entirely new angle.',
     releaseDate: 'Nov 14, 2014',
     developer: '11 bit studios',
     publisher: '11 bit studios',
@@ -5407,8 +4974,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'A dynamic soft-body physics vehicle simulator capable of doing just about anything.',
     releaseDate: 'May 29, 2015',
-    developer: 'BeamNG',
-    publisher: 'BeamNG',
+    developer: '||BeamNG||',
+    publisher: '||BeamNG||',
     tags: ['Racing', 'Simulation', 'Early Access'],
     features: [],
     recentReviewSummary: {
@@ -5445,57 +5012,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/284160/ss_50b8ba7ff80d50af3bd6b1b4e326849555a952a2.600x338.jpg?t=1769542627',
   },
-  '285900': {
-    name: 'Gang Beasts',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285900/ss_0476d6b0403313cb4fa727fd99146762eb80f611.600x338.jpg?t=1732109683',
-    shortDescription:
-      'Gang Beasts is a silly multiplayer party game with surly gelatinous characters, brutal slapstick fight sequences, and absurd hazardous environments, set in the mean streets of Beef City.',
-    releaseDate: 'Dec 12, 2017',
-    developer: 'Boneloaf, Rocket Science',
-    publisher: 'Boneloaf',
-    tags: ['Action', 'Adventure', 'Casual', 'Indie', 'Simulation'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 23909,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Funny',
-      'Physics',
-      'Multiplayer',
-      'Colorful',
-      'Party Game',
-      'Local Multiplayer',
-      'Party',
-      'Fighting',
-      'Comedy',
-      '3D Fighter',
-      'Casual',
-      'Soundtrack',
-      '4 Player Local',
-      'Co-op',
-      'Family Friendly',
-      "Beat 'em up",
-      'Memes',
-      'Third Person',
-      'Singleplayer',
-      'Indie',
-    ],
-    appId: 285900,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/285900/ss_0e7190e5cee562fa851f23bfeb65b336550a6d18.600x338.jpg?t=1732109683',
-  },
   '286160': {
     name: 'Tabletop Simulator',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/286160/ss_203970c1dd0b8985f9f5c59767517bb7144fb6e9.600x338.jpg?t=1765809682',
     shortDescription:
-      'Tabletop Simulator is the only simulator where you can let your aggression out by flipping the table! There are no rules to follow: just you, a physics sandbox, and your friends. Make your own online board games or play the thousands of community created mods. Unlimited gaming possibilities!',
+      '||Tabletop Simulator|| is the only simulator where you can let your aggression out by flipping the table! There are no rules to follow: just you, a physics sandbox, and your friends. Make your own online board games or play the thousands of community created mods. Unlimited gaming possibilities!',
     releaseDate: 'Jun 5, 2015',
     developer: 'Berserk Games',
     publisher: 'Berserk Games',
@@ -5540,7 +5062,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/286690/ss_b31b38d3d8208f30f49d94c84c73ae558006fbcd.600x338.jpg?t=1741110084',
     shortDescription:
-      "In 2013 the world was devastated by an apocalyptic event, annihilating almost all mankind and turning the Earth's surface into a poisonous wasteland. A handful of survivors took refuge in the depths of the Moscow underground, and human civilization entered a new Dark Age. The year is 2033.",
+      "In 2013 the world was devastated by an apocalyptic event, annihilating almost all mankind and turning the Earth's surface into a poisonous wasteland. A handful of survivors took refuge in the depths of the Moscow underground, and human civilization entered a new Dark Age. The year is ||2033||.",
     releaseDate: 'Aug 25, 2014',
     developer: '4A Games',
     publisher: 'Deep Silver',
@@ -5583,9 +5105,9 @@ export const steamGameDetails: SteamGameMap = {
   '287700': {
     name: 'METAL GEAR SOLID V: THE PHANTOM PAIN',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/287700/ss_258e5c725ba2da8a2fc2ee779ae75ba4b0aac0c6.600x338.jpg?t=1727849445',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/287700/ss_09c11fffa963cdeee8dba42c5a8f53a95b64dbf3.600x338.jpg?t=1727849445',
     shortDescription:
-      'Ushering in a new era for the METAL GEAR franchise with cutting-edge technology powered by the Fox Engine, METAL GEAR SOLID V: The Phantom Pain, will provide players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.',
+      'Ushering in a new era for the ||METAL GEAR|| franchise with cutting-edge technology powered by the Fox Engine, ||METAL GEAR SOLID V: The Phantom Pain||, will provide players a first-rate gaming experience as they are offered tactical freedom to carry out open-world missions.',
     releaseDate: 'Sep 1, 2015',
     developer: 'KONAMI',
     publisher: 'KONAMI',
@@ -5623,14 +5145,14 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 287700,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/287700/ss_d4c1b17dad6eeeef8e1ade44a66d8e644afcc4e6.600x338.jpg?t=1727849445',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/287700/ss_70d786ca18e4a78f6ba33f6d219584f825e0571c.600x338.jpg?t=1727849445',
   },
   '289070': {
-    name: 'Sid Meier’s Civilization VI',
+    name: "Sid Meier's Civilization VI",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289070/ss_12cc6e1f4084de5bc0f66bfdbe3aaf3e59388b53.600x338.jpg?t=1740607040',
     shortDescription:
-      'Expand your empire, advance your culture and go head-to-head against history’s greatest leaders. Will your civilization stand the test of time?',
+      "Expand your empire, advance your culture and go head-to-head against history's greatest leaders. Will your ||civilization|| stand the test of time?",
     releaseDate: 'Oct 20, 2016',
     developer: 'Firaxis Games, Aspyr (Mac), Aspyr (Linux)',
     publisher: '2K, Aspyr (Mac), Aspyr (Linux)',
@@ -5675,7 +5197,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289130/ss_ec8df411b2dd4000c57936e640a9d3d9b9c91c57.600x338.jpg?t=1762445229',
     shortDescription:
-      'ENDLESS Legend is a 4X turn-based fantasy strategy game by the creators of ENDLESS Space and Dungeon of the ENDLESS. Control every aspect of your civilization as you struggle to save your homeworld Auriga. Create your own Legend!',
+      '||ENDLESS Legend|| is a 4X turn-based fantasy strategy game by the creators of ||ENDLESS|| Space and Dungeon of the ||ENDLESS||. Control every aspect of your civilization as you struggle to save your homeworld Auriga. Create your own Legend!',
     releaseDate: 'Sep 18, 2014',
     developer: 'AMPLITUDE Studios',
     publisher: 'AMPLITUDE Studios',
@@ -5760,57 +5282,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/289650/ss_d825c8fd7c5472d17732bf3480760dd88924e551.600x338.jpg?t=1754525874',
   },
-  '291480': {
-    name: 'Warface: Clutch',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291480/ss_889d1cf3bc48c39e1f739613d492bf1e81500eba.600x338.jpg?t=1766101316',
-    shortDescription:
-      '𝗪𝗮𝗿𝗳𝗮𝗰𝗲: 𝗖𝗹𝘂𝘁𝗰𝗵 𝗶𝘀 𝗮 𝗰𝗼𝗻𝘁𝗲𝗺𝗽𝗼𝗿𝗮𝗿𝘆 𝗠𝗠𝗢 𝗳𝗶𝗿𝘀𝘁 𝗽𝗲𝗿𝘀𝗼𝗻 𝘀𝗵𝗼𝗼𝘁𝗲𝗿 𝘄𝗶𝘁𝗵 𝗺𝗶𝗹𝗹𝗶𝗼𝗻𝘀 𝗼𝗳 𝗳𝗮𝗻𝘀 𝗮𝗿𝗼𝘂𝗻𝗱 𝘁𝗵𝗲 𝘄𝗼𝗿𝗹𝗱. 𝗜𝘁 𝗼𝗳𝗳𝗲𝗿𝘀 𝗶𝗻𝘁𝗲𝗻𝘀𝗲 𝗣𝘃𝗣 𝗺𝗼𝗱𝗲𝘀, 𝗰𝗼𝗺𝗽𝗲𝗹𝗹𝗶𝗻𝗴 𝗣𝘃𝗘 𝗺𝗶𝘀𝘀𝗶𝗼𝗻𝘀 𝗮𝗻𝗱 𝗿𝗮𝗶𝗱𝘀 𝘁𝗵𝗮𝘁 𝘆𝗼𝘂 𝗰𝗮𝗻 𝗰𝗵𝗮𝗹𝗹𝗲𝗻𝗴𝗲 𝘄𝗶𝘁𝗵 𝗳𝗶𝘃𝗲 𝗱𝗶𝘃𝗲𝗿𝘀𝗲 𝗰𝗹𝗮𝘀𝘀𝗲𝘀 𝗮𝗻𝗱 𝗮 𝗰𝗼𝗹𝗼𝘀𝘀𝗮𝗹 𝗰𝘂𝘀𝘁𝗼𝗺𝗶𝘇𝗮𝗯𝗹𝗲 𝗮𝗿𝘀𝗲𝗻𝗮𝗹.',
-    releaseDate: 'Jul 1, 2014',
-    developer: 'MY.GAMES',
-    publisher: 'MY.GAMES',
-    tags: ['Action', 'Massively Multiplayer', 'Free To Play'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Mixed',
-    },
-    allReviewSummary: {
-      count: 403,
-      rating: 'Mixed',
-    },
-    userTags: [
-      'Free to Play',
-      'FPS',
-      'Multiplayer',
-      'Shooter',
-      'Action',
-      'PvP',
-      'Co-op',
-      'Gun Customization',
-      'Character Customization',
-      'First-Person',
-      'Online Co-Op',
-      'Team-Based',
-      'Tactical',
-      'Realistic',
-      'Class-Based',
-      'Massively Multiplayer',
-      'Military',
-      'PvE',
-      'War',
-      'Competitive',
-    ],
-    appId: 291480,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291480/ss_b2a78fe0dba10dd8a8cdefa76c42174ba5890696.600x338.jpg?t=1766101316',
-  },
   '291550': {
     name: 'Brawlhalla',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/291550/e7ac3d3f2ae1ac0a5c267156ce3276c1687ec414/ss_e7ac3d3f2ae1ac0a5c267156ce3276c1687ec414.600x338.jpg?t=1769004985',
     shortDescription:
-      "An epic platform fighter for up to 8 players online or local. Try casual free-for-alls, ranked matches, or invite friends to a private room. And it's free! Play cross-platform with millions of players on PlayStation, Xbox, Nintendo Switch, iOS, Android &amp; Steam! Frequent updates. Over sixty Legends.",
+      "An epic platform fighter for up to 8 players online or local. Try casual free-for-alls, ranked matches, or invite friends to a private room. And it's free! Play cross-platform with millions of players on PlayStation, Xbox, Nintendo Switch, iOS, Android & Steam! Frequent updates. Over sixty Legends.",
     releaseDate: 'Oct 17, 2017',
     developer: 'Blue Mammoth Games',
     publisher: 'Ubisoft',
@@ -5855,12 +5332,16 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/292030/ss_5710298af2318afd9aa72449ef29ac4a2ef64d8e.600x338.jpg?t=1768303991',
     shortDescription:
-      'You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will. Your current contract? Tracking down Ciri — the Child of Prophecy, a living weapon that can alter the shape of the world.',
+      'You are ||Geralt of Rivia||, mercenary ||monster|| slayer. Before you stands a war-torn, ||monster||-infested continent you can explore at will. Your current contract? Tracking down ||Ciri|| — the ||Child|| of ||Prophecy||, a living weapon that can alter the shape of the world.',
     releaseDate: 'May 18, 2015',
-    developer: 'CD PROJEKT RED',
-    publisher: 'CD PROJEKT RED',
+    developer: '||CD PROJEKT RED||',
+    publisher: '||CD PROJEKT RED||',
+    overrideCensoredTitle: 'T||he|| W||itcher|| ||3: Wild Hunt||',
+    blurScreenshotQuarter: 'bottom',
     tags: ['RPG'],
     features: [],
+    clueOrder: ['desc', 'tags', 'details'],
+    blurredUserTags: ['Nudity', 'Mature'],
     recentReviewSummary: {
       count: 0,
       rating: 'Overwhelmingly Positive',
@@ -5945,8 +5426,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/298110/ss_ba2f250b4986a7b6aa5133bba13b2004c410d68b.600x338.jpg?t=1764168324',
     shortDescription:
-      'Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are Ajay Ghale. Traveling to Kyrat to fulfill your mother’s dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.',
+      "Hidden in the towering Himalayas lies Kyrat, a country steeped in tradition and violence. You are ||Ajay Ghale||. Traveling to Kyrat to fulfill your mother's dying wish, you find yourself caught up in a civil war to overthrow the oppressive regime of dictator Pagan Min.",
     releaseDate: 'Nov 17, 2014',
+    clueOrder: ['desc', 'tags', 'details'],
     developer: 'Ubisoft Montreal, Red Storm, Shanghai, Toronto, Kiev',
     publisher: 'Ubisoft',
     tags: ['Action', 'Adventure'],
@@ -6035,8 +5517,9 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/305620/ss_05c7f5d1b2ec2b2a1cf4ca2aa1ff609c7542f6b5.600x338.jpg?t=1768865059',
     shortDescription:
-      'THE LONG DARK is a thoughtful, exploration-survival experience that challenges solo players to think for themselves as they explore an expansive frozen wilderness in the aftermath of a geomagnetic disaster. There are no zombies -- only you, the cold, and all the threats Mother Nature can muster.',
+      '||THE LONG DARK|| is a thoughtful, exploration-survival experience that challenges solo players to think for themselves as they explore an expansive frozen wilderness in the aftermath of a geomagnetic disaster. There are no zombies -- only you, the cold, and all the threats Mother Nature can muster.',
     releaseDate: 'Aug 1, 2017',
+    clueOrder: ['desc', 'details', 'tags'],
     developer: 'Hinterland Studio Inc.',
     publisher: 'Hinterland Studio Inc.',
     tags: ['Adventure', 'Indie', 'Simulation', 'Strategy'],
@@ -6080,7 +5563,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/306130/ss_2b797e150cbb9ad7eec9d9089e79df4adc21e797.600x338.jpg?t=1767723807',
     shortDescription:
-      'Every legend starts somewhere and in The Elder Scrolls Online, it starts with you. Join millions of players in an online, fantasy RPG set in a vast living Elder Scrolls world.',
+      'Every legend starts somewhere and in ||The Elder Scrolls Online||, it starts with you. Join millions of players in an online, fantasy RPG set in a vast living ||Elder Scrolls|| world.',
     releaseDate: 'May 22, 2017',
     developer: 'ZeniMax Online Studios',
     publisher: 'Bethesda Softworks',
@@ -6119,51 +5602,6 @@ export const steamGameDetails: SteamGameMap = {
     appId: 306130,
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/306130/ss_ae00343059f2751a9bd1385383bc065d6d72a8df.600x338.jpg?t=1767723807',
-  },
-  '311210': {
-    name: 'Call of Duty: Black Ops III',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/ss_ca7376d838d5714f916936f0070824c27c4c5641.600x338.jpg?t=1748022663',
-    shortDescription:
-      'Call of Duty: Black Ops III Zombies Chronicles Edition includes the full base game plus the Zombies Chronicles content expansion.',
-    releaseDate: 'Nov 5, 2015',
-    developer: 'Treyarch, Aspyr (Mac)',
-    publisher: 'Activision, Aspyr (Mac)',
-    tags: ['Action', 'Adventure'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 113375,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Multiplayer',
-      'Zombies',
-      'FPS',
-      'Shooter',
-      'Action',
-      'First-Person',
-      'Singleplayer',
-      'Co-op',
-      'Futuristic',
-      'Illuminati',
-      'Hero Shooter',
-      'Robots',
-      'Sci-fi',
-      'Gore',
-      'Great Soundtrack',
-      'Story Rich',
-      'Atmospheric',
-      'Parkour',
-      'Quick-Time Events',
-      'Split Screen',
-    ],
-    appId: 311210,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/311210/ss_150874824f4fff0915e63ea2ade5410e576a2b70.600x338.jpg?t=1748022663',
   },
   '312660': {
     name: 'Sniper Elite 4',
@@ -6213,14 +5651,13 @@ export const steamGameDetails: SteamGameMap = {
   '319630': {
     name: 'Life is Strange - Episode 1',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/ss_d74ebed52e05e7c22937e53fcf6c7bf1de70ada1.600x338.jpg?t=1724158918',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/ss_351f0026c4ca89eef429a095750814aaf6b5ebc0.600x338.jpg?t=1724158918',
     shortDescription:
-      'Episode 1 now FREE! Life is Strange is an award-winning and critically acclaimed episodic adventure game that allows the player to rewind time and affect the past, present and future.',
+      '||Episode 1|| now FREE! ||Life is Strange|| is an award-winning and critically acclaimed episodic adventure game that allows the player to rewind time and affect the past, present and future.',
     releaseDate: 'Jan 29, 2015',
-    developer:
-      'DONTNOD Entertainment, Feral Interactive (Mac), Feral Interactive (Linux)',
-    publisher:
-      'Square Enix, Feral interactive (Mac), Feral Interactive (Linux)',
+    developer: 'DONTNOD Entertainment',
+    clueOrder: ['desc', 'tags', 'details'],
+    publisher: 'Square Enix',
     tags: ['Action', 'Adventure'],
     features: [],
     recentReviewSummary: {
@@ -6255,7 +5692,7 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 319630,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/ss_f0cbce81ce638fca6fa8154d6b5f0178e67eb87f.600x338.jpg?t=1724158918',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/319630/ss_f071f2da3d45953de69f00e05c6e333954ecdf26.600x338.jpg?t=1724158918',
   },
   '322170': {
     name: 'Geometry Dash',
@@ -6350,9 +5787,9 @@ export const steamGameDetails: SteamGameMap = {
   '323190': {
     name: 'Frostpunk',
     primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_98f6b65baef49d0557a04aa701c1b72b66b33c55.600x338.jpg?t=1769440234',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_03fc3089daf0785e3bf34b32c385e80defefaeb4.600x338.jpg?t=1769440234',
     shortDescription:
-      "Frostpunk is the first society survival game. As the ruler of the last city on Earth, it is your duty to manage both its citizens and infrastructure. What decisions will you make to ensure your society's survival? What will you do when pushed to breaking point? Who will you become in the process?",
+      "||Frostpunk|| is the first society survival game. As the ruler of the last city on Earth, it is your duty to manage both its citizens and infrastructure. What decisions will you make to ensure your society's survival? What will you do when pushed to breaking point? Who will you become in the process?",
     releaseDate: 'Apr 24, 2018',
     developer: '11 bit studios',
     publisher: '11 bit studios',
@@ -6362,6 +5799,7 @@ export const steamGameDetails: SteamGameMap = {
       count: 0,
       rating: 'Very Positive',
     },
+    clueOrder: ['desc', 'tags', 'details'],
     allReviewSummary: {
       count: 37656,
       rating: 'Very Positive',
@@ -6390,59 +5828,14 @@ export const steamGameDetails: SteamGameMap = {
     ],
     appId: 323190,
     secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_2fc6ed1e46755d6ad6091d8c1f75d94b912d1144.600x338.jpg?t=1769440234',
-  },
-  '335300': {
-    name: 'DARK SOULS II: Scholar of the First Sin',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/ss_589f08dc4d8580785923c89749101a15014bcdf9.600x338.jpg?t=1760721873',
-    shortDescription:
-      'DARK SOULS II: Scholar of the First Sin brings the franchise’s renowned obscurity &amp; gripping gameplay to a new level. Join the dark journey and experience overwhelming enemy encounters, diabolical hazards, and unrelenting challenge.',
-    releaseDate: 'Apr 1, 2015',
-    developer: 'FromSoftware, Inc.',
-    publisher: 'Bandai Namco Entertainment, FromSoftware, Inc.',
-    tags: ['Action', 'RPG'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 32990,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Souls-like',
-      'Dark Fantasy',
-      'RPG',
-      'Difficult',
-      'Action',
-      'Third Person',
-      'Atmospheric',
-      'Action RPG',
-      'Character Customization',
-      'Co-op',
-      'Multiplayer',
-      'Adventure',
-      'Fantasy',
-      'Medieval',
-      'Dark',
-      'Singleplayer',
-      'Lore-Rich',
-      'Story Rich',
-      'PvP',
-      'Remake',
-    ],
-    appId: 335300,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/335300/ss_724c043f3005c09c71e683e4d4b633711d7ccd49.600x338.jpg?t=1760721873',
+      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/323190/ss_28db92509d505c855b07d480d749119fc147c84c.600x338.jpg?t=1769440234',
   },
   '346010': {
     name: 'Besiege',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/346010/ss_a48225e9e81c864ab72443ed6ad96a62152783de.600x338.jpg?t=1769424694',
     shortDescription:
-      'Besiege is a physics building game about constructing medieval machines to annihilate armies, obliterate castles and overcome challenging obstacles. Conquer the campaign or skirmish with friends in Multiplayer!',
+      '||Besiege|| is a physics building game about constructing medieval machines to annihilate armies, obliterate castles and overcome challenging obstacles. Conquer the campaign or skirmish with friends in Multiplayer!',
     releaseDate: 'Feb 18, 2020',
     developer: 'Spiderling Studios',
     publisher: 'Spiderling Studios',
@@ -6533,7 +5926,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/349040/ss_61a26c1cd4f6ec0fe8635156d8239b9903f7da4f.600x338.jpg?t=1703080866',
     shortDescription:
-      'The latest opus in the acclaimed STORM series is taking you on a colourful and breathtaking ride. Take advantage of the totally revamped battle system and prepare to dive into the most epic fights you’ve ever seen !',
+      "The latest opus in the acclaimed STORM series is taking you on a colourful and breathtaking ride. Take advantage of the totally revamped battle system and prepare to dive into the most epic fights you've ever seen !",
     releaseDate: 'Feb 4, 2016',
     developer: 'CyberConnect2 Co. Ltd.',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -6578,7 +5971,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/356190/ss_d085a6cd49ed5bf4dcc67dfe0bba72ffc7ad6290.600x338.jpg?t=1747346596',
     shortDescription:
-      'Experience an epic open-world brought to life by the award-winning Nemesis System. Forge a new Ring of Power, conquer Fortresses in massive battles and dominate Mordor with your personal orc army in Middle-earth: Shadow of War.',
+      'Experience an epic open-world brought to life by the award-winning Nemesis System. Forge a new Ring of Power, conquer Fortresses in massive battles and dominate Mordor with your personal orc army in ||Middle-earth: Shadow of War||.',
     releaseDate: 'Oct 9, 2017',
     developer: 'Monolith Productions',
     publisher: 'WB Games',
@@ -6623,10 +6016,11 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/359320/ss_1d3391a2f4ed9881012e76755c6ea984242ee538.600x338.jpg?t=1759842966',
     shortDescription:
-      'Take control of your own starship and blaze your trail in an ever-changing galaxy. Master the arts of combat, mining and trade or venture out into the unknown across a 1:1 scale universe.',
+      'Take control of your own ||starship|| and blaze your trail in an ever-changing ||galaxy||. Master the arts of combat, mining and trade or venture out into the unknown across a 1:1 scale ||universe||.',
     releaseDate: 'Apr 2, 2015',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
+    clueOrder: ['desc', 'details', 'tags'],
     tags: [
       'Action',
       'Adventure',
@@ -6722,6 +6116,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Interact with strange new worlds in a unique and tactile way, molding the environment itself as if it were clay in your hands. Build your base, master resource management, automate your production lines, and more as you unravel the mysteries of the universe, alone or with friends.',
     releaseDate: 'Feb 5, 2019',
+    clueOrder: ['details', 'desc', 'tags'],
     developer: 'System Era Softworks',
     publisher: 'System Era Softworks',
     tags: ['Adventure', 'Indie'],
@@ -6760,56 +6155,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/361420/ss_858b8bece04b753a6b35a009776a4de9dd6e0df7.600x338.jpg?t=1763660960',
   },
-  '362890': {
-    name: 'Black Mesa',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_b106c27ff03bb3162a6875dd22c4ce440e9694c4.600x338.jpg?t=1747193649',
-    shortDescription: 'Relive Half-Life.',
-    releaseDate: 'Mar 6, 2020',
-    developer: 'Crowbar Collective',
-    publisher: 'Crowbar Collective',
-    tags: ['Action', 'Adventure', 'Indie'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 68212,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'FPS',
-      'Remake',
-      'Action',
-      'Sci-fi',
-      'First-Person',
-      'Singleplayer',
-      'Shooter',
-      'Atmospheric',
-      'Classic',
-      'Story Rich',
-      'Great Soundtrack',
-      'Aliens',
-      'Zombies',
-      'Adventure',
-      'Horror',
-      'Multiplayer',
-      'Indie',
-      'Mod',
-      'Early Access',
-      'Gore',
-    ],
-    appId: 362890,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/362890/ss_9857cad0e29e5cd905f1f9b6be3e20357a6ecb92.600x338.jpg?t=1747193649',
-  },
   '367520': {
     name: 'Hollow Knight',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/367520/ss_5384f9f8b96a0b9934b2bc35a4058376211636d2.600x338.jpg?t=1764916620',
     shortDescription:
-      'Forge your own path in Hollow Knight! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.',
+      'Forge your own path in ||Hollow Knight||! An epic action adventure through a vast ruined kingdom of insects and heroes. Explore twisting caverns, battle tainted creatures and befriend bizarre bugs, all in a classic, hand-drawn 2D style.',
     releaseDate: 'Feb 24, 2017',
     developer: 'Team Cherry',
     publisher: 'Team Cherry',
@@ -6854,7 +6205,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/374320/ss_5efd318b85a3917d1c6e717f4cb813b47547cd6f.600x338.jpg?t=1748630784',
     shortDescription:
-      'Dark Souls continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!',
+      '||Dark Souls|| continues to push the boundaries with the latest, ambitious chapter in the critically-acclaimed and genre-defining series. Prepare yourself and Embrace The Darkness!',
     releaseDate: 'Apr 11, 2016',
     developer: 'FromSoftware, Inc.',
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
@@ -6951,7 +6302,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/377160/ss_f7861bd71e6c0c218d8ff69fb1c626aec0d187cf.600x338.jpg?t=1764687456',
     shortDescription:
-      'From Bethesda Game Studios, the award-winning creators of Starfield and The Elder Scrolls V: Skyrim, comes Fallout 4. A landmark in open-world RPG design and winner of over 200 ‘Best Of’ honors, including the DICE and BAFTA Game of the Year.',
+      "From Bethesda Game Studios, the award-winning creators of Starfield and The Elder Scrolls V: Skyrim, comes ||Fallout 4||. A landmark in open-world RPG design and winner of over 200 ‘Best Of' honors, including the DICE and BAFTA Game of the Year.",
     releaseDate: 'Nov 9, 2015',
     developer: 'Bethesda Game Studios',
     publisher: 'Bethesda Softworks',
@@ -7086,7 +6437,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/386360/ss_9104a5770367ff37d3cd0e488b0866e8284874e5.600x338.jpg?t=1764627618',
     shortDescription:
-      'Join 40+ million players in SMITE, the Battleground of the Gods! Wield Thor’s hammer, turn your foes to stone as Medusa, or flex your divine power as one of 100+ other mythological icons. Become a God and play FREE today!',
+      "Join 40+ million players in ||SMITE||, the Battleground of the Gods! Wield Thor's hammer, turn your foes to stone as Medusa, or flex your divine power as one of 100+ other mythological icons. Become a God and play FREE today!",
     releaseDate: 'Sep 8, 2015',
     developer: 'Titan Forge Games',
     publisher: 'Hi-Rez Studios',
@@ -7141,7 +6492,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/387990/ss_55bea7e73e0e28b62377af9602cb4ce68c793068.600x338.jpg?t=1727183889',
     shortDescription:
-      'Enter the creative paradise of Scrap Mechanic! Build fantastic machines, go on adventures with your friends and defend against waves of evil Farmbots in this imaginative multiplayer survival sandbox. With Scrap Mechanic’s powerful creation tools you can engineer your own adventures!',
+      "Enter the creative paradise of ||Scrap Mechanic||! Build fantastic machines, go on adventures with your friends and defend against waves of evil Farmbots in this imaginative multiplayer survival sandbox. With ||Scrap Mechanic||'s powerful creation tools you can engineer your own adventures!",
     releaseDate: 'Jan 19, 2016',
     developer: 'Axolot Games',
     publisher: 'Axolot Games',
@@ -7231,7 +6582,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391220/ss_4ef0868ecfc6b19bc1af18b88cabe33fe8147cf7.600x338.jpg?t=1766187095',
     shortDescription:
-      'Rise of the Tomb Raider: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara’s Nightmare”.',
+      "||Rise of the Tomb Raider||: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara's Nightmare”.",
     releaseDate: 'Feb 9, 2016',
     developer:
       'Crystal Dynamics, Eidos-Montréal, Feral Interactive (Mac), Feral Interactive (Linux), Nixxes',
@@ -7278,7 +6629,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/391540/ss_6ded97a2c98473ac1e8a2b3c1419d93fb31b1186.600x338.jpg?t=1757349115',
     shortDescription:
-      "UNDERTALE! The RPG game where you don't have to destroy anyone.",
+      "||UNDERTALE||! The RPG game where you don't have to destroy anyone.",
     releaseDate: 'Sep 15, 2015',
     developer: 'tobyfox',
     publisher: 'tobyfox',
@@ -7323,7 +6674,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/392110/ss_5e59d20c1b6e0313e6f2d8dff89e720769a122f6.600x338.jpg?t=1762449129',
     shortDescription:
-      'ENDLESS Space 2 is a Strategic Space Opera, featuring the compelling “just one more turn” gameplay, set in the mysterious ENDLESS Universe. As the leader of your civilization, will you impose your vision and build the greatest stellar empire?',
+      '||ENDLESS Space 2|| is a Strategic Space Opera, featuring the compelling “just one more turn” gameplay, set in the mysterious ENDLESS Universe. As the leader of your civilization, will you impose your vision and build the greatest stellar empire?',
     releaseDate: 'May 18, 2017',
     developer: 'AMPLITUDE Studios',
     publisher: 'AMPLITUDE Studios',
@@ -7368,7 +6719,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/394360/ss_242abc1c2ca21f7d8694ba8d9239d8944217b29f.600x338.jpg?t=1765368663',
     shortDescription:
-      'Victory is at your fingertips! Your ability to lead your nation is your supreme weapon, the strategy game Hearts of Iron IV lets you take command of any nation in World War II; the most engaging conflict in world history.',
+      'Victory is at your fingertips! Your ability to lead your nation is your supreme weapon, the strategy game ||Hearts of Iron IV|| lets you take command of any nation in World War II; the most engaging conflict in world history.',
     releaseDate: 'Jun 6, 2016',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -7413,7 +6764,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/403640/ss_f2206b92cfde7e2c63a106e35ddc847700a2f7d8.600x338.jpg?t=1750785918',
     shortDescription:
-      "Reprise your role as a supernatural assassin in Dishonored 2. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, Dishonored 2 is the follow up to Arkane’s 1st-person action blockbuster &amp; winner of 100+ 'Game of the Year' awards, Dishonored.",
+      "Reprise your role as a supernatural assassin in ||Dishonored 2||. Declared a “masterpiece” by Eurogamer and hailed “a must-play revenge tale” by Game Informer, ||Dishonored 2|| is the follow up to Arkane's 1st-person action blockbuster & winner of 100+ 'Game of the Year' awards, ||Dishonored||.",
     releaseDate: 'Nov 11, 2016',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
@@ -7503,7 +6854,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/413150/ss_b887651a93b0525739049eb4194f633de2df75be.600x338.jpg?t=1754692865',
     shortDescription:
-      "You've inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
+      "You've inherited your grandfather's old farm plot in ||Stardew Valley||. Armed with hand-me-down tools and a few coins, you set out to begin your new life. Can you learn to live off the land and turn these overgrown fields into a thriving home?",
     releaseDate: 'Feb 26, 2016',
     developer: 'ConcernedApe',
     publisher: 'ConcernedApe',
@@ -7548,7 +6899,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/414340/ss_c873e1a5f9e9218d6d3b2038b7063489879d315d.600x338.jpg?t=1726851372',
     shortDescription:
-      'From the makers of Heavenly Sword, Enslaved: Odyssey to the West, and DmC: Devil May Cry, comes a warrior’s brutal journey into myth and madness. Set in the Viking age, a broken Celtic warrior embarks on a haunting vision quest into Viking Hell to fight for the soul of her dead lover.',
+      "From the makers of Heavenly Sword, Enslaved: Odyssey to the West, and DmC: Devil May Cry, comes a warrior's brutal journey into myth and madness. Set in the Viking age, a broken Celtic warrior embarks on a haunting vision quest into Viking Hell to fight for the soul of her dead lover.",
     releaseDate: 'Aug 7, 2017',
     developer: 'Ninja Theory',
     publisher: 'Ninja Theory',
@@ -7593,7 +6944,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/414700/ss_391bfd739898fd31ec7fa0c0b7658f18b7202286.600x338.jpg?t=1618944453',
     shortDescription:
-      'Outlast 2 introduces you to Sullivan Knoth and his followers, who left our wicked world behind to give birth to Temple Gate, a town, deep in the wilderness and hidden from civilization. Knoth and his flock are preparing for the tribulations of the end of times and you’re right in the thick of it.',
+      "||Outlast 2|| introduces you to Sullivan Knoth and his followers, who left our wicked world behind to give birth to Temple Gate, a town, deep in the wilderness and hidden from civilization. Knoth and his flock are preparing for the tribulations of the end of times and you're right in the thick of it.",
     releaseDate: 'Apr 24, 2017',
     developer: 'Red Barrels',
     publisher: 'Red Barrels',
@@ -7638,7 +6989,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/418370/ss_d07fd9fca3644350782356667ce78d436c574680.600x338.jpg?t=1769125301',
     shortDescription:
-      'Fear and isolation seep through the walls of an abandoned southern farmhouse. &quot;7&quot; marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
+      'Fear and isolation seep through the walls of an abandoned southern farmhouse. "7" marks a new beginning for survival horror with the “Isolated View” of the visceral new first-person perspective.',
     releaseDate: 'Jan 23, 2017',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -7683,7 +7034,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/424840/8942672a817424d426e65ade0253e428a3f449ee/ss_8942672a817424d426e65ade0253e428a3f449ee.600x338.jpg?t=1767884926',
     shortDescription:
-      'Take on the role of Six, a lone child lost in a massive metal vessel known as the Maw, surrounded by dangerous, distorted versions of adults. You’ll need to do your best to escape in one piece or your fate will be worse than you ever dared dream.',
+      "Take on the role of Six, a lone child lost in a massive metal vessel known as the Maw, surrounded by dangerous, distorted versions of adults. You'll need to do your best to escape in one piece or your fate will be worse than you ever dared dream.",
     releaseDate: 'Apr 27, 2017',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -7728,7 +7079,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427410/ss_edff95d80cb8d88f6c6759220982b3a6f010fc1f.600x338.jpg?t=1765822569',
     shortDescription:
-      'Abiotic Factor is a survival crafting experience for 1-6 players set in the depths of an underground research facility. Caught between paranormal containment failure, a military crusade, and chaos from a dozen realms, the world’s greatest minds must survive against the universe’s biggest threats.',
+      "||Abiotic Factor|| is a survival crafting experience for 1-6 players set in the depths of an underground research facility. Caught between paranormal containment failure, a military crusade, and chaos from a dozen realms, the world's greatest minds must survive against the universe's biggest threats.",
     releaseDate: 'Jul 22, 2025',
     developer: 'Deep Field Games',
     publisher: 'Playstack',
@@ -7773,7 +7124,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/427520/ss_36e4d8e5540805f5ed492d24d784ed9ba661752b.600x338.jpg?t=1763986204',
     shortDescription:
-      "Factorio is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world. Use your imagination to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.",
+      "||Factorio|| is a game about building and creating automated factories to produce items of increasing complexity, within an infinite 2D world. Use your imagination to design your factory, combine simple elements into ingenious structures, and finally protect it from the creatures who don't really like you.",
     releaseDate: 'Aug 14, 2020',
     developer: 'Wube Software LTD.',
     publisher: 'Wube Software LTD.',
@@ -7870,7 +7221,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/433340/ss_5339a74c4563d40a1d8a5638db2a9ed59c5b883b.600x338.jpg?t=1758651509',
     shortDescription:
-      'Slime Rancher is the tale of Beatrix LeBeau, a plucky, young rancher who sets out for a life a thousand light years away from Earth on the ‘Far, Far Range’ where she tries her hand at making a living wrangling slimes.',
+      "||Slime Rancher|| is the tale of Beatrix LeBeau, a plucky, young rancher who sets out for a life a thousand light years away from Earth on the ‘Far, Far Range' where she tries her hand at making a living wrangling slimes.",
     releaseDate: 'Aug 1, 2017',
     developer: 'Monomi Park',
     publisher: 'Monomi Park',
@@ -7911,7 +7262,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/433340/ss_d0e6a30325a9f7ff4fb3d6ba344c4131bb5f98cb.600x338.jpg?t=1758651509',
   },
   '435150': {
-    name: 'Divinity: Original Sin 2 - Definitive Edition',
+    name: 'Divinity: Original Sin 2',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/435150/ss_b59e5889726cab2cf01a93d0c0d192d25928952a.600x338.jpg?t=1765811123',
     shortDescription:
@@ -7960,7 +7311,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/444090/ss_f4c9db1a47e18a398d5b6a068dcd2a0cc87413ff.600x338.jpg?t=1713560419',
     shortDescription:
-      'Paladins is the ultimate fantasy team-based shooter experience, with over 50 customizable Champions fighting in 5v5 action across a diverse Realm of modes and maps!',
+      '||Paladins|| is the ultimate fantasy team-based shooter experience, with over 50 customizable Champions fighting in 5v5 action across a diverse Realm of modes and maps!',
     releaseDate: 'May 8, 2018',
     developer: 'Evil Mojo Games',
     publisher: 'Hi-Rez Studios',
@@ -8056,7 +7407,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/ss_78d1c92edeecc7b17cafa9248867fe7d4390a0a0.600x338.jpg?t=1766014410',
     shortDescription:
-      'Oxygen Not Included is a space-colony simulation game. Deep inside an alien space rock your industrious crew will need to master science, overcome strange new lifeforms, and harness incredible space tech to survive, and possibly, thrive.',
+      '||Oxygen Not Included|| is a space-colony simulation game. Deep inside an alien space rock your industrious crew will need to master science, overcome strange new lifeforms, and harness incredible space tech to survive, and possibly, thrive.',
     releaseDate: 'Jul 30, 2019',
     developer: 'Klei Entertainment',
     publisher: 'Klei Entertainment',
@@ -8097,11 +7448,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/457140/ss_67ab224dd8c781d5a27ee52657173298873d439a.600x338.jpg?t=1766014410',
   },
   '466560': {
-    name: 'Northgard: Definitive Edition',
+    name: 'Northgard',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/466560/ss_eb6ecfd37f68dc5cadabf603c4ab890d2a545730.600x338.jpg?t=1764864250',
     shortDescription:
-      'Northgard: Definitive Edition is a critically acclaimed real-time strategy game based on Norse mythology. Lead your clan, uncover the secrets of a mysterious newfound continent and defeat your enemies to conquer the Throne!',
+      '||Northgard|| is a critically acclaimed real-time strategy game based on Norse mythology. Lead your clan, uncover the secrets of a mysterious newfound continent and defeat your enemies to conquer the Throne!',
     releaseDate: 'Mar 7, 2018',
     developer: 'Shiro Games',
     publisher: 'Shiro Games',
@@ -8146,7 +7497,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/477160/3fea2bfe67e9d6a91b734a54f4cb85221e75d100/ss_3fea2bfe67e9d6a91b734a54f4cb85221e75d100.600x338.jpg?t=1769431354',
     shortDescription:
-      'Human Fall Flat is a hilarious, light-hearted platformer set in floating dreamscapes that can be played solo or with up to 8 players online. Free new levels keep its vibrant community rewarded.',
+      '||Human Fall Flat|| is a hilarious, light-hearted platformer set in floating dreamscapes that can be played solo or with up to 8 players online. Free new levels keep its vibrant community rewarded.',
     releaseDate: 'Jul 22, 2016',
     developer: 'No Brakes Games',
     publisher: 'Curve Games',
@@ -8191,7 +7542,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/480490/ss_06b6c27c834b5639c54d470b3b5c711cf72a94af.600x338.jpg?t=1750785331',
     shortDescription:
-      'In Prey, you awaken aboard Talos I, a space station orbiting the moon in the year 2032. You are the key subject of an experiment meant to alter humanity forever – but things have gone terribly wrong. The space station has been overrun by hostile aliens and you are now being hunted.',
+      'In ||Prey||, you awaken aboard Talos I, a space station orbiting the moon in the year 2032. You are the key subject of an experiment meant to alter humanity forever – but things have gone terribly wrong. The space station has been overrun by hostile aliens and you are now being hunted.',
     releaseDate: 'May 4, 2017',
     developer: 'Arkane Studios',
     publisher: 'Bethesda Softworks',
@@ -8281,7 +7632,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489520/ss_ff25c94b1cc1a3731c0f51a2a31d9516d725048a.600x338.jpg?t=1736542616',
     shortDescription:
-      'An addictive fast-paced hybrid of Card games &amp; Tower-Defense. Play 1v1 - or bring a friend for 2v2 - and engage in epic online multiplayer battles full of innovative strategy and awesome plays! Collect 200+ cards with unique mechanics, all free!',
+      'An addictive fast-paced hybrid of Card games & Tower-Defense. Play 1v1 - or bring a friend for 2v2 - and engage in epic online multiplayer battles full of innovative strategy and awesome plays! Collect 200+ cards with unique mechanics, all free!',
     releaseDate: 'May 24, 2019',
     developer: 'BetaDwarf',
     publisher: 'BetaDwarf',
@@ -8321,57 +7672,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489520/ss_e4ae57dca3a26ce13a01d4ac2871f711679e0934.600x338.jpg?t=1736542616',
   },
-  '489830': {
-    name: 'The Elder Scrolls V: Skyrim Special Edition',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/ss_73c1a0bb7e1720c8a1847186c3ddd837d3ca7a8d.600x338.jpg?t=1753715778',
-    shortDescription:
-      'Winner of more than 200 Game of the Year Awards, The Elder Scrolls V: Skyrim Special Edition brings the epic fantasy to life in stunning detail. The Special Edition includes the critically acclaimed game and add-ons with all-new features.',
-    releaseDate: 'Oct 27, 2016',
-    developer: 'Bethesda Game Studios',
-    publisher: 'Bethesda Softworks',
-    tags: ['RPG'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 123190,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Open World',
-      'RPG',
-      'Adventure',
-      'Singleplayer',
-      'Fantasy',
-      'Character Customization',
-      'Moddable',
-      'Dragons',
-      'Story Rich',
-      'Magic',
-      'First-Person',
-      'Action',
-      'Atmospheric',
-      'Great Soundtrack',
-      'Third Person',
-      'Stealth',
-      'Classic',
-      'Remake',
-      'Female Protagonist',
-      'Walking Simulator',
-    ],
-    appId: 489830,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/489830/ss_d64b646612ab1402bdda8e400672aa0dbcb352ea.600x338.jpg?t=1753715778',
-  },
   '493340': {
     name: 'Planet Coaster',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/493340/ss_e3661fafe7f2e701ef91528e7b803857a418f6dd.600x338.jpg?t=1725377481',
     shortDescription:
-      'Planet Coaster - the future of coaster park simulation games has arrived! Surprise, delight and thrill incredible crowds as you build your coaster park empire - let your imagination run wild, and share your success with the world.',
+      '||Planet Coaster|| - the future of coaster park simulation games has arrived! Surprise, delight and thrill incredible crowds as you build your coaster park empire - let your imagination run wild, and share your success with the world.',
     releaseDate: 'Nov 17, 2016',
     developer: 'Frontier Developments, Aspyr (Mac)',
     publisher: 'Frontier Developments, Aspyr (Mac)',
@@ -8461,7 +7767,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/504370/ss_a60e91bc3d6f3361b806ec06ae94e323984d982d.600x338.jpg?t=1769726771',
     shortDescription:
-      'BATTLERITE​ ​is​ ​an​ ​action-packed​ ​team​ ​arena​ ​brawler.​ ​Experience​ ​the​ ​unique​ ​combination​ ​of​ top-down​ ​shooter​ meets​ ​fast-paced​ ​fighting​ ​game and challenge ​friends​ ​and​ foes​ ​in​ ​a​ ​battle​ ​of reaction. The Arena awaits!',
+      '||BATTLERITE||​ ​is​ ​an​ ​action-packed​ ​team​ ​arena​ ​brawler.​ ​Experience​ ​the​ ​unique​ ​combination​ ​of​ top-down​ ​shooter​ meets​ ​fast-paced​ ​fighting​ ​game and challenge ​friends​ ​and​ foes​ ​in​ ​a​ ​battle​ ​of reaction. The Arena awaits!',
     releaseDate: 'Nov 8, 2017',
     developer: 'Stunlock Studios',
     publisher: 'Stunlock Studios',
@@ -8551,7 +7857,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/516750/ss_8e4bee8eac58c980c6d8476f848fdb89a80186c6.600x338.jpg?t=1736372299',
     shortDescription:
-      'My Summer Car is the ultimate car owning, building, fixing, tuning, maintenance AND permadeath life survival simulator. You start the game with hundreds of loose parts and assemble both car and engine.',
+      '||My Summer Car|| is the ultimate car owning, building, fixing, tuning, maintenance AND permadeath life survival simulator. You start the game with hundreds of loose parts and assemble both car and engine.',
     releaseDate: 'Jan 8, 2025',
     developer: 'Amistech Games',
     publisher: 'Amistech Games',
@@ -8641,7 +7947,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/524220/ss_d0314b4c134329a483b5e43af951f60274abc66b.600x338.jpg?t=1768992897',
     shortDescription:
-      'NieR: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.',
+      '||NieR||: Automata tells the story of androids 2B, 9S and A2 and their battle to reclaim the machine-driven dystopia overrun by powerful machines.',
     releaseDate: 'Mar 17, 2017',
     developer: 'Square Enix, PlatinumGames Inc.',
     publisher: 'Square Enix',
@@ -8686,7 +7992,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/526870/ss_9083ccf8fbb22c4068a6e233e3de343f815f9dc1.600x338.jpg?t=1749717464',
     shortDescription:
-      'Satisfactory is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!',
+      '||Satisfactory|| is a first-person open-world factory building game with a dash of exploration and combat. Play alone or with friends, explore an alien planet, create multi-story factories, and enter conveyor belt heaven!',
     releaseDate: 'Sep 10, 2024',
     developer: 'Coffee Stain Studios',
     publisher: 'Coffee Stain Publishing',
@@ -8776,7 +8082,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/546560/ss_d61365e93f20ceb5a94a1e5b2811cf504cbfa303.600x338.jpg?t=1762986588',
     shortDescription:
-      'Half-Life: Alyx is Valve’s VR return to the Half-Life series. It’s the story of an impossible fight against a vicious alien race known as the Combine, set between the events of Half-Life and Half-Life 2. Playing as Alyx Vance, you are humanity’s only chance for survival.',
+      "||Half-Life: Alyx|| is Valve's VR return to the ||Half-Life|| series. It's the story of an impossible fight against a vicious alien race known as the Combine, set between the events of ||Half-Life|| and ||Half-Life|| 2. Playing as Alyx Vance, you are humanity's only chance for survival.",
     releaseDate: 'Mar 23, 2020',
     developer: 'Valve',
     publisher: 'Valve',
@@ -8821,7 +8127,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/548430/49a57d16c55b74a6f835c590421d299d417af4f8/ss_49a57d16c55b74a6f835c590421d299d417af4f8.600x338.jpg?t=1769697951',
     shortDescription:
-      'Deep Rock Galactic is a 1-4 player co-op FPS featuring dwarven space miners, procedurally-generated destructible environments, and endless hordes of alien monsters. Explore cave systems, mine for minerals, and work together to survive!',
+      '||Deep Rock Galactic|| is a 1-4 player co-op FPS featuring dwarven space miners, procedurally-generated destructible environments, and endless hordes of alien monsters. Explore cave systems, mine for minerals, and work together to survive!',
     releaseDate: 'May 13, 2020',
     developer: 'Ghost Ship Games',
     publisher: 'Coffee Stain Publishing',
@@ -8911,7 +8217,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/581320/ecc055fd36f2f9eccae169c6b3cd2afb5ec26804/ss_ecc055fd36f2f9eccae169c6b3cd2afb5ec26804.600x338.jpg?t=1768485142',
     shortDescription:
-      'Insurgency: Sandstorm is a team-based, tactical FPS based on lethal close quarters combat and objective-oriented multiplayer gameplay. Experience the intensity of modern combat where skill is rewarded, and teamwork wins the fight.',
+      '||Insurgency: Sandstorm|| is a team-based, tactical FPS based on lethal close quarters combat and objective-oriented multiplayer gameplay. Experience the intensity of modern combat where skill is rewarded, and teamwork wins the fight.',
     releaseDate: 'Dec 12, 2018',
     developer: 'New World Interactive',
     publisher: 'Focus Entertainment',
@@ -8956,7 +8262,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582010/ss_a262c53b8629de7c6547933dc0b49d31f4e1b1f1.600x338.jpg?t=1768871319',
     shortDescription:
-      'Welcome to a new world! In Monster Hunter: World, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.',
+      'Welcome to a new world! In ||Monster Hunter: World||, the latest installment in the series, you can enjoy the ultimate hunting experience, using everything at your disposal to hunt monsters in a new world teeming with surprises and excitement.',
     releaseDate: 'Aug 8, 2018',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -9001,7 +8307,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/582160/ss_1a0ab42e93e51c48ad9a6bda7f408958e09a43b0.600x338.jpg?t=1758656690',
     shortDescription:
-      'Explore Ancient Egypt in this action-adventure game. Battle powerful enemies, unveil conspiracies, and discover the origin story of the Assassin’s Brotherhood.',
+      "Explore Ancient Egypt in this action-adventure game. Battle powerful enemies, unveil conspiracies, and discover the origin story of the Assassin's Brotherhood.",
     releaseDate: 'Oct 26, 2017',
     developer: 'Ubisoft Montreal',
     publisher: 'Ubisoft',
@@ -9046,7 +8352,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/588650/ss_ac28000ade40cc2fe5c128f32ac98ba33c008a7a.600x338.jpg?t=1761123066',
     shortDescription:
-      "Dead Cells is a roguelite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle... assuming you’re able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
+      "||Dead Cells|| is a roguelite, metroidvania inspired, action-platformer. You'll explore a sprawling, ever-changing castle... assuming you're able to fight your way past its keepers in 2D souls-lite combat. No checkpoints. Kill, die, learn, repeat.",
     releaseDate: 'Aug 6, 2018',
     developer: 'Motion Twin',
     publisher: 'Motion Twin',
@@ -9182,7 +8488,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/602960/ss_cdf5cbde141fb93a0b23c6adca5378f73e1beeca.600x338.jpg?t=1765211124',
     shortDescription:
-      'Barotrauma is a 2D co-op submarine simulator – in space, with survival horror and RPG elements. Steer your submarine, complete missions, fight monsters, fix leaks, operate machinery, man the guns and craft items, and stay alert: danger in Barotrauma doesn’t announce itself!',
+      "||Barotrauma|| is a 2D co-op submarine simulator – in space, with survival horror and RPG elements. Steer your submarine, complete missions, fight monsters, fix leaks, operate machinery, man the guns and craft items, and stay alert: danger in ||Barotrauma|| doesn't announce itself!",
     releaseDate: 'Mar 13, 2023',
     developer: 'FakeFish, Undertow Games',
     publisher: 'Daedalic Entertainment',
@@ -9227,7 +8533,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/611790/ss_6b6723e77311843c7de356538f41a7c03079fa41.600x338.jpg?t=1769814938',
     shortDescription:
-      "House Party is an edgy comedy adventure game inspired by classic comedies of the '90s. Every decision changes your story and every character has something to reveal. There’s also a button to take your pants off.",
+      "||House Party|| is an edgy comedy adventure game inspired by classic comedies of the '90s. Every decision changes your story and every character has something to reveal. There's also a button to take your pants off.",
     releaseDate: 'Jul 15, 2022',
     developer: 'Eek! Games, LLC',
     publisher: 'Eek! Games, LLC',
@@ -9272,7 +8578,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/613100/ss_66b4628cedb499f8c72661125cc9c800eef17ae1.600x338.jpg?t=1768391028',
     shortDescription:
-      'House Flipper is a unique chance to become a one-man renovation crew. Buy, repair and remodel devastated houses. Give them a second life and sell them at a profit!',
+      '||House Flipper|| is a unique chance to become a one-man renovation crew. Buy, repair and remodel devastated houses. Give them a second life and sell them at a profit!',
     releaseDate: 'May 17, 2018',
     developer: 'Empyrean',
     publisher: 'Frozen District, PlayWay S.A.',
@@ -9362,7 +8668,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/620980/d37eef70e31ce32fcd959fe22953a760adf0d8a2/ss_d37eef70e31ce32fcd959fe22953a760adf0d8a2.600x338.jpg?t=1767609586',
     shortDescription:
-      'Beat Saber is a VR rhythm game where you slash the beats of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.',
+      '||Beat Saber|| is a VR rhythm game where you slash the beats of adrenaline-pumping music as they fly towards you, surrounded by a futuristic world.',
     releaseDate: 'May 21, 2019',
     developer: 'Beat Games',
     publisher: 'Beat Games',
@@ -9497,7 +8803,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/ss_b3694e99ffdb686d1bbbbe16a540d3d2ccd509c4.600x338.jpg?t=1766855203',
     shortDescription:
-      'Disco Elysium - The Final Cut is a groundbreaking role playing game. You’re a detective with a unique skill system at your disposal and a whole city to carve your path across. Interrogate unforgettable characters, crack murders or take bribes. Become a hero or an absolute disaster of a human being.',
+      "||Disco Elysium - The Final Cut|| is a groundbreaking role playing game. You're a detective with a unique skill system at your disposal and a whole city to carve your path across. Interrogate unforgettable characters, crack murders or take bribes. Become a hero or an absolute disaster of a human being.",
     releaseDate: 'Oct 15, 2019',
     developer: 'ZA/UM',
     publisher: 'ZA/UM',
@@ -9538,11 +8844,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/632470/ss_9125a718ee9ba85386ae5d4eb820f3266073fc97.600x338.jpg?t=1766855203',
   },
   '637650': {
-    name: 'FINAL FANTASY XV WINDOWS EDITION',
+    name: 'FINAL FANTASY XV',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/637650/ss_1b02d71822001f88219574bd02d65004d26a4299.600x338.jpg?t=1737963877',
     shortDescription:
-      'Take the journey, now in ultimate quality. Boasting a wealth of bonus content and supporting ultra high-resolution graphical options and HDR 10, you can now enjoy the beautiful and carefully-crafted experience of FINAL FANTASY XV like never before.',
+      'Take the journey, now in ultimate quality. Boasting a wealth of bonus content and supporting ultra high-resolution graphical options and HDR 10, you can now enjoy the beautiful and carefully-crafted experience of ||FINAL FANTASY XV|| like never before.',
     releaseDate: 'Mar 6, 2018',
     developer: 'Square Enix',
     publisher: 'Square Enix',
@@ -9587,7 +8893,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/644930/ss_6df3b09ed1be7b6e7d3db4d89cddba9709c3cf1e.600x338.jpg?t=1595631876',
     shortDescription:
-      'They Are Billions is a Steampunk strategy game set on a post-apocalyptic planet. Build and defend colonies to survive against the billions of the infected that seek to annihilate the few remaining living humans. Can humanity survive after the zombie apocalypse?',
+      '||They Are Billions|| is a Steampunk strategy game set on a post-apocalyptic planet. Build and defend colonies to survive against the billions of the infected that seek to annihilate the few remaining living humans. Can humanity survive after the zombie apocalypse?',
     releaseDate: 'Jun 18, 2019',
     developer: 'Numantian Games',
     publisher: 'Numantian Games',
@@ -9632,7 +8938,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/646570/ss_c171816f7ecd35b5b46d2fa27532f4c5b8ca3cc5.600x338.jpg?t=1769094928',
     shortDescription:
-      'We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and Slay the Spire!',
+      'We fused card games and roguelikes together to make the best single player deckbuilder we could. Craft a unique deck, encounter bizarre creatures, discover relics of immense power, and ||Slay the Spire||!',
     releaseDate: 'Jan 23, 2019',
     developer: 'Mega Crit',
     publisher: 'Mega Crit',
@@ -9722,7 +9028,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/648800/ss_c22b2ff5ba5609f74e61b5feaa5b7a1d7fd1dbd3.600x338.jpg?t=1727184011',
     shortDescription:
-      'Raft throws you and your friends into an epic oceanic adventure! Alone or together, players battle to survive a perilous voyage across a vast sea! Gather debris, scavenge reefs and build your own floating home, but be wary of the man-eating sharks!',
+      '||Raft|| throws you and your friends into an epic oceanic adventure! Alone or together, players battle to survive a perilous voyage across a vast sea! Gather debris, scavenge reefs and build your own floating home, but be wary of the man-eating sharks!',
     releaseDate: 'Jun 20, 2022',
     developer: 'Redbeet Interactive',
     publisher: 'Axolot Games',
@@ -9812,7 +9118,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678950/ss_3d48baf2e7aaf087afbab1c4268637df528eb2c8.600x338.jpg?t=1733508969',
     shortDescription:
-      'DRAGON BALL FighterZ is born from what makes the DRAGON BALL series so loved and famous: endless spectacular fights with its all-powerful fighters.',
+      '||DRAGON BALL FighterZ|| is born from what makes the DRAGON BALL series so loved and famous: endless spectacular fights with its all-powerful fighters.',
     releaseDate: 'Jan 26, 2018',
     developer: 'Arc System Works',
     publisher: 'Bandai Namco Entertainment',
@@ -9857,7 +9163,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/678960/ss_8872f9fd79ef968f3a3023f17811c9f9133f7d64.600x338.jpg?t=1766015412',
     shortDescription:
-      'In the face of certain death, we rise. Team up and embark on a journey to the ends of hell to unlock your past and escape your living nightmare in CODE VEIN.',
+      'In the face of certain death, we rise. Team up and embark on a journey to the ends of hell to unlock your past and escape your living nightmare in ||CODE VEIN||.',
     releaseDate: 'Sep 26, 2019',
     developer: 'Bandai Namco Studios',
     publisher: 'Bandai Namco Entertainment',
@@ -9947,7 +9253,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/703080/ss_fac76f23b1b655dd0459db1a443bc8adb02e4279.600x338.jpg?t=1765896213',
     shortDescription:
-      'Build a world for wildlife in Planet Zoo. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them.',
+      'Build a world for wildlife in ||Planet Zoo||. From the developers of Planet Coaster and Zoo Tycoon comes the ultimate zoo sim. Construct detailed habitats, manage your zoo, and meet authentic living animals who think, feel and explore the world you create around them.',
     releaseDate: 'Nov 5, 2019',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
@@ -9992,7 +9298,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/714010/3a6797ac8e004cc12c4ea09eb2f65d23ce875e7b/ss_3a6797ac8e004cc12c4ea09eb2f65d23ce875e7b.600x338.jpg?t=1766860625',
     shortDescription:
-      'Aimlabs is the aim trainer of choice for over 40 Million players, from beginners to esports pros. Our unique aim analysis optimizes your gameplay, targets your weaknesses &amp; builds key skills for any FPS game! Time to warm up with our unlimited scenarios &amp; rank up in-game!',
+      '||Aimlabs|| is the aim trainer of choice for over 40 Million players, from beginners to esports pros. Our unique aim analysis optimizes your gameplay, targets your weaknesses & builds key skills for any FPS game! Time to warm up with our unlimited scenarios & rank up in-game!',
     releaseDate: 'Jun 16, 2023',
     developer: 'Statespace',
     publisher: 'Statespace',
@@ -10044,7 +9350,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/728880/ss_2f84a12e1fe82cca37848bf29d4b8b16e83db03b.600x338.jpg?t=1765814547',
     shortDescription:
-      'Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons… it’s time to save the world again!',
+      "Overcooked returns with a brand-new helping of chaotic cooking action! Journey back to the Onion Kingdom and assemble your team of chefs in classic couch co-op or online play for up to four players. Hold onto your aprons… it's time to save the world again!",
     releaseDate: 'Aug 7, 2018',
     developer: 'Ghost Town Games Ltd., Team17',
     publisher: 'Team17',
@@ -10089,7 +9395,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/739630/9b0d8ac993bb1ea847a3d20d3d4ffa7066a6acfa/ss_9b0d8ac993bb1ea847a3d20d3d4ffa7066a6acfa.600x338.jpg?t=1769093636',
     shortDescription:
-      'Phasmophobia is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it’s up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.',
+      "||Phasmophobia|| is a 4 player online co-op psychological horror. Paranormal activity is on the rise and it's up to you and your team to use all the ghost-hunting equipment at your disposal in order to gather as much evidence as you can.",
     releaseDate: 'Sep 18, 2020',
     developer: 'Kinetic Games',
     publisher: 'Kinetic Games',
@@ -10175,7 +9481,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/740130/ss_3ca8447106ddb23b14e4e30db0b24cbb359e2a5f.600x338.jpg?t=1735264482',
   },
   '750920': {
-    name: 'Shadow of the Tomb Raider: Definitive Edition',
+    name: 'Shadow of the Tomb Raider',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/750920/ss_04b30aaa0ce083b1bcff63d06432707ab9c35c74.600x338.jpg?t=1765239925',
     shortDescription:
@@ -10271,7 +9577,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/753640/ss_ec95a283483f0438be40d033f08b9d956e748d54.600x338.jpg?t=1729097431',
     shortDescription:
-      'Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, ||Outer Wilds|| is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.',
+      'Named Game of the Year 2019 by Giant Bomb, Polygon, Eurogamer, and The Guardian, ||||Outer Wilds|||| is a critically-acclaimed and award-winning open world mystery about a solar system trapped in an endless time loop.',
     releaseDate: 'Jun 18, 2020',
     developer: 'Mobius Digital',
     publisher: 'Annapurna Interactive',
@@ -10362,7 +9668,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/782330/ss_4f93a7c5003d49cb32f6c0c6e547452b284580a0.600x338.jpg?t=1755109910',
     shortDescription:
-      'Hell’s armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.',
+      "Hell's armies have invaded Earth. Become the Slayer in an epic single-player campaign to conquer demons across dimensions and stop the final destruction of humanity. The only thing they fear... is you.",
     releaseDate: 'Mar 19, 2020',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -10494,7 +9800,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/812140/ss_3f8f4a09fb1d69648a8c20aae19ca2924ba275bd.600x338.jpg?t=1758656673',
   },
   '813780': {
-    name: 'Age of Empires II: Definitive Edition',
+    name: 'Age of Empires II',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_ab2692aa33171bc61378dd59efa89e2ff86e02a6.600x338.jpg?t=1767895383',
     shortDescription:
@@ -10540,7 +9846,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/813780/ss_1033024a26f0a7ed277865201aed9bb471b54320.600x338.jpg?t=1767895383',
   },
   '814380': {
-    name: 'Sekiro: Shadows Die Twice - GOTY Edition',
+    name: 'Sekiro: Shadows Die Twice',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/814380/ss_0f7b0f8ed9ffc49aba26f9328caa9a1d59ad60f0.600x338.jpg?t=1762888662',
     shortDescription:
@@ -10680,7 +9986,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/848450/ss_5011daad83f8494eda0826e4bbc91181239ad5d7.600x338.jpg?t=1751944927',
     shortDescription:
-      'Dive into a freezing underwater adventure on an alien planet. Below Zero is set two years after the original Subnautica. Return to Planet 4546B to uncover the truth behind a deadly cover-up. Survive by building habitats, crafting tools, &amp; diving deeper into the world of Subnautica.',
+      'Dive into a freezing underwater adventure on an alien planet. Below Zero is set two years after the original ||Subnautica||. Return to Planet 4546B to uncover the truth behind a deadly cover-up. Survive by building habitats, crafting tools, & diving deeper into the world of ||Subnautica||.',
     releaseDate: 'May 13, 2021',
     developer: 'Unknown Worlds Entertainment',
     publisher: 'Unknown Worlds Entertainment',
@@ -10725,7 +10031,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/851850/ss_bfda57d08727dd5281892e13b594121b897ea407.600x338.jpg?t=1769139697',
     shortDescription:
-      'The Dragon Ball RPG of your dreams! For the first time, you can play the rest of the story. Step into the universe of Dragon Ball Z in all its iconic glory and become the hero you were always meant to be!',
+      'The Dragon Ball RPG of your dreams! For the first time, you can play the rest of the story. Step into the universe of ||Dragon Ball Z|| in all its iconic glory and become the hero you were always meant to be!',
     releaseDate: 'Jan 16, 2020',
     developer: 'CyberConnect2 Co. Ltd.',
     publisher: 'Bandai Namco Entertainment Inc.',
@@ -10770,7 +10076,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/860510/ss_b7bdc32338c0261ee0773ad0b13024c853a2141c.600x338.jpg?t=1730127763',
     shortDescription:
-      '||Little Nightmares II|| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it’s your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.',
+      "||||Little Nightmares II|||| is the second game in a series that has thrilled and captivated millions of players worldwide since 2017. Now it's your turn to try to survive this critically acclaimed entry in the most charming horror series ever made.",
     releaseDate: 'Feb 10, 2021',
     developer: 'Tarsier Studios',
     publisher: 'BANDAI NAMCO Entertainment',
@@ -10815,7 +10121,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/863550/ss_425ab1fa29823f7dd675cc62e5cb36260462a578.600x338.jpg?t=1674755762',
     shortDescription:
-      'Travel the globe and track your targets across exotic sandbox locations in HITMAN 2. From sun-drenched streets to dark and dangerous rainforests, nowhere is safe from the world’s most creative assassin, Agent 47 in the ultimate spy thriller story.',
+      "Travel the globe and track your targets across exotic sandbox locations in ||HITMAN 2||. From sun-drenched streets to dark and dangerous rainforests, nowhere is safe from the world's most creative assassin, Agent 47 in the ultimate spy thriller story.",
     releaseDate: 'Nov 13, 2018',
     developer: 'IO Interactive A/S',
     publisher: 'IO Interactive A/S',
@@ -10905,7 +10211,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/881100/ss_626b401fd6d78ab335ecb8ff1e4b0a8ce7d25f66.600x338.jpg?t=1675987871',
     shortDescription:
-      "Noita is a magical action roguelite set in a world where every pixel is physically simulated. Fight, explore, melt, burn, freeze and evaporate your way through the procedurally generated world using spells you've created yourself.",
+      "||Noita|| is a magical action roguelite set in a world where every pixel is physically simulated. Fight, explore, melt, burn, freeze and evaporate your way through the procedurally generated world using spells you've created yourself.",
     releaseDate: 'Oct 15, 2020',
     developer: 'Nolla Games',
     publisher: 'Nolla Games',
@@ -10950,7 +10256,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/883710/ss_1392581cd29817e44099cf05416b70ffb159c58b.600x338.jpg?t=1768954831',
     shortDescription:
-      'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you. Witness the return of Resident Evil 2.',
+      'A deadly virus engulfs the residents of Raccoon City in September of 1998, plunging the city into chaos as flesh eating zombies roam the streets for survivors. An unparalleled adrenaline rush, gripping storyline, and unimaginable horrors await you. Witness the return of ||Resident Evil 2||.',
     releaseDate: 'Jan 24, 2019',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -10995,7 +10301,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/892970/ss_a600a7d4ca954543e22f571a9629521a13f82143.600x338.jpg?t=1765967243',
     shortDescription:
-      'A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin’s patronage!',
+      "A brutal exploration and survival game for 1-10 players, set in a procedurally-generated purgatory inspired by viking culture. Battle, build, and conquer your way to a saga worthy of Odin's patronage!",
     releaseDate: 'Feb 2, 2021',
     developer: 'Iron Gate AB',
     publisher: 'Coffee Stain Publishing',
@@ -11130,7 +10436,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/955050/ss_611cb54cd427ee510d7f63af9387368b89d2425d.600x338.jpg?t=1734416166',
     shortDescription:
-      'Bright Memory is a lightning-fast fusion of the FPS and action genres, created by one-man development studio FYQD using Unreal Engine. Combine a wide variety of skills and abilities to unleash dazzling combo attacks.',
+      '||Bright Memory|| is a lightning-fast fusion of the FPS and action genres, created by one-man development studio FYQD using Unreal Engine. Combine a wide variety of skills and abilities to unleash dazzling combo attacks.',
     releaseDate: 'Mar 25, 2020',
     developer: 'FYQD-Studio',
     publisher: 'FYQD-Studio, PLAYISM',
@@ -11216,11 +10522,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/962130/ss_432b22f117321d942d5bbb4ee49d2acc37b4baf2.600x338.jpg?t=1768264530',
   },
   '972660': {
-    name: 'Spiritfarer: Farewell Edition',
+    name: 'Spiritfarer',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/972660/ss_a751970e68bc928538fbc4f52d6090c6ff1d8974.600x338.jpg?t=1752503178',
     shortDescription:
-      'Spiritfarer is a cozy management game about dying. As ferrymaster to the deceased, build a boat to explore the world, care for your spirit friends, and release them into the afterlife. The Spiritfarer Farewell Edition includes the heartwarming base game and three major content updates.',
+      '||Spiritfarer|| is a cozy management game about dying. As ferrymaster to the deceased, build a boat to explore the world, care for your spirit friends, and release them into the afterlife.',
     releaseDate: 'Aug 18, 2020',
     developer: 'Thunder Lotus',
     publisher: 'Thunder Lotus',
@@ -11310,7 +10616,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976310/ss_e5cd8debd74027dbfafd9729fc32986a63393333.600x338.jpg?t=1747925751',
     shortDescription:
-      'Mortal Kombat is back and better than ever in the next evolution of the iconic franchise.',
+      '||Mortal Kombat|| is back and better than ever in the next evolution of the iconic franchise.',
     releaseDate: 'Apr 23, 2019',
     developer: 'NetherRealm Studios, QLOC, Shiver',
     publisher: 'Warner Bros. Games, Warner Bros. Interactive Entertainment',
@@ -11355,7 +10661,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/976730/ss_ce40a85f9f7f3fa0f620a87f8919f3212ab8e46e.600x338.jpg?t=1740682623',
     shortDescription:
-      'The Master Chief’s iconic journey includes six games, built for PC and collected in a single integrated experience. Whether you’re a long-time fan or meeting Spartan 117 for the first time, The Master Chief Collection is the definitive Halo gaming experience.',
+      "The Master Chief's iconic journey includes six games, built for PC and collected in a single integrated experience. Whether you're a long-time fan or meeting Spartan 117 for the first time, The Master Chief Collection is the definitive ||Halo|| gaming experience.",
     releaseDate: 'Dec 3, 2019',
     developer:
       '343 Industries, Splash Damage, Ruffian Games, Bungie, Saber Interactive',
@@ -11401,7 +10707,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_725bf58485beb4aa37a3a69c1e2baa69bf3e4653.600x338.jpg?t=1765473525',
     shortDescription:
-      'Hogwarts Legacy is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
+      '||Hogwarts Legacy|| is an immersive, open-world action RPG. Now you can take control of the action and be at the center of your own adventure in the wizarding world.',
     releaseDate: 'Feb 10, 2023',
     developer: 'Avalanche Software',
     publisher: 'Warner Bros. Games',
@@ -11441,57 +10747,12 @@ export const steamGameDetails: SteamGameMap = {
     secondaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/990080/ss_df93b5e8a183f7232d68be94ae78920a90de1443.600x338.jpg?t=1765473525',
   },
-  '992300': {
-    name: '嗜血印 Bloody Spell',
-    primaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/992300/ss_089bc6322dbc05794b3ac224d799e304cd477469.600x338.jpg?t=1755193653',
-    shortDescription:
-      'This is a martial arts action role-playing game. The core of the game is battle-oriented, and it combines many fighting elements. If you are a player who pursues blood and is brave enough to challenge the limits, it will definitely inspire your adrenaline and bring you the best combat experience.',
-    releaseDate: 'Jan 26, 2022',
-    developer: '艺龙游戏',
-    publisher: '艺龙游戏',
-    tags: ['Action', 'Adventure', 'Indie', 'RPG'],
-    features: [],
-    recentReviewSummary: {
-      count: 0,
-      rating: 'Very Positive',
-    },
-    allReviewSummary: {
-      count: 2329,
-      rating: 'Very Positive',
-    },
-    userTags: [
-      'Nudity',
-      'Sexual Content',
-      'Female Protagonist',
-      'Action RPG',
-      'Hack and Slash',
-      'Action',
-      'Martial Arts',
-      '3D',
-      'Open World',
-      'Rogue-like',
-      'Singleplayer',
-      'Violent',
-      'Rogue-lite',
-      'Multiplayer',
-      'RPG',
-      '3D Vision',
-      'Gore',
-      'Online Co-Op',
-      'Adventure',
-      'Indie',
-    ],
-    appId: 992300,
-    secondaryScreenshot:
-      'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/992300/ss_003a92b0c3c6adba9db4a6995df604dd3aa0d271.600x338.jpg?t=1755193653',
-  },
   '1029780': {
     name: 'Going Medieval',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1029780/ss_62e6e3118e095d90fac4b1c4ec8b81395d27d69a.600x338.jpg?t=1769159964',
     shortDescription:
-      'Build and manage your own castle settlement in a land reclaimed by wilderness. With detailed management, survival strategy, and a moddable sandbox world, Going Medieval challenges you to build the mightiest colony this side of the apocalypse.',
+      'Build and manage your own castle settlement in a land reclaimed by wilderness. With detailed management, survival strategy, and a moddable sandbox world, ||Going Medieval|| challenges you to build the mightiest colony this side of the apocalypse.',
     releaseDate: 'Jun 1, 2021',
     developer: 'Foxy Voxel',
     publisher: 'Mythwright',
@@ -11536,7 +10797,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/26950369fe4b03c2268620eb9815c8a246aa0b06/ss_26950369fe4b03c2268620eb9815c8a246aa0b06.600x338.jpg?t=1764916587',
     shortDescription:
-      'Discover a vast, haunted kingdom in Hollow Knight: Silksong! Explore, fight and survive as you ascend to the peak of a land ruled by silk and song.',
+      'Discover a vast, haunted kingdom in ||Hollow Knight: Silksong||! Explore, fight and survive as you ascend to the peak of a land ruled by silk and song.',
     releaseDate: 'Sep 4, 2025',
     developer: 'Team Cherry',
     publisher: 'Team Cherry',
@@ -11556,7 +10817,7 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030300/09ccaa6c16f158f9df8298feb5d196098506a028/ss_09ccaa6c16f158f9df8298feb5d196098506a028.600x338.jpg?t=1764916587',
   },
   '1030840': {
-    name: 'Mafia: Definitive Edition',
+    name: 'Mafia',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1030840/ss_f531c551d9794deafc1e45421b70e8d4c254aaca.600x338.jpg?t=1759852929',
     shortDescription:
@@ -11605,7 +10866,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1057090/ss_0cf0ec6681ae5771173790dbc99ddb3bf3b886ad.600x338.jpg?t=1759530749',
     shortDescription:
-      'Play the critically acclaimed masterpiece. Embark on a new journey in a vast, exotic world where you’ll encounter towering enemies and challenging puzzles on your quest to unravel Ori’s destiny.',
+      "Play the critically acclaimed masterpiece. Embark on a new journey in a vast, exotic world where you'll encounter towering enemies and challenging puzzles on your quest to unravel Ori's destiny.",
     releaseDate: 'Mar 10, 2020',
     developer: 'Moon Studios GmbH',
     publisher: 'Xbox Game Studios',
@@ -11695,7 +10956,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1062520/ss_767bcbda803dfceedee650dfcbae8a52fbd2b1b7.600x338.jpg?t=1767607973',
     shortDescription:
-      'Dinkum is a survival life simulation game set on an island inspired by the rugged Australian outback. Farm, hunt, mine, fish, and forage to gather resources, expand your town, and discover what makes Dinkum so special—either solo or with friends.',
+      '||Dinkum|| is a survival life simulation game set on an island inspired by the rugged Australian outback. Farm, hunt, mine, fish, and forage to gather resources, expand your town, and discover what makes ||Dinkum|| so special—either solo or with friends.',
     releaseDate: 'Apr 22, 2025',
     developer: 'James Bendon',
     publisher: 'KRAFTON, Inc.',
@@ -11785,7 +11046,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1086940/ss_c73bc54415178c07fef85f54ee26621728c77504.600x338.jpg?t=1765505948',
     shortDescription:
-      'Baldur’s Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons &amp; Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.',
+      "Baldur's Gate 3 is a story-rich, party-based RPG set in the universe of Dungeons & Dragons, where your choices shape a tale of fellowship and betrayal, survival and sacrifice, and the lure of absolute power.",
     releaseDate: 'Aug 3, 2023',
     developer: 'Larian Studios',
     publisher: 'Larian Studios',
@@ -11830,7 +11091,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1091500/ss_2f649b68d579bf87011487d29bc4ccbfdd97d34f.600x338.jpg?t=1769690377',
     shortDescription:
-      'Cyberpunk 2077 is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.',
+      '||Cyberpunk 2077|| is an open-world, action-adventure RPG set in the dark future of Night City — a dangerous megalopolis obsessed with power, glamor, and ceaseless body modification.',
     releaseDate: 'Dec 9, 2020',
     developer: 'CD PROJEKT RED',
     publisher: 'CD PROJEKT RED',
@@ -11875,7 +11136,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1092790/ss_0191a69b0e94a9a7784f5b81e27f06379910645a.600x338.jpg?t=1768517864',
     shortDescription:
-      'Inscryption is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscrybed upon the cards...',
+      '||Inscryption|| is an inky black card-based odyssey that blends the deckbuilding roguelike, escape-room style puzzles, and psychological horror into a blood-laced smoothie. Darker still are the secrets inscrybed upon the cards...',
     releaseDate: 'Oct 19, 2021',
     developer: 'Daniel Mullins Games',
     publisher: 'Devolver Digital',
@@ -11920,7 +11181,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1113560/ss_2ff3ddb26c30b8397bce45abd0b4d847c3457259.600x338.jpg?t=1758094186',
     shortDescription:
-      'The upgraded prequel of NieR:Automata. A kind young man sets out with Grimoire Weiss, a strange talking book, to search for the &quot;Sealed verses&quot; in order to save his sister Yonah, who fell terminally ill to the Black Scrawl.',
+      'The upgraded prequel of NieR:Automata. A kind young man sets out with Grimoire Weiss, a strange talking book, to search for the "Sealed verses" in order to save his sister Yonah, who fell terminally ill to the Black Scrawl.',
     releaseDate: 'Apr 23, 2021',
     developer: 'Square Enix, Toylogic Inc.',
     publisher: 'Square Enix',
@@ -11965,7 +11226,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1121640/577c727eea7a4128927bc30a049baf0825bc7cfa/ss_577c727eea7a4128927bc30a049baf0825bc7cfa.600x338.jpg?t=1768838833',
     shortDescription:
-      'The Wandering Village is a city-building simulation game on the back of a giant, wandering creature. Build your settlement and form a symbiotic relationship with the colossus. Will you survive together in this hostile, yet beautiful post-apocalyptic world, contaminated by poisonous plants?',
+      '||The Wandering Village|| is a city-building simulation game on the back of a giant, wandering creature. Build your settlement and form a symbiotic relationship with the colossus. Will you survive together in this hostile, yet beautiful post-apocalyptic world, contaminated by poisonous plants?',
     releaseDate: 'Jul 17, 2025',
     developer: 'Stray Fawn Studio',
     publisher: 'Stray Fawn Publishing, WhisperGames',
@@ -12010,7 +11271,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1128920/ss_d6ef1b997aceb9ffdda887e7308b5e09fb3b8585.600x338.jpg?t=1766297071',
     shortDescription:
-      'EVERSPACE 2 is a fast-paced single-player spaceship shooter with exploration in space and on planets, tons of loot, RPG elements, mining, and crafting. Experience an exciting sci-fi story set in a vivid, handcrafted open world full of secrets, puzzles, and perils.',
+      '||EVERSPACE 2|| is a fast-paced single-player spaceship shooter with exploration in space and on planets, tons of loot, RPG elements, mining, and crafting. Experience an exciting sci-fi story set in a vivid, handcrafted open world full of secrets, puzzles, and perils.',
     releaseDate: 'Apr 6, 2023',
     developer: 'ROCKFISH Games',
     publisher: 'ROCKFISH Games',
@@ -12055,7 +11316,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1129580/ss_87848ba7b694a3a08fed906e2dfde85ce2a008cd.600x338.jpg?t=1765546793',
     shortDescription:
-      'Hunt, survive, build and lead in the harsh Middle Ages: Create your own Medieval Dynasty and ensure its long-lasting prosperity or die trying! Play alone or team up with friends to enjoy the ultimate medieval experience.',
+      'Hunt, survive, build and lead in the harsh Middle Ages: Create your own ||Medieval Dynasty|| and ensure its long-lasting prosperity or die trying! Play alone or team up with friends to enjoy the ultimate medieval experience.',
     releaseDate: 'Sep 23, 2021',
     developer: 'Render Cube',
     publisher: 'Toplitz Productions',
@@ -12100,7 +11361,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1139900/ss_6f7ea1399cdf74cfafb0ddbf397ccb1f04f2bb04.600x338.jpg?t=1727712844',
     shortDescription:
-      'Ghostrunner offers a unique single-player experience: fast-paced, violent combat, and an original setting that blends science fiction with post-apocalyptic themes. It tells the story of a world that has already ended and its inhabitants who fight to survive.',
+      '||Ghostrunner|| offers a unique single-player experience: fast-paced, violent combat, and an original setting that blends science fiction with post-apocalyptic themes. It tells the story of a world that has already ended and its inhabitants who fight to survive.',
     releaseDate: 'Oct 27, 2020',
     developer: 'One More Level, 3D Realms, Slipgate Ironworks, All in! Games',
     publisher: '505 Games',
@@ -12231,11 +11492,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1145360/ss_8a9f0953e8a014bd3df2789c2835cb787cd3764d.600x338.jpg?t=1758127023',
   },
   '1151640': {
-    name: 'Horizon Zero Dawn Complete Edition',
+    name: 'Horizon Zero Dawn',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1151640/ss_d09106060fb7de8bf342c23df18b14debc8a15a3.600x338.jpg?t=1750105817',
     shortDescription:
-      'Experience Aloy’s legendary quest to unravel the mysteries of a future Earth ruled by Machines. Use devastating tactical attacks against your prey and explore a majestic open world in this award-winning action RPG!',
+      "Experience Aloy's legendary quest to unravel the mysteries of a future Earth ruled by Machines. Use devastating tactical attacks against your prey and explore a majestic open world in this award-winning action RPG!",
     releaseDate: 'Aug 7, 2020',
     developer: 'Guerrilla',
     publisher: 'PlayStation Publishing LLC',
@@ -12280,7 +11541,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158160/05227142ef1e3ed7cc4074b23680de1d7764f19f/ss_05227142ef1e3ed7cc4074b23680de1d7764f19f.600x338.jpg?t=1768910953',
     shortDescription:
-      'Coral Island is a vibrant, laid-back farm sim reimagined with multiplayer! Experience enchanting island life at your own pace: farm with friends, nurture animals, build relationships, hang out with a diverse cast of characters, and dive into the magical Merfolk Kingdom.',
+      '||Coral Island|| is a vibrant, laid-back farm sim reimagined with multiplayer! Experience enchanting island life at your own pace: farm with friends, nurture animals, build relationships, hang out with a diverse cast of characters, and dive into the magical Merfolk Kingdom.',
     releaseDate: 'Nov 14, 2023',
     developer: 'Stairway Games',
     publisher: 'Humble Games',
@@ -12325,7 +11586,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1158310/ba7f77f7eb96d48f267e970583ddaa32b3b5eb98/ss_ba7f77f7eb96d48f267e970583ddaa32b3b5eb98.600x338.jpg?t=1769710780',
     shortDescription:
-      'Love, fight, scheme, and claim greatness. Determine your noble house’s legacy in the sprawling grand strategy of Crusader Kings III. Death is only the beginning as you guide your dynasty’s bloodline in the rich and larger-than-life simulation of the Middle Ages.',
+      "Love, fight, scheme, and claim greatness. Determine your noble house's legacy in the sprawling grand strategy of ||Crusader Kings III||. Death is only the beginning as you guide your dynasty's bloodline in the rich and larger-than-life simulation of the Middle Ages.",
     releaseDate: 'Sep 1, 2020',
     developer: 'Paradox Development Studio',
     publisher: 'Paradox Interactive',
@@ -12460,7 +11721,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172380/ss_695a5724e306269d81ca0118d86308a170c9e913.600x338.jpg?t=1748950986',
     shortDescription:
-      'A galaxy-spanning adventure awaits in Star Wars Jedi: Fallen Order, a 3rd person action-adventure title from Respawn. An abandoned Padawan must complete his training, develop new powerful Force abilities, and master the art of the lightsaber - all while staying one step ahead of the Empire.',
+      'A galaxy-spanning adventure awaits in ||Star Wars Jedi: Fallen Order||, a 3rd person action-adventure title from Respawn. An abandoned Padawan must complete his training, develop new powerful Force abilities, and master the art of the lightsaber - all while staying one step ahead of the Empire.',
     releaseDate: 'Nov 14, 2019',
     developer: 'Respawn Entertainment',
     publisher: 'Electronic Arts',
@@ -12501,11 +11762,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172380/ss_cfad9481db1a3b68fb5fcb2298cfc74bcb6a469e.600x338.jpg?t=1748950986',
   },
   '1172620': {
-    name: 'Sea of Thieves: 2025 Edition',
+    name: 'Sea of Thieves',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1172620/ss_ec623c77d75dfa098c622b547b1ab21ad4cae0a8.600x338.jpg?t=1765448772',
     shortDescription:
-      'Sea of Thieves is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense battles, vanquishing sea monsters and more. Dive in with this revised edition of the game, which includes access to digital bonus media.',
+      '||Sea of Thieves|| is a smash-hit pirate adventure game, offering the quintessential pirate experience of plundering lost treasures, intense battles, vanquishing sea monsters and more.',
     releaseDate: 'Jun 3, 2020',
     developer: 'Rare Ltd',
     publisher: 'Xbox Game Studios',
@@ -12595,7 +11856,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1190460/ss_ac7c64c8d10bb5786694891e4a22b07a5da7dd6f.600x338.jpg?t=1766014863',
     shortDescription:
-      'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Sam Bridges must brave a world utterly transformed by the Death Stranding. Carrying the disconnected remnants of our future in his hands, he embarks on a journey to reconnect the shattered world one step at a time.',
+      'From legendary game creator Hideo Kojima comes an all-new, genre-defying experience. Sam Bridges must brave a world utterly transformed by the ||Death Stranding||. Carrying the disconnected remnants of our future in his hands, he embarks on a journey to reconnect the shattered world one step at a time.',
     releaseDate: 'Jul 14, 2020',
     developer: 'KOJIMA PRODUCTIONS',
     publisher: '505 Games',
@@ -12685,7 +11946,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1196590/ss_d25704b01be292d1337df4fea0fba2aab322b58a.600x338.jpg?t=1769125526',
     shortDescription:
-      'Experience survival horror like never before in the 8th major installment in the Resident Evil franchise - Resident Evil Village. With detailed graphics, intense first-person action and masterful storytelling, the terror has never felt more realistic.',
+      'Experience survival horror like never before in the 8th major installment in the Resident Evil franchise - ||Resident Evil Village||. With detailed graphics, intense first-person action and masterful storytelling, the terror has never felt more realistic.',
     releaseDate: 'May 6, 2021',
     developer: 'CAPCOM Co., Ltd.',
     publisher: 'CAPCOM Co., Ltd.',
@@ -12775,7 +12036,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1210320/ss_a5197ad5bb35e9899c9e751820cdb9dbc0ceb308.600x338.jpg?t=1765364005',
     shortDescription:
-      "Potion Craft is an alchemist simulator where you physically interact with your tools and ingredients to brew potions. You're in full control of the whole shop: invent new recipes, attract customers and experiment to your heart's content. Just remember: the whole town is counting on you.",
+      "||Potion Craft|| is an alchemist simulator where you physically interact with your tools and ingredients to brew potions. You're in full control of the whole shop: invent new recipes, attract customers and experiment to your heart's content. Just remember: the whole town is counting on you.",
     releaseDate: 'Dec 13, 2022',
     developer: 'niceplay games',
     publisher: 'tinyBuild',
@@ -12820,7 +12081,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1217060/ss_766c04e48e2c7b3d86406368c8c4b4b9cfddedcc.600x338.jpg?t=1769774559',
     shortDescription:
-      'Gunfire Reborn is a level-based adventure game featuring FPS, Roguelite and RPG. Players can control heroes with various abilities to experience diverse Build gameplay, use various weapons to explore procedurally-generated levels. You can play the game alone, or join 4-player coop.',
+      '||Gunfire Reborn|| is a level-based adventure game featuring FPS, Roguelite and RPG. Players can control heroes with various abilities to experience diverse Build gameplay, use various weapons to explore procedurally-generated levels. You can play the game alone, or join 4-player coop.',
     releaseDate: 'Nov 17, 2021',
     developer: 'Duoyi Games',
     publisher: 'Duoyi Games',
@@ -12865,7 +12126,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222140/ss_9c900def2b1d9a003b7d3e202ea2a7556a36e081.600x338.jpg?t=1667468479',
     shortDescription:
-      'Detroit: Become Human puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
+      '||Detroit: Become Human|| puts the destiny of both mankind and androids in your hands, taking you to a near future where machines have become more intelligent than humans. Every choice you make affects the outcome of the game, with one of the most intricately branching narratives ever created.',
     releaseDate: 'Jun 18, 2020',
     developer: 'Quantic Dream',
     publisher: 'Quantic Dream',
@@ -12910,7 +12171,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1222670/ss_537683e5e29c2d6d02c64aa7321dcb26166f7d82.600x338.jpg?t=1768493570',
     shortDescription:
-      'Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that’s wholly unique. Explore and customize every detail from Sims to homes–and much more.',
+      "Play with life and discover the possibilities. Unleash your imagination and create a world of Sims that's wholly unique. Explore and customize every detail from Sims to homes–and much more.",
     releaseDate: 'Jun 18, 2020',
     developer: 'Maxis',
     publisher: 'Electronic Arts',
@@ -12955,7 +12216,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1229490/ss_8c743b6de2d6124bd583d8764f28cafe2b7ecb3f.600x338.jpg?t=1764923042',
     shortDescription:
-      "ULTRAKILL is a fast-paced ultraviolent retro FPS combining the skill-based style scoring from character action games with unadulterated carnage inspired by the best shooters of the '90s. Rip apart your foes with varied destructive weapons and shower in their blood to regain your health.",
+      "||ULTRAKILL|| is a fast-paced ultraviolent retro FPS combining the skill-based style scoring from character action games with unadulterated carnage inspired by the best shooters of the '90s. Rip apart your foes with varied destructive weapons and shower in their blood to regain your health.",
     releaseDate: 'Sep 3, 2020',
     developer: 'Arsi "Hakita" Patala',
     publisher: 'New Blood Interactive',
@@ -13000,7 +12261,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1237970/ss_d5c13576c0ab4e6ca93b51aa39aa74271672e75f.600x338.jpg?t=1726160226',
     shortDescription:
-      'Respawn Entertainment gives you the most advanced titan technology in its new, single player campaign &amp; multiplayer experience. Combine &amp; conquer with new titans &amp; pilots, deadlier weapons, &amp; customization and progression systems that help you and your titan flow as one unstoppable killing force.',
+      'Respawn Entertainment gives you the most advanced titan technology in its new, single player campaign & multiplayer experience. Combine & conquer with new titans & pilots, deadlier weapons, & customization and progression systems that help you and your titan flow as one unstoppable killing force.',
     releaseDate: 'Jun 18, 2020',
     developer: 'Respawn Entertainment',
     publisher: 'Electronic Arts',
@@ -13045,7 +12306,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244090/ss_f756ff477590284c7192ffcef99237de056e4aeb.600x338.jpg?t=1756414027',
     shortDescription:
-      'Sea of Stars is a turn-based RPG inspired by the classics. It tells the story of two Children of the Solstice who will combine the powers of the sun and moon to perform Eclipse Magic, the only force capable of fending off the monstrous creations of the evil alchemist known as The Fleshmancer.',
+      '||Sea of Stars|| is a turn-based RPG inspired by the classics. It tells the story of two Children of the Solstice who will combine the powers of the sun and moon to perform Eclipse Magic, the only force capable of fending off the monstrous creations of the evil alchemist known as The Fleshmancer.',
     releaseDate: 'Aug 28, 2023',
     developer: 'Sabotage Studio',
     publisher: 'Sabotage Studio',
@@ -13090,7 +12351,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1244460/ss_e2043f89661bf4da80628e6ab1e97b0a67f1c7ed.600x338.jpg?t=1750957701',
     shortDescription:
-      'Jurassic World Evolution 2 is the much-anticipated sequel to Frontier’s highly successful Jurassic World Evolution. This bold new era in the Jurassic World Evolution game franchise builds upon the ground-breaking and immersive 2018 management simulation.',
+      "||Jurassic World Evolution 2|| is the much-anticipated sequel to Frontier's highly successful ||Jurassic World Evolution||. This bold new era in the ||Jurassic World Evolution|| game franchise builds upon the ground-breaking and immersive 2018 management simulation.",
     releaseDate: 'Nov 9, 2021',
     developer: 'Frontier Developments',
     publisher: 'Frontier Developments',
@@ -13135,7 +12396,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1245620/ss_943bf6fe62352757d9070c1d33e50b92fe8539f1.600x338.jpg?t=1767883716',
     shortDescription:
-      'THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.',
+      'THE CRITICALLY ACCLAIMED FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the ||Elden Ring|| and become an Elden Lord in the Lands Between.',
     releaseDate: 'Feb 24, 2022',
     developer: 'FromSoftware, Inc.',
     publisher: 'FromSoftware, Inc., Bandai Namco Entertainment',
@@ -13270,7 +12531,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1262560/ss_82adddc724f99986dafdfe5f713de45e12a4ece5.600x338.jpg?t=1605151411',
     shortDescription:
-      'The open-world action in Need for Speed Most Wanted gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low or head for terrain that plays to your vehicle’s unique strengths. Fight your way past cops and rivals using skill, high-end car tech and tons of nitrous.',
+      "The open-world action in ||Need for Speed Most Wanted|| gives you the freedom to drive your way. Hit jumps and shortcuts, switch cars, lie low or head for terrain that plays to your vehicle's unique strengths. Fight your way past cops and rivals using skill, high-end car tech and tons of nitrous.",
     releaseDate: 'Jun 18, 2020',
     developer: 'Criterion Games',
     publisher: 'Electronic Arts',
@@ -13360,7 +12621,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1284210/ss_7f65b15609337bc9572dca6e8d8581b68eda5cc9.600x338.jpg?t=1769556226',
     shortDescription:
-      'Guild Wars 2 is an award-winning online roleplaying game with fast-paced action combat, deep character customization, and no subscription fee required. Choose from an arsenal of professions and weapons, explore a vast open world, compete in PVP modes and more. Join over 16 million players now!',
+      '||Guild Wars 2|| is an award-winning online roleplaying game with fast-paced action combat, deep character customization, and no subscription fee required. Choose from an arsenal of professions and weapons, explore a vast open world, compete in PVP modes and more. Join over 16 million players now!',
     releaseDate: 'Aug 23, 2022',
     developer: 'ArenaNet',
     publisher: 'ArenaNet, NCSOFT',
@@ -13405,7 +12666,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1286830/ss_582b40b9dea8273368826afd425f541aa859bbe6.600x338.jpg?t=1764088482',
     shortDescription:
-      'STAR WARS: The Old Republic is a free-to-play MMORPG that puts you at the center of your own story-driven saga. Play as a Jedi, Sith, Bounty Hunter, or one of many other iconic STAR WARS roles in the galaxy far, far away over three thousand years before the classic films.',
+      '||STAR WARS: The Old Republic|| is a free-to-play MMORPG that puts you at the center of your own story-driven saga. Play as a Jedi, Sith, Bounty Hunter, or one of many other iconic ||STAR WARS|| roles in the galaxy far, far away over three thousand years before the classic films.',
     releaseDate: 'Jul 21, 2020',
     developer: 'Broadsword',
     publisher: 'Electronic Arts',
@@ -13450,7 +12711,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1293830/ss_e88792a0331f460d913ac05203f7c1b12112b14c.600x338.jpg?t=1734336342',
     shortDescription:
-      'Dynamic seasons change everything at the world’s greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world.',
+      "Dynamic seasons change everything at the world's greatest automotive festival. Go it alone or team up with others to explore beautiful and historic Britain in a shared open world.",
     releaseDate: 'Mar 9, 2021',
     developer: 'Playground Games',
     publisher: 'Xbox Game Studios',
@@ -13630,7 +12891,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1328670/ss_3cfdbd8a5d94f9005d33ba17bb6b163dc458ddf7.600x338.jpg?t=1765910726',
     shortDescription:
-      'The Mass Effect Legendary Edition includes single-player base content and over 40 DLC from the highly acclaimed Mass Effect, Mass Effect 2, and Mass Effect 3 games, including promo weapons, armors, and packs — remastered and optimized for 4K Ultra HD.',
+      'The ||Mass Effect Legendary Edition|| includes single-player base content and over 40 DLC from the highly acclaimed Mass Effect, Mass Effect 2, and Mass Effect 3 games, including promo weapons, armors, and packs — remastered and optimized for 4K Ultra HD.',
     releaseDate: 'May 14, 2021',
     developer: 'BioWare',
     publisher: 'Electronic Arts',
@@ -13675,7 +12936,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1332010/ss_88e209a90c2039fa76bca6fa08c641365be38d50.600x338.jpg?t=1733260906',
     shortDescription:
-      'Lost, alone and separated from family, a stray cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
+      'Lost, alone and separated from family, a ||stray|| cat must untangle an ancient mystery to escape a long-forgotten cybercity and find their way home.',
     releaseDate: 'Jul 19, 2022',
     developer: 'BlueTwelve Studio',
     publisher: 'Annapurna Interactive',
@@ -13720,7 +12981,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1336490/ss_c7a8ad6065ddaa4789935d28d99e24c940c2181c.600x338.jpg?t=1769170122',
     shortDescription:
-      "A dark fantasy city builder where you must rebuild civilization in the face of apocalyptic rains. As the Queen’s Viceroy, lead humans, beavers, lizards, foxes, and harpies to reclaim the wilderness and secure a future for civilization's last survivors.",
+      "A dark fantasy city builder where you must rebuild civilization in the face of apocalyptic rains. As the Queen's Viceroy, lead humans, beavers, lizards, foxes, and harpies to reclaim the wilderness and secure a future for civilization's last survivors.",
     releaseDate: 'Dec 8, 2023',
     developer: 'Eremite Games',
     publisher: 'Hooded Horse',
@@ -13789,7 +13050,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1366540/ss_7886f76352c9e2bf2bf2fe74434b8a50bb3312d3.600x338.jpg?t=1765532615',
     shortDescription:
-      'Build the most efficient intergalactic factory in space simulation strategy game Dyson Sphere Program! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.',
+      'Build the most efficient intergalactic factory in space simulation strategy game ||Dyson Sphere Program||! Harness the power of stars, collect resources, plan and design production lines and develop your interstellar factory from a small space workshop to a galaxy-wide industrial empire.',
     releaseDate: 'Jan 20, 2021',
     developer: 'Youthcat Studio',
     publisher: 'Gamirror Games',
@@ -13834,7 +13095,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1426210/ss_3e59753eefaba9a7704a18e902b48e8d38e95e0b.600x338.jpg?t=1763484491',
     shortDescription:
-      'Embark on the craziest journey of your life in It Takes Two. Invite a friend to join for free with Friend’s Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.',
+      "Embark on the craziest journey of your life in ||It Takes Two||. Invite a friend to join for free with Friend's Pass and work together across a huge variety of gleefully disruptive gameplay challenges. Winner of GAME OF THE YEAR at the Game Awards 2021.",
     releaseDate: 'Mar 25, 2021',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
@@ -13879,7 +13140,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1451940/ss_079abcf18d00cb4990c5eac37ee6508f9377c08f.600x338.jpg?t=1762834234',
     shortDescription:
-      'NEEDY STREAMER OVERLOAD is a “multi-ending ADV” depicting daily life with “OMGkawaiiAngel”, a young girl with a rather extreme need for approval attempting to become the #1 “Internet Angel” (streamer).',
+      '||NEEDY STREAMER OVERLOAD|| is a “multi-ending ADV” depicting daily life with “OMGkawaiiAngel”, a young girl with a rather extreme need for approval attempting to become the #1 “Internet Angel” (streamer).',
     releaseDate: 'Jan 21, 2022',
     developer: 'WSS playground, xemono',
     publisher: 'WSS playground, Alliance Arts',
@@ -14059,7 +13320,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1466860/ss_2ae5b5a2a779c31e3acae486ec359b0d9087bc8c.600x338.jpg?t=1762295217',
     shortDescription:
-      'Celebrating its first year of delighting millions of global players, the award-winning and best-selling strategy franchise continues with Age of Empires IV: Anniversary Edition, putting you at the center of even more epic historical battles that shaped the world.',
+      'Celebrating its first year of delighting millions of global players, the award-winning and best-selling strategy franchise continues with ||Age of Empires IV: Anniversary Edition||, putting you at the center of even more epic historical battles that shaped the world.',
     releaseDate: 'Oct 28, 2021',
     developer:
       "World's Edge, Relic Entertainment, Forgotten Empires, Climax Studios",
@@ -14105,7 +13366,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1527950/ss_09714a62ca142a8a1eb27fa5a408cfc168d9e786.600x338.jpg?t=1766130800',
     shortDescription:
-      'Wartales is an open world RPG in which you lead a group of mercenaries in their search for wealth across a massive medieval universe. Explore the world, recruit companions, collect bounties and unravel the secrets of the tombs of the ancients!',
+      '||Wartales|| is an open world RPG in which you lead a group of mercenaries in their search for wealth across a massive medieval universe. Explore the world, recruit companions, collect bounties and unravel the secrets of the tombs of the ancients!',
     releaseDate: 'Apr 12, 2023',
     developer: 'Shiro Games',
     publisher: 'Shiro Games',
@@ -14150,7 +13411,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1551360/ss_cf56e25a0290556ba83229eb0ab370d10be0407c.600x338.jpg?t=1746471508',
     shortDescription:
-      'Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world’s greatest cars.',
+      "Explore the vibrant open world landscapes of Mexico with limitless, fun driving action in the world's greatest cars.",
     releaseDate: 'Nov 8, 2021',
     developer: 'Playground Games',
     publisher: 'Xbox Game Studios',
@@ -14195,7 +13456,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1562430/ss_70f88014423ed93eaa111c0d0daca2c500f76908.600x338.jpg?t=1766050211',
     shortDescription:
-      'DREDGE is a single-player fishing adventure with a sinister undercurrent. Sell your catch, upgrade your boat, and dredge the depths for long-buried secrets. Explore a mysterious archipelago and discover why some things are best left forgotten.',
+      '||DREDGE|| is a single-player fishing adventure with a sinister undercurrent. Sell your catch, upgrade your boat, and ||dredge|| the depths for long-buried secrets. Explore a mysterious archipelago and discover why some things are best left forgotten.',
     releaseDate: 'Mar 30, 2023',
     developer: 'Black Salt Games',
     publisher: 'Team17',
@@ -14240,7 +13501,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1583230/ss_669dcc1c0928edf635e9f451c6a7eca7c044df15.600x338.jpg?t=1752869049',
     shortDescription:
-      'HIGH ON KNIFE DLC OUT NOW!! - Humanity is being threatened by an alien cartel who wants to use them as drugs. It’s up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!',
+      "HIGH ON KNIFE DLC OUT NOW!! - Humanity is being threatened by an alien cartel who wants to use them as drugs. It's up to you to rescue and partner with charismatic, talking guns, take down Garmantuous and his gang, and save the world!",
     releaseDate: 'Dec 13, 2022',
     developer: 'Squanch Games, Inc.',
     publisher: 'Squanch Games, Inc.',
@@ -14285,7 +13546,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1593030/ss_6cd1cb55eaa724b291f669f8d9d17b88ecb1f2e9.600x338.jpg?t=1756318967',
     shortDescription:
-      'Terra Nil is an intricate environmental strategy game about transforming a barren wasteland into a thriving, balanced ecosystem. Bring life back to a lifeless world by purifying soil, cleaning oceans, planting trees, and reintroducing wildlife, then leave without a trace.',
+      '||Terra Nil|| is an intricate environmental strategy game about transforming a barren wasteland into a thriving, balanced ecosystem. Bring life back to a lifeless world by purifying soil, cleaning oceans, planting trees, and reintroducing wildlife, then leave without a trace.',
     releaseDate: 'Mar 28, 2023',
     developer: 'Free Lives, Clockwork Acorn',
     publisher: 'Devolver Digital',
@@ -14465,7 +13726,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1623730/ss_f81b7c4f20be3b99f76a1415c4cdb9b444c99b97.600x338.jpg?t=1768450096',
     shortDescription:
-      'Fight, farm, build and work alongside mysterious creatures called &quot;Pals&quot; in this completely new multiplayer, open world survival and crafting game!',
+      'Fight, farm, build and work alongside mysterious creatures called "Pals" in this completely new multiplayer, open world survival and crafting game!',
     releaseDate: 'Jan 18, 2024',
     developer: 'Pocketpair',
     publisher: 'Pocketpair',
@@ -14510,7 +13771,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1627720/ss_cef0c2964b82e2b80ab0756da08f61c27d9fa33c.600x338.jpg?t=1764565054',
     shortDescription:
-      'Lies of P is a thrilling soulslike that takes the story of Pinocchio, turns it on its head, and sets it against the darkly elegant backdrop of the Belle Epoque era.',
+      '||Lies of P|| is a thrilling soulslike that takes the story of Pinocchio, turns it on its head, and sets it against the darkly elegant backdrop of the Belle Epoque era.',
     releaseDate: 'Sep 18, 2023',
     developer: 'NEOWIZ',
     publisher: 'NEOWIZ',
@@ -14555,7 +13816,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1657630/66a6b0dd5c944a192788cbd348274bb3613b8d74/ss_66a6b0dd5c944a192788cbd348274bb3613b8d74.600x338.jpg?t=1765374630',
     shortDescription:
-      'Continue the adventures of Beatrix LeBeau as she journeys across the Slime Sea to Rainbow Island, a land brimming with ancient mysteries, and bursting with wiggly, new slimes to wrangle in this sequel to the smash-hit, Slime Rancher.',
+      'Continue the adventures of Beatrix LeBeau as she journeys across the Slime Sea to Rainbow Island, a land brimming with ancient mysteries, and bursting with wiggly, new slimes to wrangle in this sequel to the smash-hit, ||Slime Rancher||.',
     releaseDate: 'Sep 23, 2025',
     developer: 'Monomi Park',
     publisher: 'Monomi Park',
@@ -14600,7 +13861,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659040/ss_f3a815f62dea7af43eebff863b49ded1bcf8098e.600x338.jpg?t=1767643206',
     shortDescription:
-      'Enter the world of the ultimate assassin. HITMAN World of Assassination delivers the definitive stealth action experience, putting you in the shoes of Agent 47, a master assassin. Explore immersive locations, uncover hidden secrets, and eliminate targets with complete freedom of approach.',
+      'Enter the world of the ultimate assassin. ||HITMAN World of Assassination|| delivers the definitive stealth action experience, putting you in the shoes of Agent 47, a master assassin. Explore immersive locations, uncover hidden secrets, and eliminate targets with complete freedom of approach.',
     releaseDate: 'Jan 20, 2022',
     developer: 'IO Interactive A/S',
     publisher: 'IO Interactive A/S',
@@ -14645,7 +13906,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1659420/ss_417913fbee123c5e35718ebef63bc8a6ce435adf.600x338.jpg?t=1751913411',
     shortDescription:
-      'Play as Nathan Drake and Chloe Frazer in their own standalone adventures as they confront their pasts and forge their own legacies. This game includes the critically acclaimed single-player stories from both UNCHARTED 4: A Thief’s End and UNCHARTED: The Lost Legacy.',
+      "Play as Nathan Drake and Chloe Frazer in their own standalone adventures as they confront their pasts and forge their own legacies. This game includes the critically acclaimed single-player stories from both ||UNCHARTED|| 4: A Thief's End and ||UNCHARTED||: The Lost Legacy.",
     releaseDate: 'Oct 19, 2022',
     developer: 'Naughty Dog LLC, Iron Galaxy Studios',
     publisher: 'PlayStation Publishing LLC',
@@ -14780,7 +14041,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1693980/ss_b4b02766216117747640523bb6e258d44053e355.600x338.jpg?t=1769464545',
     shortDescription:
-      'The sci-fi survival-horror classic returns, completely rebuilt to offer an even more immersive experience — including visual, audio, and gameplay improvements — while staying faithful to the original game’s thrilling vision.',
+      "The sci-fi survival-horror classic returns, completely rebuilt to offer an even more immersive experience — including visual, audio, and gameplay improvements — while staying faithful to the original game's thrilling vision.",
     releaseDate: 'Jan 27, 2023',
     developer: 'Motive',
     publisher: 'Electronic Arts',
@@ -14915,7 +14176,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1790600/ss_11942c933c595bf0188d5ee22f6f6a7ed3cdf7d9.600x338.jpg?t=1758754863',
     shortDescription:
-      'DRAGON BALL: Sparking! ZERO takes the legendary gameplay of the Budokai Tenkaichi series and raises it to whole new levels. Make yours the destructive power of the strongest fighters ever to appear in Dragon Ball!',
+      '||DRAGON BALL: Sparking! ZERO|| takes the legendary gameplay of the Budokai Tenkaichi series and raises it to whole new levels. Make yours the destructive power of the strongest fighters ever to appear in ||Dragon Ball||!',
     releaseDate: 'Oct 10, 2024',
     developer: 'Spike Chunsoft Co., Ltd.',
     publisher: 'Bandai Namco Entertainment',
@@ -14960,7 +14221,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1794680/ss_6c55afe36be2a7784bf18cb9b3218321ae2d10e5.600x338.jpg?t=1763675244',
     shortDescription:
-      'Mow down thousands of night creatures and survive until dawn! Vampire Survivors is a gothic horror casual game with rogue-lite elements, where your choices can allow you to quickly snowball against the hundreds of monsters that get thrown at you. Be the bullet hell!',
+      'Mow down thousands of night creatures and survive until dawn! ||Vampire Survivors|| is a gothic horror casual game with rogue-lite elements, where your choices can allow you to quickly snowball against the hundreds of monsters that get thrown at you. Be the bullet hell!',
     releaseDate: 'Oct 20, 2022',
     developer: 'poncle',
     publisher: 'poncle',
@@ -15005,7 +14266,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/1763664f3ea80080867eafa751685b7feec950c8/ss_1763664f3ea80080867eafa751685b7feec950c8.600x338.jpg?t=1769454248',
     shortDescription:
-      'ARC Raiders is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.',
+      '||ARC Raiders|| is a multiplayer extraction adventure, set in a lethal future earth, ravaged by a mysterious mechanized threat known as ARC.',
     releaseDate: 'Oct 30, 2025',
     developer: 'Embark Studios',
     publisher: 'Embark Studios',
@@ -15025,11 +14286,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1808500/5188aa2b07920afe9753409ea9fe3d1324cfc294/ss_5188aa2b07920afe9753409ea9fe3d1324cfc294.600x338.jpg?t=1769454248',
   },
   '1817070': {
-    name: 'Marvel’s Spider-Man Remastered',
+    name: "Marvel's Spider-Man Remastered",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/ss_dfe778bf6d66e952e4acd4e1f926f7615b609ddf.600x338.jpg?t=1763569047',
     shortDescription:
-      'In Marvel’s Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel’s New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.',
+      "In Marvel's Spider-Man Remastered, the worlds of Peter Parker and Spider-Man collide in an original action-packed story. Play as an experienced Peter Parker, fighting big crime and iconic villains in Marvel's New York. Web-swing through vibrant neighborhoods and defeat villains with epic takedowns.",
     releaseDate: 'Aug 12, 2022',
     developer: 'Insomniac Games, Nixxes Software',
     publisher: 'PlayStation Publishing LLC',
@@ -15070,11 +14331,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817070/ss_427677cf78195df94702f0a963cd9eaeb9d8935a.600x338.jpg?t=1763569047',
   },
   '1817190': {
-    name: 'Marvel’s Spider-Man: Miles Morales',
+    name: "Marvel's Spider-Man: Miles Morales",
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1817190/ss_a240e0c6f37569493ed749d9317718d8ce9f5d18.600x338.jpg?t=1763569499',
     shortDescription:
-      'After the events of Marvel’s Spider-Man Remastered, teenage Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. When a fierce power struggle threatens to destroy his home, Miles must take up the mantle of Spider-Man and own it',
+      "After the events of Marvel's Spider-Man Remastered, teenage Miles Morales is adjusting to his new home while following in the footsteps of his mentor, Peter Parker, as a new Spider-Man. When a fierce power struggle threatens to destroy his home, Miles must take up the mantle of Spider-Man and own it",
     releaseDate: 'Nov 18, 2022',
     developer: 'Insomniac Games, Nixxes Software',
     publisher: 'PlayStation Publishing LLC',
@@ -15119,7 +14380,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1850570/ss_f64a1140651ff5af30eb63bb6e5b41753d00a98e.600x338.jpg?t=1764081491',
     shortDescription:
-      'From legendary game creator Hideo Kojima comes a genre-defying experience, now expanded in this definitive DIRECTOR’S CUT. As Sam Bridges, your mission is to deliver hope to humanity by connecting the last survivors of a decimated America. Can you reunite the shattered world, one step at a time?',
+      "From legendary game creator Hideo Kojima comes a genre-defying experience, now expanded in this definitive DIRECTOR'S CUT. As Sam Bridges, your mission is to deliver hope to humanity by connecting the last survivors of a decimated America. Can you reunite the shattered world, one step at a time?",
     releaseDate: 'Mar 30, 2022',
     developer: 'KOJIMA PRODUCTIONS',
     publisher: ' 505 Games',
@@ -15164,7 +14425,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1868140/ss_7c86a17d545b6260ecdcfdd62622e49dcc9011bd.600x338.jpg?t=1768463150',
     shortDescription:
-      'DAVE THE DIVER is a casual, singleplayer adventure RPG featuring deep-sea exploration and fishing during the day and sushi restaurant management at night. Join Dave and his quirky friends as they seek to uncover the secrets of the mysterious Blue Hole.',
+      '||DAVE THE DIVER|| is a casual, singleplayer adventure RPG featuring deep-sea exploration and fishing during the day and sushi restaurant management at night. Join Dave and his quirky friends as they seek to uncover the secrets of the mysterious Blue Hole.',
     releaseDate: 'Jun 28, 2023',
     developer: 'MINTROCKET',
     publisher: 'MINTROCKET',
@@ -15254,7 +14515,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1903340/ss_483a27df5072beb3a4650634a764bda750fbcb82.600x338.jpg?t=1766050625',
     shortDescription:
-      'Lead the members of Expedition 33 on their quest to destroy the Paintress so that she can never paint death again. Explore a world of wonders inspired by Belle Époque France and battle unique enemies in this turn-based RPG with real-time mechanics.',
+      'Lead the members of ||Expedition 33|| on their quest to destroy the Paintress so that she can never paint death again. Explore a world of wonders inspired by Belle Époque France and battle unique enemies in this turn-based RPG with real-time mechanics.',
     releaseDate: 'Apr 24, 2025',
     developer: 'Sandfall Interactive',
     publisher: 'Kepler Interactive',
@@ -15345,7 +14606,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1942280/ss_79be0eea0299da76bc50cef160fb669509f74e0b.600x338.jpg?t=1769873247',
     shortDescription:
-      'Brotato is a top-down arena shooter roguelite where you play a potato wielding up to 6 weapons at a time to fight off hordes of aliens. Choose from a variety of traits and items to create unique builds and survive until help arrives.',
+      '||Brotato|| is a top-down arena shooter roguelite where you play a potato wielding up to 6 weapons at a time to fight off hordes of aliens. Choose from a variety of traits and items to create unique builds and survive until help arrives.',
     releaseDate: 'Jun 23, 2023',
     developer: 'Blobfish',
     publisher: 'Blobfish',
@@ -15390,7 +14651,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/1943950/ss_391a7c8a4ff906726977d9d72f82c0336be46bfd.600x338.jpg?t=1767613623',
     shortDescription:
-      "Escape the Backrooms is a 1-4 player co-op horror exploration game. Traverse 30+ eerie backrooms levels while avoiding entities and other dangers. Try to escape but be warned: survival isn't guaranteed.",
+      "||Escape the Backrooms|| is a 1-4 player co-op horror exploration game. Traverse 30+ eerie backrooms levels while avoiding entities and other dangers. Try to escape but be warned: survival isn't guaranteed.",
     releaseDate: 'Oct 23, 2025',
     developer: 'Fancy Games, Blackbird Interactive',
     publisher: 'Secret Mode',
@@ -15525,7 +14786,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2001120/5e3f5393e455fad3b5fa3f2fe469d9ad6b519069/ss_5e3f5393e455fad3b5fa3f2fe469d9ad6b519069.600x338.jpg?t=1763484567',
     shortDescription:
-      'Embrace mind-blowing moments as you’re pulled deep into the many worlds of Split Fiction, a boundary-pushing co-op adventure.',
+      "Embrace mind-blowing moments as you're pulled deep into the many worlds of ||Split Fiction||, a boundary-pushing co-op adventure.",
     releaseDate: 'Mar 6, 2025',
     developer: 'Hazelight Studios',
     publisher: 'Electronic Arts',
@@ -15615,7 +14876,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2124490/ss_1fdda21610fa23d0ce20b5c44fab8aebd509c5cb.600x338.jpg?t=1744248682',
     shortDescription:
-      'Investigating a letter from his late wife, James returns to where they made so many memories - Silent Hill. What he finds is a ghost town, prowled by disturbing monsters and cloaked in deep fog. Confront the monsters, solve puzzles, and search for traces of your wife in this remake of SILENT HILL 2.',
+      'Investigating a letter from his late wife, James returns to where they made so many memories - ||Silent Hill||. What he finds is a ghost town, prowled by disturbing monsters and cloaked in deep fog. Confront the monsters, solve puzzles, and search for traces of your wife in this remake of ||SILENT HILL 2||.',
     releaseDate: 'Oct 7, 2024',
     developer: 'Bloober Team SA',
     publisher: 'KONAMI',
@@ -15705,7 +14966,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2161700/ss_7017244fb8319ba927a0ef414959b95a6164356f.600x338.jpg?t=1764776430',
     shortDescription:
-      'Dive into the Dark Hour and awaken the depths of your heart. Persona 3 Reload is a captivating reimagining of the genre-defining RPG, reborn for the modern era with cutting-edge graphics and gameplay.',
+      'Dive into the Dark Hour and awaken the depths of your heart. ||Persona 3 Reload|| is a captivating reimagining of the genre-defining RPG, reborn for the modern era with cutting-edge graphics and gameplay.',
     releaseDate: 'Feb 1, 2024',
     developer: 'ATLUS',
     publisher: 'SEGA',
@@ -15750,7 +15011,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2186680/ss_a0ec0cef5715e5be542fa572fe3c73272c94cb90.600x338.jpg?t=1769709345',
     shortDescription:
-      'Made in a close partnership with Games Workshop, Warhammer 40,000: Rogue Trader is a story-rich classical RPG from Owlcat Games, developers of the critically acclaimed game, Pathfinder: Wrath of the Righteous.',
+      'Made in a close partnership with Games Workshop, ||Warhammer 40,000: Rogue Trader|| is a story-rich classical RPG from Owlcat Games, developers of the critically acclaimed game, Pathfinder: Wrath of the Righteous.',
     releaseDate: 'Dec 7, 2023',
     developer: 'Owlcat Games',
     publisher: 'Owlcat Games',
@@ -15795,7 +15056,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2198150/ss_1a98b0d5e8111f100b3ececda8f682333337e3cb.600x338.jpg?t=1768157722',
     shortDescription:
-      'Tiny Glade is a small diorama builder where you doodle whimsical castles, cozy cottages &amp; romantic ruins. Explore gridless building chemistry as the game adorns your glades with procedural detail. No management, combat or goals: just kick back and turn forgotten meadows into lovable dioramas.',
+      '||Tiny Glade|| is a small diorama builder where you doodle whimsical castles, cozy cottages & romantic ruins. Explore gridless building chemistry as the game adorns your glades with procedural detail. No management, combat or goals: just kick back and turn forgotten meadows into lovable dioramas.',
     releaseDate: 'Sep 23, 2024',
     developer: 'Pounce Light',
     publisher: 'Pounce Light',
@@ -15840,7 +15101,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2215430/ss_51eb1a47a41271abb0aa781de576f704d95b601b.600x338.jpg?t=1763409398',
     shortDescription:
-      'A storm is coming. Venture into the complete Ghost of Tsushima DIRECTOR’S CUT on PC; forge your own path through this open-world action adventure and uncover its hidden wonders. Brought to you by Sucker Punch Productions, Nixxes Software and PlayStation Studios.',
+      "A storm is coming. Venture into the complete Ghost of Tsushima DIRECTOR'S CUT on PC; forge your own path through this open-world action adventure and uncover its hidden wonders. Brought to you by Sucker Punch Productions, Nixxes Software and PlayStation Studios.",
     releaseDate: 'May 16, 2024',
     developer: 'Sucker Punch Productions, Nixxes Software',
     publisher: 'PlayStation Publishing LLC',
@@ -15975,7 +15236,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2358720/ss_86c4b7462bba219a0d0b89931a35812b9f188976.600x338.jpg?t=1760601605',
     shortDescription:
-      'Black Myth: Wukong is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.',
+      '||Black Myth: Wukong|| is an action RPG rooted in Chinese mythology. You shall set out as the Destined One to venture into the challenges and marvels ahead, to uncover the obscured truth beneath the veil of a glorious legend from the past.',
     releaseDate: 'Aug 19, 2024',
     developer: 'Game Science',
     publisher: 'Game Science',
@@ -16020,7 +15281,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/96208723dbedef49d71bf1b0a74aee1689018c50/ss_96208723dbedef49d71bf1b0a74aee1689018c50.600x338.jpg?t=1762516142',
     shortDescription:
-      'The poker roguelike. Balatro is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.',
+      'The poker roguelike. ||Balatro|| is a hypnotically satisfying deckbuilder where you play illegal poker hands, discover game-changing jokers, and trigger adrenaline-pumping, outrageous combos.',
     releaseDate: 'Feb 20, 2024',
     developer: 'LocalThunk',
     publisher: 'Playstack',
@@ -16061,11 +15322,11 @@ export const steamGameDetails: SteamGameMap = {
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2379780/ss_4862112e5030f74a5818cd4c31347d699ac5adf3.600x338.jpg?t=1762516142',
   },
   '2420110': {
-    name: 'Horizon Forbidden West Complete Edition',
+    name: 'Horizon Forbidden West',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2420110/ss_7c1ead4b3d952fd0fb92735397945bd8732bba53.600x338.jpg?t=1763576690',
     shortDescription:
-      'Experience the epic Horizon Forbidden West in its entirety with bonus content and the Burning Shores expansion included. The Burning Shores add-on contains additional content for Aloy’s adventure, including new storylines, characters, and experiences in a stunning yet hazardous new area.',
+      "Experience the epic ||Horizon Forbidden West|| in its entirety with bonus content and the Burning Shores expansion included. The Burning Shores add-on contains additional content for Aloy's adventure, including new storylines, characters, and experiences in a stunning yet hazardous new area.",
     releaseDate: 'Mar 21, 2024',
     developer: 'Guerrilla, Nixxes Software',
     publisher: 'PlayStation Publishing LLC',
@@ -16155,7 +15416,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/2592160/ss_395c301af733dd84b526d5d6e0e9c4c3446b4a18.600x338.jpg?t=1767817184',
     shortDescription:
-      'Dispatch is a superhero workplace comedy where choices matter. Manage a dysfunctional team of misfit heroes and strategize who to send to emergencies around the city, all while balancing office politics, personal relationships, and your own quest to become a hero. All episodes out now!',
+      '||Dispatch|| is a superhero workplace comedy where choices matter. Manage a dysfunctional team of misfit heroes and strategize who to send to emergencies around the city, all while balancing office politics, personal relationships, and your own quest to become a hero. All episodes out now!',
     releaseDate: 'Oct 22, 2025',
     developer: 'AdHoc Studio',
     publisher: 'AdHoc Studio',
@@ -16269,7 +15530,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3017860/ss_ba66d42e3d1ea78e5b085682484210b390eb9ccc.600x338.jpg?t=1768344167',
     shortDescription:
-      'DOOM: The Dark Ages is the prequel to the critically acclaimed DOOM (2016) and DOOM Eternal that tells an epic cinematic story worthy of the DOOM Slayer’s legend. Players will step into the blood-stained boots of the DOOM Slayer, in this never-before-seen dark and sinister medieval war against Hell.',
+      "||DOOM: The Dark Ages|| is the prequel to the critically acclaimed ||DOOM (2016)|| and ||DOOM Eternal|| that tells an epic cinematic story worthy of the ||DOOM|| Slayer's legend. Players will step into the blood-stained boots of the ||DOOM|| Slayer, in this never-before-seen dark and sinister medieval war against Hell.",
     releaseDate: 'May 14, 2025',
     developer: 'id Software',
     publisher: 'Bethesda Softworks',
@@ -16314,7 +15575,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3097560/c60c40ba98123b4cbc6fb02184eb23bdefdaecf1/ss_c60c40ba98123b4cbc6fb02184eb23bdefdaecf1.600x338.jpg?t=1766761133',
     shortDescription:
-      "Dive into this multiplayer online experience set in a sketchy bar where the games are as dangerous as the patrons. Join a table of 4 and test your skills in Liar's Dice and Liar's Deck, where lying and bluffing are key to victory. Ready for a night at Liar's Bar?",
+      "Dive into this multiplayer online experience set in a sketchy bar where the games are as dangerous as the patrons. Join a table of 4 and test your skills in Liar's Dice and Liar's Deck, where lying and bluffing are key to victory. Ready for a night at ||Liar's Bar||?",
     releaseDate: 'Oct 2, 2024',
     developer: 'Curve Animation',
     publisher: 'Curve Animation',
@@ -16359,7 +15620,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3156770/20d1fc57552905825cbe90ad9cdee996202bfb03/ss_20d1fc57552905825cbe90ad9cdee996202bfb03.600x338.jpg?t=1769000791',
     shortDescription:
-      'Witchfire is a first-person dark fantasy RPG shooter in which you play as a wicked sinner turned witch hunter on his final mission to reach salvation.',
+      '||Witchfire|| is a first-person dark fantasy RPG shooter in which you play as a wicked sinner turned witch hunter on his final mission to reach salvation.',
     releaseDate: 'Sep 23, 2024',
     developer: 'The Astronauts',
     publisher: 'The Astronauts',
@@ -16494,7 +15755,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3489700/ss_4291827e357008499d4d5a17bc50d3e93869dd43.600x338.jpg?t=1763566418',
     shortDescription:
-      'Save humanity from extinction in post-apocalyptic action-adventure Stellar Blade. Experience blistering combat and a twisting storyline as you unravel the mysteries of Earth’s downfall.',
+      "Save humanity from extinction in post-apocalyptic action-adventure ||Stellar Blade||. Experience blistering combat and a twisting storyline as you unravel the mysteries of Earth's downfall.",
     releaseDate: 'Jun 11, 2025',
     developer: 'SHIFT UP Corporation',
     publisher: 'PlayStation Publishing LLC (excluding China)',
@@ -16518,7 +15779,7 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/3527290/bac7b90dffb456afecc4517a3e1d69362b95d15b/ss_bac7b90dffb456afecc4517a3e1d69362b95d15b.600x338.jpg?t=1764003551',
     shortDescription:
-      'PEAK is a co-op climbing game where the slightest mistake can spell your doom. Either solo or as a group of lost nature scouts, your only hope of rescue from a mysterious island is to scale the mountain at its center. Do you have what it takes to reach the PEAK?',
+      '||PEAK|| is a co-op climbing game where the slightest mistake can spell your doom. Either solo or as a group of lost nature scouts, your only hope of rescue from a mysterious island is to scale the mountain at its center. Do you have what it takes to reach the ||PEAK||?',
     releaseDate: 'Jun 16, 2025',
     developer: 'Team PEAK',
     publisher: 'Aggro Crab, Landfall',

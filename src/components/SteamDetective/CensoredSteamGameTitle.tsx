@@ -45,8 +45,9 @@ const processTitleWord = (
   // If word is purely numeric, add extra margins
   const isNumericWord = /^\d+$/.test(word);
 
-  // Check if word is a Roman numeral
-  const isRoman = isRomanNumeral(word);
+  // Check if word is a Roman numeral (strip trailing punctuation first)
+  const alphanumericPart = word.replace(/[^a-zA-Z0-9]+$/, '');
+  const isRoman = isRomanNumeral(alphanumericPart);
 
   // Process multi-character word
   const chars: ReactElement[] = [];
@@ -97,15 +98,22 @@ const processTitleWord = (
 
 interface CensoredSteamGameTitleProps {
   title: string;
+  blurTitleAndAsAmpersand?: boolean;
 }
 
 export const CensoredSteamGameTitle: React.FC<CensoredSteamGameTitleProps> = ({
   title,
+  blurTitleAndAsAmpersand,
 }) => {
+  // Replace 'and' with '&' if requested
+  const processedTitle = blurTitleAndAsAmpersand
+    ? title.replace(/\band\b/gi, '&')
+    : title;
+
   // Generate random letters for blurred characters once per title
   const randomLetters = useMemo(() => {
     const letters: string[] = [];
-    const words = title.split(' ');
+    const words = processedTitle.split(' ');
 
     for (const word of words) {
       if (UNENCRYPTED_CHARS.includes(word) || word.length === 1) {
@@ -117,7 +125,12 @@ export const CensoredSteamGameTitle: React.FC<CensoredSteamGameTitleProps> = ({
 
       for (let i = 0; i < word.length; i++) {
         const char = word[i];
-        if (i === 0 && !/^\d+$/.test(word) && !isRomanNumeral(word)) {
+        const alphanumericPart = word.replace(/[^a-zA-Z0-9]+$/, '');
+        if (
+          i === 0 &&
+          !/^\d+$/.test(word) &&
+          !isRomanNumeral(alphanumericPart)
+        ) {
           // First character stays as-is
           continue;
         } else if (
@@ -135,10 +148,10 @@ export const CensoredSteamGameTitle: React.FC<CensoredSteamGameTitleProps> = ({
     }
 
     return letters;
-  }, [title]);
+  }, [processedTitle]);
 
   // Split title by spaces to get words
-  const words = title.split(' ');
+  const words = processedTitle.split(' ');
 
   // Helper to get random letter for a position
   let currentLetterIndex = 0;
