@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowsPointingOutIcon } from '@heroicons/react/24/outline';
 import FsLightbox from 'fslightbox-react';
 import { screenshotVariants } from './utils';
@@ -44,69 +44,60 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
     >
       <div className='px-4 py-4'>
         <div className='flex flex-col gap-3'>
-          {/* Secondary Screenshot (main/large) - appears when clue 5 is shown */}
-          {bothShown && (
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, ease: 'easeInOut' }}
-            >
-              <div
-                className={`overflow-hidden rounded-lg relative ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
-                style={{ aspectRatio: '16/9' }}
-                onClick={handleLargeScreenshotClick}
-              >
-                <motion.img
-                  key={secondaryScreenshot}
-                  src={secondaryScreenshot}
-                  alt='Game screenshot'
-                  className='w-full h-full object-cover block'
-                  initial={{ filter: 'blur(10px)', opacity: 0 }}
-                  animate={{
-                    filter: isMobileViewport
-                      ? 'blur(0px) brightness(1.25)'
-                      : 'blur(0px) brightness(1)',
-                    opacity: 1,
-                  }}
-                  exit={{ filter: 'blur(10px)', opacity: 0 }}
-                  transition={{ duration: 0.3 }}
-                />
-                {isMobileViewport && (
-                  <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
-                    <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
-                  </div>
-                )}
-              </div>
-            </motion.div>
-          )}
-
-          {/* Primary Screenshot (thumbnail when both shown) */}
-          <motion.div
-            layout
-            animate={{
-              width: bothShown ? '20%' : '100%',
-            }}
-            transition={{ duration: 0.5, ease: 'easeInOut' }}
-            className='flex-shrink-0'
+          {/* Main Screenshot - shows primary initially, then secondary when clue 5 appears */}
+          <div
+            className={`overflow-hidden rounded-lg relative ${isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
+            style={{ aspectRatio: '16/9' }}
+            onClick={handleLargeScreenshotClick}
           >
-            <div
-              className={`overflow-hidden rounded-lg relative ${bothShown ? 'cursor-pointer group' : isMobileViewport ? 'cursor-pointer' : 'cursor-default'}`}
-              style={{ aspectRatio: '16/9' }}
-              onClick={
-                bothShown ? onSwapScreenshots : handleLargeScreenshotClick
-              }
-            >
+            <AnimatePresence mode='wait'>
               <motion.img
-                key={screenshot}
-                src={screenshot}
+                key={bothShown ? secondaryScreenshot : screenshot}
+                src={bothShown ? secondaryScreenshot : screenshot}
                 alt='Game screenshot'
-                className={`w-full h-full object-cover block ${bothShown ? 'brightness-75 group-hover:brightness-90' : ''}`}
+                className='w-full h-full object-cover block'
                 initial={{ filter: 'blur(10px)', opacity: 0 }}
-                animate={{ filter: 'blur(0px)', opacity: 1 }}
+                animate={{
+                  filter: isMobileViewport
+                    ? 'blur(0px) brightness(1.25)'
+                    : 'blur(0px) brightness(1)',
+                  opacity: 1,
+                }}
                 exit={{ filter: 'blur(10px)', opacity: 0 }}
                 transition={{ duration: 0.3 }}
               />
-              {bothShown && (
+            </AnimatePresence>
+            {isMobileViewport && (
+              <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
+                <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
+              </div>
+            )}
+          </div>
+
+          {/* Thumbnail Screenshot - appears below main screenshot when clue 5 is shown */}
+          {bothShown && (
+            <motion.div
+              initial={{ height: 0, opacity: 0, y: -20 }}
+              animate={{ height: 'auto', opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: 'easeInOut', delay: 0.3 }}
+              className='flex-shrink-0'
+              style={{ width: '20%' }}
+            >
+              <div
+                className='overflow-hidden rounded-lg relative cursor-pointer group'
+                style={{ aspectRatio: '16/9' }}
+                onClick={onSwapScreenshots}
+              >
+                <motion.img
+                  key={screenshot}
+                  src={screenshot}
+                  alt='Game screenshot'
+                  className='w-full h-full object-cover block brightness-75 group-hover:brightness-90'
+                  initial={{ filter: 'blur(10px)', opacity: 0 }}
+                  animate={{ filter: 'blur(0px)', opacity: 1 }}
+                  exit={{ filter: 'blur(10px)', opacity: 0 }}
+                  transition={{ duration: 0.3 }}
+                />
                 <div className='absolute inset-0 flex items-center justify-center pointer-events-none'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -124,14 +115,9 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                     />
                   </svg>
                 </div>
-              )}
-              {!bothShown && isMobileViewport && (
-                <div className='absolute top-2 right-2 bg-black/50 rounded-md p-2 pointer-events-none'>
-                  <ArrowsPointingOutIcon className='w-8 h-8 text-white drop-shadow-lg' />
-                </div>
-              )}
-            </div>
-          </motion.div>
+              </div>
+            </motion.div>
+          )}
         </div>
       </div>
 
