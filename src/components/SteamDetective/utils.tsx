@@ -104,13 +104,11 @@ export const clueVariants = {
   hidden: {
     height: 0,
     opacity: 0,
-    y: -100,
     marginBottom: 0,
   },
   visible: {
     height: 'auto',
     opacity: 1,
-    y: 0,
     marginBottom: 0,
   },
 } as const;
@@ -119,13 +117,11 @@ export const screenshotVariants = {
   hidden: {
     height: 0,
     opacity: 0,
-    y: -100,
     marginBottom: 0,
   },
   visible: {
     height: 'auto',
     opacity: 1,
-    y: 0,
     marginBottom: 0,
   },
 } as const;

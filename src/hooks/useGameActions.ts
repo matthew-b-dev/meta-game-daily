@@ -63,7 +63,6 @@ export const useGameActions = ({
         const newTotalGuesses = prev.totalGuesses + 1;
 
         if (isCorrect) {
-          toast.success('Correct! Well done!');
           // When correct, show all clues by setting currentClue to MAX_CLUES
           return {
             ...prev,
@@ -77,13 +76,16 @@ export const useGameActions = ({
         } else {
           const newClue = prev.currentClue + 1;
 
-          if (isClose) {
-            toast.error('Close guess! Try something similar.', {
-              duration: 5000,
-              icon: '🤏',
-            });
-          } else {
-            toast.error('Incorrect guess!');
+          // Only show toast if this is not the final guess (all clues not yet revealed)
+          if (newClue <= MAX_CLUES) {
+            if (isClose) {
+              toast.error('Close guess! Try something similar.', {
+                duration: 5000,
+                icon: '🤏',
+              });
+            } else {
+              toast.error('Incorrect guess!');
+            }
           }
 
           if (newClue > MAX_CLUES) {

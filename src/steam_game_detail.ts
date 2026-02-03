@@ -190,9 +190,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/8870/ss_26e2d983948edfb911db3e0d2c3679900b4ef9fa.600x338.jpg?t=1728673518',
     shortDescription:
-      'Indebted to the wrong people, with his life on the line, veteran of the U.S. Cavalry and now hired gun, Booker DeWitt has only one opportunity to wipe his slate clean. He must rescue Elizabeth, a mysterious girl imprisoned since childhood and locked up in the flying city of Columbia.',
+      'Indebted to the wrong people, with his life on the line, veteran of the ||U.S. Cavalry|| and now hired gun, ||Booker DeWitt|| has only one opportunity to wipe his slate clean. He must rescue ||Elizabeth||, a mysterious girl imprisoned since childhood and locked up in the ||flying|| city of ||Columbia||.',
+    clueOrder: ['desc', 'tags', 'details'],
     releaseDate: 'Mar 25, 2013',
-    developer: 'Irrational Games, Virtual Programming (Linux)',
+    developer: 'Irrational Games',
     publisher: '2K',
     tags: ['Action'],
     features: [],
@@ -1686,10 +1687,11 @@ export const steamGameDetails: SteamGameMap = {
   },
   '204360': {
     name: 'Castle Crashers',
+    blurScreenshotQuarter: 'top',
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/204360/ss_a800d5bc5b31d84fb940c7d0449f1aea05ac3e0e.600x338.jpg?t=1764096331',
     shortDescription:
-      'Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from The Behemoth!',
+      'Hack, slash, and smash your way to victory in this award winning 2D arcade adventure from ||The Behemoth||!',
     releaseDate: 'Sep 26, 2012',
     developer: 'The Behemoth',
     publisher: 'The Behemoth',
@@ -2244,9 +2246,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Discover the true meaning of fear in ||Alien: Isolation||, a survival horror set in an atmosphere of constant dread and mortal danger.',
     releaseDate: 'Oct 6, 2014',
-    developer:
-      'Creative Assembly, Feral Interactive (Mac), Feral Interactive (Linux)',
-    publisher: 'SEGA, Feral Interactive (Mac), Feral Interactive (Linux)',
+    developer: 'Creative Assembly',
+    publisher: 'SEGA',
     tags: ['Action'],
     features: [],
     recentReviewSummary: {
@@ -2785,7 +2786,7 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       "The chances of you surviving this all out war of society and the undead are slim to none. Already, there are millions of the walking dead shambling about, searching for food to eat. There's no known cure. One bite can possibly end it all for you. However, you aren't alone in this nightmare.",
     releaseDate: 'Oct 31, 2013',
-    developer: 'No More Room in Hell Team',
+    developer: '||No More Room in Hell|| Team',
     publisher: 'Lever Games',
     tags: ['Action', 'Indie', 'Free To Play'],
     features: [],
@@ -2965,10 +2966,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Experience the ultimate WWII RTS platform with COH2 and its standalone expansions. This package includes the base game, which you can then upgrade by purchasing The Western Front Armies, Ardennes Assault and/or The British Forces.',
     releaseDate: 'Jun 25, 2013',
-    developer:
-      'Relic Entertainment, Feral Interactive (Mac), Feral Interactive (Linux)',
-    publisher:
-      'Relic Entertainment, Feral Interactive (Mac), Feral Interactive (Linux)',
+    developer: 'Relic Entertainment',
+    publisher: 'Relic Entertainment',
     tags: ['Strategy'],
     features: [],
     recentReviewSummary: {
@@ -4654,11 +4653,10 @@ export const steamGameDetails: SteamGameMap = {
     primaryScreenshot:
       'https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/268500/ss_a95cdbe487dbabf6621962fc92f438e26c5fdfd3.600x338.jpg?t=1769542173',
     shortDescription:
-      '||XCOM 2|| is the sequel to ||XCOM: Enemy Unknown||, the 2012 award-winning strategy game of the year. Earth has changed and is now under alien rule. Facing impossible odds you must rebuild ||XCOM||, and ignite a global resistance to reclaim our world and save humanity.',
+      '||XCOM 2|| is the sequel to ||XCOM: Enemy Unknown||, the 2012 award-winning strategy game of the year. Earth has changed and is now under ||alien|| rule. Facing impossible odds you must rebuild ||XCOM||, and ignite a global resistance to reclaim our world and save humanity.',
     releaseDate: 'Feb 4, 2016',
-    developer:
-      'Firaxis Games, Feral Interactive (Mac), Feral Interactive (Linux)',
-    publisher: '2K, Feral Interactive (Mac), Feral Interactive (Linux)',
+    developer: 'Firaxis Games',
+    publisher: '2K',
     tags: ['Strategy'],
     features: [],
     recentReviewSummary: {
@@ -6584,10 +6582,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       "||Rise of the Tomb Raider||: 20 Year Celebration includes the base game and Season Pass featuring all-new content. Explore Croft Manor in the new “Blood Ties” story, then defend it against a zombie invasion in “Lara's Nightmare”.",
     releaseDate: 'Feb 9, 2016',
-    developer:
-      'Crystal Dynamics, Eidos-Montréal, Feral Interactive (Mac), Feral Interactive (Linux), Nixxes',
-    publisher:
-      'Crystal Dynamics, Feral Interactive (Mac), Feral Interactive (Linux)',
+    developer: 'Crystal Dynamics, Eidos-Montréal',
+    publisher: 'Crystal Dynamics',
     tags: ['Action', 'Adventure'],
     features: [],
     recentReviewSummary: {
@@ -8399,9 +8395,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'Strategy gaming perfected. A breath-taking campaign of exploration, expansion and conquest across a fantasy world. Turn-based civilisation management and real-time epic strategy battles with thousands of troops and monsters at your command.',
     releaseDate: 'Sep 28, 2017',
-    developer:
-      'CREATIVE ASSEMBLY, Feral Interactive (Mac), Feral Interactive (Linux)',
-    publisher: 'SEGA, Feral Interactive (Mac), Feral Interactive (Linux)',
+    developer: 'CREATIVE ASSEMBLY',
+    publisher: 'SEGA',
     tags: ['Action', 'Strategy'],
     features: [],
     recentReviewSummary: {
@@ -9487,10 +9482,8 @@ export const steamGameDetails: SteamGameMap = {
     shortDescription:
       'As Lara Croft races to save the world from a Maya apocalypse, she must become the Tomb Raider she is destined to be.',
     releaseDate: 'Sep 14, 2018',
-    developer:
-      'Eidos-Montréal, Crystal Dynamics, Nixxes, Feral Interactive (Mac), Feral interactive (Linux)',
-    publisher:
-      'Crystal Dynamics, Feral Interactive (Mac), Feral interactive (Linux)',
+    developer: 'Eidos-Montréal, Crystal Dynamics, Nixxes',
+    publisher: 'Crystal Dynamics',
     tags: ['Action', 'Adventure'],
     features: [],
     recentReviewSummary: {
