@@ -60,7 +60,10 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
 
   return (
     <div className=' mx-auto pb-12'>
-      <motion.div layout className='bg-[#1b2838] rounded overflow-hidden'>
+      <motion.div
+        layout
+        className='bg-[#1b2838] rounded shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden'
+      >
         <ClueTitle title={gameName} show={showClue6} isComplete={isComplete} />
         {/* Screenshots - Clue 4 (primary) and Clue 5 (secondary) */}
         <ClueScreenshot

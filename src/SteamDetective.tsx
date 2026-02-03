@@ -108,7 +108,7 @@ const SteamDetective = () => {
   };
 
   return (
-    <div className='min-h-screen text-[#c7d5e0]'>
+    <div className='text-[#c7d5e0]'>
       <Toaster position='top-center' />
       <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
       <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
