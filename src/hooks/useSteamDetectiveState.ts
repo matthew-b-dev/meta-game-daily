@@ -11,12 +11,15 @@ export interface SteamDetectiveState extends SteamDetectiveStateType {
   puzzleDate: string;
 }
 
-export const useSteamDetectiveState = (gameName?: string) => {
+export const useSteamDetectiveState = (
+  gameName?: string,
+  caseFile: 'easy' | 'expert' = 'easy',
+) => {
   const puzzleDate = getUtcDateString();
 
   // Load or initialize state
   const loadState = useCallback((): SteamDetectiveState => {
-    const savedState = loadSteamDetectiveState(puzzleDate);
+    const savedState = loadSteamDetectiveState(puzzleDate, caseFile);
     if (savedState && !savedState?.revealedTitle) {
       localStorage.removeItem('meta-game-daily-state');
       window?.location?.reload?.();
@@ -52,15 +55,15 @@ export const useSteamDetectiveState = (gameName?: string) => {
       scoreSent: false,
       revealedTitle: gameName,
     };
-  }, [puzzleDate, gameName]);
+  }, [puzzleDate, gameName, caseFile]);
 
   const [state, setState] = useState<SteamDetectiveState>(loadState);
 
   // Save state to localStorage whenever it changes
   useEffect(() => {
     const { puzzleDate: _, ...stateWithoutDate } = state;
-    saveSteamDetectiveState(state.puzzleDate, stateWithoutDate);
-  }, [state]);
+    saveSteamDetectiveState(state.puzzleDate, stateWithoutDate, caseFile);
+  }, [state, caseFile]);
 
   return { state, setState };
 };
