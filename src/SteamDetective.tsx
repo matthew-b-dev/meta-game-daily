@@ -21,6 +21,7 @@ import {
 import blueGamesFolderIcon from './assets/games-folder-48.png';
 import greenGamesFolderIcon from './assets/green-games-folder-48.png';
 import analyzeIcon from './assets/analyze-48.png';
+import calendarIcon from './assets/calendar-48.png';
 
 // Preload images hook
 const useImagePreloader = (src: string) => {
@@ -88,15 +89,25 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
     }
   }, [state.guessesRemaining, state.isComplete]);
 
-  // Scroll to top when game is completed (only for easy mode)
+  // Scroll to top when game is completed (both easy and expert)
   useEffect(() => {
-    if (state.isComplete && caseFile === 'easy') {
+    if (state.isComplete) {
+      // Force scroll to top with multiple attempts to ensure it happens
+      // First immediate scroll
       window.scrollTo({
         top: 0,
-        behavior: 'smooth',
+        behavior: 'instant',
       });
+
+      // Then smooth scroll after a delay to override any competing scrolls
+      setTimeout(() => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth',
+        });
+      }, 150);
     }
-  }, [state.isComplete, caseFile]);
+  }, [state.isComplete]);
 
   // Determine which clues to show based on custom clue order
   // Default order: tags, details, desc (clues 1-3), then screenshot1, screenshot2, title (clues 4-6)
@@ -143,6 +154,11 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
 
   // Auto-scroll down when a new clue becomes the lowest displayed clue
   useEffect(() => {
+    // Don't auto-scroll down when the game is complete (we want to scroll up instead)
+    if (state.isComplete) {
+      return;
+    }
+
     // Canonical positions (lower number = higher on page, higher number = lower on page)
     const canonicalPositions = {
       title: 0,
@@ -204,7 +220,7 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
       // Update ref for next comparison
       prevShowCluesRef.current = showClues;
     }
-  }, [showClues]);
+  }, [showClues, state.isComplete]);
 
   const handleCopyToShare = useCallback(
     (compact: boolean = false) => {
@@ -324,7 +340,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
             <MissedGuesses missedGuesses={state.guesses} />
           </div>
         )}
-
         <GameComplete
           show={state.isComplete}
           gameName={dailyGame.name}
@@ -339,7 +354,6 @@ const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
           expertCaseStarted={expertCaseStarted}
           onCopyEasyOnly={onCopyEasyOnly}
         />
-
         <ClueContainer />
       </div>
     </SteamDetectiveGameProvider>
@@ -451,9 +465,19 @@ const SteamDetective = () => {
     window?.location?.reload?.();
   };
 
+  const calendarIconLoaded = useImagePreloader(calendarIcon);
+
   return (
     <div className='text-[#c7d5e0]'>
       <Toaster position='top-center' />
+      <div className='flex justify-center items-center  mb-4'>
+        <img
+          src={calendarIcon}
+          className={`w-6 h-6 mr-2 ${calendarIconLoaded ? 'opacity-100' : 'opacity-0'}`}
+        />
+
+        <span className='text-lg font-semibold font-medium'>{puzzleDate}</span>
+      </div>
       <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
 
       {/* Expert Case File - Renders ABOVE easy when shown */}
