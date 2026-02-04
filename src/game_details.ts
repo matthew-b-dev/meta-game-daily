@@ -5273,8 +5273,9 @@ export const gameDetails: Game[] = [
     reviewRank: 7,
     developers: ['Eidos Montréal', 'Crystal Dynamics'],
     publishers: ['Square Enix'],
+    brightenImage: true,
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ulni2tys2xuxx7hjzxsn.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ibfsxarkusq0r4yiqpae.jpg',
   },
   {
     score: '84',
@@ -6479,7 +6480,7 @@ export const gameDetails: Game[] = [
     developers: ['Nintendo EAD'],
     publishers: ['Nintendo', 'Playtronic'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckea9.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckj7b.jpg',
     hltb: {
       main: null,
       extra: null,
@@ -9353,7 +9354,7 @@ export const gameDetails: Game[] = [
     score: '81',
     name: 'Sifu',
     platforms: 'PS4, PS5, PC, Switch, XB1, XBXS',
-    genres: 'Martial Arts, Beat \'em up, Action',
+    genres: "Martial Arts, Beat 'em up, Action",
     releaseDate: 'Feb 8',
     releaseYear: 2022,
     reviewRank: 8,
@@ -9504,8 +9505,9 @@ export const gameDetails: Game[] = [
     reviewRank: 19,
     developers: ['Gearbox Software'],
     publishers: ['2K Games'],
+    brightenImage: true,
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaghr.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgpwf.jpg',
     hltb: {
       main: 16,
       extra: 29,
@@ -9871,6 +9873,7 @@ export const gameDetails: Game[] = [
     score: '70',
     name: 'Nintendo Switch Sports',
     platforms: 'Switch',
+    overrideMask: '******** ****** S*****',
     genres: 'Sports',
     releaseDate: 'Apr 29',
     releaseYear: 2022,
