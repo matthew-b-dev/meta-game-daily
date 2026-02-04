@@ -71,6 +71,7 @@ export const ClueContainer: React.FC = () => {
           tags={dailyGame.userTags}
           blurredTags={dailyGame.blurredUserTags}
           show={showClue1}
+          isComplete={isComplete}
         />
       </motion.div>
     </div>

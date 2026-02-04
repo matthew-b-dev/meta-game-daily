@@ -127,18 +127,22 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
         {/* Game Name */}
         <h2 className={`text-md font-semibold text-center text-white`}>
           {preDisplayNameContent}
-          <div>
+          <div className='flex justify-center'>
             <a
               href={`https://store.steampowered.com/app/${appId}`}
               target='_blank'
-              rel='noopener noreferrer'
-              className='pl-2 block text-white underline hover:text-gray-300 inline-flex items-center gap-1'
+              rel='noopener noreferrer block'
+              className='pl-2 text-white-400 hover:text-gray-300 hover:underline inline-flex items-center gap-1 '
             >
               <span>{displayName}</span>
-              <ArrowTopRightOnSquareIcon className='w-4 h-4 no-underline' />
+
+              <ArrowTopRightOnSquareIcon className='w-4 h-4 no-underline text-blue-400' />
             </a>
           </div>
         </h2>
+        {caseFile === 'easy' ? (
+          <div className='text-center text-gray-400'>Try Case File #2!</div>
+        ) : null}
 
         {/* Loading State */}
         {scoresLoading && (
