@@ -5,12 +5,14 @@ interface ClueTagsProps {
   tags: string[];
   blurredTags?: string[];
   show: boolean;
+  isComplete?: boolean;
 }
 
 export const ClueTags: React.FC<ClueTagsProps> = ({
   tags,
   blurredTags = [],
   show,
+  isComplete = false,
 }) => {
   return (
     <motion.div
@@ -27,7 +29,7 @@ export const ClueTags: React.FC<ClueTagsProps> = ({
         </div>
         <div className='flex flex-wrap gap-[2px]'>
           {tags.slice(0, 10).map((tag, index) => {
-            const isBlurred = blurredTags.includes(tag);
+            const isBlurred = !isComplete && blurredTags.includes(tag);
             return (
               <span
                 key={index}
