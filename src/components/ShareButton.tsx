@@ -5,11 +5,13 @@ interface ShareButtonProps {
   userPercentile: number | null;
   onCopyToShare: () => void;
   isLoading?: boolean;
+  text?: string;
 }
 
 const ShareButton: React.FC<ShareButtonProps> = ({
   onCopyToShare,
   isLoading = false,
+  text,
 }) => {
   const handleShareClick = () => {
     onCopyToShare();
@@ -22,7 +24,7 @@ const ShareButton: React.FC<ShareButtonProps> = ({
       disabled={isLoading}
     >
       <DocumentDuplicateIcon className='w-5 h-5' />
-      {isLoading ? 'Loading scores...' : 'Copy for Sharing'}
+      {isLoading ? 'Loading scores...' : (text ?? 'Copy for Sharing')}
     </button>
   );
 };

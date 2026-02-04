@@ -99,7 +99,9 @@ export const ClueScreenshot: React.FC<ClueScreenshotProps> = ({
                         textShadow:
                           '0 0 40px rgba(0, 0, 0, 0.3), 0 0 20px rgba(0, 0, 0, 0.3), 0 0 10px rgba(0, 0, 0, 0.3)',
                       }}
-                    ></div>
+                    >
+                      REDACTED LOGO
+                    </div>
                   </div>
                 )}
               </motion.div>

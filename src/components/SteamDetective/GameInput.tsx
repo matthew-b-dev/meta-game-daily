@@ -41,7 +41,7 @@ export const GameInput: React.FC<GameInputProps> = ({
       .filter((game) => !steamGameSet.has(game))
       .map((name) => ({ name, searchTerms: [] }));
 
-    // Combine with dummy games first, then steam games
+    // Combine all games
     const allGames = [...filteredDummyGames, ...steamGames];
 
     // Filter out previously guessed games
@@ -51,12 +51,14 @@ export const GameInput: React.FC<GameInputProps> = ({
       (game) => !previousGuessesSet.has(game.name),
     );
 
-    // Convert to options format
-    return availableGames.map((game) => ({
-      value: game.name,
-      label: game.name,
-      searchTerms: game.searchTerms,
-    }));
+    // Convert to options format and sort alphabetically by name
+    return availableGames
+      .map((game) => ({
+        value: game.name,
+        label: game.name,
+        searchTerms: game.searchTerms,
+      }))
+      .sort((a, b) => a.label.localeCompare(b.label));
   }, [previousGuesses]);
 
   // Calculate effective length by excluding ": " if the query starts with ":"

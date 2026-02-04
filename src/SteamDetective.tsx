@@ -1,7 +1,8 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { Toaster } from 'react-hot-toast';
 import toast from 'react-hot-toast';
-import { getPuzzleDate, getTimeUntilNextGame } from './utils';
+import { motion, AnimatePresence } from 'framer-motion';
+import { getPuzzleDate, getTimeUntilNextGame, getUtcDateString } from './utils';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import SteamDetectiveFooter from './components/SteamDetectiveFooter';
@@ -10,18 +11,47 @@ import { useCensoredDescription } from './hooks/useCensoredDescription';
 import { useSteamDetectiveState } from './hooks/useSteamDetectiveState';
 import { useGameActions } from './hooks/useGameActions';
 import MissedGuesses from './components/MissedGuesses';
+import { SteamDetectiveGameProvider } from './contexts/SteamDetectiveGameContext';
 import {
   GameInput,
   SkipButton,
   ClueContainer,
   GameComplete,
 } from './components/SteamDetective';
+import blueGamesFolderIcon from './assets/games-folder-48.png';
+import greenGamesFolderIcon from './assets/green-games-folder-48.png';
+import analyzeIcon from './assets/analyze-48.png';
 
-const SteamDetective = () => {
-  const puzzleDate = getPuzzleDate();
-  const [timeLeft] = useState<{ h: number; m: number }>(() =>
-    getTimeUntilNextGame(),
-  );
+// Preload images hook
+const useImagePreloader = (src: string) => {
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = new Image();
+    img.onload = () => setLoaded(true);
+    img.src = src;
+  }, [src]);
+
+  return loaded;
+};
+
+interface SteamDetectiveGameProps {
+  caseFile: 'easy' | 'expert';
+  onStartExpertCase?: () => void;
+  puzzleDate: string;
+  easyTotalGuesses?: number;
+  expertCaseStarted?: boolean;
+  onCopyEasyOnly?: () => void;
+}
+
+const SteamDetectiveGame: React.FC<SteamDetectiveGameProps> = ({
+  caseFile,
+  onStartExpertCase,
+  puzzleDate,
+  easyTotalGuesses,
+  expertCaseStarted,
+  onCopyEasyOnly,
+}) => {
   const [flashGuesses, setFlashGuesses] = useState(false);
   const prevShowCluesRef = useRef<boolean[]>([
     false,
@@ -32,12 +62,16 @@ const SteamDetective = () => {
     false,
   ]);
 
-  // Custom hooks for state and data
-  const dailyGame = useDailyGame();
+  // Preload folder icons
+  const blueIconLoaded = useImagePreloader(blueGamesFolderIcon);
+  const greenIconLoaded = useImagePreloader(greenGamesFolderIcon);
+
+  const dailyGame = useDailyGame(caseFile);
   const censoredDescription = useCensoredDescription(
     dailyGame.shortDescription,
   );
-  const { state, setState } = useSteamDetectiveState(dailyGame.name);
+
+  const { state, setState } = useSteamDetectiveState(dailyGame.name, caseFile);
   const { handleSkip, handleGuess } = useGameActions({
     state,
     setState,
@@ -54,15 +88,15 @@ const SteamDetective = () => {
     }
   }, [state.guessesRemaining, state.isComplete]);
 
-  // Scroll to top when game is completed
+  // Scroll to top when game is completed (only for easy mode)
   useEffect(() => {
-    if (state.isComplete) {
+    if (state.isComplete && caseFile === 'easy') {
       window.scrollTo({
         top: 0,
         behavior: 'smooth',
       });
     }
-  }, [state.isComplete]);
+  }, [state.isComplete, caseFile]);
 
   // Determine which clues to show based on custom clue order
   // Default order: tags, details, desc (clues 1-3), then screenshot1, screenshot2, title (clues 4-6)
@@ -175,73 +209,102 @@ const SteamDetective = () => {
   const handleCopyToShare = useCallback(
     (compact: boolean = false) => {
       // Generate emoji representation of guesses
-      let emojiText = '';
-      if (state.totalGuesses === 7) {
-        // DNF - all red squares
-        emojiText = '🟥 🟥 🟥 🟥 🟥 🟥';
-      } else {
-        // Build emoji string: red squares for wrong guesses, green check for correct, white squares for remaining
+      const generateEmojiText = (totalGuesses: number) => {
+        if (totalGuesses === 7) {
+          return '🟥 🟥 🟥 🟥 🟥 🟥';
+        }
         const emojis = [];
         for (let i = 1; i <= 6; i++) {
-          if (i < state.totalGuesses) {
-            emojis.push('⬛');
-          } else if (i === state.totalGuesses) {
+          if (i < totalGuesses) {
+            emojis.push('🟥');
+          } else if (i === totalGuesses) {
             emojis.push('✅');
           } else {
             emojis.push('⬜');
           }
         }
-        emojiText = emojis.join(' ');
+        return emojis.join(' ');
+      };
+
+      let emojiText = '';
+      if (
+        caseFile === 'expert' &&
+        easyTotalGuesses !== undefined &&
+        easyTotalGuesses > 0
+      ) {
+        // For expert mode, include both easy and expert scores
+        const easyEmoji = generateEmojiText(easyTotalGuesses);
+        const expertEmoji = generateEmojiText(state.totalGuesses);
+        emojiText = `1️⃣  ${easyEmoji} \n2️⃣  ${expertEmoji}`;
+      } else {
+        // For easy mode, just show the easy score
+        emojiText = `${generateEmojiText(state.totalGuesses)} 📁 #1`;
       }
 
       const shareText = compact
-        ? `<https://metagamedaily.com/> #SteamDetective ${emojiText}`
+        ? `<https://metagamedaily.com/> #SteamDetective ${emojiText.replace('\n', ' ')}`
         : `https://metagamedaily.com/\n${puzzleDate} #SteamDetective 🔍🕵️ #MetaGameDaily\n${emojiText}`;
       navigator.clipboard.writeText(shareText);
       toast.success('Copied to clipboard!');
     },
-    [state.totalGuesses, puzzleDate],
+    [state.totalGuesses, puzzleDate, caseFile, easyTotalGuesses],
   );
 
   const handleScoreSent = useCallback(() => {
     setState({ ...state, scoreSent: true });
   }, [state, setState]);
 
-  const handleResetPuzzle = async () => {
-    localStorage.removeItem('meta-game-daily-state');
-    window?.location?.reload?.();
-  };
-
   return (
-    <div className='text-[#c7d5e0]'>
-      <Toaster position='top-center' />
-      <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
+    <SteamDetectiveGameProvider
+      dailyGame={dailyGame}
+      censoredDescription={censoredDescription}
+      isComplete={state.isComplete}
+      showClues={showClues}
+    >
       <div className='relative max-w-[970px] mx-auto px-1 md:px-4'>
-        <div className='relative flex justify-center items-center mb-4'>
-          <h2
-            className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 pl-1 sm:pl-0 font-bold'
-            style={{
-              fontFamily: 'Playfair Display, serif',
-            }}
-          >
-            Steam Detective
-          </h2>
-          <div className='ml-2'>
-            <span className='relative sm:top-[-3px] inline-flex items-center rounded-md bg-yellow-400/10 px-[3px] py-0 text-xs font-medium text-yellow-500 border border-1 border-yellow-700'>
-              New
-            </span>
+        {caseFile === 'easy' && (
+          <div className='relative flex justify-center items-center mb-4'>
+            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
+              <div className='flex items-center'>
+                <img
+                  src={greenGamesFolderIcon}
+                  className={`transition-opacity duration-200 ${blueIconLoaded ? 'opacity-100' : 'opacity-0'}`}
+                />
+                <div className='pl-1'>
+                  Case File #1 <span className='text-gray-500/70'>of 2</span>
+                </div>
+              </div>
+            </h2>
           </div>
-        </div>
+        )}
+        {caseFile === 'expert' && (
+          <div className='relative flex justify-center items-center mb-4 mt-8'>
+            <h2 className='text-lg text-white sm:text-2xl mb-[-5px] sm:py-0 sm:mb-0 font-bold'>
+              <div className='flex items-center'>
+                <img
+                  src={blueGamesFolderIcon}
+                  className={`transition-opacity duration-200 ${greenIconLoaded ? 'opacity-100' : 'opacity-0'}`}
+                />
+                <div className='pl-1'>
+                  Case File <span className='text-md'>#</span>2{' '}
+                  <span className='text-gray-500/70'>of 2</span>
+                </div>
+              </div>
+            </h2>
+          </div>
+        )}
         {!state.isComplete && (
           <div className='mb-4 pt-4 font-semibold text-sm sm:text-base'>
             <span
-              className={`px-2 py-1 mr-1 rounded transition-colors duration-200 ${
+              className={`px-2 py-1 mr-1 rounded transition-colors duration-200 text-white ${
                 flashGuesses ? 'bg-orange-300' : 'bg-zinc-800'
               }`}
             >
               {state.guessesRemaining}
             </span>
-            {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
+            <span className='text-white'>
+              {`guess${state.guessesRemaining === 1 ? '' : 'es'} remaining`}
+            </span>
           </div>
         )}
         {!state.isComplete && (
@@ -249,8 +312,9 @@ const SteamDetective = () => {
         )}
         {!state.isComplete && (
           <div className='mb-6 relative flex justify-center items-end'>
-            <div className='absolute left-0 font-semibold text-md sm:text-base'>
-              Clue: #{state.currentClue}
+            <div className='flex absolute left-0 font-semibold text-md sm:text-base mb-[-18px]'>
+              <img src={analyzeIcon} className='w-8 h-8' />
+              <div className='pt-1 text-white'>Clue #{state.currentClue}</div>
             </div>
             <SkipButton onClick={handleSkip} currentClue={state.currentClue} />
           </div>
@@ -270,29 +334,165 @@ const SteamDetective = () => {
           scoreSent={state.scoreSent}
           onScoreSent={handleScoreSent}
           blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
+          caseFile={caseFile}
+          onStartExpertCase={onStartExpertCase}
+          expertCaseStarted={expertCaseStarted}
+          onCopyEasyOnly={onCopyEasyOnly}
         />
 
-        <ClueContainer
-          gameName={dailyGame.name}
-          screenshot={dailyGame.primaryScreenshot}
-          secondaryScreenshot={dailyGame.secondaryScreenshot}
-          shortDescription={dailyGame.shortDescription}
-          censoredDescription={censoredDescription}
-          allReviewSummary={dailyGame.allReviewSummary}
-          releaseDate={dailyGame.releaseDate}
-          developer={dailyGame.developer}
-          publisher={dailyGame.publisher}
-          tags={dailyGame.userTags}
-          blurredTags={dailyGame.blurredUserTags}
-          blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
-          blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
-          overrideCensoredTitle={dailyGame.overrideCensoredTitle}
-          isComplete={state.isComplete}
-          showClues={showClues}
-        />
+        <ClueContainer />
       </div>
+    </SteamDetectiveGameProvider>
+  );
+};
 
-      {state.isComplete && (
+const SteamDetective = () => {
+  const puzzleDate = getPuzzleDate();
+  const [timeLeft] = useState<{ h: number; m: number }>(() =>
+    getTimeUntilNextGame(),
+  );
+
+  // Check if expert case file has been started by looking for saved state in localStorage
+  const [showExpertCase, setShowExpertCase] = useState(() => {
+    try {
+      const saved = localStorage.getItem('meta-game-daily-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const currentPuzzleDate = getUtcDateString(); // Use UTC date string format (YYYY-MM-DD) to match storage format
+        // Show expert section if expertStarted flag is true for today's puzzle
+        return (
+          parsed.puzzleDate === currentPuzzleDate && !!parsed.expertStarted
+        );
+      }
+    } catch (error) {
+      console.error('Failed to load expert state:', error);
+    }
+    return false;
+  });
+
+  // Get easy game's total guesses directly from localStorage (not from a separate state hook)
+  const getEasyTotalGuesses = useCallback((): number => {
+    try {
+      const saved = localStorage.getItem('meta-game-daily-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        return parsed.steamDetective?.totalGuesses || 0;
+      }
+    } catch (error) {
+      console.error('Failed to load easy total guesses:', error);
+    }
+    return 0;
+  }, []);
+
+  // Check if expert case has been started
+  const hasExpertCaseStarted = useCallback((): boolean => {
+    try {
+      const saved = localStorage.getItem('meta-game-daily-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        const currentPuzzleDate = getUtcDateString();
+        return (
+          parsed.puzzleDate === currentPuzzleDate && !!parsed.expertStarted
+        );
+      }
+    } catch (error) {
+      console.error('Failed to check expert case status:', error);
+    }
+    return false;
+  }, []);
+
+  const handleStartExpertCase = useCallback(() => {
+    setShowExpertCase(true);
+
+    // Save expertStarted flag to localStorage
+    try {
+      const saved = localStorage.getItem('meta-game-daily-state');
+      if (saved) {
+        const parsed = JSON.parse(saved);
+        parsed.expertStarted = true;
+        localStorage.setItem('meta-game-daily-state', JSON.stringify(parsed));
+      }
+    } catch (error) {
+      console.error('Failed to save expert started flag:', error);
+    }
+  }, []);
+
+  // Handle copying only the easy score (for expert mode share)
+  const handleCopyEasyOnly = useCallback(() => {
+    const easyGuesses = getEasyTotalGuesses();
+    const puzzleDateFormatted = getPuzzleDate();
+
+    // Generate emoji representation of easy score only
+    const generateEmojiText = (totalGuesses: number) => {
+      if (totalGuesses === 7) {
+        return '🟥 🟥 🟥 🟥 🟥 🟥';
+      }
+      const emojis = [];
+      for (let i = 1; i <= 6; i++) {
+        if (i < totalGuesses) {
+          emojis.push('⬛');
+        } else if (i === totalGuesses) {
+          emojis.push('✅');
+        } else {
+          emojis.push('⬜');
+        }
+      }
+      return emojis.join(' ');
+    };
+
+    const emojiText = generateEmojiText(easyGuesses);
+    const shareText = `https://metagamedaily.com/\n${puzzleDateFormatted} #SteamDetective 🔍🕵️ #MetaGameDaily\n${emojiText} 📁 #1`;
+    navigator.clipboard.writeText(shareText);
+    toast.success('Copied to clipboard!');
+  }, [getEasyTotalGuesses]);
+
+  const handleResetPuzzle = async () => {
+    localStorage.removeItem('meta-game-daily-state');
+    window?.location?.reload?.();
+  };
+
+  return (
+    <div className='text-[#c7d5e0]'>
+      <Toaster position='top-center' />
+      <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
+
+      {/* Expert Case File - Renders ABOVE easy when shown */}
+      <AnimatePresence>
+        {showExpertCase && (
+          <motion.div
+            id='expert-case-section'
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.5, ease: 'easeInOut' }}
+            className='mb-8'
+          >
+            <SteamDetectiveGame
+              caseFile='expert'
+              puzzleDate={puzzleDate}
+              easyTotalGuesses={getEasyTotalGuesses()}
+              onCopyEasyOnly={handleCopyEasyOnly}
+            />
+            <hr className='h-[2px] bg-gradient-to-r from-transparent via-gray-500 to-transparent border-none my-8 opacity-50' />
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Easy Case File */}
+      <motion.div
+        animate={{ y: showExpertCase ? 0 : 0 }}
+        transition={{ duration: 0.5, ease: 'easeInOut' }}
+      >
+        <SteamDetectiveGame
+          caseFile='easy'
+          onStartExpertCase={handleStartExpertCase}
+          puzzleDate={puzzleDate}
+          expertCaseStarted={hasExpertCaseStarted()}
+        />
+      </motion.div>
+
+      {/* Show reset button if expert is shown */}
+      {showExpertCase && (
         <div className='flex justify-center mb-4'>
           <ResetPuzzleButton onResetPuzzle={handleResetPuzzle} />
         </div>

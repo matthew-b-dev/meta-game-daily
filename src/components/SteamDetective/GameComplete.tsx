@@ -10,6 +10,8 @@ import { getPuzzleDate } from '../../utils';
 import ShareButton from '../ShareButton';
 import SteamDetectiveFeedbackButtons from './SteamDetectiveFeedbackButtons';
 import { MAX_CLUES } from './utils';
+import blueGamesFolderIcon from '../../assets/games-folder-48.png';
+import { PlayIcon } from '@heroicons/react/24/solid';
 
 interface GameCompleteProps {
   show: boolean;
@@ -20,6 +22,10 @@ interface GameCompleteProps {
   scoreSent: boolean;
   onScoreSent: () => void;
   blurTitleAndAsAmpersand?: boolean;
+  caseFile: 'easy' | 'expert';
+  onStartExpertCase?: () => void;
+  expertCaseStarted?: boolean;
+  onCopyEasyOnly?: () => void;
 }
 
 const DEBUG_LOADING = false;
@@ -33,6 +39,9 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
   scoreSent,
   onScoreSent,
   blurTitleAndAsAmpersand,
+  caseFile,
+  onStartExpertCase,
+  expertCaseStarted,
 }) => {
   const [scoresLoading, setScoresLoading] = useState(true);
   const [todayScores, setTodayScores] = useState<number[]>([]);
@@ -55,12 +64,12 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
       try {
         // Submit score if not already sent
         if (!scoreSent) {
-          await sendSteamDetectiveScore(totalGuesses);
+          await sendSteamDetectiveScore(totalGuesses, caseFile);
           onScoreSent();
         }
 
         // Fetch all scores for today
-        const scores = await fetchSteamDetectiveScores();
+        const scores = await fetchSteamDetectiveScores(caseFile);
         setTodayScores(scores);
 
         // Calculate percentile (lower score is better, so count worse scores)
@@ -79,7 +88,7 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
     };
 
     submitAndFetchScores();
-  }, [show, puzzleDate, totalGuesses, scoreSent, onScoreSent]);
+  }, [show, puzzleDate, totalGuesses, scoreSent, onScoreSent, caseFile]);
 
   // Calculate distribution for bar chart
   const getDistribution = () => {
@@ -92,11 +101,13 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
     return dist;
   };
 
-  const correct = totalGuesses < MAX_CLUES;
+  const correct = totalGuesses <= MAX_CLUES;
   const preDisplayNameContent = correct ? (
-    <span className='block md:inline text-green-500'>Correct!</span>
+    <div className='block md:inline text-green-500'>
+      {`Case File #${caseFile === 'easy' ? '1' : '2'}`} Solved!
+    </div>
   ) : (
-    <span className='block md:inline text-red-500'>The answer was:</span>
+    <div className='block md:inline text-red-500'>The answer was:</div>
   );
 
   const distribution = getDistribution();
@@ -111,20 +122,22 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.3 }}
-        className='bg-zinc-800 rounded overflow-hidden p-4 min-h-[475px]'
+        className={`bg-zinc-800 rounded overflow-hidden p-4 ${caseFile === 'easy' ? 'min-h-[324px]' : 'min-h-[475px]'}`}
       >
         {/* Game Name */}
         <h2 className={`text-md font-semibold text-center text-white`}>
           {preDisplayNameContent}
-          <a
-            href={`https://store.steampowered.com/app/${appId}`}
-            target='_blank'
-            rel='noopener noreferrer'
-            className='pl-2 text-white underline hover:text-gray-300 inline-flex items-center gap-1'
-          >
-            <span>{displayName}</span>
-            <ArrowTopRightOnSquareIcon className='w-4 h-4 no-underline' />
-          </a>
+          <div>
+            <a
+              href={`https://store.steampowered.com/app/${appId}`}
+              target='_blank'
+              rel='noopener noreferrer'
+              className='pl-2 block text-white underline hover:text-gray-300 inline-flex items-center gap-1'
+            >
+              <span>{displayName}</span>
+              <ArrowTopRightOnSquareIcon className='w-4 h-4 no-underline' />
+            </a>
+          </div>
         </h2>
 
         {/* Loading State */}
@@ -146,6 +159,10 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
             animate={{ opacity: 1 }}
             transition={{ duration: 0.4 }}
           >
+            <div className='text-gray-400 text-center pt-1'>
+              Global Guess Distribution for Case File{' '}
+              {caseFile === 'easy' ? '#1' : '#2'}
+            </div>
             {/* Bar Chart */}
             <div className='mb-0 bg-zinc-800 rounded-lg px-2 max-w-[500px] mx-auto'>
               <Chart
@@ -256,11 +273,39 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
 
             {/* Share Button */}
             <div className='space-y-3 mx-auto max-w-[450px]'>
-              <ShareButton
-                userPercentile={userPercentile}
-                onCopyToShare={onCopyToShare}
-                isLoading={scoresLoading}
-              />
+              {caseFile === 'expert' && (
+                <ShareButton
+                  userPercentile={userPercentile}
+                  onCopyToShare={onCopyToShare}
+                  isLoading={scoresLoading}
+                  text={'Copy both Case Files'}
+                />
+              )}
+
+              {/* Expert Case File Button - only show for easy mode and if expert hasn't started */}
+              {caseFile === 'easy' &&
+                onStartExpertCase &&
+                !expertCaseStarted && (
+                  <button
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' });
+                      onStartExpertCase();
+                    }}
+                    className='w-full px-4 py-2 rounded bg-green-700 hover:bg-green-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+                  >
+                    <span>
+                      <span>
+                        Continue to{' '}
+                        <img
+                          className='inline w-7 h-7 ml-2 mr-[2px] relative top-[-2px]'
+                          src={blueGamesFolderIcon}
+                        />
+                        <span className=''>Case File #2</span>
+                        <PlayIcon className='inline w-5 h-5 ml-4 mr-1' />
+                      </span>
+                    </span>
+                  </button>
+                )}
 
               {/* Compact Copy Button (experimental)
               <button
@@ -272,8 +317,10 @@ export const GameComplete: React.FC<GameCompleteProps> = ({
               </button>
               */}
 
-              {/* Steam Detective Frequency Feedback */}
-              <SteamDetectiveFeedbackButtons isOpen={show} />
+              {/* Steam Detective Frequency Feedback - only show for expert or if no expert button */}
+              {caseFile === 'expert' && (
+                <SteamDetectiveFeedbackButtons isOpen={show} />
+              )}
             </div>
           </motion.div>
         )}

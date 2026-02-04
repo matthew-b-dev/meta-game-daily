@@ -170,15 +170,29 @@ Far Cry 4
 
 
 Up to bat:
+  Easy:
+    DARK SOULS II
   Harder: 
-    ASTRONEER
+    '2026-02-02': {
+      easy: 'Papers, Please',
+      expert: 'ASTRONEER',
+    },
 
 */
 
-export const STEAM_DETECTIVE_DEMO_DAYS: { [date: string]: string } = {
-  // Example:
+export const STEAM_DETECTIVE_DEMO_DAYS: {
+  [date: string]: string | { easy: string; expert: string };
+} = {
+  // Single game (easy only):
   // '2026-02-01': 'Dota 2',
-  '2026-02-02': 'Magicka',
+
+  // Both easy and expert:
+  // '2026-02-02': { easy: 'Magicka', expert: 'XCOM 2' },
+
+  '2026-02-02': {
+    easy: 'My Time at Portia',
+    expert: 'ASTRONEER',
+  },
 };
 
 /* 

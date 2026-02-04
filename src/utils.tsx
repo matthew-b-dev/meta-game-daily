@@ -76,6 +76,8 @@ export interface UnifiedGameState {
   guessingGame?: Omit<SessionState, 'puzzleDate'>;
   shuffleGame?: ShuffleGameState;
   steamDetective?: SteamDetectiveState;
+  steamDetectiveExpert?: SteamDetectiveState;
+  expertStarted?: boolean; // Track if user has clicked to start expert case
 }
 
 /**
@@ -83,6 +85,7 @@ export interface UnifiedGameState {
  */
 export const loadSteamDetectiveState = (
   currentPuzzleDate: string,
+  caseFile: 'easy' | 'expert' = 'easy',
 ): SteamDetectiveState | null => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -109,22 +112,28 @@ export const loadSteamDetectiveState = (
       return null; // This won't be reached due to reload, but TypeScript needs it
     }
 
+    // Select the appropriate state based on case file
+    const stateToLoad =
+      caseFile === 'easy'
+        ? unifiedState.steamDetective
+        : unifiedState.steamDetectiveExpert;
+
     // Migrate old guesses format (string[]) to new format (MissedGuess[])
-    if (unifiedState.steamDetective && unifiedState.steamDetective.guesses) {
+    if (stateToLoad && stateToLoad.guesses) {
       if (
-        unifiedState.steamDetective.guesses.length > 0 &&
-        typeof unifiedState.steamDetective.guesses[0] === 'string'
+        stateToLoad.guesses.length > 0 &&
+        typeof stateToLoad.guesses[0] === 'string'
       ) {
-        unifiedState.steamDetective.guesses = (
-          unifiedState.steamDetective.guesses as unknown as string[]
-        ).map((name: string) => ({
-          name,
-          isClose: false,
-        }));
+        stateToLoad.guesses = (stateToLoad.guesses as unknown as string[]).map(
+          (name: string) => ({
+            name,
+            isClose: false,
+          }),
+        );
       }
     }
 
-    return unifiedState.steamDetective || null;
+    return stateToLoad || null;
   } catch (error) {
     console.error('Failed to load Steam Detective state:', error);
     return null;
@@ -137,6 +146,7 @@ export const loadSteamDetectiveState = (
 export const saveSteamDetectiveState = (
   puzzleDate: string,
   state: SteamDetectiveState,
+  caseFile: 'easy' | 'expert' = 'easy',
 ): void => {
   try {
     const saved = localStorage.getItem(STORAGE_KEY);
@@ -144,9 +154,13 @@ export const saveSteamDetectiveState = (
       ? JSON.parse(saved)
       : { puzzleDate };
 
-    // Update puzzle date and Steam Detective state
+    // Update puzzle date and appropriate Steam Detective state
     unifiedState.puzzleDate = puzzleDate;
-    unifiedState.steamDetective = state;
+    if (caseFile === 'easy') {
+      unifiedState.steamDetective = state;
+    } else {
+      unifiedState.steamDetectiveExpert = state;
+    }
 
     localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
   } catch (error) {

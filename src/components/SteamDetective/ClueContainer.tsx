@@ -1,65 +1,29 @@
-import type { ReactElement } from 'react';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import { useSteamDetectiveGame } from '../../contexts/SteamDetectiveGameContext';
 import { ClueTitle } from './ClueTitle';
 import { ClueScreenshot } from './ClueScreenshot';
 import { ClueDescription } from './ClueDescription';
 import { ClueDetails } from './ClueDetails';
 import { ClueTags } from './ClueTags';
 
-interface ReviewSummary {
-  rating: string;
-  count: number;
-}
+export const ClueContainer: React.FC = () => {
+  const { dailyGame, censoredDescription, isComplete, showClues } =
+    useSteamDetectiveGame();
 
-interface ClueContainerProps {
-  gameName: string;
-  screenshot: string;
-  secondaryScreenshot?: string;
-  shortDescription: string;
-  censoredDescription: ReactElement[];
-  allReviewSummary: ReviewSummary;
-  releaseDate: string;
-  developer: string;
-  publisher: string;
-  tags: string[];
-  blurredTags?: string[];
-  blurScreenshotQuarter?: 'top' | 'bottom';
-  blurTitleAndAsAmpersand?: boolean;
-  overrideCensoredTitle?: string;
-  isComplete: boolean;
-  showClues: boolean[];
-}
-
-export const ClueContainer: React.FC<ClueContainerProps> = ({
-  gameName,
-  screenshot,
-  secondaryScreenshot,
-  shortDescription,
-  censoredDescription,
-  allReviewSummary,
-  releaseDate,
-  developer,
-  publisher,
-  tags,
-  blurredTags,
-  blurScreenshotQuarter,
-  blurTitleAndAsAmpersand,
-  overrideCensoredTitle,
-  isComplete,
-  showClues,
-}) => {
   const [showClue1, showClue2, showClue3, showClue4, showClue5, showClue6] =
     showClues;
   const [primaryIsMain, setPrimaryIsMain] = useState(true);
 
   const mainScreenshot = primaryIsMain
-    ? screenshot
-    : secondaryScreenshot || screenshot;
-  const thumbnailScreenshot = primaryIsMain ? secondaryScreenshot : screenshot;
+    ? dailyGame.primaryScreenshot
+    : dailyGame.secondaryScreenshot || dailyGame.primaryScreenshot;
+  const thumbnailScreenshot = primaryIsMain
+    ? dailyGame.secondaryScreenshot
+    : dailyGame.primaryScreenshot;
 
   const handleSwapScreenshots = () => {
-    if (showClue5 && secondaryScreenshot) {
+    if (showClue5 && dailyGame.secondaryScreenshot) {
       setPrimaryIsMain(!primaryIsMain);
     }
   };
@@ -71,37 +35,43 @@ export const ClueContainer: React.FC<ClueContainerProps> = ({
         className='bg-[#17222f] rounded shadow-[0_20px_50px_rgba(0,0,0,1)] overflow-hidden'
       >
         <ClueTitle
-          title={gameName}
+          title={dailyGame.name}
           show={showClue6}
           isComplete={isComplete}
-          blurTitleAndAsAmpersand={blurTitleAndAsAmpersand}
-          overrideCensoredTitle={overrideCensoredTitle}
+          blurTitleAndAsAmpersand={dailyGame.blurTitleAndAsAmpersand}
+          overrideCensoredTitle={dailyGame.overrideCensoredTitle}
         />
         {/* Screenshots - Clue 4 (primary) and Clue 5 (secondary) */}
         <ClueScreenshot
           screenshot={mainScreenshot}
           secondaryScreenshot={thumbnailScreenshot}
           show={showClue4}
-          showSecondary={showClue5 && secondaryScreenshot !== undefined}
-          blurScreenshotQuarter={blurScreenshotQuarter}
+          showSecondary={
+            showClue5 && dailyGame.secondaryScreenshot !== undefined
+          }
+          blurScreenshotQuarter={dailyGame.blurScreenshotQuarter}
           onSwapScreenshots={handleSwapScreenshots}
           isComplete={isComplete}
         />
         <ClueDescription
-          shortDescription={shortDescription}
+          shortDescription={dailyGame.shortDescription}
           censoredDescription={censoredDescription}
           isComplete={isComplete}
           show={showClue3}
         />
         <ClueDetails
-          allReviewSummary={allReviewSummary}
-          releaseDate={releaseDate}
-          developer={developer}
-          publisher={publisher}
+          allReviewSummary={dailyGame.allReviewSummary}
+          releaseDate={dailyGame.releaseDate}
+          developer={dailyGame.developer}
+          publisher={dailyGame.publisher}
           show={showClue2}
           isComplete={isComplete}
         />
-        <ClueTags tags={tags} blurredTags={blurredTags} show={showClue1} />
+        <ClueTags
+          tags={dailyGame.userTags}
+          blurredTags={dailyGame.blurredUserTags}
+          show={showClue1}
+        />
       </motion.div>
     </div>
   );

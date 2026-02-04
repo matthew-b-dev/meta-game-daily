@@ -30,6 +30,9 @@ export const ClueDescription: React.FC<ClueDescriptionProps> = ({
       className='overflow-hidden'
     >
       <div className='text-sm text-gray-200 leading-relaxed px-4 py-3 max-w-[600px]'>
+        <div className='text-gray-400 text-xs uppercase min-w-[120px] pt-[3px]'>
+          Description:
+        </div>
         <div>
           {isComplete
             ? getUncensoredDescription(decodeHtmlEntities(shortDescription))

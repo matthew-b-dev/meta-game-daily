@@ -173,11 +173,13 @@ export const fetchShuffleAverages = async (playerScores?: {
 
 export const sendSteamDetectiveScore = async (
   guesses: number,
+  caseFile: 'easy' | 'expert' = 'easy',
 ): Promise<void> => {
-  console.log('sending steam detective score: ', guesses);
+  console.log('sending steam detective score: ', guesses, caseFile);
   const { error } = await supabase.from('steam_scores').insert({
     created_at: getUtcDateString(),
     guesses: guesses,
+    case_file: caseFile,
   });
 
   if (error) {
@@ -185,13 +187,16 @@ export const sendSteamDetectiveScore = async (
   }
 };
 
-export const fetchSteamDetectiveScores = async (): Promise<number[]> => {
+export const fetchSteamDetectiveScores = async (
+  caseFile: 'easy' | 'expert' = 'easy',
+): Promise<number[]> => {
   const today = getUtcDateString();
 
   const { data, error } = await supabase
     .from('steam_scores')
     .select('guesses')
-    .eq('created_at', today);
+    .eq('created_at', today)
+    .eq('case_file', caseFile);
 
   if (error) {
     console.error('Error fetching steam detective scores:', error);

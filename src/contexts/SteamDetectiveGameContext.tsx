@@ -1,0 +1,48 @@
+import { createContext, useContext, ReactNode, ReactElement } from 'react';
+import type { DailyGame } from '../types';
+
+interface SteamDetectiveGameContextValue {
+  dailyGame: DailyGame;
+  censoredDescription: ReactElement[];
+  isComplete: boolean;
+  showClues: boolean[];
+}
+
+const SteamDetectiveGameContext = createContext<
+  SteamDetectiveGameContextValue | undefined
+>(undefined);
+
+interface SteamDetectiveGameProviderProps {
+  children: ReactNode;
+  dailyGame: DailyGame;
+  censoredDescription: ReactElement[];
+  isComplete: boolean;
+  showClues: boolean[];
+}
+
+export const SteamDetectiveGameProvider: React.FC<
+  SteamDetectiveGameProviderProps
+> = ({ children, dailyGame, censoredDescription, isComplete, showClues }) => {
+  const value = {
+    dailyGame,
+    censoredDescription,
+    isComplete,
+    showClues,
+  };
+
+  return (
+    <SteamDetectiveGameContext.Provider value={value}>
+      {children}
+    </SteamDetectiveGameContext.Provider>
+  );
+};
+
+export const useSteamDetectiveGame = () => {
+  const context = useContext(SteamDetectiveGameContext);
+  if (!context) {
+    throw new Error(
+      'useSteamDetectiveGame must be used within SteamDetectiveGameProvider',
+    );
+  }
+  return context;
+};
