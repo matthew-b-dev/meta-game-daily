@@ -101,6 +101,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Bayonetta 2',
     'Peggle 2',
   ],
+  '2026-02-04': [
+    'Dynasty Warriors 9',
+    'Sifu',
+    'Battlefield 2042',
+    'It Takes Two',
+    'Granblue Fantasy: Relink',
+  ],
 };
 
 /**

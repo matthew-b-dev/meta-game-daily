@@ -8444,7 +8444,7 @@ export const gameDetails: Game[] = [
     developers: ['Hazelight Studios'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cg4.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cg5.jpg',
     hltb: {
       main: null,
       extra: null,
@@ -9353,14 +9353,14 @@ export const gameDetails: Game[] = [
     score: '81',
     name: 'Sifu',
     platforms: 'PS4, PS5, PC, Switch, XB1, XBXS',
-    genres: 'Action, Adventure',
+    genres: 'Martial Arts, Beat \'em up, Action',
     releaseDate: 'Feb 8',
     releaseYear: 2022,
     reviewRank: 8,
     developers: ['Sloclap'],
     publishers: ['Sloclap', 'Kepler Interactive'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc936z.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9370.jpg',
     hltb: {
       main: 8,
       extra: 14,
