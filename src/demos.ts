@@ -108,6 +108,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'It Takes Two',
     'Granblue Fantasy: Relink',
   ],
+  '2026-02-05': [
+    "The Legend of Zelda: Link's Awakening",
+    "Tiny Tina's Wonderlands",
+    'Shadow of the Tomb Raider',
+    'Shovel Knight',
+    'Nintendo Switch Sports',
+  ],
 };
 
 /**
@@ -125,65 +132,6 @@ export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
  */
 /*
 [Ideas]
-
-Easy
-BioShock Infinite
-Bastion
-Hitman: Absolution
-
-Great Easy:
-Rust
-
-Medium
-Castle Crashers
-Papers, Please
-The Forest
-Space Engineers
-
-Great Medium:
-Plague Inc: Evolved
-
-Hard
-Crusader Kings II
-Slime Rancher 2
-Magicka
-
-Great Hard:
-
-
-"blurredUserTags": ["Warhammer"],
-"clueOrder": ["desc", "tags", "details"],
-
-READY:
-
-TRULY DONE
-  Very Easy
-    No Man's Sky
-  
-  Medium:
-    a
-  Harder:
-    Magicka
-
-XCOM 2
-Mount and Blade II: Bannerlord
-The Witcher 3: Wild Hunt
-Elite Dangerous
-DARK SOULS II
-Frostpunk
-The Long Dark
-Life is Strange - Episode 1
-Far Cry 4
-
-
-Up to bat:
-  Easy:
-    DARK SOULS II
-  Harder: 
-    '2026-02-02': {
-      easy: 'Papers, Please',
-      expert: 'ASTRONEER',
-    },
 
 */
 
