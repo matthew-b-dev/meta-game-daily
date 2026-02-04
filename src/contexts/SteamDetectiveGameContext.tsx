@@ -1,8 +1,9 @@
-import { createContext, useContext, ReactNode, ReactElement } from 'react';
-import type { DailyGame } from '../types';
+import { createContext, useContext } from 'react';
+import type { ReactNode, ReactElement } from 'react';
+import type { SteamGame } from '../types';
 
 interface SteamDetectiveGameContextValue {
-  dailyGame: DailyGame;
+  dailyGame: SteamGame;
   censoredDescription: ReactElement[];
   isComplete: boolean;
   showClues: boolean[];
@@ -14,7 +15,7 @@ const SteamDetectiveGameContext = createContext<
 
 interface SteamDetectiveGameProviderProps {
   children: ReactNode;
-  dailyGame: DailyGame;
+  dailyGame: SteamGame;
   censoredDescription: ReactElement[];
   isComplete: boolean;
   showClues: boolean[];
@@ -37,6 +38,7 @@ export const SteamDetectiveGameProvider: React.FC<
   );
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useSteamDetectiveGame = () => {
   const context = useContext(SteamDetectiveGameContext);
   if (!context) {
