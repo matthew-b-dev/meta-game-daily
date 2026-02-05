@@ -20,8 +20,8 @@ export const getSubtitle = (): SubtitleConfig => {
   // <>❤️ Ad-free and Open-Source! 🛠️</>,
   return {
     content: (
-      <div>
-        For PC Game trivia ...
+      <div className='ml-1'>
+        <div className='text-left'>For PC Game trivia ...</div>
         <div>
           Check out 🕵️
           <a
