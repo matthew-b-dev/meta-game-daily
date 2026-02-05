@@ -285,7 +285,7 @@ const GuessingGame = () => {
   };
 
   return (
-    <div className=' bg-zinc-900 w-full flex flex-col diagonal-pattern-bg'>
+    <div className='w-full flex flex-col diagonal-pattern-bg'>
       <Toaster position='top-center' />
       <div className='flex flex-col items-center w-full flex-1'>
         <div className='w-full max-w-[750px]'>
