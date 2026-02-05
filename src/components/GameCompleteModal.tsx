@@ -102,11 +102,22 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                     ))}
                 </div>
               )}
+              <button
+                className='w-full px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+                onClick={() =>
+                  window.open('https://steamdetective.wtf/', '_blank')
+                }
+                disabled={scoresLoading}
+              >
+                🕵️ Check out{' '}
+                <span className='text-yellow-500'>steamdetective.wtf</span> !
+              </button>
               <ShareButton
                 userPercentile={userPercentile}
                 onCopyToShare={onCopyToShare}
                 isLoading={scoresLoading}
               />
+
               <FeedbackButtons
                 puzzleDate={puzzleDate}
                 userPercentile={userPercentile}
