@@ -20,18 +20,21 @@ export const getSubtitle = (): SubtitleConfig => {
   // <>❤️ Ad-free and Open-Source! 🛠️</>,
   return {
     content: (
-      <>
-        🕵️ Check out <a></a>
-        <a
-          href='https://steamdetective.wtf/'
-          target='_blank'
-          rel='noopener noreferrer'
-          className='text-yellow-500 underline hover:text-yellow-400'
-        >
-          steamdetective.wtf
-        </a>{' '}
-        !{' '}
-      </>
+      <div>
+        For PC Game trivia ...
+        <div>
+          Check out 🕵️
+          <a
+            href='https://steamdetective.wtf/'
+            target='_blank'
+            rel='noopener noreferrer'
+            className='text-yellow-500 underline hover:text-yellow-400 pl-1'
+          >
+            steamdetective.wtf
+          </a>{' '}
+          !{' '}
+        </div>
+      </div>
     ),
     animated: true,
   };
