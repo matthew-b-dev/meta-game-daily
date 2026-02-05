@@ -102,6 +102,14 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                     ))}
                 </div>
               )}
+              <ShareButton
+                userPercentile={userPercentile}
+                onCopyToShare={onCopyToShare}
+                isLoading={scoresLoading}
+              />
+              <div className='w-full text-center mt-0'>
+                Or, for PC Game Trivia ...
+              </div>
               <button
                 className='w-full px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
                 onClick={() =>
@@ -109,15 +117,14 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 }
                 disabled={scoresLoading}
               >
-                🕵️ Check out{' '}
-                <span className='text-yellow-500'>steamdetective.wtf</span> !
+                <span className='flex'>
+                  Check out 🕵️
+                  <span className='text-yellow-500 pl-1'>
+                    steamdetective.wtf
+                  </span>{' '}
+                  !
+                </span>
               </button>
-              <ShareButton
-                userPercentile={userPercentile}
-                onCopyToShare={onCopyToShare}
-                isLoading={scoresLoading}
-              />
-
               <FeedbackButtons
                 puzzleDate={puzzleDate}
                 userPercentile={userPercentile}
