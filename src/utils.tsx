@@ -3,7 +3,14 @@ import type { ReactNode } from 'react';
 import { DATE_OVERRIDE, DEMO_DAYS, SUNDAY_SHUFFLE_DEMO_DAYS } from './demos';
 
 export const MAX_REVIEW_RANK = 50;
-// Subtitle configuration
+
+// Special series/franchises where guesses containing the series name are considered "close"
+export const CLOSE_GUESS_SERIES = [
+  'super mario',
+  'final fantasy',
+  'the legend of zelda',
+];
+
 export interface SubtitleConfig {
   content: ReactNode;
   animated: boolean;
@@ -12,8 +19,21 @@ export interface SubtitleConfig {
 export const getSubtitle = (): SubtitleConfig => {
   // <>❤️ Ad-free and Open-Source! 🛠️</>,
   return {
-    content: <>❤️ Ad-free and Open-Source! 🛠️</>,
-    animated: false,
+    content: (
+      <>
+        🕵️ Check out <a></a>
+        <a
+          href='https://steamdetective.wtf/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='text-yellow-500 underline hover:text-yellow-400'
+        >
+          steamdetective.wtf
+        </a>{' '}
+        !{' '}
+      </>
+    ),
+    animated: true,
   };
 };
 
@@ -271,12 +291,11 @@ export const isCloseGuess = (guess: string, correctGames: Game[]): boolean => {
   for (const game of correctGames) {
     const gameLower = game.name.toLowerCase();
 
-    // Special case: if both contain "Super Mario", consider them close
-    if (
-      guessLower.includes('super mario') &&
-      gameLower.includes('super mario')
-    ) {
-      return true;
+    // Special case: if both contain a known series/franchise name, consider them close
+    for (const series of CLOSE_GUESS_SERIES) {
+      if (guessLower.includes(series) && gameLower.includes(series)) {
+        return true;
+      }
     }
 
     // Check if one contains the other (for partial matches)
