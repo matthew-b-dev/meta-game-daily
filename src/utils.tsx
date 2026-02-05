@@ -21,7 +21,7 @@ export const getSubtitle = (): SubtitleConfig => {
   return {
     content: (
       <div className='ml-1'>
-        <div className='text-left'>For PC Game trivia ...</div>
+        <div className='text-left sm:text-center'>For PC Game trivia ...</div>
         <div>
           Check out 🕵️
           <a
