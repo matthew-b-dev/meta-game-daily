@@ -36,7 +36,7 @@ const App = () => {
       : 'guessing';
 
   return (
-    <div className='min-h-screen bg-zinc-900 w-full flex flex-col min-h-screen diagonal-pattern-bg overflow-x-hidden'>
+    <div className='min-h-screen w-full flex flex-col min-h-screen diagonal-pattern-bg overflow-x-hidden'>
       <Toaster position='top-center' />
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
