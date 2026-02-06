@@ -24,7 +24,8 @@ export const fetchTodayScores = async (): Promise<number[]> => {
   const { data, error } = await supabase
     .from('scores')
     .select('score')
-    .eq('created_at', today);
+    .eq('created_at', today)
+    .eq('gametype', 'guess');
 
   const mockScores = [400, 650, 610, 550];
 
