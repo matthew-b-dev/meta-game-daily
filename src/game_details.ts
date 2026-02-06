@@ -5258,7 +5258,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jun 5',
     releaseYear: 2018,
     reviewRank: 6,
-    developers: ['Dontnod Eleven', "DON'T NOD"],
+    developers: ["DON'T NOD"],
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tia9remnnpxyka9zh1a1.jpg',

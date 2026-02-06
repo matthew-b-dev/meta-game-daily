@@ -115,6 +115,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Shovel Knight',
     'Nintendo Switch Sports',
   ],
+  '2026-02-06': [
+    'Vampyr',
+    'Sniper Elite 4',
+    'Fire Emblem Engage',
+    'Super Smash Bros. for Wii U',
+    'SpongeBob SquarePants: The Cosmic Shake',
+  ],
 };
 
 /**

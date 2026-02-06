@@ -519,11 +519,11 @@ export const getDailyGames = (
     hard: [] as Game[],
   };
   for (const game of allGames) {
-    if (game.reviewRank < 5) {
+    if (game.reviewRank < 15) {
       buckets.trivial.push(game);
-    } else if (game.reviewRank < 10) {
+    } else if (game.reviewRank < 27) {
       buckets.easy.push(game);
-    } else if (game.reviewRank < 25) {
+    } else if (game.reviewRank < 35) {
       buckets.medium.push(game);
     } else if (game.reviewRank < MAX_REVIEW_RANK) {
       buckets.hard.push(game);

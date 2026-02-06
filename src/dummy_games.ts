@@ -1089,6 +1089,7 @@ export const dummyGames: string[] = [
   'Marvel Rivals',
   'Brothers: A Tale of Two Sons Remake',
   'Ultros',
+  'SpongeBob SquarePants: Battle for Bikini Bottom - Rehydrated',
   'Harold Halibut',
   'The Legend of Heroes: Trails Through Daybreak',
   'Dungeons of Hinterberg',
