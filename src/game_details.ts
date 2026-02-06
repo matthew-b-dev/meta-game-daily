@@ -3559,6 +3559,7 @@ export const gameDetails: Game[] = [
   {
     score: '81',
     name: 'Deus Ex: Mankind Divided',
+    overrideMask: '**** ** : [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
     releaseDate: 'Aug 23',
@@ -3567,7 +3568,7 @@ export const gameDetails: Game[] = [
     developers: ['Eidos Montréal'],
     publishers: ['Square Enix', 'Feral Interactive', 'Eidos Montréal'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mxhlbvtxsesq5swkjeqn.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e8unuxdrdcsnp13cadnw.jpg',
   },
   {
     score: '80',
@@ -3741,11 +3742,12 @@ export const gameDetails: Game[] = [
   {
     score: '75',
     name: 'Street Fighter V',
+    searchTerms: ['street fighter 5'],
     platforms: 'PS4, PC, PS5',
     genres: 'Fighting',
     releaseDate: 'Feb 15',
     releaseYear: 2016,
-    reviewRank: 31,
+    reviewRank: 5,
     developers: ['Capcom'],
     publishers: ['Capcom'],
     screenshotUrl:
@@ -4470,7 +4472,7 @@ export const gameDetails: Game[] = [
     developers: ['Ninja Theory'],
     publishers: ['Ninja Theory'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lba0mnzzwo0cqv6xrmdg.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schj7b.jpg',
   },
   {
     score: '78',
@@ -4574,7 +4576,7 @@ export const gameDetails: Game[] = [
     developers: ['Team NINJA'],
     publishers: ['Koei Tecmo Games', 'Sony'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gwlzl1joc0vlmxz91pmg.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arz8e.jpg',
   },
   {
     score: '82',
@@ -7202,6 +7204,7 @@ export const gameDetails: Game[] = [
   {
     score: '74',
     name: 'Watch Dogs: Legion',
+    overrideMask: '***** **** : [ ... ]',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Adventure, Action',
     releaseDate: 'Oct 29',

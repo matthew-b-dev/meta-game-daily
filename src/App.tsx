@@ -4,7 +4,6 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import { getUtcDateString } from './utils';
 import GuessingGame from './GuessingGame';
 import ShuffleGame from './ShuffleGame';
-import SteamDetective from './SteamDetective';
 import HelpModal from './components/HelpModal';
 import Subtitle from './components/Subtitle';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
@@ -17,7 +16,6 @@ const App = () => {
   const dayOfWeek = date.getUTCDay();
 
   const isShuffleGame = dayOfWeek === 0; // Sunday
-  const isSteamDetective = dayOfWeek === 1; // Monday
 
   const isTestRoute = !!window.location.pathname.match(
     /\/test\/(\d{4}-\d{2}-\d{2})/,
@@ -31,9 +29,7 @@ const App = () => {
   // Determine game mode for help modal
   const gameMode: 'guessing' | 'shuffle' | 'detective' = isShuffleGame
     ? 'shuffle'
-    : isSteamDetective
-      ? 'detective'
-      : 'guessing';
+    : 'guessing';
 
   return (
     <div className='min-h-screen w-full flex flex-col diagonal-pattern-bg overflow-x-hidden'>
@@ -41,7 +37,7 @@ const App = () => {
       <div className='flex flex-col items-center w-full px-1 sm:px-4 flex-1'>
         <div className='w-full max-w-[750px] p-2 sm:p-6'>
           <div
-            className={`relative ${isShuffleGame || isSteamDetective ? 'mb-2 sm:mb-6' : 'mb-4 sm:mb-6'}`}
+            className={`relative ${isShuffleGame ? 'mb-2 sm:mb-6' : 'mb-4 sm:mb-6'}`}
           >
             <div className='text-center sm:text-center flex flex-col items-start sm:items-center'>
               <h1
@@ -81,13 +77,7 @@ const App = () => {
               </span>
             </button>
           </div>
-          {isShuffleGame ? (
-            <ShuffleGame />
-          ) : isSteamDetective ? (
-            <SteamDetective />
-          ) : (
-            <GuessingGame />
-          )}
+          {isShuffleGame ? <ShuffleGame /> : <GuessingGame />}
         </div>
       </div>
       <HelpModal

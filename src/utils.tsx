@@ -9,6 +9,11 @@ export const CLOSE_GUESS_SERIES = [
   'super mario',
   'final fantasy',
   'the legend of zelda',
+  'street fighter',
+  'watch dogs',
+  'nioh',
+  'hellblade',
+  'deus ex',
 ];
 
 export interface SubtitleConfig {
@@ -118,21 +123,6 @@ export const loadSteamDetectiveState = (
     // Only restore if it's the same puzzle date
     if (unifiedState.puzzleDate !== currentPuzzleDate) {
       return null;
-    }
-
-    // Check for corruption: if this is a SteamDetective day but no steamDetective data exists
-    // Determine if the puzzleDate corresponds to a Monday (SteamDetective day)
-    const date = new Date(currentPuzzleDate + 'T00:00:00Z');
-    const dayOfWeek = date.getUTCDay();
-    const isSteamDetectiveDay = dayOfWeek === 1; // Monday
-
-    if (isSteamDetectiveDay && !unifiedState.steamDetective) {
-      console.warn(
-        'Corrupted SteamDetective state detected - clearing localStorage and refreshing',
-      );
-      localStorage.removeItem(STORAGE_KEY);
-      window.location.reload();
-      return null; // This won't be reached due to reload, but TypeScript needs it
     }
 
     // Select the appropriate state based on case file
