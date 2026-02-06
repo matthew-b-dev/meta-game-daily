@@ -476,7 +476,7 @@ const SteamDetective = () => {
           className={`w-6 h-6 mr-2 ${calendarIconLoaded ? 'opacity-100' : 'opacity-0'}`}
         />
 
-        <span className='text-lg font-semibold font-medium'>{puzzleDate}</span>
+        <span className='text-lg font-semibold'>{puzzleDate}</span>
       </div>
       <hr className='h-[1px] bg-gray-700 border-none mb-4'></hr>
 

@@ -122,6 +122,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Super Smash Bros. for Wii U',
     'SpongeBob SquarePants: The Cosmic Shake',
   ],
+  '2026-02-07': [
+    'Street Fighter V',
+    'Watch Dogs: Legion',
+    "Hellblade: Senua's Sacrifice",
+    'Nioh',
+    'Deus Ex: Mankind Divided',
+  ],
+  /* Dead Rising 4 */
 };
 
 /**
