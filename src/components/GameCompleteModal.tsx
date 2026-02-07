@@ -107,8 +107,11 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 onCopyToShare={onCopyToShare}
                 isLoading={scoresLoading}
               />
-              <div className='w-full text-center mt-0'>
-                Or, for PC Game Trivia ...
+              <div className='w-full text-center mt-0 flex items-center justify-center gap-2'>
+                <span className='inline-flex items-center px-2 py-0.5 rounded bg-yellow-400 text-black text-xs font-bold'>
+                  NEW
+                </span>
+                <span>for PC Game Trivia ...</span>
               </div>
               <button
                 className='w-full px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
@@ -121,8 +124,8 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                   Check out 🕵️
                   <span className='text-yellow-500 pl-1'>
                     steamdetective.wtf
-                  </span>{' '}
-                  !
+                  </span>
+                  <span className='pl-1'>!</span>
                 </span>
               </button>
               <FeedbackButtons
