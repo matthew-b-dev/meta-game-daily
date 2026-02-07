@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Toaster } from 'react-hot-toast';
 import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
-import { getUtcDateString } from './utils';
+//import { getUtcDateString } from './utils';
 import GuessingGame from './GuessingGame';
 import ShuffleGame from './ShuffleGame';
 import HelpModal from './components/HelpModal';
