@@ -1,6 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { getPercentileMessage, getRankEmoji } from '../utils';
+import Chart from 'react-apexcharts';
+import type { ApexOptions } from 'apexcharts';
 
 interface AnimatedScoreDisplayProps {
   score: number;
@@ -50,6 +52,223 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   }
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
+
+  // Stack dots vertically when scores are the same
+  // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
+  const MAX_STACK_HEIGHT = 4;
+
+  // Build dot plot data: separate user's score from others
+  const { otherScoresData, userScoreData, scoreOverflows } = useMemo(() => {
+    const scoreCounts: Record<number, number> = {};
+    const finalCounts: Record<number, number> = {}; // Track total count per score
+    const others: { x: number; y: number }[] = [];
+    let userPlaced = false;
+
+    // Place user's dot at the bottom (y=0)
+    const user = [{ x: totalScore, y: 0 }];
+
+    // Initialize count for user's score since they occupy y=0
+    scoreCounts[totalScore] = 1;
+
+    // Sort scores so we process them in order
+    const sorted = [...todayScores].sort((a, b) => a - b);
+
+    for (const score of sorted) {
+      if (!scoreCounts[score]) scoreCounts[score] = 0;
+      if (!finalCounts[score]) finalCounts[score] = 0;
+
+      finalCounts[score]++; // Track total count
+
+      if (score === totalScore && !userPlaced) {
+        // Skip user's score on first occurrence since it's already placed at y=0
+        userPlaced = true;
+        continue;
+      }
+
+      // Only add dots up to MAX_STACK_HEIGHT
+      if (scoreCounts[score] < MAX_STACK_HEIGHT) {
+        others.push({ x: score, y: scoreCounts[score] });
+        scoreCounts[score]++;
+      }
+    }
+
+    // Identify scores with overflow (more players than visible dots)
+    const overflows: Record<number, number> = {};
+    Object.keys(finalCounts).forEach((scoreStr) => {
+      const s = parseInt(scoreStr);
+      const total = finalCounts[s];
+      if (total > MAX_STACK_HEIGHT) {
+        overflows[s] = total;
+      }
+    });
+
+    return {
+      otherScoresData: others,
+      userScoreData: user,
+      scoreOverflows: overflows,
+    };
+  }, [todayScores, totalScore]);
+
+  // Calculate max Y for axis range (capped at 4)
+  const maxY = useMemo(() => {
+    const all = [...otherScoresData, ...userScoreData];
+    return Math.min(Math.max(...all.map((d) => d.y), 0), 4);
+  }, [otherScoresData, userScoreData]);
+
+  const chartOptions: ApexOptions = useMemo(
+    () => ({
+      chart: {
+        type: 'scatter' as const,
+        background: 'transparent',
+        toolbar: { show: false },
+        zoom: { enabled: false },
+        selection: { enabled: false },
+        animations: {
+          enabled: true,
+          easing: 'easeinout',
+          speed: 600,
+          animateGradually: {
+            enabled: true,
+            delay: 60,
+          },
+          dynamicAnimation: {
+            enabled: true,
+            speed: 400,
+          },
+        },
+        events: {},
+      },
+      colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
+      markers: {
+        size: [7, 11],
+        strokeWidth: [0, 2],
+        strokeColors: ['transparent', '#ffffff'],
+        hover: { size: undefined, sizeOffset: 0 },
+      },
+      states: {
+        hover: { filter: { type: 'none' } },
+        active: { filter: { type: 'none' } },
+      },
+      grid: {
+        show: false,
+        padding: { left: 10, right: 10, top: 18, bottom: -5 },
+      },
+      xaxis: {
+        min: 0,
+        max: 1100,
+        tickAmount: 4,
+        labels: {
+          style: { colors: '#9ca3af', fontSize: '11px' },
+          formatter: (val: string) => `${parseInt(val)}`,
+        },
+        axisBorder: { show: true, color: '#4b5563' },
+        axisTicks: { show: true, color: '#4b5563' },
+        crosshairs: { show: false },
+        tooltip: { enabled: false },
+      },
+      yaxis: {
+        show: false,
+        min: -0.5,
+        max: maxY + 1,
+      },
+      tooltip: {
+        enabled: true,
+        theme: 'dark',
+        x: { show: false },
+        y: {
+          title: {
+            formatter: (seriesName: string) =>
+              seriesName === 'You' ? '⭐ You:' : 'Score:',
+          },
+          formatter: (
+            _val: number,
+            opts: {
+              w: { config: { series: { data: { x: number }[] }[] } };
+              seriesIndex: number;
+              dataPointIndex: number;
+            },
+          ) => {
+            const dataPoint =
+              opts.w.config.series[opts.seriesIndex].data[opts.dataPointIndex];
+            return `${dataPoint.x} pts`;
+          },
+        },
+        marker: { show: true },
+      },
+      legend: { show: false },
+      annotations: {
+        points: [
+          // Overflow count labels
+          ...Object.entries(scoreOverflows).map(([s, totalCount]) => ({
+            x: Number(s),
+            y: MAX_STACK_HEIGHT,
+            marker: {
+              size: 0,
+            },
+            label: {
+              text: `(+${totalCount - MAX_STACK_HEIGHT})`,
+              useHTML: true,
+              borderColor: 'transparent',
+              offsetY: -5,
+              style: {
+                background: 'transparent',
+                color: '#6b7280',
+                fontSize: '13px',
+                fontStyle: 'italic',
+                fontWeight: 400,
+                padding: {
+                  left: 2,
+                  right: 2,
+                  top: 0,
+                  bottom: 0,
+                },
+              },
+            },
+          })),
+          // "You" label for user's point
+          {
+            x: userScoreData[0].x,
+            y: userScoreData[0].y,
+            marker: {
+              size: 0,
+            },
+            label: {
+              text: 'You',
+              borderColor: 'transparent',
+              offsetY: 28,
+              style: {
+                background: 'transparent',
+                color: '#ffffff',
+                fontSize: '12px',
+                fontWeight: 700,
+                padding: {
+                  left: 2,
+                  right: 2,
+                  top: 0,
+                  bottom: 0,
+                },
+              },
+            },
+          },
+        ],
+      },
+    }),
+    [maxY, scoreOverflows, userScoreData],
+  );
+
+  const chartSeries = useMemo(
+    () => [
+      {
+        name: 'Others',
+        data: otherScoresData,
+      },
+      {
+        name: 'You',
+        data: userScoreData,
+      },
+    ],
+    [otherScoresData, userScoreData],
+  );
 
   // Animate score counting and sequence
   useEffect(() => {
@@ -338,7 +557,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
           <AnimatePresence>
             {showRank && userPercentile !== null && (
               <motion.p
-                className='text-center text-sm text-green-400 mb-3'
+                className='text-center text-sm text-green-400'
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{
                   opacity: 1,
@@ -358,98 +577,20 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
             )}
           </AnimatePresence>
 
-          {/* Histogram */}
+          {/* Dot Plot */}
           <AnimatePresence>
             {showHistogram && (
               <motion.div
-                className='flex items-end justify-between h-32 gap-1'
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.4 }}
               >
-                {(() => {
-                  // Create bins for the histogram (0-200, 201-400, 401-600, 601-800, 801-1000, 1001-1100)
-                  const bins = [
-                    { min: 0, max: 200, count: 0, label: '0-200' },
-                    {
-                      min: 201,
-                      max: 400,
-                      count: 0,
-                      label: '201-400',
-                    },
-                    {
-                      min: 401,
-                      max: 600,
-                      count: 0,
-                      label: '401-600',
-                    },
-                    {
-                      min: 601,
-                      max: 800,
-                      count: 0,
-                      label: '601-800',
-                    },
-                    {
-                      min: 801,
-                      max: 1000,
-                      count: 0,
-                      label: '801-1000',
-                    },
-                    {
-                      min: 1001,
-                      max: 1100,
-                      count: 0,
-                      label: '1001+',
-                    },
-                  ];
-
-                  // Count scores in each bin
-                  todayScores.forEach((s) => {
-                    const bin = bins.find((b) => s >= b.min && s <= b.max);
-                    if (bin) bin.count++;
-                  });
-
-                  // Find max count for scaling
-                  const maxCount = Math.max(...bins.map((b) => b.count), 1);
-
-                  // Determine which bin the user's score falls into
-                  const userBin = bins.findIndex(
-                    (b) =>
-                      score + bonusPoints >= b.min &&
-                      score + bonusPoints <= b.max,
-                  );
-
-                  return bins.map((bin, idx) => {
-                    const heightPercent = (bin.count / maxCount) * 100;
-                    const isUserBin = idx === userBin;
-
-                    return (
-                      <div
-                        key={idx}
-                        className='flex-1 flex flex-col items-center'
-                      >
-                        <div
-                          className='w-full flex items-end justify-center'
-                          style={{ height: '96px' }}
-                        >
-                          <div
-                            className={`w-full rounded-t transition-all ${
-                              isUserBin ? 'bg-green-500' : 'bg-blue-500'
-                            }`}
-                            style={{ height: `${heightPercent}%` }}
-                            title={`${bin.count} players`}
-                          />
-                        </div>
-                        <div className='text-[10px] text-gray-400 mt-1 text-center'>
-                          {bin.label}
-                        </div>
-                        <div className='text-xs text-gray-300 font-semibold'>
-                          {bin.count}
-                        </div>
-                      </div>
-                    );
-                  });
-                })()}
+                <Chart
+                  options={chartOptions}
+                  series={chartSeries}
+                  type='scatter'
+                  height={95 + maxY * 18}
+                />
               </motion.div>
             )}
           </AnimatePresence>
