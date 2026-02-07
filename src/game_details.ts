@@ -7204,7 +7204,6 @@ export const gameDetails: Game[] = [
   {
     score: '74',
     name: 'Watch Dogs: Legion',
-    overrideMask: '***** **** : [ ... ]',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Adventure, Action',
     releaseDate: 'Oct 29',
