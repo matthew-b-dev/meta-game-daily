@@ -3594,7 +3594,7 @@ export const gameDetails: Game[] = [
     developers: ['Remedy Entertainment'],
     publishers: ['Microsoft Studios'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gkp2ofzniqqasv12s11d.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zsuej6n5awd2wmq9zzes.jpg',
   },
   {
     score: '81',
@@ -8266,8 +8266,9 @@ export const gameDetails: Game[] = [
     reviewRank: 8,
     developers: ['IO Interactive'],
     publishers: ['IO Interactive'],
+    brightenImage: true,
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bi7.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar793.jpg',
     hltb: {
       main: 8,
       extra: 21.5,
@@ -9687,6 +9688,7 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahze.jpg',
+    brightenImage: true,
     hltb: {
       main: 17.5,
       extra: 29,

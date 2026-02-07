@@ -11,11 +11,11 @@ import ResetPuzzleButton from './components/ResetPuzzleButton';
 const App = () => {
   const [showHelp, setShowHelp] = useState(false);
 
-  const dateString = getUtcDateString();
-  const date = new Date(dateString + 'T00:00:00Z');
-  const dayOfWeek = date.getUTCDay();
+  //const dateString = getUtcDateString();
+  //const date = new Date(dateString + 'T00:00:00Z');
+  //const dayOfWeek = date.getUTCDay();
 
-  const isShuffleGame = dayOfWeek === 0; // Sunday
+  const isShuffleGame = false; // Always use GuessingGame for now
 
   const isTestRoute = !!window.location.pathname.match(
     /\/test\/(\d{4}-\d{2}-\d{2})/,
