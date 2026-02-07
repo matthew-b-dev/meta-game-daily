@@ -123,7 +123,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'SpongeBob SquarePants: The Cosmic Shake',
   ],
   '2026-02-07': [
-    'Street Fighter V',
+    'Riders Republic',
     'Watch Dogs: Legion',
     "Hellblade: Senua's Sacrifice",
     'Nioh',
