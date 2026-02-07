@@ -129,7 +129,16 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Nioh',
     'Deus Ex: Mankind Divided',
   ],
-  /* Dead Rising 4 */
+  '2026-02-08': [
+    'Dead Rising 4',
+    'Hitman 3',
+    'South Park: The Stick of Truth',
+    'Stranger of Paradise: Final Fantasy Origin',
+    'Quantum Break',
+  ],
+  /*
+  Battlefield 1
+  */
 };
 
 /**
