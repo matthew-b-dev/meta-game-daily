@@ -2,7 +2,6 @@ import type { Game } from './types';
 
 export const gameDetails: Game[] = [
   {
-    score: '64',
     name: 'Ryse: Son of Rome',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action',
@@ -18,9 +17,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 20,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Rayman Legends',
     platforms: 'PC, PS3, PS4, X360, XB1',
     genres: 'Platformer',
@@ -36,9 +35,9 @@ export const gameDetails: Game[] = [
       extra: 16,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'Super Mario 3D World',
     overrideMask: '***** ***** ** [ ... ]',
     platforms: 'Wii-U',
@@ -55,16 +54,17 @@ export const gameDetails: Game[] = [
       extra: 18.5,
       completionist: 37.5,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'The Legend of Zelda: A Link Between Worlds',
+    overrideMask: '[ ... ] : * [ ... ]',
     platforms: '3DS',
     genres: 'Adventure',
     releaseDate: 'Nov 22',
     releaseYear: 2013,
-    reviewRank: 5,
-    developers: ['Nintendo EAD'],
+    reviewRank: 34,
+    developers: ['Nintendo'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckiuz.jpg',
@@ -73,9 +73,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 23.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Killzone: Shadow Fall',
     platforms: 'PS4, PS5',
     genres: 'First-Person Shooter',
@@ -91,9 +91,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 92,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Dead Rising 3',
     platforms: 'PS4, XB1, XBXS, PS5, PC',
     genres: 'Horror, Adventure',
@@ -109,9 +109,9 @@ export const gameDetails: Game[] = [
       extra: 22,
       completionist: 44.5,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Max: The Curse of Brotherhood',
     platforms: 'XB1, PC, XBXS, PS4, Switch',
     genres: 'Puzzle, Platformer',
@@ -132,9 +132,9 @@ export const gameDetails: Game[] = [
       extra: 8,
       completionist: 10,
     },
+    score: '100',
   },
   {
-    score: '58',
     name: 'Knack',
     platforms: 'PS4, PS5',
     genres: 'Adventure, Platformer',
@@ -150,9 +150,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 38,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Need for Speed: Rivals',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Racing',
@@ -168,9 +168,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 35,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Call of Duty: Ghosts',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -191,9 +191,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: "Broken Sword 5: The Serpent's Curse",
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -209,9 +209,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 13.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Battlefield 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -222,9 +222,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yq7owbqrj09mgfqg3ac3.jpg',
+    score: '100',
   },
   {
-    score: '60',
     name: 'Contrast',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Puzzle, Platformer',
@@ -240,9 +240,9 @@ export const gameDetails: Game[] = [
       extra: 3.5,
       completionist: 4,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Resogun',
     platforms: 'PS4, PS5',
     genres: 'Arcade',
@@ -258,9 +258,9 @@ export const gameDetails: Game[] = [
       extra: 6,
       completionist: 16.5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'SteamWorld Dig',
     searchTerms: ['Steam World Dig'],
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS, Switch',
@@ -277,9 +277,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 8.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Teslagrad',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -300,9 +300,9 @@ export const gameDetails: Game[] = [
       extra: 5.5,
       completionist: 7,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'LEGO Marvel Super Heroes',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -319,9 +319,9 @@ export const gameDetails: Game[] = [
       extra: 24,
       completionist: 40,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Rogue Legacy',
     platforms: 'PS4, XB1, PC, Vita, Switch, XBXS, PS5',
     genres: 'Roguelike, Platformer',
@@ -337,9 +337,9 @@ export const gameDetails: Game[] = [
       extra: 26.5,
       completionist: 38.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Tearaway',
     platforms: 'Vita',
     genres: 'Puzzle, Platformer',
@@ -355,9 +355,9 @@ export const gameDetails: Game[] = [
       extra: 7.5,
       completionist: 12,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Dungeon of the Endless',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Roguelike, Strategy',
@@ -373,9 +373,9 @@ export const gameDetails: Game[] = [
       extra: 25,
       completionist: 110,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Beyond: Two Souls',
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure',
@@ -391,9 +391,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 28,
     },
+    score: '100',
   },
   {
-    score: '61',
     name: 'Halo: Spartan Assault',
     platforms: 'XB1, PC, XBXS',
     genres: 'Strategy',
@@ -409,9 +409,9 @@ export const gameDetails: Game[] = [
       extra: 5.5,
       completionist: 16.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Warframe',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -427,9 +427,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '58',
     name: 'Mario Party: Island Tour',
     platforms: '3DS',
     genres: 'Racing',
@@ -446,9 +446,9 @@ export const gameDetails: Game[] = [
       extra: 10.5,
       completionist: 33,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Neverwinter',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'MMO, RPG',
@@ -466,9 +466,9 @@ export const gameDetails: Game[] = [
       extra: 104,
       completionist: 314,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'The Swapper',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Puzzle',
@@ -484,9 +484,9 @@ export const gameDetails: Game[] = [
       extra: 5.5,
       completionist: 6,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Peggle 2',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Arcade, Puzzle',
@@ -502,9 +502,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 38,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Zoo Tycoon',
     platforms: 'XB1, XBXS',
     genres: 'Strategy',
@@ -520,9 +520,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Brothers: A Tale of Two Sons',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Puzzle, Adventure, Platformer',
@@ -538,9 +538,9 @@ export const gameDetails: Game[] = [
       extra: 3.5,
       completionist: 4,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Outlast',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, First-Person Shooter',
@@ -556,9 +556,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 11.5,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'FIFA 14',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -574,9 +574,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'NES Remix',
     platforms: 'Wii-U',
     genres: 'Arcade',
@@ -592,9 +592,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 22,
     },
+    score: '100',
   },
   {
-    score: '56',
     name: 'Crimson Dragon',
     platforms: 'XB1, XBXS',
     genres: 'Action',
@@ -610,9 +610,9 @@ export const gameDetails: Game[] = [
       extra: 7.5,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '44',
     name: 'NBA Live 14',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Sports',
@@ -629,9 +629,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '25',
     name: 'Fighter Within',
     platforms: 'XB1, XBXS',
     genres: 'Fighting',
@@ -647,9 +647,9 @@ export const gameDetails: Game[] = [
       extra: 10.5,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Shadow Warrior',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -672,9 +672,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Anomaly 2',
     platforms: 'PS4, PC, PS5',
     genres: 'Real-Time Strategy',
@@ -690,9 +690,9 @@ export const gameDetails: Game[] = [
       extra: 9,
       completionist: 12.5,
     },
+    score: '100',
   },
   {
-    score: '63',
     name: 'Tennis in the Face',
     platforms: 'PS4, PS5, PC, XB1, Switch',
     genres: 'Puzzle',
@@ -708,9 +708,9 @@ export const gameDetails: Game[] = [
       extra: 3.5,
       completionist: 4,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Mercenary Kings',
     platforms: 'PS4, PC, PS5, Switch, XB1',
     genres: 'RPG, Platformer',
@@ -726,9 +726,9 @@ export const gameDetails: Game[] = [
       extra: 35.5,
       completionist: 53,
     },
+    score: '100',
   },
   {
-    score: '67',
     name: 'Doki-Doki Universe',
     platforms: 'PS4, PS5',
     genres: 'Adventure, RPG',
@@ -744,9 +744,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 10,
     },
+    score: '100',
   },
   {
-    score: '66',
     name: 'Tiny Brains',
     platforms: 'PS4, PC, PS5',
     genres: 'Puzzle, Platformer',
@@ -762,9 +762,9 @@ export const gameDetails: Game[] = [
       extra: 2.5,
       completionist: 3.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Super Motherload',
     platforms: 'PS4, PC, PS5',
     genres: 'Adventure',
@@ -780,9 +780,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 16,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'NBA 2K14',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -799,9 +799,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '48',
     name: 'Deadfall Adventures',
     platforms: 'PC',
     genres: 'Action, Adventure, First-Person Shooter',
@@ -817,9 +817,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Starbound',
     platforms: 'PC, XB1',
     genres: 'Creation, Adventure',
@@ -835,9 +835,9 @@ export const gameDetails: Game[] = [
       extra: 58.5,
       completionist: 165,
     },
+    score: '100',
   },
   {
-    score: '70',
     name: 'World of Warplanes',
     platforms: 'PC',
     genres: 'MMO, Vehicle Combat',
@@ -853,9 +853,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Powerstar Golf',
     platforms: 'XB1, XBXS',
     genres: 'Sports',
@@ -871,9 +871,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: 56,
     },
+    score: '100',
   },
   {
-    score: '53',
     name: 'Paranautical Activity',
     platforms: 'XB1, XBXS, PC, Switch, PS4',
     genres: 'Action, First-Person Shooter',
@@ -889,9 +889,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 19,
     },
+    score: '100',
   },
   {
-    score: '91',
     name: 'Dota 2',
     platforms: 'PC',
     genres: 'Action, Real-Time Strategy',
@@ -908,9 +908,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Gone Home',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Interactive Story, Adventure',
@@ -926,9 +926,9 @@ export const gameDetails: Game[] = [
       extra: 2.5,
       completionist: 3,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Risk of Rain',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Roguelike, Action, Platformer',
@@ -944,9 +944,9 @@ export const gameDetails: Game[] = [
       extra: 21.5,
       completionist: 50.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Bridge',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Puzzle',
@@ -965,9 +965,9 @@ export const gameDetails: Game[] = [
       extra: 6,
       completionist: 7.5,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Hammerwatch',
     platforms: 'XB1, Switch, PC, PS4, XBXS, PS5',
     genres: 'Action, RPG',
@@ -983,9 +983,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '62',
     name: 'Croixleur Sigma',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'Action',
@@ -1001,9 +1001,9 @@ export const gameDetails: Game[] = [
       extra: 4.5,
       completionist: 17,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Renowned Explorers: International Society',
     platforms: 'PC',
     genres: 'Adventure, RPG, Strategy',
@@ -1019,9 +1019,9 @@ export const gameDetails: Game[] = [
       extra: 25,
       completionist: 93,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Tiny Barbarian DX',
     platforms: 'Switch, PC',
     genres: 'Platformer',
@@ -1037,9 +1037,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 11.5,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Anodyne',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -1055,9 +1055,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 9.5,
     },
+    score: '100',
   },
   {
-    score: '31',
     name: 'X Rebirth',
     platforms: 'PC',
     genres: 'Simulation, Vehicle Combat',
@@ -1073,9 +1073,9 @@ export const gameDetails: Game[] = [
       extra: 157,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Ittle Dew',
     platforms: 'Wii-U, PC, Switch',
     genres: 'Puzzle, Adventure, RPG',
@@ -1091,9 +1091,9 @@ export const gameDetails: Game[] = [
       extra: 5,
       completionist: 8,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Reus',
     platforms: 'PS4, XB1, XBXS, PS5, PC',
     genres: 'Simulation, Strategy',
@@ -1109,9 +1109,9 @@ export const gameDetails: Game[] = [
       extra: 21,
       completionist: 68,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Captain Toad: Treasure Tracker',
     platforms: 'Wii-U, 3DS, Switch',
     genres: 'Platformer',
@@ -1127,9 +1127,9 @@ export const gameDetails: Game[] = [
       extra: 11.5,
       completionist: 19.5,
     },
+    score: '100',
   },
   {
-    score: '92',
     name: 'Grand Theft Auto V',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
@@ -1145,9 +1145,9 @@ export const gameDetails: Game[] = [
       extra: 51.5,
       completionist: 88.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Donkey Kong Country: Tropical Freeze',
     platforms: 'Wii-U, Switch',
     genres: 'Platformer',
@@ -1163,9 +1163,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Alien: Isolation',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror',
@@ -1182,9 +1182,9 @@ export const gameDetails: Game[] = [
       extra: 22.5,
       completionist: 34,
     },
+    score: '100',
   },
   {
-    score: '91',
     name: 'Bayonetta 2',
     platforms: 'Wii-U, Switch',
     genres: 'Action',
@@ -1200,9 +1200,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 47,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Dragon Age: Inquisition',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG',
@@ -1218,9 +1218,9 @@ export const gameDetails: Game[] = [
       extra: 87.5,
       completionist: 129,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Watch Dogs',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
@@ -1236,9 +1236,9 @@ export const gameDetails: Game[] = [
       extra: 33,
       completionist: 62.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Middle-earth: Shadow of Mordor',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -1255,9 +1255,9 @@ export const gameDetails: Game[] = [
       extra: 24,
       completionist: 33,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Wolfenstein: The New Order',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1273,9 +1273,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 24.5,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Shovel Knight',
     platforms: 'PS4, XB1, Wii-U, PC, 3DS, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -1291,9 +1291,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 18,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Destiny',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -1304,9 +1304,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/juj7w8dsnbwdpyq0ntm4.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Call of Duty: Advanced Warfare',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -1322,9 +1322,9 @@ export const gameDetails: Game[] = [
       extra: 10.5,
       completionist: 17.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'The Banner Saga',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -1340,9 +1340,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 30.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Far Cry 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1358,9 +1358,9 @@ export const gameDetails: Game[] = [
       extra: 31,
       completionist: 47,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Evil Within',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Horror',
@@ -1376,9 +1376,9 @@ export const gameDetails: Game[] = [
       extra: 20,
       completionist: 40.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: "Assassin's Creed Unity",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -1394,9 +1394,9 @@ export const gameDetails: Game[] = [
       extra: 35,
       completionist: 80,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Transistor',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'RPG, Strategy',
@@ -1412,9 +1412,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 16,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Sunset Overdrive',
     platforms: 'XB1, XBXS, PC',
     genres: 'Action',
@@ -1430,9 +1430,9 @@ export const gameDetails: Game[] = [
       extra: 17.5,
       completionist: 34.5,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Child of Light',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -1448,9 +1448,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 15.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Titanfall',
     platforms: 'XB1, PC, XBXS',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -1466,9 +1466,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Halo: The Master Chief Collection',
     platforms: 'XB1, XBXS, PC',
     genres: 'First-Person Shooter',
@@ -1484,9 +1484,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Puyo Puyo Tetris',
     platforms: 'Switch, PS4, PS5, PC, 3DS, XB1',
     genres: 'Puzzle',
@@ -1498,9 +1498,9 @@ export const gameDetails: Game[] = [
     franchise: 'Tetris',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oirfctekwgmimkje2hn8.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Lords of the Fallen',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -1516,9 +1516,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Mario Kart 8',
     platforms: 'Wii-U',
     genres: 'Racing',
@@ -1530,9 +1530,9 @@ export const gameDetails: Game[] = [
     franchise: 'Mario Bros.',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zbxjppkunzzuvrikzmdj.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'The Sims 4',
     platforms: 'PC, PS4, XB1',
     genres: 'Simulation',
@@ -1548,9 +1548,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '92',
     name: 'Super Smash Bros. for Wii U',
     platforms: 'Wii-U',
     genres: 'Fighting',
@@ -1561,9 +1561,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qjnwbw7duxqvdm765cic.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Valiant Hearts: The Great War',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Interactive Story, Platformer',
@@ -1579,9 +1579,9 @@ export const gameDetails: Game[] = [
       extra: 7.5,
       completionist: 9,
     },
+    score: '100',
   },
   {
-    score: '60',
     name: 'Murdered: Soul Suspect',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Horror, Adventure',
@@ -1597,9 +1597,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 11.5,
     },
+    score: '100',
   },
   {
-    score: '64',
     name: 'Thief',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1615,9 +1615,9 @@ export const gameDetails: Game[] = [
       extra: 22,
       completionist: 44.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'South Park: The Stick of Truth',
     overrideMask: '[ ... ] **** : *** [ ... ]',
     platforms: 'PC, XB1, PS4, Switch',
@@ -1635,9 +1635,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 21,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Hyrule Warriors',
     platforms: 'Wii-U, Switch',
     genres: 'Action',
@@ -1653,9 +1653,9 @@ export const gameDetails: Game[] = [
       extra: 38.5,
       completionist: 222,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Octodad: Dadliest Catch',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -1671,9 +1671,9 @@ export const gameDetails: Game[] = [
       extra: 4,
       completionist: 7.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: "Sid Meier's Civilization: Beyond Earth",
     platforms: 'PC',
     genres: 'Strategy, Turn-Based Strategy',
@@ -1689,9 +1689,9 @@ export const gameDetails: Game[] = [
       extra: 49,
       completionist: 78.5,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'FIFA 15',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -1707,9 +1707,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Metro Redux',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'First-Person Shooter',
@@ -1725,9 +1725,9 @@ export const gameDetails: Game[] = [
       extra: 25,
       completionist: 52,
     },
+    score: '100',
   },
   {
-    score: '62',
     name: 'The Crew',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -1743,9 +1743,9 @@ export const gameDetails: Game[] = [
       extra: 42.5,
       completionist: 118,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Strider',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -1761,9 +1761,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'LEGO Batman 3: Beyond Gotham',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS',
     genres: 'Adventure',
@@ -1779,9 +1779,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 36.5,
     },
+    score: '100',
   },
   {
-    score: '70',
     name: 'Sniper Elite III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Third-Person Shooter',
@@ -1797,9 +1797,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 31,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Super Smash Bros. for Nintendo 3DS',
     platforms: '3DS',
     genres: 'Fighting',
@@ -1815,9 +1815,9 @@ export const gameDetails: Game[] = [
       extra: 38,
       completionist: 109,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Lara Croft and the Temple of Osiris',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -1834,9 +1834,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 13.5,
     },
+    score: '100',
   },
   {
-    score: '60',
     name: 'WWE 2K15',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -1852,9 +1852,9 @@ export const gameDetails: Game[] = [
       extra: 39.5,
       completionist: 91,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'The Talos Principle',
     platforms: 'PS4, PC, PS5, XB1, Switch',
     genres: 'Puzzle',
@@ -1870,9 +1870,9 @@ export const gameDetails: Game[] = [
       extra: 21,
       completionist: 29.5,
     },
+    score: '100',
   },
   {
-    score: '53',
     name: 'The Amazing Spider-Man 2',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS',
     genres: 'Action, Adventure',
@@ -1888,9 +1888,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '50',
     name: 'Daylight',
     platforms: 'PS4, PC, PS5',
     genres: 'Horror, First-Person Shooter',
@@ -1906,9 +1906,9 @@ export const gameDetails: Game[] = [
       extra: 4,
       completionist: 6.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Velocity 2X',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -1924,9 +1924,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 26,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'The Elder Scrolls Online',
     platforms: 'PC, XB1, XBXS, PS4, PS5',
     genres: 'MMO, RPG',
@@ -1942,9 +1942,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Borderlands: The Pre-Sequel',
     platforms: 'XB1, PC, XBXS, PS4, Switch',
     genres: 'First-Person Shooter',
@@ -1960,9 +1960,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: "Shantae and the Pirate's Curse",
     platforms: 'XB1, Wii-U, PC, 3DS, XBXS, PS4, PS5, Switch',
     genres: 'Action, Adventure',
@@ -1978,9 +1978,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 10.5,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Tropico 5',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Simulation, Strategy',
@@ -1996,9 +1996,9 @@ export const gameDetails: Game[] = [
       extra: 40.5,
       completionist: 93.5,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'EA Sports UFC',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Sports',
@@ -2015,9 +2015,9 @@ export const gameDetails: Game[] = [
       extra: 17.5,
       completionist: 27.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Dark Souls II',
     platforms: 'PC, PS4, XB1',
     genres: 'Action, RPG',
@@ -2033,9 +2033,9 @@ export const gameDetails: Game[] = [
       extra: 62.5,
       completionist: 120,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Geometry Wars 3: Dimensions',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Arcade',
@@ -2051,9 +2051,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Mario Golf: World Tour',
     platforms: '3DS',
     genres: 'Sports',
@@ -2069,9 +2069,9 @@ export const gameDetails: Game[] = [
       extra: 24.5,
       completionist: 74.5,
     },
+    score: '100',
   },
   {
-    score: '66',
     name: "Yoshi's New Island",
     platforms: '3DS',
     genres: 'Platformer',
@@ -2087,9 +2087,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 28,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Divinity: Original Sin',
     platforms: 'PC, PS4, XB1',
     genres: 'Adventure, RPG',
@@ -2105,9 +2105,9 @@ export const gameDetails: Game[] = [
       extra: 85.5,
       completionist: 108,
     },
+    score: '100',
   },
   {
-    score: '60',
     name: 'Goat Simulator',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -2123,9 +2123,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 11.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Pro Evolution Soccer 2015',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -2141,9 +2141,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Hohokum',
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure',
@@ -2159,9 +2159,9 @@ export const gameDetails: Game[] = [
       extra: 5.5,
       completionist: 7,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Freedom Planet',
     platforms: 'Wii-U, PC, Switch, PS4',
     genres: 'Action, Platformer',
@@ -2177,9 +2177,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 22,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Kirby Triple Deluxe',
     platforms: '3DS',
     genres: 'Platformer',
@@ -2195,9 +2195,9 @@ export const gameDetails: Game[] = [
       extra: 11.5,
       completionist: 25,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Fantasia: Music Evolved',
     platforms: 'XB1, XBXS',
     genres: 'Music',
@@ -2213,9 +2213,9 @@ export const gameDetails: Game[] = [
       extra: 10,
       completionist: 25,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'NBA 2K15',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -2231,9 +2231,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Road Redemption',
     platforms: 'PC, PS4, XB1, Switch, XBXS',
     genres: 'Action, Racing',
@@ -2254,9 +2254,9 @@ export const gameDetails: Game[] = [
       extra: 10.5,
       completionist: 38,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Luftrausers',
     platforms: 'PC',
     genres: 'Arcade',
@@ -2272,9 +2272,9 @@ export const gameDetails: Game[] = [
       extra: 6,
       completionist: 14.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Hatoful Boyfriend',
     platforms: 'PS4, PC, PS5',
     genres: 'Simulation',
@@ -2290,9 +2290,9 @@ export const gameDetails: Game[] = [
       extra: 4.5,
       completionist: 9.5,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'The Witcher 3: Wild Hunt',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure, RPG',
@@ -2313,9 +2313,9 @@ export const gameDetails: Game[] = [
       extra: 103,
       completionist: 174,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Fallout 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG, Third-Person Shooter',
@@ -2331,9 +2331,9 @@ export const gameDetails: Game[] = [
       extra: 83,
       completionist: 160,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Halo 5: Guardians',
     platforms: 'XB1, XBXS',
     genres: 'First-Person Shooter',
@@ -2349,9 +2349,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 25.5,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'Metal Gear Solid V: The Phantom Pain',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG, Third-Person Shooter',
@@ -2367,9 +2367,9 @@ export const gameDetails: Game[] = [
       extra: 81.5,
       completionist: 164,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Batman: Arkham Knight',
     overrideMask: 'Batman: [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -2387,9 +2387,9 @@ export const gameDetails: Game[] = [
       extra: 31.5,
       completionist: 51,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Dying Light',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Action, First-Person Shooter',
@@ -2405,9 +2405,9 @@ export const gameDetails: Game[] = [
       extra: 36.5,
       completionist: 64,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Star Wars Battlefront',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -2424,9 +2424,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '91',
     name: 'Bloodborne',
     platforms: 'PS4, PS5',
     genres: 'Action',
@@ -2442,9 +2442,9 @@ export const gameDetails: Game[] = [
       extra: 43.5,
       completionist: 75.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Rocket League',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Sports, Driving, Action',
@@ -2460,9 +2460,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Just Cause 3',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, Third-Person Shooter',
@@ -2478,9 +2478,9 @@ export const gameDetails: Game[] = [
       extra: 38,
       completionist: 63.5,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Rise of the Tomb Raider',
     platforms: 'PS4, XB1, XBXS, PS5, PC, Stadia',
     genres: 'Third-Person Shooter, Action, Adventure',
@@ -2497,9 +2497,9 @@ export const gameDetails: Game[] = [
       extra: 22,
       completionist: 35.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: "Assassin's Creed Syndicate",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -2515,9 +2515,9 @@ export const gameDetails: Game[] = [
       extra: 34,
       completionist: 56,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'Mad Max',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -2534,9 +2534,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Call of Duty: Black Ops III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2552,9 +2552,9 @@ export const gameDetails: Game[] = [
       extra: 15,
       completionist: 84,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Ori and the Blind Forest',
     platforms: 'XB1, PC, XBXS, Switch',
     genres: 'Adventure, Platformer',
@@ -2570,9 +2570,9 @@ export const gameDetails: Game[] = [
       extra: 10.5,
       completionist: 12,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Evolve',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2588,9 +2588,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 61.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Mortal Kombat X',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Fighting',
@@ -2606,9 +2606,9 @@ export const gameDetails: Game[] = [
       extra: 16.5,
       completionist: 68.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Until Dawn',
     platforms: 'PS4, PS5',
     genres: 'Horror, Survival',
@@ -2624,9 +2624,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 19,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Cities: Skylines',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation',
@@ -2642,9 +2642,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'The Flame in the Flood',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -2660,9 +2660,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 50,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Axiom Verge',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, Switch, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -2678,9 +2678,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 17,
     },
+    score: '100',
   },
   {
-    score: '62',
     name: 'The Order: 1886',
     platforms: 'PS4, PS5',
     genres: 'Interactive Story, Third-Person Shooter',
@@ -2696,9 +2696,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 10.5,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Super Mario Maker',
     platforms: 'Wii-U, 3DS',
     genres: 'Creation, Platformer',
@@ -2714,9 +2714,9 @@ export const gameDetails: Game[] = [
       extra: 36.5,
       completionist: 147,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Oxenfree',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -2732,9 +2732,9 @@ export const gameDetails: Game[] = [
       extra: 5.5,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Battlefield Hardline',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2750,9 +2750,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 26.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Transformers: Devastation',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -2768,9 +2768,9 @@ export const gameDetails: Game[] = [
       extra: 8.5,
       completionist: 21.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Splatoon',
     platforms: 'Wii-U',
     genres: 'Third-Person Shooter',
@@ -2786,9 +2786,9 @@ export const gameDetails: Game[] = [
       extra: 11.5,
       completionist: 19,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Mega Man Legacy Collection',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Arcade, Platformer',
@@ -2804,9 +2804,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Guitar Hero Live',
     platforms: 'PS4, XB1, Wii-U, XBXS, PS5',
     genres: 'Music',
@@ -2822,9 +2822,9 @@ export const gameDetails: Game[] = [
       extra: 17.5,
       completionist: 70,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'LEGO Jurassic World',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -2844,9 +2844,9 @@ export const gameDetails: Game[] = [
       extra: 17.5,
       completionist: 30,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'Undertale',
     platforms: 'PS4, PC, Vita, Switch, PS5, XB1',
     genres: 'RPG',
@@ -2862,27 +2862,27 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 20.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Xenoblade Chronicles X',
     platforms: 'Wii-U',
     genres: 'Action, RPG',
     releaseDate: 'Dec 4',
     releaseYear: 2015,
-    reviewRank: 39,
+    reviewRank: 33,
     developers: ['Monolith Soft'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ovtriiuinhxtmjsblhfl.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yrgjsakfsiype6xqhjec.jpg',
     hltb: {
       main: 68,
       extra: 107,
       completionist: 254,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Dissidia Final Fantasy NT',
     platforms: 'PS4, PS5, PC',
     genres: 'Fighting',
@@ -2902,9 +2902,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Rare Replay',
     platforms: 'XB1, XBXS',
     genres: 'Arcade, Adventure, Platformer',
@@ -2920,9 +2920,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Project CARS',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Racing',
@@ -2938,9 +2938,9 @@ export const gameDetails: Game[] = [
       extra: 66,
       completionist: 142,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: "Yoshi's Woolly World",
     platforms: 'Wii-U',
     genres: 'Platformer',
@@ -2956,9 +2956,9 @@ export const gameDetails: Game[] = [
       extra: 17.5,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Elite: Dangerous',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Vehicle Combat',
@@ -2974,9 +2974,9 @@ export const gameDetails: Game[] = [
       extra: 250,
       completionist: 677,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Hotline Miami 2: Wrong Number',
     platforms: 'PS4, PC, PS5, Switch, XB1, XBXS',
     genres: 'Action',
@@ -2992,9 +2992,9 @@ export const gameDetails: Game[] = [
       extra: 13,
       completionist: 33.5,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Not a Hero',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -3010,9 +3010,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 10,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'LEGO Dimensions',
     platforms: 'PS4, XB1, Wii-U, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -3028,9 +3028,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Prison Architect',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Strategy',
@@ -3046,9 +3046,9 @@ export const gameDetails: Game[] = [
       extra: 43.5,
       completionist: 67,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Rock Band 4',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Music',
@@ -3064,9 +3064,9 @@ export const gameDetails: Game[] = [
       extra: 74,
       completionist: 271,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'FIFA 16',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -3082,9 +3082,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'N++',
     platforms: 'PS4, PC, PS5, XB1, Switch, XBXS',
     genres: 'Platformer',
@@ -3100,9 +3100,9 @@ export const gameDetails: Game[] = [
       extra: 54,
       completionist: 415,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Persona 4: Dancing All Night',
     platforms: 'Vita, PS4',
     genres: 'Music, RPG',
@@ -3118,9 +3118,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 20,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Armello',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Turn-Based Strategy',
@@ -3136,9 +3136,9 @@ export const gameDetails: Game[] = [
       extra: 21,
       completionist: 99,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Kirby and the Rainbow Curse',
     platforms: 'Wii-U',
     genres: 'Platformer',
@@ -3154,9 +3154,9 @@ export const gameDetails: Game[] = [
       extra: 8,
       completionist: 16.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Escapists',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation',
@@ -3172,9 +3172,9 @@ export const gameDetails: Game[] = [
       extra: 43.5,
       completionist: 46,
     },
+    score: '100',
   },
   {
-    score: '65',
     name: 'Mario Party 10',
     platforms: 'Wii-U',
     genres: 'Platformer, Sports',
@@ -3190,9 +3190,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 33.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'The Legend of Heroes: Trails of Cold Steel',
     platforms: 'Vita, PC, PS4, PS5, Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -3208,9 +3208,9 @@ export const gameDetails: Game[] = [
       extra: 78.5,
       completionist: 108,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Uncharted: The Nathan Drake Collection',
     platforms: 'PS4, PS5',
     genres: 'Action, Adventure',
@@ -3226,9 +3226,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Madden NFL 16',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Sports',
@@ -3244,9 +3244,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Resident Evil: Revelations 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch, Vita',
     genres: 'Horror, Action',
@@ -3262,9 +3262,9 @@ export const gameDetails: Game[] = [
       extra: 16,
       completionist: 34,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Code Name S.T.E.A.M.',
     platforms: '3DS',
     genres: 'Action',
@@ -3280,9 +3280,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Titan Souls',
     platforms: 'PS4, PC, PS5',
     genres: 'Action',
@@ -3298,9 +3298,9 @@ export const gameDetails: Game[] = [
       extra: 4,
       completionist: 7.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Tales of Zestiria',
     platforms: 'PS4, PC, PS5',
     genres: 'RPG',
@@ -3316,9 +3316,9 @@ export const gameDetails: Game[] = [
       extra: 57.5,
       completionist: 136,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'White Day: A Labyrinth Named School',
     platforms: 'PS4, PC, PS5, Switch, XBXS',
     genres: 'Interactive Story, Horror',
@@ -3334,9 +3334,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 23,
     },
+    score: '100',
   },
   {
-    score: '54',
     name: 'Submerged',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Adventure',
@@ -3347,9 +3347,9 @@ export const gameDetails: Game[] = [
     publishers: ['Uppercut Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cemqjwymuexjultpa6i1.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'White Night',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Adventure',
@@ -3360,9 +3360,9 @@ export const gameDetails: Game[] = [
     publishers: ['Plug In Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q2ne1v4prmhmwdagjdeq.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Lovers in a Dangerous Spacetime',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -3373,9 +3373,9 @@ export const gameDetails: Game[] = [
     publishers: ['Asteroid Base'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vgquw6n2zgvgkg8bviky.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Runbow',
     platforms: 'Wii-U, PC, PS4, Switch, XB1',
     genres: 'Action, Sports',
@@ -3386,9 +3386,9 @@ export const gameDetails: Game[] = [
     publishers: ['CrossFunction', 'Headup Games', '13AM Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xkfspwnuhkphuel8xhfo.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Legend of Zelda: Tri Force Heroes',
     platforms: '3DS',
     genres: 'Adventure, RPG',
@@ -3399,9 +3399,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ied0m4xwwceyruuha1qa.jpg',
+    score: '100',
   },
   {
-    score: '56',
     name: 'Armikrog',
     platforms: 'PS4, Wii-U, PC, PS5, XB1',
     genres: 'Adventure',
@@ -3412,9 +3412,9 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6e7n.jpg',
+    score: '100',
   },
   {
-    score: '91',
     name: 'Inside',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Puzzle, Adventure, Platformer',
@@ -3425,9 +3425,9 @@ export const gameDetails: Game[] = [
     publishers: ['Playdead'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/guhljbryvlqg2kn25z7r.jpg',
+    score: '100',
   },
   {
-    score: '91',
     name: 'Forza Horizon 3',
     platforms: 'XB1, PC, XBXS',
     genres: 'Racing, Simulation',
@@ -3438,9 +3438,9 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://cdn.mobygames.com/9ceabcf4-abef-11ed-bc39-02420a000131.webp',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Dark Souls III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -3451,9 +3451,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wlefrkqqtxge3lo81cis.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Gears of War 4',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action, Third-Person Shooter',
@@ -3464,9 +3464,9 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/beaxxtxy7d3zc7oowvdb.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Final Fantasy XV',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'RPG',
@@ -3478,9 +3478,9 @@ export const gameDetails: Game[] = [
     franchise: 'Final Fantasy',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fovl9fyq79camin87ljy.jpg',
+    score: '100',
   },
   {
-    score: '93',
     name: "Uncharted 4: A Thief's End",
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure',
@@ -3491,9 +3491,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fn1wbuvikoacxt4zvfxl.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: "No Man's Sky",
     platforms: 'PS4, PC, PS5, XBXS, XB1, Switch',
     genres: 'Survival, Adventure',
@@ -3504,9 +3504,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games', 'Sony', 'Hello Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o0pqdynpsv7vvziaxwzr.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Dishonored 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -3517,9 +3517,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zuia09etftbctjuxlkm2.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Titanfall 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter, Vehicle Combat',
@@ -3530,9 +3530,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctf94.jpg',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Overwatch',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'First-Person Shooter',
@@ -3543,9 +3543,9 @@ export const gameDetails: Game[] = [
     publishers: ['Blizzard Entertainment', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bpcshm1ryzyf4nwu0rkt.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Watch Dogs 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -3556,9 +3556,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mfuq53zm8lhzlshmqrux.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Deus Ex: Mankind Divided',
     overrideMask: '**** ** : [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -3570,9 +3570,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix', 'Feral Interactive', 'Eidos Montréal'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e8unuxdrdcsnp13cadnw.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Firewatch',
     platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -3583,9 +3583,9 @@ export const gameDetails: Game[] = [
     publishers: ['Panic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zmzwkye0dfbfzl4h6cz8.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Quantum Break',
     platforms: 'XB1, PC, XBXS',
     genres: 'Interactive Story, Third-Person Shooter',
@@ -3596,9 +3596,9 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zsuej6n5awd2wmq9zzes.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'The Last Guardian',
     platforms: 'PS4, PS5',
     genres: 'Adventure',
@@ -3609,9 +3609,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bho8tfo2pdgujp4ttqt7.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'XCOM 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Strategy, Turn-Based Strategy',
@@ -3622,9 +3622,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', 'Feral Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc828t.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Battlefield 1',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter, Vehicle Combat',
@@ -3635,9 +3635,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctjar.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Dragon Quest Builders',
     platforms: 'PS4, PS5, PC, Switch',
     genres: 'Creation',
@@ -3648,9 +3648,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ue5dcjhoxacthfmsacx3.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Abzu',
     platforms: 'PS4, PC, PS5, Switch, XB1',
     genres: 'Adventure',
@@ -3661,9 +3661,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rdsm1mvbg5tgcpnb6ptz.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: "Tom Clancy's The Division",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -3674,9 +3674,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gfmovsoiunzkkgqlnd5e.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'I Am Setsuna',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'RPG',
@@ -3687,9 +3687,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ur3wfk27pn22xkztfsv3.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Call of Duty: Infinite Warfare',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -3700,9 +3700,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj8z.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Dead Rising 4',
     overrideMask: '[ ... ] 4',
     platforms: 'XB1, PC, XBXS, PS4',
@@ -3714,9 +3714,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom', 'Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/odkit1wmw7odlmmvxost.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'ReCore',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action, Adventure',
@@ -3727,22 +3727,22 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f1n98cbwbdm1gypoxytc.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: "Mirror's Edge Catalyst",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG, Platformer',
     releaseDate: 'Jun 7',
     releaseYear: 2016,
     reviewRank: 30,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar88v.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Street Fighter V',
     searchTerms: ['street fighter 5'],
     platforms: 'PS4, PC, PS5',
@@ -3754,9 +3754,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/db2f9pip52fntzwagkqh.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Owlboy',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -3767,9 +3767,9 @@ export const gameDetails: Game[] = [
     publishers: ['SOEDESCO Publishing', 'D-Pad Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/asxhydaq5ibhrctahlj1.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'The Witness',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Art, Puzzle',
@@ -3780,9 +3780,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thekla, Inc'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dny8nmqgpvm7ao2muywg.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: "Sid Meier's Civilization VI",
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Strategy, Turn-Based Strategy',
@@ -3793,9 +3793,9 @@ export const gameDetails: Game[] = [
     publishers: ['Aspyr Media', '2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s0agy6hyvqmugylrdnga.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Battleborn',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -3806,9 +3806,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cl4judh7hjwvlf8ftn4r.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'World of Final Fantasy',
     platforms: 'PS4, Vita, PC, PS5, XB1, Switch',
     genres: 'RPG',
@@ -3819,9 +3819,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqlmfowjfwqg5epuziku.jpg',
+    score: '100',
   },
   {
-    score: '52',
     name: 'Mighty No. 9',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Arcade, Action',
@@ -3832,9 +3832,9 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kn3okfe269xccnjuigwy.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Unravel',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -3845,9 +3845,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/foewb9rd9bjghjnrve8o.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Ratchet & Clank',
     platforms: 'PS4, PS5',
     genres: 'Platformer, Third-Person Shooter',
@@ -3858,9 +3858,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Interactive Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ns9ubkujno3x3enquv5i.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'FIFA 17',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -3871,9 +3871,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/w09ezru3plfqfqjjlyty.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Furi',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -3884,9 +3884,9 @@ export const gameDetails: Game[] = [
     publishers: ['The Game Bakers'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nrgxlrpxyazlwfy5c6rc.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Star Fox Zero',
     platforms: 'Wii-U',
     genres: 'Action, Vehicle Combat',
@@ -3897,9 +3897,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nqabk01yiy3o1occltgg.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'The Banner Saga 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure, RPG, Strategy',
@@ -3910,9 +3910,9 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zmb5rrtfybdukzn3j5hn.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'LEGO Star Wars: The Force Awakens',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, XBXS, PS5',
     genres: 'Adventure',
@@ -3923,9 +3923,9 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mf01bi8h5z03m6po6bxx.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Steep',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -3936,9 +3936,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/grniirmcig2qagrvkaz7.jpg',
+    score: '100',
   },
   {
-    score: '48',
     name: 'Homefront: The Revolution',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -3949,9 +3949,9 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tfxs5zy1r1dji7nidugg.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Worms W.M.D',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, Strategy',
@@ -3962,9 +3962,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvhywecaeflkrices2as.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Attack on Titan',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -3975,9 +3975,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cauitoufneauwopopevn.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Darkest Dungeon',
     platforms: 'PS4, PC, Switch, Vita, XB1, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -3988,9 +3988,9 @@ export const gameDetails: Game[] = [
     publishers: ['Red Hook Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rkz6ff4o3qhkumcaqhhi.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Shadow Warrior 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -4001,9 +4001,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p7etsfjupvo5qej0p01x.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Layers of Fear',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror',
@@ -4014,9 +4014,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hsrlvpz18khu3lwgolzu.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Enter the Gungeon',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Action, Adventure',
@@ -4027,9 +4027,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/saye37b3anr8pulxcqrv.jpg',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Stardew Valley',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Simulation, RPG',
@@ -4040,9 +4040,9 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games', 'ConcernedApe', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rhxs1x9w5hf5kde2osf5.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Severed',
     platforms: 'Wii-U, 3DS, Vita, Switch',
     genres: 'Action, RPG',
@@ -4053,9 +4053,9 @@ export const gameDetails: Game[] = [
     publishers: ['Drinkbox Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lzlgm6mxn8bbl7ycz01c.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: "LEGO Marvel's Avengers",
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -4066,9 +4066,9 @@ export const gameDetails: Game[] = [
     publishers: ['Feral Interactive', 'WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/j1zdahbsi6yevcwl6cfj.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Salt and Sanctuary',
     platforms: 'PS4, XB1, PC, Vita, XBXS, PS5, Switch',
     genres: 'RPG, Platformer',
@@ -4079,9 +4079,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ska Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvrslqqsaao7kjcxwllw.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Plants vs. Zombies: Garden Warfare 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Survival, Third-Person Shooter',
@@ -4092,9 +4092,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mqqipkssoni7hauf5j3h.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Shantae: Half-Genie Hero',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, Switch, XBXS, PS5',
     genres: 'Platformer',
@@ -4105,9 +4105,9 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'WayForward'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d1qhfau8xzxfbhgpfiu4.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Paper Mario: Color Splash',
     platforms: 'Wii-U',
     genres: 'RPG',
@@ -4118,9 +4118,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jf4ft6ygdxmsn1hmrcsr.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Headlander',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Action, Platformer',
@@ -4131,9 +4131,9 @@ export const gameDetails: Game[] = [
     publishers: ['Adult Swim Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uxjarz4sc0j8ic1e559k.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Virginia',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Interactive Story',
@@ -4144,9 +4144,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hzczipoxuhpa5wtxjz8k.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'The King of Fighters XIV',
     platforms: 'PS4, PS5',
     genres: 'Fighting',
@@ -4157,9 +4157,9 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus USA', 'Deep Silver', 'SNK'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pel4ikyud0re1eibiovk.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Fire Emblem Fates: Conquest',
     platforms: '3DS',
     genres: 'Adventure, RPG, Turn-Based Strategy',
@@ -4170,9 +4170,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9dxy.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Fire Emblem Fates: Birthright',
     platforms: '3DS',
     genres: 'Adventure, RPG, Turn-Based Strategy',
@@ -4183,9 +4183,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jqrkb4fzjkam5szl6uc6.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Hue',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, XBXS, PS5, Switch',
     genres: 'Puzzle, Platformer',
@@ -4196,9 +4196,9 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qwm2k7umdtger27q9lcz.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'The Legend of Heroes: Trails of Cold Steel II',
     platforms: 'Vita, PC, PS4, Switch',
     genres: 'RPG',
@@ -4214,9 +4214,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eluraotjt5a3ugsixi91.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Killing Floor 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4227,9 +4227,9 @@ export const gameDetails: Game[] = [
     publishers: ['Iceberg Interactive', 'Deep Silver', 'Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/t4atoujtw0rfjjblfzwy.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'The Final Station',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Survival, Adventure',
@@ -4240,9 +4240,9 @@ export const gameDetails: Game[] = [
     publishers: ['tinyBuild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/v2ekrceqhakqlh2kc8e3.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Phoenix Wright: Ace Attorney - Spirit of Justice',
     platforms: '3DS, Switch, PS4',
     genres: 'Interactive Story, Adventure',
@@ -4253,9 +4253,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dsacyzefiopqzymxjplt.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Human: Fall Flat',
     platforms: 'PC, PS4, PS5, Switch, XB1, XBXS',
     genres: 'Puzzle, Platformer',
@@ -4266,9 +4266,9 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n9cqwrkkiktp5o7gggtj.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Shadow Tactics: Blades of the Shogun',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Strategy',
@@ -4279,9 +4279,9 @@ export const gameDetails: Game[] = [
     publishers: ['Daedalic Entertainment', 'Kalypso'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jb2vurfznk0stx7khm9h.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Madden NFL 17',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -4292,9 +4292,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jnolqod1hrnce1gklvyg.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Tyranny',
     platforms: 'PC',
     genres: 'RPG',
@@ -4305,9 +4305,9 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bog8v3y4atqyazanklyt.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Monster Hunter Generations',
     platforms: '3DS',
     genres: 'Action, RPG',
@@ -4318,9 +4318,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o3vqw4oqqlw0sam24duu.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Hyper Light Drifter',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -4331,9 +4331,9 @@ export const gameDetails: Game[] = [
     publishers: ['Heart Machine'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/i343g9j3xf5zhkrfcq3u.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Cuphead',
     platforms: 'XB1, PC, Switch, PS4, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4344,9 +4344,9 @@ export const gameDetails: Game[] = [
     publishers: ['Studio MDHR'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sqho6e7tv9verg6j1tvv.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: 'Hollow Knight',
     platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
     genres: 'Platformer, Action, Adventure',
@@ -4357,9 +4357,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team Cherry'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q634ullxbvipm6q6mcq9.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Destiny 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'MMO, First-Person Shooter',
@@ -4370,9 +4370,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision', 'Bungie'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/m9mdkmpv1efkc2nmxqlt.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'South Park: The Fractured But Whole',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -4383,9 +4383,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar74z.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: "Assassin's Creed Origins",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4396,9 +4396,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/giqtb8y4awm9ibt942cn.jpg',
+    score: '100',
   },
   {
-    score: '96',
     name: 'The Legend of Zelda: Breath of the Wild',
     platforms: 'Wii-U, Switch',
     genres: 'Adventure, Action',
@@ -4409,9 +4409,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj6.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Prey',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4422,9 +4422,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mras4gtszut3dhwyq2n0.jpg',
+    score: '100',
   },
   {
-    score: '97',
     name: 'Super Mario Odyssey',
     platforms: 'Switch',
     genres: 'Adventure, Platformer',
@@ -4435,9 +4435,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qgcn3akcfv4rvojqdbvb.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Injustice 2',
     platforms: 'PS4, XB1, XBXS, PS5, PC',
     genres: 'Fighting',
@@ -4448,9 +4448,9 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/k9ws4qvdqtxp6ssmoeow.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'The Evil Within 2',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     overrideMask: '*** **** ****** [ ... ]',
@@ -4462,9 +4462,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f74macclfv9siu4apzt5.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: "Hellblade: Senua's Sacrifice",
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Action',
@@ -4475,9 +4475,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ninja Theory'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schj7b.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Call of Duty: WWII',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4488,9 +4488,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj8x.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Yakuza 0',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Action, RPG',
@@ -4501,9 +4501,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Corporation', 'Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/y5cakmxawj4dgziv6dwt.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Middle-earth: Shadow of War',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4514,9 +4514,9 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qfxnxpyj7dnjfxcfbhvg.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Crash Bandicoot N. Sane Trilogy',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Platformer',
@@ -4527,9 +4527,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scrkou.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Little Nightmares',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Adventure',
@@ -4540,9 +4540,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5j94.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'For Honor',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4553,9 +4553,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iq6rtcwbhphrppgcyvrg.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Sniper Elite 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'First-Person Shooter',
@@ -4566,9 +4566,9 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nq9g9m7clqzjxjc4kolg.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Nioh',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -4579,9 +4579,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arz8e.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Tekken 7',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Fighting',
@@ -4593,9 +4593,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dd00nee1w7wkus7t2lvq.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Halo Wars 2',
     platforms: 'XB1, PC, XBXS',
     genres: 'Strategy',
@@ -4606,9 +4606,9 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/b7siopjd599qlpvzxfxp.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Surge',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -4619,9 +4619,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hrgbzcieohiasz0zlqq3.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: "Tom Clancy's Ghost Recon: Wildlands",
     overrideMask: "Tom Clancy's [ ... ]",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -4633,9 +4633,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctdyo.jpg',
+    score: '100',
   },
   {
-    score: '57',
     name: "Tom Clancy's Ghost Recon: Breakpoint",
     overrideMask: "Tom Clancy's [ ... ]",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -4647,9 +4647,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6k0l.jpg',
+    score: '100',
   },
   {
-    score: '67',
     name: 'Agents of Mayhem',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -4660,9 +4660,9 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ttawxrnymixxkbgdio71.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Sonic Mania',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4673,9 +4673,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e8xlfiklewhjosqzrlx1.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'What Remains of Edith Finch',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -4686,9 +4686,9 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqgbh.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'RiME',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Adventure',
@@ -4699,9 +4699,9 @@ export const gameDetails: Game[] = [
     publishers: ['Six Foot', 'Grey Box'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pjtbbgrvwlparfr6elvm.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Arms',
     platforms: 'Switch',
     genres: 'Fighting',
@@ -4712,9 +4712,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ufk2yvgojwy8httag9pf.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Splatoon 2',
     platforms: 'Switch',
     genres: 'Third-Person Shooter',
@@ -4725,9 +4725,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yilzspbtoximnbllsaty.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Outlast II',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Horror, First-Person Shooter',
@@ -4738,9 +4738,9 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p5vxvlrwl4khte6mhm0r.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Torment: Tides of Numenera',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG',
@@ -4751,9 +4751,9 @@ export const gameDetails: Game[] = [
     publishers: ['Techland'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dzwagdesvnw4er5ztmcw.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Xenoblade Chronicles 2',
     platforms: 'Switch',
     genres: 'RPG',
@@ -4764,9 +4764,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sj98v0eoqxxzgalf9mn4.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Battle Chasers: Nightwar',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'RPG',
@@ -4777,9 +4777,9 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c0nr3ah01r9cd9x8pgwn.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Thimbleweed Park',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -4790,9 +4790,9 @@ export const gameDetails: Game[] = [
     publishers: ['Terrible Toybox'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tpfbcncc7mgijjjvirzr.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Yonder: The Cloud Catcher Chronicles',
     platforms: 'PS4, PC, PS5, Switch, XB1, XBXS',
     genres: 'Adventure',
@@ -4803,9 +4803,9 @@ export const gameDetails: Game[] = [
     publishers: ['Merge Games', 'Prideful Sloth', 'Nippon Ichi Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sv8izh1phevspjw7h04i.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Project CARS 2',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -4816,9 +4816,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qjdwasv81qv7i4mwodly.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Fire Emblem Warriors',
     platforms: 'Switch, 3DS',
     genres: 'Action, RPG',
@@ -4829,9 +4829,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yi9yaulgd5ploailnifi.jpg',
+    score: '100',
   },
   {
-    score: '56',
     name: 'Sonic Forces',
     platforms: 'Switch, PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4842,9 +4842,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/amgqffoe8o2dedpafsnq.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Gravity Rush 2',
     platforms: 'PS4, PS5',
     genres: 'Action',
@@ -4855,9 +4855,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x9k2ccivkgdc8rigilwl.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Gran Turismo Sport',
     platforms: 'PS4, PS5',
     genres: 'Simulation, Racing',
@@ -4868,9 +4868,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/a3ztutyzqqcmt3mwg2rp.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'LEGO Marvel Super Heroes 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -4881,9 +4881,9 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games', 'Feral Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qej80dtqsdyhlfipcrjq.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'Super Bomberman R',
     platforms: 'Switch, PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -4894,9 +4894,9 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fq2ywdr5m3bseyhi0hcs.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Snake Pass',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -4907,9 +4907,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sumo Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/snmhznqguejp2a0wvuea.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'A Hat in Time',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: '3D Platformer',
@@ -4920,9 +4920,9 @@ export const gameDetails: Game[] = [
     publishers: ['Gears for Breakfast', 'Humble Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qkx.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Nidhogg 2',
     platforms: 'PC, PS4, PS5, Switch, XB1',
     genres: 'Action, Platformer',
@@ -4933,9 +4933,9 @@ export const gameDetails: Game[] = [
     publishers: ['Messhof'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dvmdqtuy1zf30sfh10if.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Ruiner',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -4946,9 +4946,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dtdc7s8wx0hqtbv1lu5d.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Tacoma',
     platforms: 'XB1, PC, XBXS, PS4',
     genres: 'Art, Adventure',
@@ -4959,9 +4959,9 @@ export const gameDetails: Game[] = [
     publishers: ['Fullbright'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sfzp7bfffimjyvky3i6b.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Nex Machina',
     platforms: 'PS4, PC, PS5',
     genres: 'Action',
@@ -4972,9 +4972,9 @@ export const gameDetails: Game[] = [
     publishers: ['Housemarque'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mqpvpntggsb6caqrpphe.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Absolver',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Fighting, Action',
@@ -4985,9 +4985,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ckiklyczcz4jmy0vwdhk.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'SteamWorld Dig 2',
     platforms: 'Switch, PC, PS4, Vita, PS5',
     genres: 'Action, Platformer',
@@ -4998,9 +4998,9 @@ export const gameDetails: Game[] = [
     publishers: ['Image & Form'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c8lgtznfdcxm867xxyyv.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'NBA 2K18',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -5011,9 +5011,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/b987qs5uvsjdguixxfnr.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Pyre',
     platforms: 'PS4, PC, PS5',
     genres: 'Action, RPG',
@@ -5024,9 +5024,9 @@ export const gameDetails: Game[] = [
     publishers: ['Supergiant Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7zjj.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Tales of Berseria',
     platforms: 'PS4, PC, PS5',
     genres: 'RPG',
@@ -5041,9 +5041,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ssm7ffiie7wudgtnxsho.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'NBA Playgrounds',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Sports',
@@ -5054,9 +5054,9 @@ export const gameDetails: Game[] = [
     publishers: ['Mad Dog Games, LLC'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3xtqlp0yrj9ozv9rvla.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'F1 2017',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -5067,9 +5067,9 @@ export const gameDetails: Game[] = [
     publishers: ['Feral Interactive', 'Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qljkjebkm9buckhtsflf.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'LawBreakers',
     platforms: 'PC, PS4, PS5',
     genres: 'Action',
@@ -5080,9 +5080,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nexon Co. Ltd.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hzhlstlbnktotbw475xs.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Hand of Fate 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5097,9 +5097,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jpjeysb73i4njghowwk6.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Pro Evolution Soccer 2018',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -5110,9 +5110,9 @@ export const gameDetails: Game[] = [
     publishers: ['Konami', 'Konami Digital Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc828k.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'Rise & Shine',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, RPG, Platformer',
@@ -5123,9 +5123,9 @@ export const gameDetails: Game[] = [
     publishers: ['Adult Swim Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iaxocroi6hmylgwm7qpt.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Night in the Woods',
     platforms: 'PS4, PC, PS5, XB1, XBXS',
     genres: 'Adventure',
@@ -5136,9 +5136,9 @@ export const gameDetails: Game[] = [
     publishers: ['Finji', 'PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xeqqds65slerqr9vaemp.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Danganronpa V3: Killing Harmony',
     platforms: 'PS4, Vita, PS5, Switch',
     genres: 'Adventure',
@@ -5149,9 +5149,9 @@ export const gameDetails: Game[] = [
     publishers: ['Spike Chunsoft', 'NIS America'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ymvlezyunryrwixa4qyo.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Get Even',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Horror, Action',
@@ -5162,9 +5162,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihvga8rjmhhorhrwdhsf.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Styx: Shards of Darkness',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5175,9 +5175,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/l6mheqaybogeaftu5ohn.jpg',
+    score: '100',
   },
   {
-    score: '59',
     name: 'Perception',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Puzzle',
@@ -5188,9 +5188,9 @@ export const gameDetails: Game[] = [
     publishers: ['The Deep End Games', 'Feardemic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ipwdx6gg5aa2varahvle.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'WWE 2K18',
     platforms: 'XB1, Switch, PS4, PC, XBXS, PS5',
     genres: 'Fighting, Sports',
@@ -5201,9 +5201,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/acow6dhtcirhast2aa7y.jpg',
+    score: '100',
   },
   {
-    score: '94',
     name: 'God of War',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -5214,9 +5214,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom', 'Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rm35ytrytuka9qkylqyk.jpg',
+    score: '100',
   },
   {
-    score: '95',
     name: 'Red Dead Redemption 2',
     platforms: 'PS4, XB1, Stadia, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
@@ -5227,9 +5227,9 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', 'Rockstar Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xegpfnsvlyeld0zkjnrc.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Far Cry 5',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -5240,9 +5240,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u5ldoak74o1yhl2gt6y7.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: "Marvel's Spider-Man",
     platforms: 'PS4, PS5, PC',
     genres: 'Action, Adventure',
@@ -5253,9 +5253,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bjoksdiwvkatzql3gi95.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Vampyr',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG, Open World',
@@ -5266,9 +5266,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tia9remnnpxyka9zh1a1.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Shadow of the Tomb Raider',
     platforms: 'PC, PS4, XB1, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5280,9 +5280,9 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ibfsxarkusq0r4yiqpae.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: "Assassin's Creed Odyssey",
     platforms: 'XB1, PC, PS4, Stadia, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -5293,9 +5293,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uhbwqvqyzd9z28moax4v.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Darksiders III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5306,9 +5306,9 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c4cppsgmpdr3s7gknxwu.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Detroit: Become Human',
     platforms: 'PS4, PS5, PC',
     genres: 'Interactive Story, RPG',
@@ -5319,9 +5319,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sn6g2xe3dd1ip6cuotci.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: 'Dead Cells',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action Roguelike',
@@ -5332,9 +5332,9 @@ export const gameDetails: Game[] = [
     publishers: ['Motion Twin'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bt9qwbyek1dmffukq44d.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Super Smash Bros. Ultimate',
     platforms: 'Switch',
     genres: 'Fighting, Action',
@@ -5345,9 +5345,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/notn8ahnbkglatmokc86.jpg',
+    score: '100',
   },
   {
-    score: '54',
     name: 'Fallout 76',
     platforms: 'PC, PS4, XB1, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -5358,9 +5358,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5iru.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Spyro Reignited Trilogy',
     platforms: 'PS4, XB1, XBXS, PS5, Switch, PC',
     genres: 'Platformer',
@@ -5371,9 +5371,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rnpkoishtowjxtb6oovz.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Sea of Thieves',
     platforms: 'XB1, PC, XBXS, PS5, PS4',
     genres: 'Action, Simulation',
@@ -5383,10 +5383,10 @@ export const gameDetails: Game[] = [
     developers: ['Rare'],
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87lo.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wtyxpxbkcsviixw7qoqn.jpg',
+    score: '100',
   },
   {
-    score: '67',
     name: 'Call of Cthulhu',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure, RPG',
@@ -5397,9 +5397,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scq0eg.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Forza Horizon 4',
     platforms: 'XB1, PC, XBXS',
     genres: 'Simulation, Racing',
@@ -5410,9 +5410,9 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fvh.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Hitman 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -5423,9 +5423,9 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lkkcpqgprrdpq6qjnlfq.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Dragon Ball FighterZ',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Fighting, Action',
@@ -5436,9 +5436,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wkrofjc1r5gtzkotditg.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Shadow of the Colossus',
     platforms: 'PS4, PS5',
     genres: 'Adventure',
@@ -5449,9 +5449,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cwjymkqlubbxfsxadqf4.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Call of Duty: Black Ops 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -5462,9 +5462,9 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9t.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'SoulCalibur VI',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Fighting',
@@ -5475,9 +5475,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ic2bersxofcccocq8ogb.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Battlefield V',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -5488,9 +5488,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctfab.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Just Cause 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -5501,9 +5501,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hlaisbleevysldnefpwz.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Kingdom Come: Deliverance',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -5514,9 +5514,9 @@ export const gameDetails: Game[] = [
     publishers: ['Warhorse Studios', 'Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d7xe9pzuqxeoqmrvt1me.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Yakuza 6: The Song of Life',
     platforms: 'PS4, PS5, XB1, PC',
     genres: 'Action',
@@ -5527,9 +5527,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wyk5rbssbyzdcj4waxp4.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'State of Decay 2',
     platforms: 'XB1, PC, XBXS',
     genres: 'Horror, RPG',
@@ -5540,9 +5540,9 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar6iq.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Two Point Hospital',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Simulation',
@@ -5553,9 +5553,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/alkvya4rftgqttx4nyf3.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'The Crew 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Racing',
@@ -5566,9 +5566,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p58xdenwi4tpdv7zfj0q.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Octopath Traveler',
     platforms: 'Switch, XB1, PC',
     genres: 'RPG',
@@ -5579,9 +5579,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pmkptjq50ptaoxgj86r6.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Dragon Quest XI',
     platforms: 'PS4, PC, PS5',
     genres: 'JRPG, Fantasy',
@@ -5597,9 +5597,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Guacamelee! 2',
     platforms: 'PS4, PC, PS5, XB1, Switch',
     genres: 'Action',
@@ -5615,9 +5615,9 @@ export const gameDetails: Game[] = [
       extra: 11.5,
       completionist: 15.5,
     },
+    score: '100',
   },
   {
-    score: '63',
     name: 'We Happy Few',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Survival, Adventure, RPG',
@@ -5633,9 +5633,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Moonlighter',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Roguelite, Action, RPG',
@@ -5651,9 +5651,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 29.5,
     },
+    score: '100',
   },
   {
-    score: '60',
     name: 'Metal Gear Survive',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -5669,9 +5669,9 @@ export const gameDetails: Game[] = [
       extra: 31.5,
       completionist: 60,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'A Way Out',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Interactive Story, Adventure',
@@ -5687,9 +5687,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Frostpunk',
     platforms: 'PC, XB1, PS4, PS5',
     genres: 'Survival, Strategy',
@@ -5705,9 +5705,9 @@ export const gameDetails: Game[] = [
       extra: 25,
       completionist: 56,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Valkyria Chronicles 4',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'RPG',
@@ -5718,9 +5718,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8k6m.jpg',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Tetris Effect',
     platforms: 'PS4, PS5, PC',
     genres: 'Strategy, Puzzle',
@@ -5731,9 +5731,9 @@ export const gameDetails: Game[] = [
     publishers: ['Enhance'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h5kpmomevezckczgf7es.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'FIFA 19',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Sports',
@@ -5744,9 +5744,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nprloa8t9nxgn3cbdikw.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Jurassic World Evolution',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Strategy',
@@ -5757,9 +5757,9 @@ export const gameDetails: Game[] = [
     publishers: ['Universal Pictures', 'Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mpkmltvxlkn7gyiyq3pb.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Super Mario Party',
     platforms: 'Switch',
     genres: 'Action',
@@ -5770,9 +5770,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lfnon0dqj2w7enufgnbn.jpg',
+    score: '100',
   },
   {
-    score: '53',
     name: 'Extinction',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5783,9 +5783,9 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/plqzgkaqicpvkn0je6c4.jpg',
+    score: '100',
   },
   {
-    score: '62',
     name: 'Dynasty Warriors 9',
     platforms: 'XB1, PS4, XBXS, PS5, PC',
     genres: 'Action',
@@ -5796,9 +5796,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kljuzvvliq2edwvtiqpt.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Kirby Star Allies',
     platforms: 'Switch',
     genres: 'Adventure, Platformer',
@@ -5809,9 +5809,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bly6zjqiwwrnrvkoczzh.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Onrush',
     platforms: 'XB1, PS4, XBXS, PS5',
     genres: 'Action, Racing',
@@ -5822,9 +5822,9 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uzrsnr9lczbb8pfuuitk.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: 'Pillars of Eternity II: Deadfire',
     platforms: 'PC, PS5, PS4, XBXS, XB1',
     genres: 'RPG',
@@ -5835,9 +5835,9 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/intxovcxbzysxzz6bpui.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Attack on Titan 2',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5848,9 +5848,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dyqiuogt3n2cc1kk8pkh.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Moss',
     platforms: 'PSVR, PS4, PC, PS5',
     genres: 'Puzzle, Action',
@@ -5861,9 +5861,9 @@ export const gameDetails: Game[] = [
     publishers: ['Polyarc Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/utywq1dpwoxf0qbgs3zy.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Unravel Two',
     platforms: 'XB1, PC, PS4, XBXS, PS5, Switch',
     genres: 'Puzzle, Platformer',
@@ -5874,9 +5874,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iyj16hbpkgbf75v5jfen.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Wreckfest',
     platforms: 'PC, PS4, PS5, Switch, XB1, XBXS',
     genres: 'Action, Simulation, Racing',
@@ -5887,9 +5887,9 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ghnlx2vfib46xeits3r6.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Lost Sphear',
     platforms: 'PS4, PC, Switch, PS5',
     genres: 'RPG',
@@ -5900,9 +5900,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gef4chvvmxwatjlwxcbe.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Celeste',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Platformer, Action, Adventure',
@@ -5913,9 +5913,9 @@ export const gameDetails: Game[] = [
     publishers: ['Maddy Makes Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e9lk3alqutkrciksfque.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'WWE 2K19',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -5926,9 +5926,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports', '2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xd6vdrvtk0howbfv05x7.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'F1 2018',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -5939,9 +5939,9 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oqmhvnzt4clrhm6lhvvx.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'The Legend of Heroes: Trails of Cold Steel IV',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'RPG',
@@ -5952,9 +5952,9 @@ export const gameDetails: Game[] = [
     publishers: ['NIS America', 'Nihon Falcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cs2.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: "My Hero One's Justice",
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action',
@@ -5965,9 +5965,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jrhw4tx3filw0rn7nigi.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'CrossCode',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'RPG',
@@ -5983,9 +5983,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nkvqpqs3zdzc8a1o6ktk.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Sonic Mania Plus',
     platforms: 'PS4, XB1, Switch, XBXS, PS5',
     genres: 'Arcade, Platformer',
@@ -5996,9 +5996,9 @@ export const gameDetails: Game[] = [
     publishers: ['Netflix', 'Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o7sawqozmuhn9c5ks0e3.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'The Banner Saga 3',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'RPG, Strategy',
@@ -6009,9 +6009,9 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xawbkhr8nkifutbqhpjr.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Warhammer: Vermintide 2',
     platforms: 'PC, XBXS, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -6022,9 +6022,9 @@ export const gameDetails: Game[] = [
     publishers: ['Fatshark'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctsx7.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Conan Exiles',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Survival, Adventure',
@@ -6035,9 +6035,9 @@ export const gameDetails: Game[] = [
     publishers: ['Funcom', 'Koch Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yv2cm2jpxidt7wygx0an.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'EA Sports UFC 3',
     platforms: 'XB1, PS4, XBXS, PS5',
     genres: 'Fighting, Simulation',
@@ -6048,9 +6048,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h2fhqcvevrdkzg1zudub.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Crossing Souls',
     platforms: 'PS4, PC, PS5',
     genres: 'Action, Adventure',
@@ -6061,9 +6061,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bdehscy8p6dqhc2d33aq.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Forgotton Anne',
     platforms: 'XB1, PC, XBXS, Switch, PS4',
     genres: 'Platformer',
@@ -6074,9 +6074,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix Collective', 'Square Enix Europe'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fbobjdtaxfdikpwryves.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'The Outer Worlds',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -6092,9 +6092,9 @@ export const gameDetails: Game[] = [
       extra: 26.5,
       completionist: 40.5,
     },
+    score: '100',
   },
   {
-    score: '92',
     name: 'Resident Evil 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Action',
@@ -6110,9 +6110,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Death Stranding',
     platforms: 'PS4, PC, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -6128,9 +6128,9 @@ export const gameDetails: Game[] = [
       extra: 60,
       completionist: 113,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Devil May Cry 5',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Hack and Slash',
@@ -6146,9 +6146,9 @@ export const gameDetails: Game[] = [
       extra: 17,
       completionist: 77,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Control',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Adventure',
@@ -6164,9 +6164,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 29,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Days Gone',
     platforms: 'PS4, PS5, PC',
     genres: 'Horror, Adventure',
@@ -6182,9 +6182,9 @@ export const gameDetails: Game[] = [
       extra: 50.5,
       completionist: 65.5,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Sekiro: Shadows Die Twice',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Ninja',
@@ -6200,9 +6200,9 @@ export const gameDetails: Game[] = [
       extra: 43,
       completionist: 69.5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Star Wars Jedi: Fallen Order',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Adventure',
@@ -6218,9 +6218,9 @@ export const gameDetails: Game[] = [
       extra: 22,
       completionist: 32,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Metro Exodus',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5',
     genres: 'Action',
@@ -6236,9 +6236,9 @@ export const gameDetails: Game[] = [
       extra: 24,
       completionist: 41.5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'A Plague Tale: Innocence',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -6254,9 +6254,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 16,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Judgment',
     platforms: 'PS4, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -6272,9 +6272,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 99,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Mortal Kombat 11',
     platforms: 'PS4, Switch, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Fighting',
@@ -6290,9 +6290,9 @@ export const gameDetails: Game[] = [
       extra: 18,
       completionist: 62.5,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: "Tom Clancy's The Division 2",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -6308,9 +6308,9 @@ export const gameDetails: Game[] = [
       extra: 48.5,
       completionist: 97.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Call of Duty: Modern Warfare',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter, Vehicle Combat',
@@ -6326,9 +6326,9 @@ export const gameDetails: Game[] = [
       extra: 9,
       completionist: 15,
     },
+    score: '100',
   },
   {
-    score: '69',
     name: 'The Sinking City',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Adventure',
@@ -6344,9 +6344,9 @@ export const gameDetails: Game[] = [
       extra: 25.5,
       completionist: 32.5,
     },
+    score: '100',
   },
   {
-    score: '67',
     name: 'Wolfenstein: Youngblood',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5, Switch',
     genres: 'First-Person Shooter',
@@ -6362,9 +6362,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 32,
     },
+    score: '100',
   },
   {
-    score: '61',
     name: 'Anthem',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Sci-fi, Shooter',
@@ -6375,9 +6375,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctl7k.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Rage 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -6393,9 +6393,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 33,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Kingdom Hearts III',
     platforms: 'PS4, XB1, XBXS, PS5, Switch, PC',
     genres: 'Action, RPG',
@@ -6418,9 +6418,9 @@ export const gameDetails: Game[] = [
       extra: 40,
       completionist: 64.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Gears 5',
     platforms: 'XB1, PC, XBXS',
     genres: 'Third-Person Shooter, Action, Adventure',
@@ -6436,9 +6436,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 19.5,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Darksiders Genesis',
     platforms: 'PC, PS4, XB1, Switch, Stadia, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -6454,9 +6454,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Borderlands 3',
     platforms: 'XB1, PC, PS4, Stadia, XBXS, PS5, Switch',
     genres: 'RPG, First-Person Shooter',
@@ -6472,9 +6472,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 82.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: "The Legend of Zelda: Link's Awakening",
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -6490,9 +6490,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Bloodstained: Ritual of the Night',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -6508,9 +6508,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 35.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: "Luigi's Mansion 3",
     platforms: 'Switch',
     genres: 'Adventure, Action',
@@ -6526,9 +6526,9 @@ export const gameDetails: Game[] = [
       extra: 17,
       completionist: 22,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Ace Combat 7: Skies Unknown',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Simulation',
@@ -6544,9 +6544,9 @@ export const gameDetails: Game[] = [
       extra: 18,
       completionist: 66.5,
     },
+    score: '100',
   },
   {
-    score: '63',
     name: 'Crackdown 3',
     platforms: 'XB1, PC, XBXS',
     genres: 'Adventure, Third-Person Shooter',
@@ -6562,9 +6562,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 24.5,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Team Sonic Racing',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Racing',
@@ -6580,9 +6580,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 26.5,
     },
+    score: '100',
   },
   {
-    score: '67',
     name: 'Blair Witch',
     platforms: 'PC, XB1, XBXS, PS4, Switch',
     genres: 'Horror, Adventure',
@@ -6598,9 +6598,9 @@ export const gameDetails: Game[] = [
       extra: 6,
       completionist: 10,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Dragon Quest Builders 2',
     platforms: 'Switch, PS4, PC, PS5, XB1',
     genres: 'Adventure, RPG',
@@ -6616,9 +6616,9 @@ export const gameDetails: Game[] = [
       extra: 74.5,
       completionist: 124,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Code Vein',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -6634,9 +6634,9 @@ export const gameDetails: Game[] = [
       extra: 35,
       completionist: 63,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Dead or Alive 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: '3D Fighter',
@@ -6647,9 +6647,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uapfuxkta3fxmaara71i.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Astral Chain',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -6660,9 +6660,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vig.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: "Yoshi's Crafted World",
     platforms: 'Switch',
     genres: 'Platformer, Action',
@@ -6673,9 +6673,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c68ocmmce59uz2ekembg.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'My Friend Pedro',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Action',
@@ -6686,9 +6686,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/poovlblpzjwtokxnupa5.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Trials Rising',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5, Switch',
     genres: 'Racing',
@@ -6699,9 +6699,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ygbfvgjadeql0c7wnu8o.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Daemon X Machina',
     platforms: 'Switch',
     genres: 'Action',
@@ -6712,9 +6712,9 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h5bdif45vnfoo4utipbc.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Children of Morta',
     platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -6725,9 +6725,9 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fmxwfnjrvtrudbqpfbxz.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Shenmue III',
     platforms: 'PC, PS4, PS5',
     genres: 'Adventure',
@@ -6738,9 +6738,9 @@ export const gameDetails: Game[] = [
     publishers: ['Shibuya Productions', 'Deep Silver', 'ININ Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc99oz.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Layers of Fear 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -6751,9 +6751,9 @@ export const gameDetails: Game[] = [
     publishers: ['Gun Interactive', 'NA Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6gyg.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Concrete Genie',
     platforms: 'PS4, PS5',
     genres: 'Art, Adventure',
@@ -6764,9 +6764,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u4goylbqiuynqrdbqlld.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Untitled Goose Game',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Puzzle, Adventure',
@@ -6777,9 +6777,9 @@ export const gameDetails: Game[] = [
     publishers: ['Panic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/onko9hruvdv63darqinn.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Indivisible',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'RPG, Platformer',
@@ -6790,9 +6790,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/loeuidxbc0bdsqf9qhyb.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'Ancestors: The Humankind Odyssey',
     platforms: 'PC, PS4, XB1',
     genres: 'Adventure, RPG',
@@ -6803,9 +6803,9 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5stq.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Trine 4: The Nightmare Prince',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6816,9 +6816,9 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68hi.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'God Eater 3',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'Action',
@@ -6829,9 +6829,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5jt4.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Wargroove',
     platforms: 'XB1, PC, Switch, XBXS, PS4',
     genres: 'Strategy, Turn-based tactics',
@@ -6842,9 +6842,9 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/he17smgll9yv3ihfcvis.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'John Wick Hex',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Strategy',
@@ -6855,9 +6855,9 @@ export const gameDetails: Game[] = [
     publishers: ['Good Shepherd Entertainment', 'Gambitious'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6k0v.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Yooka-Laylee and the Impossible Lair',
     platforms: 'PC, Switch, XB1, PS4, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6868,9 +6868,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6ref.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Tropico 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Strategy',
@@ -6881,9 +6881,9 @@ export const gameDetails: Game[] = [
     publishers: ['Kalypso Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6csu.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Dirt Rally 2.0',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing, Sports',
@@ -6894,9 +6894,9 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5iqf.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Disco Elysium',
     platforms: 'PC, PS5, PS4, XB1, XBXS',
     genres: 'Adventure, RPG',
@@ -6907,9 +6907,9 @@ export const gameDetails: Game[] = [
     publishers: ['ZA/UM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jgfwlctsfh8yljnjdeab.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Oninaki',
     platforms: 'PS4, PC, Switch, PS5, XB1',
     genres: 'Action, RPG',
@@ -6920,9 +6920,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc635z.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'The Legend of Heroes: Trails of Cold Steel III',
     platforms: 'PS4, Switch, PS5, PC',
     genres: 'Action, RPG',
@@ -6933,9 +6933,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nihon Falcom', 'NIS America'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6stu.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'FIFA 20',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Sports',
@@ -6946,9 +6946,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lbg.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Blasphemous',
     platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6959,9 +6959,9 @@ export const gameDetails: Game[] = [
     publishers: ['The Game Kitchen', 'Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6whb.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Ion Fury',
     platforms: 'PC, PS4, Switch, XB1',
     genres: 'Arcade, Action, First-Person Shooter',
@@ -6972,9 +6972,9 @@ export const gameDetails: Game[] = [
     publishers: ['3D Realms'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jdkvlxeqleeg8egeybd7.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Grid',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Simulation, Racing, Sports',
@@ -6985,9 +6985,9 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lza.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Superliminal',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Puzzle',
@@ -6998,9 +6998,9 @@ export const gameDetails: Game[] = [
     publishers: ['Pillow Castle Games', 'Noodlecake Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc799e.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Katana Zero',
     platforms: 'PC, Switch, PS4, PS5, XB1',
     genres: 'Action, Platformer',
@@ -7011,9 +7011,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5zhl.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Assetto Corsa Competizione',
     platforms: 'PC, PS4, PS5, XB1, XBXS',
     genres: 'Simulation, Racing, Sports',
@@ -7024,9 +7024,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dto2kz9sotbd6f1xoweb.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'NBA 2K20',
     platforms: 'PC, PS4, Switch, XB1, Stadia, XBXS, PS5',
     genres: 'Sports',
@@ -7037,9 +7037,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', '2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc72ek.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'My Time at Portia',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Simulation, RPG',
@@ -7050,9 +7050,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jnc20jtxxfvd6rprt7lw.jpg',
+    score: '100',
   },
   {
-    score: '51',
     name: 'Vane',
     platforms: 'PS4, PS5',
     genres: 'Adventure',
@@ -7063,9 +7063,9 @@ export const gameDetails: Game[] = [
     publishers: ['Friend & Foe', 'Gamera Game'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/k1dr0dkbmuagxk1mi9yp.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Age of Wonders: Planetfall',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Strategy',
@@ -7076,9 +7076,9 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bpyn3rwecv9opnzjps7u.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Cyberpunk 2077',
     platforms: 'PC, Stadia, XBXS, XB1, PS4, PS5',
     genres: 'RPG',
@@ -7094,9 +7094,9 @@ export const gameDetails: Game[] = [
       extra: 63,
       completionist: 108,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: "Assassin's Creed Valhalla",
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Action, RPG',
@@ -7112,9 +7112,9 @@ export const gameDetails: Game[] = [
       extra: 99,
       completionist: 150,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Doom Eternal',
     platforms: 'PC, PS4, XB1, Switch, Stadia, XBXS, PS5',
     genres: 'Action',
@@ -7130,9 +7130,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 29.5,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'The Last of Us Part II',
     platforms: 'PS4, PS5',
     genres: 'Action, Adventure',
@@ -7148,9 +7148,9 @@ export const gameDetails: Game[] = [
       extra: 29.5,
       completionist: 43.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Ghost of Tsushima',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, Adventure',
@@ -7166,9 +7166,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 62.5,
     },
+    score: '100',
   },
   {
-    score: '94',
     name: 'Hades',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Adventure, RPG, Action',
@@ -7184,9 +7184,9 @@ export const gameDetails: Game[] = [
       extra: 48.5,
       completionist: 95.5,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: "Marvel's Avengers",
     platforms: 'PS4, PC, XB1, Stadia, XBXS, PS5',
     genres: 'Action, RPG',
@@ -7202,9 +7202,9 @@ export const gameDetails: Game[] = [
       extra: 24.5,
       completionist: 104,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Watch Dogs: Legion',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Adventure, Action',
@@ -7220,9 +7220,9 @@ export const gameDetails: Game[] = [
       extra: 33,
       completionist: 50.5,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Ori and the Will of the Wisps',
     platforms: 'XB1, PC, XBXS, Switch',
     genres: 'Puzzle, Platformer',
@@ -7238,9 +7238,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 18.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: "Crash Bandicoot 4: It's About Time",
     platforms: 'XB1, PS4, XBXS, PS5, Switch, PC',
     genres: 'Platformer',
@@ -7256,9 +7256,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 85.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Maneater',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -7274,9 +7274,9 @@ export const gameDetails: Game[] = [
       extra: 10,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Dragon Ball Z: Kakarot',
     platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -7296,9 +7296,9 @@ export const gameDetails: Game[] = [
       extra: 42,
       completionist: 56.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Immortals Fenyx Rising',
     platforms: 'PS4, XB1, Switch, Stadia, PC, XBXS, PS5',
     genres: 'Action',
@@ -7314,9 +7314,9 @@ export const gameDetails: Game[] = [
       extra: 41,
       completionist: 62,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Call of Duty: Black Ops Cold War',
     platforms: 'PC, PS4, XB1, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -7332,9 +7332,9 @@ export const gameDetails: Game[] = [
       extra: 7,
       completionist: 19,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Yakuza: Like a Dragon',
     platforms: 'PS4, PC, XB1, XBXS, PS5',
     genres: 'RPG',
@@ -7350,9 +7350,9 @@ export const gameDetails: Game[] = [
       extra: 68,
       completionist: 103,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Streets of Rage 4',
     platforms: 'Switch, PC, XB1, PS4',
     genres: 'Fighting, Action, Arcade',
@@ -7368,9 +7368,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 28,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Animal Crossing: New Horizons',
     platforms: 'Switch, Switch 2',
     genres: 'Simulation',
@@ -7386,9 +7386,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '92',
     name: 'Microsoft Flight Simulator',
     platforms: 'PC, XBXS',
     genres: 'Simulation',
@@ -7399,9 +7399,9 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vzt.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Paper Mario: The Origami King',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -7417,9 +7417,9 @@ export const gameDetails: Game[] = [
       extra: 32.5,
       completionist: 44.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Sackboy: A Big Adventure',
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure, Platformer',
@@ -7435,9 +7435,9 @@ export const gameDetails: Game[] = [
       extra: 17,
       completionist: 34,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Mortal Shell',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -7453,9 +7453,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 23,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Star Wars: Squadrons',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Vehicle Combat',
@@ -7471,9 +7471,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 41.5,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Minecraft Dungeons',
     platforms: 'Switch, PC, XB1, PS4, XBXS, PS5',
     genres: 'RPG, Action, Adventure',
@@ -7489,9 +7489,9 @@ export const gameDetails: Game[] = [
       extra: 12.5,
       completionist: 34,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Gears Tactics',
     platforms: 'PC, XB1, XBXS',
     genres: 'Strategy',
@@ -7507,9 +7507,9 @@ export const gameDetails: Game[] = [
       extra: 33.5,
       completionist: 55,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Zombie Army 4: Dead War',
     platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
     genres: 'Survival, Action',
@@ -7525,9 +7525,9 @@ export const gameDetails: Game[] = [
       extra: 18.5,
       completionist: 55.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Desperados III',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Strategy',
@@ -7543,9 +7543,9 @@ export const gameDetails: Game[] = [
       extra: 36.5,
       completionist: 64.5,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Journey to the Savage Planet',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -7561,9 +7561,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 17,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Ghostrunner',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Action',
@@ -7579,9 +7579,9 @@ export const gameDetails: Game[] = [
       extra: 9,
       completionist: 14,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Battletoads',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action, Platformer, Fighting',
@@ -7597,9 +7597,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Wasteland 3',
     platforms: 'PS4, PC, XB1, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -7615,9 +7615,9 @@ export const gameDetails: Game[] = [
       extra: 49.5,
       completionist: 75.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Hyrule Warriors: Age of Calamity',
     platforms: 'Switch',
     genres: 'Adventure, Action',
@@ -7633,9 +7633,9 @@ export const gameDetails: Game[] = [
       extra: 39,
       completionist: 76.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Dark Pictures Anthology: Little Hope',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Adventure, Horror',
@@ -7646,9 +7646,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j5p.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Cris Tales',
     platforms: 'Switch, PC, PS4, PS5, XB1, XBXS',
     genres: 'Adventure, RPG',
@@ -7659,9 +7659,9 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games', 'Maximum Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lei.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Super Mario 3D All-Stars',
     platforms: 'Switch',
     genres: 'Adventure, Platformer',
@@ -7672,9 +7672,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jan.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Serious Sam 4',
     platforms: 'PC, Stadia, PS4, XB1, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -7685,9 +7685,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc894a.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Nioh 2',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -7698,9 +7698,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc794u.jpg',
+    score: '100',
   },
   {
-    score: '63',
     name: 'Disintegration',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -7711,9 +7711,9 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6weo.jpg',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Crusader Kings III',
     platforms: 'PC, PS5, XBXS',
     genres: 'RPG, Simulation, Strategy',
@@ -7724,9 +7724,9 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7l82.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Tell Me Why',
     platforms: 'PC, XB1, XBXS',
     genres: 'Interactive Story',
@@ -7737,9 +7737,9 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ga4.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Bugsnax',
     platforms: 'PS5, PS4, PC',
     genres: 'Adventure',
@@ -7750,9 +7750,9 @@ export const gameDetails: Game[] = [
     publishers: ['Young Horses'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bkt.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'Windbound',
     platforms: 'PC, XB1, XBXS, PS4',
     genres: 'Adventure, RPG',
@@ -7763,9 +7763,9 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver', 'Koch Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82x3.jpg',
+    score: '100',
   },
   {
-    score: '60',
     name: 'Godfall',
     platforms: 'PS5, PC',
     genres: 'Action, RPG',
@@ -7776,9 +7776,9 @@ export const gameDetails: Game[] = [
     publishers: ['Gearbox Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bka.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Amnesia: Rebirth',
     platforms: 'PS4, PC, PS5',
     genres: 'Horror, Adventure, Action',
@@ -7789,9 +7789,9 @@ export const gameDetails: Game[] = [
     publishers: ['Frictional Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc81cr.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'The Pathless',
     platforms: 'PC, PS4, PS5',
     genres: 'Adventure',
@@ -7802,9 +7802,9 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dbj.jpg',
+    score: '100',
   },
   {
-    score: '59',
     name: 'Deadly Premonition 2: A Blessing in Disguise',
     platforms: 'Switch',
     genres: 'Adventure, Action',
@@ -7815,9 +7815,9 @@ export const gameDetails: Game[] = [
     publishers: ['Rising Star Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6yzl.jpg',
+    score: '100',
   },
   {
-    score: '58',
     name: 'Predator: Hunting Grounds',
     platforms: 'PS4, PS5, PC',
     genres: 'Action',
@@ -7828,9 +7828,9 @@ export const gameDetails: Game[] = [
     publishers: ['Illfonic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wdo.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Call of the Sea',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
     genres: 'Adventure, Puzzle',
@@ -7841,9 +7841,9 @@ export const gameDetails: Game[] = [
     publishers: ['Raw Fury'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g7b.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'One Piece: Pirate Warriors 4',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'Adventure, Action',
@@ -7854,9 +7854,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7dyv.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'FIFA 21',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Simulation, Sports',
@@ -7867,9 +7867,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fu0.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'NBA 2K21',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5',
     genres: 'Sports, Simulation',
@@ -7880,9 +7880,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', '2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kpz.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Inscryption',
     platforms: 'PC, PS5, PS4',
     genres: 'Strategy, Horror',
@@ -7893,9 +7893,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Daniel Mullins Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lf2.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Sakura Wars',
     platforms: 'PS4, PS5',
     genres: 'Action, RPG',
@@ -7906,9 +7906,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7w7v.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: "Astro's Playroom",
     platforms: 'PS5',
     genres: 'Action, Platformer',
@@ -7919,9 +7919,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bkl.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Granblue Fantasy: Versus',
     platforms: 'PS4, PS5, PC',
     genres: 'Fighting',
@@ -7932,9 +7932,9 @@ export const gameDetails: Game[] = [
     publishers: ['Cygames', 'XSEED Games', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5rhp.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Kingdom Hearts: Melody of Memory',
     platforms: 'Switch, PS4, XB1, XBXS, PS5',
     genres: 'Action, Music',
@@ -7945,9 +7945,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fiu.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'No Straight Roads',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, Music',
@@ -7958,9 +7958,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sold Out', 'H2 Interactive Co., Ltd.', 'Fireshine Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6a38.jpg',
+    score: '100',
   },
   {
-    score: '61',
     name: 'Twin Mirror',
     platforms: 'XB1, PS4, PC',
     genres: 'Adventure',
@@ -7971,9 +7971,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', "DON'T NOD"],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbubn.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'XCOM: Chimera Squad',
     platforms: 'PC',
     genres: 'Strategy, Turn-Based Strategy',
@@ -7984,9 +7984,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gzi.jpg',
+    score: '100',
   },
   {
-    score: '65',
     name: 'Maid of Sker',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Adventure',
@@ -7997,9 +7997,9 @@ export const gameDetails: Game[] = [
     publishers: ['Wales Interactive', 'Perp Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5l81.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Spiritfarer',
     platforms: 'Switch, PS4, PC, XB1, XBXS, PS5',
     genres: 'Adventure, Simulation',
@@ -8010,9 +8010,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunder Lotus'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lcc.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'The Forgotten City',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Adventure',
@@ -8023,9 +8023,9 @@ export const gameDetails: Game[] = [
     publishers: ['Dear Villagers', 'Plug In Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scfu6c.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Moving Out',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'Simulation, Strategy',
@@ -8036,9 +8036,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5yqt.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'Bleeding Edge',
     platforms: 'PC, XB1, XBXS',
     genres: 'Action',
@@ -8049,9 +8049,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ninja Theory', 'Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6r61.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'PGA Tour 2K21',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Simulation, Sports',
@@ -8062,9 +8062,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8aj8.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Project CARS 3',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Sports, Racing',
@@ -8075,9 +8075,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j5v.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Captain Tsubasa: Rise of New Champions',
     platforms: 'PC, Switch, PS4',
     genres: 'Sports, Arcade',
@@ -8092,9 +8092,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7kh4.jpg',
+    score: '100',
   },
   {
-    score: '61',
     name: 'Hellpoint',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, RPG',
@@ -8105,9 +8105,9 @@ export const gameDetails: Game[] = [
     publishers: ['tinyBuild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bo2vc35dxbxiuhmibpzg.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Sakuna: Of Rice and Ruin',
     platforms: 'Switch, PC, PS4, PS5',
     genres: 'Action, Platformer, Simulation',
@@ -8118,9 +8118,9 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bvzk7zukw7bpwkjzppnd.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Pumpkin Jack',
     platforms: 'XB1, Switch, PC, PS4, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -8131,9 +8131,9 @@ export const gameDetails: Game[] = [
     publishers: ['Headup Games', 'Thunderful', 'Beep Japan'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7p6q.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Monster Hunter Rise',
     platforms: 'Switch, PC, PS5, PS4, XBXS, XB1',
     genres: 'RPG, Action',
@@ -8149,9 +8149,9 @@ export const gameDetails: Game[] = [
       extra: 82.5,
       completionist: 182,
     },
+    score: '100',
   },
   {
-    score: '67',
     name: 'Biomutant',
     platforms: 'PC, PS4, XB1, PS5, XBXS, Switch',
     genres: 'RPG, Action',
@@ -8167,9 +8167,9 @@ export const gameDetails: Game[] = [
       extra: 24.5,
       completionist: 42.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Resident Evil Village',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
     genres: 'Action, Horror, First-Person Shooter',
@@ -8185,9 +8185,9 @@ export const gameDetails: Game[] = [
       extra: 13,
       completionist: 38.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Deathloop',
     platforms: 'PS5, PC, XBXS',
     genres: 'Action, Adventure, First-Person Shooter',
@@ -8203,9 +8203,9 @@ export const gameDetails: Game[] = [
       extra: 24.5,
       completionist: 36,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Ratchet & Clank: Rift Apart',
     platforms: 'PS5, PC',
     genres: 'Platformer, Action',
@@ -8221,9 +8221,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 18,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Returnal',
     platforms: 'PS5, PC',
     genres: 'Action, Third-Person Shooter, Roguelike',
@@ -8239,9 +8239,9 @@ export const gameDetails: Game[] = [
       extra: 30.5,
       completionist: 64,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'The Medium',
     platforms: 'XBXS, PC',
     genres: 'Adventure, Horror',
@@ -8257,9 +8257,9 @@ export const gameDetails: Game[] = [
       extra: 9,
       completionist: 10,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Hitman 3',
     platforms: 'Switch, PS4, XB1, Stadia, PS5, XBXS, PC',
     genres: 'Action, Strategy',
@@ -8276,9 +8276,9 @@ export const gameDetails: Game[] = [
       extra: 21.5,
       completionist: 63,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Far Cry 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, RPG',
@@ -8294,9 +8294,9 @@ export const gameDetails: Game[] = [
       extra: 41.5,
       completionist: 64,
     },
+    score: '100',
   },
   {
-    score: '92',
     name: 'Forza Horizon 5',
     platforms: 'PC, XB1, XBXS',
     genres: 'Racing',
@@ -8312,9 +8312,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 135,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Halo Infinite',
     platforms: 'PC, XB1, XBXS',
     genres: 'Action, First-Person Shooter',
@@ -8330,9 +8330,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 29.5,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Little Nightmares II',
     platforms: 'PC, XBXS, PS5, XB1, PS4, Switch',
     genres: 'Adventure, Platformer',
@@ -8348,9 +8348,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 9,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Psychonauts 2',
     platforms: 'PC, XB1, XBXS, PS4',
     genres: 'Action, Adventure',
@@ -8366,9 +8366,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 26.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Life is Strange: True Colors',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Stadia, Switch',
     genres: 'Interactive Story',
@@ -8384,9 +8384,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 13,
     },
+    score: '100',
   },
   {
-    score: '65',
     name: 'Battlefield 2042',
     platforms: 'PC, XB1, PS5, XBXS, PS4',
     genres: 'Action, Vehicle Combat, First-Person Shooter',
@@ -8402,9 +8402,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Call of Duty: Vanguard',
     platforms: 'XB1, PS5, XBXS, PC, PS4',
     genres: 'Action, First-Person Shooter',
@@ -8420,9 +8420,9 @@ export const gameDetails: Game[] = [
       extra: 9,
       completionist: 28.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Metroid Dread',
     platforms: 'Switch',
     genres: 'Adventure, Action, Platformer',
@@ -8438,9 +8438,9 @@ export const gameDetails: Game[] = [
       extra: 11.5,
       completionist: 13.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'It Takes Two',
     platforms: 'PC, XB1, PS5, XBXS, PS4, Switch',
     genres: 'Adventure',
@@ -8456,9 +8456,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Outriders',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, RPG',
@@ -8474,9 +8474,9 @@ export const gameDetails: Game[] = [
       extra: 36,
       completionist: 63.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Scarlet Nexus',
     platforms: 'PC, PS5, XB1, PS5, PS4',
     genres: 'Action, RPG',
@@ -8492,9 +8492,9 @@ export const gameDetails: Game[] = [
       extra: 35.5,
       completionist: 61,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Tales of Arise',
     platforms: 'PS5, PC, XBXS, XB1, PS4',
     genres: 'Action, RPG',
@@ -8510,9 +8510,9 @@ export const gameDetails: Game[] = [
       extra: 56.5,
       completionist: 74,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Kena: Bridge of Spirits',
     platforms: 'PS5, PS4, PC, PS5, XB1',
     genres: 'Adventure, Action',
@@ -8528,9 +8528,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 20.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: "Death's Door",
     platforms: 'XB1, PC, XBXS, PS4, PS5, Switch',
     genres: 'Action, RPG',
@@ -8546,9 +8546,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 16,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Monster Hunter Stories 2: Wings of Ruin',
     platforms: 'Switch, PC, PS4, XB1',
     genres: 'Adventure, RPG',
@@ -8564,9 +8564,9 @@ export const gameDetails: Game[] = [
       extra: 61,
       completionist: 143,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Back 4 Blood',
     platforms: 'PC, XB1, PS5, XBXS, PS4',
     genres: 'Action, First-Person Shooter',
@@ -8582,9 +8582,9 @@ export const gameDetails: Game[] = [
       extra: 23.5,
       completionist: 99,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Lost Judgment',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action',
@@ -8600,9 +8600,9 @@ export const gameDetails: Game[] = [
       extra: 53.5,
       completionist: 107,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Persona 5 Strikers',
     platforms: 'PS4, Switch, PC',
     genres: 'Action, RPG',
@@ -8618,9 +8618,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 71,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'New Pokémon Snap',
     platforms: 'Switch',
     genres: 'Adventure, Simulation',
@@ -8636,9 +8636,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 66.5,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Hot Wheels Unleashed',
     platforms: 'PS4, PS5, PC, XB1, PS5, Switch',
     genres: 'Racing',
@@ -8654,9 +8654,9 @@ export const gameDetails: Game[] = [
       extra: 17,
       completionist: 36,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Shin Megami Tensei V',
     platforms: 'Switch',
     genres: 'RPG',
@@ -8672,9 +8672,9 @@ export const gameDetails: Game[] = [
       extra: 69.5,
       completionist: 97,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'The Ascent',
     platforms: 'PC, XB1, XBXS, PS4, PS5',
     genres: 'Action, RPG',
@@ -8690,9 +8690,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 26,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Riders Republic',
     platforms: 'XB1, PS5, XBXS, Stadia, PC, PS4',
     genres: 'Action, Sports',
@@ -8708,9 +8708,9 @@ export const gameDetails: Game[] = [
       extra: 30,
       completionist: 97.5,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Aliens: Fireteam Elite',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -8726,9 +8726,9 @@ export const gameDetails: Game[] = [
       extra: 16,
       completionist: 58.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'The Great Ace Attorney Chronicles',
     platforms: 'PS4, Switch, PC',
     genres: 'Adventure, Puzzle',
@@ -8739,9 +8739,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbtng.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Mario Golf: Super Rush',
     platforms: 'Switch',
     genres: 'RPG, Sports',
@@ -8752,9 +8752,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9288.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'NEO: The World Ends with You',
     platforms: 'PS4, Switch',
     genres: 'RPG',
@@ -8765,9 +8765,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsxln.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Chernobylite',
     platforms: 'PC, PS4, PS5, XB1, Switch',
     genres: 'Action, RPG, Horror',
@@ -8778,9 +8778,9 @@ export const gameDetails: Game[] = [
     publishers: ['All In! Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6d60.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Age of Empires IV',
     platforms: 'PC',
     genres: 'Strategy',
@@ -8791,9 +8791,9 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc98hn.jpg',
+    score: '100',
   },
   {
-    score: '53',
     name: 'Werewolf: The Apocalypse - Earthblood',
     platforms: 'PC, XB1, PS5, PS4, XBXS',
     genres: 'Action',
@@ -8804,9 +8804,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bigben Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bfh.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Chorus',
     platforms: 'PC, XBXS, PS5, Stadia, XB1, PS4',
     genres: 'Action, Adventure',
@@ -8817,9 +8817,9 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87zr.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Atelier Ryza 2: Lost Legends & the Secret Fairy',
     platforms: 'PS5, Switch, PC, PS4',
     genres: 'RPG, Simulation',
@@ -8830,9 +8830,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lpf.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Mario Party Superstars',
     platforms: 'Switch',
     genres: 'Action',
@@ -8843,9 +8843,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai12.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Super Monkey Ball: Banana Mania',
     platforms: 'PS4, Switch, PC, XB1, XBXS, PS5',
     genres: 'Platformer, Arcade',
@@ -8856,9 +8856,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai0p.jpg',
+    score: '100',
   },
   {
-    score: '63',
     name: 'Bright Memory: Infinite',
     platforms: 'PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -8869,9 +8869,9 @@ export const gameDetails: Game[] = [
     publishers: ['PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g8i.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Road 96',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Adventure, Puzzle',
@@ -8882,9 +8882,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ravenscourt'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v28.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'FIFA 22',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
     genres: 'Simulation, Sports',
@@ -8895,9 +8895,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scb1p5.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Samurai Warriors 5',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'Action',
@@ -8908,9 +8908,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc926s.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'WarioWare: Get It Together!',
     platforms: 'Switch',
     genres: 'Action',
@@ -8921,9 +8921,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahwo.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Chivalry 2',
     platforms: 'PC, XB1, PS5, XBXS, PS4',
     genres: 'Action, RPG',
@@ -8934,9 +8934,9 @@ export const gameDetails: Game[] = [
     publishers: ['Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctkp3.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Loop Hero',
     platforms: 'PC, Switch, XB1, XBXS',
     genres: 'RPG, Roguelike, Strategy',
@@ -8947,9 +8947,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Playdigious'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v15.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Solar Ash',
     platforms: 'PC, PS4, PS5',
     genres: 'Action',
@@ -8960,9 +8960,9 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bhc.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'F1 2021',
     platforms: 'PC, PS5, XB1, PS5, PS4',
     genres: 'Simulation, Racing',
@@ -8973,9 +8973,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arvdk.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: "Ghosts 'n Goblins Resurrection",
     platforms: 'Switch, PS4, XB1, PC',
     genres: 'Action, Platformer',
@@ -8986,9 +8986,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v31.jpg',
+    score: '100',
   },
   {
-    score: '58',
     name: 'Dungeons & Dragons: Dark Alliance',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'Action, RPG',
@@ -8999,9 +8999,9 @@ export const gameDetails: Game[] = [
     publishers: ['Wizards of the Coast LLC'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96fk.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Evil Genius 2: World Domination',
     platforms: 'PC, PS4, PS5, XB1, XBXS',
     genres: 'Simulation, Strategy',
@@ -9012,9 +9012,9 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lfk.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Jurassic World Evolution 2',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -9025,9 +9025,9 @@ export const gameDetails: Game[] = [
     publishers: ['Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagb5.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Sable',
     platforms: 'XBXS, PC, XB1, PS5, PS4',
     genres: 'Adventure',
@@ -9038,9 +9038,9 @@ export const gameDetails: Game[] = [
     publishers: ['Raw Fury'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pm3fmc3vysfckeia8un0.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Lost in Random',
     platforms: 'PC, PS5, XBXS, Switch, XB1, PS4',
     genres: 'Action',
@@ -9051,9 +9051,9 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cgc.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'NBA 2K22',
     platforms: 'PC, XB1, XBXS, PS5, PS4',
     genres: 'Sports, Simulation',
@@ -9064,9 +9064,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbtoz.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'The Artful Escape',
     platforms: 'XB1, XBXS, PC, PS4, Switch, PS5',
     genres: 'Action, Adventure',
@@ -9077,9 +9077,9 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g7q.jpg',
+    score: '100',
   },
   {
-    score: '64',
     name: 'Nickelodeon All-Star Brawl',
     platforms: 'Switch, PC, XB1, XBXS, PS5, PS4',
     genres: 'Fighting, Action',
@@ -9090,9 +9090,9 @@ export const gameDetails: Game[] = [
     publishers: ['GameMill Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scba7t.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Eastward',
     platforms: 'Switch, PC, XB1',
     genres: 'Adventure, RPG',
@@ -9103,9 +9103,9 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wcz.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Story of Seasons: Pioneers of Olive Town',
     platforms: 'Switch, PC, PS4',
     genres: 'RPG, Simulation',
@@ -9116,9 +9116,9 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous Europe Ltd.', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8pd1.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Olija',
     platforms: 'Switch, PC, PS4, XB1, XBXS',
     genres: 'Action, Platformer, Arcade',
@@ -9129,9 +9129,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8f2r.jpg',
+    score: '100',
   },
   {
-    score: '48',
     name: 'Balan Wonderworld',
     platforms: 'Switch, PC, PS4, XB1, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -9142,9 +9142,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g2q.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Cyber Shadow',
     platforms: 'PS4, Switch, XB1, PC, PS5, XBXS',
     genres: 'Action, Platformer',
@@ -9155,9 +9155,9 @@ export const gameDetails: Game[] = [
     publishers: ['Yacht Club Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cp9.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'The Gunk',
     platforms: 'PC, XBXS, XB1',
     genres: 'Action',
@@ -9168,9 +9168,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scer83.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Tormented Souls',
     platforms: 'XBXS, PS5, PC, PS4, Switch, XB1',
     genres: 'Horror',
@@ -9181,9 +9181,9 @@ export const gameDetails: Game[] = [
     publishers: ['PQube'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc92zx.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Oddworld: Soulstorm',
     platforms: 'PS4, XB1, PC, PS5, XBXS',
     genres: 'Platformer',
@@ -9194,9 +9194,9 @@ export const gameDetails: Game[] = [
     publishers: ['Oddworld Inhabitants'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schu0q.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'F.I.S.T.: Forged In Shadow Torch',
     platforms: 'PS5, PS4, PC, Switch, XBXS',
     genres: 'Action, Adventure, RPG, Simulation, Sports',
@@ -9207,9 +9207,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bilibili Game'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68pb.jpg',
+    score: '100',
   },
   {
-    score: '58',
     name: 'Necromunda: Hired Gun',
     platforms: 'PS5, PC, XBXS, PS4, XB1',
     genres: 'Action, First-Person Shooter',
@@ -9220,9 +9220,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc95cc.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: "King's Bounty II",
     platforms: 'XB1, PS4, PC, Switch',
     genres: 'RPG, Strategy',
@@ -9233,9 +9233,9 @@ export const gameDetails: Game[] = [
     publishers: ['Prime Matter', '1C Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc712j.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Sniper Ghost Warrior Contracts 2',
     platforms: 'XBXS, PC, PS4, XB1, PS5',
     genres: 'First-Person Shooter, Action',
@@ -9246,9 +9246,9 @@ export const gameDetails: Game[] = [
     publishers: ['CI Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9oz9.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'God of War Ragnarök',
     platforms: 'PS4, PS5, PC',
     genres: 'RPG, Action',
@@ -9264,9 +9264,9 @@ export const gameDetails: Game[] = [
       extra: 40.5,
       completionist: 55.5,
     },
+    score: '100',
   },
   {
-    score: '95',
     name: 'Elden Ring',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, RPG',
@@ -9282,9 +9282,9 @@ export const gameDetails: Game[] = [
       extra: 101,
       completionist: 135,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Ghostwire: Tokyo',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action',
@@ -9300,9 +9300,9 @@ export const gameDetails: Game[] = [
       extra: 23,
       completionist: 42,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Stray',
     platforms: 'PS5, PS4, PC, XB1',
     genres: 'Adventure',
@@ -9318,9 +9318,9 @@ export const gameDetails: Game[] = [
       extra: 6.5,
       completionist: 10.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Horizon Forbidden West',
     platforms: 'PS5, PS4, PC',
     genres: 'RPG',
@@ -9336,9 +9336,9 @@ export const gameDetails: Game[] = [
       extra: 62.5,
       completionist: 90,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Dying Light 2: Stay Human',
     platforms: 'Switch, PC, XBXS, PS5, PS4, XB1',
     genres: 'Action, RPG',
@@ -9354,9 +9354,9 @@ export const gameDetails: Game[] = [
       extra: 49.5,
       completionist: 103,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Sifu',
     platforms: 'PS4, PS5, PC, Switch, XB1, XBXS',
     genres: "Martial Arts, Beat 'em up, Action",
@@ -9372,9 +9372,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 22,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Gotham Knights',
     platforms: 'PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -9390,9 +9390,9 @@ export const gameDetails: Game[] = [
       extra: 27.5,
       completionist: 50,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: "Teenage Mutant Ninja Turtles: Shredder's Revenge",
     platforms: 'XBXS, PS5, XB1, Switch, PS4, PC',
     genres: 'Action, Fighting, Arcade',
@@ -9408,9 +9408,9 @@ export const gameDetails: Game[] = [
       extra: 4,
       completionist: 20,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Trek to Yomi',
     platforms: 'XBXS, PS5, PS4, PC, XB1',
     genres: 'Action',
@@ -9426,9 +9426,9 @@ export const gameDetails: Game[] = [
       extra: 6,
       completionist: 12.5,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'A Plague Tale: Requiem',
     platforms: 'Switch, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -9445,9 +9445,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 27.5,
     },
+    score: '100',
   },
   {
-    score: '67',
     name: 'The Callisto Protocol',
     platforms: 'XBXS, PS5, PS4, XB1, PC',
     genres: 'Horror, Third-Person Shooter',
@@ -9463,9 +9463,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 15.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'The Quarry',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'Adventure, Horror',
@@ -9481,9 +9481,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 34,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: "Tom Clancy's Rainbow Six Extraction",
     platforms: 'XB1, XBXS, PS5, PC, PS4',
     genres: 'Action, First-Person Shooter',
@@ -9499,9 +9499,9 @@ export const gameDetails: Game[] = [
       extra: 47.5,
       completionist: 61,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: "Tiny Tina's Wonderlands",
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -9518,9 +9518,9 @@ export const gameDetails: Game[] = [
       extra: 29,
       completionist: 52,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Pokémon Legends: Arceus',
     overrideMask: '******* [ ... ]',
     platforms: 'Switch',
@@ -9532,9 +9532,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'The Pokémon Company'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93am.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Pokémon Sun and Moon',
     overrideMask: 'Pokémon [ ... ] and [ ... ]',
     platforms: 'Nintendo 3DS',
@@ -9551,9 +9551,9 @@ export const gameDetails: Game[] = [
       extra: 60,
       completionist: 142,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: "Dragon's Dogma II",
     platforms: 'Nintendo 3DS',
     genres: 'RPG, Turn-based Strategy',
@@ -9569,9 +9569,9 @@ export const gameDetails: Game[] = [
       extra: 56.5,
       completionist: 93.5,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Animal Well',
     redactName: true,
     platforms: 'PS5, Switch, PC, XBXS',
@@ -9583,9 +9583,9 @@ export const gameDetails: Game[] = [
     publishers: ['Bigmode'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftts.jpg',
+    score: '100',
   },
   {
-    score: '85',
     name: 'Bayonetta 3',
     platforms: 'Switch',
     genres: 'Action',
@@ -9601,9 +9601,9 @@ export const gameDetails: Game[] = [
       extra: 18.5,
       completionist: 47.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Cult of the Lamb',
     platforms: 'PC, PS5, XBXS, PS4, XB1, Switch',
     genres: 'Action, Strategy, Roguelike',
@@ -9619,9 +9619,9 @@ export const gameDetails: Game[] = [
       extra: 20,
       completionist: 29,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: "Marvel's Midnight Suns",
     platforms: 'XBXS, PS5, XB1, PS4, PC, Switch',
     genres: 'Strategy, Adventure, RPG',
@@ -9637,9 +9637,9 @@ export const gameDetails: Game[] = [
       extra: 65.5,
       completionist: 97,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Sonic Frontiers',
     platforms: 'Switch, PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, Platformer',
@@ -9655,9 +9655,9 @@ export const gameDetails: Game[] = [
       extra: 22,
       completionist: 27,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Triangle Strategy',
     platforms: 'Switch, PC, PS5, XBXS',
     genres: 'RPG, Strategy',
@@ -9677,9 +9677,9 @@ export const gameDetails: Game[] = [
       extra: 49,
       completionist: 105,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Stranger of Paradise: Final Fantasy Origin',
     platforms: 'XBXS, PC, PS5, XB1, PS4',
     genres: 'RPG',
@@ -9696,9 +9696,9 @@ export const gameDetails: Game[] = [
       extra: 29,
       completionist: 50.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Xenoblade Chronicles 3',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -9714,9 +9714,9 @@ export const gameDetails: Game[] = [
       extra: 102,
       completionist: 174,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'OlliOlli World',
     platforms: 'XBXS, PS5, XB1, PS4, Switch, PC',
     genres: 'Action, Platformer, Arcade',
@@ -9732,9 +9732,9 @@ export const gameDetails: Game[] = [
       extra: 12,
       completionist: 56,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Pentiment',
     platforms: 'PC, XBXS, XB1, PS5, Switch, PS4',
     genres: 'Adventure',
@@ -9750,9 +9750,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 26,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Splatoon 3',
     platforms: 'Switch',
     genres: 'Action, Third-Person Shooter',
@@ -9768,9 +9768,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 18.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'Evil West',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action, Third-Person Shooter',
@@ -9786,9 +9786,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 22.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Tunic',
     platforms: 'PC, XBXS, XB1, PS4, PS5, Switch',
     genres: 'Action, RPG',
@@ -9804,9 +9804,9 @@ export const gameDetails: Game[] = [
       extra: 16.5,
       completionist: 21.5,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Sniper Elite 5',
     platforms: 'PC, XBXS, PS5, PS4, XB1',
     genres: 'First-Person Shooter',
@@ -9822,9 +9822,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 41.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'WWE 2K22',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Sports',
@@ -9835,9 +9835,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf7i4.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Weird West',
     platforms: 'XB1, PS4, PC, PS5, XBXS',
     genres: 'Action, RPG',
@@ -9848,9 +9848,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7fv9.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Shadow Warrior 3',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action',
@@ -9861,9 +9861,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8eam.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Mario Strikers: Battle League',
     platforms: 'Switch',
     genres: 'Sports, Arcade',
@@ -9874,9 +9874,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftns.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Nintendo Switch Sports',
     platforms: 'Switch',
     overrideMask: '******** ****** S*****',
@@ -9888,9 +9888,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftny.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'The King of Fighters XV',
     platforms: 'PC, XBXS, PS5, PS4, XB1',
     genres: 'Fighting',
@@ -9901,9 +9901,9 @@ export const gameDetails: Game[] = [
     publishers: ['SNK', 'Koch Media', 'Prime Matter'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrga.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Fire Emblem Warriors: Three Hopes',
     platforms: 'Switch',
     genres: 'Action, RPG',
@@ -9914,9 +9914,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftus.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Rollerdrome',
     platforms: 'PS4, PC, PS5, XBXS',
     genres: 'Action',
@@ -9927,9 +9927,9 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch7l1.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Steelrising',
     platforms: 'XBXS, PS5, PC',
     genres: 'RPG',
@@ -9940,9 +9940,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nacon'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch4u0.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Return to Monkey Island',
     platforms: 'Switch, PC, PS5, XB1, XBXS',
     genres: 'Puzzle, Adventure',
@@ -9953,9 +9953,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgy3v.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Two Point Campus',
     platforms: 'Switch, PC, XBXS, PS5, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -9966,9 +9966,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sca7c5.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'As Dusk Falls',
     platforms: 'XBXS, PC, XB1, PS5, PS4',
     genres: 'Art, Interactive Story',
@@ -9979,9 +9979,9 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scheuw.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Thymesia',
     platforms: 'PC, PS5, XBXS, Switch, XB1, PS4',
     genres: 'Action, RPG',
@@ -9992,9 +9992,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96g4.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Scorn',
     platforms: 'XB1, PC, XBXS',
     genres: 'Adventure, Horror, Action',
@@ -10005,9 +10005,9 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive', 'Ebb Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ezq5wfc1nj3jmiyhdvu4.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Metal: Hellsinger',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'First-Person Shooter',
@@ -10018,9 +10018,9 @@ export const gameDetails: Game[] = [
     publishers: ['Level Infinite', 'Funcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bfm.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Sonic Origins',
     platforms: 'XBXS, PS5, Switch, PS4, XB1, PC',
     genres: 'Action, Platformer',
@@ -10031,9 +10031,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schl6y.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'High on Life',
     platforms: 'PC, XBXS, XB1',
     genres: 'First-Person Shooter, Action',
@@ -10044,9 +10044,9 @@ export const gameDetails: Game[] = [
     publishers: ['Squanch Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdmm.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'NBA 2K23',
     platforms: 'PS5, Switch, XBXS, XB1, PS4, PC',
     genres: 'Sports',
@@ -10057,9 +10057,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn8pv.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'F1 22',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Sports, Racing, Simulation',
@@ -10070,9 +10070,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgpe6.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'Eiyuden Chronicle: Rising',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Adventure, RPG',
@@ -10083,9 +10083,9 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahjz.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'Kao the Kangaroo',
     platforms: 'PC, Switch, PS5, XBXS, PS4, XB1',
     genres: 'Action, Platformer, Arcade',
@@ -10096,9 +10096,9 @@ export const gameDetails: Game[] = [
     publishers: ['Titus Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqmeqweuvwdkefsx8qg4.jpg',
+    score: '100',
   },
   {
-    score: '67',
     name: 'New Tales from the Borderlands',
     platforms: 'Switch, PC, XBXS, PS5, PS4',
     genres: 'Action, Adventure',
@@ -10109,9 +10109,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sciibf.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'FIFA 23',
     platforms: 'PC, PS5, XBXS, XB1, PS4, Switch',
     genres: 'Sports, Simulation',
@@ -10122,9 +10122,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sci00g.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: 'Neon White',
     platforms: 'Switch, PC, PS4, PS5, XB1, XBXS',
     genres: 'Action',
@@ -10140,9 +10140,9 @@ export const gameDetails: Game[] = [
       extra: 18.5,
       completionist: 24.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Windjammers 2',
     platforms: 'Switch, PC, XBXS, PS5, PS4, XB1, Stadia',
     genres: 'Sports, Arcade',
@@ -10153,9 +10153,9 @@ export const gameDetails: Game[] = [
     publishers: ['DotEmu'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wjt.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Capcom Fighting Collection',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Arcade, Fighting',
@@ -10166,9 +10166,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm3ia.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Warhammer 40,000: Darktide',
     platforms: 'PC, XBXS, PS5',
     genres: 'Action, Strategy',
@@ -10179,9 +10179,9 @@ export const gameDetails: Game[] = [
     publishers: ['Fatshark'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g3o.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'Soulstice',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Action',
@@ -10192,9 +10192,9 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahi3.jpg',
+    score: '100',
   },
   {
-    score: '59',
     name: 'Gungrave G.O.R.E',
     platforms: 'PC, PS5, PS4, XB1, XBXS',
     genres: 'Action, Adventure',
@@ -10205,9 +10205,9 @@ export const gameDetails: Game[] = [
     publishers: ['Prime Matter'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schd2q.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'Rune Factory 5',
     platforms: 'Switch, PC',
     genres: 'RPG',
@@ -10223,9 +10223,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kx9.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Somerville',
     platforms: 'PC, XBXS, XB1, PS4, PS5',
     genres: 'Puzzle, Platformer',
@@ -10236,9 +10236,9 @@ export const gameDetails: Game[] = [
     publishers: ['Jumpship'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahj3.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Overwatch 2',
     platforms: 'PC, XBXS, PS5, XB1, PS4, Switch',
     genres: 'First-Person Shooter, Action',
@@ -10249,9 +10249,9 @@ export const gameDetails: Game[] = [
     publishers: ['Blizzard Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc78ey.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'LEGO Bricktales',
     platforms: 'XBXS, PS5, XB1, PS4, Switch, PC',
     genres: 'Puzzle, Simulation',
@@ -10262,9 +10262,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg9c6.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'Monark',
     platforms: 'Switch, PS5, PS4, PC',
     genres: 'RPG',
@@ -10275,9 +10275,9 @@ export const gameDetails: Game[] = [
     publishers: ['FuRyu', 'Clouded Leopard Entertainment Inc.', 'NIS America'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafvh.jpg',
+    score: '100',
   },
   {
-    score: '89',
     name: 'Rogue Legacy 2',
     platforms: 'XBXS, XB1, PC, Switch, PS4, PS5',
     genres: 'Roguelike, Action',
@@ -10288,9 +10288,9 @@ export const gameDetails: Game[] = [
     publishers: ['Cellar Door Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgqxk.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Total War: Warhammer III',
     platforms: 'PC',
     genres: 'Strategy',
@@ -10301,9 +10301,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Feral Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scczp7.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'V Rising',
     platforms: 'PC, PS5',
     genres: 'Survival, Action, Adventure',
@@ -10314,9 +10314,9 @@ export const gameDetails: Game[] = [
     publishers: ['Stunlock Studios', 'Tencent Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9o94.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'The DioField Chronicle',
     platforms: 'XBXS, PS5, PS4, Switch, XB1, PC',
     genres: 'Strategy, RPG',
@@ -10327,9 +10327,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg83z.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: "Marvel's Spider-Man 2",
     platforms: 'PS5, PC',
     genres: 'RPG, Action',
@@ -10345,9 +10345,9 @@ export const gameDetails: Game[] = [
       extra: 23.5,
       completionist: 28.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Final Fantasy XVI',
     platforms: 'PS5, PC',
     genres: 'Action, RPG',
@@ -10363,9 +10363,9 @@ export const gameDetails: Game[] = [
       extra: 59,
       completionist: 82,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Starfield',
     platforms: 'PC, XBXS',
     genres: 'RPG, Sci-fi',
@@ -10381,9 +10381,9 @@ export const gameDetails: Game[] = [
       extra: 74.5,
       completionist: 148,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: "Assassin's Creed Mirage",
     platforms: 'PS5, XBXS, PC, XB1, PS4',
     genres: 'Action, Adventure, RPG',
@@ -10399,9 +10399,9 @@ export const gameDetails: Game[] = [
       extra: 22.5,
       completionist: 30.5,
     },
+    score: '100',
   },
   {
-    score: '91',
     name: 'Street Fighter 6',
     platforms: 'PC, XBXS, PS5, PS4',
     genres: 'Action, Fighting',
@@ -10417,9 +10417,9 @@ export const gameDetails: Game[] = [
       extra: 34,
       completionist: 70.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Star Wars Jedi: Survivor',
     platforms: 'PS5, PC, XBXS',
     genres: 'Action, RPG',
@@ -10435,9 +10435,9 @@ export const gameDetails: Game[] = [
       extra: 34,
       completionist: 55.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Diablo IV',
     platforms: 'PS5, PS4, PC, XBXS, XB1',
     genres: 'Action, Adventure, RPG',
@@ -10453,9 +10453,9 @@ export const gameDetails: Game[] = [
       extra: 49,
       completionist: 190,
     },
+    score: '100',
   },
   {
-    score: '95',
     name: 'The Legend of Zelda: Tears of the Kingdom',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -10471,9 +10471,9 @@ export const gameDetails: Game[] = [
       extra: 116,
       completionist: 248,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Lies of P',
     platforms: 'PS5, PC, XBXS, XB1, PS4',
     genres: 'Action, Adventure',
@@ -10489,9 +10489,9 @@ export const gameDetails: Game[] = [
       extra: 36,
       completionist: 58,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Dead Island 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Horror',
@@ -10507,9 +10507,9 @@ export const gameDetails: Game[] = [
       extra: 26.5,
       completionist: 38.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Wo Long: Fallen Dynasty',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action, Adventure, RPG',
@@ -10525,9 +10525,9 @@ export const gameDetails: Game[] = [
       extra: 34.5,
       completionist: 47,
     },
+    score: '100',
   },
   {
-    score: '66',
     name: 'Forspoken',
     platforms: 'PC, PS5, PS5',
     genres: 'Action, RPG',
@@ -10543,9 +10543,9 @@ export const gameDetails: Game[] = [
       extra: 26,
       completionist: 57.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Armored Core VI: Fires of Rubicon',
     platforms: 'PC, PS5, XBXS, XB1',
     genres: 'Action, Vehicle Combat',
@@ -10561,9 +10561,9 @@ export const gameDetails: Game[] = [
       extra: 28.5,
       completionist: 50.5,
     },
+    score: '100',
   },
   {
-    score: '84',
     name: 'Mortal Kombat 1',
     platforms: 'PC, PS5, XBXS, Switch',
     genres: 'Fighting, Action',
@@ -10579,9 +10579,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 63.5,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Avatar: Frontiers of Pandora',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action',
@@ -10597,9 +10597,9 @@ export const gameDetails: Game[] = [
       extra: 42.5,
       completionist: 83.5,
     },
+    score: '100',
   },
   {
-    score: '91',
     name: 'Super Mario Bros. Wonder',
     platforms: 'Switch',
     genres: 'Action, Platformer',
@@ -10615,9 +10615,9 @@ export const gameDetails: Game[] = [
       extra: 13.5,
       completionist: 20,
     },
+    score: '100',
   },
   {
-    score: '57',
     name: 'Redfall',
     platforms: 'PC, XBXS',
     genres: 'Action, First-Person Shooter',
@@ -10633,9 +10633,9 @@ export const gameDetails: Game[] = [
       extra: 19.5,
       completionist: 31,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Atomic Heart',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -10651,9 +10651,9 @@ export const gameDetails: Game[] = [
       extra: 25,
       completionist: 36.5,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Hi-Fi Rush',
     searchTerms: ['hifi rush', 'hi fi rush', 'hi - fi rush'],
     platforms: 'XBXS, PC, PS5',
@@ -10670,9 +10670,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 59.5,
     },
+    score: '100',
   },
   {
-    score: '89',
     name: 'Sea of Stars',
     platforms: 'PC, Switch, XBXS, PS5, XB1, PS4',
     genres: 'Adventure, RPG, Turn-Based Strategy',
@@ -10688,9 +10688,9 @@ export const gameDetails: Game[] = [
       extra: 35.5,
       completionist: 43.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Fire Emblem Engage',
     platforms: 'Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -10706,9 +10706,9 @@ export const gameDetails: Game[] = [
       extra: 65,
       completionist: 91,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Atlas Fallen',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action, Adventure, RPG',
@@ -10724,9 +10724,9 @@ export const gameDetails: Game[] = [
       extra: 19,
       completionist: 28.5,
     },
+    score: '100',
   },
   {
-    score: '72',
     name: 'Immortals of Aveum',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action',
@@ -10742,9 +10742,9 @@ export const gameDetails: Game[] = [
       extra: 20.5,
       completionist: 31.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Octopath Traveler II',
     platforms: 'PC, PS5, Switch, PS4, PS5',
     genres: 'RPG, Turn-Based Strategy, Strategy',
@@ -10760,9 +10760,9 @@ export const gameDetails: Game[] = [
       extra: 83,
       completionist: 94.5,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Like a Dragon Gaiden: The Man Who Erased His Name',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'RPG',
@@ -10778,9 +10778,9 @@ export const gameDetails: Game[] = [
       extra: 21.5,
       completionist: 33,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Remnant II',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action, Adventure, RPG',
@@ -10796,9 +10796,9 @@ export const gameDetails: Game[] = [
       extra: 29,
       completionist: 81.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Persona 5 Tactica',
     platforms: 'PS5, Switch, PC, XBXS, XB1, PS4',
     genres: 'Simulation, Strategy, RPG',
@@ -10814,9 +10814,9 @@ export const gameDetails: Game[] = [
       extra: 30.5,
       completionist: 39.5,
     },
+    score: '100',
   },
   {
-    score: '73',
     name: 'RoboCop: Rogue City',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action, First-Person Shooter, Adventure',
@@ -10832,9 +10832,9 @@ export const gameDetails: Game[] = [
       extra: 15.5,
       completionist: 17,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'One Piece Odyssey',
     platforms: 'XBXS, PS5, PS4, PC, Switch',
     genres: 'RPG',
@@ -10850,9 +10850,9 @@ export const gameDetails: Game[] = [
       extra: 46,
       completionist: 60,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Pikmin 4',
     platforms: 'Switch',
     genres: 'Adventure',
@@ -10863,9 +10863,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix20.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'LEGO 2K Drive',
     platforms: 'PC, PS4, PS5, Switch, XBXS, XB1',
     genres: 'Racing, Sports',
@@ -10876,9 +10876,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sclsfi.jpg',
+    score: '100',
   },
   {
-    score: '70',
     name: 'SpongeBob SquarePants: The Cosmic Shake',
     platforms: 'XB1, PS4, PC, Switch',
     genres: 'Action, Platformer, Adventure',
@@ -10894,9 +10894,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 14.5,
     },
+    score: '100',
   },
   {
-    score: '68',
     name: 'Exoprimal',
     platforms: 'PS5, PS4, PC, XBXS, XB1',
     genres: 'First-Person Shooter, Action',
@@ -10907,9 +10907,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg849.jpg',
+    score: '100',
   },
   {
-    score: '37',
     name: 'The Lord of the Rings: Gollum',
     platforms: 'PC, XBXS, PS5, PS4, XB1, Switch',
     genres: 'Action, Adventure',
@@ -10920,9 +10920,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nacon', 'Daedalic Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87r1.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Dredge',
     platforms: 'PC, Switch, PS5, PS4, XBXS, XB1',
     genres: 'Adventure, RPG, Action',
@@ -10933,9 +10933,9 @@ export const gameDetails: Game[] = [
     publishers: ['Team17', 'Black Salt Games', 'Team17 Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccp16.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Aliens: Dark Descent',
     platforms: 'PC, PS5, PS4, XBXS, XB1',
     genres: 'Action, Strategy',
@@ -10946,9 +10946,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schclx.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Amnesia: The Bunker',
     platforms: 'PC, XBXS, XB1, PS4',
     genres: 'Horror, Survival, First-Person Shooter',
@@ -10959,9 +10959,9 @@ export const gameDetails: Game[] = [
     publishers: ['Frictional Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sck9j8.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Sonic Superstars',
     platforms: 'Switch, PS5, PS4, XBXS, XB1, PC',
     genres: 'Action, Platformer',
@@ -10972,9 +10972,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmval.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'WWE 2K23',
     platforms: 'PC, PS4, PS5, XBXS, XB1',
     genres: 'Sports, Simulation',
@@ -10985,9 +10985,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckovg.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'EA Sports FC 24',
     platforms: 'PS5, PC, XBXS, PS4, XB1, Switch',
     genres: 'Simulation, Sports',
@@ -10998,9 +10998,9 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnbfr.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Bayonetta Origins: Cereza and the Lost Demon',
     platforms: 'Switch',
     genres: 'Action, Puzzle, Adventure',
@@ -11011,9 +11011,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckac5.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'Double Dragon Gaiden: Rise of the Dragons',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Arcade',
@@ -11024,9 +11024,9 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmdw7.jpg',
+    score: '100',
   },
   {
-    score: '83',
     name: 'Viewfinder',
     platforms: 'PS5, PC, PS4, XBXS',
     genres: 'Adventure',
@@ -11037,9 +11037,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckabd.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Planet of Lana',
     platforms: 'XBXS, XB1, PC',
     genres: 'Adventure, Platformer, Puzzle',
@@ -11050,9 +11050,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagbh.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Oxenfree II: Lost Signals',
     platforms: 'PS5, PS4, Switch, PC',
     genres: 'RPG, Adventure',
@@ -11063,9 +11063,9 @@ export const gameDetails: Game[] = [
     publishers: ['Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm6ph.jpg',
+    score: '100',
   },
   {
-    score: '90',
     name: 'Dave the Diver',
     platforms: 'PC, Switch, PS4, PS5',
     genres: 'RPG, Roguelike',
@@ -11081,9 +11081,9 @@ export const gameDetails: Game[] = [
       extra: 34,
       completionist: 51,
     },
+    score: '100',
   },
   {
-    score: '86',
     name: 'Theatrhythm Final Bar Line',
     platforms: 'Switch, PS4',
     genres: 'Music, RPG',
@@ -11094,9 +11094,9 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0h.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Master Detective Archives: Rain Code',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -11107,9 +11107,9 @@ export const gameDetails: Game[] = [
     publishers: ['Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0s.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'Scars Above',
     platforms: 'PC, PS4, PS5, XBXS, XB1',
     genres: 'Third-Person Shooter, Action, Adventure',
@@ -11120,9 +11120,9 @@ export const gameDetails: Game[] = [
     publishers: ['Prime Matter'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii8e.jpg',
+    score: '100',
   },
   {
-    score: '84',
     name: 'Jusant',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action, Adventure',
@@ -11133,9 +11133,9 @@ export const gameDetails: Game[] = [
     publishers: ["DON'T NOD"],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwn6.jpg',
+    score: '100',
   },
   {
-    score: '74',
     name: 'Disney Illusion Island',
     platforms: 'Switch',
     genres: 'Action, Platformer, Adventure',
@@ -11146,9 +11146,9 @@ export const gameDetails: Game[] = [
     publishers: ['Disney Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipjm.jpg',
+    score: '100',
   },
   {
-    score: '73',
     name: 'WarioWare: Move It!',
     platforms: 'Switch',
     genres: 'Action',
@@ -11159,9 +11159,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3lt.jpg',
+    score: '100',
   },
   {
-    score: '86',
     name: 'Ghost Trick: Phantom Detective',
     platforms: 'XBXS, PS5, XB1, Switch, PS4, PC',
     genres: 'Action, Adventure',
@@ -11172,9 +11172,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scl69k.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Darkest Dungeon II',
     platforms: 'PC, PS5, PS4, XBXS, XB1, Switch',
     genres: 'RPG, Strategy, Roguelike',
@@ -11185,9 +11185,9 @@ export const gameDetails: Game[] = [
     publishers: ['Red Hook Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmgi5.jpg',
+    score: '100',
   },
   {
-    score: '66',
     name: 'Detective Pikachu Returns',
     platforms: 'Switch',
     genres: 'Adventure',
@@ -11203,9 +11203,9 @@ export const gameDetails: Game[] = [
       extra: 14,
       completionist: 14.5,
     },
+    score: '100',
   },
   {
-    score: '78',
     name: 'Company of Heroes 3',
     platforms: 'PC',
     genres: 'Real-Time Strategy, Action',
@@ -11216,9 +11216,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrpl.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Hot Wheels Unleashed 2: Turbocharged',
     platforms: 'Switch, PS5, PC, XBXS, PS4, XB1',
     genres: 'Racing, Arcade',
@@ -11229,9 +11229,9 @@ export const gameDetails: Game[] = [
     publishers: ['Milestone'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmr91.jpg',
+    score: '100',
   },
   {
-    score: '62',
     name: 'Fort Solis',
     platforms: 'PS5, PC, XBXS',
     genres: 'Action, Adventure',
@@ -11242,9 +11242,9 @@ export const gameDetails: Game[] = [
     publishers: ['Plug In Digital', 'Dear Villagers'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schcmo.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Cocoon',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Puzzle, Adventure',
@@ -11255,9 +11255,9 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdn0.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'The Texas Chain Saw Massacre',
     platforms: 'PC, PS5, PS4, XB1, XBXS',
     genres: 'Horror, Survival, Action, Adventure',
@@ -11268,9 +11268,9 @@ export const gameDetails: Game[] = [
     publishers: ['Gun Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scijsm.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Atelier Ryza 3: Alchemist of the End & the Secret Key',
     platforms: 'Switch, PS5, PC, PS4',
     genres: 'RPG',
@@ -11281,9 +11281,9 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0o.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Warhammer 40,000: Boltgun',
     platforms: 'PS5, XBXS, PC, PS4, Switch, XB1',
     genres: 'First-Person Shooter, Action, Arcade',
@@ -11294,9 +11294,9 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch75f.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Stray Gods: The Roleplaying Musical',
     platforms: 'PS5, PC, PS4, XB1, XBXS, Switch',
     genres: 'Adventure, RPG',
@@ -11307,9 +11307,9 @@ export const gameDetails: Game[] = [
     publishers: ['Humble Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sci28i.jpg',
+    score: '100',
   },
   {
-    score: '72',
     name: 'The Outlast Trials',
     platforms: 'PC, PS4, PS5, XB1, XBXS',
     genres: 'Horror, Survival, Adventure',
@@ -11320,9 +11320,9 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8yyo.jpg',
+    score: '100',
   },
   {
-    score: '81',
     name: 'Fate/Samurai Remnant',
     platforms: 'PC, Switch, PS4, PS5',
     genres: 'Action, RPG',
@@ -11333,9 +11333,9 @@ export const gameDetails: Game[] = [
     publishers: ['Tecmo Koei Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3l3.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Horizon Call of the Mountain',
     platforms: 'PSVR, PS5',
     genres: 'Action, Adventure',
@@ -11346,9 +11346,9 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf49t.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Gunbrella',
     platforms: 'PC, Switch',
     genres: 'Action, Platformer, Adventure',
@@ -11359,9 +11359,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgz22.jpg',
+    score: '100',
   },
   {
-    score: '87',
     name: 'Indiana Jones and the Great Circle',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action, Adventure',
@@ -11377,9 +11377,9 @@ export const gameDetails: Game[] = [
       extra: 25.5,
       completionist: 39,
     },
+    score: '100',
   },
   {
-    score: '59',
     name: 'Suicide Squad: Kill The Justice League',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -11395,9 +11395,9 @@ export const gameDetails: Game[] = [
       extra: 18.5,
       completionist: 43.5,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Star Wars Outlaws',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action',
@@ -11413,9 +11413,9 @@ export const gameDetails: Game[] = [
       extra: 35.5,
       completionist: 66.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Prince of Persia: The Lost Crown',
     platforms: 'Switch, PS5, XB1, PS4, PC, XBXS',
     genres: 'Metroidvania, Action, Platformer',
@@ -11431,9 +11431,9 @@ export const gameDetails: Game[] = [
       extra: 24.5,
       completionist: 31,
     },
+    score: '100',
   },
   {
-    score: '95',
     name: 'Astro Bot',
     platforms: 'PS5',
     genres: 'Platformer',
@@ -11449,9 +11449,9 @@ export const gameDetails: Game[] = [
       extra: 15,
       completionist: 18.5,
     },
+    score: '100',
   },
   {
-    score: '93',
     name: 'Metaphor: ReFantazio',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'RPG',
@@ -11467,9 +11467,9 @@ export const gameDetails: Game[] = [
       extra: 88,
       completionist: 108,
     },
+    score: '100',
   },
   {
-    score: '90',
     name: 'Tekken 8',
     platforms: 'PC, PS5, XBXS',
     genres: 'Fighting',
@@ -11485,9 +11485,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 17,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Stellar Blade',
     platforms: 'PS5, PC',
     genres: 'Action, Adventure',
@@ -11503,9 +11503,9 @@ export const gameDetails: Game[] = [
       extra: 37.5,
       completionist: 57,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: "Senua's Saga: Hellblade II",
     platforms: 'XBXS, PC',
     genres: 'Action, Adventure',
@@ -11521,9 +11521,9 @@ export const gameDetails: Game[] = [
       extra: 8,
       completionist: 9.5,
     },
+    score: '100',
   },
   {
-    score: '87',
     name: 'Silent Hill 2',
     platforms: 'PS5, PC',
     genres: 'Horror',
@@ -11539,9 +11539,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '83',
     name: 'Call of Duty: Black Ops 6',
     platforms: 'PC, PS5, XBXS, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -11557,9 +11557,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 39.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Dragon Age: The Veilguard',
     platforms: 'PC, XBXS, PS5',
     genres: 'RPG, Adventure, Action',
@@ -11575,9 +11575,9 @@ export const gameDetails: Game[] = [
       extra: 62.5,
       completionist: 78.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Rise of the Ronin',
     platforms: 'PS5, PC',
     genres: 'Action, RPG',
@@ -11593,9 +11593,9 @@ export const gameDetails: Game[] = [
       extra: 52.5,
       completionist: 67.5,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'The Legend of Zelda: Echoes of Wisdom',
     platforms: 'Switch',
     genres: 'Action',
@@ -11611,9 +11611,9 @@ export const gameDetails: Game[] = [
       extra: 26.5,
       completionist: 34.5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'The Plucky Squire',
     platforms: 'PC, PS5, Switch, XBXS',
     genres: 'Action, Adventure',
@@ -11629,9 +11629,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 10.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Banishers: Ghosts of New Eden',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action, Adventure, RPG',
@@ -11647,9 +11647,9 @@ export const gameDetails: Game[] = [
       extra: 45.5,
       completionist: 61.5,
     },
+    score: '100',
   },
   {
-    score: '71',
     name: 'Life is Strange: Double Exposure',
     platforms: 'PC, PS5, XBXS',
     genres: 'Adventure',
@@ -11665,9 +11665,9 @@ export const gameDetails: Game[] = [
       extra: 14.5,
       completionist: 20.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'Sonic X Shadow Generations',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, 3D Platformer',
@@ -11683,9 +11683,9 @@ export const gameDetails: Game[] = [
       extra: 11,
       completionist: 29,
     },
+    score: '100',
   },
   {
-    score: '85',
     name: 'Frostpunk 2',
     platforms: 'PC, PS5, XBXS',
     genres: 'Strategy, Simulation',
@@ -11701,9 +11701,9 @@ export const gameDetails: Game[] = [
       extra: 21,
       completionist: 65.5,
     },
+    score: '100',
   },
   {
-    score: '77',
     name: 'Mario & Luigi: Brothership',
     platforms: 'Switch',
     genres: 'Action, RPG',
@@ -11719,9 +11719,9 @@ export const gameDetails: Game[] = [
       extra: 49,
       completionist: 59,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Kunitsu-Gami: Path of the Goddess',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action, Strategy',
@@ -11737,9 +11737,9 @@ export const gameDetails: Game[] = [
       extra: 21.5,
       completionist: 34.5,
     },
+    score: '100',
   },
   {
-    score: '74',
     name: 'Sand Land',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Action, RPG',
@@ -11755,9 +11755,9 @@ export const gameDetails: Game[] = [
       extra: 37,
       completionist: 57.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Granblue Fantasy: Relink',
     platforms: 'PS5, PC, PS4',
     genres: 'Adventure, Action, RPG',
@@ -11773,9 +11773,9 @@ export const gameDetails: Game[] = [
       extra: 32.5,
       completionist: 130,
     },
+    score: '100',
   },
   {
-    score: '75',
     name: 'Princess Peach: Showtime!',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -11791,9 +11791,9 @@ export const gameDetails: Game[] = [
       extra: 9.5,
       completionist: 18.5,
     },
+    score: '100',
   },
   {
-    score: '76',
     name: 'Tales of Kenzera: Zau',
     platforms: 'XBXS, PS5, PC, Switch',
     genres: 'Action, Puzzle, Adventure, Platformer',
@@ -11809,9 +11809,9 @@ export const gameDetails: Game[] = [
       extra: 10,
       completionist: 10.5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Black Myth: Wukong',
     platforms: 'PS5, PC, XBXS',
     genres: 'Action, RPG',
@@ -11827,9 +11827,9 @@ export const gameDetails: Game[] = [
       extra: 48,
       completionist: 67.5,
     },
+    score: '100',
   },
   {
-    score: '81',
     name: 'Super Mario Party Jamboree',
     platforms: 'Switch',
     genres: 'Strategy',
@@ -11845,9 +11845,9 @@ export const gameDetails: Game[] = [
       extra: null,
       completionist: null,
     },
+    score: '100',
   },
   {
-    score: '60',
     name: 'Skull and Bones',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action, Adventure',
@@ -11863,9 +11863,9 @@ export const gameDetails: Game[] = [
       extra: 37.5,
       completionist: 47.5,
     },
+    score: '100',
   },
   {
-    score: '88',
     name: 'Paper Mario: The Thousand-Year Door',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -11881,9 +11881,9 @@ export const gameDetails: Game[] = [
       extra: 38,
       completionist: 54.5,
     },
+    score: '100',
   },
   {
-    score: '80',
     name: 'WWE 2K24',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'Fighting, Sports, Simulation',
@@ -11894,9 +11894,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqpk2.jpg',
+    score: '100',
   },
   {
-    score: '88',
     name: 'Unicorn Overlord',
     platforms: 'XBXS, PS5, PS4, Switch',
     genres: 'Strategy, RPG',
@@ -11907,9 +11907,9 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scojd5.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Visions of Mana',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Action, RPG',
@@ -11925,9 +11925,9 @@ export const gameDetails: Game[] = [
       extra: 43,
       completionist: 53,
     },
+    score: '100',
   },
   {
-    score: '79',
     name: 'Indika',
     platforms: 'PC, PS5, XBXS, Switch',
     genres: 'Adventure, Horror',
@@ -11943,9 +11943,9 @@ export const gameDetails: Game[] = [
       extra: 4.5,
       completionist: 5,
     },
+    score: '100',
   },
   {
-    score: '82',
     name: 'Apollo Justice: Ace Attorney Trilogy',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Interactive Story, Adventure',
@@ -11956,9 +11956,9 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom Co., LTD.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmxjm.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'Still Wakes the Deep',
     platforms: 'XBXS, PS5, PC',
     genres: 'Horror',
@@ -11969,9 +11969,9 @@ export const gameDetails: Game[] = [
     publishers: ['Secret Mode'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwnn.jpg',
+    score: '100',
   },
   {
-    score: '76',
     name: 'The Thaumaturge',
     platforms: 'PS5, XBXS, PC',
     genres: 'RPG, Adventure, Turn-Based Strategy',
@@ -11982,9 +11982,9 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scugfc.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Pepper Grinder',
     platforms: 'Switch, PC, PS4, PS5, XBXS, XB1',
     genres: 'Action, Adventure, Platformer',
@@ -11995,9 +11995,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qv5.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'Pacific Drive',
     platforms: 'PS5, PC, XBXS',
     genres: 'Adventure, Survival',
@@ -12008,9 +12008,9 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix2h.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Flintlock: The Siege of Dawn',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action, RPG',
@@ -12021,9 +12021,9 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sche0v.jpg',
+    score: '100',
   },
   {
-    score: '69',
     name: 'Outcast: A New Beginning',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action, Adventure, Third-Person Shooter',
@@ -12034,9 +12034,9 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdl2j.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: 'Anger Foot',
     platforms: 'PC',
     genres: 'Action',
@@ -12047,9 +12047,9 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schciw.jpg',
+    score: '100',
   },
   {
-    score: '79',
     name: 'Ys X: Nordics',
     platforms: 'PC, PS4, PS5, Switch',
     genres: 'Adventure, RPG, Action',
@@ -12064,9 +12064,9 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckc6k.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'Teenage Mutant Ninja Turtles: Splintered Fate',
     platforms: 'Switch, PC, Switch 2',
     genres: 'Action',
@@ -12077,9 +12077,9 @@ export const gameDetails: Game[] = [
     publishers: ['Viacom International'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sco2qw.jpg',
+    score: '100',
   },
   {
-    score: '68',
     name: 'The Casting of Frank Stone',
     platforms: 'XBXS, PS5, PC',
     genres: 'Horror',
@@ -12090,9 +12090,9 @@ export const gameDetails: Game[] = [
     publishers: ['Behaviour Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpv05.jpg',
+    score: '100',
   },
   {
-    score: '78',
     name: "Another Crab's Treasure",
     platforms: 'XBXS, PS5, Switch, PC, XB1',
     genres: 'Action, Adventure, Platformer, RPG',
@@ -12103,9 +12103,9 @@ export const gameDetails: Game[] = [
     publishers: ['Aggro Crab Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgz25.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'SteamWorld Heist II',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Adventure, Strategy',
@@ -12116,9 +12116,9 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scs086.jpg',
+    score: '100',
   },
   {
-    score: '75',
     name: 'NBA 2K25',
     platforms: 'PC, PS4, XB1, PS5, XBXS, Switch',
     genres: 'Sports, Simulation',
@@ -12129,9 +12129,9 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsziw.jpg',
+    score: '100',
   },
   {
-    score: '82',
     name: 'Crow Country',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Horror',
@@ -12142,9 +12142,9 @@ export const gameDetails: Game[] = [
     publishers: ['SFB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scp62z.jpg',
+    score: '100',
   },
   {
-    score: '80',
     name: 'The Rogue Prince of Persia',
     platforms: 'PC',
     genres: 'Action, Platformer',
@@ -12155,9 +12155,9 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyoqg.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Nobody Wants to Die',
     platforms: 'XBXS, PS5, PC',
     genres: 'Adventure, Interactive Story, Puzzle',
@@ -12168,9 +12168,9 @@ export const gameDetails: Game[] = [
     publishers: ['PLAION'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scr3db.jpg',
+    score: '100',
   },
   {
-    score: '92',
     name: 'Balatro',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -12181,9 +12181,9 @@ export const gameDetails: Game[] = [
     publishers: ['Playstack'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmsev.jpg',
+    score: '100',
   },
   {
-    score: '71',
     name: 'SCHiM',
     platforms: 'XBXS, PS5, Switch, PC, PS4, XB1',
     genres: 'Puzzle, Platformer',
@@ -12194,9 +12194,9 @@ export const gameDetails: Game[] = [
     publishers: ['Extra Nice', 'PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scscp1.jpg',
+    score: '100',
   },
   {
-    score: '77',
     name: 'Super Monkey Ball: Banana Rumble',
     platforms: 'Switch',
     genres: 'Platformer, Arcade',
@@ -12207,5 +12207,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqqvx.jpg',
+    score: '100',
   },
 ];

@@ -45,7 +45,7 @@ const Subtitle = () => {
 
   if (shouldAnimate) {
     return (
-      <motion.p
+      <motion.div
         className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1'
         initial={{ opacity: 0, scale: 0.95 }}
         animate={{
@@ -64,14 +64,14 @@ const Subtitle = () => {
         }}
       >
         {processedContent}
-      </motion.p>
+      </motion.div>
     );
   }
 
   return (
-    <p className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1'>
+    <div className='text-gray-400 text-xs py-0 sm:text-sm sm:mt-1'>
       {processedContent}
-    </p>
+    </div>
   );
 };
 

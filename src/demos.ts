@@ -136,6 +136,14 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Stranger of Paradise: Final Fantasy Origin',
     'Quantum Break',
   ],
+  '2026-02-09': [
+    'The Legend of Zelda: A Link Between Worlds',
+    'Xenoblade Chronicles X',
+    'Sea of Thieves',
+    'Back 4 Blood',
+    "Mirror's Edge Catalyst",
+  ],
+
   /*
   Battlefield 1
   */
