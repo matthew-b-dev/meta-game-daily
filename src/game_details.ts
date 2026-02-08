@@ -1619,7 +1619,7 @@ export const gameDetails: Game[] = [
   {
     score: '85',
     name: 'South Park: The Stick of Truth',
-    overrideMask: '[ ... ] : [ ... ]',
+    overrideMask: '[ ... ] **** : *** [ ... ]',
     platforms: 'PC, XB1, PS4, Switch',
     genres: 'Comedy, RPG, Turn-Based Strategy',
     releaseDate: 'Mar 4',
