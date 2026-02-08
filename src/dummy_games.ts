@@ -395,6 +395,7 @@ export const dummyGames: string[] = [
   'This War of Mine: The Little Ones',
   'Lumo',
   'Just Dance 2017',
+  'South Park: Snow Day!',
   'Masquerada: Songs and Shadows',
   'Space Hulk: Deathwing',
   'Shin Megami Tensei IV: Apocalypse',
