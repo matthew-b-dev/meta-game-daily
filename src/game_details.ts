@@ -1619,8 +1619,9 @@ export const gameDetails: Game[] = [
   {
     score: '85',
     name: 'South Park: The Stick of Truth',
+    overrideMask: '[ ... ] : [ ... ]',
     platforms: 'PC, XB1, PS4, Switch',
-    genres: 'Adventure, RPG, Turn-Based Strategy',
+    genres: 'Comedy, RPG, Turn-Based Strategy',
     releaseDate: 'Mar 4',
     releaseYear: 2014,
     reviewRank: 35,
@@ -3703,6 +3704,7 @@ export const gameDetails: Game[] = [
   {
     score: '72',
     name: 'Dead Rising 4',
+    overrideMask: '[ ... ] 4',
     platforms: 'XB1, PC, XBXS, PS4',
     genres: 'Survival, Action',
     releaseDate: 'Dec 6',

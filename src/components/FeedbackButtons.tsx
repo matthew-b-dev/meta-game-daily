@@ -128,7 +128,7 @@ const FeedbackButtons: React.FC<FeedbackButtonsProps> = ({ isOpen }) => {
                   handleSendCustomFeedback();
                 }
               }}
-              placeholder='I will read this!'
+              placeholder='Enter feedback...'
               className='flex-1 px-3 py-[0px] text-sm bg-white border border-gray-600 rounded-lg text-black placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent'
               maxLength={100}
               autoFocus
