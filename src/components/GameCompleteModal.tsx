@@ -114,7 +114,7 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 <span>for PC Game Trivia ...</span>
               </div>
               <button
-                className='w-full px-4 py-2 rounded bg-gray-700 hover:bg-gray-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
+                className='w-full px-4 py-2 rounded bg-gray-700 border-zinc-400 hover:bg-gray-600 text-white text-sm font-semibold flex items-center justify-center gap-2 disabled:bg-gray-600 disabled:cursor-not-allowed disabled:opacity-50'
                 onClick={() =>
                   window.open('https://steamdetective.wtf/', '_blank')
                 }
@@ -122,8 +122,8 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
               >
                 <span className='flex'>
                   Check out 🕵️
-                  <span className='text-yellow-500 pl-1'>
-                    steamdetective.wtf
+                  <span className='text-yellow-500 pl-1 underline'>
+                    SteamDetective.wtf
                   </span>
                   <span className='pl-1'>!</span>
                 </span>

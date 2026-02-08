@@ -53,67 +53,71 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
-  // Stack dots vertically when scores are the same
-  // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
-  const MAX_STACK_HEIGHT = 4;
-
   // Build dot plot data: separate user's score from others
-  const { otherScoresData, userScoreData, scoreOverflows } = useMemo(() => {
-    const scoreCounts: Record<number, number> = {};
-    const finalCounts: Record<number, number> = {}; // Track total count per score
-    const others: { x: number; y: number }[] = [];
-    let userPlaced = false;
+  const { otherScoresData, userScoreData, scoreOverflows, MAX_STACK_HEIGHT } =
+    useMemo(() => {
+      // Stack dots vertically when scores are the same
+      // Cap stacking at MAX_STACK_HEIGHT to prevent chart from getting too tall
+      // Use more compact layout when there are many scores (>55)
+      const MAX_STACK_HEIGHT = todayScores.length > 55 ? 6 : 4;
 
-    // Place user's dot at the bottom (y=0)
-    const user = [{ x: totalScore, y: 0 }];
+      const scoreCounts: Record<number, number> = {};
+      const finalCounts: Record<number, number> = {}; // Track total count per score
+      const others: { x: number; y: number }[] = [];
+      let userPlaced = false;
 
-    // Initialize count for user's score since they occupy y=0
-    scoreCounts[totalScore] = 1;
+      // Place user's dot at the bottom (y=0)
+      const user = [{ x: totalScore, y: 0 }];
 
-    // Sort scores so we process them in order
-    const sorted = [...todayScores].sort((a, b) => a - b);
+      // Initialize count for user's score since they occupy y=0
+      scoreCounts[totalScore] = 1;
 
-    for (const score of sorted) {
-      if (!scoreCounts[score]) scoreCounts[score] = 0;
-      if (!finalCounts[score]) finalCounts[score] = 0;
+      // Sort scores so we process them in order
+      const sorted = [...todayScores].sort((a, b) => a - b);
 
-      finalCounts[score]++; // Track total count
+      for (const score of sorted) {
+        if (!scoreCounts[score]) scoreCounts[score] = 0;
+        if (!finalCounts[score]) finalCounts[score] = 0;
 
-      if (score === totalScore && !userPlaced) {
-        // Skip user's score on first occurrence since it's already placed at y=0
-        userPlaced = true;
-        continue;
+        finalCounts[score]++; // Track total count
+
+        if (score === totalScore && !userPlaced) {
+          // Skip user's score on first occurrence since it's already placed at y=0
+          userPlaced = true;
+          continue;
+        }
+
+        // Only add dots up to MAX_STACK_HEIGHT
+        if (scoreCounts[score] < MAX_STACK_HEIGHT) {
+          others.push({ x: score, y: scoreCounts[score] });
+          scoreCounts[score]++;
+        }
       }
 
-      // Only add dots up to MAX_STACK_HEIGHT
-      if (scoreCounts[score] < MAX_STACK_HEIGHT) {
-        others.push({ x: score, y: scoreCounts[score] });
-        scoreCounts[score]++;
-      }
-    }
+      // Identify scores with overflow (more players than visible dots)
+      const overflows: Record<number, number> = {};
+      Object.keys(finalCounts).forEach((scoreStr) => {
+        const s = parseInt(scoreStr);
+        const total = finalCounts[s];
+        if (total > MAX_STACK_HEIGHT) {
+          overflows[s] = total;
+        }
+      });
 
-    // Identify scores with overflow (more players than visible dots)
-    const overflows: Record<number, number> = {};
-    Object.keys(finalCounts).forEach((scoreStr) => {
-      const s = parseInt(scoreStr);
-      const total = finalCounts[s];
-      if (total > MAX_STACK_HEIGHT) {
-        overflows[s] = total;
-      }
-    });
+      return {
+        otherScoresData: others,
+        userScoreData: user,
+        scoreOverflows: overflows,
+        MAX_STACK_HEIGHT,
+      };
+    }, [todayScores, totalScore]);
 
-    return {
-      otherScoresData: others,
-      userScoreData: user,
-      scoreOverflows: overflows,
-    };
-  }, [todayScores, totalScore]);
-
-  // Calculate max Y for axis range (capped at 4)
+  // Calculate max Y for axis range
   const maxY = useMemo(() => {
     const all = [...otherScoresData, ...userScoreData];
-    return Math.min(Math.max(...all.map((d) => d.y), 0), 4);
-  }, [otherScoresData, userScoreData]);
+    const cap = todayScores.length > 55 ? 6 : 4;
+    return Math.min(Math.max(...all.map((d) => d.y), 0), cap);
+  }, [otherScoresData, userScoreData, todayScores.length]);
 
   const chartOptions: ApexOptions = useMemo(
     () => ({
@@ -140,7 +144,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
       },
       colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
       markers: {
-        size: [7, 11],
+        size: [todayScores.length > 55 ? 5 : 7, 11],
         strokeWidth: [0, 2],
         strokeColors: ['transparent', '#ffffff'],
         hover: { size: undefined, sizeOffset: 0 },
@@ -253,7 +257,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
         ],
       },
     }),
-    [maxY, scoreOverflows, userScoreData],
+    [todayScores.length, maxY, scoreOverflows, userScoreData, MAX_STACK_HEIGHT],
   );
 
   const chartSeries = useMemo(
@@ -589,7 +593,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                   options={chartOptions}
                   series={chartSeries}
                   type='scatter'
-                  height={95 + maxY * 18}
+                  height={95 + maxY * (todayScores.length > 55 ? 9 : 18)}
                 />
               </motion.div>
             )}
