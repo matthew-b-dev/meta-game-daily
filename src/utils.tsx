@@ -87,100 +87,12 @@ export interface ShuffleGameState {
   viewingRound?: number; // Track which round user is viewing after completion
 }
 
-// Steam Detective state interface (without puzzleDate - stored at root level)
-export interface SteamDetectiveState {
-  currentClue: number;
-  guessesRemaining: number;
-  isComplete: boolean;
-  isCorrect: boolean;
-  guesses: MissedGuess[];
-  totalGuesses: number; // Total number of guesses made (including skips)
-  scoreSent: boolean; // Track if the score has been sent to the database
-  revealedTitle?: string; // The game title for this puzzle
-}
-
 // Unified storage structure for all game types
 export interface UnifiedGameState {
   puzzleDate: string;
   guessingGame?: Omit<SessionState, 'puzzleDate'>;
   shuffleGame?: ShuffleGameState;
-  steamDetective?: SteamDetectiveState;
-  steamDetectiveExpert?: SteamDetectiveState;
-  expertStarted?: boolean; // Track if user has clicked to start expert case
 }
-
-/**
- * Load Steam Detective state from localStorage
- */
-export const loadSteamDetectiveState = (
-  currentPuzzleDate: string,
-  caseFile: 'easy' | 'expert' = 'easy',
-): SteamDetectiveState | null => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return null;
-
-    const unifiedState: UnifiedGameState = JSON.parse(saved);
-    // Only restore if it's the same puzzle date
-    if (unifiedState.puzzleDate !== currentPuzzleDate) {
-      return null;
-    }
-
-    // Select the appropriate state based on case file
-    const stateToLoad =
-      caseFile === 'easy'
-        ? unifiedState.steamDetective
-        : unifiedState.steamDetectiveExpert;
-
-    // Migrate old guesses format (string[]) to new format (MissedGuess[])
-    if (stateToLoad && stateToLoad.guesses) {
-      if (
-        stateToLoad.guesses.length > 0 &&
-        typeof stateToLoad.guesses[0] === 'string'
-      ) {
-        stateToLoad.guesses = (stateToLoad.guesses as unknown as string[]).map(
-          (name: string) => ({
-            name,
-            isClose: false,
-          }),
-        );
-      }
-    }
-
-    return stateToLoad || null;
-  } catch (error) {
-    console.error('Failed to load Steam Detective state:', error);
-    return null;
-  }
-};
-
-/**
- * Save Steam Detective state to localStorage
- */
-export const saveSteamDetectiveState = (
-  puzzleDate: string,
-  state: SteamDetectiveState,
-  caseFile: 'easy' | 'expert' = 'easy',
-): void => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const unifiedState: UnifiedGameState = saved
-      ? JSON.parse(saved)
-      : { puzzleDate };
-
-    // Update puzzle date and appropriate Steam Detective state
-    unifiedState.puzzleDate = puzzleDate;
-    if (caseFile === 'easy') {
-      unifiedState.steamDetective = state;
-    } else {
-      unifiedState.steamDetectiveExpert = state;
-    }
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
-  } catch (error) {
-    console.error('Failed to save Steam Detective state:', error);
-  }
-};
 
 /**
  * Load shuffle game state from localStorage

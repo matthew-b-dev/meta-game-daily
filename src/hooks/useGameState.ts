@@ -6,7 +6,6 @@ import {
   type GameState,
   type MissedGuess,
 } from '../utils';
-import { fetchTodayScores } from '../lib/supabaseClient';
 
 interface UseGameStateProps {
   puzzleDate: string;
@@ -66,21 +65,6 @@ export const useGameState = ({
   );
   const [scoreSent, setScoreSent] = useState(savedState?.scoreSent ?? false);
   const [initialScores, setInitialScores] = useState<number[]>([]);
-
-  // Fetch today's scores on mount
-  useEffect(() => {
-    const fetchScores = async () => {
-      try {
-        const scores = await fetchTodayScores();
-        setInitialScores(scores);
-      } catch (error) {
-        console.error('Failed to fetch scores from Supabase:', error);
-        setInitialScores([]);
-      }
-    };
-
-    fetchScores();
-  }, []);
 
   // Save to localStorage whenever relevant state changes
   useEffect(() => {
