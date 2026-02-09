@@ -15,6 +15,8 @@ export const CLOSE_GUESS_SERIES = [
   'hellblade',
   'deus ex',
   'south park',
+  'splatoon',
+  'persona',
 ];
 
 export interface SubtitleConfig {
