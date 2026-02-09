@@ -15,14 +15,6 @@ Play the live game [here](https://metagamedaily.com/).
   - Strategic reveals can help you make educated guesses
 - **Completion**: The game ends when all games are guessed or all 10 guesses are used
 
-### Screenshots
-
-<p align="center">
-  <img width="865" height="837" alt="image" src="https://github.com/user-attachments/assets/3a8cdd83-f255-412d-9d81-91a293b78c07" />
-  <img width="835" height="629" alt="image" src="https://github.com/user-attachments/assets/e3fccbe0-8798-4abd-bffc-221e8597e58b" />
-</p>
-
----
 
 Share text:
 
@@ -74,25 +66,9 @@ The **Weekend Shuffle** is a special game mode available on **Saturdays and Sund
 
 ### Round Details
 
-- **Round 1**: Sort by HowLongToBeat "Main Story" time (shortest to longest)
-- **Round 2**: Sort by score (lowest to highest)
-- **Round 3**: Sort by release year (oldest to newest)
+- **Round 1**: Sort by time (shortest to longest)
+- **Round 2**: Sort by release year (oldest to newest)
 
-### Screenshots
-
-
-
----
-
-
-
-
-| Drag/Drop | Score Screen |
-| :-: | :-: |
-| <img width="267" height="491" alt="image" src="https://github.com/user-attachments/assets/9e5d9421-f60e-4f7d-b2c2-4b881c5d1a2f" /> | <img width="265" height="477" alt="image" src="https://github.com/user-attachments/assets/e4cd3275-54f8-4d1a-b90a-ce1e4c093c02" /> |
-
-
----
 
 Share text:
 
@@ -120,7 +96,7 @@ https://metagamedaily.com/
 
 - GuessingGame gameplay inspired by [boxofficega.me](https://boxofficega.me)
 - WeekendShuffle gameplay inspired by [playdisorderly.com](https://playdisorderly.com/)
-- Details and screenshots sourced from [IGDB](https://www.igdb.com/)
+- Screenshots sourced from [IGDB](https://www.igdb.com/)
 
 <!-- Add your screenshot here -->
 
