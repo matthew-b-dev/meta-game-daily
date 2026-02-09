@@ -58,7 +58,6 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'The Legend of Zelda: A Link Between Worlds',
-    overrideMask: '[ ... ] : * [ ... ]',
     platforms: '3DS',
     genres: 'Adventure',
     releaseDate: 'Nov 22',
