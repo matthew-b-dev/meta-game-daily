@@ -143,10 +143,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Back 4 Blood',
     "Mirror's Edge Catalyst",
   ],
-
-  /*
-  Battlefield 1
-  */
+  '2026-02-10': [
+    'Kunitsu-Gami: Path of the Goddess',
+    'Persona 5 Strikers',
+    'Ghostwire: Tokyo',
+    'Steep',
+    'Splatoon',
+  ],
 };
 
 /**

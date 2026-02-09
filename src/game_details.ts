@@ -12,11 +12,6 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver', 'Microsoft Studios', 'Crytek'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ktgmr55zbo10fuyiugzp.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 8.5,
-      completionist: 20,
-    },
     score: '100',
   },
   {
@@ -30,11 +25,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipec.jpg',
-    hltb: {
-      main: 10,
-      extra: 16,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -49,11 +39,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88g3.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 18.5,
-      completionist: 37.5,
-    },
     score: '100',
   },
   {
@@ -67,11 +52,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckiuz.jpg',
-    hltb: {
-      main: 16,
-      extra: 19,
-      completionist: 23.5,
-    },
     score: '100',
   },
   {
@@ -85,11 +65,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch22p.jpg',
-    hltb: {
-      main: 10,
-      extra: 14,
-      completionist: 92,
-    },
     score: '100',
   },
   {
@@ -103,11 +78,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios', 'Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wsyl4ss01miw0gwzyjyp.jpg',
-    hltb: {
-      main: 14,
-      extra: 22,
-      completionist: 44.5,
-    },
     score: '100',
   },
   {
@@ -126,11 +96,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cvguk6goe4a8uvr6yhhr.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 8,
-      completionist: 10,
-    },
     score: '100',
   },
   {
@@ -144,11 +109,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p7vggjj6y9skhwlwpxl9.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 12.5,
-      completionist: 38,
-    },
     score: '100',
   },
   {
@@ -162,11 +122,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q2fg20ux8srqbhfyiapk.jpg',
-    hltb: {
-      main: 13,
-      extra: 20.5,
-      completionist: 35,
-    },
     score: '100',
   },
   {
@@ -185,11 +140,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ebls82hbgnp4jgzh0lgr.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -203,11 +153,6 @@ export const gameDetails: Game[] = [
     publishers: ['Revolution Software', 'Ravenscourt', 'Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nhdd8gsmeyopnlpinruh.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 13.5,
-    },
     score: '100',
   },
   {
@@ -234,11 +179,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zdabrluyxacdcj2oaxx1.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 3.5,
-      completionist: 4,
-    },
     score: '100',
   },
   {
@@ -252,11 +192,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cimpyw1vntabv8tjd4sa.jpg',
-    hltb: {
-      main: 2,
-      extra: 6,
-      completionist: 16.5,
-    },
     score: '100',
   },
   {
@@ -271,11 +206,6 @@ export const gameDetails: Game[] = [
     publishers: ['Image & Form'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tpursno6hv5bl8lsbwit.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 8.5,
-    },
     score: '100',
   },
   {
@@ -294,11 +224,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ynm9vmcrdnu96nf9pqh9.jpg',
-    hltb: {
-      main: 5,
-      extra: 5.5,
-      completionist: 7,
-    },
     score: '100',
   },
   {
@@ -313,11 +238,6 @@ export const gameDetails: Game[] = [
     franchise: 'The Avengers',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vge00t2yg7abkq6uhhc1.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 24,
-      completionist: 40,
-    },
     score: '100',
   },
   {
@@ -331,11 +251,6 @@ export const gameDetails: Game[] = [
     publishers: ['Cellar Door Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/foua4nkpkcpgucm3rnkv.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 26.5,
-      completionist: 38.5,
-    },
     score: '100',
   },
   {
@@ -349,11 +264,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fx02ccqqhjihkd5v9yay.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7.5,
-      completionist: 12,
-    },
     score: '100',
   },
   {
@@ -367,11 +277,6 @@ export const gameDetails: Game[] = [
     publishers: ['Playdigious'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fo1mgwmpkmptcrcwdkpv.jpg',
-    hltb: {
-      main: 8,
-      extra: 25,
-      completionist: 110,
-    },
     score: '100',
   },
   {
@@ -385,11 +290,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q33qhqf1jq03h9smiqiz.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 12.5,
-      completionist: 28,
-    },
     score: '100',
   },
   {
@@ -403,11 +303,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rnwgncqsgstkeo4g1dqn.jpg',
-    hltb: {
-      main: 4,
-      extra: 5.5,
-      completionist: 16.5,
-    },
     score: '100',
   },
   {
@@ -421,11 +316,6 @@ export const gameDetails: Game[] = [
     publishers: ['Digital Extremes'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tmylb5knvikgpetzh9s1.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -440,11 +330,6 @@ export const gameDetails: Game[] = [
     franchise: 'Mario Bros.',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kytejsauxgbljepajro3.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 10.5,
-      completionist: 33,
-    },
     score: '100',
   },
   {
@@ -460,11 +345,6 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hgaezysyxmzihrrrvqmp.jpg',
-    hltb: {
-      main: 50,
-      extra: 104,
-      completionist: 314,
-    },
     score: '100',
   },
   {
@@ -478,11 +358,6 @@ export const gameDetails: Game[] = [
     publishers: ['Facepalm Games', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/w5dmdq9nkkesjccp9ovw.jpg',
-    hltb: {
-      main: 5,
-      extra: 5.5,
-      completionist: 6,
-    },
     score: '100',
   },
   {
@@ -496,11 +371,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ahs9pmkhhvhlf6qn9oyj.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12.5,
-      completionist: 38,
-    },
     score: '100',
   },
   {
@@ -514,11 +384,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zczipquj9zl1hvhv9dls.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -532,11 +397,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d5yjhog51yp0awvdu4zj.jpg',
-    hltb: {
-      main: 3,
-      extra: 3.5,
-      completionist: 4,
-    },
     score: '100',
   },
   {
@@ -550,11 +410,6 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ttchmblgwxki9el4eptq.jpg',
-    hltb: {
-      main: 5,
-      extra: 7,
-      completionist: 11.5,
-    },
     score: '100',
   },
   {
@@ -568,11 +423,6 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s9sn17mwt5sxnjk7ells.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -586,11 +436,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u9y8ntu9xx5kbww6nivo.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 22,
-    },
     score: '100',
   },
   {
@@ -604,11 +449,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zjkvixfkpekucrh5wm5v.jpg',
-    hltb: {
-      main: 6,
-      extra: 7.5,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -623,11 +463,6 @@ export const gameDetails: Game[] = [
     franchise: 'NBA',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s4xvvu33zpec2jtygke6.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -641,11 +476,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iubwp75uf1ghwlla3kda.jpg',
-    hltb: {
-      main: null,
-      extra: 10.5,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -666,11 +496,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rixglpugfd73h3dimang.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -684,11 +509,6 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xkkysgza2tiw8eatzsjd.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 9,
-      completionist: 12.5,
-    },
     score: '100',
   },
   {
@@ -702,11 +522,6 @@ export const gameDetails: Game[] = [
     publishers: ['10tons'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bnqyh04inqozz5haaqxs.jpg',
-    hltb: {
-      main: 2.5,
-      extra: 3.5,
-      completionist: 4,
-    },
     score: '100',
   },
   {
@@ -720,11 +535,6 @@ export const gameDetails: Game[] = [
     publishers: ['Tribute Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uvaxhjnnplsnzta59qst.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 35.5,
-      completionist: 53,
-    },
     score: '100',
   },
   {
@@ -738,11 +548,6 @@ export const gameDetails: Game[] = [
     publishers: ['HumaNature Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vpsu46qthvvmqf0uzlrt.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7,
-      completionist: 10,
-    },
     score: '100',
   },
   {
@@ -756,11 +561,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yoo4gursnbwdic7oqohs.jpg',
-    hltb: {
-      main: 2,
-      extra: 2.5,
-      completionist: 3.5,
-    },
     score: '100',
   },
   {
@@ -774,11 +574,6 @@ export const gameDetails: Game[] = [
     publishers: ['XGen Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lrafzhmalm2jzdckjszv.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 16,
-    },
     score: '100',
   },
   {
@@ -793,11 +588,6 @@ export const gameDetails: Game[] = [
     franchise: 'NBA',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zz98geegspkouon7ob13.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -811,11 +601,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nordic Games Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/udpuusozttkpmbjl6jnw.jpg',
-    hltb: {
-      main: 8,
-      extra: 12,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -829,11 +614,6 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fzcspu9ttrfqrkwtddlj.jpg',
-    hltb: {
-      main: 25,
-      extra: 58.5,
-      completionist: 165,
-    },
     score: '100',
   },
   {
@@ -847,11 +627,6 @@ export const gameDetails: Game[] = [
     publishers: ['Wargaming.net'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arnxx.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -865,11 +640,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/golu6uaqhvb9zekidceg.jpg',
-    hltb: {
-      main: 20.5,
-      extra: null,
-      completionist: 56,
-    },
     score: '100',
   },
   {
@@ -883,11 +653,6 @@ export const gameDetails: Game[] = [
     publishers: ['Digerati Distribution'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvnyooxn8ene8vxxp7cq.jpg',
-    hltb: {
-      main: 4,
-      extra: 7,
-      completionist: 19,
-    },
     score: '100',
   },
   {
@@ -902,11 +667,6 @@ export const gameDetails: Game[] = [
     franchise: 'Dota',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7frs.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -920,11 +680,6 @@ export const gameDetails: Game[] = [
     publishers: ['Midnight City', 'Annapurna Interactive', 'Fullbright'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tiobz4ny3kzkh9lo7ttk.jpg',
-    hltb: {
-      main: 2,
-      extra: 2.5,
-      completionist: 3,
-    },
     score: '100',
   },
   {
@@ -938,11 +693,6 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games', 'Hopoo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p1liluf7kxhir9nrqb2n.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 21.5,
-      completionist: 50.5,
-    },
     score: '100',
   },
   {
@@ -959,11 +709,6 @@ export const gameDetails: Game[] = [
     publishers: ['The Quantum Astrophysicists Guild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n7ythiu3pcjwnphw9urn.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 6,
-      completionist: 7.5,
-    },
     score: '100',
   },
   {
@@ -977,11 +722,6 @@ export const gameDetails: Game[] = [
     publishers: ['BlitWorks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dto1skqmyspe8szn0pcb.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 14,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -995,11 +735,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nyu Media', 'PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qm7syp9qkek42ec5pt7v.jpg',
-    hltb: {
-      main: 1,
-      extra: 4.5,
-      completionist: 17,
-    },
     score: '100',
   },
   {
@@ -1013,11 +748,6 @@ export const gameDetails: Game[] = [
     publishers: ['Abbey Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mldxru2wt0qrdzenbqxa.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 25,
-      completionist: 93,
-    },
     score: '100',
   },
   {
@@ -1031,11 +761,6 @@ export const gameDetails: Game[] = [
     publishers: ['StarQuail Games', 'Nicalis, Inc.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ey0emj6gjj8lphcxydqz.jpg',
-    hltb: {
-      main: 10,
-      extra: 11,
-      completionist: 11.5,
-    },
     score: '100',
   },
   {
@@ -1049,11 +774,6 @@ export const gameDetails: Game[] = [
     publishers: ['Analgesic Productions', 'Nnooo Pty Ltd.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xvl44ypmrmtkyjujgk51.jpg',
-    hltb: {
-      main: 6,
-      extra: 7,
-      completionist: 9.5,
-    },
     score: '100',
   },
   {
@@ -1067,11 +787,6 @@ export const gameDetails: Game[] = [
     publishers: ['Egosoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dckwurwtsjltn4ipqrqi.jpg',
-    hltb: {
-      main: null,
-      extra: 157,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1085,11 +800,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ludosity'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x6ntdyy6miydlymghh5x.jpg',
-    hltb: {
-      main: 3,
-      extra: 5,
-      completionist: 8,
-    },
     score: '100',
   },
   {
@@ -1103,11 +813,6 @@ export const gameDetails: Game[] = [
     publishers: ['Abbey Games', 'SOEDESCO Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zbqoot3f1uyi7zz5eteb.jpg',
-    hltb: {
-      main: 8,
-      extra: 21,
-      completionist: 68,
-    },
     score: '100',
   },
   {
@@ -1121,11 +826,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oqxhtgd7ygwxuyqxevm2.jpg',
-    hltb: {
-      main: 7,
-      extra: 11.5,
-      completionist: 19.5,
-    },
     score: '100',
   },
   {
@@ -1139,11 +839,6 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', 'Rockstar Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc10f95.jpg',
-    hltb: {
-      main: 32,
-      extra: 51.5,
-      completionist: 88.5,
-    },
     score: '100',
   },
   {
@@ -1157,11 +852,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ksxcegjqgvbwsqtk9kns.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -1176,11 +866,6 @@ export const gameDetails: Game[] = [
     franchise: 'Alien',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dek1ysjlwizlhh0z624o.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 22.5,
-      completionist: 34,
-    },
     score: '100',
   },
   {
@@ -1194,11 +879,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zw8acobiw81iwvpstq0t.jpg',
-    hltb: {
-      main: 9,
-      extra: 12.5,
-      completionist: 47,
-    },
     score: '100',
   },
   {
@@ -1212,11 +892,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8vuf.jpg',
-    hltb: {
-      main: 46.5,
-      extra: 87.5,
-      completionist: 129,
-    },
     score: '100',
   },
   {
@@ -1230,11 +905,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jzehv6mqtb3glfbf3h6z.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 33,
-      completionist: 62.5,
-    },
     score: '100',
   },
   {
@@ -1249,11 +919,6 @@ export const gameDetails: Game[] = [
     franchise: 'The Lord of the Rings',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/anyfu26e1hfmr45gkozd.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 24,
-      completionist: 33,
-    },
     score: '100',
   },
   {
@@ -1267,11 +932,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qc2ebgvjqzrrsc9ecspf.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 15.5,
-      completionist: 24.5,
-    },
     score: '100',
   },
   {
@@ -1285,11 +945,6 @@ export const gameDetails: Game[] = [
     publishers: ['Yacht Club Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s7dqmmyppgfphyasdbuj.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 9.5,
-      completionist: 18,
-    },
     score: '100',
   },
   {
@@ -1316,11 +971,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cpx6xdycg3hdbbnonioh.jpg',
-    hltb: {
-      main: 7,
-      extra: 10.5,
-      completionist: 17.5,
-    },
     score: '100',
   },
   {
@@ -1334,11 +984,6 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sxdqnhjaaii3ykutp4rk.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14,
-      completionist: 30.5,
-    },
     score: '100',
   },
   {
@@ -1352,11 +997,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mczvcq7qlfbvmqljgspe.jpg',
-    hltb: {
-      main: 18,
-      extra: 31,
-      completionist: 47,
-    },
     score: '100',
   },
   {
@@ -1370,11 +1010,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vijpv4dvt06fsimepmc0.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 20,
-      completionist: 40.5,
-    },
     score: '100',
   },
   {
@@ -1388,11 +1023,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rd2u6c3wochb1okq5vyc.jpg',
-    hltb: {
-      main: 17,
-      extra: 35,
-      completionist: 80,
-    },
     score: '100',
   },
   {
@@ -1406,11 +1036,6 @@ export const gameDetails: Game[] = [
     publishers: ['Supergiant Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/axc7016mm1qftco88y4y.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 16,
-    },
     score: '100',
   },
   {
@@ -1424,11 +1049,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yqxofd4vayogzqirzsj4.jpg',
-    hltb: {
-      main: 10,
-      extra: 17.5,
-      completionist: 34.5,
-    },
     score: '100',
   },
   {
@@ -1442,11 +1062,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hc8dtizgfytrnz5ha9an.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 15.5,
-    },
     score: '100',
   },
   {
@@ -1460,11 +1075,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nitb2agkdj8e76niastu.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1478,11 +1088,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zfzjqrykv4qoah7xzhme.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1510,11 +1115,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zpengo6mkmz5shyocukf.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1542,11 +1142,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pneosk2tq2m9iocckrji.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1573,11 +1168,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hburowdzumdkxidjeeq7.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7.5,
-      completionist: 9,
-    },
     score: '100',
   },
   {
@@ -1591,11 +1181,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zxnstybvmmkp483otykz.jpg',
-    hltb: {
-      main: 7,
-      extra: 8.5,
-      completionist: 11.5,
-    },
     score: '100',
   },
   {
@@ -1609,11 +1194,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix', 'Feral Interactive', 'Eidos Montréal'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sgbhfpclrk5udlowkpyq.jpg',
-    hltb: {
-      main: 11,
-      extra: 22,
-      completionist: 44.5,
-    },
     score: '100',
   },
   {
@@ -1629,11 +1209,6 @@ export const gameDetails: Game[] = [
     franchise: 'South Park',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vevt14vztlsidoewcrip.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 14.5,
-      completionist: 21,
-    },
     score: '100',
   },
   {
@@ -1647,11 +1222,6 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/afv2dc22uwldxxso4iaa.jpg',
-    hltb: {
-      main: 13,
-      extra: 38.5,
-      completionist: 222,
-    },
     score: '100',
   },
   {
@@ -1665,11 +1235,6 @@ export const gameDetails: Game[] = [
     publishers: ['Young Horses'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/chilt0qssgmhscbwiqjy.jpg',
-    hltb: {
-      main: 2.5,
-      extra: 4,
-      completionist: 7.5,
-    },
     score: '100',
   },
   {
@@ -1683,11 +1248,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', 'Aspyr Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/l2lgjnmjifj26ffvpivh.jpg',
-    hltb: {
-      main: 17,
-      extra: 49,
-      completionist: 78.5,
-    },
     score: '100',
   },
   {
@@ -1701,11 +1261,6 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nrtyeq8dfduiymrqpimm.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1719,11 +1274,6 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver', 'Koch Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ficv5pmpg84gaevkz15m.jpg',
-    hltb: {
-      main: 17,
-      extra: 25,
-      completionist: 52,
-    },
     score: '100',
   },
   {
@@ -1737,11 +1287,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/itkkfsjwvybqqo5btg4n.jpg',
-    hltb: {
-      main: 19,
-      extra: 42.5,
-      completionist: 118,
-    },
     score: '100',
   },
   {
@@ -1755,11 +1300,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bn7xdqbcwvpeznr9c8kp.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1773,11 +1313,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games', 'DC Comics'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qh2kztiqp3ssquhgpplb.jpg',
-    hltb: {
-      main: 10,
-      extra: 19.5,
-      completionist: 36.5,
-    },
     score: '100',
   },
   {
@@ -1791,11 +1326,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games', 'Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/m82bznmythcjm6ka2kic.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 31,
-    },
     score: '100',
   },
   {
@@ -1809,11 +1339,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ijybeutyicckerhwaar3.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 38,
-      completionist: 109,
-    },
     score: '100',
   },
   {
@@ -1828,11 +1353,6 @@ export const gameDetails: Game[] = [
     franchise: 'Tomb Raider',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lldpmndbvqftxnccqym4.jpg',
-    hltb: {
-      main: 5,
-      extra: 7,
-      completionist: 13.5,
-    },
     score: '100',
   },
   {
@@ -1846,11 +1366,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports', '2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qsudye7ycgeeycnwzqqn.jpg',
-    hltb: {
-      main: 20,
-      extra: 39.5,
-      completionist: 91,
-    },
     score: '100',
   },
   {
@@ -1864,11 +1379,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yscwd4zz6vljgcuaxjwa.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 21,
-      completionist: 29.5,
-    },
     score: '100',
   },
   {
@@ -1882,11 +1392,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jufjblwqffratftyn4t3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1900,11 +1405,6 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus USA'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/larj17ehraduvkodl9i4.jpg',
-    hltb: {
-      main: 2,
-      extra: 4,
-      completionist: 6.5,
-    },
     score: '100',
   },
   {
@@ -1918,11 +1418,6 @@ export const gameDetails: Game[] = [
     publishers: ['FuturLab', 'Sierra', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iwt7ouzewmvh6qpgyeuv.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 9.5,
-      completionist: 26,
-    },
     score: '100',
   },
   {
@@ -1936,11 +1431,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kit1ckxyfakykrsv5opd.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1954,11 +1444,6 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', '2K Games', 'Aspyr Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h4fjlbicz4rulqbagzat.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -1972,11 +1457,6 @@ export const gameDetails: Game[] = [
     publishers: ['Rising Star Games', 'Intergrow', 'WayForward'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rckkjcyndvfbghwa9zkn.jpg',
-    hltb: {
-      main: 8,
-      extra: 9.5,
-      completionist: 10.5,
-    },
     score: '100',
   },
   {
@@ -1990,11 +1470,6 @@ export const gameDetails: Game[] = [
     publishers: ['Kalypso Media', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bg64tewnxaipxzyxwetd.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 40.5,
-      completionist: 93.5,
-    },
     score: '100',
   },
   {
@@ -2009,11 +1484,6 @@ export const gameDetails: Game[] = [
     franchise: 'UFC',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/opetexgqdmd9r93oefmd.jpg',
-    hltb: {
-      main: 11,
-      extra: 17.5,
-      completionist: 27.5,
-    },
     score: '100',
   },
   {
@@ -2027,11 +1497,6 @@ export const gameDetails: Game[] = [
     publishers: ['FromSoftware', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hj8wcegykk7dixcrzvf4.jpg',
-    hltb: {
-      main: 43,
-      extra: 62.5,
-      completionist: 120,
-    },
     score: '100',
   },
   {
@@ -2045,11 +1510,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sierra'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/a3rob80provwefchpuu3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2063,11 +1523,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jqbooaemdv5g5q6eoolt.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 24.5,
-      completionist: 74.5,
-    },
     score: '100',
   },
   {
@@ -2081,11 +1536,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/t7eimncbgczzmhyd0ejj.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 12,
-      completionist: 28,
-    },
     score: '100',
   },
   {
@@ -2099,11 +1549,6 @@ export const gameDetails: Game[] = [
     publishers: ['Larian Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cvywmfjyq8sycaf8vwql.jpg',
-    hltb: {
-      main: 66.5,
-      extra: 85.5,
-      completionist: 108,
-    },
     score: '100',
   },
   {
@@ -2117,11 +1562,6 @@ export const gameDetails: Game[] = [
     publishers: ['Coffee Stain Studios', 'Double Eleven'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p4s4xfhxduuirn1hmwdk.jpg',
-    hltb: {
-      main: 2,
-      extra: 6.5,
-      completionist: 11.5,
-    },
     score: '100',
   },
   {
@@ -2135,11 +1575,6 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jhbxpwvdvxfwcbxkt6c2.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2153,11 +1588,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment', 'Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/om1jhfjqbap4d8jcmo5c.jpg',
-    hltb: {
-      main: 4,
-      extra: 5.5,
-      completionist: 7,
-    },
     score: '100',
   },
   {
@@ -2171,11 +1601,6 @@ export const gameDetails: Game[] = [
     publishers: ['GalaxyTrail', 'XSEED Games', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/atpmp90ip3wkkdsridk8.jpg',
-    hltb: {
-      main: 5,
-      extra: 9.5,
-      completionist: 22,
-    },
     score: '100',
   },
   {
@@ -2189,11 +1614,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ovfsvcmmbyhl5poetjhc.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 11.5,
-      completionist: 25,
-    },
     score: '100',
   },
   {
@@ -2207,11 +1627,6 @@ export const gameDetails: Game[] = [
     publishers: ['Disney Interactive Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/egmfxdiq8p59fzkb0sxz.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 10,
-      completionist: 25,
-    },
     score: '100',
   },
   {
@@ -2225,11 +1640,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pi6odeu2g4c30lttqcxk.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2248,11 +1658,6 @@ export const gameDetails: Game[] = [
     publishers: ['Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lnr5atvece8qnuwoptfq.jpg',
-    hltb: {
-      main: 6,
-      extra: 10.5,
-      completionist: 38,
-    },
     score: '100',
   },
   {
@@ -2266,11 +1671,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/j5nzqfl3reenepgf3lay.jpg',
-    hltb: {
-      main: 4,
-      extra: 6,
-      completionist: 14.5,
-    },
     score: '100',
   },
   {
@@ -2284,11 +1684,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/osjt00allssddpzxmkf5.jpg',
-    hltb: {
-      main: 1.5,
-      extra: 4.5,
-      completionist: 9.5,
-    },
     score: '100',
   },
   {
@@ -2307,11 +1702,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/farvemmmxav0bgt6wx7t.jpg',
-    hltb: {
-      main: 51.5,
-      extra: 103,
-      completionist: 174,
-    },
     score: '100',
   },
   {
@@ -2325,11 +1715,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/whhptvhci1bdoqolofjo.jpg',
-    hltb: {
-      main: 27.5,
-      extra: 83,
-      completionist: 160,
-    },
     score: '100',
   },
   {
@@ -2343,11 +1728,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/isojfap422zvz6yjuk4i.jpg',
-    hltb: {
-      main: 8,
-      extra: 13.5,
-      completionist: 25.5,
-    },
     score: '100',
   },
   {
@@ -2361,11 +1741,6 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scj1o3.jpg',
-    hltb: {
-      main: 45.5,
-      extra: 81.5,
-      completionist: 164,
-    },
     score: '100',
   },
   {
@@ -2381,11 +1756,6 @@ export const gameDetails: Game[] = [
     franchise: 'Batman',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3z1odurhninhnorve6g.jpg',
-    hltb: {
-      main: 17,
-      extra: 31.5,
-      completionist: 51,
-    },
     score: '100',
   },
   {
@@ -2399,11 +1769,6 @@ export const gameDetails: Game[] = [
     publishers: ['Techland', 'WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yvstmj75wfqrtz4um8x0.jpg',
-    hltb: {
-      main: 18,
-      extra: 36.5,
-      completionist: 64,
-    },
     score: '100',
   },
   {
@@ -2418,11 +1783,6 @@ export const gameDetails: Game[] = [
     franchise: 'Star Wars',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar4rr.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2436,11 +1796,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/aokcsspzrqyaaoug7jnn.jpg',
-    hltb: {
-      main: 32.5,
-      extra: 43.5,
-      completionist: 75.5,
-    },
     score: '100',
   },
   {
@@ -2454,11 +1809,6 @@ export const gameDetails: Game[] = [
     publishers: ['Psyonix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x2ebxdsn5kfjcnjbo7q2.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2472,11 +1822,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sgpeembg1kvvhexmub3g.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 38,
-      completionist: 63.5,
-    },
     score: '100',
   },
   {
@@ -2491,11 +1836,6 @@ export const gameDetails: Game[] = [
     franchise: 'Tomb Raider',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u3obs5jsfqponnkp3qp1.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 22,
-      completionist: 35.5,
-    },
     score: '100',
   },
   {
@@ -2509,11 +1849,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/axkvaha3d5pguyxraalz.jpg',
-    hltb: {
-      main: 19,
-      extra: 34,
-      completionist: 56,
-    },
     score: '100',
   },
   {
@@ -2528,11 +1863,6 @@ export const gameDetails: Game[] = [
     franchise: 'Mad Max',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fzi3zk3rabsote4axfkg.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2546,11 +1876,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9v.jpg',
-    hltb: {
-      main: 9,
-      extra: 15,
-      completionist: 84,
-    },
     score: '100',
   },
   {
@@ -2564,11 +1889,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/v2pnld98yq2xvs788c4o.jpg',
-    hltb: {
-      main: 8,
-      extra: 10.5,
-      completionist: 12,
-    },
     score: '100',
   },
   {
@@ -2582,11 +1902,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z7hpe8nmxiemmz648by4.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 9.5,
-      completionist: 61.5,
-    },
     score: '100',
   },
   {
@@ -2600,11 +1915,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hdl8gzvgpqayqqr5hhxg.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 16.5,
-      completionist: 68.5,
-    },
     score: '100',
   },
   {
@@ -2618,11 +1928,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5j99.jpg',
-    hltb: {
-      main: 8,
-      extra: 9.5,
-      completionist: 19,
-    },
     score: '100',
   },
   {
@@ -2636,11 +1941,6 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/au4c05q7ltgciciwprse.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2654,11 +1954,6 @@ export const gameDetails: Game[] = [
     publishers: ['The Molasses Flood', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kdofv91jcumr89hgbnfn.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 13.5,
-      completionist: 50,
-    },
     score: '100',
   },
   {
@@ -2672,11 +1967,6 @@ export const gameDetails: Game[] = [
     publishers: ['Thomas Happ Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ym91qnklxxx1kzxdk1nv.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 13.5,
-      completionist: 17,
-    },
     score: '100',
   },
   {
@@ -2690,11 +1980,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rde6b4cbthkhbdnqsv8x.jpg',
-    hltb: {
-      main: 7,
-      extra: 8.5,
-      completionist: 10.5,
-    },
     score: '100',
   },
   {
@@ -2708,11 +1993,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zlq73p3cjacya9ujcss3.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 36.5,
-      completionist: 147,
-    },
     score: '100',
   },
   {
@@ -2726,11 +2006,6 @@ export const gameDetails: Game[] = [
     publishers: ['Night School Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wlempy24kn8sskjwtjum.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 5.5,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -2744,11 +2019,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctjao.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 11,
-      completionist: 26.5,
-    },
     score: '100',
   },
   {
@@ -2762,29 +2032,19 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wjzqemocibxpi6zo3bg5.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 8.5,
-      completionist: 21.5,
-    },
     score: '100',
   },
   {
     name: 'Splatoon',
     platforms: 'Wii-U',
-    genres: 'Third-Person Shooter',
+    genres: 'Multiplayer, Third-Person Shooter, Platform',
     releaseDate: 'May 29',
     releaseYear: 2015,
     reviewRank: 32,
     developers: ['Nintendo EAD'],
     publishers: ['Nintendo'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wuvc82z6xdpxgggqmw7y.jpg',
-    hltb: {
-      main: 5,
-      extra: 11.5,
-      completionist: 19,
-    },
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uzgbrey89lpe4lyh0ity.jpg',
     score: '100',
   },
   {
@@ -2798,11 +2058,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xlwprjw9llnwnoujrffm.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2816,11 +2071,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u0wuojqftnz3qmiroqpk.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 17.5,
-      completionist: 70,
-    },
     score: '100',
   },
   {
@@ -2838,11 +2088,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qq4cmhsmhvdag2nevyjh.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 17.5,
-      completionist: 30,
-    },
     score: '100',
   },
   {
@@ -2856,11 +2101,6 @@ export const gameDetails: Game[] = [
     publishers: ['8-4', 'tobyfox'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ze8i79ycm3gyymrjvxf0.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 20.5,
-    },
     score: '100',
   },
   {
@@ -2874,11 +2114,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yrgjsakfsiype6xqhjec.jpg',
-    hltb: {
-      main: 68,
-      extra: 107,
-      completionist: 254,
-    },
     score: '100',
   },
   {
@@ -2896,11 +2131,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/edl978uv5tvpr8p6jq6r.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2914,11 +2144,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/aurgjf0zasqfsvhojnj3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -2932,11 +2157,6 @@ export const gameDetails: Game[] = [
     publishers: ['Slightly Mad Studios', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ljzbybbs0oeyojxw6pzx.jpg',
-    hltb: {
-      main: 33,
-      extra: 66,
-      completionist: 142,
-    },
     score: '100',
   },
   {
@@ -2950,11 +2170,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pmshkombgq0usnvmlrav.jpg',
-    hltb: {
-      main: 12,
-      extra: 17.5,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -2968,11 +2183,6 @@ export const gameDetails: Game[] = [
     publishers: ['Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ozslwx8j0k77kmqgztvp.jpg',
-    hltb: {
-      main: 113,
-      extra: 250,
-      completionist: 677,
-    },
     score: '100',
   },
   {
@@ -2986,11 +2196,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scw9ea.jpg',
-    hltb: {
-      main: 9,
-      extra: 13,
-      completionist: 33.5,
-    },
     score: '100',
   },
   {
@@ -3004,11 +2209,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kwrlq6atn3mcj3nilgey.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 10,
-    },
     score: '100',
   },
   {
@@ -3022,11 +2222,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eyxq75cvuttufqael9vr.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -3040,11 +2235,6 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ot1dgsxkes98dtulz0gv.jpg',
-    hltb: {
-      main: 17,
-      extra: 43.5,
-      completionist: 67,
-    },
     score: '100',
   },
   {
@@ -3058,11 +2248,6 @@ export const gameDetails: Game[] = [
     publishers: ['Harmonix Music Systems'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hj8ezv65zv7suwnb43kf.jpg',
-    hltb: {
-      main: 15,
-      extra: 74,
-      completionist: 271,
-    },
     score: '100',
   },
   {
@@ -3076,11 +2261,6 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cjqdeklk4wirw0mstkbl.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -3094,11 +2274,6 @@ export const gameDetails: Game[] = [
     publishers: ['Metanet Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yo3grrfhqnhtku7rvhyi.jpg',
-    hltb: {
-      main: 27,
-      extra: 54,
-      completionist: 415,
-    },
     score: '100',
   },
   {
@@ -3112,11 +2287,6 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'NIS America', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hvqz3ni279vx3zt76sad.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 20,
-    },
     score: '100',
   },
   {
@@ -3130,11 +2300,6 @@ export const gameDetails: Game[] = [
     publishers: ['League of Geeks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kmygrnnmztbs1a2dugc1.jpg',
-    hltb: {
-      main: 2,
-      extra: 21,
-      completionist: 99,
-    },
     score: '100',
   },
   {
@@ -3148,11 +2313,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zzycp8liuxowy7wcfblc.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 8,
-      completionist: 16.5,
-    },
     score: '100',
   },
   {
@@ -3166,11 +2326,6 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mmsh3bnixgbmyyh6neh5.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 43.5,
-      completionist: 46,
-    },
     score: '100',
   },
   {
@@ -3184,11 +2339,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/joieh4iqeym6zq8zfgjk.jpg',
-    hltb: {
-      main: 4,
-      extra: 12.5,
-      completionist: 33.5,
-    },
     score: '100',
   },
   {
@@ -3202,11 +2352,6 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'NIS America', 'Nihon Falcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihabfaqvh4ffoyjgfp2y.jpg',
-    hltb: {
-      main: 59,
-      extra: 78.5,
-      completionist: 108,
-    },
     score: '100',
   },
   {
@@ -3220,11 +2365,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oyb4up4ur3hpdjcjbqww.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -3238,11 +2378,6 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sblstyvujk48mmqqls7x.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -3256,11 +2391,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom', 'Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pd0ihodccim2uzcsmoti.jpg',
-    hltb: {
-      main: 10,
-      extra: 16,
-      completionist: 34,
-    },
     score: '100',
   },
   {
@@ -3274,11 +2404,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihuuqe2mvb8xlr2adg1n.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -3292,11 +2417,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eh248hdlvw8d5pjxxxqo.jpg',
-    hltb: {
-      main: 3,
-      extra: 4,
-      completionist: 7.5,
-    },
     score: '100',
   },
   {
@@ -3310,11 +2430,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Games', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x3lrxu99a5nztqkgorf0.jpg',
-    hltb: {
-      main: 42,
-      extra: 57.5,
-      completionist: 136,
-    },
     score: '100',
   },
   {
@@ -3328,11 +2443,6 @@ export const gameDetails: Game[] = [
     publishers: ['Wizard Soft', '4AM Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vpmganpdanfndqp47ex4.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 15.5,
-      completionist: 23,
-    },
     score: '100',
   },
   {
@@ -3927,7 +3037,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Steep',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports',
+    genres: 'Simulation, Sports, Skiing',
     releaseDate: 'Dec 2',
     releaseYear: 2016,
     reviewRank: 46,
@@ -5591,11 +4701,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nayznw6sfymbpnozvbbc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -5609,11 +4714,6 @@ export const gameDetails: Game[] = [
     publishers: ['Drinkbox Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kiqgx8mkne3ooimntmur.jpg',
-    hltb: {
-      main: 9,
-      extra: 11.5,
-      completionist: 15.5,
-    },
     score: '100',
   },
   {
@@ -5627,11 +4727,6 @@ export const gameDetails: Game[] = [
     publishers: ['Gearbox Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hkmujrspapfs7ta0iejc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -5645,11 +4740,6 @@ export const gameDetails: Game[] = [
     publishers: ['Netflix', '11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fndm0xboobfqunevr9kk.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 29.5,
-    },
     score: '100',
   },
   {
@@ -5663,11 +4753,6 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eyiqim8myxm5evrspnoa.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 31.5,
-      completionist: 60,
-    },
     score: '100',
   },
   {
@@ -5681,11 +4766,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f4stmmaz0damsllwwmnz.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -5699,11 +4779,6 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dmmaemyd8bnk7per7cim.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 25,
-      completionist: 56,
-    },
     score: '100',
   },
   {
@@ -6086,11 +5161,6 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68w0.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 26.5,
-      completionist: 40.5,
-    },
     score: '100',
   },
   {
@@ -6104,11 +5174,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z35arb0woqfqh4vimybc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -6122,11 +5187,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6l0a.jpg',
-    hltb: {
-      main: 40.5,
-      extra: 60,
-      completionist: 113,
-    },
     score: '100',
   },
   {
@@ -6140,11 +5200,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bjy498bdwpy4rvk7osez.jpg',
-    hltb: {
-      main: 11,
-      extra: 17,
-      completionist: 77,
-    },
     score: '100',
   },
   {
@@ -6158,11 +5213,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vbbxokluzwqft27e0dak.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 19,
-      completionist: 29,
-    },
     score: '100',
   },
   {
@@ -6176,11 +5226,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eqd6kktmq9dva0cd5clc.jpg',
-    hltb: {
-      main: 36.5,
-      extra: 50.5,
-      completionist: 65.5,
-    },
     score: '100',
   },
   {
@@ -6194,11 +5239,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/smay0rol1vbibwop2t7n.jpg',
-    hltb: {
-      main: 30,
-      extra: 43,
-      completionist: 69.5,
-    },
     score: '100',
   },
   {
@@ -6212,11 +5252,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgzto.jpg',
-    hltb: {
-      main: 17,
-      extra: 22,
-      completionist: 32,
-    },
     score: '100',
   },
   {
@@ -6230,11 +5265,6 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gharx9quvnz62udseh9r.jpg',
-    hltb: {
-      main: 16,
-      extra: 24,
-      completionist: 41.5,
-    },
     score: '100',
   },
   {
@@ -6248,11 +5278,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5jte.jpg',
-    hltb: {
-      main: 11,
-      extra: 12.5,
-      completionist: 16,
-    },
     score: '100',
   },
   {
@@ -6266,11 +5291,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nkrfm61la2yfop7fysbp.jpg',
-    hltb: {
-      main: 27.5,
-      extra: 46,
-      completionist: 99,
-    },
     score: '100',
   },
   {
@@ -6284,11 +5304,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5r98.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 18,
-      completionist: 62.5,
-    },
     score: '100',
   },
   {
@@ -6302,11 +5317,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yugj6cvnpzr1yj5y38zy.jpg',
-    hltb: {
-      main: 26,
-      extra: 48.5,
-      completionist: 97.5,
-    },
     score: '100',
   },
   {
@@ -6320,11 +5330,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87l6.jpg',
-    hltb: {
-      main: 6,
-      extra: 9,
-      completionist: 15,
-    },
     score: '100',
   },
   {
@@ -6338,11 +5343,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bigben Interactive', 'Frogwares'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qql.jpg',
-    hltb: {
-      main: 19,
-      extra: 25.5,
-      completionist: 32.5,
-    },
     score: '100',
   },
   {
@@ -6356,11 +5356,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dk2.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 32,
-    },
     score: '100',
   },
   {
@@ -6387,11 +5382,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kh40zjsftiaxcg6a5yfm.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 33,
-    },
     score: '100',
   },
   {
@@ -6412,11 +5402,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/radqp9dbon3hphczz8wo.jpg',
-    hltb: {
-      main: 29,
-      extra: 40,
-      completionist: 64.5,
-    },
     score: '100',
   },
   {
@@ -6430,11 +5415,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gd5.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 15.5,
-      completionist: 19.5,
-    },
     score: '100',
   },
   {
@@ -6448,11 +5428,6 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6r6o.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -6466,11 +5441,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cys.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 46,
-      completionist: 82.5,
-    },
     score: '100',
   },
   {
@@ -6484,11 +5454,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Playtronic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckj7b.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -6502,11 +5467,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mwmrw9ysvic7btm4hhpd.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 35.5,
-    },
     score: '100',
   },
   {
@@ -6520,11 +5480,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vin.jpg',
-    hltb: {
-      main: 13,
-      extra: 17,
-      completionist: 22,
-    },
     score: '100',
   },
   {
@@ -6538,11 +5493,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jseibhuhbh9osdx560ob.jpg',
-    hltb: {
-      main: 12,
-      extra: 18,
-      completionist: 66.5,
-    },
     score: '100',
   },
   {
@@ -6556,11 +5506,6 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fw76oqfjpmanu0zeo1b5.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 24.5,
-    },
     score: '100',
   },
   {
@@ -6574,11 +5519,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vjmure5vxdeokhhtmiyj.jpg',
-    hltb: {
-      main: 9,
-      extra: 13.5,
-      completionist: 26.5,
-    },
     score: '100',
   },
   {
@@ -6592,11 +5532,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6la0.jpg',
-    hltb: {
-      main: 5,
-      extra: 6,
-      completionist: 10,
-    },
     score: '100',
   },
   {
@@ -6610,11 +5545,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5ppx.jpg',
-    hltb: {
-      main: 55,
-      extra: 74.5,
-      completionist: 124,
-    },
     score: '100',
   },
   {
@@ -6628,11 +5558,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cbcwrrmacd4nkdfjsisq.jpg',
-    hltb: {
-      main: 26.5,
-      extra: 35,
-      completionist: 63,
-    },
     score: '100',
   },
   {
@@ -7088,11 +6013,6 @@ export const gameDetails: Game[] = [
     publishers: ['CD Projekt'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scxw02.jpg',
-    hltb: {
-      main: 26,
-      extra: 63,
-      completionist: 108,
-    },
     score: '100',
   },
   {
@@ -7106,11 +6026,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gfc.jpg',
-    hltb: {
-      main: 61,
-      extra: 99,
-      completionist: 150,
-    },
     score: '100',
   },
   {
@@ -7124,11 +6039,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dkjdvrbqaoyyh4klvbwb.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20.5,
-      completionist: 29.5,
-    },
     score: '100',
   },
   {
@@ -7142,11 +6052,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dbqn4wax78tgvplrpf1m.jpg',
-    hltb: {
-      main: 24,
-      extra: 29.5,
-      completionist: 43.5,
-    },
     score: '100',
   },
   {
@@ -7160,11 +6065,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lykfms7zl20y2wlkaji7.jpg',
-    hltb: {
-      main: 25,
-      extra: 46,
-      completionist: 62.5,
-    },
     score: '100',
   },
   {
@@ -7178,11 +6078,6 @@ export const gameDetails: Game[] = [
     publishers: ['Supergiant Games', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lik.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 48.5,
-      completionist: 95.5,
-    },
     score: '100',
   },
   {
@@ -7196,11 +6091,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix', 'Crystal Dynamics'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ghc.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 24.5,
-      completionist: 104,
-    },
     score: '100',
   },
   {
@@ -7214,11 +6104,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gce.jpg',
-    hltb: {
-      main: 18,
-      extra: 33,
-      completionist: 50.5,
-    },
     score: '100',
   },
   {
@@ -7232,11 +6117,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'iam8bit'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fwu.jpg',
-    hltb: {
-      main: 12,
-      extra: 15.5,
-      completionist: 18.5,
-    },
     score: '100',
   },
   {
@@ -7250,11 +6130,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scj0jk.jpg',
-    hltb: {
-      main: 10,
-      extra: 20.5,
-      completionist: 85.5,
-    },
     score: '100',
   },
   {
@@ -7268,11 +6143,6 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver', 'Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ogx8mirmuv00wodpqmug.jpg',
-    hltb: {
-      main: 8,
-      extra: 10,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -7290,11 +6160,6 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc61li.jpg',
-    hltb: {
-      main: 30.5,
-      extra: 42,
-      completionist: 56.5,
-    },
     score: '100',
   },
   {
@@ -7308,11 +6173,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jcw.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 41,
-      completionist: 62,
-    },
     score: '100',
   },
   {
@@ -7326,11 +6186,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j4h.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 7,
-      completionist: 19,
-    },
     score: '100',
   },
   {
@@ -7344,11 +6199,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wyn.jpg',
-    hltb: {
-      main: 46,
-      extra: 68,
-      completionist: 103,
-    },
     score: '100',
   },
   {
@@ -7362,11 +6212,6 @@ export const gameDetails: Game[] = [
     publishers: ['DotEmu', 'Yooreka Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xqh4k6i4dm21pdnxtbnz.jpg',
-    hltb: {
-      main: 3,
-      extra: 6.5,
-      completionist: 28,
-    },
     score: '100',
   },
   {
@@ -7380,11 +6225,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc836w.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -7411,11 +6251,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88ir.jpg',
-    hltb: {
-      main: 27,
-      extra: 32.5,
-      completionist: 44.5,
-    },
     score: '100',
   },
   {
@@ -7429,11 +6264,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bjj.jpg',
-    hltb: {
-      main: 11,
-      extra: 17,
-      completionist: 34,
-    },
     score: '100',
   },
   {
@@ -7447,11 +6277,6 @@ export const gameDetails: Game[] = [
     publishers: ['Playstack'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82wv.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14,
-      completionist: 23,
-    },
     score: '100',
   },
   {
@@ -7465,11 +6290,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ecw.jpg',
-    hltb: {
-      main: 9,
-      extra: 12,
-      completionist: 41.5,
-    },
     score: '100',
   },
   {
@@ -7483,11 +6303,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'Mojang Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82ob.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12.5,
-      completionist: 34,
-    },
     score: '100',
   },
   {
@@ -7501,11 +6316,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87lv.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 33.5,
-      completionist: 55,
-    },
     score: '100',
   },
   {
@@ -7519,11 +6329,6 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lfv.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 18.5,
-      completionist: 55.5,
-    },
     score: '100',
   },
   {
@@ -7537,11 +6342,6 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6x1t.jpg',
-    hltb: {
-      main: 27,
-      extra: 36.5,
-      completionist: 64.5,
-    },
     score: '100',
   },
   {
@@ -7555,11 +6355,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cme.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 17,
-    },
     score: '100',
   },
   {
@@ -7573,11 +6368,6 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games', 'All In! Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82f1.jpg',
-    hltb: {
-      main: 7,
-      extra: 9,
-      completionist: 14,
-    },
     score: '100',
   },
   {
@@ -7591,11 +6381,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gnl.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -7609,11 +6394,6 @@ export const gameDetails: Game[] = [
     publishers: ['inXile Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6v2q.jpg',
-    hltb: {
-      main: 36,
-      extra: 49.5,
-      completionist: 75.5,
-    },
     score: '100',
   },
   {
@@ -7627,11 +6407,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jnb.jpg',
-    hltb: {
-      main: 25,
-      extra: 39,
-      completionist: 76.5,
-    },
     score: '100',
   },
   {
@@ -8143,11 +6918,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ky2.jpg',
-    hltb: {
-      main: 23,
-      extra: 82.5,
-      completionist: 182,
-    },
     score: '100',
   },
   {
@@ -8161,11 +6931,6 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vlsjkoh7fyhynhkhyexh.jpg',
-    hltb: {
-      main: 13,
-      extra: 24.5,
-      completionist: 42.5,
-    },
     score: '100',
   },
   {
@@ -8179,11 +6944,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8zrh.jpg',
-    hltb: {
-      main: 10,
-      extra: 13,
-      completionist: 38.5,
-    },
     score: '100',
   },
   {
@@ -8197,11 +6957,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdod5.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 24.5,
-      completionist: 36,
-    },
     score: '100',
   },
   {
@@ -8215,11 +6970,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bit.jpg',
-    hltb: {
-      main: 11,
-      extra: 14.5,
-      completionist: 18,
-    },
     score: '100',
   },
   {
@@ -8233,11 +6983,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bj6.jpg',
-    hltb: {
-      main: 19,
-      extra: 30.5,
-      completionist: 64,
-    },
     score: '100',
   },
   {
@@ -8251,11 +6996,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g3c.jpg',
-    hltb: {
-      main: 8,
-      extra: 9,
-      completionist: 10,
-    },
     score: '100',
   },
   {
@@ -8270,11 +7010,6 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar793.jpg',
-    hltb: {
-      main: 8,
-      extra: 21.5,
-      completionist: 63,
-    },
     score: '100',
   },
   {
@@ -8288,11 +7023,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8geu.jpg',
-    hltb: {
-      main: 24.5,
-      extra: 41.5,
-      completionist: 64,
-    },
     score: '100',
   },
   {
@@ -8306,11 +7036,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'Microsoft Corporation'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahho.jpg',
-    hltb: {
-      main: 21,
-      extra: 46,
-      completionist: 135,
-    },
     score: '100',
   },
   {
@@ -8324,11 +7049,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tlwczv6q5r6o4uuryxgt.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 19.5,
-      completionist: 29.5,
-    },
     score: '100',
   },
   {
@@ -8342,11 +7062,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wct.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 6.5,
-      completionist: 9,
-    },
     score: '100',
   },
   {
@@ -8360,11 +7075,6 @@ export const gameDetails: Game[] = [
     publishers: ['Double Fine Productions', 'Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g23.jpg',
-    hltb: {
-      main: 15,
-      extra: 19.5,
-      completionist: 26.5,
-    },
     score: '100',
   },
   {
@@ -8378,11 +7088,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc991b.jpg',
-    hltb: {
-      main: 10,
-      extra: 12,
-      completionist: 13,
-    },
     score: '100',
   },
   {
@@ -8396,11 +7101,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafye.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -8414,11 +7114,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9g.jpg',
-    hltb: {
-      main: 6,
-      extra: 9,
-      completionist: 28.5,
-    },
     score: '100',
   },
   {
@@ -8432,11 +7127,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaif8.jpg',
-    hltb: {
-      main: 9.5,
-      extra: 11.5,
-      completionist: 13.5,
-    },
     score: '100',
   },
   {
@@ -8450,11 +7140,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cg5.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -8468,11 +7153,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g13.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 36,
-      completionist: 63.5,
-    },
     score: '100',
   },
   {
@@ -8486,11 +7166,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j4a.jpg',
-    hltb: {
-      main: 25,
-      extra: 35.5,
-      completionist: 61,
-    },
     score: '100',
   },
   {
@@ -8504,11 +7179,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbspp.jpg',
-    hltb: {
-      main: 41,
-      extra: 56.5,
-      completionist: 74,
-    },
     score: '100',
   },
   {
@@ -8522,11 +7192,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ember Lab'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bjr.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14.5,
-      completionist: 20.5,
-    },
     score: '100',
   },
   {
@@ -8540,11 +7205,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96b0.jpg',
-    hltb: {
-      main: 9,
-      extra: 12,
-      completionist: 16,
-    },
     score: '100',
   },
   {
@@ -8558,11 +7218,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kxw.jpg',
-    hltb: {
-      main: 41,
-      extra: 61,
-      completionist: 143,
-    },
     score: '100',
   },
   {
@@ -8576,11 +7231,6 @@ export const gameDetails: Game[] = [
     publishers: ['Warner Bros. Interactive Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v6d.jpg',
-    hltb: {
-      main: 12,
-      extra: 23.5,
-      completionist: 99,
-    },
     score: '100',
   },
   {
@@ -8594,29 +7244,19 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9hue.jpg',
-    hltb: {
-      main: 24,
-      extra: 53.5,
-      completionist: 107,
-    },
     score: '100',
   },
   {
     name: 'Persona 5 Strikers',
     platforms: 'PS4, Switch, PC',
-    genres: 'Action, RPG',
+    genres: 'Anime, Hack and Slash, JRPG, RPG',
     releaseDate: 'Feb 23',
     releaseYear: 2021,
     reviewRank: 29,
     developers: ['Omega Force', 'P Studio', 'Atlus'],
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7fgn.jpg',
-    hltb: {
-      main: 35,
-      extra: 46,
-      completionist: 71,
-    },
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7fgh.jpg',
     score: '100',
   },
   {
@@ -8630,11 +7270,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8c99.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 66.5,
-    },
     score: '100',
   },
   {
@@ -8648,11 +7283,6 @@ export const gameDetails: Game[] = [
     publishers: ['Milestone'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdry5.jpg',
-    hltb: {
-      main: 10,
-      extra: 17,
-      completionist: 36,
-    },
     score: '100',
   },
   {
@@ -8666,11 +7296,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Atlus'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ppzlvufypgbvtmpylz0h.jpg',
-    hltb: {
-      main: 45.5,
-      extra: 69.5,
-      completionist: 97,
-    },
     score: '100',
   },
   {
@@ -8684,11 +7309,6 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ggz.jpg',
-    hltb: {
-      main: 12,
-      extra: 19,
-      completionist: 26,
-    },
     score: '100',
   },
   {
@@ -8702,11 +7322,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kqn.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 30,
-      completionist: 97.5,
-    },
     score: '100',
   },
   {
@@ -8720,11 +7335,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93ls.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 16,
-      completionist: 58.5,
-    },
     score: '100',
   },
   {
@@ -9258,11 +7868,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar3se9.jpg',
-    hltb: {
-      main: 26.5,
-      extra: 40.5,
-      completionist: 55.5,
-    },
     score: '100',
   },
   {
@@ -9276,11 +7881,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scu5kw.jpg',
-    hltb: {
-      main: 60,
-      extra: 101,
-      completionist: 135,
-    },
     score: '100',
   },
   {
@@ -9293,12 +7893,7 @@ export const gameDetails: Game[] = [
     developers: ['Tango Gameworks'],
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6le1.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 23,
-      completionist: 42,
-    },
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1475810/ss_2376b5ea9292666b2e9b08cf4111f1b4e40d1260.600x338.jpg?t=1750779600',
     score: '100',
   },
   {
@@ -9312,11 +7907,6 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bii.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 10.5,
-    },
     score: '100',
   },
   {
@@ -9330,11 +7920,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar3sed.jpg',
-    hltb: {
-      main: 29,
-      extra: 62.5,
-      completionist: 90,
-    },
     score: '100',
   },
   {
@@ -9348,11 +7933,6 @@ export const gameDetails: Game[] = [
     publishers: ['Techland Publishing', 'Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctq3v.jpg',
-    hltb: {
-      main: 24.5,
-      extra: 49.5,
-      completionist: 103,
-    },
     score: '100',
   },
   {
@@ -9366,11 +7946,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sloclap', 'Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9370.jpg',
-    hltb: {
-      main: 8,
-      extra: 14,
-      completionist: 22,
-    },
     score: '100',
   },
   {
@@ -9384,11 +7959,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i4t.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 27.5,
-      completionist: 50,
-    },
     score: '100',
   },
   {
@@ -9402,11 +7972,6 @@ export const gameDetails: Game[] = [
     publishers: ['DotEmu', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc94kz.jpg',
-    hltb: {
-      main: 3,
-      extra: 4,
-      completionist: 20,
-    },
     score: '100',
   },
   {
@@ -9420,11 +7985,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagwj.jpg',
-    hltb: {
-      main: 5,
-      extra: 6,
-      completionist: 12.5,
-    },
     score: '100',
   },
   {
@@ -9439,11 +7999,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://cdn.mobygames.com/screenshots/18044361-a-plague-tale-requiem-playstation-5-in-darkness-the-light-is-you.jpg',
-    hltb: {
-      main: 17,
-      extra: 19.5,
-      completionist: 27.5,
-    },
     score: '100',
   },
   {
@@ -9457,11 +8012,6 @@ export const gameDetails: Game[] = [
     publishers: ['Krafton', 'Skybound Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schtud.jpg',
-    hltb: {
-      main: 10,
-      extra: 12,
-      completionist: 15.5,
-    },
     score: '100',
   },
   {
@@ -9475,11 +8025,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg8yb.jpg',
-    hltb: {
-      main: 9,
-      extra: 11,
-      completionist: 34,
-    },
     score: '100',
   },
   {
@@ -9493,11 +8038,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai3v.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 47.5,
-      completionist: 61,
-    },
     score: '100',
   },
   {
@@ -9512,11 +8052,6 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgpwf.jpg',
-    hltb: {
-      main: 16,
-      extra: 29,
-      completionist: 52,
-    },
     score: '100',
   },
   {
@@ -9545,11 +8080,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'The Pokémon Company'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x8uwndhivems2itkspcn.jpg',
-    hltb: {
-      main: 33.5,
-      extra: 60,
-      completionist: 142,
-    },
     score: '100',
   },
   {
@@ -9563,11 +8093,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x8uwndhivems2itkspcn.jpg',
-    hltb: {
-      main: 31,
-      extra: 56.5,
-      completionist: 93.5,
-    },
     score: '100',
   },
   {
@@ -9595,11 +8120,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdrtp.jpg',
-    hltb: {
-      main: 13,
-      extra: 18.5,
-      completionist: 47.5,
-    },
     score: '100',
   },
   {
@@ -9613,11 +8133,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrh7.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20,
-      completionist: 29,
-    },
     score: '100',
   },
   {
@@ -9631,11 +8146,6 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccsgn.jpg',
-    hltb: {
-      main: 40.5,
-      extra: 65.5,
-      completionist: 97,
-    },
     score: '100',
   },
   {
@@ -9649,11 +8159,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf130.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 22,
-      completionist: 27,
-    },
     score: '100',
   },
   {
@@ -9671,11 +8176,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdrwl.jpg',
-    hltb: {
-      main: 34.5,
-      extra: 49,
-      completionist: 105,
-    },
     score: '100',
   },
   {
@@ -9690,11 +8190,6 @@ export const gameDetails: Game[] = [
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahze.jpg',
     brightenImage: true,
-    hltb: {
-      main: 17.5,
-      extra: 29,
-      completionist: 50.5,
-    },
     score: '100',
   },
   {
@@ -9708,11 +8203,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftr4.jpg',
-    hltb: {
-      main: 62,
-      extra: 102,
-      completionist: 174,
-    },
     score: '100',
   },
   {
@@ -9726,11 +8216,6 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', 'Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc999c.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12,
-      completionist: 56,
-    },
     score: '100',
   },
   {
@@ -9744,11 +8229,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sclwtu.jpg',
-    hltb: {
-      main: 15,
-      extra: 19.5,
-      completionist: 26,
-    },
     score: '100',
   },
   {
@@ -9762,11 +8242,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9285.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 14,
-      completionist: 18.5,
-    },
     score: '100',
   },
   {
@@ -9780,11 +8255,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v27.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 22.5,
-    },
     score: '100',
   },
   {
@@ -9798,11 +8268,6 @@ export const gameDetails: Game[] = [
     publishers: ['Finji'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ggm.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 16.5,
-      completionist: 21.5,
-    },
     score: '100',
   },
   {
@@ -9816,11 +8281,6 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf29o.jpg',
-    hltb: {
-      main: 11,
-      extra: 20.5,
-      completionist: 41.5,
-    },
     score: '100',
   },
   {
@@ -10134,11 +8594,6 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9277.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 18.5,
-      completionist: 24.5,
-    },
     score: '100',
   },
   {
@@ -10339,11 +8794,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony', 'PlayStation Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar2d8r.jpg',
-    hltb: {
-      main: 17,
-      extra: 23.5,
-      completionist: 28.5,
-    },
     score: '100',
   },
   {
@@ -10357,11 +8807,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kvu.jpg',
-    hltb: {
-      main: 38,
-      extra: 59,
-      completionist: 82,
-    },
     score: '100',
   },
   {
@@ -10375,11 +8820,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmlzj.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 74.5,
-      completionist: 148,
-    },
     score: '100',
   },
   {
@@ -10393,11 +8833,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipmr.jpg',
-    hltb: {
-      main: 16,
-      extra: 22.5,
-      completionist: 30.5,
-    },
     score: '100',
   },
   {
@@ -10411,11 +8846,6 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch7rx.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 34,
-      completionist: 70.5,
-    },
     score: '100',
   },
   {
@@ -10429,11 +8859,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyqnc.jpg',
-    hltb: {
-      main: 20.5,
-      extra: 34,
-      completionist: 55.5,
-    },
     score: '100',
   },
   {
@@ -10447,11 +8872,6 @@ export const gameDetails: Game[] = [
     publishers: ['Blizzard Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc78f4.jpg',
-    hltb: {
-      main: 26,
-      extra: 49,
-      completionist: 190,
-    },
     score: '100',
   },
   {
@@ -10465,11 +8885,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj9.jpg',
-    hltb: {
-      main: 59,
-      extra: 116,
-      completionist: 248,
-    },
     score: '100',
   },
   {
@@ -10483,11 +8898,6 @@ export const gameDetails: Game[] = [
     publishers: ['Neowiz'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9oaa.jpg',
-    hltb: {
-      main: 28.5,
-      extra: 36,
-      completionist: 58,
-    },
     score: '100',
   },
   {
@@ -10501,11 +8911,6 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii5s.jpg',
-    hltb: {
-      main: 16,
-      extra: 26.5,
-      completionist: 38.5,
-    },
     score: '100',
   },
   {
@@ -10519,11 +8924,6 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdtm.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 34.5,
-      completionist: 47,
-    },
     score: '100',
   },
   {
@@ -10537,11 +8937,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bj3.jpg',
-    hltb: {
-      main: 14,
-      extra: 26,
-      completionist: 57.5,
-    },
     score: '100',
   },
   {
@@ -10555,11 +8950,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scka8s.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 28.5,
-      completionist: 50.5,
-    },
     score: '100',
   },
   {
@@ -10573,11 +8963,6 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmlie.jpg',
-    hltb: {
-      main: 7,
-      extra: 15.5,
-      completionist: 63.5,
-    },
     score: '100',
   },
   {
@@ -10591,11 +8976,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc106io.jpg',
-    hltb: {
-      main: 23,
-      extra: 42.5,
-      completionist: 83.5,
-    },
     score: '100',
   },
   {
@@ -10609,11 +8989,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3er.jpg',
-    hltb: {
-      main: 10,
-      extra: 13.5,
-      completionist: 20,
-    },
     score: '100',
   },
   {
@@ -10627,11 +9002,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdmt.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 19.5,
-      completionist: 31,
-    },
     score: '100',
   },
   {
@@ -10645,11 +9015,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uttbnsozii22jvyscw0d.jpg',
-    hltb: {
-      main: 16,
-      extra: 25,
-      completionist: 36.5,
-    },
     score: '100',
   },
   {
@@ -10664,11 +9029,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks', 'Krafton'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckrmg.jpg',
-    hltb: {
-      main: 11,
-      extra: 14,
-      completionist: 59.5,
-    },
     score: '100',
   },
   {
@@ -10682,11 +9042,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sabotage', 'Playdigious'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf2ra.jpg',
-    hltb: {
-      main: 28,
-      extra: 35.5,
-      completionist: 43.5,
-    },
     score: '100',
   },
   {
@@ -10700,11 +9055,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sciwxx.jpg',
-    hltb: {
-      main: 41,
-      extra: 65,
-      completionist: 91,
-    },
     score: '100',
   },
   {
@@ -10718,11 +9068,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii4f.jpg',
-    hltb: {
-      main: 11,
-      extra: 19,
-      completionist: 28.5,
-    },
     score: '100',
   },
   {
@@ -10736,11 +9081,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm43u.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20.5,
-      completionist: 31.5,
-    },
     score: '100',
   },
   {
@@ -10754,11 +9094,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpk7u.jpg',
-    hltb: {
-      main: 60,
-      extra: 83,
-      completionist: 94.5,
-    },
     score: '100',
   },
   {
@@ -10772,11 +9107,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvd9.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 21.5,
-      completionist: 33,
-    },
     score: '100',
   },
   {
@@ -10790,11 +9120,6 @@ export const gameDetails: Game[] = [
     publishers: ['Gearbox Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scka81.jpg',
-    hltb: {
-      main: 18,
-      extra: 29,
-      completionist: 81.5,
-    },
     score: '100',
   },
   {
@@ -10808,11 +9133,6 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwt1.jpg',
-    hltb: {
-      main: 24,
-      extra: 30.5,
-      completionist: 39.5,
-    },
     score: '100',
   },
   {
@@ -10826,11 +9146,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nacon'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scb0b5.jpg',
-    hltb: {
-      main: 12,
-      extra: 15.5,
-      completionist: 17,
-    },
     score: '100',
   },
   {
@@ -10844,11 +9159,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scknkv.jpg',
-    hltb: {
-      main: 34,
-      extra: 46,
-      completionist: 60,
-    },
     score: '100',
   },
   {
@@ -10888,11 +9198,6 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdl3l.jpg',
-    hltb: {
-      main: 7,
-      extra: 9.5,
-      completionist: 14.5,
-    },
     score: '100',
   },
   {
@@ -11075,11 +9380,6 @@ export const gameDetails: Game[] = [
     publishers: ['MINTROCKET'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schai1.jpg',
-    hltb: {
-      main: 25,
-      extra: 34,
-      completionist: 51,
-    },
     score: '100',
   },
   {
@@ -11197,11 +9497,6 @@ export const gameDetails: Game[] = [
     publishers: ['The Pokémon Company', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3ds.jpg',
-    hltb: {
-      main: 12,
-      extra: 14,
-      completionist: 14.5,
-    },
     score: '100',
   },
   {
@@ -11371,11 +9666,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scq5sr.jpg',
-    hltb: {
-      main: 16,
-      extra: 25.5,
-      completionist: 39,
-    },
     score: '100',
   },
   {
@@ -11389,11 +9679,6 @@ export const gameDetails: Game[] = [
     publishers: ['Warner Bros. Interactive Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i5b.jpg',
-    hltb: {
-      main: 12,
-      extra: 18.5,
-      completionist: 43.5,
-    },
     score: '100',
   },
   {
@@ -11407,11 +9692,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnqmo.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 35.5,
-      completionist: 66.5,
-    },
     score: '100',
   },
   {
@@ -11425,11 +9705,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvmx.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 24.5,
-      completionist: 31,
-    },
     score: '100',
   },
   {
@@ -11443,11 +9718,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsiqf.jpg',
-    hltb: {
-      main: 11,
-      extra: 15,
-      completionist: 18.5,
-    },
     score: '100',
   },
   {
@@ -11461,11 +9731,6 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwmt.jpg',
-    hltb: {
-      main: 65,
-      extra: 88,
-      completionist: 108,
-    },
     score: '100',
   },
   {
@@ -11479,11 +9744,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scryt3.jpg',
-    hltb: {
-      main: 4,
-      extra: 11,
-      completionist: 17,
-    },
     score: '100',
   },
   {
@@ -11497,11 +9757,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix66.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 37.5,
-      completionist: 57,
-    },
     score: '100',
   },
   {
@@ -11515,11 +9770,6 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88dc.jpg',
-    hltb: {
-      main: 7,
-      extra: 8,
-      completionist: 9.5,
-    },
     score: '100',
   },
   {
@@ -11533,11 +9783,6 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scjfmh.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -11551,11 +9796,6 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctoeb.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 11,
-      completionist: 39.5,
-    },
     score: '100',
   },
   {
@@ -11569,11 +9809,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsvwb.jpg',
-    hltb: {
-      main: 28.5,
-      extra: 62.5,
-      completionist: 78.5,
-    },
     score: '100',
   },
   {
@@ -11587,11 +9822,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sony', 'Koei Tecmo Games Co.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix68.jpg',
-    hltb: {
-      main: 23,
-      extra: 52.5,
-      completionist: 67.5,
-    },
     score: '100',
   },
   {
@@ -11605,11 +9835,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso8.jpg',
-    hltb: {
-      main: 21,
-      extra: 26.5,
-      completionist: 34.5,
-    },
     score: '100',
   },
   {
@@ -11623,11 +9848,6 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schcik.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 9.5,
-      completionist: 10.5,
-    },
     score: '100',
   },
   {
@@ -11641,11 +9861,6 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnd7r.jpg',
-    hltb: {
-      main: 23,
-      extra: 45.5,
-      completionist: 61.5,
-    },
     score: '100',
   },
   {
@@ -11659,11 +9874,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsodm.jpg',
-    hltb: {
-      main: 11,
-      extra: 14.5,
-      completionist: 20.5,
-    },
     score: '100',
   },
   {
@@ -11677,11 +9887,6 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsobl.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 11,
-      completionist: 29,
-    },
     score: '100',
   },
   {
@@ -11695,11 +9900,6 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scs9qz.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 21,
-      completionist: 65.5,
-    },
     score: '100',
   },
   {
@@ -11713,29 +9913,19 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scssot.jpg',
-    hltb: {
-      main: 41,
-      extra: 49,
-      completionist: 59,
-    },
     score: '100',
   },
   {
     name: 'Kunitsu-Gami: Path of the Goddess',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
-    genres: 'Action, Strategy',
+    genres: 'Tower Defense, Action, Strategy',
     releaseDate: 'Jul 19',
     releaseYear: 2024,
     reviewRank: 32,
     developers: ['Capcom'],
     publishers: ['Capcom'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scr2mg.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 21.5,
-      completionist: 34.5,
-    },
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scr2me.jpg',
     score: '100',
   },
   {
@@ -11749,11 +9939,6 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvda.jpg',
-    hltb: {
-      main: 20,
-      extra: 37,
-      completionist: 57.5,
-    },
     score: '100',
   },
   {
@@ -11767,11 +9952,6 @@ export const gameDetails: Game[] = [
     publishers: ['PLAION', 'XSEED Games', 'Cygames'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n19sh5zyco4aflfj91mf.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 32.5,
-      completionist: 130,
-    },
     score: '100',
   },
   {
@@ -11785,11 +9965,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scoj90.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 9.5,
-      completionist: 18.5,
-    },
     score: '100',
   },
   {
@@ -11803,11 +9978,6 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpuyf.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 10,
-      completionist: 10.5,
-    },
     score: '100',
   },
   {
@@ -11821,11 +9991,6 @@ export const gameDetails: Game[] = [
     publishers: ['Game Science'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i9c.jpg',
-    hltb: {
-      main: 38,
-      extra: 48,
-      completionist: 67.5,
-    },
     score: '100',
   },
   {
@@ -11839,11 +10004,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scssoc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
   },
   {
@@ -11857,11 +10017,6 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bz9npuhyu5v7t4mvq7mj.jpg',
-    hltb: {
-      main: 31,
-      extra: 37.5,
-      completionist: 47.5,
-    },
     score: '100',
   },
   {
@@ -11875,11 +10030,6 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scrjlc.jpg',
-    hltb: {
-      main: 31,
-      extra: 38,
-      completionist: 54.5,
-    },
     score: '100',
   },
   {
@@ -11919,11 +10069,6 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpuxj.jpg',
-    hltb: {
-      main: 29,
-      extra: 43,
-      completionist: 53,
-    },
     score: '100',
   },
   {
@@ -11937,11 +10082,6 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios', 'Merge Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccy12.jpg',
-    hltb: {
-      main: 4,
-      extra: 4.5,
-      completionist: 5,
-    },
     score: '100',
   },
   {
