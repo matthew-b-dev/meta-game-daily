@@ -20,6 +20,9 @@ export type Game = {
     extra?: number | null;
     completionist?: number | null;
   };
+  meta?: {
+    [key: string]: string[];
+  };
 };
 
 export interface Review {

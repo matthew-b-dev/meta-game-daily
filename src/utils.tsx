@@ -294,6 +294,46 @@ export const loadGameState = (
           );
         }
       }
+
+      // Migrate gameStates: remove old reveal fields and recalculate pointsDeducted
+      if (unifiedState.gameStates) {
+        const validFields = ['meta', 'publishers', 'screenshot'];
+        const currentCosts: { [key: string]: number } = {
+          maskedTitle: 20,
+          meta: 40,
+          publishers: 10,
+          screenshot: 50,
+        };
+
+        Object.keys(unifiedState.gameStates).forEach((gameName) => {
+          const gameState = unifiedState.gameStates[gameName];
+
+          // Clean up revealed object - keep only valid fields
+          const cleanedRevealed: { [key: string]: boolean } = {};
+          let recalculatedPoints = 0;
+
+          Object.keys(gameState.revealed || {}).forEach((field) => {
+            if (validFields.includes(field)) {
+              cleanedRevealed[field] = true;
+              recalculatedPoints += currentCosts[field] || 0;
+            }
+          });
+
+          // Add maskedTitle points if revealed
+          if (gameState.revealedMaskedTitle) {
+            recalculatedPoints += currentCosts.maskedTitle || 0;
+          }
+
+          // Add title reveal points if revealed (always 100)
+          if (gameState.revealedTitle) {
+            recalculatedPoints = 200; // Title reveal sets to max deduction
+          }
+
+          gameState.revealed = cleanedRevealed;
+          gameState.pointsDeducted = recalculatedPoints;
+        });
+      }
+
       return unifiedState as SessionState;
     }
 
@@ -313,6 +353,45 @@ export const loadGameState = (
           isClose: false,
         }));
       }
+    }
+
+    // Migrate gameStates: remove old reveal fields and recalculate pointsDeducted
+    if (state.gameStates) {
+      const validFields = ['meta', 'publishers', 'screenshot'];
+      const currentCosts: { [key: string]: number } = {
+        maskedTitle: 20,
+        meta: 40,
+        publishers: 10,
+        screenshot: 50,
+      };
+
+      Object.keys(state.gameStates).forEach((gameName) => {
+        const gameState = state.gameStates[gameName];
+
+        // Clean up revealed object - keep only valid fields
+        const cleanedRevealed: { [key: string]: boolean } = {};
+        let recalculatedPoints = 0;
+
+        Object.keys(gameState.revealed || {}).forEach((field) => {
+          if (validFields.includes(field)) {
+            cleanedRevealed[field] = true;
+            recalculatedPoints += currentCosts[field] || 0;
+          }
+        });
+
+        // Add maskedTitle points if revealed
+        if (gameState.revealedMaskedTitle) {
+          recalculatedPoints += currentCosts.maskedTitle || 0;
+        }
+
+        // Add title reveal points if revealed (always 100)
+        if (gameState.revealedTitle) {
+          recalculatedPoints = 200; // Title reveal sets to max deduction
+        }
+
+        gameState.revealed = cleanedRevealed;
+        gameState.pointsDeducted = recalculatedPoints;
+      });
     }
 
     return state as SessionState;
