@@ -33,7 +33,7 @@ const renderMaskedName = (maskedName: string) => {
       result.push(
         <span
           key={`ellipsis-${i}`}
-          className='text-gray-400 pr-3 pl-2 italic text-xl'
+          className='text-gray-400 pr-2 pl-2 italic text-xl'
         >
           <i>...</i>
         </span>,
