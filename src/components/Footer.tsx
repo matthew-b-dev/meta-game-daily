@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
         </a>
       </div>
       <div>
-        Details and screenshots sourced from{' '}
+        Screenshots sourced from{' '}
         <a
           href='https://www.igdb.com/'
           target='_blank'
