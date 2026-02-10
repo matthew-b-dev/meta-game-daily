@@ -17,9 +17,10 @@ interface GameTableProps {
 const maskName = (game: Game) =>
   game.overrideMask ||
   game.name
-    .replace(/[^ :-]/g, '*')
+    .replace(/[^ :.-]/g, '*')
     .replace(/:/g, '\u00A0:\u00A0')
-    .replace(/-/g, '\u00A0-\u00A0');
+    .replace(/-/g, '\u00A0-\u00A0')
+    .replace(/\./g, '\u00A0.\u00A0');
 
 const renderMaskedName = (maskedName: string) => {
   const parts = maskedName.split('[ ... ]');

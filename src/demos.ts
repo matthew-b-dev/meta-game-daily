@@ -150,7 +150,18 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Steep',
     'Splatoon',
   ],
+  '2026-02-11': [
+    'Immortals Fenyx Rising',
+    'Kingdom Hearts III',
+    "Sid Meier's Civilization VI",
+    'Elite: Dangerous',
+    'Dragon Quest Builders 2',
+  ],
 };
+
+// A Way Out
+// Grid
+// Halo: Spartan Assault
 
 /**
  * Sunday Shuffle demo days - hardcoded specific games for specific dates

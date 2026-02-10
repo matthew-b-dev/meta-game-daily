@@ -2123,11 +2123,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Nov 26',
     releaseYear: 2015,
     reviewRank: 41,
-    developers: [
-      'Koei Tecmo Games',
-      'Team NINJA',
-      'Square Enix Business Division 4',
-    ],
+    developers: ['Koei Tecmo Games', 'Team NINJA', 'Square Enix'],
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/edl978uv5tvpr8p6jq6r.jpg',
@@ -2174,8 +2170,9 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'Elite: Dangerous',
+    searchTerms: ['elite dangerous'],
     platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Vehicle Combat',
+    genres: 'Simulation, Space, Vehicle Combat',
     releaseDate: 'Apr 2',
     releaseYear: 2015,
     reviewRank: 48,
@@ -2753,7 +2750,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 11',
     releaseYear: 2016,
     reviewRank: 19,
-    developers: ['Square Enix Business Division 5'],
+    developers: ['Square Enix'],
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ue5dcjhoxacthfmsacx3.jpg',
@@ -2924,7 +2921,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 25',
     releaseYear: 2016,
     reviewRank: 36,
-    developers: ['Tose', 'Square Enix Business Division 3'],
+    developers: ['Tose', 'Square Enix'],
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqlmfowjfwqg5epuziku.jpg',
@@ -3066,7 +3063,7 @@ export const gameDetails: Game[] = [
     genres: 'Action, Strategy',
     releaseDate: 'Aug 23',
     releaseYear: 2016,
-    reviewRank: 48,
+    reviewRank: 33,
     developers: ['Team17'],
     publishers: ['Team17'],
     screenshotUrl:
@@ -5391,10 +5388,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Jan 25',
     releaseYear: 2019,
     reviewRank: 20,
-    developers: [
-      'Square Enix Business Division 3',
-      'Square Enix Creative Business Unit I',
-    ],
+    developers: ['Square Enix'],
     publishers: [
       'Square Enix',
       'The Walt Disney Company',
@@ -5440,7 +5434,7 @@ export const gameDetails: Game[] = [
     developers: ['Gearbox Software'],
     publishers: ['2K Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cys.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6ld0.jpg',
     score: '100',
   },
   {
@@ -5537,11 +5531,11 @@ export const gameDetails: Game[] = [
   {
     name: 'Dragon Quest Builders 2',
     platforms: 'Switch, PS4, PC, PS5, XB1',
-    genres: 'Adventure, RPG',
+    genres: 'Adventure, RPG, Building',
     releaseDate: 'Jul 12',
     releaseYear: 2019,
     reviewRank: 37,
-    developers: ['Omega Force', 'Square Enix Business Division 5'],
+    developers: ['Omega Force', 'Square Enix'],
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5ppx.jpg',
@@ -6165,7 +6159,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Immortals Fenyx Rising',
     platforms: 'PS4, XB1, Switch, Stadia, PC, XBXS, PS5',
-    genres: 'Action',
+    genres: 'Action, Open World, Exploration, Puzzle',
     releaseDate: 'Dec 3',
     releaseYear: 2020,
     reviewRank: 17,

@@ -17,6 +17,10 @@ export const CLOSE_GUESS_SERIES = [
   'south park',
   'splatoon',
   'persona',
+  'civilization',
+  'halo',
+  'kingdom hearts',
+  'dragon quest',
 ];
 
 export interface SubtitleConfig {
