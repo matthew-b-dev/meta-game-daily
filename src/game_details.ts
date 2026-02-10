@@ -5395,7 +5395,7 @@ export const gameDetails: Game[] = [
       'Pixar Animation Studios',
     ],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/radqp9dbon3hphczz8wo.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyy44.jpg',
     score: '100',
   },
   {
