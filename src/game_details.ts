@@ -2,24 +2,26 @@ import type { Game } from './types';
 
 export const gameDetails: Game[] = [
   {
-    name: 'Ryse: Son of Rome',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Action',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 2,
-    developers: ['Crytek Frankfurt', 'Crytek'],
-    publishers: ['Deep Silver', 'Microsoft Studios', 'Crytek'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ktgmr55zbo10fuyiugzp.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 8.5,
-      completionist: 20,
-    },
     score: '100',
+    name: 'Ratchet & Clank',
+    platforms: 'PS4, PS5',
+    genres: 'Platformer, Third-Person Shooter',
+    releaseDate: 'Apr 12',
+    releaseYear: 2016,
+    reviewRank: 39,
+    developers: ['Insomniac Games'],
+    publishers: ['Sony Interactive Entertainment'],
+    screenshotUrl:
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ns9ubkujno3x3enquv5i.jpg',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Shooter',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Rayman Legends',
     platforms: 'PC, PS3, PS4, X360, XB1',
     genres: 'Platformer',
@@ -30,33 +32,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipec.jpg',
-    hltb: {
-      main: 10,
-      extra: 16,
-      completionist: 31.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'Super Mario 3D World',
-    overrideMask: '***** ***** ** [ ... ]',
-    platforms: 'Wii-U',
-    genres: 'Platformer',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 4,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88g3.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 18.5,
-      completionist: 37.5,
-    },
     score: '100',
-  },
-  {
     name: 'The Legend of Zelda: A Link Between Worlds',
     overrideMask: '[ ... ] : * [ ... ]',
     platforms: '3DS',
@@ -68,14 +47,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckiuz.jpg',
-    hltb: {
-      main: 16,
-      extra: 19,
-      completionist: 23.5,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Metroidvania', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Killzone: Shadow Fall',
     platforms: 'PS4, PS5',
     genres: 'First-Person Shooter',
@@ -86,32 +61,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch22p.jpg',
-    hltb: {
-      main: 10,
-      extra: 14,
-      completionist: 92,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Stealth'],
   },
   {
-    name: 'Dead Rising 3',
-    platforms: 'PS4, XB1, XBXS, PS5, PC',
-    genres: 'Horror, Adventure',
-    releaseDate: 'Nov 21',
-    releaseYear: 2013,
-    reviewRank: 7,
-    developers: ['Capcom Game Studio Vancouver, Inc.'],
-    publishers: ['Microsoft Studios', 'Capcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wsyl4ss01miw0gwzyjyp.jpg',
-    hltb: {
-      main: 14,
-      extra: 22,
-      completionist: 44.5,
-    },
     score: '100',
-  },
-  {
     name: 'Max: The Curse of Brotherhood',
     platforms: 'XB1, PC, XBXS, PS4, Switch',
     genres: 'Puzzle, Platformer',
@@ -127,32 +80,16 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cvguk6goe4a8uvr6yhhr.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 8,
-      completionist: 10,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Knack',
-    platforms: 'PS4, PS5',
-    genres: 'Adventure, Platformer',
-    releaseDate: 'Nov 15',
-    releaseYear: 2013,
-    reviewRank: 9,
-    developers: ['SCE Japan Studio'],
-    publishers: ['Sony Computer Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p7vggjj6y9skhwlwpxl9.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 12.5,
-      completionist: 38,
-    },
     score: '100',
-  },
-  {
     name: 'Need for Speed: Rivals',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Racing',
@@ -163,14 +100,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q2fg20ux8srqbhfyiapk.jpg',
-    hltb: {
-      main: 13,
-      extra: 20.5,
-      completionist: 35,
-    },
-    score: '100',
+    details: ['Cars', 'Firstperson', 'Behind-Overhead Perspective', 'Arcade'],
   },
   {
+    score: '100',
     name: 'Call of Duty: Ghosts',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -186,14 +119,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ebls82hbgnp4jgzh0lgr.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 13,
-    },
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: "Broken Sword 5: The Serpent's Curse",
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -204,14 +133,10 @@ export const gameDetails: Game[] = [
     publishers: ['Revolution Software', 'Ravenscourt', 'Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nhdd8gsmeyopnlpinruh.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 13.5,
-    },
-    score: '100',
+    details: ['Point+click', 'Adventure', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Battlefield 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -222,9 +147,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yq7owbqrj09mgfqg3ac3.jpg',
-    score: '100',
+    details: [
+      'Warfare',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Contrast',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Puzzle, Platformer',
@@ -235,14 +167,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zdabrluyxacdcj2oaxx1.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 3.5,
-      completionist: 4,
-    },
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Resogun',
     platforms: 'PS4, PS5',
     genres: 'Arcade',
@@ -253,33 +181,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cimpyw1vntabv8tjd4sa.jpg',
-    hltb: {
-      main: 2,
-      extra: 6,
-      completionist: 16.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Shooter'],
   },
   {
-    name: 'SteamWorld Dig',
-    searchTerms: ['Steam World Dig'],
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS, Switch',
-    genres: 'Platformer',
-    releaseDate: 'Aug 7',
-    releaseYear: 2013,
-    reviewRank: 39,
-    developers: ['Image & Form'],
-    publishers: ['Image & Form'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tpursno6hv5bl8lsbwit.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 8.5,
-    },
     score: '100',
-  },
-  {
     name: 'Teslagrad',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -295,14 +200,17 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ynm9vmcrdnu96nf9pqh9.jpg',
-    hltb: {
-      main: 5,
-      extra: 5.5,
-      completionist: 7,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'LEGO Marvel Super Heroes',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -314,14 +222,10 @@ export const gameDetails: Game[] = [
     franchise: 'The Avengers',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vge00t2yg7abkq6uhhc1.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 24,
-      completionist: 40,
-    },
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Rogue Legacy',
     platforms: 'PS4, XB1, PC, Vita, Switch, XBXS, PS5',
     genres: 'Roguelike, Platformer',
@@ -332,50 +236,10 @@ export const gameDetails: Game[] = [
     publishers: ['Cellar Door Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/foua4nkpkcpgucm3rnkv.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 26.5,
-      completionist: 38.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'Tearaway',
-    platforms: 'Vita',
-    genres: 'Puzzle, Platformer',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 25,
-    developers: ['Media Molecule'],
-    publishers: ['Sony Computer Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fx02ccqqhjihkd5v9yay.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7.5,
-      completionist: 12,
-    },
     score: '100',
-  },
-  {
-    name: 'Dungeon of the Endless',
-    platforms: 'PC, Switch, PS4, XB1',
-    genres: 'Roguelike, Strategy',
-    releaseDate: 'Dec 11',
-    releaseYear: 2013,
-    reviewRank: 29,
-    developers: ['Amplitude Studios'],
-    publishers: ['Playdigious'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fo1mgwmpkmptcrcwdkpv.jpg',
-    hltb: {
-      main: 8,
-      extra: 25,
-      completionist: 110,
-    },
-    score: '100',
-  },
-  {
     name: 'Beyond: Two Souls',
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure',
@@ -386,14 +250,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q33qhqf1jq03h9smiqiz.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 12.5,
-      completionist: 28,
-    },
-    score: '100',
+    details: ['Stealth', 'Thirdperson', 'Firstperson', 'Adventure', 'Action'],
   },
   {
+    score: '100',
     name: 'Halo: Spartan Assault',
     platforms: 'XB1, PC, XBXS',
     genres: 'Strategy',
@@ -404,14 +264,10 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rnwgncqsgstkeo4g1dqn.jpg',
-    hltb: {
-      main: 4,
-      extra: 5.5,
-      completionist: 16.5,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Side Scroller', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Warframe',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -422,14 +278,10 @@ export const gameDetails: Game[] = [
     publishers: ['Digital Extremes'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tmylb5knvikgpetzh9s1.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['RPG', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Mario Party: Island Tour',
     platforms: '3DS',
     genres: 'Racing',
@@ -441,37 +293,13 @@ export const gameDetails: Game[] = [
     franchise: 'Mario Bros.',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kytejsauxgbljepajro3.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 10.5,
-      completionist: 33,
-    },
-    score: '100',
+    details: ['Strategy', 'Platformer', 'Isometric', 'Firstperson', 'Action'],
   },
   {
-    name: 'Neverwinter',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'MMO, RPG',
-    releaseDate: 'Jun 20',
-    releaseYear: 2013,
-    reviewRank: 36,
-    developers: ['Cryptic Studios'],
-    publishers: ['Perfect World Entertainment'],
-    franchise: 'Dungeons & Dragons',
-    brightenImage: true,
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hgaezysyxmzihrrrvqmp.jpg',
-    hltb: {
-      main: 50,
-      extra: 104,
-      completionist: 314,
-    },
     score: '100',
-  },
-  {
     name: 'The Swapper',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
-    genres: 'Puzzle',
+    genres: 'Puzzle elements',
     releaseDate: 'May 30',
     releaseYear: 2013,
     reviewRank: 37,
@@ -479,32 +307,17 @@ export const gameDetails: Game[] = [
     publishers: ['Facepalm Games', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/w5dmdq9nkkesjccp9ovw.jpg',
-    hltb: {
-      main: 5,
-      extra: 5.5,
-      completionist: 6,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Peggle 2',
-    platforms: 'PS4, XB1, XBXS, PS5',
-    genres: 'Arcade, Puzzle',
-    releaseDate: 'Dec 9',
-    releaseYear: 2013,
-    reviewRank: 38,
-    developers: ['PopCap Games'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ahs9pmkhhvhlf6qn9oyj.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12.5,
-      completionist: 38,
-    },
     score: '100',
-  },
-  {
     name: 'Zoo Tycoon',
     platforms: 'XB1, XBXS',
     genres: 'Strategy',
@@ -515,14 +328,17 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zczipquj9zl1hvhv9dls.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Isometric',
+      'Firstperson',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Brothers: A Tale of Two Sons',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Puzzle, Adventure, Platformer',
@@ -533,14 +349,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d5yjhog51yp0awvdu4zj.jpg',
-    hltb: {
-      main: 3,
-      extra: 3.5,
-      completionist: 4,
-    },
-    score: '100',
+    details: ['Action', 'Adventure', 'Isometric', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Outlast',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, First-Person Shooter',
@@ -551,68 +363,10 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ttchmblgwxki9el4eptq.jpg',
-    hltb: {
-      main: 5,
-      extra: 7,
-      completionist: 11.5,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Stealth'],
   },
   {
-    name: 'FIFA 14',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Sep 24',
-    releaseYear: 2013,
-    reviewRank: 45,
-    developers: ['EA Canada'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s9sn17mwt5sxnjk7ells.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'NES Remix',
-    platforms: 'Wii-U',
-    genres: 'Arcade',
-    releaseDate: 'Dec 18',
-    releaseYear: 2013,
-    reviewRank: 46,
-    developers: ['indieszero Co., Ltd.', 'Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u9y8ntu9xx5kbww6nivo.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 22,
-    },
-    score: '100',
-  },
-  {
-    name: 'Crimson Dragon',
-    platforms: 'XB1, XBXS',
-    genres: 'Action',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 47,
-    developers: ['Grounding Inc'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zjkvixfkpekucrh5wm5v.jpg',
-    hltb: {
-      main: 6,
-      extra: 7.5,
-      completionist: 13,
-    },
-    score: '100',
-  },
-  {
     name: 'NBA Live 14',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Sports',
@@ -624,32 +378,15 @@ export const gameDetails: Game[] = [
     franchise: 'NBA',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s4xvvu33zpec2jtygke6.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Sports',
+      'Behind-Overhead Perspective',
+      'Isometric',
+      'Management',
+    ],
   },
   {
-    name: 'Fighter Within',
-    platforms: 'XB1, XBXS',
-    genres: 'Fighting',
-    releaseDate: 'Nov 19',
-    releaseYear: 2013,
-    reviewRank: 49,
-    developers: ['Daoka'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iubwp75uf1ghwlla3kda.jpg',
-    hltb: {
-      main: null,
-      extra: 10.5,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: 'Shadow Warrior',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -667,35 +404,13 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rixglpugfd73h3dimang.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Funny', 'Action', 'Firstperson', 'Shooter'],
   },
   {
-    name: 'Anomaly 2',
-    platforms: 'PS4, PC, PS5',
-    genres: 'Real-Time Strategy',
-    releaseDate: 'May 15',
-    releaseYear: 2013,
-    reviewRank: 53,
-    developers: ['11 bit studios'],
-    publishers: ['11 bit studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xkkysgza2tiw8eatzsjd.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 9,
-      completionist: 12.5,
-    },
     score: '100',
-  },
-  {
     name: 'Tennis in the Face',
     platforms: 'PS4, PS5, PC, XB1, Switch',
-    genres: 'Puzzle',
+    genres: 'Puzzle elements',
     releaseDate: 'Jan 23',
     releaseYear: 2013,
     reviewRank: 54,
@@ -703,14 +418,10 @@ export const gameDetails: Game[] = [
     publishers: ['10tons'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bnqyh04inqozz5haaqxs.jpg',
-    hltb: {
-      main: 2.5,
-      extra: 3.5,
-      completionist: 4,
-    },
-    score: '100',
+    details: ['Platformer', 'Arcade', 'Sideview', 'Action', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Mercenary Kings',
     platforms: 'PS4, PC, PS5, Switch, XB1',
     genres: 'RPG, Platformer',
@@ -721,32 +432,17 @@ export const gameDetails: Game[] = [
     publishers: ['Tribute Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uvaxhjnnplsnzta59qst.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 35.5,
-      completionist: 53,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Warfare',
+      'Shooter',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+    ],
   },
   {
-    name: 'Doki-Doki Universe',
-    platforms: 'PS4, PS5',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Dec 10',
-    releaseYear: 2013,
-    reviewRank: 58,
-    developers: ['HumaNature Studios'],
-    publishers: ['HumaNature Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vpsu46qthvvmqf0uzlrt.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7,
-      completionist: 10,
-    },
     score: '100',
-  },
-  {
     name: 'Tiny Brains',
     platforms: 'PS4, PC, PS5',
     genres: 'Puzzle, Platformer',
@@ -757,32 +453,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yoo4gursnbwdic7oqohs.jpg',
-    hltb: {
-      main: 2,
-      extra: 2.5,
-      completionist: 3.5,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Platformer', 'Puzzle elements'],
   },
   {
-    name: 'Super Motherload',
-    platforms: 'PS4, PC, PS5',
-    genres: 'Adventure',
-    releaseDate: 'Nov 15',
-    releaseYear: 2013,
-    reviewRank: 60,
-    developers: ['XGen Studios'],
-    publishers: ['XGen Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lrafzhmalm2jzdckjszv.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 16,
-    },
     score: '100',
-  },
-  {
     name: 'NBA 2K14',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -794,14 +468,10 @@ export const gameDetails: Game[] = [
     franchise: 'NBA',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zz98geegspkouon7ob13.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Sports', 'Isometric', 'Side Scroller', 'Management'],
   },
   {
+    score: '100',
     name: 'Deadfall Adventures',
     platforms: 'PC',
     genres: 'Action, Adventure, First-Person Shooter',
@@ -812,68 +482,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nordic Games Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/udpuusozttkpmbjl6jnw.jpg',
-    hltb: {
-      main: 8,
-      extra: 12,
-      completionist: 13,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Puzzle elements'],
   },
   {
-    name: 'Starbound',
-    platforms: 'PC, XB1',
-    genres: 'Creation, Adventure',
-    releaseDate: 'Dec 4',
-    releaseYear: 2013,
-    reviewRank: 63,
-    developers: ['Chucklefish Games'],
-    publishers: ['Chucklefish Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fzcspu9ttrfqrkwtddlj.jpg',
-    hltb: {
-      main: 25,
-      extra: 58.5,
-      completionist: 165,
-    },
     score: '100',
-  },
-  {
-    name: 'World of Warplanes',
-    platforms: 'PC',
-    genres: 'MMO, Vehicle Combat',
-    releaseDate: 'Nov 12',
-    releaseYear: 2013,
-    reviewRank: 66,
-    developers: ['Wargaming.net', 'Persha Studia'],
-    publishers: ['Wargaming.net'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arnxx.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
-  },
-  {
-    name: 'Powerstar Golf',
-    platforms: 'XB1, XBXS',
-    genres: 'Sports',
-    releaseDate: 'Nov 22',
-    releaseYear: 2013,
-    reviewRank: 67,
-    developers: ['Zoe Mode'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/golu6uaqhvb9zekidceg.jpg',
-    hltb: {
-      main: 20.5,
-      extra: null,
-      completionist: 56,
-    },
-    score: '100',
-  },
-  {
     name: 'Paranautical Activity',
     platforms: 'XB1, XBXS, PC, Switch, PS4',
     genres: 'Action, First-Person Shooter',
@@ -884,14 +496,10 @@ export const gameDetails: Game[] = [
     publishers: ['Digerati Distribution'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvnyooxn8ene8vxxp7cq.jpg',
-    hltb: {
-      main: 4,
-      extra: 7,
-      completionist: 19,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Dota 2',
     platforms: 'PC',
     genres: 'Action, Real-Time Strategy',
@@ -903,14 +511,10 @@ export const gameDetails: Game[] = [
     franchise: 'Dota',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7frs.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Strategy', 'Isometric', 'Battleroyale', 'MOBA'],
   },
   {
+    score: '100',
     name: 'Gone Home',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Interactive Story, Adventure',
@@ -921,14 +525,10 @@ export const gameDetails: Game[] = [
     publishers: ['Midnight City', 'Annapurna Interactive', 'Fullbright'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tiobz4ny3kzkh9lo7ttk.jpg',
-    hltb: {
-      main: 2,
-      extra: 2.5,
-      completionist: 3,
-    },
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Risk of Rain',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Roguelike, Action, Platformer',
@@ -939,17 +539,19 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games', 'Hopoo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p1liluf7kxhir9nrqb2n.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 21.5,
-      completionist: 50.5,
-    },
-    score: '100',
+    details: [
+      'Rogue-like',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'The Bridge',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Puzzle',
+    genres: 'Puzzle elements',
     releaseDate: 'Feb 22',
     releaseYear: 2013,
     reviewRank: 74,
@@ -960,14 +562,10 @@ export const gameDetails: Game[] = [
     publishers: ['The Quantum Astrophysicists Guild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n7ythiu3pcjwnphw9urn.jpg',
-    hltb: {
-      main: 3.5,
-      extra: 6,
-      completionist: 7.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Hammerwatch',
     platforms: 'XB1, Switch, PC, PS4, XBXS, PS5',
     genres: 'Action, RPG',
@@ -978,50 +576,10 @@ export const gameDetails: Game[] = [
     publishers: ['BlitWorks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dto1skqmyspe8szn0pcb.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 14,
-      completionist: 31.5,
-    },
-    score: '100',
+    details: ['RPG', 'Isometric', 'Side Scroller', 'ARPG'],
   },
   {
-    name: 'Croixleur Sigma',
-    platforms: 'PS4, PC, PS5, Switch',
-    genres: 'Action',
-    releaseDate: 'Dec 30',
-    releaseYear: 2013,
-    reviewRank: 79,
-    developers: ['souvenir circ.'],
-    publishers: ['Nyu Media', 'PLAYISM'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qm7syp9qkek42ec5pt7v.jpg',
-    hltb: {
-      main: 1,
-      extra: 4.5,
-      completionist: 17,
-    },
     score: '100',
-  },
-  {
-    name: 'Renowned Explorers: International Society',
-    platforms: 'PC',
-    genres: 'Adventure, RPG, Strategy',
-    releaseDate: 'Sep 2',
-    releaseYear: 2013,
-    reviewRank: 81,
-    developers: ['Abbey Games'],
-    publishers: ['Abbey Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mldxru2wt0qrdzenbqxa.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 25,
-      completionist: 93,
-    },
-    score: '100',
-  },
-  {
     name: 'Tiny Barbarian DX',
     platforms: 'Switch, PC',
     genres: 'Platformer',
@@ -1032,32 +590,10 @@ export const gameDetails: Game[] = [
     publishers: ['StarQuail Games', 'Nicalis, Inc.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ey0emj6gjj8lphcxydqz.jpg',
-    hltb: {
-      main: 10,
-      extra: 11,
-      completionist: 11.5,
-    },
-    score: '100',
+    details: ['Platformer', 'Arcade', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
-    name: 'Anodyne',
-    platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
-    genres: 'Adventure',
-    releaseDate: 'Feb 4',
-    releaseYear: 2013,
-    reviewRank: 84,
-    developers: ['Analgesic Productions', 'Marina Kittaka', 'Melos Han-Tani'],
-    publishers: ['Analgesic Productions', 'Nnooo Pty Ltd.'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xvl44ypmrmtkyjujgk51.jpg',
-    hltb: {
-      main: 6,
-      extra: 7,
-      completionist: 9.5,
-    },
     score: '100',
-  },
-  {
     name: 'X Rebirth',
     platforms: 'PC',
     genres: 'Simulation, Vehicle Combat',
@@ -1068,14 +604,10 @@ export const gameDetails: Game[] = [
     publishers: ['Egosoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dckwurwtsjltn4ipqrqi.jpg',
-    hltb: {
-      main: null,
-      extra: 157,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Space', 'Management', 'Firstperson', 'Simulation', 'Action'],
   },
   {
+    score: '100',
     name: 'Ittle Dew',
     platforms: 'Wii-U, PC, Switch',
     genres: 'Puzzle, Adventure, RPG',
@@ -1086,32 +618,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ludosity'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x6ntdyy6miydlymghh5x.jpg',
-    hltb: {
-      main: 3,
-      extra: 5,
-      completionist: 8,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Side Scroller', 'Puzzle elements'],
   },
   {
-    name: 'Reus',
-    platforms: 'PS4, XB1, XBXS, PS5, PC',
-    genres: 'Simulation, Strategy',
-    releaseDate: 'May 16',
-    releaseYear: 2013,
-    reviewRank: 88,
-    developers: ['Abbey Games'],
-    publishers: ['Abbey Games', 'SOEDESCO Publishing'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zbqoot3f1uyi7zz5eteb.jpg',
-    hltb: {
-      main: 8,
-      extra: 21,
-      completionist: 68,
-    },
     score: '100',
-  },
-  {
     name: 'Captain Toad: Treasure Tracker',
     platforms: 'Wii-U, 3DS, Switch',
     genres: 'Platformer',
@@ -1122,14 +632,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oqxhtgd7ygwxuyqxevm2.jpg',
-    hltb: {
-      main: 7,
-      extra: 11.5,
-      completionist: 19.5,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Grand Theft Auto V',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
@@ -1140,14 +646,17 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', 'Rockstar Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc10f95.jpg',
-    hltb: {
-      main: 32,
-      extra: 51.5,
-      completionist: 88.5,
-    },
-    score: '100',
+    details: [
+      'Crime',
+      'Shooter',
+      'Sandbox',
+      'Battleroyale',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+    ],
   },
   {
+    score: '100',
     name: 'Donkey Kong Country: Tropical Freeze',
     platforms: 'Wii-U, Switch',
     genres: 'Platformer',
@@ -1158,14 +667,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ksxcegjqgvbwsqtk9kns.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 31.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Alien: Isolation',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror',
@@ -1177,68 +682,10 @@ export const gameDetails: Game[] = [
     franchise: 'Alien',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dek1ysjlwizlhh0z624o.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 22.5,
-      completionist: 34,
-    },
-    score: '100',
+    details: ['Horror', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
   },
   {
-    name: 'Bayonetta 2',
-    platforms: 'Wii-U, Switch',
-    genres: 'Action',
-    releaseDate: 'Oct 24',
-    releaseYear: 2014,
-    reviewRank: 5,
-    developers: ['PlatinumGames'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zw8acobiw81iwvpstq0t.jpg',
-    hltb: {
-      main: 9,
-      extra: 12.5,
-      completionist: 47,
-    },
     score: '100',
-  },
-  {
-    name: 'Dragon Age: Inquisition',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'RPG',
-    releaseDate: 'Nov 18',
-    releaseYear: 2014,
-    reviewRank: 6,
-    developers: ['BioWare Edmonton'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8vuf.jpg',
-    hltb: {
-      main: 46.5,
-      extra: 87.5,
-      completionist: 129,
-    },
-    score: '100',
-  },
-  {
-    name: 'Watch Dogs',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
-    genres: 'Adventure, Third-Person Shooter',
-    releaseDate: 'May 26',
-    releaseYear: 2014,
-    reviewRank: 7,
-    developers: ['Ubisoft Montreal'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jzehv6mqtb3glfbf3h6z.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 33,
-      completionist: 62.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Middle-earth: Shadow of Mordor',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -1250,14 +697,10 @@ export const gameDetails: Game[] = [
     franchise: 'The Lord of the Rings',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/anyfu26e1hfmr45gkozd.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 24,
-      completionist: 33,
-    },
-    score: '100',
+    details: ['RPG', 'Stealth', 'Sandbox', 'ARPG', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Wolfenstein: The New Order',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1268,14 +711,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qc2ebgvjqzrrsc9ecspf.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 15.5,
-      completionist: 24.5,
-    },
-    score: '100',
+    details: ['Warfare', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Shovel Knight',
     platforms: 'PS4, XB1, Wii-U, PC, 3DS, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -1286,14 +725,10 @@ export const gameDetails: Game[] = [
     publishers: ['Yacht Club Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s7dqmmyppgfphyasdbuj.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 9.5,
-      completionist: 18,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Destiny',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -1304,9 +739,16 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/juj7w8dsnbwdpyq0ntm4.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Call of Duty: Advanced Warfare',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -1317,32 +759,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cpx6xdycg3hdbbnonioh.jpg',
-    hltb: {
-      main: 7,
-      extra: 10.5,
-      completionist: 17.5,
-    },
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Shooter'],
   },
   {
-    name: 'The Banner Saga',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'RPG, Turn-Based Strategy',
-    releaseDate: 'Jan 14',
-    releaseYear: 2014,
-    reviewRank: 13,
-    developers: ['Stoic'],
-    publishers: ['Versus Evil'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sxdqnhjaaii3ykutp4rk.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14,
-      completionist: 30.5,
-    },
     score: '100',
-  },
-  {
     name: 'Far Cry 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1353,14 +773,17 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mczvcq7qlfbvmqljgspe.jpg',
-    hltb: {
-      main: 18,
-      extra: 31,
-      completionist: 47,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Sandbox',
+      'Firstperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'The Evil Within',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Horror',
@@ -1371,68 +794,15 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vijpv4dvt06fsimepmc0.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 20,
-      completionist: 40.5,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Action',
+      'Behind-Overhead Perspective',
+      'Puzzle elements',
+    ],
   },
   {
-    name: "Assassin's Creed Unity",
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, Adventure',
-    releaseDate: 'Nov 11',
-    releaseYear: 2014,
-    reviewRank: 16,
-    developers: ['Ubisoft Montreal'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rd2u6c3wochb1okq5vyc.jpg',
-    hltb: {
-      main: 17,
-      extra: 35,
-      completionist: 80,
-    },
     score: '100',
-  },
-  {
-    name: 'Transistor',
-    platforms: 'PS4, PC, PS5, Switch',
-    genres: 'RPG, Strategy',
-    releaseDate: 'May 19',
-    releaseYear: 2014,
-    reviewRank: 17,
-    developers: ['Supergiant Games'],
-    publishers: ['Supergiant Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/axc7016mm1qftco88y4y.jpg',
-    hltb: {
-      main: 6,
-      extra: 8.5,
-      completionist: 16,
-    },
-    score: '100',
-  },
-  {
-    name: 'Sunset Overdrive',
-    platforms: 'XB1, XBXS, PC',
-    genres: 'Action',
-    releaseDate: 'Oct 28',
-    releaseYear: 2014,
-    reviewRank: 19,
-    developers: ['Insomniac Games'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yqxofd4vayogzqirzsj4.jpg',
-    hltb: {
-      main: 10,
-      extra: 17.5,
-      completionist: 34.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Child of Light',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -1443,14 +813,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hc8dtizgfytrnz5ha9an.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 15.5,
-    },
-    score: '100',
+    details: ['RPG', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Titanfall',
     platforms: 'XB1, PC, XBXS',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -1461,14 +827,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nitb2agkdj8e76niastu.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Halo: The Master Chief Collection',
     platforms: 'XB1, XBXS, PC',
     genres: 'First-Person Shooter',
@@ -1479,28 +841,15 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zfzjqrykv4qoah7xzhme.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Action',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Shooter',
+    ],
   },
   {
-    name: 'Puyo Puyo Tetris',
-    platforms: 'Switch, PS4, PS5, PC, 3DS, XB1',
-    genres: 'Puzzle',
-    releaseDate: 'Feb 6',
-    releaseYear: 2014,
-    reviewRank: 23,
-    developers: ['Sonic Team'],
-    publishers: ['Sega'],
-    franchise: 'Tetris',
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oirfctekwgmimkje2hn8.jpg',
     score: '100',
-  },
-  {
     name: 'Lords of the Fallen',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -1511,28 +860,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zpengo6mkmz5shyocukf.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
-    name: 'Mario Kart 8',
-    platforms: 'Wii-U',
-    genres: 'Racing',
-    releaseDate: 'May 30',
-    releaseYear: 2014,
-    reviewRank: 26,
-    developers: ['Nintendo EAD'],
-    publishers: ['Nintendo'],
-    franchise: 'Mario Bros.',
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zbxjppkunzzuvrikzmdj.jpg',
     score: '100',
-  },
-  {
     name: 'The Sims 4',
     platforms: 'PC, PS4, XB1',
     genres: 'Simulation',
@@ -1543,14 +874,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pneosk2tq2m9iocckrji.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Point+click', 'Simulation', 'Isometric', 'Life-sim'],
   },
   {
+    score: '100',
     name: 'Super Smash Bros. for Wii U',
     platforms: 'Wii-U',
     genres: 'Fighting',
@@ -1561,9 +888,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qjnwbw7duxqvdm765cic.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: 'Valiant Hearts: The Great War',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Interactive Story, Platformer',
@@ -1574,14 +902,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hburowdzumdkxidjeeq7.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 7.5,
-      completionist: 9,
-    },
-    score: '100',
+    details: ['Warfare', 'Sideview', 'Adventure', 'Action', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Murdered: Soul Suspect',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Horror, Adventure',
@@ -1592,14 +916,16 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zxnstybvmmkp483otykz.jpg',
-    hltb: {
-      main: 7,
-      extra: 8.5,
-      completionist: 11.5,
-    },
-    score: '100',
+    details: [
+      'Mystery',
+      'Stealth',
+      'Thirdperson',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Thief',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -1610,70 +936,16 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix', 'Feral Interactive', 'Eidos Montréal'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sgbhfpclrk5udlowkpyq.jpg',
-    hltb: {
-      main: 11,
-      extra: 22,
-      completionist: 44.5,
-    },
-    score: '100',
+    details: [
+      'Steampunk',
+      'Stealth',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'South Park: The Stick of Truth',
-    overrideMask: '[ ... ] **** : *** [ ... ]',
-    platforms: 'PC, XB1, PS4, Switch',
-    genres: 'Comedy, RPG, Turn-Based Strategy',
-    releaseDate: 'Mar 4',
-    releaseYear: 2014,
-    reviewRank: 35,
-    developers: ['Obsidian Entertainment'],
-    publishers: ['Ubisoft Entertainment'],
-    franchise: 'South Park',
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vevt14vztlsidoewcrip.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 14.5,
-      completionist: 21,
-    },
     score: '100',
-  },
-  {
-    name: 'Hyrule Warriors',
-    platforms: 'Wii-U, Switch',
-    genres: 'Action',
-    releaseDate: 'Sep 26',
-    releaseYear: 2014,
-    reviewRank: 37,
-    developers: ['Team NINJA', 'Omega Force'],
-    publishers: ['Koei Tecmo Games', 'Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/afv2dc22uwldxxso4iaa.jpg',
-    hltb: {
-      main: 13,
-      extra: 38.5,
-      completionist: 222,
-    },
-    score: '100',
-  },
-  {
-    name: 'Octodad: Dadliest Catch',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
-    genres: 'Adventure',
-    releaseDate: 'Jan 30',
-    releaseYear: 2014,
-    reviewRank: 40,
-    developers: ['Young Horses'],
-    publishers: ['Young Horses'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/chilt0qssgmhscbwiqjy.jpg',
-    hltb: {
-      main: 2.5,
-      extra: 4,
-      completionist: 7.5,
-    },
-    score: '100',
-  },
-  {
     name: "Sid Meier's Civilization: Beyond Earth",
     platforms: 'PC',
     genres: 'Strategy, Turn-Based Strategy',
@@ -1684,68 +956,16 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', 'Aspyr Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/l2lgjnmjifj26ffvpivh.jpg',
-    hltb: {
-      main: 17,
-      extra: 49,
-      completionist: 78.5,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Grand Strategy',
+      'Isometric',
+    ],
   },
   {
-    name: 'FIFA 15',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Sep 22',
-    releaseYear: 2014,
-    reviewRank: 43,
-    developers: ['EA Canada'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nrtyeq8dfduiymrqpimm.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Metro Redux',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'First-Person Shooter',
-    releaseDate: 'Aug 26',
-    releaseYear: 2014,
-    reviewRank: 45,
-    developers: ['4A Games'],
-    publishers: ['Deep Silver', 'Koch Media'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ficv5pmpg84gaevkz15m.jpg',
-    hltb: {
-      main: 17,
-      extra: 25,
-      completionist: 52,
-    },
-    score: '100',
-  },
-  {
-    name: 'The Crew',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Racing',
-    releaseDate: 'Dec 1',
-    releaseYear: 2014,
-    reviewRank: 46,
-    developers: ['Ivory Tower', 'Ubisoft Reflections'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/itkkfsjwvybqqo5btg4n.jpg',
-    hltb: {
-      main: 19,
-      extra: 42.5,
-      completionist: 118,
-    },
-    score: '100',
-  },
-  {
     name: 'Strider',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -1756,50 +976,17 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bn7xdqbcwvpeznr9c8kp.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Sci-fi',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'LEGO Batman 3: Beyond Gotham',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS',
-    genres: 'Adventure',
-    releaseDate: 'Nov 11',
-    releaseYear: 2014,
-    reviewRank: 49,
-    developers: ["Traveller's Tales"],
-    publishers: ['WB Games', 'DC Comics'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qh2kztiqp3ssquhgpplb.jpg',
-    hltb: {
-      main: 10,
-      extra: 19.5,
-      completionist: 36.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Sniper Elite III',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Third-Person Shooter',
-    releaseDate: 'Jun 26',
-    releaseYear: 2014,
-    reviewRank: 50,
-    developers: ['Rebellion Developments'],
-    publishers: ['505 Games', 'Rebellion Developments'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/m82bznmythcjm6ka2kic.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 31,
-    },
-    score: '100',
-  },
-  {
     name: 'Super Smash Bros. for Nintendo 3DS',
     platforms: '3DS',
     genres: 'Fighting',
@@ -1810,14 +997,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ijybeutyicckerhwaar3.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 38,
-      completionist: 109,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: 'Lara Croft and the Temple of Osiris',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -1829,35 +1012,13 @@ export const gameDetails: Game[] = [
     franchise: 'Tomb Raider',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lldpmndbvqftxnccqym4.jpg',
-    hltb: {
-      main: 5,
-      extra: 7,
-      completionist: 13.5,
-    },
-    score: '100',
+    details: ['Action', 'Isometric', 'Platformer', 'Puzzle elements'],
   },
   {
-    name: 'WWE 2K15',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Nov 18',
-    releaseYear: 2014,
-    reviewRank: 53,
-    developers: ['Visual Concepts', "Yuke's"],
-    publishers: ['2K Sports', '2K'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qsudye7ycgeeycnwzqqn.jpg',
-    hltb: {
-      main: 20,
-      extra: 39.5,
-      completionist: 91,
-    },
     score: '100',
-  },
-  {
     name: 'The Talos Principle',
     platforms: 'PS4, PC, PS5, XB1, Switch',
-    genres: 'Puzzle',
+    genres: 'Puzzle elements',
     releaseDate: 'Dec 11',
     releaseYear: 2014,
     reviewRank: 55,
@@ -1865,50 +1026,15 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yscwd4zz6vljgcuaxjwa.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 21,
-      completionist: 29.5,
-    },
-    score: '100',
+    details: [
+      'Action',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'The Amazing Spider-Man 2',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, 3DS',
-    genres: 'Action, Adventure',
-    releaseDate: 'Apr 17',
-    releaseYear: 2014,
-    reviewRank: 58,
-    developers: ['Beenox'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jufjblwqffratftyn4t3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Daylight',
-    platforms: 'PS4, PC, PS5',
-    genres: 'Horror, First-Person Shooter',
-    releaseDate: 'Apr 28',
-    releaseYear: 2014,
-    reviewRank: 59,
-    developers: ['Zombie Studios'],
-    publishers: ['Atlus USA'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/larj17ehraduvkodl9i4.jpg',
-    hltb: {
-      main: 2,
-      extra: 4,
-      completionist: 6.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Velocity 2X',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Platformer',
@@ -1919,14 +1045,10 @@ export const gameDetails: Game[] = [
     publishers: ['FuturLab', 'Sierra', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iwt7ouzewmvh6qpgyeuv.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 9.5,
-      completionist: 26,
-    },
-    score: '100',
+    details: ['Shooter', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'The Elder Scrolls Online',
     platforms: 'PC, XB1, XBXS, PS4, PS5',
     genres: 'MMO, RPG',
@@ -1937,32 +1059,16 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kit1ckxyfakykrsv5opd.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'MMO',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Borderlands: The Pre-Sequel',
-    platforms: 'XB1, PC, XBXS, PS4, Switch',
-    genres: 'First-Person Shooter',
-    releaseDate: 'Oct 14',
-    releaseYear: 2014,
-    reviewRank: 63,
-    developers: ['2K Australia', 'Gearbox Software'],
-    publishers: ['Take-Two Interactive', '2K Games', 'Aspyr Media'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h4fjlbicz4rulqbagzat.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: "Shantae and the Pirate's Curse",
     platforms: 'XB1, Wii-U, PC, 3DS, XBXS, PS4, PS5, Switch',
     genres: 'Action, Adventure',
@@ -1973,14 +1079,17 @@ export const gameDetails: Game[] = [
     publishers: ['Rising Star Games', 'Intergrow', 'WayForward'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rckkjcyndvfbghwa9zkn.jpg',
-    hltb: {
-      main: 8,
-      extra: 9.5,
-      completionist: 10.5,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Tropico 5',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Simulation, Strategy',
@@ -1991,33 +1100,16 @@ export const gameDetails: Game[] = [
     publishers: ['Kalypso Media', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bg64tewnxaipxzyxwetd.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 40.5,
-      completionist: 93.5,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Citybuilder',
+      'Isometric',
+    ],
   },
   {
-    name: 'EA Sports UFC',
-    platforms: 'PS4, XB1, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Jun 16',
-    releaseYear: 2014,
-    reviewRank: 66,
-    developers: ['EA Canada'],
-    publishers: ['EA Sports'],
-    franchise: 'UFC',
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/opetexgqdmd9r93oefmd.jpg',
-    hltb: {
-      main: 11,
-      extra: 17.5,
-      completionist: 27.5,
-    },
     score: '100',
-  },
-  {
     name: 'Dark Souls II',
     platforms: 'PC, PS4, XB1',
     genres: 'Action, RPG',
@@ -2028,50 +1120,10 @@ export const gameDetails: Game[] = [
     publishers: ['FromSoftware', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hj8wcegykk7dixcrzvf4.jpg',
-    hltb: {
-      main: 43,
-      extra: 62.5,
-      completionist: 120,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
-    name: 'Geometry Wars 3: Dimensions',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Arcade',
-    releaseDate: 'Nov 25',
-    releaseYear: 2014,
-    reviewRank: 70,
-    developers: ['Lucid Games'],
-    publishers: ['Sierra'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/a3rob80provwefchpuu3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Mario Golf: World Tour',
-    platforms: '3DS',
-    genres: 'Sports',
-    releaseDate: 'May 2',
-    releaseYear: 2014,
-    reviewRank: 72,
-    developers: ['Camelot Software Planning'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jqbooaemdv5g5q6eoolt.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 24.5,
-      completionist: 74.5,
-    },
-    score: '100',
-  },
-  {
     name: "Yoshi's New Island",
     platforms: '3DS',
     genres: 'Platformer',
@@ -2082,32 +1134,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/t7eimncbgczzmhyd0ejj.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 12,
-      completionist: 28,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Arcade', 'Platformer'],
   },
   {
-    name: 'Divinity: Original Sin',
-    platforms: 'PC, PS4, XB1',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Jun 30',
-    releaseYear: 2014,
-    reviewRank: 77,
-    developers: ['Larian Studios'],
-    publishers: ['Larian Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cvywmfjyq8sycaf8vwql.jpg',
-    hltb: {
-      main: 66.5,
-      extra: 85.5,
-      completionist: 108,
-    },
     score: '100',
-  },
-  {
     name: 'Goat Simulator',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -2118,50 +1148,10 @@ export const gameDetails: Game[] = [
     publishers: ['Coffee Stain Studios', 'Double Eleven'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p4s4xfhxduuirn1hmwdk.jpg',
-    hltb: {
-      main: 2,
-      extra: 6.5,
-      completionist: 11.5,
-    },
-    score: '100',
+    details: ['Funny', 'Action', 'Behind-Overhead Perspective', 'Sandbox'],
   },
   {
-    name: 'Pro Evolution Soccer 2015',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Nov 10',
-    releaseYear: 2014,
-    reviewRank: 79,
-    developers: ['Konami'],
-    publishers: ['Konami'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jhbxpwvdvxfwcbxkt6c2.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Hohokum',
-    platforms: 'PS4, PS5, PC',
-    genres: 'Adventure',
-    releaseDate: 'Aug 12',
-    releaseYear: 2014,
-    reviewRank: 80,
-    developers: ['SCE Santa Monica Studio', 'Honeyslug', 'Richard Hogg'],
-    publishers: ['Sony Computer Entertainment', 'Annapurna Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/om1jhfjqbap4d8jcmo5c.jpg',
-    hltb: {
-      main: 4,
-      extra: 5.5,
-      completionist: 7,
-    },
-    score: '100',
-  },
-  {
     name: 'Freedom Planet',
     platforms: 'Wii-U, PC, Switch, PS4',
     genres: 'Action, Platformer',
@@ -2172,50 +1162,10 @@ export const gameDetails: Game[] = [
     publishers: ['GalaxyTrail', 'XSEED Games', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/atpmp90ip3wkkdsridk8.jpg',
-    hltb: {
-      main: 5,
-      extra: 9.5,
-      completionist: 22,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'Kirby Triple Deluxe',
-    platforms: '3DS',
-    genres: 'Platformer',
-    releaseDate: 'May 2',
-    releaseYear: 2014,
-    reviewRank: 83,
-    developers: ['HAL Laboratory'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ovfsvcmmbyhl5poetjhc.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 11.5,
-      completionist: 25,
-    },
     score: '100',
-  },
-  {
-    name: 'Fantasia: Music Evolved',
-    platforms: 'XB1, XBXS',
-    genres: 'Music',
-    releaseDate: 'Oct 20',
-    releaseYear: 2014,
-    reviewRank: 84,
-    developers: ['Harmonix Music Systems'],
-    publishers: ['Disney Interactive Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/egmfxdiq8p59fzkb0sxz.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 10,
-      completionist: 25,
-    },
-    score: '100',
-  },
-  {
     name: 'NBA 2K15',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Sports',
@@ -2226,37 +1176,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pi6odeu2g4c30lttqcxk.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Sports', 'Isometric', 'Side Scroller', 'Management'],
   },
   {
-    name: 'Road Redemption',
-    platforms: 'PC, PS4, XB1, Switch, XBXS',
-    genres: 'Action, Racing',
-    releaseDate: 'Sep 18',
-    releaseYear: 2014,
-    reviewRank: 86,
-    developers: [
-      'Dark Seas Interactive',
-      'Saber Interactive',
-      'Pixel Dash Studios',
-      'EQ-Games',
-    ],
-    publishers: ['Tripwire Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lnr5atvece8qnuwoptfq.jpg',
-    hltb: {
-      main: 6,
-      extra: 10.5,
-      completionist: 38,
-    },
     score: '100',
-  },
-  {
     name: 'Luftrausers',
     platforms: 'PC',
     genres: 'Arcade',
@@ -2267,14 +1190,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/j5nzqfl3reenepgf3lay.jpg',
-    hltb: {
-      main: 4,
-      extra: 6,
-      completionist: 14.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Hatoful Boyfriend',
     platforms: 'PS4, PC, PS5',
     genres: 'Simulation',
@@ -2285,37 +1204,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/osjt00allssddpzxmkf5.jpg',
-    hltb: {
-      main: 1.5,
-      extra: 4.5,
-      completionist: 9.5,
-    },
-    score: '100',
-  },
-  {
-    name: 'The Witcher 3: Wild Hunt',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Adventure, RPG',
-    releaseDate: 'May 19',
-    releaseYear: 2015,
-    reviewRank: 1,
-    developers: ['CD Projekt RED'],
-    publishers: [
-      'WB Games',
-      'cdp.pl',
-      'Spike Chunsoft',
-      'Bandai Namco Entertainment',
+    details: [
+      'RPG',
+      'Anime',
+      'Visual Novel',
+      'Life-sim',
+      'Firstperson',
+      'Adventure',
     ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/farvemmmxav0bgt6wx7t.jpg',
-    hltb: {
-      main: 51.5,
-      extra: 103,
-      completionist: 174,
-    },
-    score: '100',
   },
   {
+    score: '100',
     name: 'Fallout 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG, Third-Person Shooter',
@@ -2326,14 +1225,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/whhptvhci1bdoqolofjo.jpg',
-    hltb: {
-      main: 27.5,
-      extra: 83,
-      completionist: 160,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Shooter',
+      'Sandbox',
+      'ARPG',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+    ],
   },
   {
+    score: '100',
     name: 'Halo 5: Guardians',
     platforms: 'XB1, XBXS',
     genres: 'First-Person Shooter',
@@ -2344,14 +1246,17 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/isojfap422zvz6yjuk4i.jpg',
-    hltb: {
-      main: 8,
-      extra: 13.5,
-      completionist: 25.5,
-    },
-    score: '100',
+    details: [
+      'Warfare',
+      'Cars',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Metal Gear Solid V: The Phantom Pain',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'RPG, Third-Person Shooter',
@@ -2362,14 +1267,17 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scj1o3.jpg',
-    hltb: {
-      main: 45.5,
-      extra: 81.5,
-      completionist: 164,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Batman: Arkham Knight',
     overrideMask: 'Batman: [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -2382,14 +1290,17 @@ export const gameDetails: Game[] = [
     franchise: 'Batman',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3z1odurhninhnorve6g.jpg',
-    hltb: {
-      main: 17,
-      extra: 31.5,
-      completionist: 51,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Sandbox',
+      'Brawler',
+      'Behind-Overhead Perspective',
+      'Cars',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Dying Light',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Action, First-Person Shooter',
@@ -2400,14 +1311,10 @@ export const gameDetails: Game[] = [
     publishers: ['Techland', 'WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yvstmj75wfqrtz4um8x0.jpg',
-    hltb: {
-      main: 18,
-      extra: 36.5,
-      completionist: 64,
-    },
-    score: '100',
+    details: ['Zombies', 'Horror', 'Action', 'Firstperson', 'Sandbox'],
   },
   {
+    score: '100',
     name: 'Star Wars Battlefront',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -2419,14 +1326,15 @@ export const gameDetails: Game[] = [
     franchise: 'Star Wars',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar4rr.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Action',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Shooter',
+    ],
   },
   {
+    score: '100',
     name: 'Bloodborne',
     platforms: 'PS4, PS5',
     genres: 'Action',
@@ -2437,50 +1345,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/aokcsspzrqyaaoug7jnn.jpg',
-    hltb: {
-      main: 32.5,
-      extra: 43.5,
-      completionist: 75.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Horror',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Rocket League',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Sports, Driving, Action',
-    releaseDate: 'Jul 6',
-    releaseYear: 2015,
-    reviewRank: 49,
-    developers: ['Psyonix'],
-    publishers: ['Psyonix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x2ebxdsn5kfjcnjbo7q2.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Just Cause 3',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, Adventure, Third-Person Shooter',
-    releaseDate: 'Dec 1',
-    releaseYear: 2015,
-    reviewRank: 11,
-    developers: ['Avalanche Studios'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sgpeembg1kvvhexmub3g.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 38,
-      completionist: 63.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Rise of the Tomb Raider',
     platforms: 'PS4, XB1, XBXS, PS5, PC, Stadia',
     genres: 'Third-Person Shooter, Action, Adventure',
@@ -2492,32 +1366,16 @@ export const gameDetails: Game[] = [
     franchise: 'Tomb Raider',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u3obs5jsfqponnkp3qp1.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 22,
-      completionist: 35.5,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: "Assassin's Creed Syndicate",
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, Adventure',
-    releaseDate: 'Oct 23',
-    releaseYear: 2015,
-    reviewRank: 13,
-    developers: ['Ubisoft Québec'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/axkvaha3d5pguyxraalz.jpg',
-    hltb: {
-      main: 19,
-      extra: 34,
-      completionist: 56,
-    },
     score: '100',
-  },
-  {
     name: 'Mad Max',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -2529,14 +1387,16 @@ export const gameDetails: Game[] = [
     franchise: 'Mad Max',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fzi3zk3rabsote4axfkg.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Cars',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Call of Duty: Black Ops III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2547,14 +1407,17 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9v.jpg',
-    hltb: {
-      main: 9,
-      extra: 15,
-      completionist: 84,
-    },
-    score: '100',
+    details: [
+      'Warfare',
+      'Sci-fi',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Firstperson',
+    ],
   },
   {
+    score: '100',
     name: 'Ori and the Blind Forest',
     platforms: 'XB1, PC, XBXS, Switch',
     genres: 'Adventure, Platformer',
@@ -2565,14 +1428,17 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/v2pnld98yq2xvs788c4o.jpg',
-    hltb: {
-      main: 8,
-      extra: 10.5,
-      completionist: 12,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Evolve',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2583,14 +1449,15 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z7hpe8nmxiemmz648by4.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 9.5,
-      completionist: 61.5,
-    },
-    score: '100',
+    details: [
+      'Action',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Shooter',
+    ],
   },
   {
+    score: '100',
     name: 'Mortal Kombat X',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Fighting',
@@ -2601,14 +1468,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hdl8gzvgpqayqqr5hhxg.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 16.5,
-      completionist: 68.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: 'Until Dawn',
     platforms: 'PS4, PS5',
     genres: 'Horror, Survival',
@@ -2619,14 +1482,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5j99.jpg',
-    hltb: {
-      main: 8,
-      extra: 9.5,
-      completionist: 19,
-    },
-    score: '100',
+    details: ['Horror', 'Mystery', 'Survival', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Cities: Skylines',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation',
@@ -2637,14 +1496,17 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/au4c05q7ltgciciwprse.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Citybuilder',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'The Flame in the Flood',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -2655,14 +1517,10 @@ export const gameDetails: Game[] = [
     publishers: ['The Molasses Flood', 'Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kdofv91jcumr89hgbnfn.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 13.5,
-      completionist: 50,
-    },
-    score: '100',
+    details: ['Survival', 'Action', 'Isometric', 'Rogue-like'],
   },
   {
+    score: '100',
     name: 'Axiom Verge',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, Switch, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -2673,14 +1531,17 @@ export const gameDetails: Game[] = [
     publishers: ['Thomas Happ Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ym91qnklxxx1kzxdk1nv.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 13.5,
-      completionist: 17,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Metroidvania',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'The Order: 1886',
     platforms: 'PS4, PS5',
     genres: 'Interactive Story, Third-Person Shooter',
@@ -2691,14 +1552,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rde6b4cbthkhbdnqsv8x.jpg',
-    hltb: {
-      main: 7,
-      extra: 8.5,
-      completionist: 10.5,
-    },
-    score: '100',
+    details: [
+      'Steampunk',
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Super Mario Maker',
     platforms: 'Wii-U, 3DS',
     genres: 'Creation, Platformer',
@@ -2709,14 +1572,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zlq73p3cjacya9ujcss3.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 36.5,
-      completionist: 147,
-    },
-    score: '100',
+    details: [
+      'Point+click',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Oxenfree',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -2727,14 +1592,16 @@ export const gameDetails: Game[] = [
     publishers: ['Night School Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wlempy24kn8sskjwtjum.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 5.5,
-      completionist: 13,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Side Scroller',
+      'Sideview',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Battlefield Hardline',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -2745,50 +1612,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctjao.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 11,
-      completionist: 26.5,
-    },
-    score: '100',
+    details: [
+      'Cars',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Transformers: Devastation',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action',
-    releaseDate: 'Oct 6',
-    releaseYear: 2015,
-    reviewRank: 31,
-    developers: ['PlatinumGames'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wjzqemocibxpi6zo3bg5.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 8.5,
-      completionist: 21.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Splatoon',
-    platforms: 'Wii-U',
-    genres: 'Third-Person Shooter',
-    releaseDate: 'May 29',
-    releaseYear: 2015,
-    reviewRank: 32,
-    developers: ['Nintendo EAD'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wuvc82z6xdpxgggqmw7y.jpg',
-    hltb: {
-      main: 5,
-      extra: 11.5,
-      completionist: 19,
-    },
-    score: '100',
-  },
-  {
     name: 'Mega Man Legacy Collection',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Arcade, Platformer',
@@ -2799,14 +1632,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xlwprjw9llnwnoujrffm.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Anime', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Guitar Hero Live',
     platforms: 'PS4, XB1, Wii-U, XBXS, PS5',
     genres: 'Music',
@@ -2817,36 +1646,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u0wuojqftnz3qmiroqpk.jpg',
-    hltb: {
-      main: 4.5,
-      extra: 17.5,
-      completionist: 70,
-    },
-    score: '100',
+    details: ['Action', 'Simulation', 'Thirdperson', 'Rhythm'],
   },
   {
-    name: 'LEGO Jurassic World',
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
-    genres: 'Adventure',
-    releaseDate: 'Jun 10',
-    releaseYear: 2015,
-    reviewRank: 35,
-    developers: ['TT Games'],
-    publishers: [
-      'WB Games',
-      'Warner Bros. Entertainment Inc.',
-      'Feral Interactive',
-    ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qq4cmhsmhvdag2nevyjh.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 17.5,
-      completionist: 30,
-    },
     score: '100',
-  },
-  {
     name: 'Undertale',
     platforms: 'PS4, PC, Vita, Switch, PS5, XB1',
     genres: 'RPG',
@@ -2857,14 +1660,10 @@ export const gameDetails: Game[] = [
     publishers: ['8-4', 'tobyfox'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ze8i79ycm3gyymrjvxf0.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 20.5,
-    },
-    score: '100',
+    details: ['RPG', 'Funny', 'Isometric', 'JRPG'],
   },
   {
+    score: '100',
     name: 'Xenoblade Chronicles X',
     platforms: 'Wii-U',
     genres: 'Action, RPG',
@@ -2875,36 +1674,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yrgjsakfsiype6xqhjec.jpg',
-    hltb: {
-      main: 68,
-      extra: 107,
-      completionist: 254,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'JRPG', 'ARPG', 'Thirdperson'],
   },
   {
-    name: 'Dissidia Final Fantasy NT',
-    platforms: 'PS4, PS5, PC',
-    genres: 'Fighting',
-    releaseDate: 'Nov 26',
-    releaseYear: 2015,
-    reviewRank: 41,
-    developers: [
-      'Koei Tecmo Games',
-      'Team NINJA',
-      'Square Enix Business Division 4',
-    ],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/edl978uv5tvpr8p6jq6r.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: 'Rare Replay',
     platforms: 'XB1, XBXS',
     genres: 'Arcade, Adventure, Platformer',
@@ -2915,14 +1688,17 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/aurgjf0zasqfsvhojnj3.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Sideview',
+      'Thirdperson',
+      'Cars',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Project CARS',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Racing',
@@ -2933,14 +1709,15 @@ export const gameDetails: Game[] = [
     publishers: ['Slightly Mad Studios', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ljzbybbs0oeyojxw6pzx.jpg',
-    hltb: {
-      main: 33,
-      extra: 66,
-      completionist: 142,
-    },
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: "Yoshi's Woolly World",
     platforms: 'Wii-U',
     genres: 'Platformer',
@@ -2951,14 +1728,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pmshkombgq0usnvmlrav.jpg',
-    hltb: {
-      main: 12,
-      extra: 17.5,
-      completionist: 31.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Elite: Dangerous',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Vehicle Combat',
@@ -2969,14 +1742,17 @@ export const gameDetails: Game[] = [
     publishers: ['Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ozslwx8j0k77kmqgztvp.jpg',
-    hltb: {
-      main: 113,
-      extra: 250,
-      completionist: 677,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'RPG',
+      'Space',
+      'Shooter',
+      'Management',
+      'Firstperson',
+    ],
   },
   {
+    score: '100',
     name: 'Hotline Miami 2: Wrong Number',
     platforms: 'PS4, PC, PS5, Switch, XB1, XBXS',
     genres: 'Action',
@@ -2987,14 +1763,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scw9ea.jpg',
-    hltb: {
-      main: 9,
-      extra: 13,
-      completionist: 33.5,
-    },
-    score: '100',
+    details: ['Action', 'Side Scroller', 'Shooter', 'Crime'],
   },
   {
+    score: '100',
     name: 'Not a Hero',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -3005,14 +1777,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kwrlq6atn3mcj3nilgey.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 10,
-    },
-    score: '100',
+    details: [
+      'Funny',
+      'Crime',
+      'Tactics-Shooter',
+      'Arcade',
+      'Side Scroller',
+      'Sideview',
+    ],
   },
   {
+    score: '100',
     name: 'LEGO Dimensions',
     platforms: 'PS4, XB1, Wii-U, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -3023,32 +1798,16 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eyxq75cvuttufqael9vr.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Sandbox',
+      'Platformer',
+      'Thirdperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Prison Architect',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Simulation, Strategy',
-    releaseDate: 'Oct 6',
-    releaseYear: 2015,
-    reviewRank: 56,
-    developers: ['Introversion Software'],
-    publishers: ['Paradox Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ot1dgsxkes98dtulz0gv.jpg',
-    hltb: {
-      main: 17,
-      extra: 43.5,
-      completionist: 67,
-    },
     score: '100',
-  },
-  {
     name: 'Rock Band 4',
     platforms: 'PS4, XB1, XBXS, PS5',
     genres: 'Music',
@@ -3059,32 +1818,10 @@ export const gameDetails: Game[] = [
     publishers: ['Harmonix Music Systems'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hj8ezv65zv7suwnb43kf.jpg',
-    hltb: {
-      main: 15,
-      extra: 74,
-      completionist: 271,
-    },
-    score: '100',
+    details: ['Action', 'Simulation', 'Thirdperson', 'Rhythm'],
   },
   {
-    name: 'FIFA 16',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Sep 22',
-    releaseYear: 2015,
-    reviewRank: 58,
-    developers: ['EA Canada'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cjqdeklk4wirw0mstkbl.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: 'N++',
     platforms: 'PS4, PC, PS5, XB1, Switch, XBXS',
     genres: 'Platformer',
@@ -3095,14 +1832,10 @@ export const gameDetails: Game[] = [
     publishers: ['Metanet Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yo3grrfhqnhtku7rvhyi.jpg',
-    hltb: {
-      main: 27,
-      extra: 54,
-      completionist: 415,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Arcade', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Persona 4: Dancing All Night',
     platforms: 'Vita, PS4',
     genres: 'Music, RPG',
@@ -3113,14 +1846,10 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'NIS America', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hvqz3ni279vx3zt76sad.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 20,
-    },
-    score: '100',
+    details: ['Anime', 'Action', 'Thirdperson', 'Rhythm'],
   },
   {
+    score: '100',
     name: 'Armello',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Turn-Based Strategy',
@@ -3131,14 +1860,10 @@ export const gameDetails: Game[] = [
     publishers: ['League of Geeks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kmygrnnmztbs1a2dugc1.jpg',
-    hltb: {
-      main: 2,
-      extra: 21,
-      completionist: 99,
-    },
-    score: '100',
+    details: ['Strategy', 'Anime', 'Warfare', 'Cards'],
   },
   {
+    score: '100',
     name: 'Kirby and the Rainbow Curse',
     platforms: 'Wii-U',
     genres: 'Platformer',
@@ -3149,14 +1874,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zzycp8liuxowy7wcfblc.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 8,
-      completionist: 16.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'The Escapists',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation',
@@ -3167,14 +1888,16 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mmsh3bnixgbmyyh6neh5.jpg',
-    hltb: {
-      main: 19.5,
-      extra: 43.5,
-      completionist: 46,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Mario Party 10',
     platforms: 'Wii-U',
     genres: 'Platformer, Sports',
@@ -3185,32 +1908,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/joieh4iqeym6zq8zfgjk.jpg',
-    hltb: {
-      main: 4,
-      extra: 12.5,
-      completionist: 33.5,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Party',
+      'Isometric',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'The Legend of Heroes: Trails of Cold Steel',
-    platforms: 'Vita, PC, PS4, PS5, Switch',
-    genres: 'RPG, Turn-Based Strategy',
-    releaseDate: 'Dec 22',
-    releaseYear: 2015,
-    reviewRank: 68,
-    developers: ['Nihon Falcom'],
-    publishers: ['XSEED Games', 'NIS America', 'Nihon Falcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihabfaqvh4ffoyjgfp2y.jpg',
-    hltb: {
-      main: 59,
-      extra: 78.5,
-      completionist: 108,
-    },
     score: '100',
-  },
-  {
     name: 'Uncharted: The Nathan Drake Collection',
     platforms: 'PS4, PS5',
     genres: 'Action, Adventure',
@@ -3221,68 +1928,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oyb4up4ur3hpdjcjbqww.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Madden NFL 16',
-    platforms: 'PS4, XB1, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'Aug 25',
-    releaseYear: 2015,
-    reviewRank: 70,
-    developers: ['EA Orlando'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sblstyvujk48mmqqls7x.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Resident Evil: Revelations 2',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch, Vita',
-    genres: 'Horror, Action',
-    releaseDate: 'Feb 25',
-    releaseYear: 2015,
-    reviewRank: 72,
-    developers: ['Capcom'],
-    publishers: ['Capcom', 'Sony Computer Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pd0ihodccim2uzcsmoti.jpg',
-    hltb: {
-      main: 10,
-      extra: 16,
-      completionist: 34,
-    },
-    score: '100',
-  },
-  {
-    name: 'Code Name S.T.E.A.M.',
-    platforms: '3DS',
-    genres: 'Action',
-    releaseDate: 'Mar 13',
-    releaseYear: 2015,
-    reviewRank: 73,
-    developers: ['Nintendo SPD', 'Intelligent Systems'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihuuqe2mvb8xlr2adg1n.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
-  },
-  {
     name: 'Titan Souls',
     platforms: 'PS4, PC, PS5',
     genres: 'Action',
@@ -3293,63 +1948,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eh248hdlvw8d5pjxxxqo.jpg',
-    hltb: {
-      main: 3,
-      extra: 4,
-      completionist: 7.5,
-    },
-    score: '100',
+    details: ['RPG', 'ARPG', 'Side Scroller', 'Isometric', 'Puzzle elements'],
   },
   {
-    name: 'Tales of Zestiria',
-    platforms: 'PS4, PC, PS5',
-    genres: 'RPG',
-    releaseDate: 'Oct 20',
-    releaseYear: 2015,
-    reviewRank: 75,
-    developers: ['tri-Crescendo', 'Bandai Namco Studios'],
-    publishers: ['Bandai Namco Games', 'Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x3lrxu99a5nztqkgorf0.jpg',
-    hltb: {
-      main: 42,
-      extra: 57.5,
-      completionist: 136,
-    },
     score: '100',
-  },
-  {
-    name: 'White Day: A Labyrinth Named School',
-    platforms: 'PS4, PC, PS5, Switch, XBXS',
-    genres: 'Interactive Story, Horror',
-    releaseDate: 'Dec 17',
-    releaseYear: 2015,
-    reviewRank: 76,
-    developers: ['Sonnori'],
-    publishers: ['Wizard Soft', '4AM Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vpmganpdanfndqp47ex4.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 15.5,
-      completionist: 23,
-    },
-    score: '100',
-  },
-  {
-    name: 'Submerged',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Art, Adventure',
-    releaseDate: 'Aug 3',
-    releaseYear: 2015,
-    reviewRank: 77,
-    developers: ['Uppercut Games'],
-    publishers: ['Uppercut Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cemqjwymuexjultpa6i1.jpg',
-    score: '100',
-  },
-  {
     name: 'White Night',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Adventure',
@@ -3360,22 +1962,10 @@ export const gameDetails: Game[] = [
     publishers: ['Plug In Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q2ne1v4prmhmwdagjdeq.jpg',
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Thirdperson', 'Puzzle elements'],
   },
   {
-    name: 'Lovers in a Dangerous Spacetime',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Action',
-    releaseDate: 'Sep 9',
-    releaseYear: 2015,
-    reviewRank: 81,
-    developers: ['Asteroid Base'],
-    publishers: ['Asteroid Base'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vgquw6n2zgvgkg8bviky.jpg',
     score: '100',
-  },
-  {
     name: 'Runbow',
     platforms: 'Wii-U, PC, PS4, Switch, XB1',
     genres: 'Action, Sports',
@@ -3386,35 +1976,17 @@ export const gameDetails: Game[] = [
     publishers: ['CrossFunction', 'Headup Games', '13AM Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xkfspwnuhkphuel8xhfo.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Party',
+      'Side Scroller',
+      'Sideview',
+      'Cars',
+      'Action',
+    ],
   },
   {
-    name: 'The Legend of Zelda: Tri Force Heroes',
-    platforms: '3DS',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Oct 23',
-    releaseYear: 2015,
-    reviewRank: 83,
-    developers: ['Grezzo', 'Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ied0m4xwwceyruuha1qa.jpg',
     score: '100',
-  },
-  {
-    name: 'Armikrog',
-    platforms: 'PS4, Wii-U, PC, PS5, XB1',
-    genres: 'Adventure',
-    releaseDate: 'Sep 30',
-    releaseYear: 2015,
-    reviewRank: 84,
-    developers: ['Pencil Test Studios'],
-    publishers: ['Versus Evil'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6e7n.jpg',
-    score: '100',
-  },
-  {
     name: 'Inside',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Puzzle, Adventure, Platformer',
@@ -3425,22 +1997,17 @@ export const gameDetails: Game[] = [
     publishers: ['Playdead'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/guhljbryvlqg2kn25z7r.jpg',
-    score: '100',
+    details: [
+      'Stealth',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Forza Horizon 3',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Racing, Simulation',
-    releaseDate: 'Sep 27',
-    releaseYear: 2016,
-    reviewRank: 19,
-    developers: ['Playground Games'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://cdn.mobygames.com/9ceabcf4-abef-11ed-bc39-02420a000131.webp',
     score: '100',
-  },
-  {
     name: 'Dark Souls III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -3451,22 +2018,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wlefrkqqtxge3lo81cis.jpg',
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
-    name: 'Gears of War 4',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Action, Third-Person Shooter',
-    releaseDate: 'Oct 11',
-    releaseYear: 2016,
-    reviewRank: 3,
-    developers: ['The Coalition'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/beaxxtxy7d3zc7oowvdb.jpg',
     score: '100',
-  },
-  {
     name: 'Final Fantasy XV',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'RPG',
@@ -3478,9 +2033,10 @@ export const gameDetails: Game[] = [
     franchise: 'Final Fantasy',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fovl9fyq79camin87ljy.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'ARPG', 'Behind-Overhead Perspective'],
   },
   {
+    score: '100',
     name: "Uncharted 4: A Thief's End",
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure',
@@ -3491,9 +2047,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fn1wbuvikoacxt4zvfxl.jpg',
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: "No Man's Sky",
     platforms: 'PS4, PC, PS5, XBXS, XB1, Switch',
     genres: 'Survival, Adventure',
@@ -3504,9 +2067,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games', 'Sony', 'Hello Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o0pqdynpsv7vvziaxwzr.jpg',
-    score: '100',
+    details: ['Survival', 'Space', 'Sandbox', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Dishonored 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -3517,9 +2081,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zuia09etftbctjuxlkm2.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Steampunk',
+      'Stealth',
+      'Shooter',
+      'Firstperson',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Titanfall 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter, Vehicle Combat',
@@ -3530,35 +2102,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctf94.jpg',
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Shooter'],
   },
   {
-    name: 'Overwatch',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'First-Person Shooter',
-    releaseDate: 'May 24',
-    releaseYear: 2016,
-    reviewRank: 10,
-    developers: ['Blizzard Entertainment'],
-    publishers: ['Blizzard Entertainment', 'Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bpcshm1ryzyf4nwu0rkt.jpg',
     score: '100',
-  },
-  {
-    name: 'Watch Dogs 2',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, Adventure, RPG',
-    releaseDate: 'Nov 15',
-    releaseYear: 2016,
-    reviewRank: 11,
-    developers: ['Ubisoft Montreal'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mfuq53zm8lhzlshmqrux.jpg',
-    score: '100',
-  },
-  {
     name: 'Deus Ex: Mankind Divided',
     overrideMask: '**** ** : [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -3570,22 +2117,17 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix', 'Feral Interactive', 'Eidos Montréal'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e8unuxdrdcsnp13cadnw.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sci-fi',
+      'Stealth',
+      'Shooter',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Firewatch',
-    platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
-    genres: 'Adventure',
-    releaseDate: 'Feb 9',
-    releaseYear: 2016,
-    reviewRank: 13,
-    developers: ['Campo Santo'],
-    publishers: ['Panic'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zmzwkye0dfbfzl4h6cz8.jpg',
     score: '100',
-  },
-  {
     name: 'Quantum Break',
     platforms: 'XB1, PC, XBXS',
     genres: 'Interactive Story, Third-Person Shooter',
@@ -3596,9 +2138,15 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zsuej6n5awd2wmq9zzes.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Shooter',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'The Last Guardian',
     platforms: 'PS4, PS5',
     genres: 'Adventure',
@@ -3609,22 +2157,15 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bho8tfo2pdgujp4ttqt7.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Platformer',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'XCOM 2',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Strategy, Turn-Based Strategy',
-    releaseDate: 'Feb 5',
-    releaseYear: 2016,
-    reviewRank: 17,
-    developers: ['Firaxis Games'],
-    publishers: ['2K Games', 'Feral Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc828t.jpg',
     score: '100',
-  },
-  {
     name: 'Battlefield 1',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter, Vehicle Combat',
@@ -3635,9 +2176,17 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctjar.jpg',
-    score: '100',
+    details: [
+      'Warfare',
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Dragon Quest Builders',
     platforms: 'PS4, PS5, PC, Switch',
     genres: 'Creation',
@@ -3648,22 +2197,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ue5dcjhoxacthfmsacx3.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'ARPG', 'Thirdperson', 'Action'],
   },
   {
-    name: 'Abzu',
-    platforms: 'PS4, PC, PS5, Switch, XB1',
-    genres: 'Adventure',
-    releaseDate: 'Aug 2',
-    releaseYear: 2016,
-    reviewRank: 20,
-    developers: ['Giant Squid'],
-    publishers: ['505 Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rdsm1mvbg5tgcpnb6ptz.jpg',
     score: '100',
-  },
-  {
     name: "Tom Clancy's The Division",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -3674,22 +2211,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gfmovsoiunzkkgqlnd5e.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
-    name: 'I Am Setsuna',
-    platforms: 'PS4, PC, PS5, Switch',
-    genres: 'RPG',
-    releaseDate: 'Feb 18',
-    releaseYear: 2016,
-    reviewRank: 25,
-    developers: ['Tokyo RPG Factory'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ur3wfk27pn22xkztfsv3.jpg',
     score: '100',
-  },
-  {
     name: 'Call of Duty: Infinite Warfare',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -3700,23 +2225,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj8z.jpg',
-    score: '100',
+    details: ['Warfare', 'Space', 'Shooter', 'Firstperson', 'Action'],
   },
   {
-    name: 'Dead Rising 4',
-    overrideMask: '[ ... ] 4',
-    platforms: 'XB1, PC, XBXS, PS4',
-    genres: 'Survival, Action',
-    releaseDate: 'Dec 6',
-    releaseYear: 2016,
-    reviewRank: 27,
-    developers: ['Capcom Game Studio Vancouver, Inc.'],
-    publishers: ['Capcom', 'Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/odkit1wmw7odlmmvxost.jpg',
     score: '100',
-  },
-  {
     name: 'ReCore',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action, Adventure',
@@ -3727,9 +2239,16 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f1n98cbwbdm1gypoxytc.jpg',
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: "Mirror's Edge Catalyst",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG, Platformer',
@@ -3740,9 +2259,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar88v.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Platformer', 'Sandbox'],
   },
   {
+    score: '100',
     name: 'Street Fighter V',
     searchTerms: ['street fighter 5'],
     platforms: 'PS4, PC, PS5',
@@ -3754,9 +2274,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/db2f9pip52fntzwagkqh.jpg',
-    score: '100',
+    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Owlboy',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -3767,9 +2288,17 @@ export const gameDetails: Game[] = [
     publishers: ['SOEDESCO Publishing', 'D-Pad Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/asxhydaq5ibhrctahlj1.jpg',
-    score: '100',
+    details: [
+      'Funny',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'The Witness',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Art, Puzzle',
@@ -3780,9 +2309,10 @@ export const gameDetails: Game[] = [
     publishers: ['Thekla, Inc'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dny8nmqgpvm7ao2muywg.jpg',
-    score: '100',
+    details: ['Mystery', 'Firstperson', 'Metroidvania', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: "Sid Meier's Civilization VI",
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Strategy, Turn-Based Strategy',
@@ -3793,9 +2323,16 @@ export const gameDetails: Game[] = [
     publishers: ['Aspyr Media', '2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/s0agy6hyvqmugylrdnga.jpg',
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Grand Strategy',
+      'Isometric',
+    ],
   },
   {
+    score: '100',
     name: 'Battleborn',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -3806,9 +2343,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cl4judh7hjwvlf8ftn4r.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'World of Final Fantasy',
     platforms: 'PS4, Vita, PC, PS5, XB1, Switch',
     genres: 'RPG',
@@ -3819,9 +2357,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqlmfowjfwqg5epuziku.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'JRPG', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Mighty No. 9',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
     genres: 'Arcade, Action',
@@ -3832,9 +2371,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kn3okfe269xccnjuigwy.jpg',
-    score: '100',
+    details: ['Shooter', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Unravel',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -3845,35 +2385,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/foewb9rd9bjghjnrve8o.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Ratchet & Clank',
-    platforms: 'PS4, PS5',
-    genres: 'Platformer, Third-Person Shooter',
-    releaseDate: 'Apr 12',
-    releaseYear: 2016,
-    reviewRank: 39,
-    developers: ['Insomniac Games'],
-    publishers: ['Sony Interactive Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ns9ubkujno3x3enquv5i.jpg',
     score: '100',
-  },
-  {
-    name: 'FIFA 17',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Sep 27',
-    releaseYear: 2016,
-    reviewRank: 40,
-    developers: ['EA Vancouver', 'EA Romania'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/w09ezru3plfqfqjjlyty.jpg',
-    score: '100',
-  },
-  {
     name: 'Furi',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -3884,9 +2405,10 @@ export const gameDetails: Game[] = [
     publishers: ['The Game Bakers'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nrgxlrpxyazlwfy5c6rc.jpg',
-    score: '100',
+    details: ['Action', 'Isometric', 'Hack+slash', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Star Fox Zero',
     platforms: 'Wii-U',
     genres: 'Action, Vehicle Combat',
@@ -3897,9 +2419,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nqabk01yiy3o1occltgg.jpg',
-    score: '100',
+    details: [
+      'Space',
+      'Shooter',
+      'Railshooter',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'The Banner Saga 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure, RPG, Strategy',
@@ -3910,35 +2439,10 @@ export const gameDetails: Game[] = [
     publishers: ['Versus Evil'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zmb5rrtfybdukzn3j5hn.jpg',
-    score: '100',
+    details: ['RPG', 'Point+click', 'Isometric', 'Tactics'],
   },
   {
-    name: 'LEGO Star Wars: The Force Awakens',
-    platforms: 'PS4, XB1, Wii-U, PC, Vita, XBXS, PS5',
-    genres: 'Adventure',
-    releaseDate: 'Jun 28',
-    releaseYear: 2016,
-    reviewRank: 44,
-    developers: ["Traveller's Tales"],
-    publishers: ['WB Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mf01bi8h5z03m6po6bxx.jpg',
     score: '100',
-  },
-  {
-    name: 'Steep',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Dec 2',
-    releaseYear: 2016,
-    reviewRank: 46,
-    developers: ['Ubisoft Annecy'],
-    publishers: ['Ubisoft'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/grniirmcig2qagrvkaz7.jpg',
-    score: '100',
-  },
-  {
     name: 'Homefront: The Revolution',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -3949,22 +2453,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tfxs5zy1r1dji7nidugg.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Sandbox', 'Shooter'],
   },
   {
-    name: 'Worms W.M.D',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Action, Strategy',
-    releaseDate: 'Aug 23',
-    releaseYear: 2016,
-    reviewRank: 48,
-    developers: ['Team17'],
-    publishers: ['Team17'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvhywecaeflkrices2as.jpg',
     score: '100',
-  },
-  {
     name: 'Attack on Titan',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -3975,9 +2467,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cauitoufneauwopopevn.jpg',
-    score: '100',
+    details: ['Anime', 'Warfare', 'Hack+slash', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Darkest Dungeon',
     platforms: 'PS4, PC, Switch, Vita, XB1, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -3988,9 +2481,10 @@ export const gameDetails: Game[] = [
     publishers: ['Red Hook Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rkz6ff4o3qhkumcaqhhi.jpg',
-    score: '100',
+    details: ['RPG', 'Point+click', 'Horror', 'Tactics'],
   },
   {
+    score: '100',
     name: 'Shadow Warrior 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, First-Person Shooter',
@@ -4001,9 +2495,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p7etsfjupvo5qej0p01x.jpg',
-    score: '100',
+    details: ['RPG', 'Funny', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Layers of Fear',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror',
@@ -4014,9 +2509,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hsrlvpz18khu3lwgolzu.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Enter the Gungeon',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Action, Adventure',
@@ -4027,9 +2523,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/saye37b3anr8pulxcqrv.jpg',
-    score: '100',
+    details: ['Shooter', 'Rogue-like', 'Side Scroller', 'Isometric', 'Action'],
   },
   {
+    score: '100',
     name: 'Stardew Valley',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Simulation, RPG',
@@ -4040,35 +2537,10 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games', 'ConcernedApe', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rhxs1x9w5hf5kde2osf5.jpg',
-    score: '100',
+    details: ['RPG', 'Citybuilder', 'Side Scroller', 'Isometric', 'Simulation'],
   },
   {
-    name: 'Severed',
-    platforms: 'Wii-U, 3DS, Vita, Switch',
-    genres: 'Action, RPG',
-    releaseDate: 'Apr 26',
-    releaseYear: 2016,
-    reviewRank: 57,
-    developers: ['Drinkbox Studios'],
-    publishers: ['Drinkbox Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lzlgm6mxn8bbl7ycz01c.jpg',
     score: '100',
-  },
-  {
-    name: "LEGO Marvel's Avengers",
-    platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5',
-    genres: 'Adventure',
-    releaseDate: 'Jan 26',
-    releaseYear: 2016,
-    reviewRank: 59,
-    developers: ["Traveller's Tales"],
-    publishers: ['Feral Interactive', 'WB Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/j1zdahbsi6yevcwl6cfj.jpg',
-    score: '100',
-  },
-  {
     name: 'Salt and Sanctuary',
     platforms: 'PS4, XB1, PC, Vita, XBXS, PS5, Switch',
     genres: 'RPG, Platformer',
@@ -4079,35 +2551,17 @@ export const gameDetails: Game[] = [
     publishers: ['Ska Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gvrslqqsaao7kjcxwllw.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'Plants vs. Zombies: Garden Warfare 2',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Survival, Third-Person Shooter',
-    releaseDate: 'Feb 23',
-    releaseYear: 2016,
-    reviewRank: 62,
-    developers: ['PopCap Games'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mqqipkssoni7hauf5j3h.jpg',
     score: '100',
-  },
-  {
-    name: 'Shantae: Half-Genie Hero',
-    platforms: 'PS4, XB1, Wii-U, PC, Vita, Switch, XBXS, PS5',
-    genres: 'Platformer',
-    releaseDate: 'Dec 20',
-    releaseYear: 2016,
-    reviewRank: 63,
-    developers: ['WayForward'],
-    publishers: ['XSEED Games', 'WayForward'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d1qhfau8xzxfbhgpfiu4.jpg',
-    score: '100',
-  },
-  {
     name: 'Paper Mario: Color Splash',
     platforms: 'Wii-U',
     genres: 'RPG',
@@ -4118,9 +2572,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jf4ft6ygdxmsn1hmrcsr.jpg',
-    score: '100',
+    details: ['RPG', 'Funny', 'Thirdperson', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Headlander',
     platforms: 'PS4, PC, PS5, XB1',
     genres: 'Action, Platformer',
@@ -4131,22 +2586,16 @@ export const gameDetails: Game[] = [
     publishers: ['Adult Swim Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uxjarz4sc0j8ic1e559k.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Virginia',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Interactive Story',
-    releaseDate: 'Sep 22',
-    releaseYear: 2016,
-    reviewRank: 66,
-    developers: ['Variable State'],
-    publishers: ['505 Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hzczipoxuhpa5wtxjz8k.jpg',
     score: '100',
-  },
-  {
     name: 'The King of Fighters XIV',
     platforms: 'PS4, PS5',
     genres: 'Fighting',
@@ -4157,9 +2606,10 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus USA', 'Deep Silver', 'SNK'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pel4ikyud0re1eibiovk.jpg',
-    score: '100',
+    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Fire Emblem Fates: Conquest',
     platforms: '3DS',
     genres: 'Adventure, RPG, Turn-Based Strategy',
@@ -4170,9 +2620,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9dxy.jpg',
-    score: '100',
+    details: ['Strategy', 'Anime', 'Warfare', 'Tactics'],
   },
   {
+    score: '100',
     name: 'Fire Emblem Fates: Birthright',
     platforms: '3DS',
     genres: 'Adventure, RPG, Turn-Based Strategy',
@@ -4183,9 +2634,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jqrkb4fzjkam5szl6uc6.jpg',
-    score: '100',
+    details: ['Strategy', 'Anime', 'Warfare', 'Tactics'],
   },
   {
+    score: '100',
     name: 'Hue',
     platforms: 'PS4, XB1, Wii-U, PC, Vita, XBXS, PS5, Switch',
     genres: 'Puzzle, Platformer',
@@ -4196,27 +2648,17 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qwm2k7umdtger27q9lcz.jpg',
-    score: '100',
-  },
-  {
-    name: 'The Legend of Heroes: Trails of Cold Steel II',
-    platforms: 'Vita, PC, PS4, Switch',
-    genres: 'RPG',
-    releaseDate: 'Sep 6',
-    releaseYear: 2016,
-    reviewRank: 77,
-    developers: ['Nihon Falcom'],
-    publishers: [
-      'NIS America',
-      'XSEED Games',
-      'Nihon Falcom',
-      'Marvelous USA, Inc.',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
     ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eluraotjt5a3ugsixi91.jpg',
-    score: '100',
   },
   {
+    score: '100',
     name: 'Killing Floor 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4227,9 +2669,10 @@ export const gameDetails: Game[] = [
     publishers: ['Iceberg Interactive', 'Deep Silver', 'Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/t4atoujtw0rfjjblfzwy.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'The Final Station',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Survival, Adventure',
@@ -4240,9 +2683,10 @@ export const gameDetails: Game[] = [
     publishers: ['tinyBuild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/v2ekrceqhakqlh2kc8e3.jpg',
-    score: '100',
+    details: ['Survival', 'Shooter', 'Platformer', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Phoenix Wright: Ace Attorney - Spirit of Justice',
     platforms: '3DS, Switch, PS4',
     genres: 'Interactive Story, Adventure',
@@ -4253,9 +2697,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dsacyzefiopqzymxjplt.jpg',
-    score: '100',
+    details: ['Anime', 'Mystery', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Human: Fall Flat',
     platforms: 'PC, PS4, PS5, Switch, XB1, XBXS',
     genres: 'Puzzle, Platformer',
@@ -4266,9 +2711,16 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n9cqwrkkiktp5o7gggtj.jpg',
-    score: '100',
+    details: [
+      'Sandbox',
+      'Platformer',
+      'Thirdperson',
+      'Simulation',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Shadow Tactics: Blades of the Shogun',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Strategy',
@@ -4279,22 +2731,10 @@ export const gameDetails: Game[] = [
     publishers: ['Daedalic Entertainment', 'Kalypso'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jb2vurfznk0stx7khm9h.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Isometric', 'Stealth'],
   },
   {
-    name: 'Madden NFL 17',
-    platforms: 'PS4, XB1, XBXS, PS5',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Aug 23',
-    releaseYear: 2016,
-    reviewRank: 83,
-    developers: ['EA Orlando'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jnolqod1hrnce1gklvyg.jpg',
     score: '100',
-  },
-  {
     name: 'Tyranny',
     platforms: 'PC',
     genres: 'RPG',
@@ -4305,9 +2745,10 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bog8v3y4atqyazanklyt.jpg',
-    score: '100',
+    details: ['RPG', 'Point+click', 'Warfare', 'Isometric'],
   },
   {
+    score: '100',
     name: 'Monster Hunter Generations',
     platforms: '3DS',
     genres: 'Action, RPG',
@@ -4318,9 +2759,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o3vqw4oqqlw0sam24duu.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Hyper Light Drifter',
     platforms: 'PS4, XB1, Wii-U, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -4331,9 +2773,10 @@ export const gameDetails: Game[] = [
     publishers: ['Heart Machine'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/i343g9j3xf5zhkrfcq3u.jpg',
-    score: '100',
+    details: ['RPG', 'Isometric', 'Side Scroller', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Cuphead',
     platforms: 'XB1, PC, Switch, PS4, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4344,9 +2787,17 @@ export const gameDetails: Game[] = [
     publishers: ['Studio MDHR'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sqho6e7tv9verg6j1tvv.jpg',
-    score: '100',
+    details: [
+      'Shooter',
+      'Cartoon',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Hollow Knight',
     platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
     genres: 'Platformer, Action, Adventure',
@@ -4357,9 +2808,16 @@ export const gameDetails: Game[] = [
     publishers: ['Team Cherry'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/q634ullxbvipm6q6mcq9.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Destiny 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'MMO, First-Person Shooter',
@@ -4370,9 +2828,15 @@ export const gameDetails: Game[] = [
     publishers: ['Activision', 'Bungie'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/m9mdkmpv1efkc2nmxqlt.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Shooter',
+    ],
   },
   {
+    score: '100',
     name: 'South Park: The Fractured But Whole',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -4383,9 +2847,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar74z.jpg',
-    score: '100',
+    details: ['RPG', 'Funny', 'Thirdperson', 'Sideview'],
   },
   {
+    score: '100',
     name: "Assassin's Creed Origins",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4396,9 +2861,16 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/giqtb8y4awm9ibt942cn.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Stealth',
+      'Sandbox',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'The Legend of Zelda: Breath of the Wild',
     platforms: 'Wii-U, Switch',
     genres: 'Adventure, Action',
@@ -4409,9 +2881,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj6.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Prey',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4422,22 +2901,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mras4gtszut3dhwyq2n0.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Stealth',
+      'Shooter',
+      'Metroidvania',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Super Mario Odyssey',
-    platforms: 'Switch',
-    genres: 'Adventure, Platformer',
-    releaseDate: 'Oct 27',
-    releaseYear: 2017,
-    reviewRank: 12,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qgcn3akcfv4rvojqdbvb.jpg',
     score: '100',
-  },
-  {
     name: 'Injustice 2',
     platforms: 'PS4, XB1, XBXS, PS5, PC',
     genres: 'Fighting',
@@ -4448,9 +2922,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/k9ws4qvdqtxp6ssmoeow.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: 'The Evil Within 2',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     overrideMask: '*** **** ****** [ ... ]',
@@ -4462,9 +2937,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f74macclfv9siu4apzt5.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Behind-Overhead Perspective'],
   },
   {
+    score: '100',
     name: "Hellblade: Senua's Sacrifice",
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Action',
@@ -4475,9 +2951,15 @@ export const gameDetails: Game[] = [
     publishers: ['Ninja Theory'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schj7b.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Hack+slash',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Call of Duty: WWII',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter',
@@ -4488,22 +2970,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj8x.jpg',
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Shooter'],
   },
   {
-    name: 'Yakuza 0',
-    platforms: 'PS4, PC, PS5, XB1',
-    genres: 'Action, RPG',
-    releaseDate: 'Mar 11',
-    releaseYear: 2015,
-    reviewRank: 18,
-    developers: ['Ryu Ga Gotoku Studios', 'Sega Games'],
-    publishers: ['Sega Corporation', 'Sega Games', 'Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/y5cakmxawj4dgziv6dwt.jpg',
     score: '100',
-  },
-  {
     name: 'Middle-earth: Shadow of War',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4514,22 +2984,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qfxnxpyj7dnjfxcfbhvg.jpg',
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Stealth'],
   },
   {
-    name: 'Crash Bandicoot N. Sane Trilogy',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Platformer',
-    releaseDate: 'Jun 30',
-    releaseYear: 2017,
-    reviewRank: 20,
-    developers: ['Vicarious Visions'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scrkou.jpg',
     score: '100',
-  },
-  {
     name: 'Little Nightmares',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Adventure',
@@ -4540,9 +2998,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5j94.jpg',
-    score: '100',
+    details: [
+      'Horror',
+      'Stealth',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'For Honor',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -4553,22 +3019,16 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iq6rtcwbhphrppgcyvrg.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Medieval',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Sniper Elite 4',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'First-Person Shooter',
-    releaseDate: 'Feb 13',
-    releaseYear: 2017,
-    reviewRank: 27,
-    developers: ['Rebellion Developments'],
-    publishers: ['Rebellion Developments'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nq9g9m7clqzjxjc4kolg.jpg',
     score: '100',
-  },
-  {
     name: 'Nioh',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -4579,36 +3039,16 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arz8e.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Tekken 7',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Fighting',
-    releaseDate: 'Feb 17',
-    releaseYear: 2015,
-    reviewRank: 30,
-    developers: ['Bandai Namco'],
-    overrideMask: '****** 7',
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dd00nee1w7wkus7t2lvq.jpg',
     score: '100',
-  },
-  {
-    name: 'Halo Wars 2',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Strategy',
-    releaseDate: 'Feb 21',
-    releaseYear: 2017,
-    reviewRank: 31,
-    developers: ['343 Industries', 'The Creative Assembly'],
-    publishers: ['Microsoft Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/b7siopjd599qlpvzxfxp.jpg',
-    score: '100',
-  },
-  {
     name: 'The Surge',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -4619,9 +3059,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hrgbzcieohiasz0zlqq3.jpg',
-    score: '100',
+    details: ['RPG', 'Sci-fi', 'ARPG', 'Behind-Overhead Perspective', 'Action'],
   },
   {
+    score: '100',
     name: "Tom Clancy's Ghost Recon: Wildlands",
     overrideMask: "Tom Clancy's [ ... ]",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -4633,9 +3074,17 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctdyo.jpg',
-    score: '100',
+    details: [
+      'Tactics-Shooter',
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: "Tom Clancy's Ghost Recon: Breakpoint",
     overrideMask: "Tom Clancy's [ ... ]",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
@@ -4647,9 +3096,17 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6k0l.jpg',
-    score: '100',
+    details: [
+      'Tactics-Shooter',
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Agents of Mayhem',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -4660,9 +3117,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ttawxrnymixxkbgdio71.jpg',
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Sonic Mania',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4673,22 +3131,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e8xlfiklewhjosqzrlx1.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'What Remains of Edith Finch',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Adventure',
-    releaseDate: 'Apr 25',
-    releaseYear: 2017,
-    reviewRank: 38,
-    developers: ['Giant Sparrow'],
-    publishers: ['Annapurna Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqgbh.jpg',
     score: '100',
-  },
-  {
     name: 'RiME',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Art, Adventure',
@@ -4699,35 +3145,15 @@ export const gameDetails: Game[] = [
     publishers: ['Six Foot', 'Grey Box'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pjtbbgrvwlparfr6elvm.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Platformer',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Arms',
-    platforms: 'Switch',
-    genres: 'Fighting',
-    releaseDate: 'Jun 16',
-    releaseYear: 2017,
-    reviewRank: 40,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ufk2yvgojwy8httag9pf.jpg',
     score: '100',
-  },
-  {
-    name: 'Splatoon 2',
-    platforms: 'Switch',
-    genres: 'Third-Person Shooter',
-    releaseDate: 'Jul 21',
-    releaseYear: 2017,
-    reviewRank: 41,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yilzspbtoximnbllsaty.jpg',
-    score: '100',
-  },
-  {
     name: 'Outlast II',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Horror, First-Person Shooter',
@@ -4738,22 +3164,10 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p5vxvlrwl4khte6mhm0r.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Stealth'],
   },
   {
-    name: 'Torment: Tides of Numenera',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'RPG',
-    releaseDate: 'Feb 28',
-    releaseYear: 2017,
-    reviewRank: 47,
-    developers: ['inXile Entertainment'],
-    publishers: ['Techland'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dzwagdesvnw4er5ztmcw.jpg',
     score: '100',
-  },
-  {
     name: 'Xenoblade Chronicles 2',
     platforms: 'Switch',
     genres: 'RPG',
@@ -4764,9 +3178,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sj98v0eoqxxzgalf9mn4.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'JRPG', 'ARPG', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Battle Chasers: Nightwar',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'RPG',
@@ -4777,9 +3192,10 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c0nr3ah01r9cd9x8pgwn.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Isometric', 'JRPG'],
   },
   {
+    score: '100',
     name: 'Thimbleweed Park',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -4790,9 +3206,10 @@ export const gameDetails: Game[] = [
     publishers: ['Terrible Toybox'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tpfbcncc7mgijjjvirzr.jpg',
-    score: '100',
+    details: ['Point+click', 'Funny', 'Mystery', 'Crime'],
   },
   {
+    score: '100',
     name: 'Yonder: The Cloud Catcher Chronicles',
     platforms: 'PS4, PC, PS5, Switch, XB1, XBXS',
     genres: 'Adventure',
@@ -4803,9 +3220,17 @@ export const gameDetails: Game[] = [
     publishers: ['Merge Games', 'Prideful Sloth', 'Nippon Ichi Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sv8izh1phevspjw7h04i.jpg',
-    score: '100',
+    details: [
+      'Sandbox',
+      'Life-sim',
+      'Citybuilder',
+      'Behind-Overhead Perspective',
+      'Simulation',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Project CARS 2',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -4816,9 +3241,15 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qjdwasv81qv7i4mwodly.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Fire Emblem Warriors',
     platforms: 'Switch, 3DS',
     genres: 'Action, RPG',
@@ -4829,9 +3260,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yi9yaulgd5ploailnifi.jpg',
-    score: '100',
+    details: ['Anime', 'Action', 'Behind-Overhead Perspective', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Sonic Forces',
     platforms: 'Switch, PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -4842,22 +3274,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/amgqffoe8o2dedpafsnq.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Gravity Rush 2',
-    platforms: 'PS4, PS5',
-    genres: 'Action',
-    releaseDate: 'Jan 20',
-    releaseYear: 2017,
-    reviewRank: 60,
-    developers: ['SIE Japan Studio'],
-    publishers: ['Sony'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x9k2ccivkgdc8rigilwl.jpg',
     score: '100',
-  },
-  {
     name: 'Gran Turismo Sport',
     platforms: 'PS4, PS5',
     genres: 'Simulation, Racing',
@@ -4868,9 +3294,15 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/a3ztutyzqqcmt3mwg2rp.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'LEGO Marvel Super Heroes 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -4881,22 +3313,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games', 'Feral Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qej80dtqsdyhlfipcrjq.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
-    name: 'Super Bomberman R',
-    platforms: 'Switch, PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action',
-    releaseDate: 'Mar 3',
-    releaseYear: 2017,
-    reviewRank: 65,
-    developers: ['Konami'],
-    publishers: ['Konami'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fq2ywdr5m3bseyhi0hcs.jpg',
     score: '100',
-  },
-  {
     name: 'Snake Pass',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -4907,35 +3327,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sumo Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/snmhznqguejp2a0wvuea.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
-    name: 'A Hat in Time',
-    platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
-    genres: '3D Platformer',
-    releaseDate: 'Oct 5',
-    releaseYear: 2017,
-    reviewRank: 39,
-    developers: ['Gears for Breakfast'],
-    publishers: ['Gears for Breakfast', 'Humble Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qkx.jpg',
     score: '100',
-  },
-  {
-    name: 'Nidhogg 2',
-    platforms: 'PC, PS4, PS5, Switch, XB1',
-    genres: 'Action, Platformer',
-    releaseDate: 'Aug 15',
-    releaseYear: 2017,
-    reviewRank: 68,
-    developers: ['Messhof'],
-    publishers: ['Messhof'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dvmdqtuy1zf30sfh10if.jpg',
-    score: '100',
-  },
-  {
     name: 'Ruiner',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -4946,22 +3341,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dtdc7s8wx0hqtbv1lu5d.jpg',
-    score: '100',
+    details: ['Action', 'Isometric', 'Shooter', 'Sci-fi'],
   },
   {
-    name: 'Tacoma',
-    platforms: 'XB1, PC, XBXS, PS4',
-    genres: 'Art, Adventure',
-    releaseDate: 'Aug 2',
-    releaseYear: 2017,
-    reviewRank: 70,
-    developers: ['Fullbright'],
-    publishers: ['Fullbright'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sfzp7bfffimjyvky3i6b.jpg',
     score: '100',
-  },
-  {
     name: 'Nex Machina',
     platforms: 'PS4, PC, PS5',
     genres: 'Action',
@@ -4972,22 +3355,10 @@ export const gameDetails: Game[] = [
     publishers: ['Housemarque'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mqpvpntggsb6caqrpphe.jpg',
-    score: '100',
+    details: ['Action', 'Isometric', 'Side Scroller', 'Shooter'],
   },
   {
-    name: 'Absolver',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Fighting, Action',
-    releaseDate: 'Aug 29',
-    releaseYear: 2017,
-    reviewRank: 73,
-    developers: ['Sloclap'],
-    publishers: ['Devolver Digital'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ckiklyczcz4jmy0vwdhk.jpg',
     score: '100',
-  },
-  {
     name: 'SteamWorld Dig 2',
     platforms: 'Switch, PC, PS4, Vita, PS5',
     genres: 'Action, Platformer',
@@ -4998,9 +3369,17 @@ export const gameDetails: Game[] = [
     publishers: ['Image & Form'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c8lgtznfdcxm867xxyyv.jpg',
-    score: '100',
+    details: [
+      'Steampunk',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'NBA 2K18',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Simulation, Sports',
@@ -5011,9 +3390,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/b987qs5uvsjdguixxfnr.jpg',
-    score: '100',
+    details: ['Sports', 'Isometric', 'Side Scroller', 'Management'],
   },
   {
+    score: '100',
     name: 'Pyre',
     platforms: 'PS4, PC, PS5',
     genres: 'Action, RPG',
@@ -5024,9 +3404,10 @@ export const gameDetails: Game[] = [
     publishers: ['Supergiant Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7zjj.jpg',
-    score: '100',
+    details: ['RPG', 'Sports', 'Side Scroller', 'Isometric', 'Action'],
   },
   {
+    score: '100',
     name: 'Tales of Berseria',
     platforms: 'PS4, PC, PS5',
     genres: 'RPG',
@@ -5041,22 +3422,10 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ssm7ffiie7wudgtnxsho.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'JRPG', 'ARPG', 'Behind-Overhead Perspective'],
   },
   {
-    name: 'NBA Playgrounds',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Sports',
-    releaseDate: 'May 9',
-    releaseYear: 2017,
-    reviewRank: 81,
-    developers: ['Saber Interactive'],
-    publishers: ['Mad Dog Games, LLC'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3xtqlp0yrj9ozv9rvla.jpg',
     score: '100',
-  },
-  {
     name: 'F1 2017',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -5067,22 +3436,15 @@ export const gameDetails: Game[] = [
     publishers: ['Feral Interactive', 'Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qljkjebkm9buckhtsflf.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'LawBreakers',
-    platforms: 'PC, PS4, PS5',
-    genres: 'Action',
-    releaseDate: 'Aug 8',
-    releaseYear: 2017,
-    reviewRank: 84,
-    developers: ['Boss Key Productions'],
-    publishers: ['Nexon Co. Ltd.'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hzhlstlbnktotbw475xs.jpg',
     score: '100',
-  },
-  {
     name: 'Hand of Fate 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5097,22 +3459,10 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jpjeysb73i4njghowwk6.jpg',
-    score: '100',
+    details: ['RPG', 'Cards', 'Thirdperson', 'Firstperson', 'Action'],
   },
   {
-    name: 'Pro Evolution Soccer 2018',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Sep 12',
-    releaseYear: 2017,
-    reviewRank: 87,
-    developers: ['Konami', 'Konami Digital Entertainment'],
-    publishers: ['Konami', 'Konami Digital Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc828k.jpg',
     score: '100',
-  },
-  {
     name: 'Rise & Shine',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, RPG, Platformer',
@@ -5123,22 +3473,17 @@ export const gameDetails: Game[] = [
     publishers: ['Adult Swim Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iaxocroi6hmylgwm7qpt.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Shooter',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'Night in the Woods',
-    platforms: 'PS4, PC, PS5, XB1, XBXS',
-    genres: 'Adventure',
-    releaseDate: 'Feb 21',
-    releaseYear: 2017,
-    reviewRank: 89,
-    developers: ['Infinite Fall'],
-    publishers: ['Finji', 'PLAYISM'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xeqqds65slerqr9vaemp.jpg',
     score: '100',
-  },
-  {
     name: 'Danganronpa V3: Killing Harmony',
     platforms: 'PS4, Vita, PS5, Switch',
     genres: 'Adventure',
@@ -5149,61 +3494,17 @@ export const gameDetails: Game[] = [
     publishers: ['Spike Chunsoft', 'NIS America'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ymvlezyunryrwixa4qyo.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Mystery',
+      'Visual Novel',
+      'Thirdperson',
+      'Firstperson',
+      'Adventure',
+    ],
   },
   {
-    name: 'Get Even',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Horror, Action',
-    releaseDate: 'Jun 22',
-    releaseYear: 2017,
-    reviewRank: 92,
-    developers: ['The Farm 51'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ihvga8rjmhhorhrwdhsf.jpg',
     score: '100',
-  },
-  {
-    name: 'Styx: Shards of Darkness',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, RPG',
-    releaseDate: 'Mar 14',
-    releaseYear: 2017,
-    reviewRank: 93,
-    developers: ['Cyanide Studio'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/l6mheqaybogeaftu5ohn.jpg',
-    score: '100',
-  },
-  {
-    name: 'Perception',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Horror, Puzzle',
-    releaseDate: 'May 30',
-    releaseYear: 2017,
-    reviewRank: 94,
-    developers: ['The Deep End Games'],
-    publishers: ['The Deep End Games', 'Feardemic'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ipwdx6gg5aa2varahvle.jpg',
-    score: '100',
-  },
-  {
-    name: 'WWE 2K18',
-    platforms: 'XB1, Switch, PS4, PC, XBXS, PS5',
-    genres: 'Fighting, Sports',
-    releaseDate: 'Oct 17',
-    releaseYear: 2017,
-    reviewRank: 96,
-    developers: ['Visual Concepts', "Yuke's"],
-    publishers: ['2K Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/acow6dhtcirhast2aa7y.jpg',
-    score: '100',
-  },
-  {
     name: 'God of War',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -5214,22 +3515,16 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom', 'Sony Computer Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rm35ytrytuka9qkylqyk.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Red Dead Redemption 2',
-    platforms: 'PS4, XB1, Stadia, PC, XBXS, PS5',
-    genres: 'Adventure, Third-Person Shooter',
-    releaseDate: 'Oct 26',
-    releaseYear: 2018,
-    reviewRank: 2,
-    developers: ['Rockstar Games'],
-    publishers: ['Take-Two Interactive', 'Rockstar Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xegpfnsvlyeld0zkjnrc.jpg',
     score: '100',
-  },
-  {
     name: 'Far Cry 5',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -5240,22 +3535,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u5ldoak74o1yhl2gt6y7.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Stealth'],
   },
   {
-    name: "Marvel's Spider-Man",
-    platforms: 'PS4, PS5, PC',
-    genres: 'Action, Adventure',
-    releaseDate: 'Sep 7',
-    releaseYear: 2018,
-    reviewRank: 5,
-    developers: ['Insomniac Games'],
-    publishers: ['Sony'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bjoksdiwvkatzql3gi95.jpg',
     score: '100',
-  },
-  {
     name: 'Vampyr',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG, Open World',
@@ -5266,9 +3549,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tia9remnnpxyka9zh1a1.jpg',
-    score: '100',
+    details: ['RPG', 'Horror', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Shadow of the Tomb Raider',
     platforms: 'PC, PS4, XB1, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5280,9 +3564,16 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ibfsxarkusq0r4yiqpae.jpg',
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: "Assassin's Creed Odyssey",
     platforms: 'XB1, PC, PS4, Stadia, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -5293,9 +3584,16 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uhbwqvqyzd9z28moax4v.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Stealth',
+      'Sandbox',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Darksiders III',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5306,9 +3604,10 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c4cppsgmpdr3s7gknxwu.jpg',
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Detroit: Become Human',
     platforms: 'PS4, PS5, PC',
     genres: 'Interactive Story, RPG',
@@ -5319,9 +3618,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sn6g2xe3dd1ip6cuotci.jpg',
-    score: '100',
+    details: [
+      'Mystery',
+      'Thirdperson',
+      'Firstperson',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Dead Cells',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action Roguelike',
@@ -5332,9 +3638,17 @@ export const gameDetails: Game[] = [
     publishers: ['Motion Twin'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bt9qwbyek1dmffukq44d.jpg',
-    score: '100',
+    details: [
+      'Rogue-like',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Super Smash Bros. Ultimate',
     platforms: 'Switch',
     genres: 'Fighting, Action',
@@ -5345,9 +3659,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/notn8ahnbkglatmokc86.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: 'Fallout 76',
     platforms: 'PC, PS4, XB1, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -5358,22 +3673,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5iru.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Shooter',
+      'Sandbox',
+      'Battleroyale',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Spyro Reignited Trilogy',
-    platforms: 'PS4, XB1, XBXS, PS5, Switch, PC',
-    genres: 'Platformer',
-    releaseDate: 'Nov 13',
-    releaseYear: 2018,
-    reviewRank: 14,
-    developers: ['Toys for Bob'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/rnpkoishtowjxtb6oovz.jpg',
     score: '100',
-  },
-  {
     name: 'Sea of Thieves',
     platforms: 'XB1, PC, XBXS, PS5, PS4',
     genres: 'Action, Simulation',
@@ -5384,35 +3694,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wtyxpxbkcsviixw7qoqn.jpg',
-    score: '100',
+    details: ['RPG', 'Funny', 'Pirates', 'Sandbox', 'MMO', 'Firstperson'],
   },
   {
-    name: 'Call of Cthulhu',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Oct 30',
-    releaseYear: 2018,
-    reviewRank: 16,
-    developers: ['Cyanide Studio'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scq0eg.jpg',
     score: '100',
-  },
-  {
-    name: 'Forza Horizon 4',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Simulation, Racing',
-    releaseDate: 'Oct 2',
-    releaseYear: 2018,
-    reviewRank: 17,
-    developers: ['Playground Games'],
-    publishers: ['Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fvh.jpg',
-    score: '100',
-  },
-  {
     name: 'Hitman 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -5423,9 +3708,17 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lkkcpqgprrdpq6qjnlfq.jpg',
-    score: '100',
+    details: [
+      'Crime',
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Dragon Ball FighterZ',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Fighting, Action',
@@ -5436,48 +3729,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wkrofjc1r5gtzkotditg.jpg',
-    score: '100',
+    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
-    name: 'Shadow of the Colossus',
-    platforms: 'PS4, PS5',
-    genres: 'Adventure',
-    releaseDate: 'Feb 6',
-    releaseYear: 2018,
-    reviewRank: 20,
-    developers: ['Team Ico'],
-    publishers: ['Sony Computer Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cwjymkqlubbxfsxadqf4.jpg',
     score: '100',
-  },
-  {
-    name: 'Call of Duty: Black Ops 4',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'First-Person Shooter',
-    releaseDate: 'Oct 12',
-    releaseYear: 2018,
-    reviewRank: 21,
-    developers: ['Treyarch'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9t.jpg',
-    score: '100',
-  },
-  {
-    name: 'SoulCalibur VI',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Fighting',
-    releaseDate: 'Oct 18',
-    releaseYear: 2018,
-    reviewRank: 22,
-    developers: ['Project Soul'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ic2bersxofcccocq8ogb.jpg',
-    score: '100',
-  },
-  {
     name: 'Battlefield V',
     platforms: 'XB1, PC, PS4, XBXS, PS5',
     genres: 'First-Person Shooter, Vehicle Combat',
@@ -5488,9 +3743,17 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctfab.jpg',
-    score: '100',
+    details: [
+      'Warfare',
+      'Cars',
+      'Stealth',
+      'Shooter',
+      'Battleroyale',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Just Cause 4',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action',
@@ -5501,9 +3764,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hlaisbleevysldnefpwz.jpg',
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Kingdom Come: Deliverance',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -5514,22 +3778,10 @@ export const gameDetails: Game[] = [
     publishers: ['Warhorse Studios', 'Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d7xe9pzuqxeoqmrvt1me.jpg',
-    score: '100',
+    details: ['RPG', 'Medieval', 'Sandbox', 'ARPG', 'Firstperson'],
   },
   {
-    name: 'Yakuza 6: The Song of Life',
-    platforms: 'PS4, PS5, XB1, PC',
-    genres: 'Action',
-    releaseDate: 'Apr 17',
-    releaseYear: 2018,
-    reviewRank: 26,
-    developers: ['Ryu Ga Gotoku Studios'],
-    publishers: ['Sega Games', 'Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wyk5rbssbyzdcj4waxp4.jpg',
     score: '100',
-  },
-  {
     name: 'State of Decay 2',
     platforms: 'XB1, PC, XBXS',
     genres: 'Horror, RPG',
@@ -5540,9 +3792,10 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar6iq.jpg',
-    score: '100',
+    details: ['Strategy', 'RPG', 'Horror', 'Behind-Overhead Perspective'],
   },
   {
+    score: '100',
     name: 'Two Point Hospital',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Simulation',
@@ -5553,22 +3806,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/alkvya4rftgqttx4nyf3.jpg',
-    score: '100',
+    details: ['Strategy', 'Simulation', 'Funny', 'Management'],
   },
   {
-    name: 'The Crew 2',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Racing',
-    releaseDate: 'Jun 29',
-    releaseYear: 2018,
-    reviewRank: 31,
-    developers: ['Ivory Tower'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p58xdenwi4tpdv7zfj0q.jpg',
     score: '100',
-  },
-  {
     name: 'Octopath Traveler',
     platforms: 'Switch, XB1, PC',
     genres: 'RPG',
@@ -5579,27 +3820,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pmkptjq50ptaoxgj86r6.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Medieval',
+      'JRPG',
+      'Side Scroller',
+      'Sideview',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Dragon Quest XI',
-    platforms: 'PS4, PC, PS5',
-    genres: 'JRPG, Fantasy',
-    releaseDate: 'Sep 4',
-    releaseYear: 2018,
-    reviewRank: 33,
-    developers: ['Square Enix'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nayznw6sfymbpnozvbbc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: 'Guacamelee! 2',
     platforms: 'PS4, PC, PS5, XB1, Switch',
     genres: 'Action',
@@ -5610,32 +3841,16 @@ export const gameDetails: Game[] = [
     publishers: ['Drinkbox Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kiqgx8mkne3ooimntmur.jpg',
-    hltb: {
-      main: 9,
-      extra: 11.5,
-      completionist: 15.5,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'We Happy Few',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Survival, Adventure, RPG',
-    releaseDate: 'Aug 10',
-    releaseYear: 2018,
-    reviewRank: 35,
-    developers: ['Compulsion Games'],
-    publishers: ['Gearbox Publishing'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hkmujrspapfs7ta0iejc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
     name: 'Moonlighter',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Roguelite, Action, RPG',
@@ -5646,14 +3861,10 @@ export const gameDetails: Game[] = [
     publishers: ['Netflix', '11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fndm0xboobfqunevr9kk.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 29.5,
-    },
-    score: '100',
+    details: ['RPG', 'Rogue-like', 'Side Scroller', 'Isometric', 'Action'],
   },
   {
+    score: '100',
     name: 'Metal Gear Survive',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Third-Person Shooter',
@@ -5664,14 +3875,16 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eyiqim8myxm5evrspnoa.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 31.5,
-      completionist: 60,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'A Way Out',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Interactive Story, Adventure',
@@ -5682,14 +3895,17 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/f4stmmaz0damsllwwmnz.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Survival',
+      'Crime',
+      'Stealth',
+      'Thirdperson',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Frostpunk',
     platforms: 'PC, XB1, PS4, PS5',
     genres: 'Survival, Strategy',
@@ -5700,53 +3916,10 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dmmaemyd8bnk7per7cim.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 25,
-      completionist: 56,
-    },
-    score: '100',
+    details: ['Strategy', 'Survival', 'Steampunk', 'Citybuilder', 'Isometric'],
   },
   {
-    name: 'Valkyria Chronicles 4',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'RPG',
-    releaseDate: 'Sep 25',
-    releaseYear: 2018,
-    reviewRank: 41,
-    developers: ['Media.Vision'],
-    publishers: ['Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8k6m.jpg',
     score: '100',
-  },
-  {
-    name: 'Tetris Effect',
-    platforms: 'PS4, PS5, PC',
-    genres: 'Strategy, Puzzle',
-    releaseDate: 'Nov 9',
-    releaseYear: 2018,
-    reviewRank: 42,
-    developers: ['Resonair', 'Monstars Inc.'],
-    publishers: ['Enhance'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h5kpmomevezckczgf7es.jpg',
-    score: '100',
-  },
-  {
-    name: 'FIFA 19',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Sep 25',
-    releaseYear: 2018,
-    reviewRank: 43,
-    developers: ['EA Vancouver', 'EA Romania'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nprloa8t9nxgn3cbdikw.jpg',
-    score: '100',
-  },
-  {
     name: 'Jurassic World Evolution',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Strategy',
@@ -5757,9 +3930,10 @@ export const gameDetails: Game[] = [
     publishers: ['Universal Pictures', 'Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mpkmltvxlkn7gyiyq3pb.jpg',
-    score: '100',
+    details: ['Management', 'Citybuilder', 'Isometric', 'Simulation'],
   },
   {
+    score: '100',
     name: 'Super Mario Party',
     platforms: 'Switch',
     genres: 'Action',
@@ -5770,22 +3944,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lfnon0dqj2w7enufgnbn.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Strategy',
+      'Party',
+      'Sideview',
+      'Isometric',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Extinction',
-    platforms: 'XB1, PC, PS4, XBXS, PS5',
-    genres: 'Action, RPG',
-    releaseDate: 'Apr 10',
-    releaseYear: 2018,
-    reviewRank: 46,
-    developers: ['Iron Galaxy Studios'],
-    publishers: ['Modus Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/plqzgkaqicpvkn0je6c4.jpg',
     score: '100',
-  },
-  {
     name: 'Dynasty Warriors 9',
     platforms: 'XB1, PS4, XBXS, PS5, PC',
     genres: 'Action',
@@ -5796,48 +3965,16 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kljuzvvliq2edwvtiqpt.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Kirby Star Allies',
-    platforms: 'Switch',
-    genres: 'Adventure, Platformer',
-    releaseDate: 'Mar 16',
-    releaseYear: 2018,
-    reviewRank: 48,
-    developers: ['HAL Laboratory'],
-    publishers: ['Nintendo of Europe', 'Nintendo of America', 'Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bly6zjqiwwrnrvkoczzh.jpg',
     score: '100',
-  },
-  {
-    name: 'Onrush',
-    platforms: 'XB1, PS4, XBXS, PS5',
-    genres: 'Action, Racing',
-    releaseDate: 'Jun 5',
-    releaseYear: 2018,
-    reviewRank: 49,
-    developers: ['Codemasters'],
-    publishers: ['Codemasters'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uzrsnr9lczbb8pfuuitk.jpg',
-    score: '100',
-  },
-  {
-    name: 'Pillars of Eternity II: Deadfire',
-    platforms: 'PC, PS5, PS4, XBXS, XB1',
-    genres: 'RPG',
-    releaseDate: 'May 8',
-    releaseYear: 2018,
-    reviewRank: 50,
-    developers: ['Obsidian Entertainment'],
-    publishers: ['Versus Evil'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/intxovcxbzysxzz6bpui.jpg',
-    score: '100',
-  },
-  {
     name: 'Attack on Titan 2',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, RPG',
@@ -5848,9 +3985,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dyqiuogt3n2cc1kk8pkh.jpg',
-    score: '100',
+    details: ['Anime', 'Warfare', 'Hack+slash', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Moss',
     platforms: 'PSVR, PS4, PC, PS5',
     genres: 'Puzzle, Action',
@@ -5861,9 +3999,10 @@ export const gameDetails: Game[] = [
     publishers: ['Polyarc Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/utywq1dpwoxf0qbgs3zy.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Unravel Two',
     platforms: 'XB1, PC, PS4, XBXS, PS5, Switch',
     genres: 'Puzzle, Platformer',
@@ -5874,35 +4013,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/iyj16hbpkgbf75v5jfen.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Wreckfest',
-    platforms: 'PC, PS4, PS5, Switch, XB1, XBXS',
-    genres: 'Action, Simulation, Racing',
-    releaseDate: 'Jun 14',
-    releaseYear: 2018,
-    reviewRank: 56,
-    developers: ['Bugbear Entertainment'],
-    publishers: ['THQ Nordic'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ghnlx2vfib46xeits3r6.jpg',
     score: '100',
-  },
-  {
-    name: 'Lost Sphear',
-    platforms: 'PS4, PC, Switch, PS5',
-    genres: 'RPG',
-    releaseDate: 'Jan 23',
-    releaseYear: 2018,
-    reviewRank: 59,
-    developers: ['Tokyo RPG Factory'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gef4chvvmxwatjlwxcbe.jpg',
-    score: '100',
-  },
-  {
     name: 'Celeste',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Platformer, Action, Adventure',
@@ -5913,22 +4033,10 @@ export const gameDetails: Game[] = [
     publishers: ['Maddy Makes Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e9lk3alqutkrciksfque.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'WWE 2K19',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Oct 5',
-    releaseYear: 2018,
-    reviewRank: 65,
-    developers: ["Yuke's"],
-    publishers: ['2K Sports', '2K Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xd6vdrvtk0howbfv05x7.jpg',
     score: '100',
-  },
-  {
     name: 'F1 2018',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing',
@@ -5939,22 +4047,16 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oqmhvnzt4clrhm6lhvvx.jpg',
-    score: '100',
+    details: [
+      'Side Scroller',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Simulation',
+      'Cars',
+    ],
   },
   {
-    name: 'The Legend of Heroes: Trails of Cold Steel IV',
-    platforms: 'PS4, PC, PS5, Switch',
-    genres: 'RPG',
-    releaseDate: 'Sep 27',
-    releaseYear: 2018,
-    reviewRank: 67,
-    developers: ['Nihon Falcom'],
-    publishers: ['NIS America', 'Nihon Falcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cs2.jpg',
     score: '100',
-  },
-  {
     name: "My Hero One's Justice",
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action',
@@ -5965,66 +4067,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jrhw4tx3filw0rn7nigi.jpg',
-    score: '100',
+    details: ['Anime', 'Action', 'Thirdperson', 'Fighting'],
   },
   {
-    name: 'CrossCode',
-    platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
-    genres: 'RPG',
-    releaseDate: 'Sep 20',
-    releaseYear: 2018,
-    reviewRank: 69,
-    developers: ['Radical Fish Games'],
-    publishers: [
-      'WhisperGames',
-      'Deck13 Interactive',
-      'Mayflower Entertainment',
-      'DANGEN Entertainment',
-    ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nkvqpqs3zdzc8a1o6ktk.jpg',
     score: '100',
-  },
-  {
-    name: 'Sonic Mania Plus',
-    platforms: 'PS4, XB1, Switch, XBXS, PS5',
-    genres: 'Arcade, Platformer',
-    releaseDate: 'Jul 17',
-    releaseYear: 2018,
-    reviewRank: 70,
-    developers: ['Headcannon', 'Christian Whitehead'],
-    publishers: ['Netflix', 'Sega Games', 'Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/o7sawqozmuhn9c5ks0e3.jpg',
-    score: '100',
-  },
-  {
-    name: 'The Banner Saga 3',
-    platforms: 'PC, PS4, XB1, Switch',
-    genres: 'RPG, Strategy',
-    releaseDate: 'Jul 26',
-    releaseYear: 2018,
-    reviewRank: 71,
-    developers: ['Stoic'],
-    publishers: ['Versus Evil'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xawbkhr8nkifutbqhpjr.jpg',
-    score: '100',
-  },
-  {
-    name: 'Warhammer: Vermintide 2',
-    platforms: 'PC, XBXS, XB1, PS4',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Mar 8',
-    releaseYear: 2018,
-    reviewRank: 73,
-    developers: ['Fatshark'],
-    publishers: ['Fatshark'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctsx7.jpg',
-    score: '100',
-  },
-  {
     name: 'Conan Exiles',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Survival, Adventure',
@@ -6035,22 +4081,17 @@ export const gameDetails: Game[] = [
     publishers: ['Funcom', 'Koch Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yv2cm2jpxidt7wygx0an.jpg',
-    score: '100',
+    details: [
+      'Survival',
+      'Sandbox',
+      'MMO',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'EA Sports UFC 3',
-    platforms: 'XB1, PS4, XBXS, PS5',
-    genres: 'Fighting, Simulation',
-    releaseDate: 'Feb 2',
-    releaseYear: 2018,
-    reviewRank: 76,
-    developers: ['EA Canada'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h2fhqcvevrdkzg1zudub.jpg',
     score: '100',
-  },
-  {
     name: 'Crossing Souls',
     platforms: 'PS4, PC, PS5',
     genres: 'Action, Adventure',
@@ -6061,9 +4102,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bdehscy8p6dqhc2d33aq.jpg',
-    score: '100',
+    details: ['Adventure', 'Isometric', 'Side Scroller', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Forgotton Anne',
     platforms: 'XB1, PC, XBXS, Switch, PS4',
     genres: 'Platformer',
@@ -6074,9 +4116,17 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix Collective', 'Square Enix Europe'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fbobjdtaxfdikpwryves.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'The Outer Worlds',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'RPG',
@@ -6087,14 +4137,10 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68w0.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 26.5,
-      completionist: 40.5,
-    },
-    score: '100',
+    details: ['RPG', 'Space', 'Shooter', 'ARPG', 'Firstperson'],
   },
   {
+    score: '100',
     name: 'Resident Evil 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Action',
@@ -6105,14 +4151,16 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z35arb0woqfqh4vimybc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Death Stranding',
     platforms: 'PS4, PC, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -6123,50 +4171,17 @@ export const gameDetails: Game[] = [
     publishers: ['Sony', '505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6l0a.jpg',
-    hltb: {
-      main: 40.5,
-      extra: 60,
-      completionist: 113,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Survival',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Devil May Cry 5',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, Hack and Slash',
-    releaseDate: 'Mar 8',
-    releaseYear: 2019,
-    reviewRank: 4,
-    developers: ['Capcom Development Division 1'],
-    publishers: ['Capcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bjy498bdwpy4rvk7osez.jpg',
-    hltb: {
-      main: 11,
-      extra: 17,
-      completionist: 77,
-    },
     score: '100',
-  },
-  {
-    name: 'Control',
-    platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'Action, Adventure',
-    releaseDate: 'Aug 27',
-    releaseYear: 2019,
-    reviewRank: 5,
-    developers: ['Remedy Entertainment'],
-    publishers: ['505 Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vbbxokluzwqft27e0dak.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 19,
-      completionist: 29,
-    },
-    score: '100',
-  },
-  {
     name: 'Days Gone',
     platforms: 'PS4, PS5, PC',
     genres: 'Horror, Adventure',
@@ -6177,14 +4192,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/eqd6kktmq9dva0cd5clc.jpg',
-    hltb: {
-      main: 36.5,
-      extra: 50.5,
-      completionist: 65.5,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Stealth',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Sekiro: Shadows Die Twice',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Ninja',
@@ -6195,14 +4212,10 @@ export const gameDetails: Game[] = [
     publishers: ['Activision'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/smay0rol1vbibwop2t7n.jpg',
-    hltb: {
-      main: 30,
-      extra: 43,
-      completionist: 69.5,
-    },
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Hack+slash', 'Stealth'],
   },
   {
+    score: '100',
     name: 'Star Wars Jedi: Fallen Order',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Adventure',
@@ -6213,14 +4226,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgzto.jpg',
-    hltb: {
-      main: 17,
-      extra: 22,
-      completionist: 32,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Metroidvania',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Metro Exodus',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5',
     genres: 'Action',
@@ -6231,14 +4246,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gharx9quvnz62udseh9r.jpg',
-    hltb: {
-      main: 16,
-      extra: 24,
-      completionist: 41.5,
-    },
-    score: '100',
+    details: ['Horror', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'A Plague Tale: Innocence',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Adventure',
@@ -6249,14 +4260,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5jte.jpg',
-    hltb: {
-      main: 11,
-      extra: 12.5,
-      completionist: 16,
-    },
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Stealth', 'Medieval'],
   },
   {
+    score: '100',
     name: 'Judgment',
     platforms: 'PS4, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -6267,14 +4274,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega Games', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/nkrfm61la2yfop7fysbp.jpg',
-    hltb: {
-      main: 27.5,
-      extra: 46,
-      completionist: 99,
-    },
-    score: '100',
+    details: ['RPG', 'Mystery', 'Crime', 'Fighting', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Mortal Kombat 11',
     platforms: 'PS4, Switch, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Fighting',
@@ -6285,14 +4288,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5r98.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 18,
-      completionist: 62.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
+    score: '100',
     name: "Tom Clancy's The Division 2",
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -6303,32 +4302,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yugj6cvnpzr1yj5y38zy.jpg',
-    hltb: {
-      main: 26,
-      extra: 48.5,
-      completionist: 97.5,
-    },
-    score: '100',
+    details: ['RPG', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
-    name: 'Call of Duty: Modern Warfare',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Action, First-Person Shooter, Vehicle Combat',
-    releaseDate: 'Oct 25',
-    releaseYear: 2019,
-    reviewRank: 15,
-    developers: ['Infinity Ward'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87l6.jpg',
-    hltb: {
-      main: 6,
-      extra: 9,
-      completionist: 15,
-    },
     score: '100',
-  },
-  {
     name: 'The Sinking City',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Adventure',
@@ -6339,14 +4316,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bigben Interactive', 'Frogwares'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qql.jpg',
-    hltb: {
-      main: 19,
-      extra: 25.5,
-      completionist: 32.5,
-    },
-    score: '100',
+    details: ['RPG', 'Mystery', 'Horror', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Wolfenstein: Youngblood',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5, Switch',
     genres: 'First-Person Shooter',
@@ -6357,14 +4330,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dk2.jpg',
-    hltb: {
-      main: 9,
-      extra: 14.5,
-      completionist: 32,
-    },
-    score: '100',
+    details: ['RPG', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Anthem',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Sci-fi, Shooter',
@@ -6375,9 +4344,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctl7k.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Shooter',
+      'ARPG',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+    ],
   },
   {
+    score: '100',
     name: 'Rage 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, First-Person Shooter',
@@ -6388,57 +4364,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kh40zjsftiaxcg6a5yfm.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 33,
-    },
-    score: '100',
-  },
-  {
-    name: 'Kingdom Hearts III',
-    platforms: 'PS4, XB1, XBXS, PS5, Switch, PC',
-    genres: 'Action, RPG',
-    releaseDate: 'Jan 25',
-    releaseYear: 2019,
-    reviewRank: 20,
-    developers: [
-      'Square Enix Business Division 3',
-      'Square Enix Creative Business Unit I',
+    details: [
+      'Shooter',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Cars',
+      'Action',
     ],
-    publishers: [
-      'Square Enix',
-      'The Walt Disney Company',
-      'Pixar Animation Studios',
-    ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/radqp9dbon3hphczz8wo.jpg',
-    hltb: {
-      main: 29,
-      extra: 40,
-      completionist: 64.5,
-    },
-    score: '100',
   },
   {
-    name: 'Gears 5',
-    platforms: 'XB1, PC, XBXS',
-    genres: 'Third-Person Shooter, Action, Adventure',
-    releaseDate: 'Sep 10',
-    releaseYear: 2019,
-    reviewRank: 21,
-    developers: ['The Coalition'],
-    publishers: ['Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gd5.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 15.5,
-      completionist: 19.5,
-    },
     score: '100',
-  },
-  {
     name: 'Darksiders Genesis',
     platforms: 'PC, PS4, XB1, Switch, Stadia, XBXS, PS5',
     genres: 'Action, Adventure, RPG',
@@ -6449,14 +4385,10 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6r6o.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 31.5,
-    },
-    score: '100',
+    details: ['RPG', 'Hack+slash', 'Side Scroller', 'Isometric', 'Action'],
   },
   {
+    score: '100',
     name: 'Borderlands 3',
     platforms: 'XB1, PC, PS4, Stadia, XBXS, PS5, Switch',
     genres: 'RPG, First-Person Shooter',
@@ -6467,14 +4399,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cys.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 46,
-      completionist: 82.5,
-    },
-    score: '100',
+    details: ['RPG', 'Funny', 'Shooter', 'ARPG', 'Firstperson'],
   },
   {
+    score: '100',
     name: "The Legend of Zelda: Link's Awakening",
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -6485,14 +4413,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Playtronic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckj7b.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Isometric',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Bloodstained: Ritual of the Night',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Adventure, RPG',
@@ -6503,14 +4434,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/mwmrw9ysvic7btm4hhpd.jpg',
-    hltb: {
-      main: 14,
-      extra: 20.5,
-      completionist: 35.5,
-    },
-    score: '100',
+    details: ['Anime', 'RPG', 'Horror', 'Platformer'],
   },
   {
+    score: '100',
     name: "Luigi's Mansion 3",
     platforms: 'Switch',
     genres: 'Adventure, Action',
@@ -6521,14 +4448,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vin.jpg',
-    hltb: {
-      main: 13,
-      extra: 17,
-      completionist: 22,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Sideview',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Ace Combat 7: Skies Unknown',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action, Simulation',
@@ -6539,14 +4468,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jseibhuhbh9osdx560ob.jpg',
-    hltb: {
-      main: 12,
-      extra: 18,
-      completionist: 66.5,
-    },
-    score: '100',
+    details: ['Warfare', 'Action', 'Firstperson', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Crackdown 3',
     platforms: 'XB1, PC, XBXS',
     genres: 'Adventure, Third-Person Shooter',
@@ -6557,14 +4482,10 @@ export const gameDetails: Game[] = [
     publishers: ['Microsoft Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fw76oqfjpmanu0zeo1b5.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 24.5,
-    },
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Team Sonic Racing',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Racing',
@@ -6575,14 +4496,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vjmure5vxdeokhhtmiyj.jpg',
-    hltb: {
-      main: 9,
-      extra: 13.5,
-      completionist: 26.5,
-    },
-    score: '100',
+    details: [
+      'Party',
+      'Arcade',
+      'Behind-Overhead Perspective',
+      'Cars',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Blair Witch',
     platforms: 'PC, XB1, XBXS, PS4, Switch',
     genres: 'Horror, Adventure',
@@ -6593,14 +4516,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6la0.jpg',
-    hltb: {
-      main: 5,
-      extra: 6,
-      completionist: 10,
-    },
-    score: '100',
+    details: ['Mystery', 'Horror', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Dragon Quest Builders 2',
     platforms: 'Switch, PS4, PC, PS5, XB1',
     genres: 'Adventure, RPG',
@@ -6611,14 +4530,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5ppx.jpg',
-    hltb: {
-      main: 55,
-      extra: 74.5,
-      completionist: 124,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'ARPG', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Code Vein',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -6629,14 +4544,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cbcwrrmacd4nkdfjsisq.jpg',
-    hltb: {
-      main: 26.5,
-      extra: 35,
-      completionist: 63,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Horror', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Dead or Alive 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: '3D Fighter',
@@ -6647,9 +4558,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uapfuxkta3fxmaara71i.jpg',
-    score: '100',
+    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Astral Chain',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -6660,9 +4572,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vig.jpg',
-    score: '100',
+    details: ['Anime', 'RPG', 'Hack+slash', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: "Yoshi's Crafted World",
     platforms: 'Switch',
     genres: 'Platformer, Action',
@@ -6673,9 +4586,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c68ocmmce59uz2ekembg.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Thirdperson',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'My Friend Pedro',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Action',
@@ -6686,9 +4607,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/poovlblpzjwtokxnupa5.jpg',
-    score: '100',
+    details: ['Shooter', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Trials Rising',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5, Switch',
     genres: 'Racing',
@@ -6699,9 +4621,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ygbfvgjadeql0c7wnu8o.jpg',
-    score: '100',
+    details: ['Action', 'Cars', 'Sideview', 'Side Scroller'],
   },
   {
+    score: '100',
     name: 'Daemon X Machina',
     platforms: 'Switch',
     genres: 'Action',
@@ -6712,22 +4635,17 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h5bdif45vnfoo4utipbc.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Children of Morta',
-    platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
-    genres: 'Action, Adventure, RPG',
-    releaseDate: 'Sep 3',
-    releaseYear: 2019,
-    reviewRank: 48,
-    developers: ['Dead Mage'],
-    publishers: ['11 bit studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fmxwfnjrvtrudbqpfbxz.jpg',
     score: '100',
-  },
-  {
     name: 'Shenmue III',
     platforms: 'PC, PS4, PS5',
     genres: 'Adventure',
@@ -6738,9 +4656,16 @@ export const gameDetails: Game[] = [
     publishers: ['Shibuya Productions', 'Deep Silver', 'ININ Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc99oz.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Simulation',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Layers of Fear 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
@@ -6751,9 +4676,10 @@ export const gameDetails: Game[] = [
     publishers: ['Gun Interactive', 'NA Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6gyg.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Concrete Genie',
     platforms: 'PS4, PS5',
     genres: 'Art, Adventure',
@@ -6764,9 +4690,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/u4goylbqiuynqrdbqlld.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Untitled Goose Game',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Puzzle, Adventure',
@@ -6777,9 +4710,17 @@ export const gameDetails: Game[] = [
     publishers: ['Panic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/onko9hruvdv63darqinn.jpg',
-    score: '100',
+    details: [
+      'Funny',
+      'Stealth',
+      'Sandbox',
+      'Platformer',
+      'Side Scroller',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Indivisible',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'RPG, Platformer',
@@ -6790,9 +4731,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/loeuidxbc0bdsqf9qhyb.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Ancestors: The Humankind Odyssey',
     platforms: 'PC, PS4, XB1',
     genres: 'Adventure, RPG',
@@ -6803,9 +4745,17 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5stq.jpg',
-    score: '100',
+    details: [
+      'Survival',
+      'Sandbox',
+      'Life-sim',
+      'Thirdperson',
+      'Simulation',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Trine 4: The Nightmare Prince',
     platforms: 'PC, PS4, XB1, Switch, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6816,9 +4766,16 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68hi.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'God Eater 3',
     platforms: 'PS4, PC, PS5, Switch',
     genres: 'Action',
@@ -6829,9 +4786,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5jt4.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Wargroove',
     platforms: 'XB1, PC, Switch, XBXS, PS4',
     genres: 'Strategy, Turn-based tactics',
@@ -6842,22 +4800,10 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/he17smgll9yv3ihfcvis.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Isometric', 'Side Scroller'],
   },
   {
-    name: 'John Wick Hex',
-    platforms: 'PC, PS4, XB1, Switch',
-    genres: 'Strategy',
-    releaseDate: 'Oct 8',
-    releaseYear: 2019,
-    reviewRank: 59,
-    developers: ['Bithell Games'],
-    publishers: ['Good Shepherd Entertainment', 'Gambitious'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6k0v.jpg',
     score: '100',
-  },
-  {
     name: 'Yooka-Laylee and the Impossible Lair',
     platforms: 'PC, Switch, XB1, PS4, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6868,9 +4814,17 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6ref.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Isometric',
+      'Thirdperson',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Tropico 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Simulation, Strategy',
@@ -6881,9 +4835,16 @@ export const gameDetails: Game[] = [
     publishers: ['Kalypso Media'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6csu.jpg',
-    score: '100',
+    details: [
+      'Strategy',
+      'Point+click',
+      'Management',
+      'Citybuilder',
+      'Isometric',
+    ],
   },
   {
+    score: '100',
     name: 'Dirt Rally 2.0',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Simulation, Racing, Sports',
@@ -6894,9 +4855,15 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5iqf.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Disco Elysium',
     platforms: 'PC, PS5, PS4, XB1, XBXS',
     genres: 'Adventure, RPG',
@@ -6907,9 +4874,10 @@ export const gameDetails: Game[] = [
     publishers: ['ZA/UM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jgfwlctsfh8yljnjdeab.jpg',
-    score: '100',
+    details: ['RPG', 'Point+click', 'Mystery', 'Side Scroller'],
   },
   {
+    score: '100',
     name: 'Oninaki',
     platforms: 'PS4, PC, Switch, PS5, XB1',
     genres: 'Action, RPG',
@@ -6920,22 +4888,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc635z.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'ARPG', 'Puzzle elements'],
   },
   {
-    name: 'The Legend of Heroes: Trails of Cold Steel III',
-    platforms: 'PS4, Switch, PS5, PC',
-    genres: 'Action, RPG',
-    releaseDate: 'Oct 22',
-    releaseYear: 2019,
-    reviewRank: 68,
-    developers: ['Nihon Falcom'],
-    publishers: ['Nihon Falcom', 'NIS America'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6stu.jpg',
     score: '100',
-  },
-  {
     name: 'FIFA 20',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Sports',
@@ -6946,9 +4902,16 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lbg.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Blasphemous',
     platforms: 'PC, Switch, PS4, XB1, XBXS, PS5',
     genres: 'Adventure, Platformer',
@@ -6959,9 +4922,17 @@ export const gameDetails: Game[] = [
     publishers: ['The Game Kitchen', 'Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6whb.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Horror',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+    ],
   },
   {
+    score: '100',
     name: 'Ion Fury',
     platforms: 'PC, PS4, Switch, XB1',
     genres: 'Arcade, Action, First-Person Shooter',
@@ -6972,9 +4943,16 @@ export const gameDetails: Game[] = [
     publishers: ['3D Realms'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jdkvlxeqleeg8egeybd7.jpg',
-    score: '100',
+    details: [
+      'Sci-fi',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Grid',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Simulation, Racing, Sports',
@@ -6985,22 +4963,15 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lza.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Superliminal',
-    platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
-    genres: 'Puzzle',
-    releaseDate: 'Nov 12',
-    releaseYear: 2019,
-    reviewRank: 75,
-    developers: ['Pillow Castle Games'],
-    publishers: ['Pillow Castle Games', 'Noodlecake Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc799e.jpg',
     score: '100',
-  },
-  {
     name: 'Katana Zero',
     platforms: 'PC, Switch, PS4, PS5, XB1',
     genres: 'Action, Platformer',
@@ -7011,22 +4982,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5zhl.jpg',
-    score: '100',
+    details: ['Sci-fi', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
-    name: 'Assetto Corsa Competizione',
-    platforms: 'PC, PS4, PS5, XB1, XBXS',
-    genres: 'Simulation, Racing, Sports',
-    releaseDate: 'May 29',
-    releaseYear: 2019,
-    reviewRank: 77,
-    developers: ['Kunos Simulazioni'],
-    publishers: ['505 Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dto2kz9sotbd6f1xoweb.jpg',
     score: '100',
-  },
-  {
     name: 'NBA 2K20',
     platforms: 'PC, PS4, Switch, XB1, Stadia, XBXS, PS5',
     genres: 'Sports',
@@ -7037,22 +4996,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', '2K Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc72ek.jpg',
-    score: '100',
+    details: ['Sports', 'Firstperson', 'Isometric', 'Management'],
   },
   {
-    name: 'My Time at Portia',
-    platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
-    genres: 'Simulation, RPG',
-    releaseDate: 'Jan 15',
-    releaseYear: 2019,
-    reviewRank: 79,
-    developers: ['Pathea Games'],
-    publishers: ['Team17'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/jnc20jtxxfvd6rprt7lw.jpg',
     score: '100',
-  },
-  {
     name: 'Vane',
     platforms: 'PS4, PS5',
     genres: 'Adventure',
@@ -7063,9 +5010,15 @@ export const gameDetails: Game[] = [
     publishers: ['Friend & Foe', 'Gamera Game'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/k1dr0dkbmuagxk1mi9yp.jpg',
-    score: '100',
+    details: [
+      'Adventure',
+      'Behind-Overhead Perspective',
+      'Platformer',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Age of Wonders: Planetfall',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Strategy',
@@ -7076,27 +5029,10 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bpyn3rwecv9opnzjps7u.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Warfare', 'Grand Strategy'],
   },
   {
-    name: 'Cyberpunk 2077',
-    platforms: 'PC, Stadia, XBXS, XB1, PS4, PS5',
-    genres: 'RPG',
-    releaseDate: 'Dec 10',
-    releaseYear: 2020,
-    reviewRank: 1,
-    developers: ['CD Projekt RED'],
-    publishers: ['CD Projekt'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scxw02.jpg',
-    hltb: {
-      main: 26,
-      extra: 63,
-      completionist: 108,
-    },
     score: '100',
-  },
-  {
     name: "Assassin's Creed Valhalla",
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Action, RPG',
@@ -7107,14 +5043,16 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gfc.jpg',
-    hltb: {
-      main: 61,
-      extra: 99,
-      completionist: 150,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Stealth',
+      'Sandbox',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Doom Eternal',
     platforms: 'PC, PS4, XB1, Switch, Stadia, XBXS, PS5',
     genres: 'Action',
@@ -7125,14 +5063,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dkjdvrbqaoyyh4klvbwb.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20.5,
-      completionist: 29.5,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'The Last of Us Part II',
     platforms: 'PS4, PS5',
     genres: 'Action, Adventure',
@@ -7143,14 +5077,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dbqn4wax78tgvplrpf1m.jpg',
-    hltb: {
-      main: 24,
-      extra: 29.5,
-      completionist: 43.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Horror',
+      'Stealth',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Ghost of Tsushima',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, Adventure',
@@ -7161,14 +5097,17 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lykfms7zl20y2wlkaji7.jpg',
-    hltb: {
-      main: 25,
-      extra: 46,
-      completionist: 62.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Warfare',
+      'Stealth',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Hades',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Adventure, RPG, Action',
@@ -7179,32 +5118,17 @@ export const gameDetails: Game[] = [
     publishers: ['Supergiant Games', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lik.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 48.5,
-      completionist: 95.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Rogue-like',
+      'Hack+slash',
+      'ARPG',
+      'Side Scroller',
+      'Isometric',
+    ],
   },
   {
-    name: "Marvel's Avengers",
-    platforms: 'PS4, PC, XB1, Stadia, XBXS, PS5',
-    genres: 'Action, RPG',
-    releaseDate: 'Sep 4',
-    releaseYear: 2020,
-    reviewRank: 9,
-    developers: ['Eidos Montréal', 'Crystal Dynamics'],
-    publishers: ['Square Enix', 'Crystal Dynamics'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ghc.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 24.5,
-      completionist: 104,
-    },
     score: '100',
-  },
-  {
     name: 'Watch Dogs: Legion',
     platforms: 'PS4, XB1, PC, Stadia, XBXS, PS5',
     genres: 'Adventure, Action',
@@ -7215,14 +5139,17 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gce.jpg',
-    hltb: {
-      main: 18,
-      extra: 33,
-      completionist: 50.5,
-    },
-    score: '100',
+    details: [
+      'Sci-fi',
+      'Stealth',
+      'Shooter',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Cars',
+    ],
   },
   {
+    score: '100',
     name: 'Ori and the Will of the Wisps',
     platforms: 'XB1, PC, XBXS, Switch',
     genres: 'Puzzle, Platformer',
@@ -7233,32 +5160,17 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'iam8bit'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fwu.jpg',
-    hltb: {
-      main: 12,
-      extra: 15.5,
-      completionist: 18.5,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: "Crash Bandicoot 4: It's About Time",
-    platforms: 'XB1, PS4, XBXS, PS5, Switch, PC',
-    genres: 'Platformer',
-    releaseDate: 'Oct 2',
-    releaseYear: 2020,
-    reviewRank: 14,
-    developers: ['Toys for Bob'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scj0jk.jpg',
-    hltb: {
-      main: 10,
-      extra: 20.5,
-      completionist: 85.5,
-    },
     score: '100',
-  },
-  {
     name: 'Maneater',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -7269,14 +5181,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver', 'Tripwire Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ogx8mirmuv00wodpqmug.jpg',
-    hltb: {
-      main: 8,
-      extra: 10,
-      completionist: 13,
-    },
-    score: '100',
+    details: ['RPG', 'Action', 'Behind-Overhead Perspective', 'Sandbox'],
   },
   {
+    score: '100',
     name: 'Dragon Ball Z: Kakarot',
     platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
     genres: 'Action, RPG',
@@ -7291,14 +5199,16 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc61li.jpg',
-    hltb: {
-      main: 30.5,
-      extra: 42,
-      completionist: 56.5,
-    },
-    score: '100',
+    details: [
+      'Anime',
+      'RPG',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Immortals Fenyx Rising',
     platforms: 'PS4, XB1, Switch, Stadia, PC, XBXS, PS5',
     genres: 'Action',
@@ -7309,32 +5219,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jcw.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 41,
-      completionist: 62,
-    },
-    score: '100',
+    details: ['RPG', 'Sandbox', 'Thirdperson', 'Action', 'Puzzle elements'],
   },
   {
-    name: 'Call of Duty: Black Ops Cold War',
-    platforms: 'PC, PS4, XB1, XBXS, PS5',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Nov 13',
-    releaseYear: 2020,
-    reviewRank: 18,
-    developers: ['Treyarch'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j4h.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 7,
-      completionist: 19,
-    },
     score: '100',
-  },
-  {
     name: 'Yakuza: Like a Dragon',
     platforms: 'PS4, PC, XB1, XBXS, PS5',
     genres: 'RPG',
@@ -7345,14 +5233,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wyn.jpg',
-    hltb: {
-      main: 46,
-      extra: 68,
-      completionist: 103,
-    },
-    score: '100',
+    details: ['RPG', 'Firstperson', 'Thirdperson', 'Crime'],
   },
   {
+    score: '100',
     name: 'Streets of Rage 4',
     platforms: 'Switch, PC, XB1, PS4',
     genres: 'Fighting, Action, Arcade',
@@ -7363,45 +5247,10 @@ export const gameDetails: Game[] = [
     publishers: ['DotEmu', 'Yooreka Studio'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/xqh4k6i4dm21pdnxtbnz.jpg',
-    hltb: {
-      main: 3,
-      extra: 6.5,
-      completionist: 28,
-    },
-    score: '100',
+    details: ['Anime', 'Brawler', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
-    name: 'Animal Crossing: New Horizons',
-    platforms: 'Switch, Switch 2',
-    genres: 'Simulation',
-    releaseDate: 'Mar 20',
-    releaseYear: 2020,
-    reviewRank: 21,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc836w.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
     score: '100',
-  },
-  {
-    name: 'Microsoft Flight Simulator',
-    platforms: 'PC, XBXS',
-    genres: 'Simulation',
-    releaseDate: 'Aug 18',
-    releaseYear: 2020,
-    reviewRank: 22,
-    developers: ['Asobo Studio'],
-    publishers: ['Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6vzt.jpg',
-    score: '100',
-  },
-  {
     name: 'Paper Mario: The Origami King',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -7412,14 +5261,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88ir.jpg',
-    hltb: {
-      main: 27,
-      extra: 32.5,
-      completionist: 44.5,
-    },
-    score: '100',
+    details: ['RPG', 'Funny', 'Thirdperson', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Sackboy: A Big Adventure',
     platforms: 'PS4, PS5, PC',
     genres: 'Adventure, Platformer',
@@ -7430,14 +5275,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bjj.jpg',
-    hltb: {
-      main: 11,
-      extra: 17,
-      completionist: 34,
-    },
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Mortal Shell',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -7448,14 +5289,10 @@ export const gameDetails: Game[] = [
     publishers: ['Playstack'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82wv.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14,
-      completionist: 23,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Star Wars: Squadrons',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Vehicle Combat',
@@ -7466,14 +5303,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ecw.jpg',
-    hltb: {
-      main: 9,
-      extra: 12,
-      completionist: 41.5,
-    },
-    score: '100',
+    details: ['Space', 'Shooter', 'Firstperson', 'Simulation', 'Action'],
   },
   {
+    score: '100',
     name: 'Minecraft Dungeons',
     platforms: 'Switch, PC, XB1, PS4, XBXS, PS5',
     genres: 'RPG, Action, Adventure',
@@ -7484,32 +5317,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'Mojang Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82ob.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12.5,
-      completionist: 34,
-    },
-    score: '100',
+    details: ['RPG', 'Isometric', 'Side Scroller', 'ARPG'],
   },
   {
-    name: 'Gears Tactics',
-    platforms: 'PC, XB1, XBXS',
-    genres: 'Strategy',
-    releaseDate: 'Apr 28',
-    releaseYear: 2020,
-    reviewRank: 31,
-    developers: ['Splash Damage'],
-    publishers: ['Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87lv.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 33.5,
-      completionist: 55,
-    },
     score: '100',
-  },
-  {
     name: 'Zombie Army 4: Dead War',
     platforms: 'PS4, PC, XB1, XBXS, PS5, Switch',
     genres: 'Survival, Action',
@@ -7520,14 +5331,10 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lfv.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 18.5,
-      completionist: 55.5,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Desperados III',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Strategy',
@@ -7538,14 +5345,10 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6x1t.jpg',
-    hltb: {
-      main: 27,
-      extra: 36.5,
-      completionist: 64.5,
-    },
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Isometric', 'Stealth'],
   },
   {
+    score: '100',
     name: 'Journey to the Savage Planet',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Adventure',
@@ -7556,14 +5359,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cme.jpg',
-    hltb: {
-      main: 7,
-      extra: 11,
-      completionist: 17,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Ghostrunner',
     platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
     genres: 'Action',
@@ -7574,14 +5373,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games', 'All In! Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82f1.jpg',
-    hltb: {
-      main: 7,
-      extra: 9,
-      completionist: 14,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Platformer', 'Sci-fi'],
   },
   {
+    score: '100',
     name: 'Battletoads',
     platforms: 'XB1, PC, XBXS',
     genres: 'Action, Platformer, Fighting',
@@ -7592,14 +5387,17 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gnl.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Brawler',
+      'Side Scroller',
+      'Sideview',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Wasteland 3',
     platforms: 'PS4, PC, XB1, XBXS, PS5',
     genres: 'RPG, Strategy',
@@ -7610,45 +5408,10 @@ export const gameDetails: Game[] = [
     publishers: ['inXile Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6v2q.jpg',
-    hltb: {
-      main: 36,
-      extra: 49.5,
-      completionist: 75.5,
-    },
-    score: '100',
+    details: ['RPG', 'Point+click', 'Isometric', 'Tactics'],
   },
   {
-    name: 'Hyrule Warriors: Age of Calamity',
-    platforms: 'Switch',
-    genres: 'Adventure, Action',
-    releaseDate: 'Nov 20',
-    releaseYear: 2020,
-    reviewRank: 39,
-    developers: ['Omega Force'],
-    publishers: ['Nintendo', 'Koei Tecmo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jnb.jpg',
-    hltb: {
-      main: 25,
-      extra: 39,
-      completionist: 76.5,
-    },
     score: '100',
-  },
-  {
-    name: 'The Dark Pictures Anthology: Little Hope',
-    platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
-    genres: 'Adventure, Horror',
-    releaseDate: 'Oct 30',
-    releaseYear: 2020,
-    reviewRank: 41,
-    developers: ['Supermassive Games'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j5p.jpg',
-    score: '100',
-  },
-  {
     name: 'Cris Tales',
     platforms: 'Switch, PC, PS4, PS5, XB1, XBXS',
     genres: 'Adventure, RPG',
@@ -7659,35 +5422,17 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games', 'Maximum Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lei.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'JRPG',
+      'Side Scroller',
+      'Sideview',
+      'Thirdperson',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Super Mario 3D All-Stars',
-    platforms: 'Switch',
-    genres: 'Adventure, Platformer',
-    releaseDate: 'Sep 18',
-    releaseYear: 2020,
-    reviewRank: 45,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8jan.jpg',
     score: '100',
-  },
-  {
-    name: 'Serious Sam 4',
-    platforms: 'PC, Stadia, PS4, XB1, XBXS, PS5',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Sep 25',
-    releaseYear: 2020,
-    reviewRank: 46,
-    developers: ['Croteam'],
-    publishers: ['Devolver Digital'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc894a.jpg',
-    score: '100',
-  },
-  {
     name: 'Nioh 2',
     platforms: 'PS4, PS5, PC',
     genres: 'Action, RPG',
@@ -7698,9 +5443,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games', 'Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc794u.jpg',
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Disintegration',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, Adventure',
@@ -7711,9 +5457,10 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6weo.jpg',
-    score: '100',
+    details: ['Strategy', 'Shooter', 'RTS', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Crusader Kings III',
     platforms: 'PC, PS5, XBXS',
     genres: 'RPG, Simulation, Strategy',
@@ -7724,9 +5471,10 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7l82.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Medieval', 'RTS', 'Isometric'],
   },
   {
+    score: '100',
     name: 'Tell Me Why',
     platforms: 'PC, XB1, XBXS',
     genres: 'Interactive Story',
@@ -7737,35 +5485,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ga4.jpg',
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Thirdperson', 'Puzzle elements'],
   },
   {
-    name: 'Bugsnax',
-    platforms: 'PS5, PS4, PC',
-    genres: 'Adventure',
-    releaseDate: 'Nov 12',
-    releaseYear: 2020,
-    reviewRank: 54,
-    developers: ['Young Horses'],
-    publishers: ['Young Horses'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bkt.jpg',
     score: '100',
-  },
-  {
-    name: 'Windbound',
-    platforms: 'PC, XB1, XBXS, PS4',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Aug 28',
-    releaseYear: 2020,
-    reviewRank: 55,
-    developers: ['5 Lives Studios'],
-    publishers: ['Deep Silver', 'Koch Media'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82x3.jpg',
-    score: '100',
-  },
-  {
     name: 'Godfall',
     platforms: 'PS5, PC',
     genres: 'Action, RPG',
@@ -7776,9 +5499,10 @@ export const gameDetails: Game[] = [
     publishers: ['Gearbox Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bka.jpg',
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Amnesia: Rebirth',
     platforms: 'PS4, PC, PS5',
     genres: 'Horror, Adventure, Action',
@@ -7789,9 +5513,10 @@ export const gameDetails: Game[] = [
     publishers: ['Frictional Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc81cr.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'The Pathless',
     platforms: 'PC, PS4, PS5',
     genres: 'Adventure',
@@ -7802,22 +5527,10 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dbj.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Shooter', 'Puzzle elements'],
   },
   {
-    name: 'Deadly Premonition 2: A Blessing in Disguise',
-    platforms: 'Switch',
-    genres: 'Adventure, Action',
-    releaseDate: 'Jul 10',
-    releaseYear: 2020,
-    reviewRank: 62,
-    developers: ['ToyBox'],
-    publishers: ['Rising Star Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6yzl.jpg',
     score: '100',
-  },
-  {
     name: 'Predator: Hunting Grounds',
     platforms: 'PS4, PS5, PC',
     genres: 'Action',
@@ -7828,35 +5541,16 @@ export const gameDetails: Game[] = [
     publishers: ['Illfonic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wdo.jpg',
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Call of the Sea',
-    platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
-    genres: 'Adventure, Puzzle',
-    releaseDate: 'Dec 8',
-    releaseYear: 2020,
-    reviewRank: 64,
-    developers: ['Out of the Blue Games'],
-    publishers: ['Raw Fury'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g7b.jpg',
     score: '100',
-  },
-  {
-    name: 'One Piece: Pirate Warriors 4',
-    platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
-    genres: 'Adventure, Action',
-    releaseDate: 'Mar 27',
-    releaseYear: 2020,
-    reviewRank: 65,
-    developers: ['Koei Tecmo Games'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7dyv.jpg',
-    score: '100',
-  },
-  {
     name: 'FIFA 21',
     platforms: 'PC, PS4, XB1, Switch',
     genres: 'Simulation, Sports',
@@ -7867,9 +5561,16 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fu0.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'NBA 2K21',
     platforms: 'PC, PS4, XB1, Stadia, XBXS, PS5',
     genres: 'Sports, Simulation',
@@ -7880,9 +5581,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games', '2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kpz.jpg',
-    score: '100',
+    details: ['Sports', 'Isometric', 'Side Scroller', 'Management'],
   },
   {
+    score: '100',
     name: 'Inscryption',
     platforms: 'PC, PS5, PS4',
     genres: 'Strategy, Horror',
@@ -7893,9 +5595,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Daniel Mullins Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lf2.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Horror', 'Cards'],
   },
   {
+    score: '100',
     name: 'Sakura Wars',
     platforms: 'PS4, PS5',
     genres: 'Action, RPG',
@@ -7906,22 +5609,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7w7v.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Anime',
+      'ARPG',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+    ],
   },
   {
-    name: "Astro's Playroom",
-    platforms: 'PS5',
-    genres: 'Action, Platformer',
-    releaseDate: 'Nov 12',
-    releaseYear: 2020,
-    reviewRank: 71,
-    developers: ['SIE Japan Studio'],
-    publishers: ['Sony'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bkl.jpg',
     score: '100',
-  },
-  {
     name: 'Granblue Fantasy: Versus',
     platforms: 'PS4, PS5, PC',
     genres: 'Fighting',
@@ -7932,22 +5629,10 @@ export const gameDetails: Game[] = [
     publishers: ['Cygames', 'XSEED Games', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5rhp.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Fighting', 'ARPG', 'Side Scroller', 'Sideview'],
   },
   {
-    name: 'Kingdom Hearts: Melody of Memory',
-    platforms: 'Switch, PS4, XB1, XBXS, PS5',
-    genres: 'Action, Music',
-    releaseDate: 'Nov 13',
-    releaseYear: 2020,
-    reviewRank: 73,
-    developers: ['Square Enix Creative Business Unit I'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8fiu.jpg',
     score: '100',
-  },
-  {
     name: 'No Straight Roads',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, Music',
@@ -7958,35 +5643,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sold Out', 'H2 Interactive Co., Ltd.', 'Fireshine Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6a38.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Rhythm',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Action',
+    ],
   },
   {
-    name: 'Twin Mirror',
-    platforms: 'XB1, PS4, PC',
-    genres: 'Adventure',
-    releaseDate: 'Dec 1',
-    releaseYear: 2020,
-    reviewRank: 79,
-    developers: ["DON'T NOD"],
-    publishers: ['Bandai Namco Entertainment', "DON'T NOD"],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbubn.jpg',
     score: '100',
-  },
-  {
-    name: 'XCOM: Chimera Squad',
-    platforms: 'PC',
-    genres: 'Strategy, Turn-Based Strategy',
-    releaseDate: 'Apr 23',
-    releaseYear: 2020,
-    reviewRank: 80,
-    developers: ['Firaxis Games'],
-    publishers: ['2K'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8gzi.jpg',
-    score: '100',
-  },
-  {
     name: 'Maid of Sker',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
     genres: 'Horror, Adventure',
@@ -7997,9 +5663,10 @@ export const gameDetails: Game[] = [
     publishers: ['Wales Interactive', 'Perp Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5l81.jpg',
-    score: '100',
+    details: ['Horror', 'Survival', 'Stealth', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Spiritfarer',
     platforms: 'Switch, PS4, PC, XB1, XBXS, PS5',
     genres: 'Adventure, Simulation',
@@ -8010,9 +5677,16 @@ export const gameDetails: Game[] = [
     publishers: ['Thunder Lotus'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lcc.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Citybuilder',
+      'Side Scroller',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'The Forgotten City',
     platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
     genres: 'Adventure',
@@ -8023,9 +5697,10 @@ export const gameDetails: Game[] = [
     publishers: ['Dear Villagers', 'Plug In Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scfu6c.jpg',
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Moving Out',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'Simulation, Strategy',
@@ -8036,65 +5711,16 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5yqt.jpg',
-    score: '100',
-  },
-  {
-    name: 'Bleeding Edge',
-    platforms: 'PC, XB1, XBXS',
-    genres: 'Action',
-    releaseDate: 'Mar 24',
-    releaseYear: 2020,
-    reviewRank: 85,
-    developers: ['Ninja Theory'],
-    publishers: ['Ninja Theory', 'Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6r61.jpg',
-    score: '100',
-  },
-  {
-    name: 'PGA Tour 2K21',
-    platforms: 'PC, PS4, XB1, XBXS, PS5, Switch',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Aug 21',
-    releaseYear: 2020,
-    reviewRank: 86,
-    developers: ['Illogika Studios', 'HB Studios'],
-    publishers: ['2K'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8aj8.jpg',
-    score: '100',
-  },
-  {
-    name: 'Project CARS 3',
-    platforms: 'PS4, XB1, PC, XBXS, PS5',
-    genres: 'Simulation, Sports, Racing',
-    releaseDate: 'Aug 25',
-    releaseYear: 2020,
-    reviewRank: 87,
-    developers: ['Slightly Mad Studios'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j5v.jpg',
-    score: '100',
-  },
-  {
-    name: 'Captain Tsubasa: Rise of New Champions',
-    platforms: 'PC, Switch, PS4',
-    genres: 'Sports, Arcade',
-    releaseDate: 'Aug 27',
-    releaseYear: 2020,
-    reviewRank: 88,
-    developers: ['Tamsoft'],
-    publishers: [
-      'Bandai Namco Entertainment',
-      'Bandai Namco Entertainment America',
-      'Bandai Namco Entertainment Europe',
+    details: [
+      'Funny',
+      'Side Scroller',
+      'Isometric',
+      'Action',
+      'Puzzle elements',
     ],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7kh4.jpg',
-    score: '100',
   },
   {
+    score: '100',
     name: 'Hellpoint',
     platforms: 'PS4, XB1, PC, Switch, XBXS, PS5',
     genres: 'Action, RPG',
@@ -8105,9 +5731,16 @@ export const gameDetails: Game[] = [
     publishers: ['tinyBuild'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bo2vc35dxbxiuhmibpzg.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sci-fi',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Sakuna: Of Rice and Ruin',
     platforms: 'Switch, PC, PS4, PS5',
     genres: 'Action, Platformer, Simulation',
@@ -8118,9 +5751,17 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bvzk7zukw7bpwkjzppnd.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Platformer',
+      'Brawler',
+      'Side Scroller',
+      'Sideview',
+      'Thirdperson',
+    ],
   },
   {
+    score: '100',
     name: 'Pumpkin Jack',
     platforms: 'XB1, Switch, PC, PS4, XBXS, PS5',
     genres: 'Action, Platformer',
@@ -8131,45 +5772,10 @@ export const gameDetails: Game[] = [
     publishers: ['Headup Games', 'Thunderful', 'Beep Japan'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7p6q.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'Monster Hunter Rise',
-    platforms: 'Switch, PC, PS5, PS4, XBXS, XB1',
-    genres: 'RPG, Action',
-    releaseDate: 'Mar 26',
-    releaseYear: 2021,
-    reviewRank: 1,
-    developers: ['Capcom Development Division 2'],
-    publishers: ['Capcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ky2.jpg',
-    hltb: {
-      main: 23,
-      extra: 82.5,
-      completionist: 182,
-    },
     score: '100',
-  },
-  {
-    name: 'Biomutant',
-    platforms: 'PC, PS4, XB1, PS5, XBXS, Switch',
-    genres: 'RPG, Action',
-    releaseDate: 'May 25',
-    releaseYear: 2021,
-    reviewRank: 2,
-    developers: ['Experiment 101'],
-    publishers: ['THQ Nordic'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vlsjkoh7fyhynhkhyexh.jpg',
-    hltb: {
-      main: 13,
-      extra: 24.5,
-      completionist: 42.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Resident Evil Village',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
     genres: 'Action, Horror, First-Person Shooter',
@@ -8180,32 +5786,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8zrh.jpg',
-    hltb: {
-      main: 10,
-      extra: 13,
-      completionist: 38.5,
-    },
-    score: '100',
+    details: ['Horror', 'Shooter', 'Firstperson', 'Action', 'Puzzle elements'],
   },
   {
-    name: 'Deathloop',
-    platforms: 'PS5, PC, XBXS',
-    genres: 'Action, Adventure, First-Person Shooter',
-    releaseDate: 'Sep 14',
-    releaseYear: 2021,
-    reviewRank: 4,
-    developers: ['Arkane Studios'],
-    publishers: ['Bethesda Softworks'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdod5.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 24.5,
-      completionist: 36,
-    },
     score: '100',
-  },
-  {
     name: 'Ratchet & Clank: Rift Apart',
     platforms: 'PS5, PC',
     genres: 'Platformer, Action',
@@ -8216,14 +5800,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bit.jpg',
-    hltb: {
-      main: 11,
-      extra: 14.5,
-      completionist: 18,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Returnal',
     platforms: 'PS5, PC',
     genres: 'Action, Third-Person Shooter, Roguelike',
@@ -8234,14 +5820,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bj6.jpg',
-    hltb: {
-      main: 19,
-      extra: 30.5,
-      completionist: 64,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Shooter',
+      'Rogue-like',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'The Medium',
     platforms: 'XBXS, PC',
     genres: 'Adventure, Horror',
@@ -8252,33 +5840,16 @@ export const gameDetails: Game[] = [
     publishers: ['Bloober Team'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g3c.jpg',
-    hltb: {
-      main: 8,
-      extra: 9,
-      completionist: 10,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Stealth',
+      'Thirdperson',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Hitman 3',
-    platforms: 'Switch, PS4, XB1, Stadia, PS5, XBXS, PC',
-    genres: 'Action, Strategy',
-    releaseDate: 'Jan 20',
-    releaseYear: 2021,
-    reviewRank: 8,
-    developers: ['IO Interactive'],
-    publishers: ['IO Interactive'],
-    brightenImage: true,
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar793.jpg',
-    hltb: {
-      main: 8,
-      extra: 21.5,
-      completionist: 63,
-    },
     score: '100',
-  },
-  {
     name: 'Far Cry 6',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'First-Person Shooter, RPG',
@@ -8289,50 +5860,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8geu.jpg',
-    hltb: {
-      main: 24.5,
-      extra: 41.5,
-      completionist: 64,
-    },
-    score: '100',
+    details: ['Pirates', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
   },
   {
-    name: 'Forza Horizon 5',
-    platforms: 'PC, XB1, XBXS',
-    genres: 'Racing',
-    releaseDate: 'Nov 9',
-    releaseYear: 2021,
-    reviewRank: 11,
-    developers: ['Playground Games'],
-    publishers: ['Xbox Game Studios', 'Microsoft Corporation'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahho.jpg',
-    hltb: {
-      main: 21,
-      extra: 46,
-      completionist: 135,
-    },
     score: '100',
-  },
-  {
-    name: 'Halo Infinite',
-    platforms: 'PC, XB1, XBXS',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Dec 8',
-    releaseYear: 2021,
-    reviewRank: 12,
-    developers: ['343 Industries'],
-    publishers: ['Xbox Game Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/tlwczv6q5r6o4uuryxgt.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 19.5,
-      completionist: 29.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Little Nightmares II',
     platforms: 'PC, XBXS, PS5, XB1, PS4, Switch',
     genres: 'Adventure, Platformer',
@@ -8343,14 +5874,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wct.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 6.5,
-      completionist: 9,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Stealth',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Psychonauts 2',
     platforms: 'PC, XB1, XBXS, PS4',
     genres: 'Action, Adventure',
@@ -8361,14 +5895,16 @@ export const gameDetails: Game[] = [
     publishers: ['Double Fine Productions', 'Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g23.jpg',
-    hltb: {
-      main: 15,
-      extra: 19.5,
-      completionist: 26.5,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Life is Strange: True Colors',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Stadia, Switch',
     genres: 'Interactive Story',
@@ -8379,14 +5915,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc991b.jpg',
-    hltb: {
-      main: 10,
-      extra: 12,
-      completionist: 13,
-    },
-    score: '100',
+    details: ['Point+click', 'Adventure', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Battlefield 2042',
     platforms: 'PC, XB1, PS5, XBXS, PS4',
     genres: 'Action, Vehicle Combat, First-Person Shooter',
@@ -8397,32 +5929,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafye.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Stealth',
+      'Shooter',
+      'Behind-Overhead Perspective',
+      'Firstperson',
+      'Action',
+    ],
   },
   {
-    name: 'Call of Duty: Vanguard',
-    platforms: 'XB1, PS5, XBXS, PC, PS4',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Nov 5',
-    releaseYear: 2021,
-    reviewRank: 17,
-    developers: ['Sledgehammer Games'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctj9g.jpg',
-    hltb: {
-      main: 6,
-      extra: 9,
-      completionist: 28.5,
-    },
     score: '100',
-  },
-  {
     name: 'Metroid Dread',
     platforms: 'Switch',
     genres: 'Adventure, Action, Platformer',
@@ -8433,14 +5949,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaif8.jpg',
-    hltb: {
-      main: 9.5,
-      extra: 11.5,
-      completionist: 13.5,
-    },
-    score: '100',
+    details: [
+      'Shooter',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'It Takes Two',
     platforms: 'PC, XB1, PS5, XBXS, PS4, Switch',
     genres: 'Adventure',
@@ -8451,14 +5970,16 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cg5.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Sideview',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Outriders',
     platforms: 'PC, XB1, PS4, XBXS, PS5',
     genres: 'Action, RPG',
@@ -8469,14 +5990,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g13.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 36,
-      completionist: 63.5,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Scarlet Nexus',
     platforms: 'PC, PS5, XB1, PS5, PS4',
     genres: 'Action, RPG',
@@ -8487,14 +6004,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8j4a.jpg',
-    hltb: {
-      main: 25,
-      extra: 35.5,
-      completionist: 61,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Tales of Arise',
     platforms: 'PS5, PC, XBXS, XB1, PS4',
     genres: 'Action, RPG',
@@ -8505,32 +6018,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbspp.jpg',
-    hltb: {
-      main: 41,
-      extra: 56.5,
-      completionist: 74,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Anime',
+      'JRPG',
+      'ARPG',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Kena: Bridge of Spirits',
-    platforms: 'PS5, PS4, PC, PS5, XB1',
-    genres: 'Adventure, Action',
-    releaseDate: 'Sep 21',
-    releaseYear: 2021,
-    reviewRank: 23,
-    developers: ['Ember Lab'],
-    publishers: ['Ember Lab'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bjr.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 14.5,
-      completionist: 20.5,
-    },
     score: '100',
-  },
-  {
     name: "Death's Door",
     platforms: 'XB1, PC, XBXS, PS4, PS5, Switch',
     genres: 'Action, RPG',
@@ -8541,14 +6039,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96b0.jpg',
-    hltb: {
-      main: 9,
-      extra: 12,
-      completionist: 16,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Metroidvania',
+      'Hack+slash',
+      'ARPG',
+      'Side Scroller',
+      'Isometric',
+    ],
   },
   {
+    score: '100',
     name: 'Monster Hunter Stories 2: Wings of Ruin',
     platforms: 'Switch, PC, PS4, XB1',
     genres: 'Adventure, RPG',
@@ -8559,14 +6060,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kxw.jpg',
-    hltb: {
-      main: 41,
-      extra: 61,
-      completionist: 143,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Thirdperson', 'JRPG'],
   },
   {
+    score: '100',
     name: 'Back 4 Blood',
     platforms: 'PC, XB1, PS5, XBXS, PS4',
     genres: 'Action, First-Person Shooter',
@@ -8577,14 +6074,10 @@ export const gameDetails: Game[] = [
     publishers: ['Warner Bros. Interactive Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v6d.jpg',
-    hltb: {
-      main: 12,
-      extra: 23.5,
-      completionist: 99,
-    },
-    score: '100',
+    details: ['Horror', 'Survival', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Lost Judgment',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action',
@@ -8595,14 +6088,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9hue.jpg',
-    hltb: {
-      main: 24,
-      extra: 53.5,
-      completionist: 107,
-    },
-    score: '100',
+    details: ['RPG', 'Mystery', 'Crime', 'Fighting', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Persona 5 Strikers',
     platforms: 'PS4, Switch, PC',
     genres: 'Action, RPG',
@@ -8613,50 +6102,17 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7fgn.jpg',
-    hltb: {
-      main: 35,
-      extra: 46,
-      completionist: 71,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Anime',
+      'JRPG',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'New Pokémon Snap',
-    platforms: 'Switch',
-    genres: 'Adventure, Simulation',
-    releaseDate: 'Apr 30',
-    releaseYear: 2021,
-    reviewRank: 30,
-    developers: ['Bandai Namco Studios'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8c99.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 19,
-      completionist: 66.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Hot Wheels Unleashed',
-    platforms: 'PS4, PS5, PC, XB1, PS5, Switch',
-    genres: 'Racing',
-    releaseDate: 'Sep 30',
-    releaseYear: 2021,
-    reviewRank: 35,
-    developers: ['Milestone'],
-    publishers: ['Milestone'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdry5.jpg',
-    hltb: {
-      main: 10,
-      extra: 17,
-      completionist: 36,
-    },
-    score: '100',
-  },
-  {
     name: 'Shin Megami Tensei V',
     platforms: 'Switch',
     genres: 'RPG',
@@ -8667,14 +6123,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Atlus'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ppzlvufypgbvtmpylz0h.jpg',
-    hltb: {
-      main: 45.5,
-      extra: 69.5,
-      completionist: 97,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Thirdperson', 'Behind-Overhead Perspective'],
   },
   {
+    score: '100',
     name: 'The Ascent',
     platforms: 'PC, XB1, XBXS, PS4, PS5',
     genres: 'Action, RPG',
@@ -8685,14 +6137,10 @@ export const gameDetails: Game[] = [
     publishers: ['Curve Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ggz.jpg',
-    hltb: {
-      main: 12,
-      extra: 19,
-      completionist: 26,
-    },
-    score: '100',
+    details: ['RPG', 'Sci-fi', 'Shooter', 'ARPG', 'Side Scroller', 'Isometric'],
   },
   {
+    score: '100',
     name: 'Riders Republic',
     platforms: 'XB1, PS5, XBXS, Stadia, PC, PS4',
     genres: 'Action, Sports',
@@ -8703,14 +6151,15 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kqn.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 30,
-      completionist: 97.5,
-    },
-    score: '100',
+    details: [
+      'Sports',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+      'Sandbox',
+    ],
   },
   {
+    score: '100',
     name: 'Aliens: Fireteam Elite',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Action, Third-Person Shooter',
@@ -8721,40 +6170,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93ls.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 16,
-      completionist: 58.5,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
-    name: 'The Great Ace Attorney Chronicles',
-    platforms: 'PS4, Switch, PC',
-    genres: 'Adventure, Puzzle',
-    releaseDate: 'Jul 26',
-    releaseYear: 2021,
-    reviewRank: 41,
-    developers: ['Capcom'],
-    publishers: ['Capcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbtng.jpg',
     score: '100',
-  },
-  {
-    name: 'Mario Golf: Super Rush',
-    platforms: 'Switch',
-    genres: 'RPG, Sports',
-    releaseDate: 'Jun 25',
-    releaseYear: 2021,
-    reviewRank: 45,
-    developers: ['Camelot'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9288.jpg',
-    score: '100',
-  },
-  {
     name: 'NEO: The World Ends with You',
     platforms: 'PS4, Switch',
     genres: 'RPG',
@@ -8765,22 +6184,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsxln.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'ARPG', 'Isometric', 'Thirdperson'],
   },
   {
-    name: 'Chernobylite',
-    platforms: 'PC, PS4, PS5, XB1, Switch',
-    genres: 'Action, RPG, Horror',
-    releaseDate: 'Jul 28',
-    releaseYear: 2021,
-    reviewRank: 47,
-    developers: ['The Farm 51'],
-    publishers: ['All In! Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6d60.jpg',
     score: '100',
-  },
-  {
     name: 'Age of Empires IV',
     platforms: 'PC',
     genres: 'Strategy',
@@ -8791,9 +6198,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc98hn.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Isometric', 'RTS'],
   },
   {
+    score: '100',
     name: 'Werewolf: The Apocalypse - Earthblood',
     platforms: 'PC, XB1, PS5, PS4, XBXS',
     genres: 'Action',
@@ -8804,9 +6212,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bigben Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bfh.jpg',
-    score: '100',
+    details: ['RPG', 'Horror', 'Shooter', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Chorus',
     platforms: 'PC, XBXS, PS5, Stadia, XB1, PS4',
     genres: 'Action, Adventure',
@@ -8817,9 +6226,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87zr.jpg',
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Shooter', 'Space'],
   },
   {
+    score: '100',
     name: 'Atelier Ryza 2: Lost Legends & the Secret Fairy',
     platforms: 'PS5, Switch, PC, PS4',
     genres: 'RPG, Simulation',
@@ -8830,9 +6240,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8lpf.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Thirdperson', 'JRPG'],
   },
   {
+    score: '100',
     name: 'Mario Party Superstars',
     platforms: 'Switch',
     genres: 'Action',
@@ -8843,22 +6254,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai12.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Strategy',
+      'Party',
+      'Sideview',
+      'Isometric',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Super Monkey Ball: Banana Mania',
-    platforms: 'PS4, Switch, PC, XB1, XBXS, PS5',
-    genres: 'Platformer, Arcade',
-    releaseDate: 'Oct 5',
-    releaseYear: 2021,
-    reviewRank: 53,
-    developers: ['Ryu Ga Gotoku Studios'],
-    publishers: ['Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai0p.jpg',
     score: '100',
-  },
-  {
     name: 'Bright Memory: Infinite',
     platforms: 'PC, XBXS, PS5, Switch',
     genres: 'Action',
@@ -8869,22 +6275,10 @@ export const gameDetails: Game[] = [
     publishers: ['PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g8i.jpg',
-    score: '100',
+    details: ['Stealth', 'Shooter', 'Hack+slash', 'Firstperson', 'Action'],
   },
   {
-    name: 'Road 96',
-    platforms: 'PC, Switch, PS4, PS5, XB1, XBXS',
-    genres: 'Adventure, Puzzle',
-    releaseDate: 'Aug 16',
-    releaseYear: 2021,
-    reviewRank: 56,
-    developers: ['DigixArt'],
-    publishers: ['Ravenscourt'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v28.jpg',
     score: '100',
-  },
-  {
     name: 'FIFA 22',
     platforms: 'PC, XB1, XBXS, PS5, PS4, Switch',
     genres: 'Simulation, Sports',
@@ -8895,9 +6289,16 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scb1p5.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Samurai Warriors 5',
     platforms: 'Switch, PC, PS4, XB1, XBXS, PS5',
     genres: 'Action',
@@ -8908,9 +6309,16 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc926s.jpg',
-    score: '100',
+    details: [
+      'Anime',
+      'Warfare',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'WarioWare: Get It Together!',
     platforms: 'Switch',
     genres: 'Action',
@@ -8921,22 +6329,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahwo.jpg',
-    score: '100',
+    details: ['Sports', 'Funny', 'Party', 'Rhythm', 'Thirdperson', 'Cars'],
   },
   {
-    name: 'Chivalry 2',
-    platforms: 'PC, XB1, PS5, XBXS, PS4',
-    genres: 'Action, RPG',
-    releaseDate: 'Jun 8',
-    releaseYear: 2021,
-    reviewRank: 60,
-    developers: ['Torn Banner Studios'],
-    publishers: ['Tripwire Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctkp3.jpg',
     score: '100',
-  },
-  {
     name: 'Loop Hero',
     platforms: 'PC, Switch, XB1, XBXS',
     genres: 'RPG, Roguelike, Strategy',
@@ -8947,22 +6343,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital', 'Playdigious'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v15.jpg',
-    score: '100',
+    details: ['RPG', 'Point+click', 'Isometric', 'Rogue-like'],
   },
   {
-    name: 'Solar Ash',
-    platforms: 'PC, PS4, PS5',
-    genres: 'Action',
-    releaseDate: 'Dec 2',
-    releaseYear: 2021,
-    reviewRank: 64,
-    developers: ['Heart Machine'],
-    publishers: ['Annapurna Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bhc.jpg',
     score: '100',
-  },
-  {
     name: 'F1 2021',
     platforms: 'PC, PS5, XB1, PS5, PS4',
     genres: 'Simulation, Racing',
@@ -8973,9 +6357,15 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/arvdk.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: "Ghosts 'n Goblins Resurrection",
     platforms: 'Switch, PS4, XB1, PC',
     genres: 'Action, Platformer',
@@ -8986,22 +6376,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v31.jpg',
-    score: '100',
+    details: ['Shooter', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
-    name: 'Dungeons & Dragons: Dark Alliance',
-    platforms: 'XBXS, PS5, PC, PS4, XB1',
-    genres: 'Action, RPG',
-    releaseDate: 'Jun 22',
-    releaseYear: 2021,
-    reviewRank: 67,
-    developers: ['Tuque Games'],
-    publishers: ['Wizards of the Coast LLC'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96fk.jpg',
     score: '100',
-  },
-  {
     name: 'Evil Genius 2: World Domination',
     platforms: 'PC, PS4, PS5, XB1, XBXS',
     genres: 'Simulation, Strategy',
@@ -9012,9 +6390,10 @@ export const gameDetails: Game[] = [
     publishers: ['Rebellion Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lfk.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Funny', 'Crime'],
   },
   {
+    score: '100',
     name: 'Jurassic World Evolution 2',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -9025,9 +6404,16 @@ export const gameDetails: Game[] = [
     publishers: ['Frontier Developments'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagb5.jpg',
-    score: '100',
+    details: [
+      'Point+click',
+      'Management',
+      'Citybuilder',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Sable',
     platforms: 'XBXS, PC, XB1, PS5, PS4',
     genres: 'Adventure',
@@ -9038,22 +6424,16 @@ export const gameDetails: Game[] = [
     publishers: ['Raw Fury'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/pm3fmc3vysfckeia8un0.jpg',
-    score: '100',
+    details: [
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Cars',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Lost in Random',
-    platforms: 'PC, PS5, XBXS, Switch, XB1, PS4',
-    genres: 'Action',
-    releaseDate: 'Sep 10',
-    releaseYear: 2021,
-    reviewRank: 71,
-    developers: ['Zoink'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8cgc.jpg',
     score: '100',
-  },
-  {
     name: 'NBA 2K22',
     platforms: 'PC, XB1, XBXS, PS5, PS4',
     genres: 'Sports, Simulation',
@@ -9064,9 +6444,16 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scbtoz.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'The Artful Escape',
     platforms: 'XB1, XBXS, PC, PS4, Switch, PS5',
     genres: 'Action, Adventure',
@@ -9077,9 +6464,10 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g7q.jpg',
-    score: '100',
+    details: ['Platformer', 'Rhythm', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Nickelodeon All-Star Brawl',
     platforms: 'Switch, PC, XB1, XBXS, PS5, PS4',
     genres: 'Fighting, Action',
@@ -9090,9 +6478,10 @@ export const gameDetails: Game[] = [
     publishers: ['GameMill Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scba7t.jpg',
-    score: '100',
+    details: ['Platformer', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Eastward',
     platforms: 'Switch, PC, XB1',
     genres: 'Adventure, RPG',
@@ -9103,9 +6492,10 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wcz.jpg',
-    score: '100',
+    details: ['RPG', 'Side Scroller', 'Isometric', 'Action', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Story of Seasons: Pioneers of Olive Town',
     platforms: 'Switch, PC, PS4',
     genres: 'RPG, Simulation',
@@ -9116,9 +6506,10 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous Europe Ltd.', 'Marvelous'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8pd1.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Life-sim', 'Thirdperson', 'Simulation'],
   },
   {
+    score: '100',
     name: 'Olija',
     platforms: 'Switch, PC, PS4, XB1, XBXS',
     genres: 'Action, Platformer, Arcade',
@@ -9129,9 +6520,16 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8f2r.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Balan Wonderworld',
     platforms: 'Switch, PC, PS4, XB1, PS5, XBXS',
     genres: 'Action, Adventure',
@@ -9142,9 +6540,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g2q.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Cyber Shadow',
     platforms: 'PS4, Switch, XB1, PC, PS5, XBXS',
     genres: 'Action, Platformer',
@@ -9155,9 +6554,10 @@ export const gameDetails: Game[] = [
     publishers: ['Yacht Club Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6cp9.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'The Gunk',
     platforms: 'PC, XBXS, XB1',
     genres: 'Action',
@@ -9168,9 +6568,15 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scer83.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Shooter',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Tormented Souls',
     platforms: 'XBXS, PS5, PC, PS4, Switch, XB1',
     genres: 'Horror',
@@ -9181,9 +6587,10 @@ export const gameDetails: Game[] = [
     publishers: ['PQube'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc92zx.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Oddworld: Soulstorm',
     platforms: 'PS4, XB1, PC, PS5, XBXS',
     genres: 'Platformer',
@@ -9194,9 +6601,17 @@ export const gameDetails: Game[] = [
     publishers: ['Oddworld Inhabitants'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schu0q.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sci-fi',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'F.I.S.T.: Forged In Shadow Torch',
     platforms: 'PS5, PS4, PC, Switch, XBXS',
     genres: 'Action, Adventure, RPG, Simulation, Sports',
@@ -9207,22 +6622,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bilibili Game'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc68pb.jpg',
-    score: '100',
+    details: [
+      'Steampunk',
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'Necromunda: Hired Gun',
-    platforms: 'PS5, PC, XBXS, PS4, XB1',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Jun 1',
-    releaseYear: 2021,
-    reviewRank: 84,
-    developers: ['Streum On Studio'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc95cc.jpg',
     score: '100',
-  },
-  {
     name: "King's Bounty II",
     platforms: 'XB1, PS4, PC, Switch',
     genres: 'RPG, Strategy',
@@ -9233,9 +6643,10 @@ export const gameDetails: Game[] = [
     publishers: ['Prime Matter', '1C Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc712j.jpg',
-    score: '100',
+    details: ['RPG', 'Strategy', 'Point+click', 'Medieval'],
   },
   {
+    score: '100',
     name: 'Sniper Ghost Warrior Contracts 2',
     platforms: 'XBXS, PC, PS4, XB1, PS5',
     genres: 'First-Person Shooter, Action',
@@ -9246,9 +6657,10 @@ export const gameDetails: Game[] = [
     publishers: ['CI Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9oz9.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Stealth'],
   },
   {
+    score: '100',
     name: 'God of War Ragnarök',
     platforms: 'PS4, PS5, PC',
     genres: 'RPG, Action',
@@ -9259,14 +6671,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar3se9.jpg',
-    hltb: {
-      main: 26.5,
-      extra: 40.5,
-      completionist: 55.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Elden Ring',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, RPG',
@@ -9277,32 +6691,16 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scu5kw.jpg',
-    hltb: {
-      main: 60,
-      extra: 101,
-      completionist: 135,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: 'Ghostwire: Tokyo',
-    platforms: 'PC, PS5, XBXS',
-    genres: 'Action',
-    releaseDate: 'Mar 25',
-    releaseYear: 2022,
-    reviewRank: 3,
-    developers: ['Tango Gameworks'],
-    publishers: ['Bethesda Softworks'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6le1.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 23,
-      completionist: 42,
-    },
     score: '100',
-  },
-  {
     name: 'Stray',
     platforms: 'PS5, PS4, PC, XB1',
     genres: 'Adventure',
@@ -9313,32 +6711,17 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bii.jpg',
-    hltb: {
-      main: 5,
-      extra: 6.5,
-      completionist: 10.5,
-    },
-    score: '100',
+    details: [
+      'Sci-fi',
+      'Stealth',
+      'Platformer',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Horizon Forbidden West',
-    platforms: 'PS5, PS4, PC',
-    genres: 'RPG',
-    releaseDate: 'Feb 18',
-    releaseYear: 2022,
-    reviewRank: 5,
-    developers: ['Guerrilla Games'],
-    publishers: ['Sony'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar3sed.jpg',
-    hltb: {
-      main: 29,
-      extra: 62.5,
-      completionist: 90,
-    },
     score: '100',
-  },
-  {
     name: 'Dying Light 2: Stay Human',
     platforms: 'Switch, PC, XBXS, PS5, PS4, XB1',
     genres: 'Action, RPG',
@@ -9349,14 +6732,10 @@ export const gameDetails: Game[] = [
     publishers: ['Techland Publishing', 'Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctq3v.jpg',
-    hltb: {
-      main: 24.5,
-      extra: 49.5,
-      completionist: 103,
-    },
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Sandbox'],
   },
   {
+    score: '100',
     name: 'Sifu',
     platforms: 'PS4, PS5, PC, Switch, XB1, XBXS',
     genres: "Martial Arts, Beat 'em up, Action",
@@ -9367,14 +6746,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sloclap', 'Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9370.jpg',
-    hltb: {
-      main: 8,
-      extra: 14,
-      completionist: 22,
-    },
-    score: '100',
+    details: ['RPG', 'Rogue-like', 'Fighting', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Gotham Knights',
     platforms: 'PC, XBXS, PS5',
     genres: 'Action, RPG',
@@ -9385,14 +6760,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i4t.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 27.5,
-      completionist: 50,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Sandbox'],
   },
   {
+    score: '100',
     name: "Teenage Mutant Ninja Turtles: Shredder's Revenge",
     platforms: 'XBXS, PS5, XB1, Switch, PS4, PC',
     genres: 'Action, Fighting, Arcade',
@@ -9403,87 +6774,10 @@ export const gameDetails: Game[] = [
     publishers: ['DotEmu', 'Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc94kz.jpg',
-    hltb: {
-      main: 3,
-      extra: 4,
-      completionist: 20,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Brawler'],
   },
   {
-    name: 'Trek to Yomi',
-    platforms: 'XBXS, PS5, PS4, PC, XB1',
-    genres: 'Action',
-    releaseDate: 'May 5',
-    releaseYear: 2022,
-    reviewRank: 13,
-    developers: ['Leonard Menchiari'],
-    publishers: ['Devolver Digital'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagwj.jpg',
-    hltb: {
-      main: 5,
-      extra: 6,
-      completionist: 12.5,
-    },
     score: '100',
-  },
-  {
-    name: 'A Plague Tale: Requiem',
-    platforms: 'Switch, PC, XBXS, PS5',
-    genres: 'Action, Adventure',
-    brightenImage: true,
-    releaseDate: 'Oct 18',
-    releaseYear: 2022,
-    reviewRank: 14,
-    developers: ['Asobo Studio'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://cdn.mobygames.com/screenshots/18044361-a-plague-tale-requiem-playstation-5-in-darkness-the-light-is-you.jpg',
-    hltb: {
-      main: 17,
-      extra: 19.5,
-      completionist: 27.5,
-    },
-    score: '100',
-  },
-  {
-    name: 'The Callisto Protocol',
-    platforms: 'XBXS, PS5, PS4, XB1, PC',
-    genres: 'Horror, Third-Person Shooter',
-    releaseDate: 'Dec 2',
-    releaseYear: 2022,
-    reviewRank: 15,
-    developers: ['Striking Distance Studios'],
-    publishers: ['Krafton', 'Skybound Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schtud.jpg',
-    hltb: {
-      main: 10,
-      extra: 12,
-      completionist: 15.5,
-    },
-    score: '100',
-  },
-  {
-    name: 'The Quarry',
-    platforms: 'XBXS, PS5, PC, PS4, XB1',
-    genres: 'Adventure, Horror',
-    releaseDate: 'Jun 10',
-    releaseYear: 2022,
-    reviewRank: 17,
-    developers: ['Supermassive Games'],
-    publishers: ['2K Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg8yb.jpg',
-    hltb: {
-      main: 9,
-      extra: 11,
-      completionist: 34,
-    },
-    score: '100',
-  },
-  {
     name: "Tom Clancy's Rainbow Six Extraction",
     platforms: 'XB1, XBXS, PS5, PC, PS4',
     genres: 'Action, First-Person Shooter',
@@ -9494,14 +6788,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scai3v.jpg',
-    hltb: {
-      main: 13.5,
-      extra: 47.5,
-      completionist: 61,
-    },
-    score: '100',
+    details: ['Tactics-Shooter', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: "Tiny Tina's Wonderlands",
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -9513,47 +6803,10 @@ export const gameDetails: Game[] = [
     brightenImage: true,
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgpwf.jpg',
-    hltb: {
-      main: 16,
-      extra: 29,
-      completionist: 52,
-    },
-    score: '100',
+    details: ['RPG', 'Firstperson', 'ARPG', 'Shooter'],
   },
   {
-    name: 'Pokémon Legends: Arceus',
-    overrideMask: '******* [ ... ]',
-    platforms: 'Switch',
-    genres: 'RPG, Adventure',
-    releaseDate: 'Jan 28',
-    releaseYear: 2022,
-    reviewRank: 88,
-    developers: ['Game Freak'],
-    publishers: ['Nintendo', 'The Pokémon Company'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc93am.jpg',
     score: '100',
-  },
-  {
-    name: 'Pokémon Sun and Moon',
-    overrideMask: 'Pokémon [ ... ] and [ ... ]',
-    platforms: 'Nintendo 3DS',
-    genres: 'RPG, Turn-based Strategy',
-    releaseDate: 'Nov 17',
-    releaseYear: 2016,
-    reviewRank: 22,
-    developers: ['Game Freak'],
-    publishers: ['Nintendo', 'The Pokémon Company'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x8uwndhivems2itkspcn.jpg',
-    hltb: {
-      main: 33.5,
-      extra: 60,
-      completionist: 142,
-    },
-    score: '100',
-  },
-  {
     name: "Dragon's Dogma II",
     platforms: 'Nintendo 3DS',
     genres: 'RPG, Turn-based Strategy',
@@ -9564,14 +6817,16 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/x8uwndhivems2itkspcn.jpg',
-    hltb: {
-      main: 31,
-      extra: 56.5,
-      completionist: 93.5,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Animal Well',
     redactName: true,
     platforms: 'PS5, Switch, PC, XBXS',
@@ -9583,27 +6838,16 @@ export const gameDetails: Game[] = [
     publishers: ['Bigmode'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftts.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'Bayonetta 3',
-    platforms: 'Switch',
-    genres: 'Action',
-    releaseDate: 'Oct 28',
-    releaseYear: 2022,
-    reviewRank: 23,
-    developers: ['PlatinumGames'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdrtp.jpg',
-    hltb: {
-      main: 13,
-      extra: 18.5,
-      completionist: 47.5,
-    },
     score: '100',
-  },
-  {
     name: 'Cult of the Lamb',
     platforms: 'PC, PS5, XBXS, PS4, XB1, Switch',
     genres: 'Action, Strategy, Roguelike',
@@ -9614,32 +6858,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrh7.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20,
-      completionist: 29,
-    },
-    score: '100',
+    details: [
+      'Rogue-like',
+      'Citybuilder',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+      'Action',
+    ],
   },
   {
-    name: "Marvel's Midnight Suns",
-    platforms: 'XBXS, PS5, XB1, PS4, PC, Switch',
-    genres: 'Strategy, Adventure, RPG',
-    releaseDate: 'Dec 2',
-    releaseYear: 2022,
-    reviewRank: 26,
-    developers: ['Firaxis Games'],
-    publishers: ['2K Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccsgn.jpg',
-    hltb: {
-      main: 40.5,
-      extra: 65.5,
-      completionist: 97,
-    },
     score: '100',
-  },
-  {
     name: 'Sonic Frontiers',
     platforms: 'Switch, PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, Platformer',
@@ -9650,14 +6879,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf130.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 22,
-      completionist: 27,
-    },
-    score: '100',
+    details: [
+      'Sandbox',
+      'Platformer',
+      'Thirdperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Triangle Strategy',
     platforms: 'Switch, PC, PS5, XBXS',
     genres: 'RPG, Strategy',
@@ -9672,14 +6903,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdrwl.jpg',
-    hltb: {
-      main: 34.5,
-      extra: 49,
-      completionist: 105,
-    },
-    score: '100',
+    details: ['RPG', 'Isometric', 'Side Scroller', 'Tactics'],
   },
   {
+    score: '100',
     name: 'Stranger of Paradise: Final Fantasy Origin',
     platforms: 'XBXS, PC, PS5, XB1, PS4',
     genres: 'RPG',
@@ -9691,14 +6918,10 @@ export const gameDetails: Game[] = [
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahze.jpg',
     brightenImage: true,
-    hltb: {
-      main: 17.5,
-      extra: 29,
-      completionist: 50.5,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Xenoblade Chronicles 3',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -9709,14 +6932,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftr4.jpg',
-    hltb: {
-      main: 62,
-      extra: 102,
-      completionist: 174,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Sandbox', 'JRPG', 'ARPG', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'OlliOlli World',
     platforms: 'XBXS, PS5, XB1, PS4, Switch, PC',
     genres: 'Action, Platformer, Arcade',
@@ -9727,14 +6946,10 @@ export const gameDetails: Game[] = [
     publishers: ['Take-Two Interactive', 'Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc999c.jpg',
-    hltb: {
-      main: 5.5,
-      extra: 12,
-      completionist: 56,
-    },
-    score: '100',
+    details: ['Sports', 'Platformer', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Pentiment',
     platforms: 'PC, XBXS, XB1, PS5, Switch, PS4',
     genres: 'Adventure',
@@ -9745,32 +6960,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sclwtu.jpg',
-    hltb: {
-      main: 15,
-      extra: 19.5,
-      completionist: 26,
-    },
-    score: '100',
+    details: ['Point+click', 'Mystery', 'Medieval', 'Thirdperson', 'Adventure'],
   },
   {
-    name: 'Splatoon 3',
-    platforms: 'Switch',
-    genres: 'Action, Third-Person Shooter',
-    releaseDate: 'Sep 9',
-    releaseYear: 2022,
-    reviewRank: 35,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9285.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 14,
-      completionist: 18.5,
-    },
     score: '100',
-  },
-  {
     name: 'Evil West',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action, Third-Person Shooter',
@@ -9781,14 +6974,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v27.jpg',
-    hltb: {
-      main: 11,
-      extra: 13.5,
-      completionist: 22.5,
-    },
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Hack+slash', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Tunic',
     platforms: 'PC, XBXS, XB1, PS4, PS5, Switch',
     genres: 'Action, RPG',
@@ -9799,45 +6988,16 @@ export const gameDetails: Game[] = [
     publishers: ['Finji'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8ggm.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 16.5,
-      completionist: 21.5,
-    },
-    score: '100',
+    details: [
+      'Metroidvania',
+      'Side Scroller',
+      'Isometric',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Sniper Elite 5',
-    platforms: 'PC, XBXS, PS5, PS4, XB1',
-    genres: 'First-Person Shooter',
-    releaseDate: 'May 26',
-    releaseYear: 2022,
-    reviewRank: 40,
-    developers: ['Rebellion Developments'],
-    publishers: ['Rebellion Developments'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf29o.jpg',
-    hltb: {
-      main: 11,
-      extra: 20.5,
-      completionist: 41.5,
-    },
     score: '100',
-  },
-  {
-    name: 'WWE 2K22',
-    platforms: 'XBXS, PS5, XB1, PS4, PC',
-    genres: 'Sports',
-    releaseDate: 'Mar 8',
-    releaseYear: 2022,
-    reviewRank: 41,
-    developers: ['Visual Concepts'],
-    publishers: ['2K Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf7i4.jpg',
-    score: '100',
-  },
-  {
     name: 'Weird West',
     platforms: 'XB1, PS4, PC, PS5, XBXS',
     genres: 'Action, RPG',
@@ -9848,9 +7008,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7fv9.jpg',
-    score: '100',
+    details: ['RPG', 'Shooter', 'Side Scroller', 'Isometric', 'Action'],
   },
   {
+    score: '100',
     name: 'Shadow Warrior 3',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action',
@@ -9861,49 +7022,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8eam.jpg',
-    score: '100',
+    details: ['RPG', 'Funny', 'Shooter', 'Firstperson', 'Action'],
   },
   {
-    name: 'Mario Strikers: Battle League',
-    platforms: 'Switch',
-    genres: 'Sports, Arcade',
-    releaseDate: 'Jun 10',
-    releaseYear: 2022,
-    reviewRank: 44,
-    developers: ['Next Level Games'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftns.jpg',
     score: '100',
-  },
-  {
-    name: 'Nintendo Switch Sports',
-    platforms: 'Switch',
-    overrideMask: '******** ****** S*****',
-    genres: 'Sports',
-    releaseDate: 'Apr 29',
-    releaseYear: 2022,
-    reviewRank: 45,
-    developers: ['Nintendo'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftny.jpg',
-    score: '100',
-  },
-  {
-    name: 'The King of Fighters XV',
-    platforms: 'PC, XBXS, PS5, PS4, XB1',
-    genres: 'Fighting',
-    releaseDate: 'Feb 17',
-    releaseYear: 2022,
-    reviewRank: 46,
-    developers: ['SNK'],
-    publishers: ['SNK', 'Koch Media', 'Prime Matter'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrga.jpg',
-    score: '100',
-  },
-  {
     name: 'Fire Emblem Warriors: Three Hopes',
     platforms: 'Switch',
     genres: 'Action, RPG',
@@ -9914,9 +7036,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo', 'Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scftus.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Thirdperson', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Rollerdrome',
     platforms: 'PS4, PC, PS5, XBXS',
     genres: 'Action',
@@ -9927,22 +7050,10 @@ export const gameDetails: Game[] = [
     publishers: ['Private Division'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch7l1.jpg',
-    score: '100',
+    details: ['Sports', 'Action', 'Behind-Overhead Perspective', 'Shooter'],
   },
   {
-    name: 'Steelrising',
-    platforms: 'XBXS, PS5, PC',
-    genres: 'RPG',
-    releaseDate: 'Sep 8',
-    releaseYear: 2022,
-    reviewRank: 53,
-    developers: ['Spiders'],
-    publishers: ['Nacon'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch4u0.jpg',
     score: '100',
-  },
-  {
     name: 'Return to Monkey Island',
     platforms: 'Switch, PC, PS5, XB1, XBXS',
     genres: 'Puzzle, Adventure',
@@ -9953,9 +7064,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgy3v.jpg',
-    score: '100',
+    details: ['Point+click', 'Funny', 'Pirates', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Two Point Campus',
     platforms: 'Switch, PC, XBXS, PS5, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -9966,9 +7078,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sca7c5.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Funny', 'Management'],
   },
   {
+    score: '100',
     name: 'As Dusk Falls',
     platforms: 'XBXS, PC, XB1, PS5, PS4',
     genres: 'Art, Interactive Story',
@@ -9979,9 +7092,10 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scheuw.jpg',
-    score: '100',
+    details: ['Adventure', 'Thirdperson', 'Visual Novel', 'Crime'],
   },
   {
+    score: '100',
     name: 'Thymesia',
     platforms: 'PC, PS5, XBXS, Switch, XB1, PS4',
     genres: 'Action, RPG',
@@ -9992,9 +7106,10 @@ export const gameDetails: Game[] = [
     publishers: ['Team17'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc96g4.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Scorn',
     platforms: 'XB1, PC, XBXS',
     genres: 'Adventure, Horror, Action',
@@ -10005,9 +7120,10 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive', 'Ebb Software'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ezq5wfc1nj3jmiyhdvu4.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Shooter', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Metal: Hellsinger',
     platforms: 'XBXS, PS5, PC, PS4, XB1',
     genres: 'First-Person Shooter',
@@ -10018,9 +7134,10 @@ export const gameDetails: Game[] = [
     publishers: ['Level Infinite', 'Funcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bfm.jpg',
-    score: '100',
+    details: ['Action', 'Firstperson', 'Rhythm', 'Shooter'],
   },
   {
+    score: '100',
     name: 'Sonic Origins',
     platforms: 'XBXS, PS5, Switch, PS4, XB1, PC',
     genres: 'Action, Platformer',
@@ -10031,9 +7148,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schl6y.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'High on Life',
     platforms: 'PC, XBXS, XB1',
     genres: 'First-Person Shooter, Action',
@@ -10044,9 +7162,10 @@ export const gameDetails: Game[] = [
     publishers: ['Squanch Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdmm.jpg',
-    score: '100',
+    details: ['Funny', 'Action', 'Firstperson', 'Shooter'],
   },
   {
+    score: '100',
     name: 'NBA 2K23',
     platforms: 'PS5, Switch, XBXS, XB1, PS4, PC',
     genres: 'Sports',
@@ -10057,9 +7176,16 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn8pv.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'F1 22',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Sports, Racing, Simulation',
@@ -10070,9 +7196,15 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgpe6.jpg',
-    score: '100',
+    details: [
+      'Cars',
+      'Simulation',
+      'Firstperson',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Eiyuden Chronicle: Rising',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Adventure, RPG',
@@ -10083,22 +7215,10 @@ export const gameDetails: Game[] = [
     publishers: ['505 Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahjz.jpg',
-    score: '100',
+    details: ['RPG', 'ARPG', 'Side Scroller', 'Sideview', 'Puzzle elements'],
   },
   {
-    name: 'Kao the Kangaroo',
-    platforms: 'PC, Switch, PS5, XBXS, PS4, XB1',
-    genres: 'Action, Platformer, Arcade',
-    releaseDate: 'May 27',
-    releaseYear: 2022,
-    reviewRank: 67,
-    developers: ['Tate Interactive'],
-    publishers: ['Titus Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqmeqweuvwdkefsx8qg4.jpg',
     score: '100',
-  },
-  {
     name: 'New Tales from the Borderlands',
     platforms: 'Switch, PC, XBXS, PS5, PS4',
     genres: 'Action, Adventure',
@@ -10109,9 +7229,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sciibf.jpg',
-    score: '100',
+    details: ['Funny', 'Adventure', 'Thirdperson', 'Sci-fi'],
   },
   {
+    score: '100',
     name: 'FIFA 23',
     platforms: 'PC, PS5, XBXS, XB1, PS4, Switch',
     genres: 'Sports, Simulation',
@@ -10122,9 +7243,16 @@ export const gameDetails: Game[] = [
     publishers: ['EA Sports'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sci00g.jpg',
-    score: '100',
+    details: [
+      'Sports',
+      'Management',
+      'Side Scroller',
+      'Isometric',
+      'Simulation',
+    ],
   },
   {
+    score: '100',
     name: 'Neon White',
     platforms: 'Switch, PC, PS4, PS5, XB1, XBXS',
     genres: 'Action',
@@ -10135,27 +7263,10 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9277.jpg',
-    hltb: {
-      main: 10.5,
-      extra: 18.5,
-      completionist: 24.5,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Platformer', 'Shooter'],
   },
   {
-    name: 'Windjammers 2',
-    platforms: 'Switch, PC, XBXS, PS5, PS4, XB1, Stadia',
-    genres: 'Sports, Arcade',
-    releaseDate: 'Jan 20',
-    releaseYear: 2022,
-    reviewRank: 71,
-    developers: ['DotEmu'],
-    publishers: ['DotEmu'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6wjt.jpg',
     score: '100',
-  },
-  {
     name: 'Capcom Fighting Collection',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Arcade, Fighting',
@@ -10166,48 +7277,16 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm3ia.jpg',
-    score: '100',
+    details: [
+      'Fighting',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Warhammer 40,000: Darktide',
-    platforms: 'PC, XBXS, PS5',
-    genres: 'Action, Strategy',
-    releaseDate: 'Nov 30',
-    releaseYear: 2022,
-    reviewRank: 73,
-    developers: ['Fatshark'],
-    publishers: ['Fatshark'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g3o.jpg',
     score: '100',
-  },
-  {
-    name: 'Soulstice',
-    platforms: 'XBXS, PS5, PC, PS4',
-    genres: 'Action',
-    releaseDate: 'Sep 20',
-    releaseYear: 2022,
-    reviewRank: 77,
-    developers: ['Reply Game Studio'],
-    publishers: ['Modus Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahi3.jpg',
-    score: '100',
-  },
-  {
-    name: 'Gungrave G.O.R.E',
-    platforms: 'PC, PS5, PS4, XB1, XBXS',
-    genres: 'Action, Adventure',
-    releaseDate: 'Nov 22',
-    releaseYear: 2022,
-    reviewRank: 78,
-    developers: ['Iggymob'],
-    publishers: ['Prime Matter'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schd2q.jpg',
-    score: '100',
-  },
-  {
     name: 'Rune Factory 5',
     platforms: 'Switch, PC',
     genres: 'RPG',
@@ -10223,35 +7302,17 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kx9.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Anime',
+      'Management',
+      'ARPG',
+      'Thirdperson',
+      'Simulation',
+    ],
   },
   {
-    name: 'Somerville',
-    platforms: 'PC, XBXS, XB1, PS4, PS5',
-    genres: 'Puzzle, Platformer',
-    releaseDate: 'Nov 14',
-    releaseYear: 2022,
-    reviewRank: 81,
-    developers: ['Jumpship'],
-    publishers: ['Jumpship'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahj3.jpg',
     score: '100',
-  },
-  {
-    name: 'Overwatch 2',
-    platforms: 'PC, XBXS, PS5, XB1, PS4, Switch',
-    genres: 'First-Person Shooter, Action',
-    releaseDate: 'Oct 4',
-    releaseYear: 2022,
-    reviewRank: 82,
-    developers: ['Blizzard Entertainment'],
-    publishers: ['Blizzard Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc78ey.jpg',
-    score: '100',
-  },
-  {
     name: 'LEGO Bricktales',
     platforms: 'XBXS, PS5, XB1, PS4, Switch, PC',
     genres: 'Puzzle, Simulation',
@@ -10262,9 +7323,16 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg9c6.jpg',
-    score: '100',
+    details: [
+      'Point+click',
+      'Citybuilder',
+      'Isometric',
+      'Simulation',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Monark',
     platforms: 'Switch, PS5, PS4, PC',
     genres: 'RPG',
@@ -10275,35 +7343,10 @@ export const gameDetails: Game[] = [
     publishers: ['FuRyu', 'Clouded Leopard Entertainment Inc.', 'NIS America'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafvh.jpg',
-    score: '100',
+    details: ['RPG', 'Strategy', 'Anime', 'Tactics'],
   },
   {
-    name: 'Rogue Legacy 2',
-    platforms: 'XBXS, XB1, PC, Switch, PS4, PS5',
-    genres: 'Roguelike, Action',
-    releaseDate: 'Apr 28',
-    releaseYear: 2022,
-    reviewRank: 89,
-    developers: ['Cellar Door Games'],
-    publishers: ['Cellar Door Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgqxk.jpg',
     score: '100',
-  },
-  {
-    name: 'Total War: Warhammer III',
-    platforms: 'PC',
-    genres: 'Strategy',
-    releaseDate: 'Feb 17',
-    releaseYear: 2022,
-    reviewRank: 90,
-    developers: ['The Creative Assembly'],
-    publishers: ['Sega', 'Feral Interactive'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scczp7.jpg',
-    score: '100',
-  },
-  {
     name: 'V Rising',
     platforms: 'PC, PS5',
     genres: 'Survival, Action, Adventure',
@@ -10314,9 +7357,10 @@ export const gameDetails: Game[] = [
     publishers: ['Stunlock Studios', 'Tencent Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9o94.jpg',
-    score: '100',
+    details: ['RPG', 'Action', 'Isometric', 'Sandbox'],
   },
   {
+    score: '100',
     name: 'The DioField Chronicle',
     platforms: 'XBXS, PS5, PS4, Switch, XB1, PC',
     genres: 'Strategy, RPG',
@@ -10327,27 +7371,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg83z.jpg',
-    score: '100',
+    details: ['RPG', 'Strategy', 'Anime', 'Medieval'],
   },
   {
-    name: "Marvel's Spider-Man 2",
-    platforms: 'PS5, PC',
-    genres: 'RPG, Action',
-    releaseDate: 'Oct 20',
-    releaseYear: 2023,
-    reviewRank: 2,
-    developers: ['Insomniac Games'],
-    publishers: ['Sony', 'PlayStation Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar2d8r.jpg',
-    hltb: {
-      main: 17,
-      extra: 23.5,
-      completionist: 28.5,
-    },
     score: '100',
-  },
-  {
     name: 'Final Fantasy XVI',
     platforms: 'PS5, PC',
     genres: 'Action, RPG',
@@ -10358,14 +7385,16 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kvu.jpg',
-    hltb: {
-      main: 38,
-      extra: 59,
-      completionist: 82,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Anime',
+      'Medieval',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Starfield',
     platforms: 'PC, XBXS',
     genres: 'RPG, Sci-fi',
@@ -10376,32 +7405,17 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmlzj.jpg',
-    hltb: {
-      main: 23.5,
-      extra: 74.5,
-      completionist: 148,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Space',
+      'Shooter',
+      'Sandbox',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
-    name: "Assassin's Creed Mirage",
-    platforms: 'PS5, XBXS, PC, XB1, PS4',
-    genres: 'Action, Adventure, RPG',
-    releaseDate: 'Oct 5',
-    releaseYear: 2023,
-    reviewRank: 5,
-    developers: ['Ubisoft Bordeaux'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipmr.jpg',
-    hltb: {
-      main: 16,
-      extra: 22.5,
-      completionist: 30.5,
-    },
     score: '100',
-  },
-  {
     name: 'Street Fighter 6',
     platforms: 'PC, XBXS, PS5, PS4',
     genres: 'Action, Fighting',
@@ -10412,32 +7426,16 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch7rx.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 34,
-      completionist: 70.5,
-    },
-    score: '100',
+    details: [
+      'Fighting',
+      'Side Scroller',
+      'Sideview',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
-    name: 'Star Wars Jedi: Survivor',
-    platforms: 'PS5, PC, XBXS',
-    genres: 'Action, RPG',
-    releaseDate: 'Apr 28',
-    releaseYear: 2023,
-    reviewRank: 7,
-    developers: ['Respawn Entertainment'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyqnc.jpg',
-    hltb: {
-      main: 20.5,
-      extra: 34,
-      completionist: 55.5,
-    },
     score: '100',
-  },
-  {
     name: 'Diablo IV',
     platforms: 'PS5, PS4, PC, XBXS, XB1',
     genres: 'Action, Adventure, RPG',
@@ -10448,14 +7446,10 @@ export const gameDetails: Game[] = [
     publishers: ['Blizzard Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc78f4.jpg',
-    hltb: {
-      main: 26,
-      extra: 49,
-      completionist: 190,
-    },
-    score: '100',
+    details: ['RPG', 'Point+click', 'Isometric', 'ARPG'],
   },
   {
+    score: '100',
     name: 'The Legend of Zelda: Tears of the Kingdom',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -10466,14 +7460,16 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scaoj9.jpg',
-    hltb: {
-      main: 59,
-      extra: 116,
-      completionist: 248,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Lies of P',
     platforms: 'PS5, PC, XBXS, XB1, PS4',
     genres: 'Action, Adventure',
@@ -10484,14 +7480,16 @@ export const gameDetails: Game[] = [
     publishers: ['Neowiz'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9oaa.jpg',
-    hltb: {
-      main: 28.5,
-      extra: 36,
-      completionist: 58,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Hack+slash',
+      'ARPG',
+      'Behind-Overhead Perspective',
+    ],
   },
   {
+    score: '100',
     name: 'Dead Island 2',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Horror',
@@ -10502,14 +7500,10 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii5s.jpg',
-    hltb: {
-      main: 16,
-      extra: 26.5,
-      completionist: 38.5,
-    },
-    score: '100',
+    details: ['RPG', 'Horror', 'Shooter', 'Firstperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Wo Long: Fallen Dynasty',
     platforms: 'XBXS, PS5, XB1, PS4, PC',
     genres: 'Action, Adventure, RPG',
@@ -10520,50 +7514,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdtm.jpg',
-    hltb: {
-      main: 25.5,
-      extra: 34.5,
-      completionist: 47,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
-    name: 'Forspoken',
-    platforms: 'PC, PS5, PS5',
-    genres: 'Action, RPG',
-    releaseDate: 'Jan 24',
-    releaseYear: 2023,
-    reviewRank: 16,
-    developers: ['Luminous Productions'],
-    publishers: ['Square Enix'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bj3.jpg',
-    hltb: {
-      main: 14,
-      extra: 26,
-      completionist: 57.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Armored Core VI: Fires of Rubicon',
-    platforms: 'PC, PS5, XBXS, XB1',
-    genres: 'Action, Vehicle Combat',
-    releaseDate: 'Aug 24',
-    releaseYear: 2023,
-    reviewRank: 17,
-    developers: ['FromSoftware'],
-    publishers: ['Bandai Namco Entertainment', 'FromSoftware'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scka8s.jpg',
-    hltb: {
-      main: 17.5,
-      extra: 28.5,
-      completionist: 50.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Mortal Kombat 1',
     platforms: 'PC, PS5, XBXS, Switch',
     genres: 'Fighting, Action',
@@ -10574,32 +7528,10 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmlie.jpg',
-    hltb: {
-      main: 7,
-      extra: 15.5,
-      completionist: 63.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
   },
   {
-    name: 'Avatar: Frontiers of Pandora',
-    platforms: 'PS5, XBXS, PC',
-    genres: 'Action',
-    releaseDate: 'Dec 7',
-    releaseYear: 2023,
-    reviewRank: 19,
-    developers: ['Massive Entertainment'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc106io.jpg',
-    hltb: {
-      main: 23,
-      extra: 42.5,
-      completionist: 83.5,
-    },
     score: '100',
-  },
-  {
     name: 'Super Mario Bros. Wonder',
     platforms: 'Switch',
     genres: 'Action, Platformer',
@@ -10610,32 +7542,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3er.jpg',
-    hltb: {
-      main: 10,
-      extra: 13.5,
-      completionist: 20,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'Redfall',
-    platforms: 'PC, XBXS',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'May 2',
-    releaseYear: 2023,
-    reviewRank: 29,
-    developers: ['Arkane Austin'],
-    publishers: ['Bethesda Softworks'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdmt.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 19.5,
-      completionist: 31,
-    },
     score: '100',
-  },
-  {
     name: 'Atomic Heart',
     platforms: 'PC, XBXS, PS5, XB1, PS4',
     genres: 'Action, First-Person Shooter',
@@ -10646,51 +7556,10 @@ export const gameDetails: Game[] = [
     publishers: ['Focus Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uttbnsozii22jvyscw0d.jpg',
-    hltb: {
-      main: 16,
-      extra: 25,
-      completionist: 36.5,
-    },
-    score: '100',
+    details: ['RPG', 'Horror', 'Shooter', 'Puzzle elements'],
   },
   {
-    name: 'Hi-Fi Rush',
-    searchTerms: ['hifi rush', 'hi fi rush', 'hi - fi rush'],
-    platforms: 'XBXS, PC, PS5',
-    genres: 'Action',
-    releaseDate: 'Jan 25',
-    releaseYear: 2023,
-    reviewRank: 23,
-    developers: ['Tango Gameworks'],
-    publishers: ['Bethesda Softworks', 'Krafton'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckrmg.jpg',
-    hltb: {
-      main: 11,
-      extra: 14,
-      completionist: 59.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Sea of Stars',
-    platforms: 'PC, Switch, XBXS, PS5, XB1, PS4',
-    genres: 'Adventure, RPG, Turn-Based Strategy',
-    releaseDate: 'Aug 29',
-    releaseYear: 2023,
-    reviewRank: 25,
-    developers: ['Sabotage'],
-    publishers: ['Sabotage', 'Playdigious'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf2ra.jpg',
-    hltb: {
-      main: 28,
-      extra: 35.5,
-      completionist: 43.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Fire Emblem Engage',
     platforms: 'Switch',
     genres: 'RPG, Turn-Based Strategy',
@@ -10701,50 +7570,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sciwxx.jpg',
-    hltb: {
-      main: 41,
-      extra: 65,
-      completionist: 91,
-    },
-    score: '100',
+    details: ['Strategy', 'Anime', 'Warfare', 'Tactics'],
   },
   {
-    name: 'Atlas Fallen',
-    platforms: 'PC, PS5, XBXS',
-    genres: 'Action, Adventure, RPG',
-    releaseDate: 'Aug 10',
-    releaseYear: 2023,
-    reviewRank: 29,
-    developers: ['Deck13 Interactive'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii4f.jpg',
-    hltb: {
-      main: 11,
-      extra: 19,
-      completionist: 28.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Immortals of Aveum',
-    platforms: 'XBXS, PS5, PC',
-    genres: 'Action',
-    releaseDate: 'Aug 22',
-    releaseYear: 2023,
-    reviewRank: 32,
-    developers: ['Ascendant Studios'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm43u.jpg',
-    hltb: {
-      main: 14.5,
-      extra: 20.5,
-      completionist: 31.5,
-    },
-    score: '100',
-  },
-  {
     name: 'Octopath Traveler II',
     platforms: 'PC, PS5, Switch, PS4, PS5',
     genres: 'RPG, Turn-Based Strategy, Strategy',
@@ -10755,32 +7584,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpk7u.jpg',
-    hltb: {
-      main: 60,
-      extra: 83,
-      completionist: 94.5,
-    },
-    score: '100',
+    details: ['RPG', 'Isometric', 'Sideview', 'JRPG'],
   },
   {
-    name: 'Like a Dragon Gaiden: The Man Who Erased His Name',
-    platforms: 'XBXS, PS5, PC, PS4, XB1',
-    genres: 'RPG',
-    releaseDate: 'Nov 9',
-    releaseYear: 2023,
-    reviewRank: 34,
-    developers: ['Ryu Ga Gotoku Studios'],
-    publishers: ['Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvd9.jpg',
-    hltb: {
-      main: 12.5,
-      extra: 21.5,
-      completionist: 33,
-    },
     score: '100',
-  },
-  {
     name: 'Remnant II',
     platforms: 'PC, PS5, XBXS',
     genres: 'Action, Adventure, RPG',
@@ -10791,32 +7598,10 @@ export const gameDetails: Game[] = [
     publishers: ['Gearbox Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scka81.jpg',
-    hltb: {
-      main: 18,
-      extra: 29,
-      completionist: 81.5,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Shooter'],
   },
   {
-    name: 'Persona 5 Tactica',
-    platforms: 'PS5, Switch, PC, XBXS, XB1, PS4',
-    genres: 'Simulation, Strategy, RPG',
-    releaseDate: 'Nov 17',
-    releaseYear: 2023,
-    reviewRank: 38,
-    developers: ['P Studio', 'Atlus'],
-    publishers: ['Atlus', 'Sega'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwt1.jpg',
-    hltb: {
-      main: 24,
-      extra: 30.5,
-      completionist: 39.5,
-    },
     score: '100',
-  },
-  {
     name: 'RoboCop: Rogue City',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action, First-Person Shooter, Adventure',
@@ -10827,32 +7612,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nacon'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scb0b5.jpg',
-    hltb: {
-      main: 12,
-      extra: 15.5,
-      completionist: 17,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Shooter', 'Sci-fi'],
   },
   {
-    name: 'One Piece Odyssey',
-    platforms: 'XBXS, PS5, PS4, PC, Switch',
-    genres: 'RPG',
-    releaseDate: 'Jan 12',
-    releaseYear: 2023,
-    reviewRank: 40,
-    developers: ['ILCA'],
-    publishers: ['Bandai Namco Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scknkv.jpg',
-    hltb: {
-      main: 34,
-      extra: 46,
-      completionist: 60,
-    },
     score: '100',
-  },
-  {
     name: 'Pikmin 4',
     platforms: 'Switch',
     genres: 'Adventure',
@@ -10863,9 +7626,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix20.jpg',
-    score: '100',
+    details: ['Strategy', 'Action', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'LEGO 2K Drive',
     platforms: 'PC, PS4, PS5, Switch, XBXS, XB1',
     genres: 'Racing, Sports',
@@ -10876,40 +7640,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sclsfi.jpg',
-    score: '100',
+    details: ['Action', 'Cars', 'Behind-Overhead Perspective', 'Sandbox'],
   },
   {
-    name: 'SpongeBob SquarePants: The Cosmic Shake',
-    platforms: 'XB1, PS4, PC, Switch',
-    genres: 'Action, Platformer, Adventure',
-    releaseDate: 'Jan 31',
-    releaseYear: 2023,
-    reviewRank: 38,
-    developers: ['Purple Lamp Studios'],
-    publishers: ['THQ Nordic'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdl3l.jpg',
-    hltb: {
-      main: 7,
-      extra: 9.5,
-      completionist: 14.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Exoprimal',
-    platforms: 'PS5, PS4, PC, XBXS, XB1',
-    genres: 'First-Person Shooter, Action',
-    releaseDate: 'Jul 14',
-    releaseYear: 2023,
-    reviewRank: 48,
-    developers: ['Capcom'],
-    publishers: ['Capcom'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scg849.jpg',
-    score: '100',
-  },
-  {
     name: 'The Lord of the Rings: Gollum',
     platforms: 'PC, XBXS, PS5, PS4, XB1, Switch',
     genres: 'Action, Adventure',
@@ -10920,9 +7654,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nacon', 'Daedalic Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc87r1.jpg',
-    score: '100',
+    details: ['Action', 'Behind-Overhead Perspective', 'Platformer', 'Stealth'],
   },
   {
+    score: '100',
     name: 'Dredge',
     platforms: 'PC, Switch, PS5, PS4, XBXS, XB1',
     genres: 'Adventure, RPG, Action',
@@ -10933,22 +7668,16 @@ export const gameDetails: Game[] = [
     publishers: ['Team17', 'Black Salt Games', 'Team17 Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccp16.jpg',
-    score: '100',
+    details: [
+      'RPG',
+      'Sandbox',
+      'Side Scroller',
+      'Simulation',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Aliens: Dark Descent',
-    platforms: 'PC, PS5, PS4, XBXS, XB1',
-    genres: 'Action, Strategy',
-    releaseDate: 'Jun 20',
-    releaseYear: 2023,
-    reviewRank: 51,
-    developers: ['Tindalos Interactive'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schclx.jpg',
     score: '100',
-  },
-  {
     name: 'Amnesia: The Bunker',
     platforms: 'PC, XBXS, XB1, PS4',
     genres: 'Horror, Survival, First-Person Shooter',
@@ -10959,9 +7688,10 @@ export const gameDetails: Game[] = [
     publishers: ['Frictional Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sck9j8.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Sonic Superstars',
     platforms: 'Switch, PS5, PS4, XBXS, XB1, PC',
     genres: 'Action, Platformer',
@@ -10972,35 +7702,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmval.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
-    name: 'WWE 2K23',
-    platforms: 'PC, PS4, PS5, XBXS, XB1',
-    genres: 'Sports, Simulation',
-    releaseDate: 'Mar 17',
-    releaseYear: 2023,
-    reviewRank: 54,
-    developers: ['Visual Concepts'],
-    publishers: ['2K Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckovg.jpg',
     score: '100',
-  },
-  {
-    name: 'EA Sports FC 24',
-    platforms: 'PS5, PC, XBXS, PS4, XB1, Switch',
-    genres: 'Simulation, Sports',
-    releaseDate: 'Sep 28',
-    releaseYear: 2023,
-    reviewRank: 55,
-    developers: ['EA Romania', 'EA Vancouver'],
-    publishers: ['EA Sports'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnbfr.jpg',
-    score: '100',
-  },
-  {
     name: 'Bayonetta Origins: Cereza and the Lost Demon',
     platforms: 'Switch',
     genres: 'Action, Puzzle, Adventure',
@@ -11011,9 +7716,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckac5.jpg',
-    score: '100',
+    details: ['Action', 'Adventure', 'Isometric', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Double Dragon Gaiden: Rise of the Dragons',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Arcade',
@@ -11024,22 +7730,10 @@ export const gameDetails: Game[] = [
     publishers: ['Modus Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmdw7.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Brawler'],
   },
   {
-    name: 'Viewfinder',
-    platforms: 'PS5, PC, PS4, XBXS',
-    genres: 'Adventure',
-    releaseDate: 'Jul 18',
-    releaseYear: 2023,
-    reviewRank: 61,
-    developers: ['Sad Owl Studios'],
-    publishers: ['Thunderful'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckabd.jpg',
     score: '100',
-  },
-  {
     name: 'Planet of Lana',
     platforms: 'XBXS, XB1, PC',
     genres: 'Adventure, Platformer, Puzzle',
@@ -11050,9 +7744,17 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scagbh.jpg',
-    score: '100',
+    details: [
+      'Stealth',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Oxenfree II: Lost Signals',
     platforms: 'PS5, PS4, Switch, PC',
     genres: 'RPG, Adventure',
@@ -11063,9 +7765,16 @@ export const gameDetails: Game[] = [
     publishers: ['Netflix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scm6ph.jpg',
-    score: '100',
+    details: [
+      'Horror',
+      'Side Scroller',
+      'Sideview',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Dave the Diver',
     platforms: 'PC, Switch, PS4, PS5',
     genres: 'RPG, Roguelike',
@@ -11076,14 +7785,16 @@ export const gameDetails: Game[] = [
     publishers: ['MINTROCKET'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schai1.jpg',
-    hltb: {
-      main: 25,
-      extra: 34,
-      completionist: 51,
-    },
-    score: '100',
+    details: [
+      'Management',
+      'Side Scroller',
+      'Sideview',
+      'Simulation',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Theatrhythm Final Bar Line',
     platforms: 'Switch, PS4',
     genres: 'Music, RPG',
@@ -11094,9 +7805,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0h.jpg',
-    score: '100',
+    details: ['Anime', 'Rhythm', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Master Detective Archives: Rain Code',
     platforms: 'Switch',
     genres: 'Action, Adventure',
@@ -11107,9 +7819,10 @@ export const gameDetails: Game[] = [
     publishers: ['Spike Chunsoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0s.jpg',
-    score: '100',
+    details: ['Anime', 'Mystery', 'JRPG', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Scars Above',
     platforms: 'PC, PS4, PS5, XBXS, XB1',
     genres: 'Third-Person Shooter, Action, Adventure',
@@ -11120,22 +7833,10 @@ export const gameDetails: Game[] = [
     publishers: ['Prime Matter'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scii8e.jpg',
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Shooter', 'Puzzle elements'],
   },
   {
-    name: 'Jusant',
-    platforms: 'XBXS, PS5, PC',
-    genres: 'Action, Adventure',
-    releaseDate: 'Oct 31',
-    releaseYear: 2023,
-    reviewRank: 71,
-    developers: ["DON'T NOD"],
-    publishers: ["DON'T NOD"],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwn6.jpg',
     score: '100',
-  },
-  {
     name: 'Disney Illusion Island',
     platforms: 'Switch',
     genres: 'Action, Platformer, Adventure',
@@ -11146,22 +7847,16 @@ export const gameDetails: Game[] = [
     publishers: ['Disney Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipjm.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
-    name: 'WarioWare: Move It!',
-    platforms: 'Switch',
-    genres: 'Action',
-    releaseDate: 'Nov 3',
-    releaseYear: 2023,
-    reviewRank: 74,
-    developers: ['Intelligent Systems'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3lt.jpg',
     score: '100',
-  },
-  {
     name: 'Ghost Trick: Phantom Detective',
     platforms: 'XBXS, PS5, XB1, Switch, PS4, PC',
     genres: 'Action, Adventure',
@@ -11172,22 +7867,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scl69k.jpg',
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Sideview', 'Puzzle elements'],
   },
   {
-    name: 'Darkest Dungeon II',
-    platforms: 'PC, PS5, PS4, XBXS, XB1, Switch',
-    genres: 'RPG, Strategy, Roguelike',
-    releaseDate: 'May 8',
-    releaseYear: 2023,
-    reviewRank: 76,
-    developers: ['Red Hook Studios'],
-    publishers: ['Red Hook Studios'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmgi5.jpg',
     score: '100',
-  },
-  {
     name: 'Detective Pikachu Returns',
     platforms: 'Switch',
     genres: 'Adventure',
@@ -11198,14 +7881,10 @@ export const gameDetails: Game[] = [
     publishers: ['The Pokémon Company', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3ds.jpg',
-    hltb: {
-      main: 12,
-      extra: 14,
-      completionist: 14.5,
-    },
-    score: '100',
+    details: ['Anime', 'Mystery', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Company of Heroes 3',
     platforms: 'PC',
     genres: 'Real-Time Strategy, Action',
@@ -11216,35 +7895,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrpl.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Warfare', 'RTS'],
   },
   {
-    name: 'Hot Wheels Unleashed 2: Turbocharged',
-    platforms: 'Switch, PS5, PC, XBXS, PS4, XB1',
-    genres: 'Racing, Arcade',
-    releaseDate: 'Oct 19',
-    releaseYear: 2023,
-    reviewRank: 79,
-    developers: ['Milestone'],
-    publishers: ['Milestone'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmr91.jpg',
     score: '100',
-  },
-  {
-    name: 'Fort Solis',
-    platforms: 'PS5, PC, XBXS',
-    genres: 'Action, Adventure',
-    releaseDate: 'Aug 22',
-    releaseYear: 2023,
-    reviewRank: 81,
-    developers: ['Fallen Leaf'],
-    publishers: ['Plug In Digital', 'Dear Villagers'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schcmo.jpg',
-    score: '100',
-  },
-  {
     name: 'Cocoon',
     platforms: 'XBXS, PS5, PC, XB1, PS4, Switch',
     genres: 'Puzzle, Adventure',
@@ -11255,9 +7909,10 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdn0.jpg',
-    score: '100',
+    details: ['Isometric', 'Side Scroller', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'The Texas Chain Saw Massacre',
     platforms: 'PC, PS5, PS4, XB1, XBXS',
     genres: 'Horror, Survival, Action, Adventure',
@@ -11268,9 +7923,10 @@ export const gameDetails: Game[] = [
     publishers: ['Gun Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scijsm.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Behind-Overhead Perspective', 'Stealth'],
   },
   {
+    score: '100',
     name: 'Atelier Ryza 3: Alchemist of the End & the Secret Key',
     platforms: 'Switch, PS5, PC, PS4',
     genres: 'RPG',
@@ -11281,35 +7937,10 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix0o.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'JRPG'],
   },
   {
-    name: 'Warhammer 40,000: Boltgun',
-    platforms: 'PS5, XBXS, PC, PS4, Switch, XB1',
-    genres: 'First-Person Shooter, Action, Arcade',
-    releaseDate: 'May 23',
-    releaseYear: 2023,
-    reviewRank: 87,
-    developers: ['Auroch Digital'],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sch75f.jpg',
     score: '100',
-  },
-  {
-    name: 'Stray Gods: The Roleplaying Musical',
-    platforms: 'PS5, PC, PS4, XB1, XBXS, Switch',
-    genres: 'Adventure, RPG',
-    releaseDate: 'Aug 10',
-    releaseYear: 2023,
-    reviewRank: 88,
-    developers: ['Summerfall Studios'],
-    publishers: ['Humble Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sci28i.jpg',
-    score: '100',
-  },
-  {
     name: 'The Outlast Trials',
     platforms: 'PC, PS4, PS5, XB1, XBXS',
     genres: 'Horror, Survival, Adventure',
@@ -11320,9 +7951,10 @@ export const gameDetails: Game[] = [
     publishers: ['Red Barrels'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8yyo.jpg',
-    score: '100',
+    details: ['Horror', 'Action', 'Firstperson', 'Stealth'],
   },
   {
+    score: '100',
     name: 'Fate/Samurai Remnant',
     platforms: 'PC, Switch, PS4, PS5',
     genres: 'Action, RPG',
@@ -11333,22 +7965,10 @@ export const gameDetails: Game[] = [
     publishers: ['Tecmo Koei Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scn3l3.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
-    name: 'Horizon Call of the Mountain',
-    platforms: 'PSVR, PS5',
-    genres: 'Action, Adventure',
-    releaseDate: 'Feb 22',
-    releaseYear: 2023,
-    reviewRank: 91,
-    developers: ['Firesprite Ltd'],
-    publishers: ['Sony'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scf49t.jpg',
     score: '100',
-  },
-  {
     name: 'Gunbrella',
     platforms: 'PC, Switch',
     genres: 'Action, Platformer, Adventure',
@@ -11359,9 +7979,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgz22.jpg',
-    score: '100',
+    details: [
+      'Steampunk',
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Adventure',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Indiana Jones and the Great Circle',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action, Adventure',
@@ -11372,32 +8000,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scq5sr.jpg',
-    hltb: {
-      main: 16,
-      extra: 25.5,
-      completionist: 39,
-    },
-    score: '100',
+    details: ['Action', 'Firstperson', 'Stealth', 'Puzzle elements'],
   },
   {
-    name: 'Suicide Squad: Kill The Justice League',
-    platforms: 'PC, PS5, XBXS',
-    genres: 'Action, Adventure',
-    releaseDate: 'Feb 2',
-    releaseYear: 2024,
-    reviewRank: 20,
-    developers: ['Rocksteady Studios'],
-    publishers: ['Warner Bros. Interactive Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i5b.jpg',
-    hltb: {
-      main: 12,
-      extra: 18.5,
-      completionist: 43.5,
-    },
     score: '100',
-  },
-  {
     name: 'Star Wars Outlaws',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action',
@@ -11408,14 +8014,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnqmo.jpg',
-    hltb: {
-      main: 18.5,
-      extra: 35.5,
-      completionist: 66.5,
-    },
-    score: '100',
+    details: ['RPG', 'Crime', 'Space', 'Shooter', 'Sandbox', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Prince of Persia: The Lost Crown',
     platforms: 'Switch, PS5, XB1, PS4, PC, XBXS',
     genres: 'Metroidvania, Action, Platformer',
@@ -11426,14 +8028,16 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvmx.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 24.5,
-      completionist: 31,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Metroidvania',
+      'Side Scroller',
+      'Sideview',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Astro Bot',
     platforms: 'PS5',
     genres: 'Platformer',
@@ -11444,14 +8048,10 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsiqf.jpg',
-    hltb: {
-      main: 11,
-      extra: 15,
-      completionist: 18.5,
-    },
-    score: '100',
+    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Metaphor: ReFantazio',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'RPG',
@@ -11462,14 +8062,10 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwmt.jpg',
-    hltb: {
-      main: 65,
-      extra: 88,
-      completionist: 108,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'JRPG'],
   },
   {
+    score: '100',
     name: 'Tekken 8',
     platforms: 'PC, PS5, XBXS',
     genres: 'Fighting',
@@ -11480,14 +8076,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scryt3.jpg',
-    hltb: {
-      main: 4,
-      extra: 11,
-      completionist: 17,
-    },
-    score: '100',
+    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
   },
   {
+    score: '100',
     name: 'Stellar Blade',
     platforms: 'PS5, PC',
     genres: 'Action, Adventure',
@@ -11498,14 +8090,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix66.jpg',
-    hltb: {
-      main: 22.5,
-      extra: 37.5,
-      completionist: 57,
-    },
-    score: '100',
+    details: [
+      'RPG',
+      'Shooter',
+      'Hack+slash',
+      'Behind-Overhead Perspective',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: "Senua's Saga: Hellblade II",
     platforms: 'XBXS, PC',
     genres: 'Action, Adventure',
@@ -11516,14 +8110,15 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88dc.jpg',
-    hltb: {
-      main: 7,
-      extra: 8,
-      completionist: 9.5,
-    },
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Hack+slash',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Silent Hill 2',
     platforms: 'PS5, PC',
     genres: 'Horror',
@@ -11534,68 +8129,10 @@ export const gameDetails: Game[] = [
     publishers: ['Konami'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scjfmh.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: ['Horror', 'Mystery', 'Thirdperson', 'Puzzle elements'],
   },
   {
-    name: 'Call of Duty: Black Ops 6',
-    platforms: 'PC, PS5, XBXS, XB1, PS4',
-    genres: 'Action, First-Person Shooter',
-    releaseDate: 'Oct 24',
-    releaseYear: 2024,
-    reviewRank: 15,
-    developers: ['Treyarch', 'Raven Software'],
-    publishers: ['Activision'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctoeb.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 11,
-      completionist: 39.5,
-    },
     score: '100',
-  },
-  {
-    name: 'Dragon Age: The Veilguard',
-    platforms: 'PC, XBXS, PS5',
-    genres: 'RPG, Adventure, Action',
-    releaseDate: 'Oct 31',
-    releaseYear: 2024,
-    reviewRank: 16,
-    developers: ['BioWare'],
-    publishers: ['Electronic Arts'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsvwb.jpg',
-    hltb: {
-      main: 28.5,
-      extra: 62.5,
-      completionist: 78.5,
-    },
-    score: '100',
-  },
-  {
-    name: 'Rise of the Ronin',
-    platforms: 'PS5, PC',
-    genres: 'Action, RPG',
-    releaseDate: 'Mar 22',
-    releaseYear: 2024,
-    reviewRank: 17,
-    developers: ['Team NINJA'],
-    publishers: ['Sony', 'Koei Tecmo Games Co.'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix68.jpg',
-    hltb: {
-      main: 23,
-      extra: 52.5,
-      completionist: 67.5,
-    },
-    score: '100',
-  },
-  {
     name: 'The Legend of Zelda: Echoes of Wisdom',
     platforms: 'Switch',
     genres: 'Action',
@@ -11606,14 +8143,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso8.jpg',
-    hltb: {
-      main: 21,
-      extra: 26.5,
-      completionist: 34.5,
-    },
-    score: '100',
+    details: ['RPG', 'Sandbox', 'Isometric', 'Action', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'The Plucky Squire',
     platforms: 'PC, PS5, Switch, XBXS',
     genres: 'Action, Adventure',
@@ -11624,32 +8157,17 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schcik.jpg',
-    hltb: {
-      main: 8.5,
-      extra: 9.5,
-      completionist: 10.5,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Side Scroller',
+      'Sideview',
+      'Isometric',
+      'Adventure',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Banishers: Ghosts of New Eden',
-    platforms: 'PC, PS5, XBXS',
-    genres: 'Action, Adventure, RPG',
-    releaseDate: 'Feb 13',
-    releaseYear: 2024,
-    reviewRank: 23,
-    developers: ["DON'T NOD"],
-    publishers: ['Focus Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scnd7r.jpg',
-    hltb: {
-      main: 23,
-      extra: 45.5,
-      completionist: 61.5,
-    },
     score: '100',
-  },
-  {
     name: 'Life is Strange: Double Exposure',
     platforms: 'PC, PS5, XBXS',
     genres: 'Adventure',
@@ -11660,14 +8178,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsodm.jpg',
-    hltb: {
-      main: 11,
-      extra: 14.5,
-      completionist: 20.5,
-    },
-    score: '100',
+    details: ['Point+click', 'Adventure', 'Thirdperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Sonic X Shadow Generations',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, 3D Platformer',
@@ -11678,14 +8192,16 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsobl.jpg',
-    hltb: {
-      main: 6.5,
-      extra: 11,
-      completionist: 29,
-    },
-    score: '100',
+    details: [
+      'Platformer',
+      'Sideview',
+      'Thirdperson',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Frostpunk 2',
     platforms: 'PC, PS5, XBXS',
     genres: 'Strategy, Simulation',
@@ -11696,14 +8212,10 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scs9qz.jpg',
-    hltb: {
-      main: 11.5,
-      extra: 21,
-      completionist: 65.5,
-    },
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Survival', 'Steampunk'],
   },
   {
+    score: '100',
     name: 'Mario & Luigi: Brothership',
     platforms: 'Switch',
     genres: 'Action, RPG',
@@ -11714,14 +8226,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scssot.jpg',
-    hltb: {
-      main: 41,
-      extra: 49,
-      completionist: 59,
-    },
-    score: '100',
+    details: ['RPG', 'Action', 'Thirdperson', 'Sideview'],
   },
   {
+    score: '100',
     name: 'Kunitsu-Gami: Path of the Goddess',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action, Strategy',
@@ -11732,14 +8240,17 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scr2mg.jpg',
-    hltb: {
-      main: 16.5,
-      extra: 21.5,
-      completionist: 34.5,
-    },
-    score: '100',
+    details: [
+      'Strategy',
+      'Towerdefense',
+      'Hack+slash',
+      'Side Scroller',
+      'Thirdperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Sand Land',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Action, RPG',
@@ -11750,14 +8261,10 @@ export const gameDetails: Game[] = [
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmvda.jpg',
-    hltb: {
-      main: 20,
-      extra: 37,
-      completionist: 57.5,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
+    score: '100',
     name: 'Granblue Fantasy: Relink',
     platforms: 'PS5, PC, PS4',
     genres: 'Adventure, Action, RPG',
@@ -11768,32 +8275,10 @@ export const gameDetails: Game[] = [
     publishers: ['PLAION', 'XSEED Games', 'Cygames'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/n19sh5zyco4aflfj91mf.jpg',
-    hltb: {
-      main: 15.5,
-      extra: 32.5,
-      completionist: 130,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
   },
   {
-    name: 'Princess Peach: Showtime!',
-    platforms: 'Switch',
-    genres: 'Action, Adventure',
-    releaseDate: 'Mar 22',
-    releaseYear: 2024,
-    reviewRank: 35,
-    developers: ['Good-Feel'],
-    publishers: ['Nintendo'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scoj90.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 9.5,
-      completionist: 18.5,
-    },
     score: '100',
-  },
-  {
     name: 'Tales of Kenzera: Zau',
     platforms: 'XBXS, PS5, PC, Switch',
     genres: 'Action, Puzzle, Adventure, Platformer',
@@ -11804,14 +8289,10 @@ export const gameDetails: Game[] = [
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpuyf.jpg',
-    hltb: {
-      main: 7.5,
-      extra: 10,
-      completionist: 10.5,
-    },
-    score: '100',
+    details: ['Action', 'Sideview', 'Metroidvania', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Black Myth: Wukong',
     platforms: 'PS5, PC, XBXS',
     genres: 'Action, RPG',
@@ -11822,14 +8303,10 @@ export const gameDetails: Game[] = [
     publishers: ['Game Science'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i9c.jpg',
-    hltb: {
-      main: 38,
-      extra: 48,
-      completionist: 67.5,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
   },
   {
+    score: '100',
     name: 'Super Mario Party Jamboree',
     platforms: 'Switch',
     genres: 'Strategy',
@@ -11840,14 +8317,17 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scssoc.jpg',
-    hltb: {
-      main: null,
-      extra: null,
-      completionist: null,
-    },
-    score: '100',
+    details: [
+      'Party',
+      'Sideview',
+      'Isometric',
+      'Behind-Overhead Perspective',
+      'Thirdperson',
+      'Action',
+    ],
   },
   {
+    score: '100',
     name: 'Skull and Bones',
     platforms: 'PS5, XBXS, PC',
     genres: 'Action, Adventure',
@@ -11858,14 +8338,10 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bz9npuhyu5v7t4mvq7mj.jpg',
-    hltb: {
-      main: 31,
-      extra: 37.5,
-      completionist: 47.5,
-    },
-    score: '100',
+    details: ['RPG', 'Pirates', 'Sandbox', 'Thirdperson', 'Action'],
   },
   {
+    score: '100',
     name: 'Paper Mario: The Thousand-Year Door',
     platforms: 'Switch',
     genres: 'Adventure, RPG',
@@ -11876,27 +8352,10 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scrjlc.jpg',
-    hltb: {
-      main: 31,
-      extra: 38,
-      completionist: 54.5,
-    },
-    score: '100',
+    details: ['RPG', 'Behind-Overhead Perspective', 'Sideview', 'JRPG'],
   },
   {
-    name: 'WWE 2K24',
-    platforms: 'XBXS, PS5, PC, PS4, XB1',
-    genres: 'Fighting, Sports, Simulation',
-    releaseDate: 'Mar 8',
-    releaseYear: 2024,
-    reviewRank: 41,
-    developers: ['Visual Concepts'],
-    publishers: ['2K'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqpk2.jpg',
     score: '100',
-  },
-  {
     name: 'Unicorn Overlord',
     platforms: 'XBXS, PS5, PS4, Switch',
     genres: 'Strategy, RPG',
@@ -11907,9 +8366,10 @@ export const gameDetails: Game[] = [
     publishers: ['Atlus', 'Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scojd5.jpg',
-    score: '100',
+    details: ['RPG', 'Isometric', 'Side Scroller', 'Tactics'],
   },
   {
+    score: '100',
     name: 'Visions of Mana',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Action, RPG',
@@ -11920,14 +8380,10 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpuxj.jpg',
-    hltb: {
-      main: 29,
-      extra: 43,
-      completionist: 53,
-    },
-    score: '100',
+    details: ['RPG', 'Anime', 'ARPG', 'Side Scroller', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Indika',
     platforms: 'PC, PS5, XBXS, Switch',
     genres: 'Adventure, Horror',
@@ -11938,14 +8394,16 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios', 'Merge Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccy12.jpg',
-    hltb: {
-      main: 4,
-      extra: 4.5,
-      completionist: 5,
-    },
-    score: '100',
+    details: [
+      'Horror',
+      'Thirdperson',
+      'Adventure',
+      'Action',
+      'Puzzle elements',
+    ],
   },
   {
+    score: '100',
     name: 'Apollo Justice: Ace Attorney Trilogy',
     platforms: 'PC, Switch, PS4, XB1',
     genres: 'Interactive Story, Adventure',
@@ -11956,9 +8414,10 @@ export const gameDetails: Game[] = [
     publishers: ['Capcom Co., LTD.'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmxjm.jpg',
-    score: '100',
+    details: ['Anime', 'Mystery', 'Firstperson', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'Still Wakes the Deep',
     platforms: 'XBXS, PS5, PC',
     genres: 'Horror',
@@ -11969,9 +8428,10 @@ export const gameDetails: Game[] = [
     publishers: ['Secret Mode'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmwnn.jpg',
-    score: '100',
+    details: ['Horror', 'Stealth', 'Firstperson', 'Action', 'Puzzle elements'],
   },
   {
+    score: '100',
     name: 'The Thaumaturge',
     platforms: 'PS5, XBXS, PC',
     genres: 'RPG, Adventure, Turn-Based Strategy',
@@ -11982,9 +8442,10 @@ export const gameDetails: Game[] = [
     publishers: ['11 bit studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scugfc.jpg',
-    score: '100',
+    details: ['RPG', 'Thirdperson', 'Isometric', 'Side Scroller'],
   },
   {
+    score: '100',
     name: 'Pepper Grinder',
     platforms: 'Switch, PC, PS4, PS5, XBXS, XB1',
     genres: 'Action, Adventure, Platformer',
@@ -11995,9 +8456,10 @@ export const gameDetails: Game[] = [
     publishers: ['Devolver Digital'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5qv5.jpg',
-    score: '100',
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Pacific Drive',
     platforms: 'PS5, PC, XBXS',
     genres: 'Adventure, Survival',
@@ -12008,9 +8470,10 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scix2h.jpg',
-    score: '100',
+    details: ['Survival', 'Firstperson', 'Simulation', 'Cars', 'Action'],
   },
   {
+    score: '100',
     name: 'Flintlock: The Siege of Dawn',
     platforms: 'XBXS, PS5, PC, XB1, PS4',
     genres: 'Action, RPG',
@@ -12021,9 +8484,10 @@ export const gameDetails: Game[] = [
     publishers: ['Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sche0v.jpg',
-    score: '100',
+    details: ['RPG', 'Sandbox', 'Hack+slash', 'ARPG', 'Thirdperson'],
   },
   {
+    score: '100',
     name: 'Outcast: A New Beginning',
     platforms: 'XBXS, PS5, PC',
     genres: 'Action, Adventure, Third-Person Shooter',
@@ -12034,22 +8498,15 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scdl2j.jpg',
-    score: '100',
+    details: [
+      'Action',
+      'Behind-Overhead Perspective',
+      'Shooter',
+      'Puzzle elements',
+    ],
   },
   {
-    name: 'Anger Foot',
-    platforms: 'PC',
-    genres: 'Action',
-    releaseDate: 'Jul 11',
-    releaseYear: 2024,
-    reviewRank: 61,
-    developers: ['Free Lives Games'],
-    publishers: ['Devolver Digital'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schciw.jpg',
     score: '100',
-  },
-  {
     name: 'Ys X: Nordics',
     platforms: 'PC, PS4, PS5, Switch',
     genres: 'Adventure, RPG, Action',
@@ -12064,22 +8521,10 @@ export const gameDetails: Game[] = [
     ],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sckc6k.jpg',
-    score: '100',
+    details: ['RPG', 'Anime', 'JRPG', 'ARPG', 'Thirdperson'],
   },
   {
-    name: 'Teenage Mutant Ninja Turtles: Splintered Fate',
-    platforms: 'Switch, PC, Switch 2',
-    genres: 'Action',
-    releaseDate: 'Jul 17',
-    releaseYear: 2024,
-    reviewRank: 64,
-    developers: ['Super Evil Megacorp'],
-    publishers: ['Viacom International'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sco2qw.jpg',
     score: '100',
-  },
-  {
     name: 'The Casting of Frank Stone',
     platforms: 'XBXS, PS5, PC',
     genres: 'Horror',
@@ -12090,22 +8535,15 @@ export const gameDetails: Game[] = [
     publishers: ['Behaviour Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpv05.jpg',
-    score: '100',
+    details: [
+      'Horror',
+      'Adventure',
+      'Behind-Overhead Perspective',
+      'Puzzle elements',
+    ],
   },
   {
-    name: "Another Crab's Treasure",
-    platforms: 'XBXS, PS5, Switch, PC, XB1',
-    genres: 'Action, Adventure, Platformer, RPG',
-    releaseDate: 'Apr 25',
-    releaseYear: 2024,
-    reviewRank: 66,
-    developers: ['Aggro Crab Games'],
-    publishers: ['Aggro Crab Games'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgz25.jpg',
     score: '100',
-  },
-  {
     name: 'SteamWorld Heist II',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Action, Adventure, Strategy',
@@ -12116,9 +8554,10 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scs086.jpg',
-    score: '100',
+    details: ['Strategy', 'RPG', 'Steampunk', 'Side Scroller', 'Sideview'],
   },
   {
+    score: '100',
     name: 'NBA 2K25',
     platforms: 'PC, PS4, XB1, PS5, XBXS, Switch',
     genres: 'Sports, Simulation',
@@ -12129,9 +8568,10 @@ export const gameDetails: Game[] = [
     publishers: ['2K'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsziw.jpg',
-    score: '100',
+    details: ['Sports', 'Simulation', 'Isometric', 'Management'],
   },
   {
+    score: '100',
     name: 'Crow Country',
     platforms: 'XBXS, PS5, PC, PS4',
     genres: 'Horror',
@@ -12142,22 +8582,10 @@ export const gameDetails: Game[] = [
     publishers: ['SFB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scp62z.jpg',
-    score: '100',
+    details: ['Horror', 'Shooter', 'Isometric', 'Action', 'Puzzle elements'],
   },
   {
-    name: 'The Rogue Prince of Persia',
-    platforms: 'PC',
-    genres: 'Action, Platformer',
-    releaseDate: 'May 27',
-    releaseYear: 2024,
-    reviewRank: 70,
-    developers: ['Evil Empire'],
-    publishers: ['Ubisoft Entertainment'],
-    screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scyoqg.jpg',
     score: '100',
-  },
-  {
     name: 'Nobody Wants to Die',
     platforms: 'XBXS, PS5, PC',
     genres: 'Adventure, Interactive Story, Puzzle',
@@ -12168,9 +8596,10 @@ export const gameDetails: Game[] = [
     publishers: ['PLAION'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scr3db.jpg',
-    score: '100',
+    details: ['Mystery', 'Adventure', 'Firstperson', 'Sci-fi'],
   },
   {
+    score: '100',
     name: 'Balatro',
     platforms: 'XBXS, PS5, Switch, PC, XB1, PS4',
     genres: 'Simulation, Strategy',
@@ -12181,9 +8610,10 @@ export const gameDetails: Game[] = [
     publishers: ['Playstack'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scmsev.jpg',
-    score: '100',
+    details: ['Strategy', 'Point+click', 'Cards', 'Rogue-like'],
   },
   {
+    score: '100',
     name: 'SCHiM',
     platforms: 'XBXS, PS5, Switch, PC, PS4, XB1',
     genres: 'Puzzle, Platformer',
@@ -12194,9 +8624,10 @@ export const gameDetails: Game[] = [
     publishers: ['Extra Nice', 'PLAYISM'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scscp1.jpg',
-    score: '100',
+    details: ['Action', 'Isometric', 'Side Scroller', 'Platformer'],
   },
   {
+    score: '100',
     name: 'Super Monkey Ball: Banana Rumble',
     platforms: 'Switch',
     genres: 'Platformer, Arcade',
@@ -12207,6 +8638,13 @@ export const gameDetails: Game[] = [
     publishers: ['Sega'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scqqvx.jpg',
-    score: '100',
+    details: [
+      'Platformer',
+      'Party',
+      'Arcade',
+      'Behind-Overhead Perspective',
+      'Action',
+      'Puzzle elements',
+    ],
   },
 ];

@@ -58,7 +58,7 @@ const GameTable: React.FC<GameTableProps> = ({
   // Deduction values for each field
   const fieldDeductions: { [key: string]: number } = {
     maskedTitle: 20,
-    meta: 40,
+    details: 40,
     publishers: 10,
     screenshot: 50,
   };
@@ -67,8 +67,8 @@ const GameTable: React.FC<GameTableProps> = ({
   const accordionItems: AccordionItem[] = dailyGames.map((game, idx) => {
     // List of revealable fields (conditional based on game properties)
     const revealFields = game.redactName
-      ? ['maskedTitle', 'publishers', 'screenshot', 'meta']
-      : ['publishers', 'screenshot', 'meta'];
+      ? ['maskedTitle', 'publishers', 'screenshot', 'details']
+      : ['publishers', 'screenshot', 'details'];
 
     const gameState = gameStates[game.name];
     const revealed = gameState?.revealed ?? {};

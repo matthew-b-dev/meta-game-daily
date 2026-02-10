@@ -10,7 +10,7 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 const getFieldDisplayName = (field: string): string => {
   const displayNames: { [key: string]: string } = {
     maskedTitle: 'MASKED (***) Title',
-    meta: 'Genre/Gameplay Details',
+    details: 'Game Details',
     publishers: 'Publisher(s)',
     screenshot: 'Screenshot',
   };
@@ -47,6 +47,8 @@ export const GameContent: React.FC<GameContentProps> = ({
   revealFields,
 }) => {
   const [showScreenshot, setShowScreenshot] = useState(false);
+  const [detailsHeight, setDetailsHeight] = useState<number | 'auto'>('auto');
+  const detailsRef = React.useRef<HTMLSpanElement>(null);
 
   // Sync external reveals (when parent marks game as revealed)
   useEffect(() => {
@@ -68,6 +70,22 @@ export const GameContent: React.FC<GameContentProps> = ({
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [revealedGames, game.name, revealedTitle]);
+
+  // Measure and set the height of details content when revealed
+  useEffect(() => {
+    const isDetailsRevealed =
+      revealed['details'] || correctGuesses.includes(game.name);
+    if (isDetailsRevealed && detailsRef.current) {
+      // Use setTimeout to ensure content is rendered before measuring
+      const timeout = setTimeout(() => {
+        if (detailsRef.current) {
+          const height = detailsRef.current.offsetHeight;
+          setDetailsHeight(height);
+        }
+      }, 0);
+      return () => clearTimeout(timeout);
+    }
+  }, [revealed, correctGuesses, game.name, game.details]);
 
   const handleReveal = (field: string) => {
     if (field === 'maskedTitle') {
@@ -182,7 +200,7 @@ export const GameContent: React.FC<GameContentProps> = ({
   return (
     <div className='flex flex-col gap-2 items-start'>
       {revealFields.map((field) =>
-        field === 'meta' ? (
+        field === 'details' ? (
           <div
             key={field}
             className={`w-full flex gap-2 relative overflow-visible min-h-[26px] ${
@@ -191,37 +209,48 @@ export const GameContent: React.FC<GameContentProps> = ({
                 : 'items-center'
             }`}
           >
-            {!correctGuesses.includes(game.name) && !revealed[field] ? (
-              <div className='flex items-center gap-2'>
-                <span className='font-semibold'>
-                  {getFieldDisplayName(field)}:
-                </span>
-                <button
-                  onClick={() => handleReveal(field)}
-                  className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+            <AnimatePresence mode='wait' initial={false}>
+              {!correctGuesses.includes(game.name) && !revealed[field] ? (
+                <motion.div
+                  key='reveal-btn'
+                  className='flex items-center gap-2'
+                  initial={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  transition={{ duration: 0.15 }}
                 >
-                  Reveal (-{fieldDeductions[field] || 0}pts.)
-                </button>
-              </div>
-            ) : (
-              <motion.div
-                className='text-yellow-500 flex flex-col gap-0.5'
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: 'auto', opacity: 1 }}
-                transition={{ duration: 0.2, ease: 'easeOut' }}
-                style={{ overflow: 'hidden' }}
-              >
-                {game.meta &&
-                  Object.entries(game.meta).map(([key, values]) => (
-                    <div key={key}>
-                      <span className='font-semibold text-gray-300'>
-                        {capitalize(key)}:
-                      </span>{' '}
-                      {values.join(', ')}
-                    </div>
-                  ))}
-              </motion.div>
-            )}
+                  <span className='font-semibold'>
+                    {getFieldDisplayName(field)}:
+                  </span>
+                  <button
+                    onClick={() => handleReveal(field)}
+                    className='px-2 py-1 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-xs transition-colors'
+                  >
+                    Reveal (-{fieldDeductions[field] || 0}pts.)
+                  </button>
+                </motion.div>
+              ) : (
+                <motion.div
+                  key='revealed-content'
+                  className='flex gap-2 items-start w-full overflow-hidden'
+                  initial={{ height: 0, opacity: 0 }}
+                  animate={{
+                    height: detailsHeight,
+                    opacity: 1,
+                  }}
+                  transition={{
+                    height: { duration: 0.15, ease: 'easeOut' },
+                    opacity: { duration: 0.1, ease: 'easeOut' },
+                  }}
+                >
+                  <span className='font-semibold whitespace-nowrap'>
+                    {getFieldDisplayName(field)}:
+                  </span>
+                  <span ref={detailsRef} className='text-yellow-500'>
+                    {game.details && game.details.join(', ')}
+                  </span>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         ) : (
           <div
