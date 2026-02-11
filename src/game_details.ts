@@ -5530,6 +5530,7 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'Dragon Quest Builders 2',
+    overrideMask: '**a*** ***** ****d*** *',
     platforms: 'Switch, PS4, PC, PS5, XB1',
     genres: 'Adventure, RPG, Building',
     releaseDate: 'Jul 12',
