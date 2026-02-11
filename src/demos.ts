@@ -157,11 +157,17 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Elite: Dangerous',
     'Dragon Quest Builders 2',
   ],
+  '2026-02-12': [
+    'Super Mario Maker',
+    'A Way Out',
+    'Halo: Spartan Assault',
+    'Kingdom Come: Deliverance',
+    'Kirby Star Allies',
+  ],
 };
 
-// A Way Out
+// The King of Fighters XV
 // Grid
-// Halo: Spartan Assault
 
 /**
  * Sunday Shuffle demo days - hardcoded specific games for specific dates

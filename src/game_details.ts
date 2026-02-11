@@ -295,7 +295,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Halo: Spartan Assault',
     platforms: 'XB1, PC, XBXS',
-    genres: 'Strategy',
+    genres: 'Twin-stick Shooter, Isometric',
     releaseDate: 'Dec 23',
     releaseYear: 2013,
     reviewRank: 32,
@@ -4611,8 +4611,9 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'Kingdom Come: Deliverance',
+    overrideMask: '******* **** :  **********e',
     platforms: 'PS4, XB1, PC, XBXS, PS5, Switch',
-    genres: 'RPG',
+    genres: 'RPG, Medieval, Open World, Singleplayer, Realistic',
     releaseDate: 'Feb 13',
     releaseYear: 2018,
     reviewRank: 25,
@@ -4872,7 +4873,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Kirby Star Allies',
     platforms: 'Switch',
-    genres: 'Adventure, Platformer',
+    genres: 'Adventure, Platformer, Side-scroller',
     releaseDate: 'Mar 16',
     releaseYear: 2018,
     reviewRank: 48,
