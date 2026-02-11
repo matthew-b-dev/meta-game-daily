@@ -122,44 +122,8 @@ const ShuffleGame = () => {
 
   // Get the games and sort them by the current round's variant
   const correctlySortedGames = useMemo(() => {
-    const roundToUse = allRoundsComplete ? viewingRound : currentRound;
-    const variant = ROUND_DETAILS[roundToUse].variant as
-      | 'hltb'
-      | 'score'
-      | 'releaseYear';
-    const games = getSundayShuffleGames(gameDetails, variant);
-
-    let sortedGames;
-    if (variant === 'hltb') {
-      sortedGames = games
-        .filter(
-          (game) => game.hltb?.main !== undefined && game.hltb?.main !== null,
-        )
-        .sort((a, b) => a.hltb!.main! - b.hltb!.main!);
-    } else if (variant === 'score') {
-      sortedGames = games
-        .filter((game) => game.score !== undefined && game.score !== null)
-        .sort(
-          (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
-        );
-    } else {
-      sortedGames = games
-        .filter(
-          (game) => game.releaseYear !== undefined && game.releaseYear !== null,
-        )
-        .sort((a, b) => a.releaseYear - b.releaseYear);
-    }
-
-    // Apply game count limit if in testing mode
-    if (TESTING_MODE && GAME_COUNT) {
-      sortedGames = sortedGames.slice(0, GAME_COUNT);
-    }
-
-    return sortedGames.map((game, index) => ({
-      ...game,
-      id: `game-${index}`,
-    }));
-  }, [currentRound, viewingRound, allRoundsComplete]);
+    return [];
+  }, []);
 
   // Initialize games - shuffle unless in testing mode
   const [currentOrder, setCurrentOrder] = useState<GameWithId[]>([]);
@@ -187,83 +151,12 @@ const ShuffleGame = () => {
 
   // Initialize game state on first load from savedState or fresh
   useEffect(() => {
-    // Only run initial setup once
-    if (stateLoaded) return;
-
-    // Check if we have saved state to restore
-    if (savedState && savedState.currentOrder.length > 0) {
-      // Restore from saved state
-      const restoredOrder = savedState.currentOrder
-        .map((item) => {
-          const game = correctlySortedGames.find((g) => g.name === item.name);
-          return game ? { ...game, id: item.id } : null;
-        })
-        .filter((g): g is GameWithId => g !== null);
-
-      if (restoredOrder.length > 0) {
-        setCurrentOrder(restoredOrder);
-        setStateLoaded(true);
-        return;
-      }
-    }
-
-    // No saved state, initialize fresh
-    if (TESTING_MODE) {
-      // Testing mode: keep sorted order
-      setCurrentOrder([...correctlySortedGames]);
-    } else {
-      // Normal mode: shuffle
-      const shuffled = [...correctlySortedGames];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      setCurrentOrder(shuffled);
-    }
-    setFrozenIds(
-      TESTING_MODE && FROZEN_INDICES.length > 0
-        ? new Set(
-            FROZEN_INDICES.map((i) => correctlySortedGames[i]?.id).filter(
-              Boolean,
-            ),
-          )
-        : new Set(),
-    );
-    setIsRoundComplete(false);
-    setStateLoaded(true);
+    return;
   }, [correctlySortedGames, savedState, stateLoaded]);
-
-  // Re-shuffle games when round changes (not on initial load)
-  useEffect(() => {
-    // Only run when round changes, not on initial load
-    if (!stateLoaded || currentRound === (savedState?.currentRound ?? 0)) {
-      return;
-    }
-
-    // Shuffle games for the new round
-    if (TESTING_MODE) {
-      setCurrentOrder([...correctlySortedGames]);
-    } else {
-      const shuffled = [...correctlySortedGames];
-      for (let i = shuffled.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-      }
-      setCurrentOrder(shuffled);
-    }
-  }, [
-    currentRound,
-    correctlySortedGames,
-    stateLoaded,
-    savedState?.currentRound,
-  ]);
 
   // Update games when viewing different rounds after completion
   useEffect(() => {
-    if (allRoundsComplete && stateLoaded) {
-      // Show correctly sorted games for the viewing round
-      setCurrentOrder([...correctlySortedGames]);
-    }
+    return;
   }, [viewingRound, allRoundsComplete, correctlySortedGames, stateLoaded]);
 
   const sensors = useSensors(
@@ -375,55 +268,7 @@ const ShuffleGame = () => {
   };
 
   const handleSubmitGuess = () => {
-    const newFrozenIds = new Set(frozenIds);
-    const incorrectIds = new Set<string>();
-    let correctCount = 0;
-
-    currentOrder.forEach((game, index) => {
-      const correctIndex = correctlySortedGames.findIndex(
-        (g) => g.name === game.name,
-      );
-      if (correctIndex === index) {
-        newFrozenIds.add(game.id);
-        correctCount++;
-      } else {
-        incorrectIds.add(game.id);
-      }
-    });
-
-    setFrozenIds(newFrozenIds);
-
-    // Increment total guesses for current round (every submission counts)
-    setMissedGuessesByRound((prev) => {
-      const updated = [...prev];
-      updated[currentRound] = (updated[currentRound] || 0) + 1;
-      return updated;
-    });
-
-    // Reset order changed flag after submission
-    setHasOrderChanged(false);
-
-    // Check if all are correct
-    if (correctCount === currentOrder.length) {
-      setIsButtonFading(true);
-      setTimeout(() => {
-        setIsRoundComplete(true);
-        setIsButtonFading(false);
-      }, 300);
-      if (currentRound === ROUND_DETAILS.length - 1) {
-        // Show completion modal after a brief delay
-        setTimeout(() => {
-          setShowCompleteModal(true);
-        }, 500);
-      }
-    } else if (incorrectIds.size > 0) {
-      // Shake incorrect items
-      setShakingIds(incorrectIds);
-      // Clear shake animation after it completes
-      setTimeout(() => {
-        setShakingIds(new Set());
-      }, 500);
-    }
+    return;
   };
 
   const handleNextRound = () => {
@@ -527,28 +372,7 @@ const ShuffleGame = () => {
           <div
             className={`transition-opacity duration-300 ${isFadingOut ? 'opacity-0' : 'opacity-100'}`}
           >
-            {currentOrder.map((game, index) => (
-              <SortableGameItem
-                key={game.id}
-                game={game}
-                id={game.id}
-                index={index}
-                isFrozen={allRoundsComplete || frozenIds.has(game.id)}
-                isCorrect={
-                  allRoundsComplete ||
-                  (frozenIds.has(game.id) &&
-                    correctlySortedGames.findIndex(
-                      (g) => g.name === game.name,
-                    ) === index)
-                }
-                isShaking={shakingIds.has(game.id)}
-                showHiddenInfo={allRoundsComplete || isRoundComplete}
-                variant={
-                  ROUND_DETAILS[allRoundsComplete ? viewingRound : currentRound]
-                    .variant as 'hltb' | 'score' | 'releaseYear'
-                }
-              />
-            ))}
+            <div></div>
           </div>
         </SortableContext>
       </DndContext>

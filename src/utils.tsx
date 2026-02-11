@@ -615,32 +615,7 @@ const getScoreVariant = (allGames: Game[], hash: number): Game[] => {
 
 // Helper for hltb variant
 const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with hltb.main > 0 and reviewRank < 30
-  const eligible = allGames.filter(
-    (g) => g.hltb?.main != null && g.hltb.main > 0 && g.reviewRank < 30,
-  );
-  // Sort by hltb.main
-  const sorted = eligible.sort(
-    (a, b) => (a.hltb?.main || 0) - (b.hltb?.main || 0),
-  );
-  // Try to find 5 games with hltb.main differences > 3
-  let attempt = 0;
-  while (attempt < 10) {
-    const shuffled = shuffleArray(sorted, hash + attempt);
-    const selected: Game[] = [];
-    for (const game of shuffled) {
-      const gameHltb = game.hltb?.main || 0;
-      if (selected.every((s) => Math.abs((s.hltb?.main || 0) - gameHltb) > 3)) {
-        selected.push(game);
-        if (selected.length === 5) {
-          return selected;
-        }
-      }
-    }
-    attempt++;
-  }
-  // Fallback: return first 5 shuffled
-  return shuffleArray(sorted, hash).slice(0, 5);
+  return [];
 };
 
 /**

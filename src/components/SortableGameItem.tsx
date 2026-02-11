@@ -24,14 +24,6 @@ export const SortableGameItem = ({
 }: SortableGameItemProps) => {
   const getHiddenInfo = () => {
     if (!showHiddenInfo) return null;
-
-    if (variant === 'hltb' && game.hltb?.main) {
-      return `Main Story: ${game.hltb.main}h`;
-    } else if (variant === 'score' && game.score) {
-      return `Score: ${game.score}`;
-    } else if (variant === 'releaseYear' && game.releaseYear) {
-      return `Released: ${game.releaseYear}`;
-    }
     return null;
   };
 
