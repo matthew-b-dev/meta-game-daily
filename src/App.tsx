@@ -7,6 +7,7 @@ import ShuffleGame from './ShuffleGame';
 import HelpModal from './components/HelpModal';
 import Subtitle from './components/Subtitle';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
+import { config } from './config';
 
 const App = () => {
   const [showHelp, setShowHelp] = useState(false);
@@ -77,7 +78,15 @@ const App = () => {
               </span>
             </button>
           </div>
-          {isShuffleGame ? <ShuffleGame /> : <GuessingGame />}
+          {config.maintenanceMode ? (
+            <div className='bg-yellow-500 text-black px-4 py-3 rounded-lg font-semibold text-center'>
+              {config.maintenanceMessage}
+            </div>
+          ) : isShuffleGame ? (
+            <ShuffleGame />
+          ) : (
+            <GuessingGame />
+          )}
         </div>
       </div>
       <HelpModal
