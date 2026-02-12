@@ -16,6 +16,11 @@ export type Game = {
   redactName?: boolean; // If true, show "(redacted!)" instead of asterisk-filled name
   overrideMask?: string; // Custom mask to display instead of automatic asterisk masking
   details?: string[];
+  other?: string[]; // Additional meta/genre tags
+  freeReveal?: 'ss' | 'meta' | 'pub' | 'platforms' | ''; // Auto-reveal field: "ss" (screenshot), "meta" (other+details), "pub" (publishers), "platforms"
+  meta: string[];
+  processed: boolean;
+  refined: boolean;
 };
 
 export interface Review {

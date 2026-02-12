@@ -10,9 +10,10 @@ const capitalize = (str: string) => str.charAt(0).toUpperCase() + str.slice(1);
 const getFieldDisplayName = (field: string): string => {
   const displayNames: { [key: string]: string } = {
     maskedTitle: 'MASKED (***) Title',
-    details: 'Game Details',
+    details: 'Details/Genres',
     publishers: 'Publisher(s)',
     screenshot: 'Screenshot',
+    platforms: 'Platforms',
   };
   return displayNames[field] || capitalize(field);
 };
@@ -87,7 +88,42 @@ export const GameContent: React.FC<GameContentProps> = ({
     }
   }, [revealed, correctGuesses, game.name, game.details]);
 
+  // Handle free reveals - auto reveal the designated field without deducting points
+  useEffect(() => {
+    if (!game.freeReveal || gameState?.freeRevealed) return;
+
+    // Map freeReveal values to field names
+    const freeRevealFieldMap: { [key: string]: string } = {
+      ss: 'screenshot',
+      meta: 'details',
+      pub: 'publishers',
+      platforms: 'platforms',
+    };
+
+    const fieldToReveal = freeRevealFieldMap[game.freeReveal];
+    if (fieldToReveal && !revealed[fieldToReveal]) {
+      const newRevealed = { ...revealed, [fieldToReveal]: true };
+
+      updateGameState(game.name, {
+        revealed: newRevealed,
+        freeRevealed: fieldToReveal,
+        // Don't add to pointsDeducted - it's free!
+      });
+    }
+  }, [
+    game.freeReveal,
+    game.name,
+    gameState?.freeRevealed,
+    revealed,
+    updateGameState,
+  ]);
+
   const handleReveal = (field: string) => {
+    // Don't allow revealing the free revealed field (it's already revealed)
+    if (field === gameState?.freeRevealed) {
+      return;
+    }
+
     if (field === 'maskedTitle') {
       const deduction = fieldDeductions[field] || 0;
       const newPointsDeducted = pointsDeducted + deduction;
@@ -118,8 +154,14 @@ export const GameContent: React.FC<GameContentProps> = ({
 
   const calculateRevealAllCost = () => {
     let total = 0;
+    const freeRevealedField = gameState?.freeRevealed;
+
     revealFields.forEach((field) => {
-      if (field !== 'maskedTitle' && !revealed[field]) {
+      if (
+        field !== 'maskedTitle' &&
+        !revealed[field] &&
+        field !== freeRevealedField
+      ) {
         total += fieldDeductions[field] || 0;
       }
     });
@@ -132,11 +174,15 @@ export const GameContent: React.FC<GameContentProps> = ({
   const handleRevealAllFields = () => {
     const newRevealed = { ...revealed };
     let totalDeduction = 0;
+    const freeRevealedField = gameState?.freeRevealed;
 
     revealFields.forEach((field) => {
       if (field !== 'maskedTitle' && !revealed[field]) {
         newRevealed[field] = true;
-        totalDeduction += fieldDeductions[field] || 0;
+        // Don't charge for the free revealed field
+        if (field !== freeRevealedField) {
+          totalDeduction += fieldDeductions[field] || 0;
+        }
       }
     });
 
@@ -164,11 +210,15 @@ export const GameContent: React.FC<GameContentProps> = ({
   const handleRevealAll = () => {
     const newRevealed = { ...revealed };
     let totalDeduction = 0;
+    const freeRevealedField = gameState?.freeRevealed;
 
     revealFields.forEach((field) => {
       if (field !== 'maskedTitle' && !revealed[field]) {
         newRevealed[field] = true;
-        totalDeduction += fieldDeductions[field] || 0;
+        // Don't charge for the free revealed field
+        if (field !== freeRevealedField) {
+          totalDeduction += fieldDeductions[field] || 0;
+        }
       }
     });
 
@@ -231,7 +281,7 @@ export const GameContent: React.FC<GameContentProps> = ({
               ) : (
                 <motion.div
                   key='revealed-content'
-                  className='flex gap-2 items-start w-full overflow-hidden'
+                  className='w-full overflow-hidden'
                   initial={{ height: 0, opacity: 0 }}
                   animate={{
                     height: detailsHeight,
@@ -242,11 +292,13 @@ export const GameContent: React.FC<GameContentProps> = ({
                     opacity: { duration: 0.1, ease: 'easeOut' },
                   }}
                 >
-                  <span className='font-semibold whitespace-nowrap'>
-                    {getFieldDisplayName(field)}:
+                  <span className='font-semibold'>
+                    {getFieldDisplayName(field)}:{' '}
                   </span>
                   <span ref={detailsRef} className='text-yellow-500'>
-                    {game.details && game.details.join(', ')}
+                    {[...(game.other || []), ...(game.details || [])].join(
+                      ', ',
+                    )}
                   </span>
                 </motion.div>
               )}

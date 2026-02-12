@@ -52,6 +52,7 @@ export interface GameState {
   pointsDeducted: number;
   revealedTitle: boolean;
   revealedMaskedTitle?: boolean;
+  freeRevealed?: string; // Field that was auto-revealed for free (if any)
 }
 
 // Missed guess with close detection
@@ -492,6 +493,29 @@ export const getDailyGames = (
   for (let i = 0; i < utcDate.length; i++) {
     hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
   }
+
+  // Filter only refined games
+  const refinedGames = allGames.filter((game) => game.refined === true);
+
+  // Shuffle function
+  const shuffle = (arr: Game[], seed: number): Game[] => {
+    const shuffled = arr.slice();
+    let h = seed;
+    for (let i = shuffled.length - 1; i > 0; i--) {
+      h = (h * 31 + i) % 100000;
+      const j = h % (i + 1);
+      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+    }
+    return shuffled;
+  };
+
+  // Shuffle refined games with the date hash
+  const shuffledGames = shuffle(refinedGames, hash);
+
+  // Select the requested number of games
+  return shuffledGames.slice(0, count);
+
+  /* OLD REVIEW RANK-BASED LOGIC (COMMENTED OUT)
   // Bucket games by difficulty based on review rank
   // Lower rank means more reviews, so more recognizable
   const buckets = {
@@ -512,18 +536,6 @@ export const getDailyGames = (
     }
   }
 
-  // Shuffle function
-  const shuffle = (arr: Game[], seed: number): Game[] => {
-    const shuffled = arr.slice();
-    let h = seed;
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      h = (h * 31 + i) % 100000;
-      const j = h % (i + 1);
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  };
-
   // Shuffle each bucket with different seeds
   const shuffledTrivial = shuffle(buckets.trivial, hash + 5);
   const shuffledEasy = shuffle(buckets.easy, hash + 6);
@@ -539,6 +551,7 @@ export const getDailyGames = (
   ];
 
   return result.slice(0, count);
+  */
 };
 
 // Shuffle array deterministically

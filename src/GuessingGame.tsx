@@ -25,7 +25,6 @@ import {
   createGameStateUpdater,
   copyShareToClipboard,
   getShareSuccessMessage,
-  MAX_REVIEW_RANK,
 } from './utils';
 import DailyNotification from './components/DailyNotification';
 
@@ -34,9 +33,9 @@ const GuessingGame = () => {
   const dailyGames = useMemo(
     () =>
       getDailyGames(
-        gameDetails.filter((g) => g.reviewRank < MAX_REVIEW_RANK),
+        gameDetails.filter((g) => g.refined === true),
         5,
-      ).sort((a, b) => a.reviewRank - b.reviewRank),
+      ),
     [],
   );
 
@@ -334,8 +333,10 @@ const GuessingGame = () => {
             )}
           </div>
           <div className='-mx-2 sm:mx-0'>
-            <div className='font-semibold pl-[46px] pr-[9px] py-2 flex-1 grid grid-cols-[3fr_40px_2fr] sm:grid-cols-[4fr_40px_2fr_78px] gap-2 text-sm sm:text-base'>
+            <div className='font-semibold pl-[46px] pr-[9px] py-2 flex-1 grid grid-cols-[1fr_60px_40px_1fr] sm:grid-cols-[1fr_60px_40px_1fr_78px] gap-2 text-sm sm:text-base'>
               <div>Game title</div>
+              <div></div>
+              {/* Empty header for +More badge column */}
               <div>Year</div>
               <div>Developer(s)</div>
               <div className='hidden sm:block'>Points</div>
