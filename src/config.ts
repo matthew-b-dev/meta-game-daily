@@ -2,5 +2,6 @@
 export const config = {
   // Set to true to show maintenance message instead of the game
   maintenanceMode: true,
-  maintenanceMessage: 'Cloudflare issues. Check back soon',
+  maintenanceMessage:
+    'The hosting provider is currently having issues. It will be up shortly!',
 };
