@@ -164,6 +164,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Kingdom Come: Deliverance',
     'Kirby Star Allies',
   ],
+  '2026-02-13': [
+    'Black Myth: Wukong',
+    'Star Wars Outlaws',
+    'The King of Fighters XV',
+    'Hotline Miami 2: Wrong Number',
+    'Gears 5',
+  ],
 };
 
 // The King of Fighters XV

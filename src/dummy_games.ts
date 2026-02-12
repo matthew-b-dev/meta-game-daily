@@ -148,6 +148,7 @@ export const dummyGames: string[] = [
   'Warriors Orochi 3 Ultimate',
   'Gods Will Be Watching',
   'Abyss Odyssey',
+  'The King of Fighters XI',
   "Strike Suit Zero: Director's Cut",
   'Pure Pool',
   'Blackguards',

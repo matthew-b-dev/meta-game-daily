@@ -2184,8 +2184,9 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'Hotline Miami 2: Wrong Number',
+    overrideMask: '******* ***** * : ***** ***be*',
     platforms: 'PS4, PC, PS5, Switch, XB1, XBXS',
-    genres: 'Action',
+    genres: 'Action, Top-down shooter, Pixel graphics',
     releaseDate: 'Mar 10',
     releaseYear: 2015,
     reviewRank: 49,
@@ -5401,6 +5402,7 @@ export const gameDetails: Game[] = [
   },
   {
     name: 'Gears 5',
+    overrideMask: '*e*** *',
     platforms: 'XB1, PC, XBXS',
     genres: 'Third-Person Shooter, Action, Adventure',
     releaseDate: 'Sep 10',
@@ -9680,7 +9682,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Star Wars Outlaws',
     platforms: 'PS5, XBXS, PC',
-    genres: 'Action',
+    genres: 'Action, Space, Sci-fi, Open World',
     releaseDate: 'Aug 30',
     releaseYear: 2024,
     reviewRank: 2,
@@ -9979,7 +9981,7 @@ export const gameDetails: Game[] = [
   {
     name: 'Black Myth: Wukong',
     platforms: 'PS5, PC, XBXS',
-    genres: 'Action, RPG',
+    genres: 'Action, RPG, Fantasy',
     releaseDate: 'Aug 19',
     releaseYear: 2024,
     reviewRank: 37,

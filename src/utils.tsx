@@ -23,6 +23,10 @@ export const CLOSE_GUESS_SERIES = [
   'dragon quest',
   'kirby',
   'halo',
+  'gears ',
+  'king of fighters',
+  'star wars',
+  'hotline miami',
 ];
 
 export interface SubtitleConfig {
