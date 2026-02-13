@@ -73,21 +73,23 @@ const GameUpdateModal: React.FC<GameUpdateModalProps> = ({
                 </div>
                 <hr className='h-[1px] bg-gray-700 border-none mb-3' />
                 <h3 className='text-md font-semibold text-white mb-2'>
-                  What's Changed
+                  Update Info
                 </h3>
                 <ul className='list-disc pl-5 space-y-2 text-sm'>
                   <li>
-                    <strong>Enriched Genre/Game Details:</strong> The
+                    <strong>More Game Details/Genres:</strong> The
                     "Details/Genres" information for games has been{' '}
                     <b>significantly</b> expanded and improved to provide more
                     helpful context.
                   </li>
                   <li>
                     <strong>Adjusted Reveal Costs:</strong> To reflect the
-                    increased value of the enriched details:
+                    information update:
                     <ul className='list-disc pl-5 mt-1'>
-                      <li>Screenshot increased to 65</li>
-                      <li>Details/Genres are now grouped for 35 points</li>
+                      <li>Screenshot reveal cost increased to 65</li>
+                      <li>
+                        Details/Genres are now grouped, revealed for 35 points
+                      </li>
                     </ul>
                   </li>
                   <li>
