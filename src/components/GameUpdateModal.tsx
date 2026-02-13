@@ -86,7 +86,7 @@ const GameUpdateModal: React.FC<GameUpdateModalProps> = ({
                     <strong>Adjusted Reveal Costs:</strong> To reflect the
                     increased value of the enriched details:
                     <ul className='list-disc pl-5 mt-1'>
-                      <li>Screenshot reveal: 50 → 65 points</li>
+                      <li>Screenshot increased to 65</li>
                       <li>Details/Genres are now grouped for 35 points</li>
                     </ul>
                   </li>
