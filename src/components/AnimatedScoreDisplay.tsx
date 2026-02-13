@@ -29,14 +29,18 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
   const [showRank, setShowRank] = useState(false);
   const [showHistogram, setShowHistogram] = useState(false);
 
+  // Cap the number of scores to the last 200 (newest) for chart rendering
+  const cappedScores =
+    todayScores.length > 200 ? todayScores.slice(-200) : todayScores;
+
   // Calculate user's rank
   // Sort scores in descending order (highest first)
-  const sortedScores = [...todayScores].sort((a, b) => b - a);
+  const sortedScores = [...cappedScores].sort((a, b) => b - a);
 
-  const minScore = Math.min(...todayScores);
+  const minScore = Math.min(...cappedScores);
   const totalScore = score + bonusPoints;
   const isWorstScore = totalScore === minScore;
-  const countAtBottom = todayScores.filter((s) => s === minScore).length;
+  const countAtBottom = cappedScores.filter((s) => s === minScore).length;
   const isTiedForWorst = isWorstScore && countAtBottom > 1;
 
   const totalPlayers = todayScores.length;
@@ -53,65 +57,105 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
 
   const rankEmoji = getRankEmoji(userRank, totalPlayers);
 
-  // Build dot plot data: jitter dots randomly above/below the center x-axis
-  const { otherScoresData, userScoreData, maxExtent } = useMemo(() => {
-    const STACK_STEP = 0.7; // vertical distance between stacked dots
-    const PROXIMITY = 25; // scores within this range share a stack
-    const others: { x: number; y: number }[] = [];
+  // Build dot plot data: alternating stack above/below center
+  const { otherScoresData, clusteredScoresData, userScoreData, maxExtent } =
+    useMemo(() => {
+      // Adjust stack step based on dot size - smaller dots need less spacing
+      const STACK_STEP =
+        cappedScores.length > 85 ? 0.2 : cappedScores.length >= 50 ? 0.4 : 0.5;
+      const MAX_STACK_LEVEL = 2; // Max vertical levels before using jitter (allows 5 dots: center + 4 stacked)
+      const PROXIMITY = 25; // scores within this range share a stack
+      const CLUSTER_THRESHOLD = 5; // scores with 5+ exact duplicates get merged into larger dot
+      const others: { x: number; y: number }[] = [];
+      const clustered: { x: number; y: number }[] = [];
 
-    // User dot always centered vertically
-    const user = [{ x: totalScore, y: 0 }];
+      // User dot always centered vertically
+      const user = [{ x: totalScore, y: 0 }];
 
-    const sorted = [...todayScores].sort((a, b) => a - b);
+      const sorted = [...cappedScores].sort((a, b) => a - b);
 
-    // Remove first occurrence of user's score
-    const userIndex = sorted.indexOf(totalScore);
-    const allScores =
-      userIndex >= 0
-        ? [...sorted.slice(0, userIndex), ...sorted.slice(userIndex + 1)]
-        : sorted;
+      // Remove first occurrence of user's score
+      const userIndex = sorted.indexOf(totalScore);
+      const allScores =
+        userIndex >= 0
+          ? [...sorted.slice(0, userIndex), ...sorted.slice(userIndex + 1)]
+          : sorted;
 
-    // Track stacking per cluster of nearby scores
-    // Each entry: { anchor: number, count: number } — anchor is the first score in the cluster
-    const clusters: { anchor: number; count: number }[] = [];
-
-    const getCluster = (score: number) => {
-      for (const c of clusters) {
-        if (Math.abs(score - c.anchor) <= PROXIMITY) return c;
+      // Count exact duplicates for each score
+      const scoreCounts = new Map<number, number>();
+      for (const s of allScores) {
+        scoreCounts.set(s, (scoreCounts.get(s) || 0) + 1);
       }
-      return null;
-    };
 
-    // User's score occupies position 0 in its cluster
-    clusters.push({ anchor: totalScore, count: 1 });
+      // Track stacking per cluster of nearby scores
+      // Each entry: { anchor: number, count: number } — anchor is the first score in the cluster
+      const clusters: { anchor: number; count: number }[] = [];
 
-    for (const s of allScores) {
-      let cluster = getCluster(s);
-      if (!cluster) {
-        // New cluster; first dot goes at center
-        cluster = { anchor: s, count: 0 };
-        clusters.push(cluster);
-        others.push({ x: s, y: 0 });
-      } else {
-        // Alternate above and below: count 1→+1, 2→-1, 3→+2, 4→-2, ...
-        const n = cluster.count;
-        const level = Math.ceil(n / 2);
-        const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
-        others.push({ x: s, y });
+      const getCluster = (score: number) => {
+        for (const c of clusters) {
+          if (Math.abs(score - c.anchor) <= PROXIMITY) return c;
+        }
+        return null;
+      };
+
+      // User's score occupies position 0 in its cluster
+      clusters.push({ anchor: totalScore, count: 1 });
+
+      // Track which scores have been processed (to avoid duplicates in clustered array)
+      const processedClustered = new Set<number>();
+
+      for (const s of allScores) {
+        const count = scoreCounts.get(s)!;
+
+        // If this exact score appears 5+ times, add ONE large dot (only once per unique score)
+        if (count >= CLUSTER_THRESHOLD && !processedClustered.has(s)) {
+          clustered.push({ x: s, y: 0 });
+          processedClustered.add(s);
+          continue; // Skip adding to normal dots
+        }
+
+        // Skip if already added to clustered
+        if (processedClustered.has(s)) {
+          continue;
+        }
+
+        // Normal stacking for scores with < 5 duplicates
+        let cluster = getCluster(s);
+        if (!cluster) {
+          // New cluster; first dot goes at center
+          cluster = { anchor: s, count: 0 };
+          clusters.push(cluster);
+          others.push({ x: s, y: 0 });
+        } else {
+          // Alternate above and below: count 1,+1, 2,-1, 3,+2, 4,-2, ...
+          const n = cluster.count;
+          const level = Math.ceil(n / 2);
+
+          // If stack exceeds max level, use deterministic jitter instead
+          if (level > MAX_STACK_LEVEL) {
+            // Use score and count to create deterministic offset
+            const seed = (s * 17 + n * 31) % 100;
+            const jitter = (seed / 100 - 0.5) * 0.4; // Deterministic offset +/-0.2
+            others.push({ x: s, y: jitter });
+          } else {
+            const y = n % 2 === 1 ? level * STACK_STEP : -level * STACK_STEP;
+            others.push({ x: s, y });
+          }
+        }
+        cluster.count++;
       }
-      cluster.count++;
-    }
 
-    // Compute max extent for dynamic axis range
-    const allY = [...others.map((d) => Math.abs(d.y)), 0];
-    const maxExtent = Math.max(...allY);
+      // Compute max extent for dynamic axis range
+      const allY = [...others.map((d) => Math.abs(d.y)), 0];
+      const maxExtent = Math.max(...allY);
 
-    return {
-      otherScoresData: others,
-      userScoreData: user,
-      maxExtent,
-    };
-  }, [todayScores, totalScore]);
+      return {
+        otherScoresData: others,
+        clusteredScoresData: clustered,
+        userScoreData: user,
+        maxExtent,
+      };
+    }, [cappedScores, totalScore]);
 
   // Dynamic y bounds: at least 2, otherwise maxExtent + padding
   const yBound = Math.max(2, maxExtent + 0.8);
@@ -161,12 +205,20 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
           },
         },
       },
-      colors: ['#3b82f6', '#22c55e'], // blue for others, green for user
+      colors: ['#3b82f6', '#3b82f6', '#22c55e'], // blue for normal others, blue for clustered, green for user
       markers: {
-        // User dot size is the second element of this array:
-        size: [todayScores.length >= 50 ? 5 : 7, 8],
-        strokeWidth: [0, 2],
-        strokeColors: ['transparent', '#ffffff'],
+        // Array: [normal others, clustered others, user]
+        // For 5x area: radius = sqrt(5) * normal_radius ≈ 2.236 * normal_radius
+        size: [
+          // normal dots
+          todayScores.length > 85 ? 3 : todayScores.length >= 50 ? 4 : 5,
+          // clustered dots (5+)
+          todayScores.length > 85 ? 7 : todayScores.length >= 50 ? 10 : 13,
+          // user dot
+          8,
+        ],
+        strokeWidth: [0, 0, 2],
+        strokeColors: ['transparent', 'transparent', '#ffffff'],
         hover: { size: undefined, sizeOffset: 0 },
       },
       states: {
@@ -175,7 +227,7 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
       },
       grid: {
         show: false,
-        padding: { left: 10, right: 10, top: 5, bottom: -5 },
+        padding: { left: 10, right: 10, top: -20, bottom: -5 },
       },
       xaxis: {
         min: 0,
@@ -202,7 +254,11 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
         y: {
           title: {
             formatter: (seriesName: string) =>
-              seriesName === 'You' ? '⭐ You:' : 'Score:',
+              seriesName === 'You'
+                ? '⭐ You:'
+                : seriesName === 'Others (5+)'
+                  ? '5+ Players:'
+                  : 'Score:',
           },
           formatter: (
             _val: number,
@@ -279,11 +335,15 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
         data: otherScoresData,
       },
       {
+        name: 'Others (5+)',
+        data: clusteredScoresData,
+      },
+      {
         name: 'You',
         data: userScoreData,
       },
     ],
-    [otherScoresData, userScoreData],
+    [otherScoresData, clusteredScoresData, userScoreData],
   );
 
   // Animate score counting and sequence
@@ -606,16 +666,10 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                 type='scatter'
                 height={Math.max(120, 80 + yBound * 18)}
               />
-              {todayScores.length === 1 && (
-                <motion.p
-                  className='text-center text-sm text-green-400 mt-2'
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 0.2, duration: 0.3 }}
-                >
-                  You're the first player today. Neat!
-                </motion.p>
-              )}
+              <div className='flex justify-between text-[14px] text-gray-500 mt-[-4px]'>
+                <span>Worst</span>
+                <span>Best</span>
+              </div>
             </motion.div>
           )}
         </AnimatePresence>
