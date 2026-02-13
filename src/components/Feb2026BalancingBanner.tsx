@@ -18,7 +18,7 @@ const Feb2026BalancingBanner: React.FC<Feb2026BalancingBannerProps> = ({
           <span>Major game balancing changes.</span>
           <button
             onClick={() => setShowModal(true)}
-            className='px-3 py-1 rounded bg-zinc-700 hover:bg-zinc-600 text-white text-xs font-semibold transition-colors whitespace-nowrap self-start'
+            className='px-2 py-2 sm:py-1 rounded bg-transparent border border-blue-700/50 hover:bg-blue-700/10 text-blue-200 text-xs font-semibold transition-colors whitespace-nowrap self-start'
           >
             Full Details
           </button>
@@ -29,18 +29,18 @@ const Feb2026BalancingBanner: React.FC<Feb2026BalancingBannerProps> = ({
           introduced. Games that are lesser-known will appear much more often,
           typically with a free reveal.
         </div>
-        <div className='mt-2 flex items-center gap-2'>
-          <span>Thank you! ❤️</span>
-          {onDismiss && (
-            <button
-              onClick={onDismiss}
-              className='px-2 py-1 rounded bg-transparent border border-blue-700/50 hover:bg-blue-700/10 text-blue-200 text-xs font-semibold transition-colors whitespace-nowrap flex items-center gap-1'
-            >
-              <XMarkIcon className='w-3 h-3' />
-              Dismiss
-            </button>
-          )}
+        <div className='mt-2'>
+          <span>Thank you ❤️</span>
         </div>
+        {onDismiss && (
+          <button
+            onClick={onDismiss}
+            className='mt-2 px-2 py-1 rounded bg-transparent border-0 sm:border sm:border-blue-700/50 hover:bg-blue-700/10 text-blue-200 text-xs font-semibold transition-colors whitespace-nowrap flex items-center justify-center gap-1 w-full sm:w-auto'
+          >
+            <XMarkIcon className='w-3 h-3' />
+            Dismiss
+          </button>
+        )}
       </div>
       <GameUpdateModal isOpen={showModal} onClose={() => setShowModal(false)} />
     </>

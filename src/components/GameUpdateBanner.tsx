@@ -15,7 +15,7 @@ const GameUpdateBanner: React.FC<GameUpdateBannerProps> = ({
   return (
     <div className='mb-4 bg-blue-900/30 border border-blue-700/50 rounded-lg overflow-hidden flex flex-col'>
       {/* Date section - full width helmet with date and close button */}
-      <div className='bg-blue-900/50 px-4 py-2 flex items-center justify-between border-b border-blue-700/50'>
+      <div className='bg-blue-900/50 px-3 py-1 flex items-center justify-between border-b border-blue-700/50'>
         <span className='text-sm font-semibold text-blue-200'>{date}</span>
         <button
           onClick={onDismiss}
