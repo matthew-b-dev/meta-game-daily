@@ -17,9 +17,11 @@ import GiveUpModal from './components/GiveUpModal';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import PuzzleDateTime from './components/PuzzleDateTime';
+import GameUpdateBanner from './components/GameUpdateBanner';
 import {
   getDailyGames,
   getPuzzleDate,
+  getUtcDateString,
   getTimeUntilNextGame,
   isCloseGuess,
   createGameStateUpdater,
@@ -27,9 +29,12 @@ import {
   getShareSuccessMessage,
 } from './utils';
 import DailyNotification from './components/DailyNotification';
+import { gameUpdateBanners } from './config/gameUpdateBanners';
+import { getActiveBanner, dismissBanner } from './lib/gameUpdateBanners';
 
 const GuessingGame = () => {
   const puzzleDate = getPuzzleDate();
+  const puzzleDateRaw = getUtcDateString();
   const dailyGames = useMemo(
     () =>
       getDailyGames(
@@ -74,6 +79,18 @@ const GuessingGame = () => {
   const [showGameComplete, setShowGameComplete] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
   const [bonusCalculated, setBonusCalculated] = useState(false);
+
+  // Game update banner
+  const [activeBanner, setActiveBanner] = useState(() =>
+    getActiveBanner(gameUpdateBanners, puzzleDateRaw),
+  );
+
+  const handleDismissBanner = () => {
+    if (activeBanner) {
+      dismissBanner(activeBanner.id);
+      setActiveBanner(null);
+    }
+  };
 
   // Animated score display
   const displayScore = useScoreAnimation({ targetScore: score });
@@ -185,9 +202,7 @@ const GuessingGame = () => {
           revealedTitle: true,
           pointsDeducted: 200,
           revealed: {
-            score: true,
-            genres: true,
-            releaseDate: true,
+            details: true,
             platforms: true,
             publishers: true,
             screenshot: true,
@@ -290,6 +305,19 @@ const GuessingGame = () => {
         <div className='w-full max-w-[750px]'>
           <div className='mb-8'>
             <DailyNotification />
+
+            {/* Game Update Banner */}
+            {activeBanner && (
+              <GameUpdateBanner
+                date={activeBanner.displayDate}
+                onDismiss={handleDismissBanner}
+              >
+                {typeof activeBanner.content === 'function'
+                  ? activeBanner.content(handleDismissBanner)
+                  : activeBanner.content}
+              </GameUpdateBanner>
+            )}
+
             <GuessInput
               filteredOptions={filteredOptions}
               guess={guess}

@@ -1398,7 +1398,7 @@ export const gameDetails: Game[] = [
       'Early Access',
       'Automobile Sim',
     ],
-    other: ['Racing'],
+    other: ['Racing', 'Automobile Sim', 'Driving', 'Simulation'],
     processed: true,
     refined: true,
     freeReveal: 'meta',
@@ -6842,7 +6842,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Nov 19',
     releaseYear: 2021,
     reviewRank: 16,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafye.jpg',
@@ -7190,7 +7190,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 29',
     releaseYear: 2013,
     reviewRank: 18,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yq7owbqrj09mgfqg3ac3.jpg',
@@ -7385,7 +7385,7 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/foua4nkpkcpgucm3rnkv.jpg',
     details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
     meta: ['2D Platformer', 'Action Roguelike', 'Cartoony', 'Roguelite'],
-    other: ['Action Roguelike', 'Cartoony', 'Roguelite'],
+    other: ['Action Roguelike', 'Cartoony', 'Roguelite', 'Medieval'],
     processed: true,
     refined: true,
     freeReveal: 'meta',
@@ -7488,7 +7488,8 @@ export const gameDetails: Game[] = [
     developers: ['Fullbright'],
     publishers: ['Midnight City', 'Annapurna Interactive', 'Fullbright'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/zviohjggxtone3rx6f1b.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z8fvlmguf3otr7dzfhst.jpg',
+    brightenImage: true,
     details: ['Mystery', 'Adventure', 'Firstperson', 'Puzzle elements'],
     meta: [
       'Walking Simulator',
@@ -7993,7 +7994,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Oct 21',
     releaseYear: 2016,
     reviewRank: 18,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctjar.jpg',
@@ -8827,7 +8828,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Nov 17',
     releaseYear: 2015,
     reviewRank: 8,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     franchise: 'Star Wars',
     screenshotUrl:
@@ -11945,13 +11946,7 @@ export const gameDetails: Game[] = [
     publishers: ['Chucklefish Games', 'Hopoo Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p1liluf7kxhir9nrqb2n.jpg',
-    details: [
-      'Rogue-like',
-      'Platformer',
-      'Side Scroller',
-      'Sideview',
-      'Action',
-    ],
+    details: ['Platformer', 'Side Scroller', 'Action'],
     meta: [
       'Third-Person Shooter',
       'Action Roguelike',
@@ -11976,7 +11971,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['Action Roguelike', 'Indie', 'Loot'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -12442,7 +12437,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Nov 20',
     releaseYear: 2018,
     reviewRank: 23,
-    developers: ['EA Digital Illusions CE'],
+    developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sctfab.jpg',
@@ -12575,10 +12570,16 @@ export const gameDetails: Game[] = [
       'Sci-fi',
       'Violent',
     ],
-    other: ['Exploration', 'Metroidvania', '3D Platformer'],
+    other: [
+      'Exploration',
+      'Metroidvania',
+      '3D Platformer',
+      'Colorful',
+      'Aliens',
+    ],
     processed: true,
     refined: true,
-    freeReveal: 'ss',
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -14482,9 +14483,9 @@ export const gameDetails: Game[] = [
       'Short',
     ],
     other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    processed: true,
+    refined: true,
+    freeReveal: 'ss',
   },
   {
     score: '100',
@@ -14821,7 +14822,7 @@ export const gameDetails: Game[] = [
     publishers: ['Kalypso Media', 'Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bg64tewnxaipxzyxwetd.jpg',
-    details: ['Management', 'Citybuilder', 'Isometric'],
+    details: ['Management', 'Comedy', 'Politics'],
     meta: [
       'Strategy',
       'City Builder',
@@ -14844,10 +14845,10 @@ export const gameDetails: Game[] = [
       'Open World',
       'Adventure',
     ],
-    other: ['Comedy', 'Politics', 'Resource Management', 'Sandbox'],
+    other: ['Citybuilder', 'Resource Management', 'Sandbox'],
     processed: true,
-    refined: false,
-    freeReveal: '',
+    refined: true,
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -17842,7 +17843,7 @@ export const gameDetails: Game[] = [
     publishers: ['Coffee Stain Studios', 'Double Eleven'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/p4s4xfhxduuirn1hmwdk.jpg',
-    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox'],
+    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox', 'Funny'],
     meta: [
       'Physics',
       'Sandbox',
@@ -17865,10 +17866,10 @@ export const gameDetails: Game[] = [
       'Funny',
       'Singleplayer',
     ],
-    other: ['Funny', 'Simulation', 'Singleplayer', 'Casual'],
+    other: ['Simulation', 'Singleplayer', 'Casual'],
     processed: true,
-    refined: false,
-    freeReveal: '',
+    refined: true,
+    freeReveal: 'meta',
   },
   {
     score: '100',

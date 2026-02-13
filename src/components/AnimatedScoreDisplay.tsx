@@ -567,51 +567,59 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
         )}
       </AnimatePresence>
 
-      {todayScores.length > 1 && (
-        <>
-          {/* Rank message */}
-          <AnimatePresence>
-            {showRank && userPercentile !== null && (
-              <motion.p
-                className='text-center text-sm text-green-400'
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{
-                  opacity: 1,
-                  scale: 1,
-                }}
-                transition={{
-                  duration: 0.3,
-                  ease: 'easeOut',
-                }}
-              >
-                {getPercentileMessage(
-                  userPercentile,
-                  score + bonusPoints,
-                  todayScores,
-                )}
-              </motion.p>
-            )}
-          </AnimatePresence>
+      <>
+        {/* Rank message */}
+        <AnimatePresence>
+          {showRank && todayScores.length > 1 && userPercentile !== null && (
+            <motion.p
+              className='text-center text-sm text-green-400'
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{
+                opacity: 1,
+                scale: 1,
+              }}
+              transition={{
+                duration: 0.3,
+                ease: 'easeOut',
+              }}
+            >
+              {getPercentileMessage(
+                userPercentile,
+                score + bonusPoints,
+                todayScores,
+              )}
+            </motion.p>
+          )}
+        </AnimatePresence>
 
-          {/* Dot Plot */}
-          <AnimatePresence>
-            {showHistogram && (
-              <motion.div
-                initial={{ opacity: 0, y: 10 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.4 }}
-              >
-                <Chart
-                  options={chartOptions}
-                  series={chartSeries}
-                  type='scatter'
-                  height={Math.max(120, 80 + yBound * 18)}
-                />
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </>
-      )}
+        {/* Dot Plot */}
+        <AnimatePresence>
+          {showHistogram && (
+            <motion.div
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4 }}
+            >
+              <Chart
+                options={chartOptions}
+                series={chartSeries}
+                type='scatter'
+                height={Math.max(120, 80 + yBound * 18)}
+              />
+              {todayScores.length === 1 && (
+                <motion.p
+                  className='text-center text-sm text-green-400 mt-2'
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2, duration: 0.3 }}
+                >
+                  You're the first player today. Neat!
+                </motion.p>
+              )}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </>
     </div>
   );
 };

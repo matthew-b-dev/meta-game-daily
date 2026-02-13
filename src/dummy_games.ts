@@ -924,6 +924,7 @@ export const dummyGames: string[] = [
   'Atari 50: The Anniversary Celebration',
   'MultiVersus',
   'Goat Simulator 3',
+  'Tropico 4',
   'Persona 4 Arena Ultimax',
   'Cursed to Golf',
   'Fobia - St. Dinfna Hotel',

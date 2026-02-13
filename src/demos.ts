@@ -143,9 +143,20 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Back 4 Blood',
     "Mirror's Edge Catalyst",
   ],
+  '2026-02-13': [
+    'Battlefield 4',
+    'Project CARS 2',
+    'Tropico 5',
+    'Rogue Legacy',
+    'Goat Simulator',
+  ],
 
   /*
   Battlefield 1
+  Journey to the Savage Planet
+  Risk of Rain
+  Gone Home
+  Cocoon
   */
 };
 

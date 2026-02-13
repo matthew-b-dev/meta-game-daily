@@ -59,9 +59,9 @@ const GameTable: React.FC<GameTableProps> = ({
   // Deduction values for each field
   const fieldDeductions: { [key: string]: number } = {
     maskedTitle: 20,
-    details: 40,
+    details: 35,
     publishers: 5,
-    screenshot: 50,
+    screenshot: 65,
     platforms: 5,
   };
 
@@ -138,9 +138,9 @@ const GameTable: React.FC<GameTableProps> = ({
             </div>
             <div className='flex items-center justify-center'>
               {game.freeReveal && (
-                <span className='px-1.5 py-0.5 rounded bg-yellow-400 text-black text-xs inline-flex items-center font-bold gap-0.5'>
-                  <PlusIcon className='w-3 h-3' />
-                  <span>More</span>
+                <span className='pr-1.5 pl-[2px] py-0.5 rounded bg-green-700 text-white text-xs inline-flex items-center font-semibold gap-0.5'>
+                  <PlusIcon className='w-4 h-4' />
+                  <span>Free</span>
                 </span>
               )}
             </div>

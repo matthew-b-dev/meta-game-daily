@@ -51,6 +51,43 @@ export const GameContent: React.FC<GameContentProps> = ({
   const [detailsHeight, setDetailsHeight] = useState<number | 'auto'>('auto');
   const detailsRef = React.useRef<HTMLSpanElement>(null);
 
+  // Helper to check if a field is a free reveal
+  const isFreeReveal = (field: string): boolean => {
+    const freeRevealMap: { [key: string]: string } = {
+      ss: 'screenshot',
+      meta: 'details',
+      pub: 'publishers',
+      platforms: 'platforms',
+    };
+    return game.freeReveal ? freeRevealMap[game.freeReveal] === field : false;
+  };
+
+  // Helper to get filtered details/genres, removing 'Behind-Overhead Perspective'
+  // if first-person perspective is also present, and 'Sideview' if 'Side Scroller' is also present
+  const getFilteredDetails = (): string => {
+    let combined = [...(game.other || []), ...(game.details || [])];
+
+    const hasBehindOverhead = combined.includes('Behind-Overhead Perspective');
+    const hasFirstPerson = combined.some((item) =>
+      ['Firstperson', 'FPS', 'First-person'].includes(item),
+    );
+
+    if (hasBehindOverhead && hasFirstPerson) {
+      combined = combined.filter(
+        (item) => item !== 'Behind-Overhead Perspective',
+      );
+    }
+
+    const hasSideview = combined.includes('Sideview');
+    const hasSideScroller = combined.includes('Side Scroller');
+
+    if (hasSideview && hasSideScroller) {
+      combined = combined.filter((item) => item !== 'Sideview');
+    }
+
+    return combined.join(', ');
+  };
+
   // Sync external reveals (when parent marks game as revealed)
   useEffect(() => {
     if (revealedGames.includes(game.name) && !revealedTitle) {
@@ -107,7 +144,7 @@ export const GameContent: React.FC<GameContentProps> = ({
       updateGameState(game.name, {
         revealed: newRevealed,
         freeRevealed: fieldToReveal,
-        // Don't add to pointsDeducted - it's free!
+        pointsDeducted: pointsDeducted || 0, // Ensure pointsDeducted is preserved
       });
     }
   }, [
@@ -171,6 +208,13 @@ export const GameContent: React.FC<GameContentProps> = ({
     return total;
   };
 
+  const calculateGiveUpCost = () => {
+    const revealAllFieldsCost = calculateRevealAllCost();
+    // Give up costs whatever is needed to bring earned points to 0
+    const titleDeduction = 200 - pointsDeducted - revealAllFieldsCost;
+    return revealAllFieldsCost + titleDeduction;
+  };
+
   const handleRevealAllFields = () => {
     const newRevealed = { ...revealed };
     let totalDeduction = 0;
@@ -228,7 +272,8 @@ export const GameContent: React.FC<GameContentProps> = ({
       totalDeduction += fieldDeductions.maskedTitle || 0;
     }
 
-    const titleDeduction = 100;
+    // Calculate how many points remain to deduct all of them (bring earned points to 0)
+    const titleDeduction = 200 - pointsDeducted - totalDeduction;
     const totalWithTitle = totalDeduction + titleDeduction;
 
     updateGameState(game.name, {
@@ -268,7 +313,13 @@ export const GameContent: React.FC<GameContentProps> = ({
                   exit={{ opacity: 0 }}
                   transition={{ duration: 0.15 }}
                 >
-                  <span className='font-semibold'>
+                  <span
+                    className={`font-semibold ${
+                      game.freeReveal === 'meta' && field === 'details'
+                        ? 'text-green-500'
+                        : ''
+                    }`}
+                  >
                     {getFieldDisplayName(field)}:
                   </span>
                   <button
@@ -278,6 +329,22 @@ export const GameContent: React.FC<GameContentProps> = ({
                     Reveal (-{fieldDeductions[field] || 0}pts.)
                   </button>
                 </motion.div>
+              ) : isFreeReveal(field) ? (
+                // Free reveal - no animation
+                <div key='revealed-content' className='w-full'>
+                  <span
+                    className={`font-semibold ${
+                      game.freeReveal === 'meta' && field === 'details'
+                        ? 'text-green-500'
+                        : ''
+                    }`}
+                  >
+                    {getFieldDisplayName(field)}:{' '}
+                  </span>
+                  <span ref={detailsRef} className='text-yellow-500'>
+                    {getFilteredDetails()}
+                  </span>
+                </div>
               ) : (
                 <motion.div
                   key='revealed-content'
@@ -292,13 +359,17 @@ export const GameContent: React.FC<GameContentProps> = ({
                     opacity: { duration: 0.1, ease: 'easeOut' },
                   }}
                 >
-                  <span className='font-semibold'>
+                  <span
+                    className={`font-semibold ${
+                      game.freeReveal === 'meta' && field === 'details'
+                        ? 'text-green-500'
+                        : ''
+                    }`}
+                  >
                     {getFieldDisplayName(field)}:{' '}
                   </span>
                   <span ref={detailsRef} className='text-yellow-500'>
-                    {[...(game.other || []), ...(game.details || [])].join(
-                      ', ',
-                    )}
+                    {getFilteredDetails()}
                   </span>
                 </motion.div>
               )}
@@ -311,7 +382,13 @@ export const GameContent: React.FC<GameContentProps> = ({
           >
             {field === 'screenshot' ? (
               <>
-                <span className='font-semibold'>
+                <span
+                  className={`font-semibold ${
+                    game.freeReveal === 'ss' && field === 'screenshot'
+                      ? 'text-green-500'
+                      : ''
+                  }`}
+                >
                   {getFieldDisplayName(field)}:
                 </span>
                 <AnimatePresence mode='wait' initial={false}>
@@ -326,8 +403,24 @@ export const GameContent: React.FC<GameContentProps> = ({
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.2 }}
                     >
-                      Reveal (-50pts.)
+                      Reveal (-{fieldDeductions['screenshot'] || 0}pts.)
                     </motion.button>
+                  ) : isFreeReveal('screenshot') ? (
+                    // Free reveal - no animation
+                    <button
+                      key='show-btn'
+                      className='text-yellow-500 hover:text-yellow-300 focus:outline-none disabled:text-gray-400 bg-transparent border-none p-0 cursor-pointer text-sm flex items-center gap-1'
+                      onClick={() => setShowScreenshot(true)}
+                      type='button'
+                    >
+                      <MagnifyingGlassIcon className='w-4 h-4' />
+                      <span
+                        className='underline'
+                        style={{ textDecorationStyle: 'dashed' }}
+                      >
+                        [Click to view screenshot]
+                      </span>
+                    </button>
                   ) : (
                     <motion.button
                       key='show-btn'
@@ -421,7 +514,14 @@ export const GameContent: React.FC<GameContentProps> = ({
               </>
             ) : (
               <>
-                <span className='font-semibold'>
+                <span
+                  className={`font-semibold ${
+                    (game.freeReveal === 'pub' && field === 'publishers') ||
+                    (game.freeReveal === 'platforms' && field === 'platforms')
+                      ? 'text-green-500'
+                      : ''
+                  }`}
+                >
                   {getFieldDisplayName(field)}:
                 </span>
                 <AnimatePresence mode='wait' initial={false}>
@@ -437,6 +537,13 @@ export const GameContent: React.FC<GameContentProps> = ({
                     >
                       Reveal (-{fieldDeductions[field] || 0}pts.)
                     </motion.button>
+                  ) : isFreeReveal(field) ? (
+                    // Free reveal - no animation
+                    <span key='reveal-text' className='text-yellow-500'>
+                      {Array.isArray(game[field as keyof Game])
+                        ? (game[field as keyof Game] as string[]).join(', ')
+                        : String(game[field as keyof Game])}
+                    </span>
                   ) : (
                     <motion.span
                       key='reveal-text'
@@ -492,7 +599,7 @@ export const GameContent: React.FC<GameContentProps> = ({
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
           >
-            Give Up (-100 pts.)
+            Give Up (-{calculateGiveUpCost()} pts.)
           </motion.button>
         </div>
       ) : null}

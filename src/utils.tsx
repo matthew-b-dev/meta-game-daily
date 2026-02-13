@@ -1,6 +1,6 @@
 import type { Game } from './types';
 import type { ReactNode } from 'react';
-import { DATE_OVERRIDE, DEMO_DAYS, SUNDAY_SHUFFLE_DEMO_DAYS } from './demos';
+import { DATE_OVERRIDE, DEMO_DAYS } from './demos';
 
 export const MAX_REVIEW_RANK = 50;
 
@@ -15,6 +15,8 @@ export const CLOSE_GUESS_SERIES = [
   'hellblade',
   'deus ex',
   'south park',
+  'battlefield',
+  'tropico',
 ];
 
 export interface SubtitleConfig {
@@ -42,7 +44,7 @@ export const getSubtitle = (): SubtitleConfig => {
         </div>
       </div>
     ),
-    animated: true,
+    animated: false,
   };
 };
 
@@ -76,88 +78,14 @@ export interface SessionState {
 }
 
 const STORAGE_KEY = 'meta-game-daily-state';
-
-// Shuffle game state interface (without puzzleDate - stored at root level)
-export interface ShuffleGameState {
-  currentRound: number;
-  isRoundComplete: boolean;
-  currentOrder: Array<{ id: string; name: string }>;
-  frozenIds: string[];
-  missedGuessesByRound: number[]; // Track missed guesses for each round (index = round number)
-  scoreSent: boolean; // Track if the score has been sent to the database
-  viewingRound?: number; // Track which round user is viewing after completion
-}
+const CURRENT_GAME_VERSION = '1.1';
 
 // Unified storage structure for all game types
 export interface UnifiedGameState {
+  gameVersion: string;
   puzzleDate: string;
   guessingGame?: Omit<SessionState, 'puzzleDate'>;
-  shuffleGame?: ShuffleGameState;
 }
-
-/**
- * Load shuffle game state from localStorage
- */
-export const loadShuffleGameState = (
-  currentPuzzleDate: string,
-): ShuffleGameState | null => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return null;
-
-    const unifiedState: UnifiedGameState = JSON.parse(saved);
-
-    // Only restore if it's the same puzzle date
-    if (unifiedState.puzzleDate !== currentPuzzleDate) {
-      return null;
-    }
-
-    return unifiedState.shuffleGame || null;
-  } catch (error) {
-    console.error('Failed to load shuffle game state:', error);
-    return null;
-  }
-};
-
-/**
- * Save shuffle game state to localStorage
- */
-export const saveShuffleGameState = (
-  puzzleDate: string,
-  state: ShuffleGameState,
-): void => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    const unifiedState: UnifiedGameState = saved
-      ? JSON.parse(saved)
-      : { puzzleDate };
-
-    // Update puzzle date and shuffle game state
-    unifiedState.puzzleDate = puzzleDate;
-    unifiedState.shuffleGame = state;
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
-  } catch (error) {
-    console.error('Failed to save shuffle game state:', error);
-  }
-};
-
-/**
- * Clear shuffle game state from localStorage (keeps guessing game state)
- */
-export const clearShuffleGameState = (): void => {
-  try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return;
-
-    const unifiedState: UnifiedGameState = JSON.parse(saved);
-    delete unifiedState.shuffleGame;
-
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(unifiedState));
-  } catch (error) {
-    console.error('Failed to clear shuffle game state:', error);
-  }
-};
 
 /**
  * Calculate Levenshtein distance between two strings
@@ -276,126 +204,37 @@ export const loadGameState = (
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const unifiedState: any = JSON.parse(saved);
 
+    // Check game version - reset if missing or outdated
+    if (
+      !unifiedState.gameVersion ||
+      unifiedState.gameVersion !== CURRENT_GAME_VERSION
+    ) {
+      console.log('Game version mismatch or missing. Resetting localStorage.');
+      // Clear all meta-game related localStorage items
+      const keysToRemove: string[] = [];
+      for (let i = 0; i < localStorage.length; i++) {
+        const key = localStorage.key(i);
+        if (key && key.startsWith('meta-game')) {
+          keysToRemove.push(key);
+        }
+      }
+      keysToRemove.forEach((key) => localStorage.removeItem(key));
+      return null;
+    }
+
     // Only restore if it's the same puzzle date
     if (unifiedState.puzzleDate !== currentPuzzleDate) {
       localStorage.removeItem(STORAGE_KEY);
       return null;
     }
 
-    // If old format (SessionState directly), migrate it
-    if (unifiedState.score !== undefined && !unifiedState.guessingGame) {
-      // Migrate old missedGuesses format (string[]) to new format (MissedGuess[])
-      if (unifiedState.missedGuesses && unifiedState.missedGuesses.length > 0) {
-        if (typeof unifiedState.missedGuesses[0] === 'string') {
-          unifiedState.missedGuesses = unifiedState.missedGuesses.map(
-            (name: string) => ({
-              name,
-              isClose: false,
-            }),
-          );
-        }
-      }
-
-      // Migrate gameStates: remove old reveal fields and recalculate pointsDeducted
-      if (unifiedState.gameStates) {
-        const validFields = ['meta', 'publishers', 'screenshot'];
-        const currentCosts: { [key: string]: number } = {
-          maskedTitle: 20,
-          meta: 40,
-          publishers: 10,
-          screenshot: 50,
-        };
-
-        Object.keys(unifiedState.gameStates).forEach((gameName) => {
-          const gameState = unifiedState.gameStates[gameName];
-
-          // Clean up revealed object - keep only valid fields
-          const cleanedRevealed: { [key: string]: boolean } = {};
-          let recalculatedPoints = 0;
-
-          Object.keys(gameState.revealed || {}).forEach((field) => {
-            if (validFields.includes(field)) {
-              cleanedRevealed[field] = true;
-              recalculatedPoints += currentCosts[field] || 0;
-            }
-          });
-
-          // Add maskedTitle points if revealed
-          if (gameState.revealedMaskedTitle) {
-            recalculatedPoints += currentCosts.maskedTitle || 0;
-          }
-
-          // Add title reveal points if revealed (always 100)
-          if (gameState.revealedTitle) {
-            recalculatedPoints = 200; // Title reveal sets to max deduction
-          }
-
-          gameState.revealed = cleanedRevealed;
-          gameState.pointsDeducted = recalculatedPoints;
-        });
-      }
-
-      return unifiedState as SessionState;
-    }
-
-    // New unified format
+    // Restore unified format
     if (!unifiedState.guessingGame) return null;
 
-    const state = {
+    return {
       puzzleDate: unifiedState.puzzleDate,
       ...unifiedState.guessingGame,
-    };
-
-    // Migrate old missedGuesses format (string[]) to new format (MissedGuess[])
-    if (state.missedGuesses && state.missedGuesses.length > 0) {
-      if (typeof state.missedGuesses[0] === 'string') {
-        state.missedGuesses = state.missedGuesses.map((name: string) => ({
-          name,
-          isClose: false,
-        }));
-      }
-    }
-
-    // Migrate gameStates: remove old reveal fields and recalculate pointsDeducted
-    if (state.gameStates) {
-      const validFields = ['meta', 'publishers', 'screenshot'];
-      const currentCosts: { [key: string]: number } = {
-        maskedTitle: 20,
-        meta: 40,
-        publishers: 10,
-        screenshot: 50,
-      };
-
-      Object.keys(state.gameStates).forEach((gameName) => {
-        const gameState = state.gameStates[gameName];
-
-        // Clean up revealed object - keep only valid fields
-        const cleanedRevealed: { [key: string]: boolean } = {};
-        let recalculatedPoints = 0;
-
-        Object.keys(gameState.revealed || {}).forEach((field) => {
-          if (validFields.includes(field)) {
-            cleanedRevealed[field] = true;
-            recalculatedPoints += currentCosts[field] || 0;
-          }
-        });
-
-        // Add maskedTitle points if revealed
-        if (gameState.revealedMaskedTitle) {
-          recalculatedPoints += currentCosts.maskedTitle || 0;
-        }
-
-        // Add title reveal points if revealed (always 100)
-        if (gameState.revealedTitle) {
-          recalculatedPoints = 200; // Title reveal sets to max deduction
-        }
-
-        gameState.revealed = cleanedRevealed;
-        gameState.pointsDeducted = recalculatedPoints;
-      });
-    }
-
-    return state as SessionState;
+    } as SessionState;
   } catch (error) {
     console.error('Failed to load game state:', error);
     return null;
@@ -410,9 +249,10 @@ export const saveGameState = (state: SessionState): void => {
     const saved = localStorage.getItem(STORAGE_KEY);
     const unifiedState: UnifiedGameState = saved
       ? JSON.parse(saved)
-      : { puzzleDate: state.puzzleDate };
+      : { gameVersion: CURRENT_GAME_VERSION, puzzleDate: state.puzzleDate };
 
-    // Update puzzle date and guessing game state
+    // Update version, puzzle date and guessing game state
+    unifiedState.gameVersion = CURRENT_GAME_VERSION;
     unifiedState.puzzleDate = state.puzzleDate;
     // eslint-disable-next-line @typescript-eslint/no-unused-vars, no-unused-vars
     const { puzzleDate, ...guessingGameState } = state;
@@ -552,121 +392,6 @@ export const getDailyGames = (
 
   return result.slice(0, count);
   */
-};
-
-// Shuffle array deterministically
-function shuffleArray<T>(arr: T[], seed: number): T[] {
-  const shuffled = arr.slice();
-  let h = seed;
-  for (let i = shuffled.length - 1; i > 0; i--) {
-    h = (h * 31 + i) % 100000;
-    const j = h % (i + 1);
-    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-  }
-  return shuffled;
-}
-
-// Helper for releaseYear variant
-const getReleaseYearVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with reviewRank < 30
-  const eligible = allGames.filter((g) => g.reviewRank < 33);
-  // Group by releaseYear
-  const byYear: { [year: number]: Game[] } = {};
-  for (const game of eligible) {
-    if (!byYear[game.releaseYear]) byYear[game.releaseYear] = [];
-    byYear[game.releaseYear].push(game);
-  }
-  // Get unique years, sort them
-  const years = Object.keys(byYear)
-    .map(Number)
-    .sort((a, b) => a - b);
-  // Shuffle years deterministically
-  const shuffledYears = shuffleArray(years, hash);
-  // Pick up to 5 years, and from each, pick one game deterministically
-  const result: Game[] = [];
-  let seed = hash;
-  for (const year of shuffledYears.slice(0, 5)) {
-    const games = byYear[year];
-    if (games.length > 0) {
-      const shuffledGames = shuffleArray(games, seed);
-      result.push(shuffledGames[0]);
-      seed += 1;
-    }
-  }
-  return result;
-};
-
-// Helper for score variant
-const getScoreVariant = (allGames: Game[], hash: number): Game[] => {
-  // Filter games with score and reviewRank < 30
-  const eligible = allGames.filter((g) => g.score != null && g.reviewRank < 30);
-  // Sort by score
-  const sorted = eligible.sort(
-    (a, b) => parseInt(a.score || '0', 10) - parseInt(b.score || '0', 10),
-  );
-  // Try to find 5 games with scores at least 2 apart
-  let attempt = 0;
-  while (attempt < 10) {
-    const shuffled = shuffleArray(sorted, hash + attempt);
-    const selected: Game[] = [];
-    for (const game of shuffled) {
-      const gameScore = parseInt(game.score || '0', 10);
-      if (
-        selected.every(
-          (s) => Math.abs(parseInt(s.score || '0', 10) - gameScore) >= 2,
-        )
-      ) {
-        selected.push(game);
-        if (selected.length === 5) return selected;
-      }
-    }
-    attempt++;
-  }
-  // Fallback: return first 5 shuffled
-  return shuffleArray(sorted, hash).slice(0, 5);
-};
-
-// Helper for hltb variant
-const getHltbVariant = (allGames: Game[], hash: number): Game[] => {
-  return [];
-};
-
-/**
- * Deterministically select 5 games for Sunday Shuffle
- */
-export const getSundayShuffleGames = (
-  allGames: Game[],
-  variant: 'score' | 'releaseYear' | 'hltb',
-  dateOverride?: string,
-): Game[] => {
-  const utcDate = dateOverride || getUtcDateString();
-
-  // Check if this is a demo day with hardcoded games
-  if (SUNDAY_SHUFFLE_DEMO_DAYS[utcDate]) {
-    const demoGameTitles = SUNDAY_SHUFFLE_DEMO_DAYS[utcDate];
-    const demoGames = demoGameTitles
-      .map((title) => allGames.find((g) => g.name === title))
-      .filter((g): g is Game => g !== undefined);
-
-    if (demoGames.length >= 5) {
-      return demoGames.slice(0, 5);
-    }
-    // If demo games not found in allGames, fall through to normal logic
-  }
-
-  // Simple hash function
-  let hash = 0;
-  for (let i = 0; i < utcDate.length; i++) {
-    hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
-  }
-
-  if (variant === 'releaseYear') {
-    return getReleaseYearVariant(allGames, hash);
-  } else if (variant === 'score') {
-    return getScoreVariant(allGames, hash);
-  } else {
-    return getHltbVariant(allGames, hash);
-  }
 };
 
 /**
@@ -924,6 +649,7 @@ export const createGameStateUpdater = (
           state.revealedMaskedTitle ??
           prev[gameName]?.revealedMaskedTitle ??
           false,
+        freeRevealed: state.freeRevealed ?? prev[gameName]?.freeRevealed,
       },
     }));
   };
