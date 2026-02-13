@@ -1826,7 +1826,7 @@ export const gameDetails: Game[] = [
   },
   {
     score: '100',
-    name: 'God of War Ragnarök',
+    name: 'God of War Ragnarok',
     platforms: 'PS4, PS5, PC',
     genres: 'RPG, Action',
     releaseDate: 'Nov 9',
@@ -1866,8 +1866,8 @@ export const gameDetails: Game[] = [
       'Souls-like',
     ],
     other: [],
-    processed: false,
-    refined: false,
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -1882,7 +1882,7 @@ export const gameDetails: Game[] = [
     publishers: ['WB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc5r98.jpg',
-    details: ['Action', 'Sideview', 'Side Scroller', 'Fighting'],
+    details: [],
     meta: [
       'Fighting',
       'Gore',
@@ -1905,10 +1905,10 @@ export const gameDetails: Game[] = [
       '2.5D',
       'Horror',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: ['2.5D', '2D Fighter', 'Fighting', 'Arcade', 'Story Rich'],
+    processed: true,
+    refined: true,
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -2395,8 +2395,8 @@ export const gameDetails: Game[] = [
     ],
     other: ['Assassin', 'FPS', 'Heist', 'Parkour'],
     processed: true,
-    refined: false,
-    freeReveal: '',
+    refined: true,
+    freeReveal: 'ss',
   },
   {
     score: '100',
@@ -5789,7 +5789,7 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc991b.jpg',
-    details: ['Point+click', 'Adventure', 'Thirdperson', 'Puzzle elements'],
+    details: ['Adventure', 'Thirdperson', 'Puzzle elements'],
     meta: [
       'Choices Matter',
       'Story Rich',
@@ -5812,10 +5812,16 @@ export const gameDetails: Game[] = [
       'Mature',
       'Supernatural',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: [
+      'Choices Matter',
+      'Drama',
+      'Emotional',
+      'Multiple Endings',
+      'Mystery',
+    ],
+    processed: true,
+    refined: true,
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -6169,7 +6175,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['2D', 'Bullet Hell', 'Choices Matter', 'Comedy', 'Cute', 'Dark'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -7838,8 +7844,8 @@ export const gameDetails: Game[] = [
     ],
     other: ['City Builder', 'Sandbox', 'Realistic', 'Economy'],
     processed: true,
-    refined: false,
-    freeReveal: '',
+    refined: true,
+    freeReveal: 'ss',
   },
   {
     score: '100',
@@ -8627,13 +8633,7 @@ export const gameDetails: Game[] = [
     publishers: ['Double Fine Productions', 'Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8g23.jpg',
-    details: [
-      'Platformer',
-      'Behind-Overhead Perspective',
-      'Thirdperson',
-      'Action',
-      'Puzzle elements',
-    ],
+    details: ['Action', 'Puzzle elements'],
     meta: [
       '3D Platformer',
       'Story Rich',
@@ -8656,9 +8656,9 @@ export const gameDetails: Game[] = [
       'Controller',
       'LGBTQ+',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Psychedelic', '3D Platformer', 'Surreal'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -9110,7 +9110,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['Mechs', 'Parkour'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {

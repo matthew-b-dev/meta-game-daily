@@ -17,6 +17,8 @@ export const CLOSE_GUESS_SERIES = [
   'south park',
   'battlefield',
   'tropico',
+  'god of war',
+  'titanfall',
 ];
 
 export interface SubtitleConfig {

@@ -150,9 +150,16 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Rogue Legacy',
     'Goat Simulator',
   ],
+  '2026-02-14': [
+    'God of War Ragnarok',
+    'Mortal Kombat 11',
+    'Thief',
+    'Psychonauts 2',
+    'Titanfall 2',
+  ],
 
   /*
-  Battlefield 1
+  
   Journey to the Savage Planet
   Risk of Rain
   Gone Home
