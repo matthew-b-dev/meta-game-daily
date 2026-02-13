@@ -25,7 +25,7 @@ const Feb2026BalancingBanner: React.FC<Feb2026BalancingBannerProps> = ({
         </div>
         <div>
           <strong>TLDR:</strong> Genre/Game Details information has been{' '}
-          <b>significantly</b> enriched. The concept of "Free" reveals has been
+          <b>significantly</b> expanded. The concept of "Free" reveals has been
           introduced. Games that are lesser-known will appear much more often,
           typically with a free reveal.
         </div>
