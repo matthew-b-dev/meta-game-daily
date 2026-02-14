@@ -157,6 +157,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Psychonauts 2',
     'Titanfall 2',
   ],
+  '2026-02-15': [
+    'The Thaumaturge',
+    'Silent Hill 2',
+    'Fallout 76',
+    'The Elder Scrolls Online',
+    'Bloodstained: Ritual of the Night',
+  ],
 
   /*
   
@@ -164,6 +171,8 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   Risk of Rain
   Gone Home
   Cocoon
+  Moss
+  Evil Genius 2: World Domination
   */
 };
 
