@@ -161,7 +161,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'The Thaumaturge',
     'Silent Hill 2',
     'Fallout 76',
-    'The Elder Scrolls Online',
+    'Cocoon',
     'Bloodstained: Ritual of the Night',
   ],
 
@@ -173,6 +173,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   Cocoon
   Moss
   Evil Genius 2: World Domination
+  The Elder Scrolls Online
   */
 };
 
