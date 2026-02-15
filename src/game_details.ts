@@ -9183,7 +9183,7 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schdn0.jpg',
-    details: ['Isometric', 'Side Scroller', 'Platformer', 'Puzzle elements'],
+    details: ['Isometric', 'Platformer', 'Puzzle elements'],
     meta: [
       'Adventure',
       'Puzzle',
@@ -9206,7 +9206,7 @@ export const gameDetails: Game[] = [
       'Action',
       'Short',
     ],
-    other: ['Puzzle', 'Exploration', 'Indie', '3D', 'Isometric'],
+    other: ['Puzzle', 'Exploration', 'Indie', '3D'],
     processed: true,
     refined: true,
     freeReveal: 'ss',
