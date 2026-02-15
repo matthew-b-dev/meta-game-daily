@@ -276,7 +276,6 @@ const GuessingGame = () => {
   const handleGiveUp = () => {
     setGuessesLeft(0);
     setShowGiveUpConfirm(false);
-    toast.error('Game ended. All remaining games revealed.');
   };
 
   const handleCopyToShare = async () => {

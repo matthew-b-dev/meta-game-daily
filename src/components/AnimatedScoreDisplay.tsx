@@ -666,10 +666,6 @@ const AnimatedScoreDisplay: React.FC<AnimatedScoreDisplayProps> = ({
                 type='scatter'
                 height={Math.max(120, 80 + yBound * 18)}
               />
-              <div className='flex justify-between text-[14px] text-gray-500 mt-[-4px]'>
-                <span>Worst</span>
-                <span>Best</span>
-              </div>
             </motion.div>
           )}
         </AnimatePresence>
