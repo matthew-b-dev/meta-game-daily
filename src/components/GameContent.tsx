@@ -467,6 +467,7 @@ export const GameContent: React.FC<GameContentProps> = ({
                             ? 'brightness-[1.5] md:brightness-125'
                             : ''
                         }`}
+                        onContextMenu={(e) => e.preventDefault()}
                       />
                       <button
                         className='flex items-center gap-2 mt-4 px-4 py-2 rounded font-bold bg-gray-700 hover:bg-gray-600 text-white text-sm'

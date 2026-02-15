@@ -21,6 +21,7 @@ export const CLOSE_GUESS_SERIES = [
   'titanfall',
   'silent hill',
   'elder scrolls',
+  'fallout',
 ];
 
 export interface SubtitleConfig {
