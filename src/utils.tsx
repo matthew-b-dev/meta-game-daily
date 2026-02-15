@@ -6,7 +6,7 @@ export const MAX_REVIEW_RANK = 50;
 
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES = [
-  'super mario',
+  'mario',
   'final fantasy',
   'the legend of zelda',
   'street fighter',
@@ -22,6 +22,7 @@ export const CLOSE_GUESS_SERIES = [
   'silent hill',
   'elder scrolls',
   'fallout',
+  'rock band',
 ];
 
 export interface SubtitleConfig {

@@ -164,16 +164,23 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Cocoon',
     'Bloodstained: Ritual of the Night',
   ],
+  '2026-02-16': [
+    'Rock Band 4',
+    'The Elder Scrolls Online',
+    'The Forgotten City',
+    'Frostpunk 2',
+    'Cuphead',
+  ],
 
   /*
-  
+  Final Fantasy XVI
+  Tyranny
   Journey to the Savage Planet
   Risk of Rain
   Gone Home
-  Cocoon
+  Dragon's Dogma II
   Moss
   Evil Genius 2: World Domination
-  The Elder Scrolls Online
   */
 };
 
