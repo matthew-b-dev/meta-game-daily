@@ -171,6 +171,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Frostpunk 2',
     'Cuphead',
   ],
+  '2026-02-17': [
+    'Streets of Rage 4',
+    'Ori and the Blind Forest',
+    "Dragon's Dogma II",
+    'Risk of Rain',
+    'Titanfall',
+  ],
 
   /*
   Final Fantasy XVI
@@ -178,9 +185,9 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   Journey to the Savage Planet
   Risk of Rain
   Gone Home
-  Dragon's Dogma II
   Moss
   Evil Genius 2: World Domination
+  Wolfenstein: The New Order
   */
 };
 

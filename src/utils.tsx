@@ -23,6 +23,8 @@ export const CLOSE_GUESS_SERIES = [
   'elder scrolls',
   'fallout',
   'rock band',
+  'ori and',
+  "dragon's dogma",
 ];
 
 export interface SubtitleConfig {

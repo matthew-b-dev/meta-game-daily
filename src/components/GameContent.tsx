@@ -461,7 +461,7 @@ export const GameContent: React.FC<GameContentProps> = ({
                     >
                       <img
                         src={game.screenshotUrl}
-                        alt={game.name + ' screenshot'}
+                        alt={'mystery game screenshot'}
                         className={`object-contain max-h-[80vh] max-w-[90vw] rounded ${
                           game.brightenImage
                             ? 'brightness-[1.5] md:brightness-125'
