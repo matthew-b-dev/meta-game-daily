@@ -178,16 +178,20 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Risk of Rain',
     'Titanfall',
   ],
+  '2026-02-18': [
+    'For Honor',
+    'Darkest Dungeon',
+    'Octopath Traveler',
+    'Star Wars Battlefront',
+    'Star Fox Zero',
+  ],
 
   /*
   Final Fantasy XVI
   Tyranny
   Journey to the Savage Planet
-  Risk of Rain
-  Gone Home
   Moss
   Evil Genius 2: World Domination
-  Wolfenstein: The New Order
   */
 };
 

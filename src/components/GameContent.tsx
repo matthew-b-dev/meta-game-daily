@@ -348,7 +348,7 @@ export const GameContent: React.FC<GameContentProps> = ({
               ) : (
                 <motion.div
                   key='revealed-content'
-                  className='w-full overflow-hidden'
+                  className='w-full'
                   initial={{ height: 0, opacity: 0 }}
                   animate={{
                     height: detailsHeight,
