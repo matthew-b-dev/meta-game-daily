@@ -25,6 +25,9 @@ export const CLOSE_GUESS_SERIES = [
   'rock band',
   'ori and',
   "dragon's dogma",
+  'life is strange',
+  'star wars',
+  'pikmin',
 ];
 
 export interface SubtitleConfig {

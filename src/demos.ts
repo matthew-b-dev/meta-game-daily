@@ -185,9 +185,16 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Star Wars Battlefront',
     'Star Fox Zero',
   ],
+  '2026-02-19': [
+    'State of Decay 2',
+    'Life is Strange: True Colors',
+    'Star Wars Jedi: Fallen Order',
+    'Pentiment',
+    'Pikmin 4',
+  ],
 
   /*
-  Final Fantasy XVI
+  Final Fantasy XVI  
   Tyranny
   Journey to the Savage Planet
   Moss
