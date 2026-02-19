@@ -28,6 +28,8 @@ export const CLOSE_GUESS_SERIES = [
   'life is strange',
   'star wars',
   'pikmin',
+  'remnant',
+  'lego',
 ];
 
 export interface SubtitleConfig {

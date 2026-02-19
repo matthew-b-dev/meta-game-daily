@@ -192,13 +192,17 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Pentiment',
     'Pikmin 4',
   ],
+  '2026-02-20': [
+    'Dying Light 2: Stay Human',
+    'Remnant II',
+    'Undertale',
+    'OlliOlli World',
+    'LEGO Marvel Super Heroes 2',
+  ],
 
   /*
-  Final Fantasy XVI  
-  Tyranny
-  Journey to the Savage Planet
-  Moss
-  Evil Genius 2: World Domination
+  
+  Stardew Valley
   */
 };
 
