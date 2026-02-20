@@ -199,11 +199,13 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'OlliOlli World',
     'LEGO Marvel Super Heroes 2',
   ],
-
-  /*
-  
-  Stardew Valley
-  */
+  '2026-02-21': [
+    'Trine 4: The Nightmare Prince',
+    'Stardew Valley',
+    'Celeste',
+    "Dragon's Dogma: Dark Arisen",
+    'Gotham Knights',
+  ],
 };
 
 /**

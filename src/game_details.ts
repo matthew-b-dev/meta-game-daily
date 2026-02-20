@@ -3165,8 +3165,8 @@ export const gameDetails: Game[] = [
     other: ['Beautiful', 'Fantasy', 'Indie', 'Puzzle Platformer'],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
     brightenImage: true,
+    freeReveal: '',
   },
   {
     score: '100',
@@ -5081,7 +5081,7 @@ export const gameDetails: Game[] = [
     meta: ['Action RPG'],
     other: ['Medieval', 'Magic', 'Open World'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -5311,6 +5311,7 @@ export const gameDetails: Game[] = [
     other: ['2.5D', '3D Platformer', 'Skateboarding', 'Stylized'],
     processed: true,
     refined: true,
+    freeReveal: '',
   },
   {
     score: '100',
@@ -9111,8 +9112,8 @@ export const gameDetails: Game[] = [
     developers: ['WB Games Montréal'],
     publishers: ['WB Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8i4t.jpg',
-    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Sandbox'],
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1496790/ss_996d4fa00226f51d973261ac1d4b85a809ba653b.600x338.jpg',
+    details: ['RPG', 'Behind-Overhead Perspective', 'Sandbox'],
     meta: [
       'Open World',
       'Action',
@@ -9135,9 +9136,9 @@ export const gameDetails: Game[] = [
       'Character Customization',
       'Atmospheric',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Action RPG', 'Co-op', 'Crime', 'Open World'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -14660,7 +14661,7 @@ export const gameDetails: Game[] = [
     publishers: ['Maddy Makes Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/e9lk3alqutkrciksfque.jpg',
-    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
+    details: ['Side Scroller'],
     meta: [
       'Precision Platformer',
       'Difficult',
@@ -14683,10 +14684,18 @@ export const gameDetails: Game[] = [
       'Retro',
       'Exploration',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: [
+      'Difficult',
+      'Cute',
+      '2D Platformer',
+      'Indie',
+      'Story Rich',
+      'Pixel Graphics',
+    ],
+    processed: true,
+    refined: true,
+    freeReveal: 'pub',
+    brightenImage: true,
   },
   {
     score: '100',

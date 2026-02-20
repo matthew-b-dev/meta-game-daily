@@ -174,6 +174,8 @@ export const dummyGames: string[] = [
   'World of Warcraft: Warlords of Draenor',
   'Disgaea 4: A Promise Revisited',
   'Chariot',
+  'Trine 3: The Artifacts of Power',
+  'Trine 2: Complete Story',
   "Schrodinger's Cat and the Raiders of the Lost Quark",
   'The Binding of Isaac: Rebirth',
   'Guilty Gear Xrd -SIGN-',
