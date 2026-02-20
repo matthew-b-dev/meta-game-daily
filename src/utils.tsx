@@ -30,6 +30,7 @@ export const CLOSE_GUESS_SERIES = [
   'pikmin',
   'remnant',
   'lego',
+  'olliolli',
 ];
 
 export interface SubtitleConfig {

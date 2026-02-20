@@ -173,7 +173,6 @@ export const dummyGames: string[] = [
   'One Piece: Unlimited World Red',
   'World of Warcraft: Warlords of Draenor',
   'Disgaea 4: A Promise Revisited',
-  'OlliOlli',
   'Chariot',
   "Schrodinger's Cat and the Raiders of the Lost Quark",
   'The Binding of Isaac: Rebirth',
