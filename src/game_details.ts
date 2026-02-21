@@ -7787,7 +7787,7 @@ export const gameDetails: Game[] = [
     developers: ['Massive Monster'],
     publishers: ['Devolver Digital'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrh7.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sccrhc.jpg',
     details: ['Rogue-like', 'Citybuilder', 'Isometric', 'Simulation'],
     meta: [
       'Base-Building',
@@ -7814,7 +7814,7 @@ export const gameDetails: Game[] = [
     other: ['2D'],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
+    freeReveal: '',
   },
   {
     score: '100',
@@ -9216,10 +9216,15 @@ export const gameDetails: Game[] = [
       'Adventure',
       'Supernatural',
     ],
-    other: ['Adventure', 'Immersive Sim'],
+    other: [
+      'Immersive Sim',
+      'Psychological Horror',
+      'Survival Horror',
+      'Stealth',
+    ],
     processed: true,
     refined: true,
-    freeReveal: 'ss',
+    freeReveal: '',
     brightenImage: true,
   },
   {
@@ -12968,14 +12973,7 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/lykfms7zl20y2wlkaji7.jpg',
-    details: [
-      'RPG',
-      'Warfare',
-      'Stealth',
-      'Sandbox',
-      'Behind-Overhead Perspective',
-      'Action',
-    ],
+    details: ['RPG', 'Warfare', 'Stealth', 'Action'],
     meta: [
       'Open World',
       'Action',
@@ -12998,9 +12996,9 @@ export const gameDetails: Game[] = [
       'Online Co-Op',
       'Co-op',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Combat', 'Historical'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -13146,8 +13144,8 @@ export const gameDetails: Game[] = [
     developers: ['Avalanche Studios'],
     publishers: ['Square Enix'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hlaisbleevysldnefpwz.jpg',
-    details: ['Action', 'Behind-Overhead Perspective', 'Sandbox', 'Shooter'],
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/peacztvh4u20dlfpfgcv.jpg',
+    details: ['Action', 'Behind-Overhead Perspective', 'Shooter'],
     meta: [
       'Open World',
       'Action',
@@ -13170,9 +13168,9 @@ export const gameDetails: Game[] = [
       'Heist',
       'Comedy',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Destruction', 'Driving', 'Funny', 'Open World'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -14477,13 +14475,7 @@ export const gameDetails: Game[] = [
     publishers: ['Sega', 'Sega Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/vjmure5vxdeokhhtmiyj.jpg',
-    details: [
-      'Party',
-      'Arcade',
-      'Behind-Overhead Perspective',
-      'Cars',
-      'Action',
-    ],
+    details: ['Party', 'Arcade', 'Cars'],
     meta: [
       'Racing',
       'Multiplayer',
@@ -14506,9 +14498,9 @@ export const gameDetails: Game[] = [
       'Controller',
       'Anime',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Racing', 'Family Friendly', 'Action', 'Casual', 'Fast-Paced'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {

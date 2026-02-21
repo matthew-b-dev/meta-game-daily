@@ -206,7 +206,16 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     "Dragon's Dogma: Dark Arisen",
     'Gotham Knights',
   ],
+  '2026-02-22': [
+    'Just Cause 4',
+    'Team Sonic Racing',
+    'Ghost of Tsushima',
+    'Attack on Titan',
+    'Cult of the Lamb',
+  ],
 };
+
+// Tell Me Why
 
 /**
  * Sunday Shuffle demo days - hardcoded specific games for specific dates

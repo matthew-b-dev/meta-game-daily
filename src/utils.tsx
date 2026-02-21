@@ -31,6 +31,7 @@ export const CLOSE_GUESS_SERIES = [
   'remnant',
   'lego',
   'olliolli',
+  'ghost of',
 ];
 
 export interface SubtitleConfig {
