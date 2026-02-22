@@ -4558,8 +4558,8 @@ export const gameDetails: Game[] = [
       'Local Co-Op',
     ],
     other: [],
-    processed: false,
-    refined: false,
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -9279,12 +9279,7 @@ export const gameDetails: Game[] = [
     publishers: ['Codemasters'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6lza.jpg',
-    details: [
-      'Cars',
-      'Simulation',
-      'Firstperson',
-      'Behind-Overhead Perspective',
-    ],
+    details: ['Cars', 'Simulation'],
     meta: [
       'Action',
       'Adventure',
@@ -9297,9 +9292,9 @@ export const gameDetails: Game[] = [
       'Combat',
       'First-Person',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Driving', 'Racing', 'Remake'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -15287,7 +15282,13 @@ export const gameDetails: Game[] = [
       'Co-op',
       'Online Co-Op',
     ],
-    other: ['CRPG'],
+    other: [
+      'CRPG',
+      'Character Customization',
+      'Choices Matter',
+      'Party-Based RPG',
+      'Sci-fi',
+    ],
     processed: true,
     refined: true,
     freeReveal: 'meta',
@@ -15344,7 +15345,7 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/bz9npuhyu5v7t4mvq7mj.jpg',
-    details: ['RPG', 'Pirates', 'Sandbox', 'Thirdperson', 'Action'],
+    details: ['RPG', 'Sandbox', 'Thirdperson', 'Action'],
     meta: [
       'Action RPG',
       'Open World',
@@ -15367,9 +15368,9 @@ export const gameDetails: Game[] = [
       'Crafting',
       'PvE',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Exploration', 'Multiplayer', 'Open World'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -15413,7 +15414,7 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: "Senua's Saga: Hellblade II",
-    platforms: 'XBXS, PC',
+    platforms: 'XBXS, PC, PS5',
     genres: 'Action, Adventure',
     releaseDate: 'May 21',
     releaseYear: 2024,
@@ -15421,7 +15422,7 @@ export const gameDetails: Game[] = [
     developers: ['Ninja Theory'],
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88dc.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scxrs0.jpg',
     details: [
       'Action',
       'Behind-Overhead Perspective',
@@ -15451,8 +15452,8 @@ export const gameDetails: Game[] = [
       'Combat',
     ],
     other: [],
-    processed: false,
-    refined: false,
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {

@@ -213,60 +213,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Attack on Titan',
     'Cult of the Lamb',
   ],
+  '2026-02-23': [
+    'Tell Me Why',
+    'Detroit: Become Human',
+    "Senua's Saga: Hellblade II",
+    'Grid',
+    'Injustice 2',
+  ],
 };
-
-// Tell Me Why
-
-/**
- * Sunday Shuffle demo days - hardcoded specific games for specific dates
- * Format: 'YYYY-MM-DD': ['Game Title 1', 'Game Title 2', ...]
- */
-export const SUNDAY_SHUFFLE_DEMO_DAYS: { [date: string]: string[] } = {
-  // Start empty
-};
-
-/**
- * Steam Detective demo days - hardcode specific game for specific dates
- * Format: 'YYYY-MM-DD': 'Game Title'
- * Use the exact game name as it appears in steam_game_detail.ts
- */
-/*
-[Ideas]
-
-*/
-
-export const STEAM_DETECTIVE_DEMO_DAYS: {
-  [date: string]: string | { easy: string; expert: string };
-} = {
-  // Single game (easy only):
-  // '2026-02-01': 'Dota 2',
-
-  // Both easy and expert:
-  // '2026-02-02': { easy: 'Magicka', expert: 'XCOM 2' },
-
-  '2026-02-02': {
-    easy: 'My Time at Portia',
-    expert: 'ASTRONEER',
-  },
-};
-
-/* 
-
-Ideas:
-
-[Pokémon games]:
-
-'Pokémon X and Y',
-'Pokémon Omega Ruby and Alpha Sapphire',
-'Pokémon Sword and Shield',
-'Pokémon Scarlet and Violet',
-
-
-[Call of Duty Games]
-[Total War games]
-
-[Random]
-Valve 2020 Redacted Name : Half-Life Alyx
-Derek Yu (Mossmouth) Redacted Name: Spelunky 2
-
-*/
