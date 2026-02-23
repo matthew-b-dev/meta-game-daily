@@ -472,7 +472,6 @@ export const dummyGames: string[] = [
   'Has Been Heroes',
   'Fade to Silence',
   'Gorogoa',
-  'Monster Hunter Stories (2024)',
   'The Disney Afternoon Collection',
   'Songbringer',
   'The Walking Dead: A New Frontier - Episode 3 - Above the Law',

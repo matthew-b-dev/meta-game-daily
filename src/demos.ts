@@ -220,4 +220,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Grid',
     'Injustice 2',
   ],
+  '2026-02-24': [
+    'Code Vein',
+    'Kingdom Come: Deliverance',
+    'Captain Toad: Treasure Tracker',
+    'Monster Hunter Stories 2: Wings of Ruin',
+    'Dead or Alive 6',
+  ],
 };

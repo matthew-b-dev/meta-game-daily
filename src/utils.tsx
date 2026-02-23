@@ -32,6 +32,7 @@ export const CLOSE_GUESS_SERIES = [
   'lego',
   'olliolli',
   'ghost of',
+  'monster hunter',
 ];
 
 export interface SubtitleConfig {

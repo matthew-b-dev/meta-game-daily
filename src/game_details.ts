@@ -3588,8 +3588,8 @@ export const gameDetails: Game[] = [
     developers: ['Capcom'],
     publishers: ['Capcom'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kxw.jpg',
-    details: ['RPG', 'Anime', 'Thirdperson', 'JRPG'],
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kxx.jpg',
+    details: ['JRPG'],
     meta: [
       'RPG',
       'Adventure',
@@ -3612,9 +3612,17 @@ export const gameDetails: Game[] = [
       'Online Co-Op',
       'Hunting',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: [
+      '3D',
+      'Adventure',
+      'Fantasy',
+      'Dragons',
+      'RPG',
+      'Turn-Based',
+      'Story Rich',
+    ],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -6858,9 +6866,9 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/oqxhtgd7ygwxuyqxevm2.jpg',
     details: ['Action', 'Puzzle elements', 'Isometric'],
     meta: [],
-    other: ['Puzzle Platformer', '3D Platformer'],
+    other: ['Puzzle Platformer', '3D Platformer', 'Family Friendly'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -6954,7 +6962,7 @@ export const gameDetails: Game[] = [
     developers: ['Shift', 'Bandai Namco Studios'],
     publishers: ['Bandai Namco Entertainment'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cbcwrrmacd4nkdfjsisq.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ar67x.jpg',
     details: ['Anime', 'Hack+slash'],
     meta: [
       'Souls-like',
@@ -10204,8 +10212,8 @@ export const gameDetails: Game[] = [
     developers: ['Team NINJA'],
     publishers: ['Koei Tecmo Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/uapfuxkta3fxmaara71i.jpg',
-    details: ['Anime', 'Fighting', 'Side Scroller', 'Sideview', 'Action'],
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scz1el.jpg',
+    details: ['Fighting', 'Sideview', 'Action'],
     meta: [
       '3D Fighter',
       'PvP',
@@ -10228,9 +10236,9 @@ export const gameDetails: Game[] = [
       'Mature',
       'Violent',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Arcade', '3D Fighter', 'Local Multiplayer'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -12473,7 +12481,7 @@ export const gameDetails: Game[] = [
     publishers: ['Warhorse Studios', 'Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/d7xe9pzuqxeoqmrvt1me.jpg',
-    details: ['RPG', 'Medieval', 'Sandbox', 'ARPG', 'Firstperson'],
+    details: ['Medieval', 'Firstperson'],
     meta: [
       'Medieval',
       'RPG',
@@ -12496,9 +12504,9 @@ export const gameDetails: Game[] = [
       'Kickstarter',
       'Crowdfunded',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Action RPG', 'Choices Matter', 'Historical', 'Kickstarter'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
