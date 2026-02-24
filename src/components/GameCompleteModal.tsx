@@ -121,9 +121,6 @@ const GameCompleteModal: React.FC<GameCompleteModalProps> = ({
                 isLoading={scoresLoading}
               />
               <div className='w-full text-center mt-0 flex items-center justify-center gap-2'>
-                <span className='inline-flex items-center px-2 py-0.5 rounded bg-yellow-400 text-black text-xs font-bold'>
-                  NEW
-                </span>
                 <span>for PC Game Trivia ...</span>
               </div>
               <button

@@ -227,4 +227,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Monster Hunter Stories 2: Wings of Ruin',
     'Dead or Alive 6',
   ],
+  '2026-02-25': [
+    'Battleborn',
+    'WarioWare: Get It Together!',
+    'Metro Exodus',
+    'Mighty No. 9',
+    'Balan Wonderworld',
+  ],
 };

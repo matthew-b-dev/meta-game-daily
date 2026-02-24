@@ -9501,7 +9501,7 @@ export const gameDetails: Game[] = [
     publishers: ['Deep Silver'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/gharx9quvnz62udseh9r.jpg',
-    details: ['Horror', 'Stealth', 'Shooter', 'Firstperson', 'Action'],
+    details: ['Horror', 'Stealth', 'Action'],
     meta: [
       'Post-apocalyptic',
       'FPS',
@@ -9524,10 +9524,17 @@ export const gameDetails: Game[] = [
       'Multiplayer',
       'Psychological Horror',
     ],
-    other: ['Atmospheric', 'Post-apocalyptic'],
+    other: [
+      'Atmospheric',
+      'Post-apocalyptic',
+      'FPS',
+      'Trains',
+      'Survival',
+      'Exploration',
+    ],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
+    freeReveal: '',
   },
   {
     score: '100',
@@ -9625,10 +9632,11 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahwo.jpg',
     details: ['Funny', 'Party', 'Rhythm'],
     meta: [],
-    other: ['Minigames'],
+    other: ['Minigames', 'Cartoony'],
     processed: true,
     refined: true,
     freeReveal: '',
+    overrideMask: ' ********* :  *** ** ******** !',
   },
   {
     score: '100',
@@ -13953,6 +13961,7 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: 'Balan Wonderworld',
+    searchTerms: ['balon wonderworld'],
     platforms: 'Switch, PC, PS4, XB1, PS5, XBXS',
     genres: 'Action, Adventure',
     releaseDate: 'Mar 26',
@@ -13994,6 +14003,7 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: 'Battleborn',
+    overrideMask: 'B*********',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure',
     releaseDate: 'May 3',
@@ -14002,7 +14012,7 @@ export const gameDetails: Game[] = [
     developers: ['Gearbox Software'],
     publishers: ['2K Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/cl4judh7hjwvlf8ftn4r.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/qw86qfl2qtisqi5agh4l.jpg',
     details: ['RPG', 'Action', 'Firstperson', 'Shooter'],
     meta: [
       'Action',
@@ -14013,9 +14023,9 @@ export const gameDetails: Game[] = [
       'Superhero',
     ],
     other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    processed: true,
+    refined: true,
+    freeReveal: 'pub',
   },
   {
     score: '100',
