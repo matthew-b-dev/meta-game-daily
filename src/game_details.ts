@@ -4402,11 +4402,18 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc88ir.jpg',
-    details: ['RPG', 'Funny', 'Thirdperson', 'Platformer'],
+    details: [
+      'RPG',
+      'Funny',
+      'Thirdperson',
+      'Platformer',
+      'Action',
+      'Adventure',
+    ],
     meta: [],
     other: [],
-    processed: false,
-    refined: false,
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -7422,7 +7429,7 @@ export const gameDetails: Game[] = [
     publishers: ['THQ Nordic'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c4cppsgmpdr3s7gknxwu.jpg',
-    details: ['RPG', 'Behind-Overhead Perspective', 'ARPG', 'Hack+slash'],
+    details: ['Behind-Overhead Perspective', 'Hack+slash'],
     meta: [
       'Hack and Slash',
       'Action',
@@ -7445,9 +7452,16 @@ export const gameDetails: Game[] = [
       'Difficult',
       'Metroidvania',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: [
+      'Female Protagonist',
+      'Dark Fantasy',
+      'RPG',
+      'Singleplayer',
+      'Third Person',
+      'Action',
+    ],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -9730,13 +9744,7 @@ export const gameDetails: Game[] = [
     publishers: ['Shibuya Productions', 'Deep Silver', 'ININ Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc99oz.jpg',
-    details: [
-      'RPG',
-      'Sandbox',
-      'Behind-Overhead Perspective',
-      'Simulation',
-      'Puzzle elements',
-    ],
+    details: ['Sandbox'],
     meta: [
       'Adventure',
       'Action',
@@ -9758,9 +9766,9 @@ export const gameDetails: Game[] = [
       'Minigames',
       'Action-Adventure',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Martial Arts', 'Minigames', 'Quick-Time Events', 'Simulation'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -14401,7 +14409,7 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc6dk2.jpg',
-    details: ['RPG', 'Action', 'Firstperson', 'Shooter'],
+    details: ['Firstperson', 'Shooter'],
     meta: [
       'Action',
       'Co-op',
@@ -14424,9 +14432,9 @@ export const gameDetails: Game[] = [
       'Multiplayer',
       'Adventure',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['1980s', 'Action', 'Alternate History', 'Cyberpunk'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -15486,16 +15494,9 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/c68ocmmce59uz2ekembg.jpg',
-    details: [
-      'Cars',
-      'Platformer',
-      'Side Scroller',
-      'Sideview',
-      'Thirdperson',
-      'Puzzle elements',
-    ],
+    details: ['Cars', 'Platformer', 'Puzzle elements'],
     meta: [],
-    other: [],
+    other: ['3D Platformer', 'Side Scroller'],
     processed: false,
     refined: false,
     freeReveal: '',

@@ -234,4 +234,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Mighty No. 9',
     'Balan Wonderworld',
   ],
+  '2026-02-26': [
+    'Darksiders III',
+    'Shenmue III',
+    'F1 2017',
+    'Wolfenstein: Youngblood',
+    'Paper Mario: The Origami King',
+  ],
 };
