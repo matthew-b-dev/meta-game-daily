@@ -5805,7 +5805,7 @@ export const gameDetails: Game[] = [
     developers: ['Image & Form'],
     publishers: ['Image & Form'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hlhhgsefjbrire0qieh8.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/t8ulqfbirdn2ye5dsyzu.jpg',
     details: [],
     meta: [
       'Adventure',
@@ -5829,10 +5829,18 @@ export const gameDetails: Game[] = [
       '2D Platformer',
       'RPG',
     ],
-    other: ['Western', '2D Platformer', 'Female Protagonist'],
+    other: [
+      'Western',
+      '2D Platformer',
+      'Female Protagonist',
+      'Adventure',
+      'Exploration',
+      'Indie',
+      'Metroidvania',
+    ],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
+    freeReveal: '',
   },
   {
     score: '100',
@@ -7303,13 +7311,7 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bj6.jpg',
-    details: [
-      'Horror',
-      'Shooter',
-      'Rogue-like',
-      'Behind-Overhead Perspective',
-      'Action',
-    ],
+    details: [],
     meta: [
       'Action',
       'Bullet Hell',
@@ -7332,9 +7334,15 @@ export const gameDetails: Game[] = [
       'Arcade',
       'Souls-like',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: [
+      'Action Roguelike',
+      'Third-Person Shooter',
+      'Bullet Hell',
+      'Difficult',
+      'Sci-fi',
+    ],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -10309,7 +10317,7 @@ export const gameDetails: Game[] = [
     publishers: ['Feral Interactive', 'WB Games'],
     franchise: 'Mad Max',
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/fzi3zk3rabsote4axfkg.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc986t.jpg',
     details: [
       'Shooter',
       'Behind-Overhead Perspective',
@@ -11423,9 +11431,9 @@ export const gameDetails: Game[] = [
       'Arcade',
       "1990's",
     ],
-    other: ['Pixel Graphics', 'Gore', 'Top-Down Shooter'],
+    other: ['Pixel Graphics', 'Top-Down Shooter', '1980s', 'Arcade'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -13608,7 +13616,7 @@ export const gameDetails: Game[] = [
     releaseDate: 'Mar 20',
     releaseYear: 2015,
     reviewRank: 67,
-    developers: ['Nintendo SPD', 'NDCube', 'Nintendo'],
+    developers: ['Nintendo SPD', 'NDCube'],
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/joieh4iqeym6zq8zfgjk.jpg',
@@ -13637,7 +13645,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['Minigames', 'Family Friendly'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -13735,7 +13743,7 @@ export const gameDetails: Game[] = [
     publishers: ['Paradox Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc7l82.jpg',
-    details: ['Strategy', 'Point+click', 'Medieval', 'RTS', 'Isometric'],
+    details: [],
     meta: [
       'Strategy',
       'Medieval',
@@ -13758,9 +13766,9 @@ export const gameDetails: Game[] = [
       'Multiplayer',
       'Real-Time with Pause',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Grand Strategy', 'RTS', 'Political', 'Medieval'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {

@@ -8,6 +8,7 @@ export const MAX_REVIEW_RANK = 50;
 export const CLOSE_GUESS_SERIES = [
   'mario',
   'f1 ',
+  'steamworld',
   'darksiders',
   'final fantasy',
   'the legend of zelda',

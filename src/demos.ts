@@ -241,4 +241,12 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Wolfenstein: Youngblood',
     'Paper Mario: The Origami King',
   ],
+  '2026-02-27': [
+    'Mad Max',
+    'SteamWorld Dig 2',
+    'Hotline Miami 2: Wrong Number',
+    'Crusader Kings III',
+    'Mario Party 10',
+  ],
+  // Returnal
 };
