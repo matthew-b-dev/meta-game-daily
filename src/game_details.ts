@@ -328,8 +328,8 @@ export const gameDetails: Game[] = [
     developers: ['Thekla, Inc'],
     publishers: ['Thekla, Inc'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dny8nmqgpvm7ao2muywg.jpg',
-    details: ['Mystery', 'Firstperson', 'Puzzle elements'],
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/210970/ss_9c73ac83c8acfb69db6166f239fdba2ffa099b32.600x338.jpg',
+    details: ['Puzzle'],
     meta: [
       'Puzzle',
       'Exploration',
@@ -352,10 +352,10 @@ export const gameDetails: Game[] = [
       'Story Rich',
       'Beautiful',
     ],
-    other: ['Philosophical', 'Nonlinear', 'Puzzle'],
+    other: ['Indie'],
     processed: true,
     refined: true,
-    freeReveal: '',
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -4669,7 +4669,7 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scpk7u.jpg',
-    details: ['RPG', 'Isometric', 'Sideview', 'JRPG'],
+    details: ['RPG'],
     meta: [
       'RPG',
       'Turn-Based',
@@ -4692,9 +4692,9 @@ export const gameDetails: Game[] = [
       'Singleplayer',
       'Emotional',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['2.5D', 'Choices Matter', 'Fantasy', 'JRPG', 'Turn-Based Combat'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {

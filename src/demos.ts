@@ -248,5 +248,12 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Crusader Kings III',
     'Mario Party 10',
   ],
+  '2026-02-28': [
+    'Returnal',
+    'Octopath Traveler II',
+    'Xenoblade Chronicles 3',
+    'Tyranny',
+    'The Witness',
+  ],
   // Returnal
 };
