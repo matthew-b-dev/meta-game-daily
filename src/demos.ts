@@ -255,5 +255,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Tyranny',
     'The Witness',
   ],
-  // Returnal
+  '2026-03-01': [
+    'Moss',
+    'Ratchet & Clank: Rift Apart',
+    'Return to Monkey Island',
+    'World of Final Fantasy',
+    'Rage 2',
+  ],
 };

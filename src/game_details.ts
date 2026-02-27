@@ -4036,7 +4036,7 @@ export const gameDetails: Game[] = [
     publishers: ['Square Enix'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/dqlmfowjfwqg5epuziku.jpg',
-    details: ['RPG', 'Anime', 'JRPG', 'Thirdperson', 'Action'],
+    details: ['Action'],
     meta: [
       'RPG',
       'JRPG',
@@ -4056,10 +4056,17 @@ export const gameDetails: Game[] = [
       'Story Rich',
       'Family Friendly',
     ],
-    other: [],
+    other: [
+      'JRPG',
+      'Multiplayer',
+      'Open World',
+      'Turn-Based Combat',
+      'Fantasy',
+    ],
     processed: true,
     refined: true,
-    freeReveal: 'pub',
+    freeReveal: '',
+    brightenImage: true,
   },
   {
     score: '100',
@@ -8361,7 +8368,7 @@ export const gameDetails: Game[] = [
     publishers: ['Polyarc Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/utywq1dpwoxf0qbgs3zy.jpg',
-    details: ['Thirdperson', 'Puzzle elements'],
+    details: ['Thirdperson'],
     meta: [
       'VR',
       'Adventure',
@@ -8390,6 +8397,7 @@ export const gameDetails: Game[] = [
       'Indie',
       'Puzzle Platformer',
       'VR',
+      'Nature',
     ],
     processed: true,
     refined: true,
@@ -10024,8 +10032,8 @@ export const gameDetails: Game[] = [
     developers: ['Terrible Toybox'],
     publishers: ['Devolver Digital'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scgy3v.jpg',
-    details: ['Point+click', 'Funny', 'Pirates', 'Puzzle elements'],
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scixs2.jpg',
+    details: ['Pirates'],
     meta: [
       'Point & Click',
       'Adventure',
@@ -10048,9 +10056,16 @@ export const gameDetails: Game[] = [
       'Cartoony',
       'Stylized',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: [
+      '2D',
+      'Cartoony',
+      'Comedy',
+      'Choices Matter',
+      'Hand-drawn',
+      'Point & Click',
+    ],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -14950,7 +14965,7 @@ export const gameDetails: Game[] = [
     developers: ['Insomniac Games'],
     publishers: ['Sony'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bit.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scag38.jpg',
     details: [
       'Shooter',
       'Platformer',
@@ -14981,8 +14996,8 @@ export const gameDetails: Game[] = [
       'Space',
     ],
     other: [],
-    processed: false,
-    refined: false,
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -15141,14 +15156,7 @@ export const gameDetails: Game[] = [
     publishers: ['Bethesda Softworks'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kh40zjsftiaxcg6a5yfm.jpg',
-    details: [
-      'Shooter',
-      'Sandbox',
-      'Behind-Overhead Perspective',
-      'Firstperson',
-      'Cars',
-      'Action',
-    ],
+    details: [],
     meta: [
       'Action',
       'FPS',
@@ -15171,9 +15179,15 @@ export const gameDetails: Game[] = [
       'Sandbox',
       'Racing',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: [
+      'Post-apocalyptic',
+      'Open World',
+      'Sci-fi',
+      'Shooter',
+      'Vehicular Combat',
+    ],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
