@@ -262,4 +262,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'World of Final Fantasy',
     'Rage 2',
   ],
+  '2026-03-02': [
+    'Dirt Rally 2.0',
+    'Visions of Mana',
+    'Astral Chain',
+    'A Plague Tale: Innocence',
+    'Call of Duty: WWII',
+  ],
 };
