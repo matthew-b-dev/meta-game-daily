@@ -642,6 +642,8 @@ export const dummyGames: string[] = [
   'Tekken 4',
   'Tekken 5',
   'Tekken 6',
+  'Tekken 7',
+  'Dead Island',
   'Dangerous Driving',
   'Slay The Spire',
   'Age of Empires II: Definitive Edition',

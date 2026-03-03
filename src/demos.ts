@@ -269,4 +269,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'A Plague Tale: Innocence',
     'Call of Duty: WWII',
   ],
+  '2026-03-03': [
+    'Life is Strange: Double Exposure',
+    'Tekken 8',
+    'Jurassic World Evolution 2',
+    'Dead Island 2',
+    'Super Mario Maker',
+  ],
 };
