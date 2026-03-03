@@ -283,4 +283,12 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Stellar Blade',
     'The King of Fighters XIV',
   ],
+  '2026-03-05': [
+    'Mario Party Superstars',
+    'NEO: The World Ends with You',
+    'Battletoads',
+    'Enter the Gungeon',
+    'Far Cry 6',
+  ],
+  // Unicorn Overlord
 };
