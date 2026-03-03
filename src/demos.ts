@@ -276,4 +276,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Dead Island 2',
     'Super Mario Maker',
   ],
+  '2026-03-04': [
+    'Tropico 6',
+    "Assassin's Creed Valhalla",
+    'Xenoblade Chronicles 2',
+    'Stellar Blade',
+    'The King of Fighters XIV',
+  ],
 };

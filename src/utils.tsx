@@ -7,7 +7,9 @@ export const MAX_REVIEW_RANK = 50;
 // Special series/franchises where guesses containing the series name are considered "close"
 export const CLOSE_GUESS_SERIES = [
   'mario',
+  'king of fighters',
   'f1 ',
+  'assassin',
   'steamworld',
   'darksiders',
   'final fantasy',
