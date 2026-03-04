@@ -39,6 +39,7 @@ export const CLOSE_GUESS_SERIES = [
   'ghost of',
   'monster hunter',
   'wolfenstein',
+  'fire emblem',
 ];
 
 export interface SubtitleConfig {

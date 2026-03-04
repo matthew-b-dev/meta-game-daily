@@ -290,5 +290,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Enter the Gungeon',
     'Far Cry 6',
   ],
-  // Unicorn Overlord
+  '2026-03-06': [
+    'Psychonauts 2',
+    'Unicorn Overlord',
+    'Fire Emblem Warriors: Three Hopes',
+    'Star Wars: Squadrons',
+    'Killing Floor 2',
+  ],
 };
