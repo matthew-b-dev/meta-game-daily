@@ -1457,7 +1457,7 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios', 'Mojang Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc82ob.jpg',
-    details: ['RPG', 'Isometric', 'Side Scroller', 'ARPG'],
+    details: ['Isometric', 'ARPG'],
     meta: [
       'Dungeon Crawler',
       'Hack and Slash',
@@ -1480,7 +1480,7 @@ export const gameDetails: Game[] = [
       'Atmospheric',
       'Funny',
     ],
-    other: ['Loot'],
+    other: ['Loot', 'Exploration'],
     processed: true,
     refined: true,
     freeReveal: '',
@@ -2568,10 +2568,12 @@ export const gameDetails: Game[] = [
       'Multiplayer',
       'Exploration',
     ],
-    other: ['Metroidvania', '3D', '3D Platformer'],
+    other: ['Metroidvania', '3D Platformer', 'Female Protagonist'],
     processed: true,
     refined: true,
-    freeReveal: 'ss',
+    freeReveal: 'pub',
+    overrideMask: 'R*****',
+    brightenImage: true,
   },
   {
     score: '100',
@@ -4719,15 +4721,8 @@ export const gameDetails: Game[] = [
     developers: ['Marvelous', 'HAKAMA'],
     publishers: ['Marvelous', 'XSEED Games'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kx9.jpg',
-    details: [
-      'RPG',
-      'Anime',
-      'Management',
-      'ARPG',
-      'Thirdperson',
-      'Simulation',
-    ],
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8kxa.jpg',
+    details: ['RPG', 'Anime', 'Management', 'Thirdperson'],
     meta: [
       'RPG',
       'Farming Sim',
@@ -4750,10 +4745,9 @@ export const gameDetails: Game[] = [
       'JRPG',
       'Farming',
     ],
-    other: ['Farming Sim'],
+    other: ['Life Sim', 'Farming Sim', 'Fantasy'],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -8706,7 +8700,7 @@ export const gameDetails: Game[] = [
     publishers: ['Sony'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8bjj.jpg',
-    details: ['Action', 'Thirdperson', 'Platformer', 'Puzzle elements'],
+    details: ['Puzzle elements'],
     meta: [
       'Adventure',
       'Multiplayer',
@@ -8729,10 +8723,17 @@ export const gameDetails: Game[] = [
       'Character Customization',
       'Sandbox',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: [
+      '3D Platformer',
+      '4 Player Local',
+      'Co-op',
+      'Casual',
+      'Cute',
+      'Sandbox',
+    ],
+    processed: true,
+    refined: true,
+    freeReveal: 'pub',
   },
   {
     score: '100',
@@ -14652,14 +14653,8 @@ export const gameDetails: Game[] = [
     developers: ['Round8 Studio'],
     publishers: ['Neowiz'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9oaa.jpg',
-    details: [
-      'RPG',
-      'Sandbox',
-      'Hack+slash',
-      'ARPG',
-      'Behind-Overhead Perspective',
-    ],
+      'https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1627720/ss_6da0465ea662d368ad4b2cf1c0812faa1d0ca317.600x338.jpg',
+    details: [],
     meta: [
       'Souls-like',
       'Action',
@@ -14682,9 +14677,9 @@ export const gameDetails: Game[] = [
       'Violent',
       'Replay Value',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['3D', 'Action RPG', 'Dark Fantasy', 'Souls-like', 'Steampunk'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {

@@ -297,4 +297,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Star Wars: Squadrons',
     'Killing Floor 2',
   ],
+  '2026-03-07': [
+    'Sackboy: A Big Adventure',
+    'Lies of P',
+    'ReCore',
+    'Rune Factory 5',
+    'Minecraft Dungeons',
+  ],
 };
