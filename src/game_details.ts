@@ -689,7 +689,7 @@ export const gameDetails: Game[] = [
     other: ['Racing', 'Platformer', 'Difficult', 'Sports'],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
+    freeReveal: 'pub',
   },
   {
     score: '100',
@@ -1392,7 +1392,7 @@ export const gameDetails: Game[] = [
     publishers: ['Thunderful Publishing'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scs086.jpg',
-    details: ['Strategy', 'RPG', 'Steampunk', 'Side Scroller', 'Sideview'],
+    details: ['Strategy', 'RPG', 'Side Scroller'],
     meta: [
       'Funny',
       'Singleplayer',
@@ -1415,10 +1415,10 @@ export const gameDetails: Game[] = [
       'Action RPG',
       'Exploration',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: ['2D', 'Singleplayer', 'Turn-Based Tactics', 'Platformer', 'RPG'],
+    processed: true,
+    refined: true,
+    freeReveal: 'meta',
   },
   {
     score: '100',
@@ -4748,6 +4748,7 @@ export const gameDetails: Game[] = [
     other: ['Life Sim', 'Farming Sim', 'Fantasy'],
     processed: true,
     refined: true,
+    freeReveal: '',
   },
   {
     score: '100',
@@ -5663,7 +5664,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['Action RPG', 'Open World', 'Anime', 'JRPG', 'Online Co-Op'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -10787,14 +10788,7 @@ export const gameDetails: Game[] = [
     publishers: ['XSEED Games', 'Marvelous', 'Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/h5bdif45vnfoo4utipbc.jpg',
-    details: [
-      'Anime',
-      'Shooter',
-      'Behind-Overhead Perspective',
-      'Thirdperson',
-      'Firstperson',
-      'Action',
-    ],
+    details: ['Anime', 'Action'],
     meta: [
       'Mechs',
       'Action',
@@ -10817,9 +10811,9 @@ export const gameDetails: Game[] = [
       'Hack and Slash',
       'Loot',
     ],
-    other: [],
-    processed: false,
-    refined: false,
+    other: ['Mechs', 'Character Customization', 'Sci-fi'],
+    processed: true,
+    refined: true,
     freeReveal: '',
   },
   {
@@ -11327,7 +11321,7 @@ export const gameDetails: Game[] = [
       'Loot',
       'Female Protagonist',
     ],
-    other: ['Dark', 'Difficult', 'Action'],
+    other: ['Dark', 'Difficult', 'Action', 'Loot'],
     processed: true,
     refined: true,
     freeReveal: '',

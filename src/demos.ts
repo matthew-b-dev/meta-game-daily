@@ -304,4 +304,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Rune Factory 5',
     'Minecraft Dungeons',
   ],
+  '2026-03-08': [
+    'Nioh 2',
+    'Daemon X Machina',
+    'Trials Rising',
+    'Final Fantasy XV',
+    'SteamWorld Heist II',
+  ],
 };

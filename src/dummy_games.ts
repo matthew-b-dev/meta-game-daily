@@ -906,7 +906,6 @@ export const dummyGames: string[] = [
   'Wavetale',
   'Say No! More',
   'Kitaria Fables',
-  'The Nioh Collection',
   'Nioh 3',
   'Deus Ex: Human Revolution',
   'Deus Ex: Invisible War',
