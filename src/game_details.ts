@@ -1601,9 +1601,9 @@ export const gameDetails: Game[] = [
       '2.5D',
     ],
     other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    processed: true,
+    refined: true,
+    freeReveal: 'pub',
   },
   {
     score: '100',
@@ -3297,7 +3297,7 @@ export const gameDetails: Game[] = [
     developers: ['DICE', 'EA Digital Illusions CE'],
     publishers: ['Electronic Arts'],
     screenshotUrl:
-      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafye.jpg',
+      'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scafyg.jpg',
     details: ['Firstperson', 'Action'],
     meta: [
       'FPS',
@@ -3868,7 +3868,7 @@ export const gameDetails: Game[] = [
     publishers: ['SFB Games'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scp62z.jpg',
-    details: ['Horror', 'Shooter', 'Isometric', 'Action', 'Puzzle elements'],
+    details: [],
     meta: [
       'Survival Horror',
       "1990's",
@@ -3891,10 +3891,18 @@ export const gameDetails: Game[] = [
       'Violent',
       'RPG',
     ],
-    other: [],
-    processed: false,
-    refined: false,
-    freeReveal: '',
+    other: [
+      'Action',
+      "1990's",
+      'Exploration',
+      'Female Protagonist',
+      'Indie',
+      'Survival Horror',
+      'Third Person',
+    ],
+    processed: true,
+    refined: true,
+    freeReveal: 'ss',
   },
   {
     score: '100',

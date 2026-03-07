@@ -311,4 +311,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Final Fantasy XV',
     'SteamWorld Heist II',
   ],
+  '2026-03-09': [
+    'Prince of Persia: The Lost Crown',
+    'Battlefield 2042',
+    'The Last of Us Part II',
+    'Crow Country',
+    'Paper Mario: Color Splash',
+  ],
 };
