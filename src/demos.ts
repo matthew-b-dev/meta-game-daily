@@ -318,4 +318,12 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Crow Country',
     'Paper Mario: Color Splash',
   ],
+  '2026-03-10': [
+    'Alien: Isolation',
+    'Dragon Quest Builders',
+    'Unravel',
+    'Outriders',
+    'Nickelodeon All-Star Brawl',
+  ],
 };
+// a
