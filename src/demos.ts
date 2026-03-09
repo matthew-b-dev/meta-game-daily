@@ -325,5 +325,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Outriders',
     'Nickelodeon All-Star Brawl',
   ],
+  '2026-03-11': [
+    "Yoshi's New Island",
+    'Call of Duty: Ghosts',
+    "Death's Door",
+    'Rollerdrome',
+    'Rayman Legends',
+  ],
 };
-// a
