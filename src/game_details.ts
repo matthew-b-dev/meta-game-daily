@@ -4943,7 +4943,7 @@ export const gameDetails: Game[] = [
     ],
     other: ['2D Fighter', '2.5D', 'Blood', 'Gore'],
     processed: true,
-    refined: false,
+    refined: true,
     freeReveal: '',
   },
   {

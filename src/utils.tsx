@@ -306,6 +306,18 @@ export const clearGameState = (): void => {
 };
 
 /**
+ * Get the real UTC date string for today, bypassing any date overrides or test routes.
+ * Always reflects the actual current UTC date.
+ */
+export const getRealUtcDateString = (): string => {
+  const now = new Date();
+  const year = now.getUTCFullYear();
+  const month = String(now.getUTCMonth() + 1).padStart(2, '0');
+  const day = String(now.getUTCDate()).padStart(2, '0');
+  return `${year}-${month}-${day}`;
+};
+
+/**
  * Get the UTC date string for the current day
  */
 export const getUtcDateString = (): string => {
@@ -349,73 +361,27 @@ export const getDailyGames = (
     if (demoGames.length > 0) {
       return demoGames;
     }
-    // If demo games not found in allGames, fall through to normal logic
+    // If demo games not found in allGames, fall through to cycling logic
   }
 
-  // Simple hash function
-  let hash = 0;
-  for (let i = 0; i < utcDate.length; i++) {
-    hash = (hash * 31 + utcDate.charCodeAt(i)) % 100000;
-  }
-
-  // Filter only refined games
-  const refinedGames = allGames.filter((game) => game.refined === true);
-
-  // Shuffle function
-  const shuffle = (arr: Game[], seed: number): Game[] => {
-    const shuffled = arr.slice();
-    let h = seed;
-    for (let i = shuffled.length - 1; i > 0; i--) {
-      h = (h * 31 + i) % 100000;
-      const j = h % (i + 1);
-      [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-    }
-    return shuffled;
-  };
-
-  // Shuffle refined games with the date hash
-  const shuffledGames = shuffle(refinedGames, hash);
-
-  // Select the requested number of games
-  return shuffledGames.slice(0, count);
-
-  /* OLD REVIEW RANK-BASED LOGIC (COMMENTED OUT)
-  // Bucket games by difficulty based on review rank
-  // Lower rank means more reviews, so more recognizable
-  const buckets = {
-    trivial: [] as Game[],
-    easy: [] as Game[],
-    medium: [] as Game[],
-    hard: [] as Game[],
-  };
-  for (const game of allGames) {
-    if (game.reviewRank < 15) {
-      buckets.trivial.push(game);
-    } else if (game.reviewRank < 27) {
-      buckets.easy.push(game);
-    } else if (game.reviewRank < 35) {
-      buckets.medium.push(game);
-    } else if (game.reviewRank < MAX_REVIEW_RANK) {
-      buckets.hard.push(game);
-    }
-  }
-
-  // Shuffle each bucket with different seeds
-  const shuffledTrivial = shuffle(buckets.trivial, hash + 5);
-  const shuffledEasy = shuffle(buckets.easy, hash + 6);
-  const shuffledMedium = shuffle(buckets.medium, hash + 7);
-  const shuffledHard = shuffle(buckets.hard, hash + 8);
-
-  // Select games: 1 trivial, 2 easy, 1 medium, 1 hard
-  const result = [
-    ...shuffledTrivial.slice(0, 1),
-    ...shuffledEasy.slice(0, 1),
-    ...shuffledMedium.slice(0, 2),
-    ...shuffledHard.slice(0, 1),
-  ];
-
-  return result.slice(0, count);
-  */
+  // No exact demo day defined — cycle through all defined days in order.
+  // After the last defined date, wrap back to the first and repeat indefinitely.
+  const sortedDates = Object.keys(DEMO_DAYS).sort();
+  const lastDefinedDate = sortedDates[sortedDates.length - 1];
+  const msPerDay = 86400000;
+  const dayAfterLastMs =
+    new Date(lastDefinedDate + 'T00:00:00Z').getTime() + msPerDay;
+  const currentMs = new Date(utcDate + 'T00:00:00Z').getTime();
+  const daysFromCycleStart = Math.max(
+    0,
+    Math.floor((currentMs - dayAfterLastMs) / msPerDay),
+  );
+  const index = daysFromCycleStart % sortedDates.length;
+  const cycleTitles = DEMO_DAYS[sortedDates[index]];
+  return cycleTitles
+    .map((title) => allGames.find((g) => g.name === title))
+    .filter((g): g is Game => g !== undefined)
+    .slice(0, count);
 };
 
 /**
@@ -614,7 +580,7 @@ export const copyShareToClipboard = async (
   bonusPoints: number,
   allScores: number[],
   initialScores: number[],
-  puzzleDate: string,
+  _puzzleDate: string,
   dailyGames: Game[],
   gameStates: { [gameName: string]: GameState },
   correctGuesses: string[],
@@ -626,11 +592,21 @@ export const copyShareToClipboard = async (
     bonusPoints,
   );
   const scoresToUse = allScores.length > 0 ? allScores : initialScores;
+  // Always use the real UTC date in share text, regardless of any test/override dates
+  const realUtcDate = getRealUtcDateString();
+  const realPuzzleDate = new Date(
+    realUtcDate + 'T00:00:00Z',
+  ).toLocaleDateString('en-US', {
+    month: 'short',
+    day: 'numeric',
+    year: 'numeric',
+    timeZone: 'UTC',
+  });
   const shareText = generateShareText(
     score,
     bonusPoints,
     scoresToUse,
-    puzzleDate,
+    realPuzzleDate,
     emojis,
   );
 

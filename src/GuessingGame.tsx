@@ -18,6 +18,7 @@ import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import PuzzleDateTime from './components/PuzzleDateTime';
 import GameUpdateBanner from './components/GameUpdateBanner';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
   getDailyGames,
   getPuzzleDate,
@@ -35,14 +36,7 @@ import { getActiveBanner, dismissBanner } from './lib/gameUpdateBanners';
 const GuessingGame = () => {
   const puzzleDate = getPuzzleDate();
   const puzzleDateRaw = getUtcDateString();
-  const dailyGames = useMemo(
-    () =>
-      getDailyGames(
-        gameDetails.filter((g) => g.refined === true),
-        5,
-      ),
-    [],
-  );
+  const dailyGames = useMemo(() => getDailyGames(gameDetails, 5), []);
 
   // Use custom hooks for state management
   const {
@@ -84,6 +78,15 @@ const GuessingGame = () => {
   const [activeBanner, setActiveBanner] = useState(() =>
     getActiveBanner(gameUpdateBanners, puzzleDateRaw),
   );
+
+  // Cycled-mode announcement banner
+  const [showCycledBanner, setShowCycledBanner] = useState(
+    () => localStorage.getItem('cycled-mode-banner-dismissed') !== '1',
+  );
+  const handleDismissCycledBanner = () => {
+    localStorage.setItem('cycled-mode-banner-dismissed', '1');
+    setShowCycledBanner(false);
+  };
 
   const handleDismissBanner = () => {
     if (activeBanner) {
@@ -315,6 +318,40 @@ const GuessingGame = () => {
                   ? activeBanner.content(handleDismissBanner)
                   : activeBanner.content}
               </GameUpdateBanner>
+            )}
+
+            {showCycledBanner && (
+              <div className='mb-4 bg-zinc-800/60 border border-zinc-600/50 rounded-lg px-4 py-3 text-sm text-zinc-300 leading-relaxed relative'>
+                <button
+                  onClick={handleDismissCycledBanner}
+                  className='absolute top-2 right-2 p-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-700 rounded transition-colors'
+                  aria-label='Dismiss'
+                >
+                  <XMarkIcon className='w-5 h-5' />
+                </button>
+                <div>
+                  <span className='font-semibold text-zinc-100'>Heads up:</span>{' '}
+                  MetaGameDaily is entering a cycled mode. I've been spreading
+                  my free time a little too thin maintaining this alongside{' '}
+                  <a
+                    href='https://steamdetective.wtf'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-blue-400 hover:text-blue-300 underline'
+                  >
+                    steamdetective.wtf
+                  </a>
+                  , so that's where my full focus is going instead.
+                </div>
+                <div className='mt-2'>
+                  <b>2026-03-11</b> will be the final batch of new games for
+                  MetaGameDaily. After that, the daily challenges will loop from
+                  the beginning (there are ~200 titles total). Not ideal, but I
+                  would rather do it that way so that I can keep the quality of
+                  the challenges on the other site as high as possible. for the
+                  challenges on the other site. Thanks for playing this game.
+                </div>
+              </div>
             )}
 
             <GuessInput

@@ -3,7 +3,6 @@ import { Toaster } from 'react-hot-toast';
 import { QuestionMarkCircleIcon } from '@heroicons/react/16/solid';
 import GuessingGame from './GuessingGame';
 import HelpModal from './components/HelpModal';
-import Subtitle from './components/Subtitle';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 
 const App = () => {
@@ -44,7 +43,6 @@ const App = () => {
                   A daily <i>Video Games Industry</i> puzzle
                 </span>
               </p>
-              <Subtitle />
               {isTestRoute && (
                 <div className='flex gap-2'>
                   <div>DEBUG:</div>
