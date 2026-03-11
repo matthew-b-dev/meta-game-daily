@@ -345,11 +345,12 @@ const GuessingGame = () => {
                 </div>
                 <div className='mt-2'>
                   <b>2026-03-11</b> will be the final batch of new games for
-                  MetaGameDaily. After that, the daily challenges will loop from
-                  the beginning (there are ~200 titles total). Not ideal, but I
-                  would rather do it that way so that I can keep the quality of
-                  the challenges on the other site as high as possible. for the
-                  challenges on the other site. Thanks for playing this game.{' '}
+                  MetaGameDaily. After that, the daily challenges here will loop
+                  from the beginning (there are ~200 titles total). Not ideal,
+                  but I would rather do it that way so that I can keep the
+                  quality of the challenges on the other site as high as
+                  possible. for the challenges on the other site. Thanks for
+                  playing this game.{' '}
                   <button
                     onClick={handleDismissCycledBanner}
                     className='inline-flex items-center gap-0.5 underline text-zinc-500 hover:text-zinc-300'
