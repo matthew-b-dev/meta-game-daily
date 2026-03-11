@@ -4941,7 +4941,7 @@ export const gameDetails: Game[] = [
       'Horror',
       'Female Protagonist',
     ],
-    other: ['2D Fighter', '2.5D', 'Blood', 'Gore'],
+    other: ['2D Fighter', 'Blood', 'Gore'],
     processed: true,
     refined: true,
     freeReveal: '',
@@ -7281,7 +7281,7 @@ export const gameDetails: Game[] = [
     publishers: ['FromSoftware', 'Bandai Namco Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/hj8wcegykk7dixcrzvf4.jpg',
-    details: ['RPG', 'Behind-Overhead Perspective', 'Hack+slash'],
+    details: ['RPG', 'Behind-Overhead Perspective'],
     meta: [
       'Souls-like',
       'RPG',
@@ -13310,10 +13310,12 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/schai1.jpg',
     details: [
       'Management',
-      'Side Scroller',
+      'Pixel Graphics',
       'Sideview',
       'Simulation',
       'Action',
+      'Adventure',
+      'Exploration',
     ],
     meta: [
       'Pixel Graphics',
@@ -14243,7 +14245,7 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scsso8.jpg',
-    details: ['RPG', 'Sandbox', 'Isometric', 'Action', 'Puzzle elements'],
+    details: ['Isometric', 'Action', 'Adventure', 'Puzzle elements'],
     meta: [],
     other: [],
     processed: true,
