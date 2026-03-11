@@ -349,7 +349,14 @@ const GuessingGame = () => {
                   the beginning (there are ~200 titles total). Not ideal, but I
                   would rather do it that way so that I can keep the quality of
                   the challenges on the other site as high as possible. for the
-                  challenges on the other site. Thanks for playing this game.
+                  challenges on the other site. Thanks for playing this game.{' '}
+                  <button
+                    onClick={handleDismissCycledBanner}
+                    className='inline-flex items-center gap-0.5 underline text-zinc-500 hover:text-zinc-300'
+                  >
+                    <XMarkIcon className='w-3.5 h-3.5' />
+                    Dismiss
+                  </button>
                 </div>
               </div>
             )}
