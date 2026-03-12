@@ -400,7 +400,6 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: 'Batman: Arkham Knight',
-    overrideMask: 'Batman: ?',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Action, Adventure',
     releaseDate: 'Jun 23',
@@ -411,7 +410,7 @@ export const gameDetails: Game[] = [
     franchise: 'Batman',
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/z3z1odurhninhnorve6g.jpg',
-    details: ['Stealth', 'Sandbox', 'Brawler', 'Behind-Overhead Perspective'],
+    details: [],
     meta: [
       'Action',
       'Open World',
@@ -434,7 +433,15 @@ export const gameDetails: Game[] = [
       'Strategy',
       'Epic',
     ],
-    other: ['Comic Book', "Beat 'em up"],
+    other: [
+      'Action',
+      'Open World',
+      'Superhero',
+      'Stealth',
+      'Third Person',
+      'Singleplayer',
+      'Adventure',
+    ],
     processed: true,
     refined: false,
     freeReveal: '',
