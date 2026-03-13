@@ -12103,7 +12103,7 @@ export const gameDetails: Game[] = [
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scahze.jpg',
     brightenImage: true,
-    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'ARPG'],
+    details: ['RPG', 'Anime', 'Behind-Overhead Perspective', 'Action RPG'],
     meta: [
       'Action',
       'RPG',

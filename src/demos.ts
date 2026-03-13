@@ -18,11 +18,11 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Dead or Alive 6',
   ],
   '2026-01-30': [
-    'Animal Well',
     'Dota 2',
-    'Owlboy',
+    'Pentiment',
     'Skull and Bones',
-    "Tom Clancy's Ghost Recon: Wildlands",
+    'Stranger of Paradise: Final Fantasy Origin',
+    'Quantum Break',
   ],
   '2026-01-31': [
     'Neon White',
@@ -72,13 +72,6 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     "Hellblade: Senua's Sacrifice",
     'Nioh',
     'Deus Ex: Mankind Divided',
-  ],
-  '2026-02-08': [
-    'The Last of Us Part II',
-    'Pentiment',
-    'Valiant Hearts: The Great War',
-    'Stranger of Paradise: Final Fantasy Origin',
-    'Quantum Break',
   ],
   '2026-02-09': [
     'The Legend of Zelda: A Link Between Worlds',
