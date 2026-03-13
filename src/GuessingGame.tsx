@@ -17,25 +17,20 @@ import GiveUpModal from './components/GiveUpModal';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import PuzzleDateTime from './components/PuzzleDateTime';
-import GameUpdateBanner from './components/GameUpdateBanner';
 import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
   getDailyGames,
   getPuzzleDate,
-  getUtcDateString,
   getTimeUntilNextGame,
   isCloseGuess,
   createGameStateUpdater,
   copyShareToClipboard,
   getShareSuccessMessage,
 } from './utils';
-import DailyNotification from './components/DailyNotification';
-import { gameUpdateBanners } from './config/gameUpdateBanners';
-import { getActiveBanner, dismissBanner } from './lib/gameUpdateBanners';
 
+import DailyNotification from './components/DailyNotification';
 const GuessingGame = () => {
   const puzzleDate = getPuzzleDate();
-  const puzzleDateRaw = getUtcDateString();
   const dailyGames = useMemo(() => getDailyGames(gameDetails, 5), []);
 
   // Use custom hooks for state management
@@ -74,11 +69,6 @@ const GuessingGame = () => {
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
   const [bonusCalculated, setBonusCalculated] = useState(false);
 
-  // Game update banner
-  const [activeBanner, setActiveBanner] = useState(() =>
-    getActiveBanner(gameUpdateBanners, puzzleDateRaw),
-  );
-
   // Cycled-mode announcement banner
   const [showCycledBanner, setShowCycledBanner] = useState(
     () => localStorage.getItem('cycled-mode-banner-dismissed') !== '1',
@@ -86,13 +76,6 @@ const GuessingGame = () => {
   const handleDismissCycledBanner = () => {
     localStorage.setItem('cycled-mode-banner-dismissed', '1');
     setShowCycledBanner(false);
-  };
-
-  const handleDismissBanner = () => {
-    if (activeBanner) {
-      dismissBanner(activeBanner.id);
-      setActiveBanner(null);
-    }
   };
 
   // Animated score display
@@ -307,18 +290,6 @@ const GuessingGame = () => {
         <div className='w-full max-w-[750px]'>
           <div className='mb-8'>
             <DailyNotification />
-
-            {/* Game Update Banner */}
-            {activeBanner && (
-              <GameUpdateBanner
-                date={activeBanner.displayDate}
-                onDismiss={handleDismissBanner}
-              >
-                {typeof activeBanner.content === 'function'
-                  ? activeBanner.content(handleDismissBanner)
-                  : activeBanner.content}
-              </GameUpdateBanner>
-            )}
 
             {showCycledBanner && (
               <div className='mb-4 bg-zinc-800/60 border border-zinc-600/50 rounded-lg px-4 py-3 text-sm text-zinc-300 leading-relaxed relative'>
