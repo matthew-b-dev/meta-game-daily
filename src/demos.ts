@@ -26,7 +26,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
   '2026-01-31': [
     'Neon White',
-    'Final Fantasy XV',
+    "Tiny Tina's Wonderlands",
     'The Legend of Zelda: Tears of the Kingdom',
     'Hollow Knight',
     "Luigi's Mansion 3",
@@ -54,7 +54,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
   '2026-02-05': [
     "The Legend of Zelda: Link's Awakening",
-    "Tiny Tina's Wonderlands",
+    'Final Fantasy XV',
     'Shadow of the Tomb Raider',
     'Shovel Knight',
     'SteamWorld Dig',

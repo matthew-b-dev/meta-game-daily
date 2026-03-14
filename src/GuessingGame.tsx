@@ -17,7 +17,6 @@ import GiveUpModal from './components/GiveUpModal';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import PuzzleDateTime from './components/PuzzleDateTime';
-import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
   getDailyGames,
   getPuzzleDate,
@@ -68,15 +67,6 @@ const GuessingGame = () => {
   const [showGameComplete, setShowGameComplete] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
   const [bonusCalculated, setBonusCalculated] = useState(false);
-
-  // Cycled-mode announcement banner
-  const [showCycledBanner, setShowCycledBanner] = useState(
-    () => localStorage.getItem('cycled-mode-banner-dismissed') !== '1',
-  );
-  const handleDismissCycledBanner = () => {
-    localStorage.setItem('cycled-mode-banner-dismissed', '1');
-    setShowCycledBanner(false);
-  };
 
   // Animated score display
   const displayScore = useScoreAnimation({ targetScore: score });
@@ -290,48 +280,6 @@ const GuessingGame = () => {
         <div className='w-full max-w-[750px]'>
           <div className='mb-8'>
             <DailyNotification />
-
-            {showCycledBanner && (
-              <div className='mb-4 bg-zinc-800/60 border border-zinc-600/50 rounded-lg px-4 py-3 text-sm text-zinc-300 leading-relaxed relative'>
-                <button
-                  onClick={handleDismissCycledBanner}
-                  className='absolute top-2 right-2 p-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-700 rounded transition-colors'
-                  aria-label='Dismiss'
-                >
-                  <XMarkIcon className='w-5 h-5' />
-                </button>
-                <div>
-                  <span className='font-semibold text-zinc-100'>Heads up:</span>{' '}
-                  MetaGameDaily is entering a cycled mode. I've been spreading
-                  my free time a little too thin maintaining this alongside{' '}
-                  <a
-                    href='https://steamdetective.wtf'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-blue-400 hover:text-blue-300 underline'
-                  >
-                    steamdetective.wtf
-                  </a>
-                  , so that's where my full focus is going instead.
-                </div>
-                <div className='mt-2'>
-                  <b>2026-03-11</b> will be the final batch of new games for
-                  MetaGameDaily. After that, the daily challenges here will loop
-                  from the beginning (there are ~200 titles total). Not ideal,
-                  but I would rather do it that way so that I can keep the
-                  quality of the challenges on the other site as high as
-                  possible. for the challenges on the other site. Thanks for
-                  playing this game.{' '}
-                  <button
-                    onClick={handleDismissCycledBanner}
-                    className='inline-flex items-center gap-0.5 underline text-zinc-500 hover:text-zinc-300'
-                  >
-                    <XMarkIcon className='w-3.5 h-3.5' />
-                    Dismiss
-                  </button>
-                </div>
-              </div>
-            )}
 
             <GuessInput
               filteredOptions={filteredOptions}

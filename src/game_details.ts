@@ -369,7 +369,7 @@ export const gameDetails: Game[] = [
     publishers: ['Annapurna Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9277.jpg',
-    details: ['Action', 'Firstperson', 'Platformer', 'Shooter'],
+    details: ['Action', 'FPS', '3D Platformer', 'Fast-Paced', 'Stylized'],
     meta: [
       'FPS',
       '3D Platformer',
