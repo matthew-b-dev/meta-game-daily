@@ -35,8 +35,8 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Resident Evil 2',
     "Uncharted 4: A Thief's End",
     'Moonlighter',
-    'Silent Hill 2',
-    'Dishonored 2',
+    'The Legend of Zelda: A Link Between Worlds',
+    'Xenoblade Chronicles X',
   ],
   '2026-02-03': [
     'Metal Gear Solid V: The Phantom Pain',
@@ -72,13 +72,6 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     "Hellblade: Senua's Sacrifice",
     'Nioh',
     'Deus Ex: Mankind Divided',
-  ],
-  '2026-02-09': [
-    'The Legend of Zelda: A Link Between Worlds',
-    'Xenoblade Chronicles X',
-    'Sea of Thieves',
-    'Back 4 Blood',
-    "Mirror's Edge Catalyst",
   ],
   '2026-02-13': [
     'Battlefield 4',
@@ -270,3 +263,12 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Rayman Legends',
   ],
 };
+
+/*
+'2026-02-09': [
+    'Sea of Thieves',
+    'Back 4 Blood',
+    "Mirror's Edge Catalyst",
+  ],
+
+*/

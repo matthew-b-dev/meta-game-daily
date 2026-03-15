@@ -1655,7 +1655,6 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: 'The Legend of Zelda: A Link Between Worlds',
-    overrideMask: ' *** ****** ** ***** : ?',
     platforms: '3DS',
     genres: 'Adventure',
     releaseDate: 'Nov 22',
@@ -10767,7 +10766,7 @@ export const gameDetails: Game[] = [
     publishers: ['Nintendo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/yrgjsakfsiype6xqhjec.jpg',
-    details: ['RPG', 'Anime', 'Sandbox', 'JRPG', 'ARPG', 'Thirdperson'],
+    details: ['RPG', 'Anime', 'JRPG', 'Action RPG', 'Thirdperson'],
     meta: [],
     other: [],
     processed: true,
