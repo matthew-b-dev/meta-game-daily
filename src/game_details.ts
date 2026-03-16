@@ -4741,7 +4741,7 @@ export const gameDetails: Game[] = [
       'Singleplayer',
       'Emotional',
     ],
-    other: ['2.5D', 'Fantasy', 'JRPG', 'Turn-Based Combat'],
+    other: ['2D', 'Fantasy', 'JRPG', 'Turn-Based Combat'],
     processed: true,
     refined: true,
     freeReveal: '',
@@ -7956,11 +7956,10 @@ export const gameDetails: Game[] = [
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scj1o3.jpg',
     details: [
       'Stealth',
-      'Shooter',
-      'Sandbox',
-      'Behind-Overhead Perspective',
-      'Firstperson',
       'Action',
+      'Shooter',
+      'Tactical',
+      'Behind-Overhead Perspective',
     ],
     meta: [
       'Stealth',

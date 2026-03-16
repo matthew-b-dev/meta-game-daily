@@ -42,6 +42,7 @@ export const CLOSE_GUESS_SERIES = [
   'fire emblem',
   'yoshi',
   'resident evil',
+  'metal gear',
 ];
 
 export interface SubtitleConfig {
