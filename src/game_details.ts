@@ -6261,7 +6261,13 @@ export const gameDetails: Game[] = [
     publishers: ['Sloclap', 'Kepler Interactive'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc9370.jpg',
-    details: ['RPG', 'Rogue-like', 'Fighting', 'Thirdperson', 'Action'],
+    details: [
+      'Action',
+      'Martial Arts',
+      "Beat 'em up",
+      'Difficult',
+      'Third Person',
+    ],
     meta: [
       'Action',
       'Martial Arts',
@@ -7580,13 +7586,7 @@ export const gameDetails: Game[] = [
     publishers: ['Koei Tecmo'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/kljuzvvliq2edwvtiqpt.jpg',
-    details: [
-      'RPG',
-      'Sandbox',
-      'Hack+slash',
-      'Behind-Overhead Perspective',
-      'Action',
-    ],
+    details: ['Action', 'Hack and Slash', 'Open World', 'Musou', 'Historical'],
     meta: [
       'Action',
       'Hack and Slash',
