@@ -14482,11 +14482,12 @@ export const gameDetails: Game[] = [
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/ibfsxarkusq0r4yiqpae.jpg',
     details: [
-      'Shooter',
-      'Platformer',
-      'Behind-Overhead Perspective',
+      'Adventure',
       'Action',
-      'Puzzle elements',
+      'Female Protagonist',
+      'Third Person',
+      'Puzzle',
+      'Stealth',
     ],
     meta: [
       'Adventure',

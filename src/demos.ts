@@ -54,10 +54,10 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
   '2026-02-05': [
     "The Legend of Zelda: Link's Awakening",
-    'Final Fantasy XV',
+    'The Elder Scrolls Online',
     'Shadow of the Tomb Raider',
     'Shovel Knight',
-    'SteamWorld Dig',
+    'Fire Emblem Warriors: Three Hopes',
   ],
   '2026-02-06': [
     'Vampyr',
@@ -96,7 +96,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
   '2026-02-16': [
     'Rock Band 4',
-    'The Elder Scrolls Online',
+    'Final Fantasy XV',
     'The Forgotten City',
     'Frostpunk 2',
     'Cuphead',
