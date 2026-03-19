@@ -12141,7 +12141,7 @@ export const gameDetails: Game[] = [
     publishers: ['Ubisoft'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/scipec.jpg',
-    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer'],
+    details: ['Action', 'Sideview', 'Side Scroller', 'Platformer', 'Cartoony'],
     meta: [],
     other: ['2D Platformer'],
     processed: true,
