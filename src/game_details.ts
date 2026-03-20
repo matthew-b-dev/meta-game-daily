@@ -9521,7 +9521,6 @@ export const gameDetails: Game[] = [
   {
     score: '100',
     name: 'Deus Ex: Mankind Divided',
-    overrideMask: '**** ** : [ ... ]',
     platforms: 'PS4, XB1, PC, XBXS, PS5',
     genres: 'Adventure, Third-Person Shooter',
     releaseDate: 'Aug 23',
@@ -13548,7 +13547,14 @@ export const gameDetails: Game[] = [
       'Singleplayer',
       '3D',
     ],
-    other: ['2D Fighter', '3D', 'Anime', 'Arcade', 'Fighting', 'Multiplayer'],
+    other: [
+      '2D Fighter',
+      '3D',
+      'Arcade',
+      'Competitive',
+      'Fighting',
+      'Multiplayer',
+    ],
     processed: true,
     refined: true,
     freeReveal: '',
