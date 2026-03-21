@@ -75,9 +75,9 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
   ],
   '2026-02-13': [
     'Battlefield 4',
-    'Project CARS 2',
+    'Cuphead',
     'Tropico 5',
-    'Rogue Legacy',
+    'For Honor',
     'Goat Simulator',
   ],
   '2026-02-14': [
@@ -99,7 +99,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Final Fantasy XV',
     'The Forgotten City',
     'Frostpunk 2',
-    'Cuphead',
+    'Project CARS 2',
   ],
   '2026-02-17': [
     'Streets of Rage 4',
@@ -109,7 +109,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Titanfall',
   ],
   '2026-02-18': [
-    'For Honor',
+    'Rogue Legacy',
     'Darkest Dungeon',
     'Octopath Traveler',
     'Star Wars Battlefront',
