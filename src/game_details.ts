@@ -2135,7 +2135,6 @@ export const gameDetails: Game[] = [
     other: ['Assassin', 'FPS', 'Heist', 'Parkour'],
     processed: true,
     refined: true,
-    freeReveal: 'ss',
   },
   {
     score: '100',
@@ -5836,7 +5835,6 @@ export const gameDetails: Game[] = [
     other: ['2.5D', 'Female Protagonist', 'Metroidvania'],
     processed: true,
     refined: true,
-    freeReveal: 'ss',
   },
   {
     score: '100',
@@ -9810,7 +9808,6 @@ export const gameDetails: Game[] = [
     other: ['2.5D', '2D Fighter', 'Fighting', 'Arcade', 'Story Rich'],
     processed: true,
     refined: true,
-    freeReveal: 'meta',
   },
   {
     score: '100',

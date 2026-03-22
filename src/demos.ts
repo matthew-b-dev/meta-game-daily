@@ -81,7 +81,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Goat Simulator',
   ],
   '2026-02-14': [
-    'God of War Ragnarok',
+    'Bloodstained: Ritual of the Night',
     'Mortal Kombat 11',
     'Thief',
     'Psychonauts 2',
@@ -92,7 +92,7 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Silent Hill 2',
     'Fallout 76',
     'Cocoon',
-    'Bloodstained: Ritual of the Night',
+    'God of War Ragnarok',
   ],
   '2026-02-16': [
     'Rock Band 4',
