@@ -88,10 +88,10 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Titanfall 2',
   ],
   '2026-02-15': [
-    'The Thaumaturge',
-    'Silent Hill 2',
+    "Mirror's Edge Catalyst",
+    'Sea of Thieves',
     'Fallout 76',
-    'Cocoon',
+    'Back 4 Blood',
     'God of War Ragnarok',
   ],
   '2026-02-16': [
@@ -263,12 +263,3 @@ export const DEMO_DAYS: { [date: string]: string[] } = {
     'Rayman Legends',
   ],
 };
-
-/*
-'2026-02-09': [
-    'Sea of Thieves',
-    'Back 4 Blood',
-    "Mirror's Edge Catalyst",
-  ],
-
-*/

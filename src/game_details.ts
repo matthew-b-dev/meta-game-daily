@@ -4476,7 +4476,7 @@ export const gameDetails: Game[] = [
     publishers: ['Warner Bros. Interactive Entertainment'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/sc8v6d.jpg',
-    details: ['Horror', 'Survival', 'Shooter', 'Firstperson', 'Action'],
+    details: ['Horror', 'Online Co-Op', 'Shooter', 'Firstperson', 'Action'],
     meta: [
       'Zombies',
       'Online Co-Op',
@@ -14010,7 +14010,14 @@ export const gameDetails: Game[] = [
     publishers: ['Xbox Game Studios'],
     screenshotUrl:
       'https://images.igdb.com/igdb/image/upload/t_screenshot_med/wtyxpxbkcsviixw7qoqn.jpg',
-    details: ['RPG', 'Funny', 'Pirates', 'Sandbox', 'MMO', 'Firstperson'],
+    details: [
+      'RPG',
+      'Pirates',
+      'Sandbox',
+      'MMO',
+      'Online Co-Op',
+      'Firstperson',
+    ],
     meta: [
       'Multiplayer',
       'Open World',
