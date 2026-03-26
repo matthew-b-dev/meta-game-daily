@@ -2655,7 +2655,7 @@ export const gameDetails: Game[] = [
       'Management',
       'Female Protagonist',
     ],
-    other: ['2.5D', 'Pixel Graphics', 'Party-Based RPG', 'Turn-Based Combat'],
+    other: ['Pixel Graphics', 'Party-Based RPG', 'Turn-Based Combat'],
     processed: true,
     refined: true,
     freeReveal: 'pub',
