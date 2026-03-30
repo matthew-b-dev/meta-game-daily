@@ -37,6 +37,7 @@ export const CLOSE_GUESS_SERIES = [
   'rock band',
   'silent hill',
   'south park',
+  'sonic',
   'star wars',
   'steamworld',
   'street fighter',
