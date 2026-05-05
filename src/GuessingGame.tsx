@@ -17,6 +17,7 @@ import GiveUpModal from './components/GiveUpModal';
 import ResetPuzzleButton from './components/ResetPuzzleButton';
 import Footer from './components/Footer';
 import PuzzleDateTime from './components/PuzzleDateTime';
+import { XMarkIcon } from '@heroicons/react/24/solid';
 import {
   getDailyGames,
   getPuzzleDate,
@@ -67,6 +68,15 @@ const GuessingGame = () => {
   const [showGameComplete, setShowGameComplete] = useState(false);
   const [showGiveUpConfirm, setShowGiveUpConfirm] = useState(false);
   const [bonusCalculated, setBonusCalculated] = useState(false);
+
+  // Informational banner
+  const [showInfoBanner, setShowInfoBanner] = useState(
+    () => localStorage.getItem('info-banner-dismissed') !== '1',
+  );
+  const handleDismissInfoBanner = () => {
+    localStorage.setItem('info-banner-dismissed', '1');
+    setShowInfoBanner(false);
+  };
 
   // Animated score display
   const displayScore = useScoreAnimation({ targetScore: score });
@@ -280,6 +290,44 @@ const GuessingGame = () => {
         <div className='w-full max-w-[750px]'>
           <div className='mb-8'>
             <DailyNotification />
+
+            {showInfoBanner && (
+              <div className='mb-4 bg-zinc-800/60 border border-zinc-600/50 rounded-lg px-4 py-3 text-sm text-zinc-300 leading-relaxed relative'>
+                <button
+                  onClick={handleDismissInfoBanner}
+                  className='absolute top-2 right-2 p-1.5 text-zinc-400 hover:text-zinc-100 hover:bg-zinc-700 rounded transition-colors'
+                  aria-label='Dismiss'
+                >
+                  <XMarkIcon className='w-5 h-5' />
+                </button>
+                <div className='pr-7'>
+                  On{' '}
+                  <b>
+                    <u>March 26, 2026</u>
+                  </b>
+                  , MetaGameDaily entered a "recycle" mode. I have since then
+                  have shifted my focus to a different trivia site,{' '}
+                  <a
+                    href='https://steamdetective.wtf'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='text-blue-400 hover:text-blue-300 underline'
+                  >
+                    SteamDetective.wtf
+                  </a>
+                  , which is being updated every day. <br />
+                  <br /> I hope that you'll understand that running both became
+                  too difficult on my own. Thank your for playing!{' '}
+                  <button
+                    onClick={handleDismissInfoBanner}
+                    className='inline-flex items-center gap-0.5 underline text-zinc-500 hover:text-zinc-300'
+                  >
+                    <XMarkIcon className='w-3.5 h-3.5' />
+                    Dismiss
+                  </button>
+                </div>
+              </div>
+            )}
 
             <GuessInput
               filteredOptions={filteredOptions}
