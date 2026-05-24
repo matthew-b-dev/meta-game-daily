@@ -306,7 +306,7 @@ const GuessingGame = () => {
                     <u>March 26, 2026</u>
                   </b>
                   , MetaGameDaily entered a "recycle" mode. I have since then
-                  have shifted my focus to a different trivia site,{' '}
+                  shifted my focus to a different trivia site,{' '}
                   <a
                     href='https://steamdetective.wtf'
                     target='_blank'
