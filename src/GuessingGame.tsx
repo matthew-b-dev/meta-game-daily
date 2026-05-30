@@ -305,19 +305,8 @@ const GuessingGame = () => {
                   <b>
                     <u>March 26, 2026</u>
                   </b>
-                  , MetaGameDaily entered a "recycle" mode. I have since then
-                  shifted my focus to a different trivia site,{' '}
-                  <a
-                    href='https://steamdetective.wtf'
-                    target='_blank'
-                    rel='noopener noreferrer'
-                    className='text-blue-400 hover:text-blue-300 underline'
-                  >
-                    SteamDetective.wtf
-                  </a>
-                  , which is being updated every day. <br />
-                  <br /> I hope that you'll understand that running both became
-                  too difficult on my own. Thank your for playing!{' '}
+                  , MetaGameDaily entered a "recycle" mode. New challenges are
+                  no longer being created for this site. Thank you for playing!{' '}
                   <button
                     onClick={handleDismissInfoBanner}
                     className='inline-flex items-center gap-0.5 underline text-zinc-500 hover:text-zinc-300'
